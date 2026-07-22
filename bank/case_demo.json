@@ -1,0 +1,97 @@
+{
+  "_note": "Case/vignette 示范: 背景+exhibit+3道关联题。import/pages_extract 的1071道真题就是这种结构, 用 prompts/import_bank.md 改编导入。",
+  "cases": [
+    {
+      "id": "CASE-FSA-pension-1",
+      "topic": "FSA",
+      "title": "Meridian Industrials 养老金分析",
+      "background": "分析师 Lena Fischer 正在评估 Meridian Industrials(按 IFRS 报告)的 DB 养老金计划对财报的影响。她整理了本年度计划数据(Exhibit 1),并注意到公司披露的折现率为 5.0%,计划资产实际回报为 63。Fischer 想弄清费用在 P&L 与 OCI 之间的归属。",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. DB 计划本年度数据 (百万)",
+          "table": [
+            ["项目", "金额"],
+            ["期初 PBO", "1,200"],
+            ["期初计划资产", "900"],
+            ["当期 service cost", "60"],
+            ["折现率", "5.0%"],
+            ["benefits paid", "40"],
+            ["计划资产实际回报", "63"]
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "FSA-case-pbo-1",
+      "case": "CASE-FSA-pension-1",
+      "topic": "FSA",
+      "module": "Employee Compensation: Post-Employment and Share-Based",
+      "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+      "type": "calc",
+      "stem": "基于 Exhibit 1(无精算变动),期末 PBO 最接近:",
+      "choices": { "A": "1,280", "B": "1,320", "C": "1,220" },
+      "answer": "A",
+      "explanations": {
+        "A": "对。期末 PBO = 期初 + service cost + interest cost − benefits paid = 1200 + 60 + 1200×5% − 40 = 1,280。",
+        "B": "错。1,320 = 1200+60+60,漏减了 benefits paid 40——支付福利同时减少义务和资产。",
+        "C": "错。1,220 = 1200+60−40,漏了 interest cost(期初 PBO×折现率)——义务会随时间推移增值。"
+      },
+      "steps": [
+        { "label": "公式", "content": "期末PBO = 期初PBO + service cost + interest cost − benefits paid (± 精算变动)" },
+        { "label": "代入", "content": "= 1200 + 60 + 1200×5.0% − 40" },
+        { "label": "结果", "content": "= 1200 + 60 + 60 − 40 = 1,280" },
+        { "label": "陷阱", "content": "interest cost 基数是期初 PBO;benefits paid 必须减——两个漏项正好对应 B/C。" }
+      ],
+      "source": "CFA L2 Curriculum, Employment Compensation, PBO 滚动计算",
+      "verified": { "method": "author-recheck", "by": "main-agent" }
+    },
+    {
+      "id": "FSA-case-pnl-1",
+      "case": "CASE-FSA-pension-1",
+      "topic": "FSA",
+      "module": "Employee Compensation: Post-Employment and Share-Based",
+      "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+      "type": "calc",
+      "stem": "IFRS 下,本年度计入 P&L 的养老金费用最接近:",
+      "choices": { "A": "75", "B": "57", "C": "120" },
+      "answer": "A",
+      "explanations": {
+        "A": "对。IFRS P&L = service cost + net interest = 60 + (1200−900)×5% = 60 + 15 = 75。net interest 对净负债用同一折现率。",
+        "B": "错。57 = 60 + 60 − 63,把资产端用了实际回报(或 US GAAP 的 expected return 思路)——IFRS 只允许折现率。",
+        "C": "错。120 = 60 + 60,只算了义务的 interest cost,漏了计划资产产生的利息收入抵减。"
+      },
+      "steps": [
+        { "label": "公式", "content": "IFRS P&L 费用 = service cost + (期初PBO − 期初资产)×折现率" },
+        { "label": "代入", "content": "= 60 + (1200 − 900)×5.0%" },
+        { "label": "结果", "content": "= 60 + 15 = 75" },
+        { "label": "陷阱", "content": "IFRS 的资产回报在 P&L 里只按折现率算;实际回报与之的差额进 OCI。" }
+      ],
+      "source": "CFA L2 Curriculum, Employment Compensation, IFRS periodic pension cost",
+      "verified": { "method": "author-recheck", "by": "main-agent" }
+    },
+    {
+      "id": "FSA-case-oci-1",
+      "case": "CASE-FSA-pension-1",
+      "topic": "FSA",
+      "module": "Employee Compensation: Post-Employment and Share-Based",
+      "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+      "type": "concept",
+      "stem": "计划资产实际回报 63 与计入 P&L 的资产利息收入之间的差额 18,IFRS 下应:",
+      "choices": {
+        "A": "计入 OCI (remeasurement),后续不摊回 P&L",
+        "B": "直接计入当期 P&L",
+        "C": "计入 OCI,超过 corridor 部分摊回 P&L"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "对。实际回报 63 − 900×5%=45 的差额 18 属于 remeasurement,IFRS 下进 OCI 且永不 recycle。",
+        "B": "错。进 P&L 的资产回报只有按折现率计的 45;差额留在 OCI,避免波动污染利润表。",
+        "C": "错。corridor 摊销是 US GAAP 的选择性处理;IFRS 不允许摊回。"
+      },
+      "source": "CFA L2 Curriculum, Employment Compensation, remeasurements 归属",
+      "verified": { "method": "author-recheck", "by": "main-agent" }
+    }
+  ]
+}

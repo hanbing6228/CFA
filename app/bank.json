@@ -66,6 +66,440 @@
    "name_cn": "经济学"
   }
  },
+ "frames": {
+  "FSA": {
+   "Multinational Operations": [
+    {
+     "t": "功能货币 = 母公司报告货币 → temporal 法;= 当地货币 → current rate 法",
+     "los": "功能货币判定 → 方法选择"
+    },
+    {
+     "t": "Temporal:货币性项目用期末汇率;历史成本非货币项目、COGS、折旧用历史汇率;多数收入费用用平均",
+     "f": 1,
+     "los": "Temporal vs current rate method: 各报表项目适用汇率"
+    },
+    {
+     "t": "Current rate:资产负债全期末;收入费用平均;股本历史",
+     "f": 1,
+     "los": "Temporal vs current rate method: 各报表项目适用汇率"
+    },
+    {
+     "t": "折算损益归属:temporal → P&L;current rate → OCI (CTA)",
+     "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)"
+    },
+    {
+     "t": "Exposure:temporal = 净货币头寸;current rate = 净资产",
+     "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)"
+    },
+    {
+     "t": "恶性通胀:IFRS 先按物价重述再期末汇率折;US GAAP 改用 temporal",
+     "trap": 1,
+     "los": "Hyperinflation 处理 (IFRS restate vs GAAP temporal)"
+    },
+    {
+     "t": "Current rate 下纯 BS 比率/纯 IS 比率不变;混合比率(如 ROA)会变",
+     "trap": 1,
+     "los": "两法对比率的影响 (pure BS/IS ratio 不变性)"
+    }
+   ],
+   "Employee Compensation: Post-Employment and Share-Based": [
+    {
+     "t": "PBO 滚动:期初 + service cost + interest cost ± 精算变动 − benefits paid",
+     "f": 1,
+     "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)"
+    },
+    {
+     "t": "IFRS 三成分:service cost → P&L;net interest = 净负债×折现率 → P&L;remeasurements → OCI 永不摊回",
+     "f": 1,
+     "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)"
+    },
+    {
+     "t": "US GAAP:用 expected return on assets(可≠折现率);精算损益可 corridor 摊销",
+     "trap": 1,
+     "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)"
+    },
+    {
+     "t": "折现率↑ → PBO↓、service cost↓;薪酬增长率↑ → PBO↑(pay-related 计划)",
+     "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向"
+    },
+    {
+     "t": "股权激励:授予日公允价值,在 vesting 期内摊销;不因股价后续变动调整(权益类)",
+     "los": "Share-based compensation: expense 确认时点与计量"
+    }
+   ],
+   "Intercorporate Investments": [
+    {
+     "t": "<20% 金融资产;20-50% associate → equity 法;共同控制 JV → IFRS 强制 equity 法;>50% 合并",
+     "f": 1,
+     "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应"
+    },
+    {
+     "t": "Equity 法:投资额随 份额×NI 增、随股利减;超额购买价分摊到可辨认资产逐年摊、商誉不摊",
+     "f": 1,
+     "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊"
+    },
+    {
+     "t": "合并 vs equity:净利润与净资产归母相同;合并的收入/资产/负债更大 → margin 等比率被稀释",
+     "trap": 1,
+     "los": "Acquisition method vs equity method 对报表比率的影响"
+    },
+    {
+     "t": "Full goodwill = FV整体 − FV可辨认净资产;partial 只按母公司份额;仅影响商誉与 NCI 金额",
+     "f": 1,
+     "los": "Full goodwill vs partial goodwill"
+    },
+    {
+     "t": "商誉减值:IFRS 一步(CGU);GAAP 一步(报告单元);两者都不得转回",
+     "trap": 1,
+     "los": "Impairment 处理 (IFRS vs US GAAP)"
+    }
+   ],
+   "Analysis of Financial Institutions": [
+    {
+     "t": "CAMELS:Capital, Asset quality, Management, Earnings, Liquidity, Sensitivity",
+     "f": 1,
+     "los": "CAMELS 框架各维度含义"
+    },
+    {
+     "t": "CET1 不含优先股(优先股入 AT1);LCR=优质流动资产/30天净流出≥100%;NSFR 看一年稳定资金",
+     "f": 1,
+     "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)"
+    },
+    {
+     "t": "P&C: combined ratio = loss ratio + expense ratio,<100% 承保盈利;寿险看利差与准备金充足性",
+     "f": 1,
+     "los": "保险: P&C vs life 的关键比率 (combined ratio 等)"
+    }
+   ],
+   "Evaluating Quality of Financial Reports": [
+    {
+     "t": "质量频谱:GAAP+决策有用 → GAAP但有偏 → 盈余管理 → 非GAAP → 造假;报告质量≠盈余质量",
+     "los": "报告质量 vs 盈余质量的区分与频谱"
+    },
+    {
+     "t": "Beneish M-score > −1.78 → 操纵概率高(记:−1.78 警戒线);变量如 DSRI/GMI/AQI 越大越可疑",
+     "f": 1,
+     "los": "Beneish M-score / Altman Z-score 变量方向含义"
+    },
+    {
+     "t": "常见手法:提前确认收入、费用资本化、一次性项目藏经常费用、准备金'饼干罐'",
+     "trap": 1,
+     "los": "常见操纵手法: 收入确认、分类腾挪、准备金调节"
+    },
+    {
+     "t": "现金流信号:CFO 持续 < NI → 应计质量差;IFRS 利息股利分类可选带来腾挪空间",
+     "trap": 1,
+     "los": "现金流质量信号"
+    }
+   ],
+   "Integration of Financial Statement Analysis Techniques": [
+    {
+     "t": "扩展 DuPont:ROE = 税负×利息负担×EBIT margin×周转×杠杆,逐因子定位问题",
+     "f": 1,
+     "los": "DuPont 扩展分解定位问题"
+    },
+    {
+     "t": "分析前先还原:equity method 利润剥离、表外负债并回、非经常项目剔除",
+     "los": "会计调整对比率的综合影响 (表外、equity method 剥离等)"
+    }
+   ]
+  },
+  "Equity": {
+   "Equity Valuation: Applications and Processes": [
+    {
+     "t": "感知错价 V_E−P = 真实错价(V−P) + 估值误差(V_E−V)",
+     "f": 1,
+     "los": "内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)"
+    },
+    {
+     "t": "绝对估值(DDM/FCF/RI)给内在价值;相对估值(乘数)给相对贵贱;SOTP 对多元集团,常现 conglomerate discount",
+     "los": "绝对 vs 相对估值模型适用场景"
+    }
+   ],
+   "Discounted Dividend Valuation": [
+    {
+     "t": "GGM: V0 = D1/(r−g);注意题给 D0 要 ×(1+g)",
+     "f": 1,
+     "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报"
+    },
+    {
+     "t": "两阶段:高增长期逐年折现 + 终值 Dn+1/(r−g) 折 n 期(分子用 n+1 期股利、折 n 期是高频错点)",
+     "f": 1,
+     "trap": 1,
+     "los": "两阶段/H-model 计算与适用"
+    },
+    {
+     "t": "H-model: V0 = [D0(1+gL) + D0×H×(gS−gL)]/(r−gL),H=转换期一半",
+     "f": 1,
+     "los": "两阶段/H-model 计算与适用"
+    },
+    {
+     "t": "P0 = E1/r + PVGO;PVGO>0 需 ROE>r,成长股 PVGO 占比高",
+     "f": 1,
+     "los": "PVGO 分解: E/r + PVGO"
+    },
+    {
+     "t": "g = b×ROE(b=留存率=1−payout);别把 payout 当 b",
+     "f": 1,
+     "trap": 1,
+     "los": "SGR = b × ROE (与 PRAT 扩展)"
+    }
+   ],
+   "Free Cash Flow Valuation": [
+    {
+     "t": "FCFF = NI + NCC + Int(1−t) − FCInv − WCInv;EBIT路径 = EBIT(1−t)+Dep−FCInv−WCInv;CFO路径 = CFO+Int(1−t)−FCInv",
+     "f": 1,
+     "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)"
+    },
+    {
+     "t": "FCFE = FCFF − Int(1−t) + net borrowing;FCFF 配 WACC,FCFE 配 re",
+     "f": 1,
+     "los": "FCFE = FCFF − Int(1−t) + net borrowing"
+    },
+    {
+     "t": "资本结构不稳或 FCFE<0 → 用 FCFF;WCInv 不含现金与短期有息负债",
+     "trap": 1,
+     "los": "何时 FCFF 优于 FCFE (资本结构不稳/FCFE为负)"
+    },
+    {
+     "t": "股权价值 = FCFF模型企业价值 − 债务市值;别忘减债再除股数",
+     "trap": 1,
+     "los": "单阶段/两阶段 FCF 模型计算"
+    }
+   ],
+   "Market-Based Valuation: Price and Enterprise Value Multiples": [
+    {
+     "t": "Justified leading P/E = payout/(r−g);trailing = payout(1+g)/(r−g),差 (1+g) 倍",
+     "f": 1,
+     "trap": 1,
+     "los": "Justified P/E (leading/trailing) 由 GGM 推导"
+    },
+    {
+     "t": "Justified P/B = (ROE−g)/(r−g);ROE>r 时 P/B>1",
+     "f": 1,
+     "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)"
+    },
+    {
+     "t": "EV/EBITDA:跨资本结构可比、EPS为负也能用;忽略 capex 差异是缺陷",
+     "los": "EV/EBITDA 适用场景与陷阱"
+    },
+    {
+     "t": "PEG 低≠便宜:未调风险、g 与价值非线性",
+     "trap": 1,
+     "los": "PEG 的用法与缺陷"
+    }
+   ],
+   "Residual Income Valuation": [
+    {
+     "t": "RI = NI − re×BV0 = (ROE−re)×BV0;equity charge 用期初 BV",
+     "f": 1,
+     "trap": 1,
+     "los": "RI = NI − re×BV0 = (ROE−re)×BV0"
+    },
+    {
+     "t": "单阶段: V0 = BV0 + (ROE−r)×BV0/(r−g)",
+     "f": 1,
+     "los": "单阶段 RI 模型: V0 = BV0 + (ROE−r)×BV0/(r−g)"
+    },
+    {
+     "t": "ω∈[0,1]:ω=1 RI 永续;ω=0 立即消失;终值项 RI_T/(1+r−ω)",
+     "f": 1,
+     "los": "Persistence factor ω 的含义与取值影响"
+    },
+    {
+     "t": "Clean surplus 要求 BV1 = BV0+NI−Div;OCI 绕道(FX折算、AFS)会破坏,需调整",
+     "trap": 1,
+     "los": "Clean surplus 假设及其违反的后果"
+    },
+    {
+     "t": "RI 适用:不分红/FCF为负/终值不确定性高(价值前置于 BV)",
+     "los": "RI vs DDM/FCF 适用场景"
+    }
+   ],
+   "Private Company Valuation": [
+    {
+     "t": "Income(CCM/excess earnings)/ Market(GPCM/GTM)/ Asset;excess earnings 归 income 法",
+     "los": "三种方法: income / market / asset-based"
+    },
+    {
+     "t": "Normalized earnings:剔除超额owner薪酬、关联租金、非经常项",
+     "los": "Normalized earnings 调整项"
+    },
+    {
+     "t": "总折扣 = 1−(1−DLOC)(1−DLOM),乘法不是加法",
+     "f": 1,
+     "trap": 1,
+     "los": "DLOC 与 DLOM 的叠加计算: 总折扣 = 1−(1−DLOC)(1−DLOM)"
+    },
+    {
+     "t": "Build-up = rf + ERP + size premium + company-specific,不用 beta;expanded CAPM 在 CAPM 上加 size/specific",
+     "f": 1,
+     "los": "CAPM 扩展: build-up method, expanded CAPM"
+    }
+   ]
+  },
+  "FI": {
+   "The Term Structure and Interest Rate Dynamics": [
+    {
+     "t": "Forward 定价: (1+z_{A+B})^{A+B} = (1+z_A)^A × (1+f(A,B))^B",
+     "f": 1,
+     "los": "Spot/forward/par 曲线关系; forward rate model 计算"
+    },
+    {
+     "t": "上行曲线:forward > spot > par;若未来 spot 走成 forward,持有各债回报同为一期 spot",
+     "los": "Spot/forward/par 曲线关系; forward rate model 计算"
+    },
+    {
+     "t": "Riding the curve:曲线上行且预期不变时,买长于持有期的债赚 roll-down",
+     "los": "Riding the yield curve 策略条件"
+    },
+    {
+     "t": "Swap spread = swap rate − 同期国债;TED = Libor − T-bill;Z-spread 加在整条 spot 曲线上",
+     "f": 1,
+     "los": "Swap spread, Z-spread, TED spread 含义"
+    },
+    {
+     "t": "理论:纯预期(风险中性)/流动性偏好(term premium)/市场分割/preferred habitat",
+     "los": "利率期限结构理论 (纯预期/流动性偏好/市场分割等)"
+    },
+    {
+     "t": "Key rate duration:对单一期限点利率的敏感度,管理非平行移动",
+     "los": "Key rate duration 与曲线形变管理"
+    }
+   ],
+   "The Arbitrage-Free Valuation Framework": [
+    {
+     "t": "Backward induction:节点值 = 0.5×[(Vu+C)+(Vd+C)]/(1+r);风险中性概率各 0.5",
+     "f": 1,
+     "los": "Binomial tree: backward induction 定价"
+    },
+    {
+     "t": "相邻节点利率关系:r_up = r_down × e^{2σ};校准树必须复现无权债市价",
+     "f": 1,
+     "trap": 1,
+     "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})"
+    },
+    {
+     "t": "路径依赖现金流(MBS)→ Monte Carlo;无路径依赖 → binomial 树即可",
+     "los": "Pathwise valuation 与 Monte Carlo 适用场景"
+    }
+   ],
+   "Valuation and Analysis of Bonds with Embedded Options": [
+    {
+     "t": "V_callable = V_straight − V_call;V_putable = V_straight + V_put",
+     "f": 1,
+     "los": "V_call = V_straight − V_callable; V_put 类似"
+    },
+    {
+     "t": "波动率↑ → 期权都更值钱 → callable↓、putable↑;无权债与 σ 无关",
+     "trap": 1,
+     "los": "波动率↑对 callable↓/putable↑ 的方向"
+    },
+    {
+     "t": "利率降 → call 值↑压制涨幅(负凸性);利率升 → put 托底跌幅",
+     "los": "利率水平变动对期权价值与债券价格的非对称影响"
+    },
+    {
+     "t": "OAS = 去期权后的利差:同评级比较,OAS 大 = cheap;σ假设↑ → callable 的 OAS↓",
+     "trap": 1,
+     "los": "OAS: 定义、与 Z-spread 关系、跨债比较"
+    },
+    {
+     "t": "Effective duration = (V− − V+)/(2×V0×Δy);callable 低利率区负凸",
+     "f": 1,
+     "los": "Effective duration/convexity: callable 负凸性区域"
+    },
+    {
+     "t": "Capped FRN = straight FRN − cap;floored FRN = straight + floor",
+     "f": 1,
+     "los": "Capped/floored FRN 分解"
+    }
+   ],
+   "Credit Analysis Models": [
+    {
+     "t": "Expected loss = PD × LGD;LGD = 1 − recovery rate(按敞口)",
+     "f": 1,
+     "trap": 1,
+     "los": "Expected loss = PD × LGD; recovery rate 关系"
+    },
+    {
+     "t": "CVA = 无违约价值(VND) − 公允价值 = 预期损失现值",
+     "f": 1,
+     "los": "Credit valuation adjustment (CVA) 概念"
+    },
+    {
+     "t": "结构模型:股权=资产的call,依赖资产负债表;简约模型:违约强度外生,用市场数据",
+     "los": "结构模型 vs 简约模型的假设差异"
+    },
+    {
+     "t": "利差期限结构:高评级平缓;低评级或临近违约可倒挂",
+     "los": "Credit spread 期限结构含义"
+    }
+   ],
+   "Credit Default Swaps": [
+    {
+     "t": "Buyer 付保费买保护;credit event 由 ISDA DC 绝对多数认定(破产/违约/重组)",
+     "los": "CDS 机制: protection buyer/seller, 触发事件"
+    },
+    {
+     "t": "Upfront ≈ (spread − coupon) × EffSpreadDuration;spread>coupon → buyer 付 upfront",
+     "f": 1,
+     "los": "Upfront premium ≈ (credit spread − coupon) × duration"
+    },
+    {
+     "t": "Index CDS 等权;单名违约按权重结算后名义缩减;曲线交易赌利差期限形变",
+     "los": "Index CDS vs single-name; 曲线交易"
+    },
+    {
+     "t": "Basis trade:现券利差 vs CDS spread 的价差回归",
+     "los": "Basis trade 逻辑"
+    }
+   ]
+  }
+ },
+ "cases": {
+  "CASE-FSA-pension-1": {
+   "id": "CASE-FSA-pension-1",
+   "topic": "FSA",
+   "title": "Meridian Industrials 养老金分析",
+   "background": "分析师 Lena Fischer 正在评估 Meridian Industrials(按 IFRS 报告)的 DB 养老金计划对财报的影响。她整理了本年度计划数据(Exhibit 1),并注意到公司披露的折现率为 5.0%,计划资产实际回报为 63。Fischer 想弄清费用在 P&L 与 OCI 之间的归属。",
+   "exhibits": [
+    {
+     "title": "Exhibit 1. DB 计划本年度数据 (百万)",
+     "table": [
+      [
+       "项目",
+       "金额"
+      ],
+      [
+       "期初 PBO",
+       "1,200"
+      ],
+      [
+       "期初计划资产",
+       "900"
+      ],
+      [
+       "当期 service cost",
+       "60"
+      ],
+      [
+       "折现率",
+       "5.0%"
+      ],
+      [
+       "benefits paid",
+       "40"
+      ],
+      [
+       "计划资产实际回报",
+       "63"
+      ]
+     ]
+    }
+   ]
+  }
+ },
  "questions": [
   {
    "id": "EQ-mispricing-1",
@@ -2927,6 +3361,117 @@
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
+   }
+  },
+  {
+   "id": "FSA-case-pbo-1",
+   "case": "CASE-FSA-pension-1",
+   "topic": "FSA",
+   "module": "Employee Compensation: Post-Employment and Share-Based",
+   "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+   "type": "calc",
+   "stem": "基于 Exhibit 1(无精算变动),期末 PBO 最接近:",
+   "choices": {
+    "A": "1,280",
+    "B": "1,320",
+    "C": "1,220"
+   },
+   "answer": "A",
+   "explanations": {
+    "A": "对。期末 PBO = 期初 + service cost + interest cost − benefits paid = 1200 + 60 + 1200×5% − 40 = 1,280。",
+    "B": "错。1,320 = 1200+60+60,漏减了 benefits paid 40——支付福利同时减少义务和资产。",
+    "C": "错。1,220 = 1200+60−40,漏了 interest cost(期初 PBO×折现率)——义务会随时间推移增值。"
+   },
+   "steps": [
+    {
+     "label": "公式",
+     "content": "期末PBO = 期初PBO + service cost + interest cost − benefits paid (± 精算变动)"
+    },
+    {
+     "label": "代入",
+     "content": "= 1200 + 60 + 1200×5.0% − 40"
+    },
+    {
+     "label": "结果",
+     "content": "= 1200 + 60 + 60 − 40 = 1,280"
+    },
+    {
+     "label": "陷阱",
+     "content": "interest cost 基数是期初 PBO;benefits paid 必须减——两个漏项正好对应 B/C。"
+    }
+   ],
+   "source": "CFA L2 Curriculum, Employment Compensation, PBO 滚动计算",
+   "verified": {
+    "method": "author-recheck",
+    "by": "main-agent"
+   }
+  },
+  {
+   "id": "FSA-case-pnl-1",
+   "case": "CASE-FSA-pension-1",
+   "topic": "FSA",
+   "module": "Employee Compensation: Post-Employment and Share-Based",
+   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+   "type": "calc",
+   "stem": "IFRS 下,本年度计入 P&L 的养老金费用最接近:",
+   "choices": {
+    "A": "75",
+    "B": "57",
+    "C": "120"
+   },
+   "answer": "A",
+   "explanations": {
+    "A": "对。IFRS P&L = service cost + net interest = 60 + (1200−900)×5% = 60 + 15 = 75。net interest 对净负债用同一折现率。",
+    "B": "错。57 = 60 + 60 − 63,把资产端用了实际回报(或 US GAAP 的 expected return 思路)——IFRS 只允许折现率。",
+    "C": "错。120 = 60 + 60,只算了义务的 interest cost,漏了计划资产产生的利息收入抵减。"
+   },
+   "steps": [
+    {
+     "label": "公式",
+     "content": "IFRS P&L 费用 = service cost + (期初PBO − 期初资产)×折现率"
+    },
+    {
+     "label": "代入",
+     "content": "= 60 + (1200 − 900)×5.0%"
+    },
+    {
+     "label": "结果",
+     "content": "= 60 + 15 = 75"
+    },
+    {
+     "label": "陷阱",
+     "content": "IFRS 的资产回报在 P&L 里只按折现率算;实际回报与之的差额进 OCI。"
+    }
+   ],
+   "source": "CFA L2 Curriculum, Employment Compensation, IFRS periodic pension cost",
+   "verified": {
+    "method": "author-recheck",
+    "by": "main-agent"
+   }
+  },
+  {
+   "id": "FSA-case-oci-1",
+   "case": "CASE-FSA-pension-1",
+   "topic": "FSA",
+   "module": "Employee Compensation: Post-Employment and Share-Based",
+   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+   "type": "concept",
+   "stem": "计划资产实际回报 63 与计入 P&L 的资产利息收入之间的差额 18,IFRS 下应:",
+   "choices": {
+    "A": "计入 OCI (remeasurement),后续不摊回 P&L",
+    "B": "直接计入当期 P&L",
+    "C": "计入 OCI,超过 corridor 部分摊回 P&L"
+   },
+   "answer": "A",
+   "explanations": {
+    "A": "对。实际回报 63 − 900×5%=45 的差额 18 属于 remeasurement,IFRS 下进 OCI 且永不 recycle。",
+    "B": "错。进 P&L 的资产回报只有按折现率计的 45;差额留在 OCI,避免波动污染利润表。",
+    "C": "错。corridor 摊销是 US GAAP 的选择性处理;IFRS 不允许摊回。"
+   },
+   "source": "CFA L2 Curriculum, Employment Compensation, remeasurements 归属",
+   "verified": {
+    "method": "author-recheck",
+    "by": "main-agent"
    }
   },
   {

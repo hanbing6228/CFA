@@ -435,11 +435,18 @@ def cmd_build() -> None:
     cfg = load_config()
     los_map = json.loads((ROOT / "bank" / "los_map.json").read_text(encoding="utf-8"))
     questions, ids = [], set()
+    cases: dict[str, dict] = {}
     errors = []
+    frames = json.loads((ROOT / "bank" / "frames.json").read_text(encoding="utf-8"))
+    frames.pop("_schema", None)
     for path in sorted((ROOT / "bank").glob("*.json")):
-        if path.name == "los_map.json":
+        if path.name in ("los_map.json", "frames.json"):
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
+        for c in data.get("cases", []):
+            if c["id"] in cases:
+                errors.append(f"{path.name}: 重复 case {c['id']}")
+            cases[c["id"]] = c
         for q in data.get("questions", []):
             qid = q.get("id", "?")
             if qid in ids:
@@ -462,6 +469,9 @@ def cmd_build() -> None:
             if not q.get("source"):
                 errors.append(f"{qid}: 缺 source 出处")
             questions.append(q)
+    for q in questions:
+        if q.get("case") and q["case"] not in cases:
+            errors.append(f"{q['id']}: case {q['case']} 不存在")
     if errors:
         print("build 失败:")
         for e in errors:
@@ -475,6 +485,8 @@ def cmd_build() -> None:
             "retention": cfg["retention"],
         },
         "topics": cfg["topics"],
+        "frames": frames,
+        "cases": cases,
         "questions": questions,
     }
     dest = ROOT / "app" / "bank.json"

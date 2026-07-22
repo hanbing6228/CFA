@@ -30,9 +30,10 @@ function renderToday() {
   const est = Math.round(total * 1.8);
   const { streak, doneToday } = Store.streakInfo();
 
+  const ph = Store.phase();
   const hero = el('div', 'card hero');
-  hero.appendChild(el('div', 'days', `距考试 <b>${dte}</b> 天` +
-    (FSRS.inCompressMode(ec) ? ' · <span class="warn">压缩模式:已停新题</span>' : '')));
+  hero.appendChild(el('div', 'days',
+    `${ph.icon} <b>${ph.name}</b> · 距考试 <b>${dte}</b> 天<br><span class="muted">${ph.desc}</span>`));
   hero.appendChild(el('h1', '', doneToday ? '今天已经赢了 ✅' : '今天的仗很小,能赢'));
   const duo = el('div', 'duo');
   duo.appendChild(el('div', 'card', `<div class="num">${dues.length}</div><div class="lbl">到期复习</div>`));
@@ -48,6 +49,7 @@ function renderToday() {
   pills.appendChild(el('span', 'pill', `⏱ 预计 ${est} 分钟`));
   pills.appendChild(el('span', 'pill', `🎯 保留率 ${FSRS.desiredRetention(ec).toFixed(2)}`));
   if (streak > 0) pills.appendChild(el('span', 'pill', `🔥 连续 ${streak} 天`));
+  if (Store.db.xp > 0) pills.appendChild(el('span', 'pill', `⭐ ${Store.db.xp} XP`));
   hero.appendChild(pills);
   if (est > Store.settings().timeBudget) {
     hero.appendChild(el('p', 'warn', `今天超时间预算了——做完复习就够,新题可跳过`));
@@ -61,12 +63,60 @@ function renderToday() {
       .map(([t, n]) => `${t}×${n}`).join(' · ');
     main.appendChild(el('div', 'card muted', `复习分布: ${esc(detail)}`));
   }
+  // Mock 提示 (冲刺包机制: 百日冲刺每2周, 冲刺包每周)
+  const sinceMock = Store.daysSinceMock();
+  if (ph.key === 'hundred' || ph.key === 'sprint') {
+    const cadence = ph.key === 'sprint' ? 7 : 14;
+    const dueMock = sinceMock >= cadence;
+    const mc = el('div', 'card');
+    mc.appendChild(el('div', '', `📝 <b>Mock 20 题</b> <span class="muted">${sinceMock === Infinity ? '还没做过' : `上次 ${sinceMock} 天前`} · 本阶段每 ${cadence} 天一次</span>`));
+    const mb = el('button', 'bigbtn' + (dueMock ? '' : ' secondary'), dueMock ? '该做 Mock 了 ▸' : '提前做一次 Mock');
+    mb.style.marginTop = '10px';
+    mb.onclick = () => { location.hash = '#mock'; };
+    mc.appendChild(mb);
+    main.appendChild(mc);
+  }
+
+  // 作战计划卡 (权重策略可见化: 放弃清单不再纠结)
+  const plan = el('div', 'card');
+  const tiers = { A: [], B: [], C: [] };
+  Object.entries(Store.bank.topics).forEach(([k, v]) => tiers[v.tier].push(k));
+  plan.innerHTML = `<h2>📋 作战计划</h2>
+    <div class="losrow">🔴 <b>满仓 A</b> (3x额度, 目标>70%): ${tiers.A.join(' / ')}</div>
+    <div class="losrow">🔵 <b>保底 B</b> (1.5x, 目标~60%): ${tiers.B.join(' / ')}</div>
+    <div class="losrow">⚪ <b>战略放弃 C</b> (0.5x, 蒙题保底): ${tiers.C.join(' / ')}</div>
+    <div class="muted" style="margin-top:8px">阶段: 基础(>100天)→百日冲刺(43-100)→冲刺包(15-42)→压缩(≤14)。当前: ${ph.icon} ${ph.name}。放弃是策略, 不再纠结。</div>`;
+  main.appendChild(plan);
+
   const s = Store.settings();
   if (!s.ghToken) {
     const c = el('div', 'card muted',
       `🤖 AI 督学未连接——去<a href="#settings" style="color:var(--accent)">设置</a>里贴一个 GitHub token,晚上没做题我会来提醒你`);
     main.appendChild(c);
   }
+}
+
+/* ---------- Case/vignette 面板 (L2 题型: 背景+Exhibit+一组题) ---------- */
+function casePanel(q, expanded) {
+  if (!q.case || !Store.bank.cases || !Store.bank.cases[q.case]) return null;
+  const c = Store.bank.cases[q.case];
+  const d = el('details', 'casebox');
+  if (expanded) d.open = true;
+  d.appendChild(el('summary', '', `📄 ${esc(c.title)} <span class="muted">(案例背景与图表)</span>`));
+  d.appendChild(el('p', 'casebg', esc(c.background)));
+  for (const ex of c.exhibits || []) {
+    d.appendChild(el('div', 'extitle', esc(ex.title)));
+    const wrap = el('div', 'exwrap');
+    const tb = el('table', 'extable');
+    (ex.table || []).forEach((row, ri) => {
+      const tr = el('tr');
+      row.forEach(cell => tr.appendChild(el(ri === 0 ? 'th' : 'td', '', esc(cell))));
+      tb.appendChild(tr);
+    });
+    wrap.appendChild(tb);
+    d.appendChild(wrap);
+  }
+  return d;
 }
 
 /* ---------- 答题屏 ---------- */
@@ -95,6 +145,9 @@ function renderQuiz() {
   main.appendChild(prog);
 
   const card = el('div', 'card');
+  const prevQ = Quiz.idx > 0 ? Quiz.session[Quiz.idx - 1] : null;
+  const cp = casePanel(q, !prevQ || prevQ.case !== q.case);   // 同 case 第二题起默认折叠
+  if (cp) card.appendChild(cp);
   card.appendChild(el('div', 'stem', esc(q.stem)));
   const choicesBox = el('div');
   let answered = false;
@@ -211,6 +264,7 @@ function onAnswer(q, picked, card, choicesBox) {
 
 function gradeAndNext(q, grade, card) {
   const ivl = Store.applyGrade(q, grade);
+  Store.addXp({ 1: 3, 2: 6, 3: 10, 4: 12 }[grade] || 0);   // 错了也给分: 出现就是赢
   card.querySelector('.confrow').remove();
   const note = el('div', 'nextivl', grade === FSRS.AGAIN ? '⏰ 明天再见这道题' : `⏰ 下次复习: ${ivl} 天后`);
   card.appendChild(note);
@@ -367,12 +421,176 @@ function renderSettings() {
     `题库 v${Store.bank.version} · ${Store.bank.questions.length} 题 · 引擎 FSRS-4.5 + 考期感知`));
 }
 
+/* ---------- 框架屏 (品职式三层压缩的最后一层, 🔴 弱点自动标红) ---------- */
+function renderFrames() {
+  const main = $('#main');
+  main.innerHTML = '';
+  main.appendChild(el('h1', '', '框架图'));
+  main.appendChild(el('p', 'muted', '一行一个考点。🔴 = 你的弱点 LOS(自动标红)。冲刺期只刷这里。'));
+  const frames = Store.bank.frames || {};
+  const stats = Store.statsData();
+  const weakSet = new Set();
+  for (const [t, td] of Object.entries(stats)) {
+    for (const [los, l] of Object.entries(td.los)) {
+      if (l.n >= 2 && l.right / l.n < 0.6) weakSet.add(t + '|' + los);
+    }
+  }
+  const topics = Object.keys(frames).sort(
+    (a, b) => (Store.bank.topics[b] || {}).weight - (Store.bank.topics[a] || {}).weight);
+  for (const t of topics) {
+    const meta = Store.bank.topics[t] || {};
+    const head = el('div', 'topichead');
+    head.appendChild(el('h2', '', esc(t)));
+    head.appendChild(el('span', `tier ${meta.tier || 'C'}`, `Tier ${meta.tier || '?'}`));
+    main.appendChild(head);
+    for (const [mod, lines] of Object.entries(frames[t])) {
+      const card = el('div', 'card');
+      card.appendChild(el('h2', '', esc(mod)));
+      // 弱点行置顶
+      const sorted = lines.slice().sort((a, b) =>
+        (weakSet.has(t + '|' + (b.los || '')) ? 1 : 0) - (weakSet.has(t + '|' + (a.los || '')) ? 1 : 0));
+      for (const ln of sorted) {
+        const weak = ln.los && weakSet.has(t + '|' + ln.los);
+        const row = el('div', `losrow${weak ? ' weak' : ''}`);
+        const marks = `${weak ? '🔴 ' : ''}${ln.f ? '𝑓 ' : ''}${ln.trap ? '⚠️ ' : ''}`;
+        row.appendChild(el('div', '', marks + esc(ln.t)));
+        card.appendChild(row);
+      }
+      main.appendChild(card);
+    }
+  }
+}
+
+/* ---------- Mock 模式 (冲刺包: 20题连做 → 成绩单 → 错因分类) ---------- */
+const Mock = { qs: null, idx: 0, answers: [], t0: 0 };
+
+function renderMock() {
+  const main = $('#main');
+  main.innerHTML = '';
+  if (!Mock.qs) {
+    const card = el('div', 'card hero');
+    card.appendChild(el('h1', '', '📝 Mock 20 题'));
+    card.appendChild(el('p', 'muted', '跨科目交错出题、不即时判分——模拟考场。答完出成绩单+错因分析,结果同样喂给调度器。建议 36 分钟内完成。'));
+    const go = el('button', 'bigbtn', '开始 Mock');
+    go.onclick = () => {
+      Mock.qs = Store.buildMock(20); Mock.idx = 0; Mock.answers = []; Mock.t0 = Date.now();
+      renderMock();
+    };
+    card.appendChild(go);
+    main.appendChild(card);
+    return;
+  }
+  if (Mock.idx >= Mock.qs.length) return renderMockReport();
+  const q = Mock.qs[Mock.idx];
+  const mins = ((Date.now() - Mock.t0) / 60000).toFixed(0);
+  const head = el('div', 'qhead');
+  head.appendChild(el('span', '', `${Mock.idx + 1}/${Mock.qs.length}`));
+  head.appendChild(el('span', 'tag', esc(q.topic)));
+  head.appendChild(el('span', '', `⏱ ${mins} 分钟`));
+  main.appendChild(head);
+  const prog = el('div', 'progress');
+  prog.appendChild(el('i', '', '')).style.width = `${(Mock.idx / Mock.qs.length) * 100}%`;
+  main.appendChild(prog);
+  const card = el('div', 'card');
+  const prevMq = Mock.idx > 0 ? Mock.qs[Mock.idx - 1] : null;
+  const mcp = casePanel(q, !prevMq || prevMq.case !== q.case);
+  if (mcp) card.appendChild(mcp);
+  card.appendChild(el('div', 'stem', esc(q.stem)));
+  ['A', 'B', 'C'].forEach(k => {
+    if (!(k in q.choices)) return;
+    const b = el('button', 'choice', `<b>${k}.</b> ${esc(q.choices[k])}`);
+    b.onclick = () => {
+      Mock.answers.push({ id: q.id, topic: q.topic, los: q.los, picked: k, correct: k === q.answer ? 1 : 0 });
+      Mock.idx += 1;
+      renderMock();
+    };
+    card.appendChild(b);
+  });
+  main.appendChild(card);
+}
+
+function renderMockReport() {
+  const main = $('#main');
+  main.innerHTML = '';
+  const right = Mock.answers.filter(a => a.correct).length;
+  const n = Mock.answers.length;
+  const minutes = Math.round((Date.now() - Mock.t0) / 60000);
+  const pct = Math.round((right / n) * 100);
+  const card = el('div', 'card hero');
+  card.appendChild(el('div', 'doneemoji', pct >= 70 ? '🏆' : pct >= 55 ? '💪' : '🔧'));
+  card.appendChild(el('div', 'scoreline', `${right}/${n} (${pct}%) · 用时 ${minutes} 分钟`));
+  card.appendChild(el('p', 'muted', pct >= 70 ? '按 MPS 口径这是稳过区间' : pct >= 55 ? '在及格线附近,把错因修掉就过' : '别慌,成绩单告诉你修哪里'));
+  main.appendChild(card);
+
+  // 分科成绩
+  const byTopic = {};
+  for (const a of Mock.answers) {
+    const t = byTopic[a.topic] || (byTopic[a.topic] = { n: 0, r: 0 });
+    t.n += 1; t.r += a.correct;
+  }
+  const tc = el('div', 'card');
+  tc.appendChild(el('h2', '', '分科成绩'));
+  for (const [t, v] of Object.entries(byTopic).sort((a, b) => a[1].r / a[1].n - b[1].r / b[1].n)) {
+    const p = Math.round((v.r / v.n) * 100);
+    const meta = Store.bank.topics[t] || {};
+    const weakA = meta.tier === 'A' && p < 55;
+    const row = el('div', `losrow${weakA ? ' weak' : ''}`);
+    row.appendChild(el('span', 'pct', `${p}% (${v.r}/${v.n})${weakA ? ' ⚠️A档告警' : ''}`));
+    row.appendChild(el('div', '', `${esc(t)} [${meta.tier || '?'}]`));
+    const bar = el('div', 'bar');
+    bar.appendChild(el('i', '', '')).style.width = `${p}%`;
+    row.appendChild(bar);
+    tc.appendChild(row);
+  }
+  main.appendChild(tc);
+
+  // 错因分类 (UWorld 四分类)
+  const wrongs = Mock.answers.filter(a => !a.correct);
+  if (wrongs.length) {
+    const wc = el('div', 'card');
+    wc.appendChild(el('h2', '', `错题归因 (${wrongs.length} 道)`));
+    wc.appendChild(el('p', 'muted', '点一个原因——下周的复习额度按这个分配'));
+    for (const a of wrongs) {
+      const q = Store.bank.questions.find(x => x.id === a.id);
+      const row = el('div', 'losrow');
+      row.appendChild(el('div', '', `${esc(a.topic)} · ${esc((q ? q.los : a.los).slice(0, 40))}`));
+      const causes = el('div', 'confrow');
+      ['概念', '计算', '陷阱', '时间'].forEach(cz => {
+        const b = el('button', '', cz);
+        b.onclick = () => {
+          a.cause = cz;
+          [...causes.children].forEach(x => x.classList.remove('primary'));
+          b.classList.add('primary');
+        };
+        causes.appendChild(b);
+      });
+      row.appendChild(causes);
+      wc.appendChild(row);
+    }
+    main.appendChild(wc);
+  }
+
+  const fin = el('button', 'bigbtn', '保存成绩单');
+  fin.onclick = async () => {
+    fin.disabled = true;
+    Store.addXp(50);
+    const res = await Store.saveMock({
+      date: Store.todayStr(), n, right, minutes, answers: Mock.answers,
+    });
+    toast(res.ok ? '☁️ 成绩单已同步' : '成绩单已存本地');
+    Mock.qs = null;
+    location.hash = '#today';
+  };
+  main.appendChild(fin);
+}
+
 /* ---------- 路由 ---------- */
-const ROUTES = { today: renderToday, quiz: renderQuiz, stats: renderStats, settings: renderSettings };
+const ROUTES = { today: renderToday, quiz: renderQuiz, stats: renderStats, settings: renderSettings, frames: renderFrames, mock: renderMock };
 function route() {
   const h = (location.hash || '#today').slice(1);
   const name = ROUTES[h] ? h : 'today';
   if (name !== 'quiz') Quiz.session = null;
+  if (name !== 'mock') Mock.qs = null;
   document.querySelectorAll('nav a').forEach(a => a.classList.toggle('active', a.dataset.r === name));
   ROUTES[name]();
   window.scrollTo(0, 0);

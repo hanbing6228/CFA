@@ -16,9 +16,11 @@ const Store = (() => {
 
   function load() {
     try { db = JSON.parse(localStorage.getItem(KEY)) || null; } catch (e) { db = null; }
-    if (!db) db = { cards: {}, reviews: [], settings: {}, pendingSync: [], notes: {} };
+    if (!db) db = { cards: {}, reviews: [], settings: {}, pendingSync: [], notes: {}, mocks: [], xp: 0 };
     if (!db.pendingSync) db.pendingSync = [];
     if (!db.notes) db.notes = {};
+    if (!db.mocks) db.mocks = [];
+    if (!db.xp) db.xp = 0;
     return db;
   }
 
@@ -51,6 +53,17 @@ const Store = (() => {
     };
   }
 
+  /* 阶段引擎: 距考天数 → 当前 Sprint 阶段 (机构流水线的阶段化) */
+  function phase() {
+    const d = daysToExam();
+    if (d > 100) return { key: 'base', name: '基础 Sprint', desc: '只做题不读书,每天 3 新题+复习', icon: '🏗' };
+    if (d > 42) return { key: 'hundred', name: '百日冲刺', desc: '错题回炉加权,每 2 周一次 Mock', icon: '🔥' };
+    if (d > 14) return { key: 'sprint', name: '冲刺包', desc: '每周 Mock + 框架图,只保已会的', icon: '⚡' };
+    return { key: 'compress', name: '压缩期', desc: '停新题,只清复习 + 刷框架图', icon: '🎯' };
+  }
+
+  function addXp(n) { db.xp += n; save(); return db.xp; }
+
   function cardState(id) {
     return db.cards[id] || { stability: 0, difficulty: 0, reps: 0, lapses: 0, last: null, due: null };
   }
@@ -68,7 +81,9 @@ const Store = (() => {
       const m = topicMeta(q.topic);
       const c = cardState(q.id);
       const overdue = Math.max(1, Math.round((new Date(today) - new Date(c.due)) / 86400000) + 1);
-      return m.weight * TIER_MULT[m.tier] * overdue;
+      // 错题回炉加权: 百日冲刺起 lapse 越多优先级越高 (强化 Sprint 机制)
+      const lapseBoost = 1 + Math.min(c.lapses, 3) * (phase().key === 'base' ? 0.2 : 0.5);
+      return m.weight * TIER_MULT[m.tier] * overdue * lapseBoost;
     }
   }
 
@@ -87,9 +102,24 @@ const Store = (() => {
     return rows.slice(0, quota);
   }
 
+  /* 同一 case 的题连续出现 (vignette 完整性), 位置取组内最先出现的那题 */
+  function groupByCase(list) {
+    const out = [], seen = new Set();
+    for (const q of list) {
+      if (seen.has(q.id)) continue;
+      out.push(q); seen.add(q.id);
+      if (q.case) {
+        for (const q2 of list) {
+          if (!seen.has(q2.id) && q2.case === q.case) { out.push(q2); seen.add(q2.id); }
+        }
+      }
+    }
+    return out;
+  }
+
   function buildSession() {
     const s = settings();
-    return dueCards().slice(0, s.reviewCap).concat(newCards(newQuota()));
+    return groupByCase(dueCards().slice(0, s.reviewCap).concat(newCards(newQuota())));
   }
 
   /* grade: 1..4 → 更新 FSRS 状态并记日志 */
@@ -202,6 +232,54 @@ const Store = (() => {
     save();
   }
 
+  /* ---- Mock 模式 (冲刺包机制: 20题连做→成绩单→错因分类) ---- */
+  function buildMock(n = 20) {
+    // 按 topic 权重加权抽样后交错洗牌 (interleaving: Rohrer & Taylor 2007)
+    const pool = bank.questions.slice();
+    const weighted = [];
+    for (const q of pool) {
+      const m = topicMeta(q.topic);
+      weighted.push({ q, w: m.weight * TIER_MULT[m.tier] * (0.7 + Math.random()) });
+    }
+    weighted.sort((a, b) => b.w - a.w);
+    const byTopic = {};
+    for (const { q } of weighted) (byTopic[q.topic] = byTopic[q.topic] || []).push(q);
+    const topics = Object.keys(byTopic);
+    const out = [];
+    let i = 0;
+    while (out.length < Math.min(n, pool.length)) {   // 轮转取题保证跨科目交错
+      const t = topics[i % topics.length];
+      if (byTopic[t].length) out.push(byTopic[t].shift());
+      i += 1;
+      if (topics.every(t2 => !byTopic[t2].length)) break;
+    }
+    return groupByCase(out);
+  }
+
+  async function saveMock(mock) {
+    // mock: {date, n, right, minutes, answers:[{id,topic,los,picked,correct,cause?}]}
+    db.mocks.push(mock);
+    // mock 结果同样喂给调度器: 对=Good, 错=Again
+    for (const a of mock.answers) {
+      const q = bank.questions.find(x => x.id === a.id);
+      if (q) applyGrade(q, a.correct ? 3 : 1);
+    }
+    save();
+    const item = {
+      path: `progress/mock-${mock.date}.json`,
+      content: JSON.stringify(mock, null, 2), msg: `mock: ${mock.date}`,
+    };
+    const res = await ghPut(item.path, item.content, item.msg).catch(() => ({ ok: false, reason: 'network' }));
+    if (!res.ok && res.reason !== 'no-token') { db.pendingSync.push(item); save(); }
+    return res;
+  }
+
+  function daysSinceMock() {
+    if (!db.mocks.length) return Infinity;
+    const last = db.mocks[db.mocks.length - 1].date;
+    return Math.round((new Date(todayStr()) - new Date(last)) / 86400000);
+  }
+
   function exportData() { return JSON.stringify(db); }
   function importData(text) {
     const d = JSON.parse(text);
@@ -228,6 +306,7 @@ const Store = (() => {
     init, settings, setSettings, daysToExam, examCfg,
     buildSession, dueCards, newCards, newQuota, applyGrade,
     statsData, streakInfo, cardState, setNote, getNote,
+    phase, addXp, buildMock, saveMock, daysSinceMock,
     syncToday, flushPending, exportData, importData, resetData,
     get bank() { return bank; }, get db() { return db; }, todayStr,
   };
