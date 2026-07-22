@@ -163,6 +163,22 @@ function onAnswer(q, picked, card, choicesBox) {
 
   if (q.source) card.appendChild(el('div', 'srcline', `📚 出处: ${esc(q.source)}`));
 
+  // 我的笔记 (随云备份保存, 下次复习可见)
+  const noteBox = el('div', 'notebox');
+  const oldNote = Store.getNote(q.id);
+  const noteBtn = el('button', 'askbtn', oldNote ? `📝 我的笔记: ${esc(oldNote.slice(0, 30))}${oldNote.length > 30 ? '…' : ''}` : '📝 记条笔记 (口诀/误区)');
+  noteBtn.onclick = () => {
+    noteBtn.style.display = 'none';
+    const ta = el('textarea', '', '');
+    ta.value = oldNote; ta.placeholder = '写给下次复习的自己…';
+    const saveN = el('button', 'stepbtn', '保存笔记');
+    saveN.onclick = () => { Store.setNote(q.id, ta.value); toast('笔记已存'); ta.blur(); saveN.textContent = '已保存 ✓'; };
+    noteBox.appendChild(ta); noteBox.appendChild(saveN);
+    ta.focus();
+  };
+  noteBox.appendChild(noteBtn);
+  card.appendChild(noteBox);
+
   // 追问 Claude
   const ask = el('div', 'askrow');
   const askBtn = el('button', 'askbtn', '🤔 还是不懂?复制追问发给 Claude');
@@ -321,6 +337,23 @@ function renderSettings() {
     try { Store.importData(area.value); toast('导入成功'); route(); }
     catch (e) { toast('导入失败: ' + e.message); }
   };
+  const cloud = el('button', '', '☁️ 从云备份恢复');
+  cloud.onclick = async () => {
+    const st = Store.settings();
+    if (!st.ghToken) { toast('先配置 GitHub token'); return; }
+    try {
+      const res = await fetch(`https://api.github.com/repos/${st.ghRepo}/contents/progress/state-backup.json?ref=${st.ghBranch}`,
+        { headers: { Authorization: `Bearer ${st.ghToken}`, Accept: 'application/vnd.github.raw+json' } });
+      if (!res.ok) throw new Error('云端无备份或无权限');
+      const text = await res.text();
+      if (!confirm('用云备份覆盖本机学习记录?(token 等本机设置保留)')) return;
+      const keep = { ghToken: st.ghToken, ghRepo: st.ghRepo, ghBranch: st.ghBranch };
+      Store.importData(text);
+      Store.setSettings(keep);
+      toast('恢复完成'); route();
+    } catch (e) { toast('恢复失败: ' + e.message); }
+  };
+  row.appendChild(cloud);
   const rst = el('button', 'danger', '♻️ 重置学习记录');
   rst.onclick = () => { if (confirm('确定清空所有学习记录?题库与设置保留。')) { Store.resetData(); toast('已重置'); } };
   row.appendChild(exp); row.appendChild(imp); row.appendChild(rst);

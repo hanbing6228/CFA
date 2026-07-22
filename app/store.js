@@ -16,8 +16,9 @@ const Store = (() => {
 
   function load() {
     try { db = JSON.parse(localStorage.getItem(KEY)) || null; } catch (e) { db = null; }
-    if (!db) db = { cards: {}, reviews: [], settings: {}, pendingSync: [] };
+    if (!db) db = { cards: {}, reviews: [], settings: {}, pendingSync: [], notes: {} };
     if (!db.pendingSync) db.pendingSync = [];
+    if (!db.notes) db.notes = {};
     return db;
   }
 
@@ -160,14 +161,36 @@ const Store = (() => {
       reviews: db.reviews.filter(r => r.ts.slice(0, 10) === date),
       streak: streakInfo().streak,
     };
-    const item = { path: `progress/${date}.json`, content: JSON.stringify(payload, null, 2), msg: `progress: ${date}` };
-    const res = await ghPut(item.path, item.content, item.msg).catch(() => ({ ok: false, reason: 'network' }));
-    if (!res.ok && res.reason !== 'no-token') {
-      db.pendingSync = db.pendingSync.filter(p => p.path !== item.path).concat([item]);
-      save();
+    const items = [
+      { path: `progress/${date}.json`, content: JSON.stringify(payload, null, 2), msg: `progress: ${date}` },
+      // 全量状态云备份 (换手机/丢数据的保险), 永不包含 token
+      { path: 'progress/state-backup.json', content: backupData(), msg: `state backup: ${date}` },
+    ];
+    let first = null;
+    for (const item of items) {
+      const res = await ghPut(item.path, item.content, item.msg).catch(() => ({ ok: false, reason: 'network' }));
+      if (!first) first = res;
+      if (!res.ok && res.reason !== 'no-token') {
+        db.pendingSync = db.pendingSync.filter(p => p.path !== item.path).concat([item]);
+        save();
+      }
     }
-    return res;
+    return first;
   }
+
+  function backupData() {
+    const copy = JSON.parse(JSON.stringify(db));
+    delete copy.pendingSync;
+    if (copy.settings) delete copy.settings.ghToken;
+    return JSON.stringify(copy);
+  }
+
+  function setNote(id, text) {
+    if (text && text.trim()) db.notes[id] = { text: text.trim(), ts: new Date().toISOString() };
+    else delete db.notes[id];
+    save();
+  }
+  function getNote(id) { return db.notes[id] ? db.notes[id].text : ''; }
 
   async function flushPending() {
     const rest = [];
@@ -204,7 +227,7 @@ const Store = (() => {
   return {
     init, settings, setSettings, daysToExam, examCfg,
     buildSession, dueCards, newCards, newQuota, applyGrade,
-    statsData, streakInfo, cardState,
+    statsData, streakInfo, cardState, setNote, getNote,
     syncToday, flushPending, exportData, importData, resetData,
     get bank() { return bank; }, get db() { return db; }, todayStr,
   };
