@@ -1,0 +1,28 @@
+{
+  "exam_date": "2026-11-20",
+  "_exam_date_note": "占位：请改成你报名的实际考试日。CFA L2 2026 有 5月/8月/11月窗口。",
+  "daily": {
+    "new_per_day": 3,
+    "time_budget_minutes": 40,
+    "review_cap": 40
+  },
+  "retention": {
+    "base": 0.80,
+    "peak": 0.88,
+    "ramp_days": 90,
+    "compress_days": 14
+  },
+  "topics": {
+    "FSA":        { "tier": "A", "weight": 12.5, "name_cn": "财务报表分析" },
+    "Equity":     { "tier": "A", "weight": 12.5, "name_cn": "权益" },
+    "FI":         { "tier": "A", "weight": 12.5, "name_cn": "固定收益" },
+    "Ethics":     { "tier": "B", "weight": 12.5, "name_cn": "道德" },
+    "PM":         { "tier": "B", "weight": 12.5, "name_cn": "组合管理" },
+    "Corp":       { "tier": "B", "weight": 7.5,  "name_cn": "公司发行人" },
+    "QM":         { "tier": "B", "weight": 7.5,  "name_cn": "数量" },
+    "Derivatives":{ "tier": "C", "weight": 7.5,  "name_cn": "衍生品" },
+    "Alts":       { "tier": "C", "weight": 7.5,  "name_cn": "另类投资" },
+    "Econ":       { "tier": "C", "weight": 7.5,  "name_cn": "经济学" }
+  },
+  "_tier_note": "A=满仓(目标>70%正确率) B=保底(目标~60%) C=战略放弃(只做高频LOS, 蒙题保底)。tier 是新题额度分配乘数: A=3x, B=1.5x, C=0.5x。权重取 CFA Institute 公布区间中值, 每年微调, 以当年官方为准。"
+}
