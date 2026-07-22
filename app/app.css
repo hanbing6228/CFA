@@ -123,6 +123,11 @@ input[type=date], input[type=number], input[type=text], input[type=password] {
 .btnrow button { flex: 1; min-width: 40%; padding: 11px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; font-size: .88rem; }
 .btnrow button.danger { color: var(--red); border-color: var(--red); }
 textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); padding: 10px; font-size: .8rem; }
+/* 微课卡 */
+.lesson-card { border-left: 3px solid var(--green); background: var(--green-soft); border-radius: 0 12px 12px 0; padding: 12px 14px; margin: 10px 0; }
+.lesson-card h2 { font-size: .92rem; margin-bottom: 4px; }
+.lesson-body { font-size: .92rem; white-space: pre-wrap; }
+
 /* Case/vignette 面板 */
 .casebox { margin-bottom: 14px; border: 1.5px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--accent-soft); }
 .casebox summary { cursor: pointer; font-size: .9rem; font-weight: 600; }

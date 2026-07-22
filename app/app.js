@@ -27,7 +27,8 @@ function renderToday() {
   const dues = Store.dueCards().slice(0, Store.settings().reviewCap);
   const news = Store.newCards(Store.newQuota());
   const total = dues.length + news.length;
-  const est = Math.round(total * 1.8);
+  const nLessons = Store.buildSession().filter(x => x._lesson).length;
+  const est = Math.round(total * 1.8 + nLessons * 1.5);
   const { streak, doneToday } = Store.streakInfo();
 
   const ph = Store.phase();
@@ -47,6 +48,7 @@ function renderToday() {
 
   const pills = el('div', 'pillrow');
   pills.appendChild(el('span', 'pill', `⏱ 预计 ${est} 分钟`));
+  if (nLessons) pills.appendChild(el('span', 'pill', `📖 含 ${nLessons} 节微课`));
   pills.appendChild(el('span', 'pill', `🎯 保留率 ${FSRS.desiredRetention(ec).toFixed(2)}`));
   if (streak > 0) pills.appendChild(el('span', 'pill', `🔥 连续 ${streak} 天`));
   if (Store.db.xp > 0) pills.appendChild(el('span', 'pill', `⭐ ${Store.db.xp} XP`));
@@ -131,6 +133,7 @@ function renderQuiz() {
   if (!Quiz.session.length || Quiz.idx >= Quiz.session.length) return renderDone();
   main.innerHTML = '';
   const q = Quiz.session[Quiz.idx];
+  if (q._lesson) return renderLesson(q, main);
   const total = Quiz.session.length;
   const isNew = Store.cardState(q.id).reps === 0;
 
@@ -162,6 +165,54 @@ function renderQuiz() {
     choicesBox.appendChild(b);
   });
   card.appendChild(choicesBox);
+  main.appendChild(card);
+}
+
+/* 微课卡: 逐张揭示 → 学完立刻做该 LOS 的题 (边学边测) */
+function renderLesson(item, main) {
+  const total = Quiz.session.length;
+  const head = el('div', 'qhead');
+  head.appendChild(el('span', '', `${Quiz.idx + 1}/${total}`));
+  head.appendChild(el('span', 'tag', '📖 微课'));
+  head.appendChild(el('span', 'tag', esc(item.topic)));
+  head.appendChild(el('span', '', esc(item.los)));
+  main.appendChild(head);
+  const prog = el('div', 'progress');
+  prog.appendChild(el('i', '', '')).style.width = `${(Quiz.idx / total) * 100}%`;
+  main.appendChild(prog);
+
+  const card = el('div', 'card');
+  const cardsBox = el('div');
+  card.appendChild(cardsBox);
+  let shown = 0;
+  const next = el('button', 'bigbtn', '');
+  const showOne = () => {
+    const c = item.cards[shown];
+    const lc = el('div', 'lesson-card');
+    lc.appendChild(el('h2', '', esc(c.h)));
+    lc.appendChild(el('div', 'lesson-body', esc(c.b)));
+    cardsBox.appendChild(lc);
+    shown += 1;
+    next.textContent = shown < item.cards.length ? `下一张 ▸ (${shown}/${item.cards.length})` : '懂了,开始做题 ▸';
+    lc.scrollIntoView({ block: 'nearest' });
+  };
+  next.onclick = () => {
+    if (shown < item.cards.length) { showOne(); return; }
+    Store.markLearned(item);
+    Store.addXp(5);
+    Quiz.idx += 1;
+    renderQuiz();
+  };
+  showOne();
+  card.appendChild(next);
+  const ask = el('button', 'askbtn', '🤔 没看懂?复制这课去问 Claude');
+  ask.style.marginTop = '8px';
+  ask.onclick = () => {
+    const text = `我在学 CFA L2 的 ${item.topic} / ${item.los},下面是微课内容,请用更浅的方式+一个新例子给我讲一遍:\n\n` +
+      item.cards.map(c => `${c.h}: ${c.b}`).join('\n');
+    navigator.clipboard.writeText(text).then(() => toast('已复制,去 Claude 粘贴'), () => toast('复制失败'));
+  };
+  card.appendChild(ask);
   main.appendChild(card);
 }
 
@@ -274,7 +325,7 @@ function gradeAndNext(q, grade, card) {
 function renderDone() {
   const main = $('#main');
   main.innerHTML = '';
-  const n = Quiz.session ? Quiz.session.length : 0;
+  const n = Quiz.session ? Quiz.session.filter(x => !x._lesson).length : 0;
   const card = el('div', 'card');
   card.appendChild(el('div', 'doneemoji', n ? '🏆' : '🌙'));
   card.appendChild(el('div', 'scoreline', n ? `${Quiz.right} / ${n} 正确` : '今天没有到期任务'));

@@ -21,6 +21,7 @@ const Store = (() => {
     if (!db.notes) db.notes = {};
     if (!db.mocks) db.mocks = [];
     if (!db.xp) db.xp = 0;
+    if (!db.learned) db.learned = {};
     return db;
   }
 
@@ -117,9 +118,27 @@ const Store = (() => {
     return out;
   }
 
+  /* 微课: 首次遇到某 LOS 的新题时, 先教后测 (Bloomberg 微课模式) */
+  function lessonKey(q) { return q.topic + '|' + q.los; }
+  function getLesson(q) { return (bank.lessons || {})[lessonKey(q)] || null; }
+  function markLearned(q) { db.learned[lessonKey(q)] = todayStr(); save(); }
+
+  function injectLessons(list) {
+    const out = [], injected = new Set();
+    for (const q of list) {
+      const k = lessonKey(q);
+      if (cardState(q.id).reps === 0 && !db.learned[k] && !injected.has(k)) {
+        const cards = getLesson(q);
+        if (cards) { out.push({ _lesson: true, topic: q.topic, los: q.los, cards }); injected.add(k); }
+      }
+      out.push(q);
+    }
+    return out;
+  }
+
   function buildSession() {
     const s = settings();
-    return groupByCase(dueCards().slice(0, s.reviewCap).concat(newCards(newQuota())));
+    return injectLessons(groupByCase(dueCards().slice(0, s.reviewCap).concat(newCards(newQuota()))));
   }
 
   /* grade: 1..4 → 更新 FSRS 状态并记日志 */
@@ -306,7 +325,7 @@ const Store = (() => {
     init, settings, setSettings, daysToExam, examCfg,
     buildSession, dueCards, newCards, newQuota, applyGrade,
     statsData, streakInfo, cardState, setNote, getNote,
-    phase, addXp, buildMock, saveMock, daysSinceMock,
+    phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson,
     syncToday, flushPending, exportData, importData, resetData,
     get bank() { return bank; }, get db() { return db; }, todayStr,
   };

@@ -439,6 +439,13 @@ def cmd_build() -> None:
     errors = []
     frames = json.loads((ROOT / "bank" / "frames.json").read_text(encoding="utf-8"))
     frames.pop("_schema", None)
+    lessons: dict[str, list] = {}
+    ldir = ROOT / "bank" / "lessons"
+    if ldir.exists():
+        for lpath in sorted(ldir.glob("*.json")):
+            ldata = json.loads(lpath.read_text(encoding="utf-8"))
+            for les in ldata.get("lessons", []):
+                lessons[f"{ldata['topic']}|{les['los']}"] = les["cards"]
     for path in sorted((ROOT / "bank").glob("*.json")):
         if path.name in ("los_map.json", "frames.json"):
             continue
@@ -477,6 +484,13 @@ def cmd_build() -> None:
         for e in errors:
             print(" -", e)
         sys.exit(1)
+    if lessons:
+        q_los = {f"{q['topic']}|{q['los']}" for q in questions}
+        uncovered = sorted(k for k in q_los if k not in lessons)
+        if uncovered:
+            print(f"提示: {len(uncovered)} 个 LOS 无微课 (新题将直接出题):")
+            for k in uncovered[:10]:
+                print("  -", k)
     out = {
         "version": date.today().isoformat(),
         "defaults": {
@@ -486,6 +500,7 @@ def cmd_build() -> None:
         },
         "topics": cfg["topics"],
         "frames": frames,
+        "lessons": lessons,
         "cases": cases,
         "questions": questions,
     }
