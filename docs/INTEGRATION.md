@@ -1,6 +1,18 @@
-# 接入现有体系：Notion / TickTick / Claude
+# 接入现有体系：手机 App / AI 督学 / Notion / TickTick / Claude
 
-原则：工具管调度和数据，体系管习惯和问责。接入全部走"文本进出"，不引入新的服务依赖。
+原则：工具管调度和数据，体系管习惯和问责。
+
+## 手机 App（主入口）
+
+安装与使用见 README「手机安装」。数据存手机 localStorage，换手机前用设置页「导出备份」。题库更新 = 改 bank/ → `python3 tool/cfa.py build` → git push，手机端联网刷新自动拿到新版。
+
+## AI 督学（已配置，无需手动维护）
+
+两个云端 Routine 已建好（不随本会话结束而消失）：
+- `CFA 每晚督学`：每天 21:02（北京时间）检查 progress/ 当日进度 → 手机推送 + 邮件
+- `CFA 周日弱点周报`：周日 21:32 汇总一周 → 写 progress/weekly/ 并推送
+
+数据来源是 App 的 GitHub 回传（设置里贴 fine-grained token）。没贴 token 时督学会"盲提醒"并提示你去配置。管理入口：claude.ai 的 Routines 界面（可暂停/改时间/改文案）。
 
 ## TickTick（每日双待办）
 

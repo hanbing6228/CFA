@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "curriculum_year": 2026,
+    "note": "2026 L2 与 2025 基本一致: 权重不变, 45个LM, 唯一变化是QM机器学习删除一条深度学习LOS。A档科目细化到LM+高频LOS(出题锚点), B/C档只列LM骨架。",
+    "sources": [
+      "https://300hours.com/cfa-curriculum-changes-2026/",
+      "https://soleadea.org/cfa-level-2/topic-weights",
+      "https://finance.uworld.com/cfa/level-2-topics/"
+    ]
+  },
+  "FSA": {
+    "weight_range": "10-15%",
+    "modules": {
+      "Intercorporate Investments": [
+        "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
+        "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
+        "Acquisition method vs equity method 对报表比率的影响",
+        "Full goodwill vs partial goodwill",
+        "Impairment 处理 (IFRS vs US GAAP)"
+      ],
+      "Employee Compensation: Post-Employment and Share-Based": [
+        "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+        "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+        "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
+        "Share-based compensation: expense 确认时点与计量"
+      ],
+      "Multinational Operations": [
+        "Temporal vs current rate method: 各报表项目适用汇率",
+        "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
+        "功能货币判定 → 方法选择",
+        "Hyperinflation 处理 (IFRS restate vs GAAP temporal)",
+        "两法对比率的影响 (pure BS/IS ratio 不变性)"
+      ],
+      "Analysis of Financial Institutions": [
+        "CAMELS 框架各维度含义",
+        "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+        "保险: P&C vs life 的关键比率 (combined ratio 等)"
+      ],
+      "Evaluating Quality of Financial Reports": [
+        "报告质量 vs 盈余质量的区分与频谱",
+        "Beneish M-score / Altman Z-score 变量方向含义",
+        "常见操纵手法: 收入确认、分类腾挪、准备金调节",
+        "现金流质量信号"
+      ],
+      "Integration of Financial Statement Analysis Techniques": [
+        "DuPont 扩展分解定位问题",
+        "会计调整对比率的综合影响 (表外、equity method 剥离等)"
+      ]
+    }
+  },
+  "Equity": {
+    "weight_range": "10-15%",
+    "modules": {
+      "Equity Valuation: Applications and Processes": [
+        "内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)",
+        "绝对 vs 相对估值模型适用场景",
+        "Sum-of-the-parts 与 conglomerate discount"
+      ],
+      "Discounted Dividend Valuation": [
+        "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
+        "两阶段/H-model 计算与适用",
+        "PVGO 分解: E/r + PVGO",
+        "SGR = b × ROE (与 PRAT 扩展)"
+      ],
+      "Free Cash Flow Valuation": [
+        "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+        "FCFE = FCFF − Int(1−t) + net borrowing",
+        "何时 FCFF 优于 FCFE (资本结构不稳/FCFE为负)",
+        "单阶段/两阶段 FCF 模型计算"
+      ],
+      "Market-Based Valuation: Price and Enterprise Value Multiples": [
+        "Justified P/E (leading/trailing) 由 GGM 推导",
+        "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)",
+        "EV/EBITDA 适用场景与陷阱",
+        "PEG 的用法与缺陷"
+      ],
+      "Residual Income Valuation": [
+        "RI = NI − re×BV0 = (ROE−re)×BV0",
+        "单阶段 RI 模型: V0 = BV0 + (ROE−r)×BV0/(r−g)",
+        "Persistence factor ω 的含义与取值影响",
+        "Clean surplus 假设及其违反的后果",
+        "RI vs DDM/FCF 适用场景"
+      ],
+      "Private Company Valuation": [
+        "三种方法: income / market / asset-based",
+        "Normalized earnings 调整项",
+        "DLOC 与 DLOM 的叠加计算: 总折扣 = 1−(1−DLOC)(1−DLOM)",
+        "CAPM 扩展: build-up method, expanded CAPM"
+      ]
+    }
+  },
+  "FI": {
+    "weight_range": "10-15%",
+    "modules": {
+      "The Term Structure and Interest Rate Dynamics": [
+        "Spot/forward/par 曲线关系; forward rate model 计算",
+        "Riding the yield curve 策略条件",
+        "Swap spread, Z-spread, TED spread 含义",
+        "利率期限结构理论 (纯预期/流动性偏好/市场分割等)",
+        "Key rate duration 与曲线形变管理"
+      ],
+      "The Arbitrage-Free Valuation Framework": [
+        "Binomial tree: backward induction 定价",
+        "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})",
+        "Pathwise valuation 与 Monte Carlo 适用场景"
+      ],
+      "Valuation and Analysis of Bonds with Embedded Options": [
+        "V_call = V_straight − V_callable; V_put 类似",
+        "波动率↑对 callable↓/putable↑ 的方向",
+        "利率水平变动对期权价值与债券价格的非对称影响",
+        "OAS: 定义、与 Z-spread 关系、跨债比较",
+        "Effective duration/convexity: callable 负凸性区域",
+        "Capped/floored FRN 分解"
+      ],
+      "Credit Analysis Models": [
+        "Expected loss = PD × LGD; recovery rate 关系",
+        "Credit valuation adjustment (CVA) 概念",
+        "结构模型 vs 简约模型的假设差异",
+        "Credit spread 期限结构含义"
+      ],
+      "Credit Default Swaps": [
+        "CDS 机制: protection buyer/seller, 触发事件",
+        "Upfront premium ≈ (credit spread − coupon) × duration",
+        "Index CDS vs single-name; 曲线交易",
+        "Basis trade 逻辑"
+      ]
+    }
+  },
+  "Ethics": { "weight_range": "10-15%", "modules": { "Code and Standards + Guidance": [], "Application of the Code and Standards": [] } },
+  "PM": { "weight_range": "10-15%", "modules": { "ETF Mechanics": [], "Multifactor Models": [], "Measuring/Managing Market Risk (VaR)": [], "Backtesting and Simulation": [], "Economics and Investment Markets": [], "Analysis of Active Portfolio Management": [], "Trading Costs and Electronic Markets": [] } },
+  "Corp": { "weight_range": "5-10%", "modules": { "Analysis of Dividends and Share Repurchases": [], "ESG Considerations": [], "Cost of Capital: Advanced Topics": [], "Corporate Restructuring": [] } },
+  "QM": { "weight_range": "5-10%", "modules": { "Basics of Multiple Regression": [], "Evaluating Regression Model Fit": [], "Model Misspecification": [], "Extensions of Multiple Regression": [], "Time-Series Analysis": [], "Machine Learning": [], "Big Data Projects": [] } },
+  "Derivatives": { "weight_range": "5-10%", "modules": { "Pricing and Valuation of Forwards/Futures": [], "Pricing and Valuation of Swaps": [], "Valuation of Contingent Claims (BSM/binomial)": [] } },
+  "Alts": { "weight_range": "5-10%", "modules": { "Real Estate Investments": [], "Publicly Traded Real Estate Securities (REITs)": [], "Private Equity Investments": [], "Commodities and Commodity Derivatives": [] } },
+  "Econ": { "weight_range": "5-10%", "modules": { "Currency Exchange Rates": [], "Economic Growth": [] } }
+}

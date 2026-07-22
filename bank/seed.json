@@ -66,6 +66,12 @@
         "B": "错。90 = 加回了全额利息 10 而没乘 (1−t)。这是本 LOS 最常见陷阱。",
         "C": "错。67.5 = 漏加了 NCC (D&A 20)。检查口诀：NI 起步四步走——加非现金、加税后利息、减两个 Inv。"
       },
+      "steps": [
+        { "label": "公式", "content": "FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv" },
+        { "label": "代入", "content": "= 100 + 20 + 10×(1−0.25) − 30 − 10" },
+        { "label": "结果", "content": "= 100 + 20 + 7.5 − 40 = 87.5" },
+        { "label": "陷阱", "content": "利息必须税后加回 (×0.75)。直接加 10 会得到错误选项 B 的 90。" }
+      ],
       "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF 定义式"
     },
     {
@@ -85,6 +91,12 @@
         "B": "错。50 是 NI 本身，没扣 equity charge——RI 的存在意义就是扣掉股权资本的机会成本。",
         "C": "错。45 = 50 − 0.10×50，把 equity charge 算在了 NI 上而不是期初账面净资产上。"
       },
+      "steps": [
+        { "label": "公式", "content": "RI = NI − equity charge，equity charge = re × 期初BV" },
+        { "label": "代入", "content": "= 50 − 0.10 × 400" },
+        { "label": "结果", "content": "= 50 − 40 = 10" },
+        { "label": "陷阱", "content": "equity charge 的基数是期初账面净资产 BV0，不是 NI 也不是期末 BV。" }
+      ],
       "source": "CFA L2 Curriculum, Residual Income Valuation"
     },
     {

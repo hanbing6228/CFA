@@ -428,6 +428,64 @@ def cmd_plan() -> None:
     print("- 搭工具/美化工具超过2个周末 → 立即停手, 工具已经够用了")
 
 
+# ---------------------------------------------------------------- build (app/bank.json)
+
+def cmd_build() -> None:
+    """合并 bank/*.json → app/bank.json, 附 schema 校验。"""
+    cfg = load_config()
+    los_map = json.loads((ROOT / "bank" / "los_map.json").read_text(encoding="utf-8"))
+    questions, ids = [], set()
+    errors = []
+    for path in sorted((ROOT / "bank").glob("*.json")):
+        if path.name == "los_map.json":
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for q in data.get("questions", []):
+            qid = q.get("id", "?")
+            if qid in ids:
+                errors.append(f"{path.name}: 重复 id {qid}")
+                continue
+            ids.add(qid)
+            if q.get("topic") not in cfg["topics"]:
+                errors.append(f"{qid}: 未知 topic {q.get('topic')}")
+            if q.get("topic") not in los_map:
+                errors.append(f"{qid}: topic 不在 los_map 骨架中")
+            ch = q.get("choices", {})
+            if sorted(ch.keys()) != ["A", "B", "C"]:
+                errors.append(f"{qid}: choices 必须恰好 A/B/C")
+            if q.get("answer") not in ch:
+                errors.append(f"{qid}: answer 不在 choices 中")
+            if sorted(q.get("explanations", {}).keys()) != sorted(ch.keys()):
+                errors.append(f"{qid}: explanations 键与 choices 不一致")
+            if q.get("type") == "calc" and not q.get("steps"):
+                errors.append(f"{qid}: calc 题缺 steps")
+            if not q.get("source"):
+                errors.append(f"{qid}: 缺 source 出处")
+            questions.append(q)
+    if errors:
+        print("build 失败:")
+        for e in errors:
+            print(" -", e)
+        sys.exit(1)
+    out = {
+        "version": date.today().isoformat(),
+        "defaults": {
+            "exam_date": cfg["exam_date"],
+            "daily": cfg["daily"],
+            "retention": cfg["retention"],
+        },
+        "topics": cfg["topics"],
+        "questions": questions,
+    }
+    dest = ROOT / "app" / "bank.json"
+    dest.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    by_topic: dict[str, int] = {}
+    for q in questions:
+        by_topic[q["topic"]] = by_topic.get(q["topic"], 0) + 1
+    print(f"build OK → {dest}  ({len(questions)} 题: "
+          + ", ".join(f"{k}×{v}" for k, v in sorted(by_topic.items())) + ")")
+
+
 # ---------------------------------------------------------------- main
 
 def main() -> None:
@@ -446,6 +504,8 @@ def main() -> None:
         cmd_stats()
     elif cmd == "plan":
         cmd_plan()
+    elif cmd == "build":
+        cmd_build()
     else:
         print(__doc__)
 
