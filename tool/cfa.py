@@ -437,8 +437,12 @@ def cmd_build() -> None:
     questions, ids = [], set()
     cases: dict[str, dict] = {}
     errors = []
-    frames = json.loads((ROOT / "bank" / "frames.json").read_text(encoding="utf-8"))
-    frames.pop("_schema", None)
+    frames: dict = {}
+    for fpath in sorted((ROOT / "bank").glob("frames*.json")):
+        fdata = json.loads(fpath.read_text(encoding="utf-8"))
+        fdata.pop("_schema", None)
+        for topic, mods in fdata.items():
+            frames.setdefault(topic, {}).update(mods)
     lessons: dict[str, list] = {}
     ldir = ROOT / "bank" / "lessons"
     if ldir.exists():
