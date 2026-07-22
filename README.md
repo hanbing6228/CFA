@@ -2,12 +2,13 @@
 
 目标不是学会，是**用最少消耗通过考试**。以题代读（检索练习）+ FSRS 间隔重复 + 考试日期感知调度 + 权重杠杆 + AI 督学。
 
-## 📱 手机安装（一次性，2 分钟）
+## 📱 手机安装（一次性，1 分钟）
 
-1. 仓库 Settings → Pages → Source 选 `Deploy from a branch`，分支选本分支、目录选 `/app`（根目录没有 app 选项时选 `/ (root)` 并访问 `/app/` 路径）
-2. 手机浏览器打开 `https://<你的用户名>.github.io/CFA/`（Pages 给出的地址）
-3. Safari：分享 → 添加到主屏幕；Chrome：菜单 → 安装应用。之后像原生 App 一样从主屏幕打开，**离线可用**
-4. App 设置里改考试日期 → 保存。开始用
+1. 手机浏览器打开 **https://examkiller-iota.vercel.app**（Vercel 已连本仓库，git push 自动部署）
+2. Safari：分享 → 添加到主屏幕；Chrome：菜单 → 安装应用。之后像原生 App 一样从主屏幕打开，**离线可用**
+3. App 设置里改考试日期 → 保存。开始用
+
+若打开被要求登录 Vercel：去 vercel.com 项目 examkiller → Settings → Deployment Protection，把 Vercel Authentication 关掉。
 
 日常就两步：打开 App → 点「开始 · 先做 1 题就算赢」。
 
