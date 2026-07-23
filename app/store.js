@@ -35,6 +35,7 @@ const Store = (() => {
       timeBudget: (def.daily && def.daily.time_budget_minutes) || 40,
       reviewCap: (def.daily && def.daily.review_cap) || 40,
       ghToken: '', ghRepo: 'hanbing6228/CFA', ghBranch: 'claude/cfa-level2-low-effort-tool-tjdjyg',
+      aiKey: '', aiModel: 'claude-sonnet-5',
     }, db.settings);
   }
 
@@ -299,6 +300,34 @@ const Store = (() => {
     return Math.round((new Date(todayStr()) - new Date(last)) / 86400000);
   }
 
+  /* 内联 AI 家教: 直接调 Anthropic API (浏览器直连), 无需复制去别处 */
+  async function askTutor(prompt) {
+    const key = settings().aiKey;
+    if (!key) return { ok: false, reason: 'no-key' };
+    try {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'x-api-key': key,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true',
+        },
+        body: JSON.stringify({
+          model: settings().aiModel || 'claude-sonnet-5',
+          max_tokens: 700,
+          system: '你是 CFA L2 私人家教。用最简单的中文讲清楚，配一个新例子，别重复原题解析。专业术语保留英文。回答控制在 200 字内。',
+          messages: [{ role: 'user', content: prompt }],
+        }),
+      });
+      if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
+      const data = await res.json();
+      return { ok: true, text: (data.content || []).map(b => b.text || '').join('') };
+    } catch (e) {
+      return { ok: false, reason: 'network' };
+    }
+  }
+
   function exportData() { return JSON.stringify(db); }
   function importData(text) {
     const d = JSON.parse(text);
@@ -325,7 +354,7 @@ const Store = (() => {
     init, settings, setSettings, daysToExam, examCfg,
     buildSession, dueCards, newCards, newQuota, applyGrade,
     statsData, streakInfo, cardState, setNote, getNote,
-    phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson,
+    phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson, askTutor,
     syncToday, flushPending, exportData, importData, resetData,
     get bank() { return bank; }, get db() { return db; }, todayStr,
   };

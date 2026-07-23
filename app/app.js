@@ -9,6 +9,8 @@ const el = (tag, cls, html) => {
   return n;
 };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+/* fmt: 转义 + 渲染 $...$ 公式。用于题干/解析/步骤/微课/框架等所有含公式的正文。 */
+const fmt = s => (window.MathFmt ? MathFmt.renderText(s) : esc(s));
 
 function toast(msg) {
   const t = $('#toast');
@@ -105,14 +107,14 @@ function casePanel(q, expanded) {
   const d = el('details', 'casebox');
   if (expanded) d.open = true;
   d.appendChild(el('summary', '', `📄 ${esc(c.title)} <span class="muted">(案例背景与图表)</span>`));
-  d.appendChild(el('p', 'casebg', esc(c.background)));
+  d.appendChild(el('p', 'casebg', fmt(c.background)));
   for (const ex of c.exhibits || []) {
     d.appendChild(el('div', 'extitle', esc(ex.title)));
     const wrap = el('div', 'exwrap');
     const tb = el('table', 'extable');
     (ex.table || []).forEach((row, ri) => {
       const tr = el('tr');
-      row.forEach(cell => tr.appendChild(el(ri === 0 ? 'th' : 'td', '', esc(cell))));
+      row.forEach(cell => tr.appendChild(el(ri === 0 ? 'th' : 'td', '', fmt(cell))));
       tb.appendChild(tr);
     });
     wrap.appendChild(tb);
@@ -151,12 +153,12 @@ function renderQuiz() {
   const prevQ = Quiz.idx > 0 ? Quiz.session[Quiz.idx - 1] : null;
   const cp = casePanel(q, !prevQ || prevQ.case !== q.case);   // 同 case 第二题起默认折叠
   if (cp) card.appendChild(cp);
-  card.appendChild(el('div', 'stem', esc(q.stem)));
+  card.appendChild(el('div', 'stem', fmt(q.stem)));
   const choicesBox = el('div');
   let answered = false;
   ['A', 'B', 'C'].forEach(k => {
     if (!(k in q.choices)) return;
-    const b = el('button', 'choice', `<b>${k}.</b> ${esc(q.choices[k])}`);
+    const b = el('button', 'choice', `<b>${k}.</b> ${fmt(q.choices[k])}`);
     b.dataset.k = k;
     b.onclick = () => {
       if (!answered) { answered = true; onAnswer(q, k, card, choicesBox); }
@@ -190,7 +192,7 @@ function renderLesson(item, main) {
     const c = item.cards[shown];
     const lc = el('div', 'lesson-card');
     lc.appendChild(el('h2', '', esc(c.h)));
-    lc.appendChild(el('div', 'lesson-body', esc(c.b)));
+    lc.appendChild(el('div', 'lesson-body', fmt(c.b)));
     cardsBox.appendChild(lc);
     shown += 1;
     next.textContent = shown < item.cards.length ? `下一张 ▸ (${shown}/${item.cards.length})` : '懂了,开始做题 ▸';
@@ -205,15 +207,42 @@ function renderLesson(item, main) {
   };
   showOne();
   card.appendChild(next);
-  const ask = el('button', 'askbtn', '🤔 没看懂?复制这课去问 Claude');
-  ask.style.marginTop = '8px';
-  ask.onclick = () => {
-    const text = `我在学 CFA L2 的 ${item.topic} / ${item.los},下面是微课内容,请用更浅的方式+一个新例子给我讲一遍:\n\n` +
-      item.cards.map(c => `${c.h}: ${c.b}`).join('\n');
-    navigator.clipboard.writeText(text).then(() => toast('已复制,去 Claude 粘贴'), () => toast('复制失败'));
-  };
-  card.appendChild(ask);
+  card.appendChild(tutorWidget('🤔 没看懂?让 Claude 换个说法讲', () =>
+    `我在学 CFA L2 的 ${item.topic} / ${item.los},下面是微课内容,请用更浅的方式+一个新例子给我讲一遍:\n\n` +
+    item.cards.map(c => `${c.h}: ${c.b}`).join('\n')));
   main.appendChild(card);
+}
+
+/* 内联 AI 家教控件: 有 API key 就直接在页内出答案, 没有则回退到复制 */
+function tutorWidget(label, buildPrompt) {
+  const wrap = el('div', 'askrow');
+  const btn = el('button', 'askbtn', label);
+  btn.onclick = async () => {
+    const prompt = buildPrompt();
+    if (!Store.settings().aiKey) {
+      navigator.clipboard.writeText(prompt).then(
+        () => toast('未配 AI key,已复制,去 Claude 粘贴 (设置里贴 key 可页内直接答)'),
+        () => toast('复制失败'));
+      return;
+    }
+    btn.style.display = 'none';
+    const box = el('div', 'tutor-box');
+    box.appendChild(el('div', 'tutor-loading', '🤔 Claude 正在讲…'));
+    wrap.appendChild(box);
+    const res = await Store.askTutor(prompt);
+    box.innerHTML = '';
+    if (res.ok) {
+      box.appendChild(el('div', '', '🎓 <b>家教</b>'));
+      box.appendChild(el('div', 'ans', fmt(res.text)));
+    } else if (res.reason === 'no-key') {
+      box.appendChild(el('div', 'tutor-loading', '请先在设置里贴 Anthropic API key'));
+    } else {
+      box.appendChild(el('div', 'tutor-loading', `出错了 (${res.reason})。已把问题复制到剪贴板`));
+      navigator.clipboard.writeText(prompt).catch(() => {});
+    }
+  };
+  wrap.appendChild(btn);
+  return wrap;
 }
 
 function toggleWhy(q, btn) {
@@ -222,7 +251,7 @@ function toggleWhy(q, btn) {
   if (why) { why.remove(); addHint(btn, q); return; }
   const hint = btn.querySelector('.whyhint');
   if (hint) hint.remove();
-  why = el('span', 'why', `${k === q.answer ? '✓' : '✗'} ${esc(q.explanations[k])}`);
+  why = el('span', 'why', `${k === q.answer ? '✓' : '✗'} ${fmt(q.explanations[k])}`);
   btn.appendChild(why);
 }
 
@@ -255,7 +284,7 @@ function onAnswer(q, picked, card, choicesBox) {
     btn.onclick = () => {
       if (shown < q.steps.length) {
         const st = q.steps[shown];
-        stepsBox.insertBefore(el('div', 'step', `<b>${esc(st.label)}</b>${esc(st.content)}`), btn);
+        stepsBox.insertBefore(el('div', 'step', `<b>${esc(st.label)}</b>${fmt(st.content)}`), btn);
         shown += 1;
         btn.textContent = shown < q.steps.length ? `下一步 ▸ (${shown}/${q.steps.length})` : '✅ 步骤完';
         if (shown >= q.steps.length) btn.disabled = true;
@@ -283,19 +312,11 @@ function onAnswer(q, picked, card, choicesBox) {
   noteBox.appendChild(noteBtn);
   card.appendChild(noteBox);
 
-  // 追问 Claude
-  const ask = el('div', 'askrow');
-  const askBtn = el('button', 'askbtn', '🤔 还是不懂?复制追问发给 Claude');
-  askBtn.onclick = () => {
-    const prompt = `我在做 CFA L2 练习题,这道题${correct ? '我做对了但想深挖' : `我错选了 ${picked}`}。请针对我的误区讲解,不要重复题目解析:\n\n` +
-      `题目: ${q.stem}\n选项: ${Object.entries(q.choices).map(([k, v]) => `${k}. ${v}`).join(' ')}\n` +
-      `正确答案: ${q.answer}\n官方解析: ${q.explanations[q.answer]}\n考点: ${q.topic} / ${q.los}`;
-    navigator.clipboard.writeText(prompt).then(
-      () => toast('已复制,去 Claude 粘贴提问'),
-      () => toast('复制失败,长按题目手动复制'));
-  };
-  ask.appendChild(askBtn);
-  card.appendChild(ask);
+  // 内联追问 Claude (有 key 页内直接答)
+  card.appendChild(tutorWidget(correct ? '🤔 想更深入?问问 Claude' : '🤔 还是不懂?让 Claude 讲讲我的误区', () =>
+    `我在做 CFA L2 练习题,这道题${correct ? '我做对了但想深挖' : `我错选了 ${picked}`}。请针对我的误区讲解,不要重复题目解析:\n\n` +
+    `题目: ${q.stem}\n选项: ${Object.entries(q.choices).map(([k, v]) => `${k}. ${v}`).join(' ')}\n` +
+    `正确答案: ${q.answer}\n官方解析: ${q.explanations[q.answer]}\n考点: ${q.topic} / ${q.los}`));
 
   // 评分行
   const conf = el('div', 'confrow');
@@ -405,6 +426,14 @@ function renderSettings() {
     <label class="field">分支</label><input type="text" id="set-branch" value="${esc(s.ghBranch)}">`;
   main.appendChild(c2);
 
+  const c2b = el('div', 'card');
+  c2b.innerHTML = `
+    <h2>🎓 内联 AI 家教</h2>
+    <p class="muted">贴一个 Anthropic API key,答题/微课里"问 Claude"就直接在页内出答案,不用复制去别处。留空则回退到复制模式。</p>
+    <label class="field">Anthropic API Key</label><input type="password" id="set-aikey" placeholder="sk-ant-..." value="${esc(s.aiKey)}">
+    <label class="field">模型</label><input type="text" id="set-aimodel" value="${esc(s.aiModel)}">`;
+  main.appendChild(c2b);
+
   const saveBtn = el('button', 'bigbtn', '保存设置');
   saveBtn.onclick = () => {
     Store.setSettings({
@@ -414,6 +443,8 @@ function renderSettings() {
       ghToken: $('#set-token').value.trim(),
       ghRepo: $('#set-repo').value.trim(),
       ghBranch: $('#set-branch').value.trim(),
+      aiKey: $('#set-aikey').value.trim(),
+      aiModel: $('#set-aimodel').value.trim() || 'claude-sonnet-5',
     });
     Store.flushPending();
     toast('已保存');
@@ -473,11 +504,37 @@ function renderSettings() {
 }
 
 /* ---------- 框架屏 (品职式三层压缩的最后一层, 🔴 弱点自动标红) ---------- */
+/* 2026 L2 curriculum 顺序 (和你的框架图 PDF、Mock 卷一致) */
+const CURRICULUM_ORDER = ['Ethics', 'QM', 'Econ', 'FSA', 'Corp', 'Equity', 'FI', 'Derivatives', 'Alts', 'PM'];
+/* 考频: 权重 10-15% = 高频, 5-10% = 中频 (weight 存的是区间中值) */
+function freqBadge(meta) {
+  const w = meta.weight || 0;
+  if (w >= 12) return { cls: 'hi', label: '高频' };
+  if (w >= 9) return { cls: 'mid', label: '中高频' };
+  return { cls: 'mid', label: '中频' };
+}
+let FRAME_SORT = 'curriculum';   // curriculum | weight
+
 function renderFrames() {
   const main = $('#main');
   main.innerHTML = '';
   main.appendChild(el('h1', '', '框架图'));
-  main.appendChild(el('p', 'muted', '一行一个考点。🔴 = 你的弱点 LOS(自动标红)。冲刺期只刷这里。'));
+  const legend = el('div', 'card muted');
+  legend.innerHTML = '一行一个考点。<span class="freq f">𝑓 必背</span>公式 · ⚠️ 陷阱 · <span class="freq hi">高频</span>=大权重科目 · 🔴 你的弱点(自动标红置顶)。冲刺期只刷这里。';
+  main.appendChild(legend);
+
+  // 排序切换
+  const toggle = el('div', 'btnrow');
+  const t1 = el('button', FRAME_SORT === 'curriculum' ? 'primary' : '', '按大纲顺序');
+  const t2 = el('button', FRAME_SORT === 'weight' ? 'primary' : '', '按考频排序');
+  t1.style.cssText = t2.style.cssText = 'flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--text)';
+  if (FRAME_SORT === 'curriculum') t1.style.borderColor = 'var(--accent)';
+  if (FRAME_SORT === 'weight') t2.style.borderColor = 'var(--accent)';
+  t1.onclick = () => { FRAME_SORT = 'curriculum'; renderFrames(); };
+  t2.onclick = () => { FRAME_SORT = 'weight'; renderFrames(); };
+  toggle.appendChild(t1); toggle.appendChild(t2);
+  main.appendChild(toggle);
+
   const frames = Store.bank.frames || {};
   const stats = Store.statsData();
   const weakSet = new Set();
@@ -486,25 +543,33 @@ function renderFrames() {
       if (l.n >= 2 && l.right / l.n < 0.6) weakSet.add(t + '|' + los);
     }
   }
-  const topics = Object.keys(frames).sort(
-    (a, b) => (Store.bank.topics[b] || {}).weight - (Store.bank.topics[a] || {}).weight);
+  let topics = Object.keys(frames);
+  if (FRAME_SORT === 'curriculum') {
+    topics.sort((a, b) => CURRICULUM_ORDER.indexOf(a) - CURRICULUM_ORDER.indexOf(b));
+  } else {
+    topics.sort((a, b) => (Store.bank.topics[b] || {}).weight - (Store.bank.topics[a] || {}).weight);
+  }
   for (const t of topics) {
     const meta = Store.bank.topics[t] || {};
+    const fb = freqBadge(meta);
     const head = el('div', 'topichead');
-    head.appendChild(el('h2', '', esc(t)));
-    head.appendChild(el('span', `tier ${meta.tier || 'C'}`, `Tier ${meta.tier || '?'}`));
+    head.appendChild(el('h2', '', `${esc(t)} <span class="muted">${esc(meta.name_cn || '')}</span>`));
+    head.appendChild(el('span', `freq ${fb.cls}`, fb.label));
+    head.appendChild(el('span', 'muted', `权重~${meta.weight || '?'}%`));
     main.appendChild(head);
     for (const [mod, lines] of Object.entries(frames[t])) {
       const card = el('div', 'card');
       card.appendChild(el('h2', '', esc(mod)));
-      // 弱点行置顶
-      const sorted = lines.slice().sort((a, b) =>
+      const sorted = lines.slice().sort((a, b) =>   // 弱点行置顶
         (weakSet.has(t + '|' + (b.los || '')) ? 1 : 0) - (weakSet.has(t + '|' + (a.los || '')) ? 1 : 0));
       for (const ln of sorted) {
         const weak = ln.los && weakSet.has(t + '|' + ln.los);
         const row = el('div', `losrow${weak ? ' weak' : ''}`);
-        const marks = `${weak ? '🔴 ' : ''}${ln.f ? '𝑓 ' : ''}${ln.trap ? '⚠️ ' : ''}`;
-        row.appendChild(el('div', '', marks + esc(ln.t)));
+        let badges = '';
+        if (weak) badges += '🔴 ';
+        if (ln.f) badges += '<span class="freq f">𝑓</span>';
+        if (ln.trap) badges += '⚠️ ';
+        row.appendChild(el('div', '', badges + fmt(ln.t)));
         card.appendChild(row);
       }
       main.appendChild(card);
@@ -546,10 +611,10 @@ function renderMock() {
   const prevMq = Mock.idx > 0 ? Mock.qs[Mock.idx - 1] : null;
   const mcp = casePanel(q, !prevMq || prevMq.case !== q.case);
   if (mcp) card.appendChild(mcp);
-  card.appendChild(el('div', 'stem', esc(q.stem)));
+  card.appendChild(el('div', 'stem', fmt(q.stem)));
   ['A', 'B', 'C'].forEach(k => {
     if (!(k in q.choices)) return;
-    const b = el('button', 'choice', `<b>${k}.</b> ${esc(q.choices[k])}`);
+    const b = el('button', 'choice', `<b>${k}.</b> ${fmt(q.choices[k])}`);
     b.onclick = () => {
       Mock.answers.push({ id: q.id, topic: q.topic, los: q.los, picked: k, correct: k === q.answer ? 1 : 0 });
       Mock.idx += 1;

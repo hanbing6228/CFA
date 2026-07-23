@@ -123,6 +123,28 @@ input[type=date], input[type=number], input[type=text], input[type=password] {
 .btnrow button { flex: 1; min-width: 40%; padding: 11px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; font-size: .88rem; }
 .btnrow button.danger { color: var(--red); border-color: var(--red); }
 textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); padding: 10px; font-size: .8rem; }
+/* 公式渲染 */
+.mf { font-family: "Cambria Math", "Latin Modern Math", Georgia, serif; font-style: italic; white-space: nowrap; }
+.mf sub, .mf sup { font-style: normal; }
+.mf-sub, .mf-sup { font-size: .72em; }
+.mf-frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 .15em; }
+.mf-num { border-bottom: 1px solid currentColor; padding: 0 .3em; }
+.mf-den { padding: 0 .3em; }
+.mf-sqrt-b { border-top: 1px solid currentColor; padding: 0 .1em; }
+.mf-text { font-style: normal; }
+.mf-acc { position: relative; }
+
+/* 内联 AI 家教 */
+.tutor-box { margin-top: 10px; border: 1.5px solid var(--accent); border-radius: 12px; padding: 12px; background: var(--accent-soft); font-size: .9rem; }
+.tutor-box .ans { white-space: pre-wrap; margin-top: 6px; }
+.tutor-loading { color: var(--muted); font-size: .85rem; }
+
+/* 高频/必背徽章 */
+.freq { font-size: .66rem; padding: 1px 6px; border-radius: 5px; font-weight: 700; margin-right: 5px; vertical-align: middle; }
+.freq.hi { background: var(--red-soft); color: var(--red); }
+.freq.mid { background: var(--accent-soft); color: var(--accent); }
+.freq.f { background: var(--green-soft); color: var(--green); }
+
 /* 微课卡 */
 .lesson-card { border-left: 3px solid var(--green); background: var(--green-soft); border-radius: 0 12px 12px 0; padding: 12px 14px; margin: 10px 0; }
 .lesson-card h2 { font-size: .92rem; margin-bottom: 4px; }
