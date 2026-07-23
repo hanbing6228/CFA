@@ -62,6 +62,15 @@ function renderToday() {
   const proj = Store.projectedScore();
   const pClr = proj >= 0.70 ? 'var(--green)' : proj >= 0.60 ? 'var(--amber)' : 'var(--red)';
 
+  // 紧急行政提醒 (报名/预约截止临近)
+  const urgentTodo = Store.examTodos().find(t => !t.done && t.days >= 0 && t.days <= 21 && t.key !== 'exam');
+  if (urgentTodo) {
+    const a = el('div', 'card alert-card');
+    a.innerHTML = `⏰ <b>${esc(urgentTodo.label)}</b> ${urgentTodo.days === 0 ? '就是今天!' : `还有 ${urgentTodo.days} 天`} (${urgentTodo.date})<div class="muted" style="margin-top:2px">${esc(urgentTodo.note)} · 点开办 ▸</div>`;
+    a.onclick = () => { location.hash = '#plan'; };
+    main.appendChild(a);
+  }
+
   // 顶部极简状态条
   const top = el('div', 'today-top');
   top.innerHTML = `<span>${ph.icon} ${esc(ph.name)} · 距考 <b>${dte}</b> 天</span>`
@@ -457,6 +466,27 @@ function renderPlan() {
     card.appendChild(row);
   }
   main.appendChild(card);
+
+  // 考试行政日程
+  main.appendChild(el('h2', '', '📅 考试关键日程'));
+  const cal = el('div', 'card');
+  for (const t of Store.examTodos()) {
+    const urgent = !t.done && t.days >= 0 && t.days <= 21;
+    const overdue = !t.done && t.days < 0 && t.key !== 'exam';
+    const row = el('div', `examrow${urgent ? ' urgent' : ''}`);
+    const cb = el('button', 'examcheck', t.done ? '✅' : '⬜');
+    cb.onclick = () => { Store.toggleExamDone(t.key); renderPlan(); };
+    row.appendChild(cb);
+    const mid = el('div', 'examrow-main');
+    const when = t.days === 0 ? '就是今天!' : t.days > 0 ? `还有 ${t.days} 天` : `已过 ${-t.days} 天`;
+    mid.innerHTML = `<div><b>${esc(t.label)}</b> <span class="muted">${t.date}</span></div>
+      <div class="muted" style="font-size:.78rem">${esc(t.note)} · <span style="color:${urgent ? 'var(--red)' : overdue ? 'var(--amber)' : 'var(--muted)'}">${t.done ? '已完成' : when}</span></div>`;
+    row.appendChild(mid);
+    cal.appendChild(row);
+  }
+  main.appendChild(cal);
+  main.appendChild(el('div', 'card muted',
+    `📌 已为你在云端设好提醒: 报名/预约截止前会推送到手机。改考期请去设置。<br>数据来源: CFA Institute 2026 二级日程。`));
 
   const ph = Store.phase();
   main.appendChild(el('div', 'card muted',

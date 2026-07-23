@@ -5,6 +5,39 @@ const Store = (() => {
   const KEY = 'cfa_l2_v1';
   const TIER_MULT = { A: 3.0, B: 1.5, C: 0.5 };
 
+  /* CFA L2 2026 考试窗口 + 报名/预约截止 (来源: CFA Institute / soleadea) */
+  const EXAM_WINDOWS = [
+    { key: 'may', exam: '2026-05-19', examEnd: '2026-05-23', earlyReg: '2025-10-14', stdReg: '2026-02-18', schedule: '2026-02-18' },
+    { key: 'aug', exam: '2026-08-25', examEnd: '2026-08-29', earlyReg: '2026-01-21', stdReg: '2026-05-13', schedule: '2026-05-13' },
+    { key: 'nov', exam: '2026-11-18', examEnd: '2026-11-22', earlyReg: '2026-04-15', stdReg: '2026-08-11', schedule: '2026-08-18' },
+  ];
+  function examWindow() {
+    const d = settings().examDate;
+    // 选包含 examDate 的窗口, 否则选考试日最接近的
+    let best = EXAM_WINDOWS[EXAM_WINDOWS.length - 1];
+    for (const w of EXAM_WINDOWS) if (d >= w.exam && d <= w.examEnd) return w;
+    for (const w of EXAM_WINDOWS) if (d <= w.examEnd) { best = w; break; }
+    return best;
+  }
+  function daysFromToday(iso) {
+    return Math.ceil((new Date(iso + 'T00:00:00') - new Date(todayStr() + 'T00:00:00')) / 86400000);
+  }
+  /* 考试行政待办: 报名/预约/考试日, 带倒计时与状态 */
+  function examTodos() {
+    const w = examWindow();
+    const items = [
+      { key: 'reg', label: '完成报名 (标准截止)', date: w.stdReg, note: '过期 = 无法参加, 费用 $1490' },
+      { key: 'sched', label: '预约考点与时段', date: w.schedule, note: '报名后到官网选考试中心与具体时间' },
+      { key: 'exam', label: '考试日', date: w.exam, note: `考试窗口 ${w.exam} ~ ${w.examEnd}` },
+    ];
+    return items.map(it => ({ ...it, days: daysFromToday(it.date), done: (db.examDone || {})[it.key] }));
+  }
+  function toggleExamDone(key) {
+    db.examDone = db.examDone || {};
+    db.examDone[key] = !db.examDone[key];
+    save();
+  }
+
   let bank = null;          // app/bank.json 内容
   let db = null;            // {cards:{id:{s,d,reps,lapses,last,due}}, reviews:[], settings:{}, pendingSync:[]}
 
@@ -397,6 +430,7 @@ const Store = (() => {
     statsData, streakInfo, cardState, setNote, getNote,
     phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson, askTutor,
     setTier, topicStats, projectedScore, practiceTopic, topicMeta,
+    examWindow, examTodos, toggleExamDone, daysFromToday,
     syncToday, flushPending, exportData, importData, resetData,
     get bank() { return bank; }, get db() { return db; }, todayStr,
   };

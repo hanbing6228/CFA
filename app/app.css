@@ -147,6 +147,15 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .sheet-panel textarea { min-height: 70px; margin-bottom: 8px; }
 .sheet-lesson { margin: 8px 0; }
 
+
+/* 考试日程 + 紧急提醒 */
+.alert-card { border-left: 5px solid var(--red); background: var(--red-soft); cursor: pointer; }
+.examrow { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+.examrow:last-child { border-bottom: 0; }
+.examrow.urgent { background: var(--red-soft); border-radius: 8px; padding: 11px 8px; }
+.examrow-main { flex: 1; min-width: 0; }
+.examcheck { background: none; border: 0; font-size: 1.3rem; cursor: pointer; flex: 0 0 auto; }
+
 /* 作战计划 */
 .planrow { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border); }
 .planrow:last-child { border-bottom: 0; }
