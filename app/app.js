@@ -843,39 +843,46 @@ function renderFrames() {
 
   if (FRAME_VIEW === 'map') {
     main.appendChild(el('p', 'muted', `双指缩放 · 拖动平移 · 🔴 弱点 · 𝑓 公式 · ⚠️ 陷阱`));
-    // 构造脑图树: 科目 → module → 考点。叶子只显示短标签, 全文与元数据留在节点上
+    // 短标签 (节点只显短, 全文进详情卡)
     const shortLabel = s => {
-      const t = s.replace(/\$/g, '').replace(/[（(].*?[)）]/g, '');
-      const cut = t.split(/[:：,，;；]/)[0];
-      return (cut.length > 12 ? cut.slice(0, 12) + '…' : cut);
+      const t = String(s).replace(/\$/g, '').replace(/[（(].*?[)）]/g, '');
+      const cut = t.split(/[:：,，;；。\n]/)[0];
+      return (cut.length > 14 ? cut.slice(0, 14) + '…' : cut) || t.slice(0, 14);
     };
-    const tree = { name: `${FRAME_TOPIC}`, full: `${FRAME_TOPIC} ${meta.name_cn || ''}`, kind: 'root', children: [] };
-    for (const [mod, lines] of Object.entries(frames[FRAME_TOPIC])) {
-      const mnode = { name: mod.length > 14 ? mod.slice(0, 14) + '…' : mod, full: mod, kind: 'module', module: mod, children: [] };
-      for (const ln of lines) {
-        const weak = ln.los && weakSet.has(FRAME_TOPIC + '|' + ln.los);
-        mnode.children.push({
-          name: (ln.f ? '𝑓 ' : '') + (ln.trap ? '⚠ ' : '') + shortLabel(ln.t),
-          full: ln.t, los: ln.los || '', module: mod, f: ln.f, trap: ln.trap, weak, kind: 'point',
-        });
+    const full = Store.bank.framesFull || {};
+    let tree;
+    if (full[FRAME_TOPIC]) {
+      // 完整原版树 (从框架脑图逐节点提取, 任意深度)
+      const conv = (node) => {
+        const out = {
+          name: (node.f ? '𝑓 ' : '') + (node.trap ? '⚠ ' : '') + shortLabel(node.name),
+          full: node.name, module: FRAME_TOPIC, los: '', f: node.f, trap: node.trap,
+          kind: node.children && node.children.length ? 'module' : 'point',
+        };
+        if (node.children && node.children.length) out.children = node.children.map(conv);
+        return out;
+      };
+      tree = conv(full[FRAME_TOPIC]);
+      tree.kind = 'root';
+    } else {
+      tree = { name: `${FRAME_TOPIC}`, full: `${FRAME_TOPIC} ${meta.name_cn || ''}`, kind: 'root', children: [] };
+      for (const [mod, lines] of Object.entries(frames[FRAME_TOPIC])) {
+        const mnode = { name: mod.length > 14 ? mod.slice(0, 14) + '…' : mod, full: mod, kind: 'module', module: mod, children: [] };
+        for (const ln of lines) {
+          const weak = ln.los && weakSet.has(FRAME_TOPIC + '|' + ln.los);
+          mnode.children.push({
+            name: (ln.f ? '𝑓 ' : '') + (ln.trap ? '⚠ ' : '') + shortLabel(ln.t),
+            full: ln.t, los: ln.los || '', module: mod, f: ln.f, trap: ln.trap, weak, kind: 'point',
+          });
+        }
+        if (mnode.children.some(c => c.weak)) mnode.weak = true;
+        tree.children.push(mnode);
       }
-      if (mnode.children.some(c => c.weak)) mnode.weak = true;
-      tree.children.push(mnode);
     }
-    const btnRow2 = el('div', 'btnrow');
-    btnRow2.style.marginBottom = '8px';
-    const fsBtn = el('button', '', '⛶ 交互脑图全屏');
-    fsBtn.style.cssText = 'flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--accent);background:var(--card);color:var(--accent);font-weight:600';
+    const fsBtn = el('button', '', '⛶ 全屏脑图 (双指缩放·点节点看详情)');
+    fsBtn.style.cssText = 'width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;font-weight:600;margin-bottom:8px';
     fsBtn.onclick = () => openMindmapFS(tree, null);
-    btnRow2.appendChild(fsBtn);
-    const orig = (FRAMES_MANIFEST || {})[FRAME_TOPIC];
-    if (orig && orig.length) {
-      const oBtn = el('button', '', '📄 原版脑图');
-      oBtn.style.cssText = 'flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;font-weight:600';
-      oBtn.onclick = () => openImageFS(orig.map(f => 'frames/' + f), `${FRAME_TOPIC} 原版脑图`);
-      btnRow2.appendChild(oBtn);
-    }
-    main.appendChild(btnRow2);
+    main.appendChild(fsBtn);
     const box = el('div', 'mapbox');
     main.appendChild(box);
     requestAnimationFrame(() => MindMap.render(box, tree, { onNodeTap: (node) => openNodeSheet(node, FRAME_TOPIC) }));

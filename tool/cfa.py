@@ -443,6 +443,13 @@ def cmd_build() -> None:
         fdata.pop("_schema", None)
         for topic, mods in fdata.items():
             frames.setdefault(topic, {}).update(mods)
+    frames_full: dict = {}
+    ffdir = ROOT / "bank" / "frames_full"
+    if ffdir.exists():
+        for ffpath in sorted(ffdir.glob("*.json")):
+            fdata = json.loads(ffpath.read_text(encoding="utf-8"))
+            if fdata.get("topic") and fdata.get("tree"):
+                frames_full[fdata["topic"]] = fdata["tree"]
     lessons: dict[str, list] = {}
     ldir = ROOT / "bank" / "lessons"
     if ldir.exists():
@@ -506,6 +513,7 @@ def cmd_build() -> None:
         },
         "topics": cfg["topics"],
         "frames": frames,
+        "framesFull": frames_full,
         "lessons": lessons,
         "cases": cases,
         "questions": questions,
