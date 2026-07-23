@@ -21,9 +21,9 @@
 | 弱点 | LOS 级正确率看板，🔴 = 复习≥2次且<60%（调度器自动加频这些题） | UWorld/Achievable LOS 级追踪 |
 | 设置 | 考期/额度/AI督学 token/备份导出导入 | — |
 
-## 题库（1152 题，全十科覆盖）
+## 题库（1451 题，全十科覆盖）
 
-- **.pages 真题库逐字导入**（`bank/pages_bank.json`，853 题）：从 1071 道 .pages 真题确定性解析（`tool/parse_pages.py`），原文题干/选项/答案/解析照录，附**历史正确率**（考频/难度信号）。单块解析题在 App 里答完直接展示整段原文解析。（218 道因题干/选项在原始提取中未切净暂略。）
+- **.pages 真题库逐字导入**（`bank/pages_bank.json`，1152 题）：从 1071 道 .pages 真题确定性解析（`tool/parse_pages.py`），原文题干/选项/答案/解析照录，附**历史正确率**（考频/难度信号）。单块解析题在 App 里答完直接展示整段原文解析。（去重bug修复后仅58道因原始提取残缺无法逐字还原而略。）
 - **Mock 真题逐字导入**（`bank/cases_*.json`，200 题）：两套 2026 L2 Mock 的 50 个完整 vignette，原文题干/Exhibit 表格/逐选项解析照录，calc 题带四步推导且全部重算核对。
 - **原创补充题**（`FSA/Equity/FI.json + seed.json`，99 题）：早期生成 + 独立 agent 对抗性校验。
 - 题数分布：FSA 195 · FI 173 · Equity 160 · QM 130 · PM 112 · Alts 97 · Econ 87 · Ethics 79 · Derivatives 71 · Corp 48。

@@ -9,7 +9,7 @@ import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "import" / "pages_extract_raw.txt"
+RAW = ROOT / "import" / "pages_raw_v2.txt"   # 不去重、保序的重新提取版 (修复选项丢失)
 
 # 知识点(module) → 我的 topic key。基于 los_map 的 module 归属。
 MODULE_TOPIC = {
@@ -150,6 +150,11 @@ def to_bank():
         if any(not o for o in opts):
             skipped += 1
             continue
+        dk = q["stem"][:60] + "|" + "|".join(sorted(opts))[:60]
+        if dk in seen:                    # 去重(v2 提取有少量重复)
+            skipped += 1
+            continue
+        seen[dk] = 1
         qid = f"PG-{q['topic']}-{i}"
         # 计算题判定: 解析或题干含数字运算线索
         blob = q["stem"] + q["explanation"]
