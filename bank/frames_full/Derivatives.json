@@ -1,0 +1,502 @@
+{
+ "topic": "Derivatives",
+ "tree": {
+  "name": "Derivatives",
+  "children": [
+   {
+    "name": "LM1 Pricing and Valuation of Forward Commitments",
+    "children": [
+     {
+      "name": "Basic concept",
+      "children": [
+       {
+        "name": "Forward/futures price",
+        "children": [
+         {
+          "name": "Price negotiated in the forward/futures contract"
+         }
+        ]
+       },
+       {
+        "name": "Forward/future value",
+        "children": [
+         {
+          "name": "Monetary value of an existing foward/futures contract"
+         }
+        ]
+       },
+       {
+        "name": "Convergence",
+        "children": [
+         {
+          "name": "At time T, both forward/future prices = spot price"
+         }
+        ]
+       },
+       {
+        "name": "No-arbitrage principle",
+        "children": [
+         {
+          "name": "Tradable securities with identical cash flow payments must have the same price"
+         },
+         {
+          "name": "The portfolio should yield the risk-free rate of return, if it generates certain payoffs"
+         }
+        ]
+       },
+       {
+        "name": "Value of a forward contract",
+        "f": 1
+       }
+      ]
+     },
+     {
+      "name": "Foward/futures",
+      "children": [
+       {
+        "name": "Carry arbitrage model",
+        "children": [
+         {
+          "name": "Carry arbitrage",
+          "children": [
+           {
+            "name": "Foward contract market price is too high",
+            "children": [
+             {
+              "name": "At initiation",
+              "children": [
+               {
+                "name": "Step 1 Sell the forward contract"
+               },
+               {
+                "name": "Step 2 Borrow funds at the risk-free rate"
+               },
+               {
+                "name": "Step 3 Purchase the underlying"
+               }
+              ]
+             },
+             {
+              "name": "At settlement date",
+              "children": [
+               {
+                "name": "Step 1 Deliver the underlying to the long"
+               },
+               {
+                "name": "Step 2 Get the payment from the long"
+               },
+               {
+                "name": "Step 3 Repay the loan"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Reverse carry arbitrage",
+          "children": [
+           {
+            "name": "Forward contract market price is too low",
+            "children": [
+             {
+              "name": "At initiation",
+              "children": [
+               {
+                "name": "Step 1 Buy the forward contract"
+               },
+               {
+                "name": "Step 2 Short sell the underlying"
+               },
+               {
+                "name": "Step 3 Lend the short sale proceeds"
+               }
+              ]
+             },
+             {
+              "name": "At settlement date",
+              "children": [
+               {
+                "name": "Step 1 Pay the forward price and get the unerlying"
+               },
+               {
+                "name": "Step 2 Close out the short position by delivering the underlying"
+               },
+               {
+                "name": "Step 3 Receive investment proceeds"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Forward value",
+          "children": [
+           {
+            "name": "Carry benefits CB",
+            "children": [
+             {
+              "name": "Dividends,interest,coupon...."
+             }
+            ]
+           },
+           {
+            "name": "Carry costs CC",
+            "children": [
+             {
+              "name": "Zero for financial assets but is important for commodities"
+             }
+            ]
+           },
+           {
+            "name": "for continuous compounding",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "Carry arbitage model with cash flows"
+         }
+        ]
+       },
+       {
+        "name": "Equity forward/futures",
+        "children": [
+         {
+          "name": "Price",
+          "f": 1
+         },
+         {
+          "name": "Value",
+          "f": 1
+         },
+         {
+          "name": "Equity index forward contract (continuous dividends)",
+          "children": [
+           {
+            "name": "Price",
+            "f": 1
+           },
+           {
+            "name": "Value",
+            "f": 1
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Fixed-income forward/futures",
+        "children": [
+         {
+          "name": "Forward contract on coupon bonds",
+          "children": [
+           {
+            "name": "Price",
+            "f": 1
+           },
+           {
+            "name": "Value",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "Bond futures",
+          "children": [
+           {
+            "name": "Concept",
+            "children": [
+             {
+              "name": "Accrual interest = (days since coupon payments / days between coupon payments)× coupon amounts",
+              "f": 1
+             },
+             {
+              "name": "Full price = clean price + accrued interest",
+              "f": 1
+             },
+             {
+              "name": "Conversion factor"
+             },
+             {
+              "name": "Cheapest-to-deliver",
+              "children": [
+               {
+                "name": "The debt instrument that can be purchased and delivered at the lowest cost"
+               }
+              ]
+             },
+             {
+              "name": "S=Quoted bond price + accrued interest",
+              "f": 1
+             }
+            ]
+           },
+           {
+            "name": "Price",
+            "children": [
+             {
+              "name": "No-arbitrage futures price at expiration",
+              "f": 1
+             },
+             {
+              "name": "Quoted future price",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Interest rate forward/futures",
+        "children": [
+         {
+          "name": "FRA",
+          "children": [
+           {
+            "name": "Basic concepts",
+            "children": [
+             {
+              "name": "Libor"
+             },
+             {
+              "name": "No loan is actually made, just an interest payment and always settled in cash at contract expiration"
+             },
+             {
+              "name": "Advanced set"
+             },
+             {
+              "name": "Payment"
+             },
+             {
+              "name": "Annualized based on a 360-day year, add-on rate"
+             },
+             {
+              "name": "Settled in arrears"
+             },
+             {
+              "name": "Advanded settled"
+             },
+             {
+              "name": "Payment is made at the maturity of the underlying instrument"
+             },
+             {
+              "name": "FRA expires and settle at the same time"
+             },
+             {
+              "name": "Reference rate at the expiration date is above the contract rate, the long will receive cash payment"
+             },
+             {
+              "name": "Reference rate at the expiration date is below the contract rate, the short will receive cash payment"
+             }
+            ]
+           },
+           {
+            "name": "Pricing",
+            "children": [
+             {
+              "name": "Forward price in an FRA is the no-arbitrage forward rate",
+              "f": 1
+             }
+            ]
+           },
+           {
+            "name": "Valuation",
+            "children": [
+             {
+              "name": "At maturity"
+             },
+             {
+              "name": "Before maturity",
+              "children": [
+               {
+                "name": "Find the new FRA price first"
+               },
+               {
+                "name": "The futures value is zero after marketing to market",
+                "trap": 1
+               },
+               {
+                "name": "The forward value is the present value of the difference in forward prices at an intermediate time"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Comparing forward and futures"
+       }
+      ]
+     },
+     {
+      "name": "Swap",
+      "children": [
+       {
+        "name": "Interest rate swap contracts",
+        "children": [
+         {
+          "name": "Interest rate swap (Plain vanilla swap)",
+          "children": [
+           {
+            "name": "Basic concept",
+            "children": [
+             {
+              "name": "One party pays a ﬁxed rate and the other pays a ﬂoating rate"
+             }
+            ]
+           },
+           {
+            "name": "Pricing",
+            "children": [
+             {
+              "name": "Calculate the ﬁxed rate (swap rate) that makes the contract value zero at initiation"
+             },
+             {
+              "name": "Swap rate=annualized periodic rate(C)",
+              "f": 1
+             },
+             {
+              "name": "B is the discount factor"
+             }
+            ]
+           },
+           {
+            "name": "Valuing",
+            "children": [
+             {
+              "name": "Receiver of a ﬁxed rate and payer of a ﬂoating rate",
+              "children": [
+               {
+                "name": "V=Value of ﬁxed bond - value of ﬂoating bond",
+                "f": 1
+               }
+              ]
+             },
+             {
+              "name": "Receiver of a ﬂoating rate and payer of a ﬁxed rate",
+              "children": [
+               {
+                "name": "V=Value of ﬂoating bond - value of ﬁxed bond",
+                "f": 1
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Currency swap",
+        "children": [
+         {
+          "name": "Basic concept",
+          "children": [
+           {
+            "name": "Exchange future interest payments in diﬀerent currencies"
+           },
+           {
+            "name": "Often but not always involve an exchange notional amount"
+           }
+          ]
+         },
+         {
+          "name": "Four types",
+          "children": [
+           {
+            "name": "Fixed-for-ﬁxed"
+           },
+           {
+            "name": "Floating-for-ﬁxed"
+           },
+           {
+            "name": "Fixed-for-ﬂoating"
+           },
+           {
+            "name": "Floating-for-ﬂoating"
+           }
+          ]
+         },
+         {
+          "name": "FB = ﬁxed-rate bond, S0 = exchange rate at time 0",
+          "f": 1
+         },
+         {
+          "name": "No pricing problem",
+          "trap": 1
+         }
+        ]
+       },
+       {
+        "name": "Equity swap",
+        "children": [
+         {
+          "name": "Basic concept",
+          "children": [
+           {
+            "name": "One party pays cash ﬂow series determined by an equity"
+           },
+           {
+            "name": "The other party",
+            "children": [
+             {
+              "name": "Pays cash ﬂow series determined by another equity"
+             },
+             {
+              "name": "Pays a ﬁxed series"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Three types",
+          "children": [
+           {
+            "name": "Receive-equity return, pay-ﬁxed",
+            "children": [
+             {
+              "name": "Notional amount ×（Equity return - ﬁxed rate)",
+              "f": 1
+             }
+            ]
+           },
+           {
+            "name": "Receive-equity return, pay-ﬂoating",
+            "children": [
+             {
+              "name": "Notional amount ×（Equity return - ﬂoating rate)",
+              "f": 1
+             }
+            ]
+           },
+           {
+            "name": "Receive-equity return, pay-another equity return",
+            "children": [
+             {
+              "name": "Notional amount × (Equity return a - ﬂoating rate b)",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

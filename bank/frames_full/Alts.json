@@ -1,0 +1,876 @@
+{
+ "topic": "Alts",
+ "tree": {
+  "name": "Alts",
+  "children": [
+   {
+    "name": "LM4 Hedge Fund Strategies",
+    "children": [
+     {
+      "name": "Overview of Hedge Fund Strategies",
+      "children": [
+       {
+        "name": "Key features",
+        "children": [
+         {
+          "name": "Lower regulatory and legal constraints"
+         },
+         {
+          "name": "Flexible mandates"
+         },
+         {
+          "name": "A larger investment universe"
+         },
+         {
+          "name": "Aggressive investment exposures"
+         },
+         {
+          "name": "Comparatively free use of leverage"
+         },
+         {
+          "name": "Liquidity constraints for investors"
+         },
+         {
+          "name": "Higher cost structures",
+          "children": [
+           {
+            "name": "Management fee"
+           },
+           {
+            "name": "Incentive fee",
+            "children": [
+             {
+              "name": "High-water mark"
+             },
+             {
+              "name": "Hurdle rate"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Types of hedge fund",
+        "children": [
+         {
+          "name": "Single-manager fund"
+         },
+         {
+          "name": "Multi-manager fund",
+          "children": [
+           {
+            "name": "FOFs"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Equity Strategies",
+      "children": [
+       {
+        "name": "Long/Short Equity",
+        "children": [
+         {
+          "name": "Strategy Implementation",
+          "children": [
+           {
+            "name": "Identify overpriced and underpriced stocks"
+           },
+           {
+            "name": "Sector-specific focus"
+           },
+           {
+            "name": "Generalist long/short managers"
+           },
+           {
+            "name": "Varies strategies"
+           }
+          ]
+         },
+         {
+          "name": "Characteristic",
+          "children": [
+           {
+            "name": "Leverage usage",
+            "children": [
+             {
+              "name": "Variable"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Reduces beta risk"
+           },
+           {
+            "name": "Potential alpha"
+           },
+           {
+            "name": "Reduced portfolio volatility"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Dedicated Short Selling and Short-Biased",
+        "children": [
+         {
+          "name": "Strategies",
+          "children": [
+           {
+            "name": "Dedicated short-selling funds"
+           },
+           {
+            "name": "Short-biased"
+           },
+           {
+            "name": "Activist short selling"
+           }
+          ]
+         },
+         {
+          "name": "Strategy Implementation",
+          "children": [
+           {
+            "name": "Bottom-up approach"
+           },
+           {
+            "name": "Altman Z-score & Beneish M-score"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Lower return"
+           },
+           {
+            "name": "More volatile"
+           },
+           {
+            "name": "Limited partnership"
+           },
+           {
+            "name": "Leverage usage",
+            "children": [
+             {
+              "name": "Low"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Role of portfolio",
+          "children": [
+           {
+            "name": "Liquid"
+           },
+           {
+            "name": "Diversification"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Equity Market Neutral",
+        "children": [
+         {
+          "name": "Types of EMN",
+          "children": [
+           {
+            "name": "Pairs trading"
+           },
+           {
+            "name": "Stub trading"
+           },
+           {
+            "name": "Multi-class trading"
+           }
+          ]
+         },
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Evaluate the investment universe"
+           },
+           {
+            "name": "Analysis for buy and sell opportunities using fundamental models"
+           },
+           {
+            "name": "Constructe a portfolio with constraints to maintain market risk neutrality"
+           },
+           {
+            "name": "Availability and cost of leverage"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Modest return profiles"
+           },
+           {
+            "name": "High levels of diversification"
+           },
+           {
+            "name": "high levels of liquidity"
+           },
+           {
+            "name": "Lower standard deviation"
+           },
+           {
+            "name": "Shorter horizons and more active trading"
+           },
+           {
+            "name": "High leverage"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Attractive during periods of market vulnerability and weakness"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Summary",
+        "children": [
+         {
+          "name": "Short-Biased策略和Long/Short Equity都会使用做多和做空，但Short-Biased希望获得一个净的空头敞口（net short exposure）；Long/Short Equity策略则希望获得一个净的多头敞口（net long exposure）",
+          "trap": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Event-Driven Strategies",
+      "children": [
+       {
+        "name": "Merger Arbitrage",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Cash-for-stock"
+           },
+           {
+            "name": "Stock-for-stock acquisition"
+           },
+           {
+            "name": "Cross-border merger and acquisition (M&A)"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Relatively liquid strategy"
+           },
+           {
+            "name": "Left-tail risk"
+           },
+           {
+            "name": "Return profile is insurance-like plus a short put option"
+           },
+           {
+            "name": "Limited partnership"
+           },
+           {
+            "name": "Leverage Usage",
+            "children": [
+             {
+              "name": "High"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "High Sharpe ratios"
+           },
+           {
+            "name": "Left-tail risk"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Distressed Securities",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Liquidation situation",
+            "children": [
+             {
+              "name": "Recovery value"
+             }
+            ]
+           },
+           {
+            "name": "Reorganization situation",
+            "children": [
+             {
+              "name": "Value of the business enterprise"
+             },
+             {
+              "name": "Future value of different classes of claims"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "More variability"
+           },
+           {
+            "name": "Long-biased"
+           },
+           {
+            "name": "High levels of illiquidity"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Distressed investing is particularly attractive in the early stages of an economic recovery after a period of market dislocation"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Relative Value Strategies",
+      "children": [
+       {
+        "name": "Fixed-Income Arbitrage",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Yield curve trades"
+           },
+           {
+            "name": "Carry trades"
+           },
+           {
+            "name": "Calendar spread strategy"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Credit quality and convexity"
+           },
+           {
+            "name": "High leverage usage"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Alpha generation"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Convertible Bond Arbitrage",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Buy undervalued convertible bond"
+           },
+           {
+            "name": "Sell overvalued underlying stock"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Naturally less-liquid securities because of their relatively small issue sizes and inherent complexities"
+           },
+           {
+            "name": "Availability and cost to borrow underlying equity for short selling"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "High convertible issuance"
+           },
+           {
+            "name": "Moderate volatility"
+           },
+           {
+            "name": "Reasonable market liquidity"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Opportunistic Strategies",
+      "children": [
+       {
+        "name": "Global Macro Strategies",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Top-down approach"
+           },
+           {
+            "name": "Macroeconomic and fundamental models"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Heterogeneity"
+           },
+           {
+            "name": "Use of leverage"
+           },
+           {
+            "name": "Highly liquid"
+           },
+           {
+            "name": "More discretionary"
+           },
+           {
+            "name": "Cyclical and more volatile"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Diversification"
+           },
+           {
+            "name": "Alpha generation"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Managed Futures",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Time-series momentum (TSM) trend following"
+           },
+           {
+            "name": "Cross-sectional momentum (CSM) strategies"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Highly liquid"
+           },
+           {
+            "name": "More systematic approach"
+           },
+           {
+            "name": "Cyclical and more volatile"
+           },
+           {
+            "name": "High leverage is embedded in futures contracts"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Positive right-tail skewness"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Summary",
+        "children": [
+         {
+          "name": "Subtopic"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Specialist Strategies",
+      "children": [
+       {
+        "name": "Volatility Trading",
+        "children": [
+         {
+          "name": "Type of relative value volatility trading",
+          "children": [
+           {
+            "name": "Time-zone arbitrage"
+           },
+           {
+            "name": "Cross-asset volatility trading"
+           }
+          ]
+         },
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Exchange-traded options"
+           },
+           {
+            "name": "Over-the-counter (OTC) options"
+           },
+           {
+            "name": "Futures on the VIX index"
+           },
+           {
+            "name": "OTC volatility swap"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Long volatility positioning exhibits positive convexity"
+           },
+           {
+            "name": "Liquidity varies across the different instruments used for implementation"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Alpha generation"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Reinsurance/Life Settlements",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "The surrender value being offered to an insured individual is relatively low"
+           },
+           {
+            "name": "The ongoing premium payments to keep the policy active are also relatively low"
+           },
+           {
+            "name": "The probability is relatively high that the designated insured person is indeed likely to die within a certain period of time"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Life settlement"
+           },
+           {
+            "name": "Catastrophe bonds"
+           },
+           {
+            "name": "Catastrophe risk futures"
+           },
+           {
+            "name": "Pools of life insurance contracts"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "Diversification."
+           },
+           {
+            "name": "Alpha generation"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Multi-Manager Strategies",
+      "children": [
+       {
+        "name": "Fund-of-Funds",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Use of various databases"
+           },
+           {
+            "name": "Quantitative and qualitative top-down and bottom-up approaches"
+           },
+           {
+            "name": "Offering Memorandum and Limited Partnership Agreement"
+           },
+           {
+            "name": "Ongoing monitoring and review"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Suitable for smaller high-net-worth investors and smaller institutions"
+           },
+           {
+            "name": "Levered capital"
+           },
+           {
+            "name": "More diverse strategy"
+           },
+           {
+            "name": "Less transparency"
+           },
+           {
+            "name": "Slower tactical reaction time"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "More diversification"
+           },
+           {
+            "name": "Less extreme risk exposures"
+           },
+           {
+            "name": "Lower realized volatility"
+           },
+           {
+            "name": "Less single manager tail risk"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Multi-Strategy Hedge Funds",
+        "children": [
+         {
+          "name": "Strategy implementation",
+          "children": [
+           {
+            "name": "Combine multiple hedge fund strategies under the same hedge fund structure"
+           }
+          ]
+         },
+         {
+          "name": "Characteristics",
+          "children": [
+           {
+            "name": "Outperforme"
+           },
+           {
+            "name": "More variance and occasional large losses"
+           },
+           {
+            "name": "Higher leverage"
+           },
+           {
+            "name": "Faster tactical asset allocation"
+           },
+           {
+            "name": "Improved fee structure"
+           },
+           {
+            "name": "More prone to left-tail blow-up risk in stress periods"
+           }
+          ]
+         },
+         {
+          "name": "Role in portfolio",
+          "children": [
+           {
+            "name": "More transparency"
+           },
+           {
+            "name": "More resilient"
+           },
+           {
+            "name": "Can react faster to different real-time market impacts"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Summary",
+        "children": [
+         {
+          "name": "Subtopic"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Analysis of Hedge Fund Strategies",
+      "children": [
+       {
+        "name": "Conditional Factor Risk Model",
+        "children": [
+         {
+          "name": "Risk factors that cannot be explained",
+          "children": [
+           {
+            "name": "Omitted risk factors"
+           },
+           {
+            "name": "Alpha"
+           },
+           {
+            "name": "Randomness"
+           }
+          ]
+         },
+         {
+          "name": "Four factors for measuring risk exposures",
+          "children": [
+           {
+            "name": "Equity risk (SNP500)"
+           },
+           {
+            "name": "Currency risk (USD)"
+           },
+           {
+            "name": "Credit risk (CREDIT)"
+           },
+           {
+            "name": "Volatility risk (VIX)"
+           }
+          ]
+         },
+         {
+          "name": "Subtopic"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Portfolio Contribution of Hedge Fund Strategies",
+      "children": [
+       {
+        "name": "Performance Contribution to a 60/40 Portfolio",
+        "children": [
+         {
+          "name": "General results",
+          "children": [
+           {
+            "name": "Total portfolio standard deviation decreases"
+           },
+           {
+            "name": "Sharpe ratio increases"
+           },
+           {
+            "name": "Sortino ratio increases"
+           },
+           {
+            "name": "Maximum drawdown decreases in approximately one-third of portfolios"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Risk Metrics",
+        "children": [
+         {
+          "name": "Risk-adjusted Measure- Sharpe and Sortino ratios"
+         },
+         {
+          "name": "Risk measure- Standard deviation"
+         },
+         {
+          "name": "Risk Measure-Drawdown"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
