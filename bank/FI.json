@@ -3,10 +3,10 @@
     {
       "id": "FI-forward-1",
       "topic": "FI",
-      "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+      "los": "Spot/forward/par curve relationships; forward rate model calculation",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "calc",
-      "stem": "1 年期 spot rate S1 = 3%，2 年期 spot rate S2 = 4%（年复利）。1 年后起算的 1 年期 forward rate f(1,1) 最接近：",
+      "stem": "The 1-year spot rate S1 = 3% and the 2-year spot rate S2 = 4% (annual compounding). The 1-year forward rate beginning 1 year from today, f(1,1), is closest to:",
       "choices": {
         "A": "5.01%",
         "B": "0.97%",
@@ -20,20 +20,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "(1+S2)^2 = (1+S1) × (1+f(1,1))，即 f(1,1) = (1+S2)^2/(1+S1) − 1"
+          "label": "Formula",
+          "content": "(1+S2)^2 = (1+S1) × (1+f(1,1)), i.e. f(1,1) = (1+S2)^2/(1+S1) − 1"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "f(1,1) = 1.04^2 / 1.03 − 1 = 1.0816 / 1.03 − 1"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "= 1.050097 − 1 ≈ 5.01%"
         },
         {
-          "label": "陷阱",
-          "content": "期数次方最易错：分子用长期限的次方、分母用短期限的次方。快速校验：上行曲线下 f(1,1) 应高于 S2 = 4%。"
+          "label": "Pitfall",
+          "content": "The compounding exponents are the most common error: apply the longer maturity's exponent in the numerator and the shorter maturity's exponent in the denominator. Quick check: with an upward-sloping curve, f(1,1) should exceed S2 = 4%."
         }
       ],
       "source": "CFA L2 Curriculum, The Term Structure and Interest Rate Dynamics, forward rate model",
@@ -45,10 +45,10 @@
     {
       "id": "FI-forward-2",
       "topic": "FI",
-      "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+      "los": "Spot/forward/par curve relationships; forward rate model calculation",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "calc",
-      "stem": "2 年期 spot rate S2 = 4%，3 年期 spot rate S3 = 5%（年复利）。2 年后起算的 1 年期 forward rate f(2,1) 最接近：",
+      "stem": "The 2-year spot rate S2 = 4% and the 3-year spot rate S3 = 5% (annual compounding). The 1-year forward rate beginning 2 years from today, f(2,1), is closest to:",
       "choices": {
         "A": "7.03%",
         "B": "6.01%",
@@ -62,20 +62,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "(1+S3)^3 = (1+S2)^2 × (1+f(2,1))，即 f(2,1) = (1+S3)^3/(1+S2)^2 − 1"
+          "label": "Formula",
+          "content": "(1+S3)^3 = (1+S2)^2 × (1+f(2,1)), i.e. f(2,1) = (1+S3)^3/(1+S2)^2 − 1"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "f(2,1) = 1.05^3 / 1.04^2 − 1 = 1.157625 / 1.0816 − 1"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "= 1.070289 − 1 ≈ 7.03%"
         },
         {
-          "label": "陷阱",
-          "content": "分子分母各自的次方必须等于各自的期限（3 和 2）。近似检验：3×5% − 2×4% = 7%，与精确值 7.03% 接近即算对了。"
+          "label": "Pitfall",
+          "content": "Each exponent in the numerator and denominator must equal its own maturity (3 and 2). Approximate check: 3×5% − 2×4% = 7%, which is close to the exact value of 7.03%."
         }
       ],
       "source": "CFA L2 Curriculum, The Term Structure and Interest Rate Dynamics, forward rate model",
@@ -87,10 +87,10 @@
     {
       "id": "FI-curve-1",
       "topic": "FI",
-      "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+      "los": "Spot/forward/par curve relationships; forward rate model calculation",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "concept",
-      "stem": "收益率曲线向上倾斜（upward-sloping）时，同一期限上 par rate、spot rate、forward rate 的大小排序为：",
+      "stem": "When the yield curve is upward-sloping, the ordering of the par rate, spot rate, and forward rate at a given maturity is:",
       "choices": {
         "A": "forward > spot > par",
         "B": "spot > forward > par",
@@ -111,14 +111,14 @@
     {
       "id": "FI-ride-1",
       "topic": "FI",
-      "los": "Riding the yield curve 策略条件",
+      "los": "Conditions for the riding-the-yield-curve strategy",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "concept",
-      "stem": "投资期限为 1 年的投资者采用 riding the yield curve（rolling down the yield curve）策略获取超额回报，需要满足的条件是：",
+      "stem": "For an investor with a 1-year investment horizon to earn excess return using the riding-the-yield-curve (rolling down the yield curve) strategy, the required condition is:",
       "choices": {
-        "A": "收益率曲线向上倾斜且预期在持有期内保持不变，买入期限长于 1 年的债券",
-        "B": "预期利率将上升，买入期限恰好等于 1 年的债券锁定收益",
-        "C": "收益率曲线向上倾斜，买入期限短于 1 年的债券以降低久期风险"
+        "A": "The yield curve is upward-sloping and is expected to remain unchanged over the holding period, and the investor buys a bond with a maturity longer than 1 year",
+        "B": "Interest rates are expected to rise, and the investor buys a bond with a maturity of exactly 1 year to lock in the yield",
+        "C": "The yield curve is upward-sloping, and the investor buys a bond with a maturity shorter than 1 year to reduce duration risk"
       },
       "answer": "A",
       "explanations": {
@@ -135,14 +135,14 @@
     {
       "id": "FI-theory-1",
       "topic": "FI",
-      "los": "利率期限结构理论 (纯预期/流动性偏好/市场分割等)",
+      "los": "Term structure theories (pure expectations / liquidity preference / market segmentation, etc.)",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "concept",
-      "stem": "在 liquidity preference theory（流动性偏好理论）下，向上倾斜的收益率曲线意味着：",
+      "stem": "Under the liquidity preference theory, an upward-sloping yield curve implies:",
       "choices": {
-        "A": "不一定意味着市场预期短期利率上升——即使预期利率不变甚至小幅下降，流动性溢价也可能使曲线上行",
-        "B": "市场一定预期未来短期利率上升",
-        "C": "长短期债券市场彼此分割，各自的供需独立决定利率"
+        "A": "It does not necessarily imply that the market expects short-term rates to rise—even if rates are expected to stay flat or even decline slightly, the liquidity premium can still make the curve slope upward",
+        "B": "The market definitely expects future short-term rates to rise",
+        "C": "The markets for long- and short-term bonds are segmented, with each determined independently by its own supply and demand"
       },
       "answer": "A",
       "explanations": {
@@ -159,10 +159,10 @@
     {
       "id": "FI-ted-1",
       "topic": "FI",
-      "los": "Swap spread, Z-spread, TED spread 含义",
+      "los": "Meaning of swap spread, Z-spread, and TED spread",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "calc",
-      "stem": "市场数据：3 个月 Libor（MRR）= 2.10%，3 个月 T-bill 收益率 = 1.60%，2 年期 swap rate = 2.80%，2 年期国债收益率 = 2.45%。TED spread 为：",
+      "stem": "Market data: 3-month Libor (MRR) = 2.10%, 3-month T-bill yield = 1.60%, 2-year swap rate = 2.80%, 2-year Treasury yield = 2.45%. The TED spread is:",
       "choices": {
         "A": "0.50%",
         "B": "0.35%",
@@ -176,20 +176,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "TED spread = 3 个月 Libor(MRR) − 3 个月 T-bill 收益率"
+          "label": "Formula",
+          "content": "TED spread = 3-month Libor (MRR) − 3-month T-bill yield"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "TED = 2.10% − 1.60%"
         },
         {
-          "label": "结果",
-          "content": "= 0.50%（50 bp）"
+          "label": "Result",
+          "content": "= 0.50% (50 bp)"
         },
         {
-          "label": "陷阱",
-          "content": "不要抓到两个利率就相减：swap spread 用同期限 swap 与国债，TED 只用 3 个月 Libor 与 3 个月 T-bill。"
+          "label": "Pitfall",
+          "content": "Do not simply subtract any two rates you find: the swap spread uses the same-maturity swap and Treasury, whereas the TED spread uses only the 3-month Libor and the 3-month T-bill."
         }
       ],
       "source": "CFA L2 Curriculum, The Term Structure and Interest Rate Dynamics, swap spread / TED spread",
@@ -201,14 +201,14 @@
     {
       "id": "FI-krd-1",
       "topic": "FI",
-      "los": "Key rate duration 与曲线形变管理",
+      "los": "Key rate duration and management of curve reshaping",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "trap",
-      "stem": "一只 10 年期零息国债，其 key rate duration 的分布特征是：",
+      "stem": "For a 10-year zero-coupon Treasury bond, the distribution of its key rate durations is characterized by:",
       "choices": {
-        "A": "几乎全部集中在 10 年期这一个关键期限点上，其他期限点的 key rate duration 约为零",
-        "B": "在各关键期限点上大致均匀分布，因为总久期约为 10",
-        "C": "集中在短端，因为短端利率波动最频繁"
+        "A": "Almost entirely concentrated at the single 10-year key maturity, with the key rate durations at other maturity points being approximately zero",
+        "B": "Roughly evenly distributed across the key maturity points, because the total duration is about 10",
+        "C": "Concentrated at the short end, because short-term rates fluctuate most frequently"
       },
       "answer": "A",
       "explanations": {
@@ -225,14 +225,14 @@
     {
       "id": "FI-forward-3",
       "topic": "FI",
-      "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+      "los": "Spot/forward/par curve relationships; forward rate model calculation",
       "module": "The Term Structure and Interest Rate Dynamics",
       "type": "trap",
-      "stem": "若未来各期 spot rate 的实际走势恰好等于当前 forward 曲线隐含的水平，则在同一持有期内，持有长期债券相对滚动持有短期债券的超额回报为：",
+      "stem": "If future spot rates evolve exactly as implied by today's forward curve, then over a given holding period the excess return of holding a long-term bond relative to rolling over short-term bonds is:",
       "choices": {
-        "A": "零——所有期限策略实现相同的持有期回报",
-        "B": "为正——曲线上行时长债票息更高，必然跑赢",
-        "C": "为负——长债久期更大，利率上升时亏损更多"
+        "A": "Zero—all maturity strategies realize the same holding-period return",
+        "B": "Positive—with an upward-sloping curve the long-term bond has a higher coupon and must outperform",
+        "C": "Negative—the long-term bond has greater duration and loses more when rates rise"
       },
       "answer": "A",
       "explanations": {
@@ -249,10 +249,10 @@
     {
       "id": "FI-tree-1",
       "topic": "FI",
-      "los": "Binomial tree: backward induction 定价",
+      "los": "Binomial tree: backward induction valuation",
       "module": "The Arbitrage-Free Valuation Framework",
       "type": "calc",
-      "stem": "2 年期年付息债券，票面利率 4%，面值 100。二叉树利率（各节点为未来 1 年利率，风险中性概率各 0.5）：t=0 节点 3.0%；t=1 上节点 4.5%，下节点 3.5%。用 backward induction 计算债券当前价值最接近：",
+      "stem": "A 2-year annual-pay bond has a coupon rate of 4% and a face value of 100. Binomial tree rates (each node is the 1-year rate going forward, with risk-neutral probabilities of 0.5 each): the t=0 node is 3.0%; at t=1 the upper node is 4.5% and the lower node is 3.5%. Using backward induction, the current value of the bond is closest to:",
       "choices": {
         "A": "100.97",
         "B": "97.09",
@@ -266,20 +266,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "每个节点：V = 0.5×[(Vu + C) + (Vd + C)] / (1 + r节点)；末期现金流 = 面值 + 票息 = 104"
+          "label": "Formula",
+          "content": "At each node: V = 0.5×[(Vu + C) + (Vd + C)] / (1 + r_node); final cash flow = face value + coupon = 104"
         },
         {
-          "label": "代入",
-          "content": "t=1 上节点：104/1.045 = 99.5215；下节点：104/1.035 = 100.4831。t=0：V0 = 0.5×[(99.5215+4)+(100.4831+4)]/1.03 = 0.5×208.0046/1.03"
+          "label": "Substitute",
+          "content": "t=1 upper node: 104/1.045 = 99.5215; lower node: 104/1.035 = 100.4831. t=0: V0 = 0.5×[(99.5215+4)+(100.4831+4)]/1.03 = 0.5×208.0046/1.03"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "= 104.0023/1.03 ≈ 100.97"
         },
         {
-          "label": "陷阱",
-          "content": "两个高频错误：折回时漏加当期票息（得 97.09）、最后一步忘折现（得 104.00）。每退一层自查：加票息了吗？除以 1+r 了吗？"
+          "label": "Pitfall",
+          "content": "Two frequent errors: forgetting to add the current coupon when discounting back (gives 97.09), and forgetting to discount at the final step (gives 104.00). At each step back, check: did I add the coupon? Did I divide by 1+r?"
         }
       ],
       "source": "CFA L2 Curriculum, The Arbitrage-Free Valuation Framework, backward induction",
@@ -291,10 +291,10 @@
     {
       "id": "FI-tree-2",
       "topic": "FI",
-      "los": "Binomial tree: backward induction 定价",
+      "los": "Binomial tree: backward induction valuation",
       "module": "The Arbitrage-Free Valuation Framework",
       "type": "calc",
-      "stem": "年付息 3% 的债券，二叉树 t=1 两个节点的债券价值（不含当期票息）分别为：上节点 98.80，下节点 100.50，概率各 0.5。t=0 的 1 年利率为 2.5%。债券在 t=0 的价值最接近：",
+      "stem": "For a bond paying an annual coupon of 3%, the bond values (excluding the current coupon) at the two t=1 nodes of a binomial tree are: upper node 98.80 and lower node 100.50, each with probability 0.5. The 1-year rate at t=0 is 2.5%. The value of the bond at t=0 is closest to:",
       "choices": {
         "A": "100.15",
         "B": "97.22",
@@ -308,20 +308,20 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "V0 = 0.5×[(Vu + C) + (Vd + C)] / (1 + r0)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "V0 = 0.5×[(98.80+3) + (100.50+3)] / 1.025 = 0.5×(101.80+103.50)/1.025 = 102.65/1.025"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "≈ 100.15"
         },
         {
-          "label": "陷阱",
-          "content": "题目给的节点值若注明'不含票息'（ex-coupon），折回时必须加票息；若给的是'含票息全价'则不能重复加。审题先确认口径。"
+          "label": "Pitfall",
+          "content": "If the node values are stated ex-coupon, you must add the coupon when discounting back; if they are stated as full (cum-coupon) prices, you must not add it again. Confirm the convention when reading the problem."
         }
       ],
       "source": "CFA L2 Curriculum, The Arbitrage-Free Valuation Framework, backward induction",
@@ -333,10 +333,10 @@
     {
       "id": "FI-calib-1",
       "topic": "FI",
-      "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})",
+      "los": "Tree calibration and the relationship to interest rate volatility (adjacent nodes ×e^{2σ})",
       "module": "The Arbitrage-Free Valuation Framework",
       "type": "calc",
-      "stem": "对数正态二叉利率树中，某期下节点利率为 3.00%，假设利率波动率 σ = 15%。同期相邻上节点的利率最接近：",
+      "stem": "In a lognormal binomial interest rate tree, the lower node rate in a given period is 3.00%, assuming an interest rate volatility of σ = 15%. The rate at the adjacent upper node in the same period is closest to:",
       "choices": {
         "A": "4.05%",
         "B": "3.49%",
@@ -350,20 +350,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "对数正态树同期相邻节点：r_u = r_d × e^{2σ}"
+          "label": "Formula",
+          "content": "Adjacent same-period nodes in a lognormal tree: r_u = r_d × e^{2σ}"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "r_u = 3.00% × e^{2×0.15} = 3.00% × e^{0.30} = 3.00% × 1.34986"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "≈ 4.05%"
         },
         {
-          "label": "陷阱",
-          "content": "指数是 2σ 不是 σ；且是乘 e^{2σ} 而非加 2σ。若给出隔两档的节点（相隔 2 格），则相差 e^{4σ}，以此类推。"
+          "label": "Pitfall",
+          "content": "The exponent is 2σ, not σ; and you multiply by e^{2σ}, not add 2σ. If the nodes are two steps apart, the ratio becomes e^{4σ}, and so on."
         }
       ],
       "source": "CFA L2 Curriculum, The Arbitrage-Free Valuation Framework, interest rate tree calibration",
@@ -375,14 +375,14 @@
     {
       "id": "FI-calib-2",
       "topic": "FI",
-      "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})",
+      "los": "Tree calibration and the relationship to interest rate volatility (adjacent nodes ×e^{2σ})",
       "module": "The Arbitrage-Free Valuation Framework",
       "type": "concept",
-      "stem": "构建 arbitrage-free 二叉利率树时，'校准 (calibration)' 的直接目标是：",
+      "stem": "When constructing an arbitrage-free binomial interest rate tree, the direct objective of 'calibration' is:",
       "choices": {
-        "A": "在给定波动率假设下调整各期节点利率，使树对基准债券（benchmark bonds）的定价与其市场价格一致",
-        "B": "调整节点利率使其等于历史利率的实际路径",
-        "C": "调整波动率假设使所有节点利率等于对应的 forward rate"
+        "A": "Under a given volatility assumption, to adjust the node rates in each period so that the tree prices benchmark bonds consistently with their market prices",
+        "B": "To adjust the node rates so they equal the actual historical path of interest rates",
+        "C": "To adjust the volatility assumption so that all node rates equal the corresponding forward rates"
       },
       "answer": "A",
       "explanations": {
@@ -399,14 +399,14 @@
     {
       "id": "FI-mc-1",
       "topic": "FI",
-      "los": "Pathwise valuation 与 Monte Carlo 适用场景",
+      "los": "Pathwise valuation and applicable scenarios for Monte Carlo",
       "module": "The Arbitrage-Free Valuation Framework",
       "type": "concept",
-      "stem": "对 MBS（mortgage-backed securities）估值时，必须使用 Monte Carlo 模拟而非二叉树 backward induction 的根本原因是：",
+      "stem": "In valuing mortgage-backed securities (MBS), the fundamental reason Monte Carlo simulation must be used instead of binomial-tree backward induction is:",
       "choices": {
-        "A": "MBS 现金流具有路径依赖性——提前还款取决于利率走过的历史路径，而 backward induction 中每个节点无法记住到达该节点的路径",
-        "B": "MBS 期限太长，二叉树节点数量会超出计算能力",
-        "C": "Monte Carlo 不需要利率波动率假设，比二叉树更客观"
+        "A": "MBS cash flows are path-dependent—prepayment depends on the historical path interest rates have taken, whereas in backward induction each node cannot remember the path by which it was reached",
+        "B": "MBS have such long maturities that the number of binomial tree nodes exceeds computational capacity",
+        "C": "Monte Carlo does not require an interest rate volatility assumption, making it more objective than the binomial tree"
       },
       "answer": "A",
       "explanations": {
@@ -423,14 +423,14 @@
     {
       "id": "FI-tree-3",
       "topic": "FI",
-      "los": "Binomial tree: backward induction 定价",
+      "los": "Binomial tree: backward induction valuation",
       "module": "The Arbitrage-Free Valuation Framework",
       "type": "trap",
-      "stem": "用校准好的二叉利率树给一只不含权（option-free）债券定价，并与直接用当前 spot 曲线折现现金流的结果比较，二者关系是：",
+      "stem": "Using a calibrated binomial interest rate tree to value an option-free bond and comparing the result with discounting the cash flows directly along the current spot curve, the relationship between the two is:",
       "choices": {
-        "A": "必然相等，且与树采用的波动率假设无关",
-        "B": "波动率假设越高，树上得到的价值越低",
-        "C": "树上价值系统性高于 spot 曲线折现值，因为树包含了利率上行情景"
+        "A": "They are necessarily equal, and independent of the volatility assumption used in the tree",
+        "B": "The higher the volatility assumption, the lower the value obtained from the tree",
+        "C": "The tree value is systematically higher than the spot-curve discounted value, because the tree incorporates upward interest rate scenarios"
       },
       "answer": "A",
       "explanations": {
@@ -447,10 +447,10 @@
     {
       "id": "FI-callable-tree-1",
       "topic": "FI",
-      "los": "V_call = V_straight − V_callable; V_put 类似",
+      "los": "V_call = V_straight − V_callable; V_put analogous",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "calc",
-      "stem": "2 年期年付息 4.5% 债券，面值 100，发行人可在 t=1 付息后按 100 赎回。二叉树利率（概率各 0.5）：t=0 为 3.5%；t=1 上节点 5.0%，下节点 3.0%。该 callable bond 当前价值最接近：",
+      "stem": "A 2-year annual-pay bond has a coupon rate of 4.5% and a face value of 100. The issuer may call the bond at 100 at t=1 after the coupon is paid. Binomial tree rates (probabilities of 0.5 each): t=0 is 3.5%; at t=1 the upper node is 5.0% and the lower node is 3.0%. The current value of this callable bond is closest to:",
       "choices": {
         "A": "100.74",
         "B": "101.44",
@@ -464,20 +464,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "含权节点值 = min(V节点, call price)；V节点 = 剩余现金流/(1+r节点)；折回时 V0 = 0.5×[(V'u+C)+(V'd+C)]/(1+r0)"
+          "label": "Formula",
+          "content": "Value at a callable node = min(V_node, call price); V_node = remaining cash flows/(1+r_node); discounting back: V0 = 0.5×[(V'u+C)+(V'd+C)]/(1+r0)"
         },
         {
-          "label": "代入",
-          "content": "上节点：104.5/1.05 = 99.5238 < 100 → 保留 99.5238；下节点：104.5/1.03 = 101.4563 > 100 → 替换为 100。V0 = 0.5×[(99.5238+4.5)+(100+4.5)]/1.035 = 0.5×208.5238/1.035"
+          "label": "Substitute",
+          "content": "Upper node: 104.5/1.05 = 99.5238 < 100 → keep 99.5238; lower node: 104.5/1.03 = 101.4563 > 100 → replace with 100. V0 = 0.5×[(99.5238+4.5)+(100+4.5)]/1.035 = 0.5×208.5238/1.035"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "= 104.2619/1.035 ≈ 100.74"
         },
         {
-          "label": "陷阱",
-          "content": "只在低利率（价格高）节点才会触发赎回；与 call price 比较的是除息节点值，不含当期票息。忘记赎回规则得 101.44（straight 价值）。"
+          "label": "Pitfall",
+          "content": "The call is triggered only at low-rate (high-price) nodes; what is compared with the call price is the ex-coupon node value, not including the current coupon. Forgetting the call rule gives 101.44 (the straight-bond value)."
         }
       ],
       "source": "CFA L2 Curriculum, Valuation and Analysis of Bonds with Embedded Options, callable bond valuation with binomial tree",
@@ -489,10 +489,10 @@
     {
       "id": "FI-optval-1",
       "topic": "FI",
-      "los": "V_call = V_straight − V_callable; V_put 类似",
+      "los": "V_call = V_straight − V_callable; V_put analogous",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "calc",
-      "stem": "同一发行人、同期限同票息的三只债券估值：不含权债券 102.5，callable 债券 99.8，putable 债券 104.0。嵌入 put option 的价值为：",
+      "stem": "Valuations of three bonds from the same issuer with identical maturity and coupon: the option-free bond is 102.5, the callable bond is 99.8, and the putable bond is 104.0. The value of the embedded put option is:",
       "choices": {
         "A": "1.5",
         "B": "2.7",
@@ -506,20 +506,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "V_putable = V_straight + V_put，故 V_put = V_putable − V_straight"
+          "label": "Formula",
+          "content": "V_putable = V_straight + V_put, so V_put = V_putable − V_straight"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "V_put = 104.0 − 102.5"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "= 1.5"
         },
         {
-          "label": "陷阱",
-          "content": "基准永远是 straight bond。callable 从 straight 里'减'期权（期权归发行人），putable 往 straight 上'加'期权（期权归投资者），方向记反直接选错。"
+          "label": "Pitfall",
+          "content": "The benchmark is always the straight bond. A callable bond 'subtracts' the option from the straight bond (the option belongs to the issuer); a putable bond 'adds' the option to the straight bond (the option belongs to the investor). Reversing the direction leads directly to a wrong choice."
         }
       ],
       "source": "CFA L2 Curriculum, Valuation and Analysis of Bonds with Embedded Options, value of embedded options",
@@ -531,14 +531,14 @@
     {
       "id": "FI-oas-2",
       "topic": "FI",
-      "los": "OAS: 定义、与 Z-spread 关系、跨债比较",
+      "los": "OAS: definition, relationship to Z-spread, cross-bond comparison",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "concept",
-      "stem": "分析师比较两只信用与流动性相当的 callable bond：Bond X 的 OAS 为 80bp，同类可比债券的 OAS 集中在 50bp 左右。基于 OAS，Bond X 相对而言：",
+      "stem": "An analyst compares two callable bonds with comparable credit and liquidity: Bond X has an OAS of 80bp, while comparable bonds cluster around an OAS of 50bp. Based on OAS, Bond X is relatively:",
       "choices": {
-        "A": "被低估（cheap），因为剔除期权影响后仍提供高于同类的利差补偿",
-        "B": "被高估（rich），因为更高的利差意味着市场要求更高的风险补偿",
-        "C": "无法比较，因为 OAS 中仍包含期权成本，不同债券期权条款不同"
+        "A": "Undervalued (cheap), because after removing the option effect it still offers spread compensation above its peers",
+        "B": "Overvalued (rich), because a higher spread means the market demands higher risk compensation",
+        "C": "Not comparable, because OAS still contains option cost and different bonds have different option terms"
       },
       "answer": "A",
       "explanations": {
@@ -555,14 +555,14 @@
     {
       "id": "FI-ratelevel-1",
       "topic": "FI",
-      "los": "利率水平变动对期权价值与债券价格的非对称影响",
+      "los": "Asymmetric effect of interest rate level changes on option value and bond price",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "concept",
-      "stem": "利率大幅下行时，callable bond 价格表现出'price compression（价格压缩）'，其含义是：",
+      "stem": "When interest rates fall sharply, a callable bond exhibits 'price compression,' which means:",
       "choices": {
-        "A": "价格上涨空间被赎回价附近的水平封顶——利率越低，赎回可能性越大，价格越贴近 call price 而难以继续上行",
-        "B": "价格下跌幅度小于同等 straight bond，因为期权提供了下行保护",
-        "C": "价格与 straight bond 同步上涨，只是波动更剧烈"
+        "A": "The bond's upside price appreciation is capped near the call price—the lower rates go, the greater the likelihood of being called, so the price hugs the call price and struggles to rise further",
+        "B": "The bond's price decline is smaller than that of an equivalent straight bond, because the option provides downside protection",
+        "C": "The bond's price rises in step with the straight bond, just with greater volatility"
       },
       "answer": "A",
       "explanations": {
@@ -579,10 +579,10 @@
     {
       "id": "FI-capfloor-1",
       "topic": "FI",
-      "los": "Capped/floored FRN 分解",
+      "los": "Decomposition of capped/floored FRNs",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "concept",
-      "stem": "一只带利率上限的浮息债（capped floater）的价值可分解为：",
+      "stem": "The value of a capped floater (a floating-rate note with an interest rate cap) can be decomposed as:",
       "choices": {
         "A": "V_capped floater = V_straight floater − V_cap",
         "B": "V_capped floater = V_straight floater + V_cap",
@@ -603,10 +603,10 @@
     {
       "id": "FI-effdur-1",
       "topic": "FI",
-      "los": "Effective duration/convexity: callable 负凸性区域",
+      "los": "Effective duration/convexity: negative convexity region of callable bonds",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "calc",
-      "stem": "某 callable bond 当前全价 V0 = 100。基准曲线平移 ±50bp 后重新估值：利率下移 50bp 时价格 101.8，上移 50bp 时价格 98.6。该债券的 effective duration 最接近：",
+      "stem": "A callable bond currently has a full price V0 = 100. After a ±50bp parallel shift of the benchmark curve and revaluation: when rates shift down 50bp the price is 101.8, and when rates shift up 50bp the price is 98.6. The bond's effective duration is closest to:",
       "choices": {
         "A": "3.2",
         "B": "6.4",
@@ -620,20 +620,20 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "Effective duration = (V− − V+) / (2 × V0 × ΔCurve)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "= (101.8 − 98.6) / (2 × 100 × 0.005)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "= 3.2 / 1.0 = 3.2"
         },
         {
-          "label": "陷阱",
-          "content": "分母三件套一个都不能少：2、V0、ΔCurve（小数形式）。50bp = 0.005 不是 0.01；漏 2 结果翻倍。"
+          "label": "Pitfall",
+          "content": "None of the three denominator components may be dropped: 2, V0, and ΔCurve (in decimal form). 50bp = 0.005, not 0.01; dropping the 2 doubles the result."
         }
       ],
       "source": "CFA L2 Curriculum, Valuation and Analysis of Bonds with Embedded Options, effective duration",
@@ -645,14 +645,14 @@
     {
       "id": "FI-convexity-1",
       "topic": "FI",
-      "los": "Effective duration/convexity: callable 负凸性区域",
+      "los": "Effective duration/convexity: negative convexity region of callable bonds",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "trap",
-      "stem": "关于含权债券的 effective convexity，下列说法正确的是：",
+      "stem": "Regarding the effective convexity of bonds with embedded options, which of the following statements is correct:",
       "choices": {
-        "A": "callable bond 在利率较低时呈负凸性，putable bond 在各利率水平下均保持正凸性",
-        "B": "putable bond 在利率较高时呈负凸性，因为 put 期权深度实值",
-        "C": "callable bond 在所有利率水平下都呈负凸性"
+        "A": "A callable bond exhibits negative convexity when rates are low, while a putable bond maintains positive convexity at all rate levels",
+        "B": "A putable bond exhibits negative convexity when rates are high, because the put option is deep in the money",
+        "C": "A callable bond exhibits negative convexity at all rate levels"
       },
       "answer": "A",
       "explanations": {
@@ -669,14 +669,14 @@
     {
       "id": "FI-oas-3",
       "topic": "FI",
-      "los": "OAS: 定义、与 Z-spread 关系、跨债比较",
+      "los": "OAS: definition, relationship to Z-spread, cross-bond comparison",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "trap",
-      "stem": "分析师对同一只 callable bond（市场价格不变）将利率波动率假设从 10% 上调至 20% 后重新计算 OAS，计算出的 OAS 将：",
+      "stem": "For the same callable bond (with an unchanged market price), an analyst raises the interest rate volatility assumption from 10% to 20% and recomputes the OAS. The recomputed OAS will:",
       "choices": {
-        "A": "下降",
-        "B": "不变，因为 OAS 与波动率假设无关",
-        "C": "上升"
+        "A": "Decrease",
+        "B": "Stay unchanged, because OAS is independent of the volatility assumption",
+        "C": "Increase"
       },
       "answer": "A",
       "explanations": {
@@ -693,14 +693,14 @@
     {
       "id": "FI-putdir-1",
       "topic": "FI",
-      "los": "利率水平变动对期权价值与债券价格的非对称影响",
+      "los": "Asymmetric effect of interest rate level changes on option value and bond price",
       "module": "Valuation and Analysis of Bonds with Embedded Options",
       "type": "trap",
-      "stem": "利率大幅上升时，putable bond 的价格最可能：",
+      "stem": "When interest rates rise sharply, the price of a putable bond will most likely:",
       "choices": {
-        "A": "下跌，但跌幅小于同等条款的 straight bond",
-        "B": "上涨，因为 put 期权价值随利率上升而增加",
-        "C": "与同等条款的 straight bond 跌幅相同"
+        "A": "Fall, but by less than an otherwise-identical straight bond",
+        "B": "Rise, because the value of the put option increases as rates rise",
+        "C": "Fall by the same amount as an otherwise-identical straight bond"
       },
       "answer": "A",
       "explanations": {
@@ -717,14 +717,14 @@
     {
       "id": "FI-el-1",
       "topic": "FI",
-      "los": "Expected loss = PD × LGD; recovery rate 关系",
+      "los": "Expected loss = PD × LGD; relationship to recovery rate",
       "module": "Credit Analysis Models",
       "type": "calc",
-      "stem": "某债券风险敞口 1,000 万，违约概率 PD = 2%，预期回收率 (recovery rate) = 40%。expected loss 最接近：",
+      "stem": "A bond has an exposure of 10 million, a probability of default PD = 2%, and an expected recovery rate of 40%. The expected loss is closest to:",
       "choices": {
-        "A": "12 万",
-        "B": "8 万",
-        "C": "20 万"
+        "A": "120,000",
+        "B": "80,000",
+        "C": "200,000"
       },
       "answer": "A",
       "explanations": {
@@ -734,20 +734,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "EL = PD × LGD；LGD = 敞口 × (1 − recovery rate)"
+          "label": "Formula",
+          "content": "EL = PD × LGD; LGD = exposure × (1 − recovery rate)"
         },
         {
-          "label": "代入",
-          "content": "LGD = 1000 × (1 − 0.40) = 600 万；EL = 0.02 × 600"
+          "label": "Substitute",
+          "content": "LGD = 1000 × (1 − 0.40) = 6 million; EL = 0.02 × 600"
         },
         {
-          "label": "结果",
-          "content": "= 12 万"
+          "label": "Result",
+          "content": "= 120,000"
         },
         {
-          "label": "陷阱",
-          "content": "recovery rate 必须先转换为损失严重度 (1 − recovery)；直接乘 recovery 得 8 万、忽略回收得 20 万，都是设好的坑。"
+          "label": "Pitfall",
+          "content": "The recovery rate must first be converted into loss severity (1 − recovery); multiplying directly by the recovery rate gives 80,000, and ignoring recovery gives 200,000—both are traps that are set up."
         }
       ],
       "source": "CFA L2 Curriculum, Credit Analysis Models, expected loss / PD / LGD",
@@ -759,14 +759,14 @@
     {
       "id": "FI-model-1",
       "topic": "FI",
-      "los": "结构模型 vs 简约模型的假设差异",
+      "los": "Differences in assumptions between structural and reduced-form models",
       "module": "Credit Analysis Models",
       "type": "concept",
-      "stem": "相比结构模型（structural model），简约模型（reduced-form model）的关键假设差异是：",
+      "stem": "Compared with a structural model, the key difference in assumptions of a reduced-form model is:",
       "choices": {
-        "A": "违约被建模为外生的随机事件（违约强度），不要求公司资产价值及其波动率可观测",
-        "B": "把公司股权视为以公司资产为标的、债务面值为行权价的 call option",
-        "C": "要求公司资产在市场上可交易且其价值服从可观测的随机过程"
+        "A": "Default is modeled as an exogenous random event (a default intensity), and the firm's asset value and its volatility are not required to be observable",
+        "B": "It treats the firm's equity as a call option on the firm's assets with a strike price equal to the face value of debt",
+        "C": "It requires the firm's assets to be tradable in the market and to follow an observable stochastic process"
       },
       "answer": "A",
       "explanations": {
@@ -783,10 +783,10 @@
     {
       "id": "FI-cva-1",
       "topic": "FI",
-      "los": "Credit valuation adjustment (CVA) 概念",
+      "los": "Concept of credit valuation adjustment (CVA)",
       "module": "Credit Analysis Models",
       "type": "calc",
-      "stem": "1 年期零息公司债，面值 100，无风险利率 3%。若违约（概率 2%）发生在年末，回收率 40%。该债券的 CVA 最接近：",
+      "stem": "A 1-year zero-coupon corporate bond has a face value of 100 and the risk-free rate is 3%. If default (probability 2%) occurs at year-end, the recovery rate is 40%. The bond's CVA is closest to:",
       "choices": {
         "A": "1.17",
         "B": "1.20",
@@ -800,20 +800,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "CVA = PV(expected loss)；expected loss = 敞口 × PD × (1 − recovery)"
+          "label": "Formula",
+          "content": "CVA = PV(expected loss); expected loss = exposure × PD × (1 − recovery)"
         },
         {
-          "label": "代入",
-          "content": "年末 EL = 100 × 0.02 × 0.60 = 1.2；CVA = 1.2 / 1.03"
+          "label": "Substitute",
+          "content": "Year-end EL = 100 × 0.02 × 0.60 = 1.2; CVA = 1.2 / 1.03"
         },
         {
-          "label": "结果",
-          "content": "≈ 1.17（公允价值 = 100/1.03 − 1.17 = 97.09 − 1.17 ≈ 95.92）"
+          "label": "Result",
+          "content": "≈ 1.17 (fair value = 100/1.03 − 1.17 = 97.09 − 1.17 ≈ 95.92)"
         },
         {
-          "label": "陷阱",
-          "content": "两个检查点：损失率用 1 − recovery（不是 recovery）；预期损失必须按无风险利率折现成现值。"
+          "label": "Pitfall",
+          "content": "Two checkpoints: use 1 − recovery for the loss rate (not recovery); and the expected loss must be discounted to present value at the risk-free rate."
         }
       ],
       "source": "CFA L2 Curriculum, Credit Analysis Models, credit valuation adjustment",
@@ -825,14 +825,14 @@
     {
       "id": "FI-spreadterm-1",
       "topic": "FI",
-      "los": "Credit spread 期限结构含义",
+      "los": "Meaning of the term structure of credit spreads",
       "module": "Credit Analysis Models",
       "type": "trap",
-      "stem": "一家临近财务困境的低评级（CCC 级）发行人，其 credit spread 期限结构最可能呈现：",
+      "stem": "For a low-rated (CCC) issuer approaching financial distress, the term structure of its credit spreads will most likely be:",
       "choices": {
-        "A": "倒挂（短端利差高于长端）",
-        "B": "向上倾斜，因为期限越长不确定性越大",
-        "C": "水平，因为违约风险与期限无关"
+        "A": "Inverted (short-end spreads higher than long-end spreads)",
+        "B": "Upward-sloping, because uncertainty grows with maturity",
+        "C": "Flat, because default risk is independent of maturity"
       },
       "answer": "A",
       "explanations": {
@@ -852,11 +852,11 @@
       "los": "Upfront premium ≈ (credit spread − coupon) × duration",
       "module": "Credit Default Swaps",
       "type": "calc",
-      "stem": "某单一名字 CDS：参考实体当前 credit spread 为 350bp，CDS 标准票息 (coupon) 为 100bp，CDS 久期为 4。交易达成时的 upfront premium 约为（以名义本金的百分比表示）：",
+      "stem": "A single-name CDS: the reference entity's current credit spread is 350bp, the standard CDS coupon is 100bp, and the CDS duration is 4. At trade inception, the upfront premium is approximately (expressed as a percentage of notional):",
       "choices": {
-        "A": "protection buyer 向 seller 支付约 10%",
-        "B": "protection buyer 向 seller 支付约 2.5%",
-        "C": "protection seller 向 buyer 支付约 10%"
+        "A": "The protection buyer pays about 10% to the seller",
+        "B": "The protection buyer pays about 2.5% to the seller",
+        "C": "The protection seller pays about 10% to the buyer"
       },
       "answer": "A",
       "explanations": {
@@ -866,20 +866,20 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "Upfront premium ≈ (credit spread − CDS coupon) × CDS duration"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "= (3.50% − 1.00%) × 4 = 2.50% × 4"
         },
         {
-          "label": "结果",
-          "content": "= 10% of notional，由 protection buyer 支付给 seller（因 spread > coupon）"
+          "label": "Result",
+          "content": "= 10% of notional, paid by the protection buyer to the seller (because spread > coupon)"
         },
         {
-          "label": "陷阱",
-          "content": "两个检查点：必须乘 duration（否则得 2.5%）；方向由 spread 与 coupon 大小决定——spread > coupon 时 buyer 付，反之 seller 付。"
+          "label": "Pitfall",
+          "content": "Two checkpoints: you must multiply by duration (otherwise you get 2.5%); the direction is determined by the relative size of spread and coupon—when spread > coupon the buyer pays, and vice versa the seller pays."
         }
       ],
       "source": "CFA L2 Curriculum, Credit Default Swaps, upfront premium calculation",
@@ -891,14 +891,14 @@
     {
       "id": "FI-cds-mech-1",
       "topic": "FI",
-      "los": "CDS 机制: protection buyer/seller, 触发事件",
+      "los": "CDS mechanics: protection buyer/seller, trigger events",
       "module": "Credit Default Swaps",
       "type": "concept",
-      "stem": "CDS 合约下，参考实体是否发生 credit event（如 bankruptcy、failure to pay、restructuring）的正式认定由谁作出：",
+      "stem": "Under a CDS contract, who makes the formal determination of whether a credit event (such as bankruptcy, failure to pay, or restructuring) has occurred for the reference entity:",
       "choices": {
-        "A": "ISDA 的 Determinations Committee，经绝对多数（supermajority）表决认定",
-        "B": "protection buyer 单方面宣布并提交违约证据即可触发",
-        "C": "主要评级机构将发行人下调至违约级别时自动触发"
+        "A": "ISDA's Determinations Committee, by a supermajority vote",
+        "B": "The protection buyer can trigger it unilaterally by declaring and submitting evidence of default",
+        "C": "It is triggered automatically when a major rating agency downgrades the issuer to default status"
       },
       "answer": "A",
       "explanations": {
@@ -915,14 +915,14 @@
     {
       "id": "FI-cds-index-1",
       "topic": "FI",
-      "los": "Index CDS vs single-name; 曲线交易",
+      "los": "Index CDS vs single-name; curve trades",
       "module": "Credit Default Swaps",
       "type": "concept",
-      "stem": "投资者持有基于 125 个等权重成分的 index CDS（如 CDX IG）。当其中一个成分实体发生 credit event 后：",
+      "stem": "An investor holds an index CDS based on 125 equally weighted constituents (such as CDX IG). After a credit event occurs for one of the constituent entities:",
       "choices": {
-        "A": "该实体按其在指数中的权重单独结算，合约名义本金相应减少，其余 124 个名字继续受保护至到期",
-        "B": "整个 index CDS 合约立即终止并全额结算",
-        "C": "违约实体被新实体替换，合约名义本金保持不变"
+        "A": "That entity is settled separately according to its weight in the index, the contract's notional is reduced accordingly, and the remaining 124 names continue to be protected until maturity",
+        "B": "The entire index CDS contract terminates immediately and is settled in full",
+        "C": "The defaulted entity is replaced by a new entity, and the contract's notional remains unchanged"
       },
       "answer": "A",
       "explanations": {
