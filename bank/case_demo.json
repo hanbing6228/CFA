@@ -4,19 +4,19 @@
     {
       "id": "CASE-FSA-pension-1",
       "topic": "FSA",
-      "title": "Meridian Industrials 养老金分析",
-      "background": "分析师 Lena Fischer 正在评估 Meridian Industrials(按 IFRS 报告)的 DB 养老金计划对财报的影响。她整理了本年度计划数据(Exhibit 1),并注意到公司披露的折现率为 5.0%,计划资产实际回报为 63。Fischer 想弄清费用在 P&L 与 OCI 之间的归属。",
+      "title": "Meridian Industrials Pension Analysis",
+      "background": "Analyst Lena Fischer is assessing the impact of Meridian Industrials' (which reports under IFRS) defined benefit pension plan on its financial statements. She has compiled the plan's data for the current year (Exhibit 1) and notes that the company discloses a discount rate of 5.0% and an actual return on plan assets of 63. Fischer wants to determine how the expense is allocated between P&L and OCI.",
       "exhibits": [
         {
-          "title": "Exhibit 1. DB 计划本年度数据 (百万)",
+          "title": "Exhibit 1. DB Plan Data for the Current Year (in millions)",
           "table": [
-            ["项目", "金额"],
-            ["期初 PBO", "1,200"],
-            ["期初计划资产", "900"],
-            ["当期 service cost", "60"],
-            ["折现率", "5.0%"],
-            ["benefits paid", "40"],
-            ["计划资产实际回报", "63"]
+            ["Item", "Amount"],
+            ["Beginning PBO", "1,200"],
+            ["Beginning plan assets", "900"],
+            ["Current service cost", "60"],
+            ["Discount rate", "5.0%"],
+            ["Benefits paid", "40"],
+            ["Actual return on plan assets", "63"]
           ]
         }
       ]
@@ -28,9 +28,9 @@
       "case": "CASE-FSA-pension-1",
       "topic": "FSA",
       "module": "Employee Compensation: Post-Employment and Share-Based",
-      "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+      "los": "DB plan: composition and roll-forward of the PBO (service cost, interest cost, benefits paid)",
       "type": "calc",
-      "stem": "基于 Exhibit 1(无精算变动),期末 PBO 最接近:",
+      "stem": "Based on Exhibit 1 (no actuarial changes), the ending PBO is closest to:",
       "choices": { "A": "1,280", "B": "1,320", "C": "1,220" },
       "answer": "A",
       "explanations": {
@@ -39,12 +39,12 @@
         "C": "错。1,220 = 1200+60−40,漏了 interest cost(期初 PBO×折现率)——义务会随时间推移增值。"
       },
       "steps": [
-        { "label": "公式", "content": "期末PBO = 期初PBO + service cost + interest cost − benefits paid (± 精算变动)" },
-        { "label": "代入", "content": "= 1200 + 60 + 1200×5.0% − 40" },
-        { "label": "结果", "content": "= 1200 + 60 + 60 − 40 = 1,280" },
-        { "label": "陷阱", "content": "interest cost 基数是期初 PBO;benefits paid 必须减——两个漏项正好对应 B/C。" }
+        { "label": "Formula", "content": "Ending PBO = Beginning PBO + service cost + interest cost − benefits paid (± actuarial changes)" },
+        { "label": "Substitute", "content": "= 1200 + 60 + 1200×5.0% − 40" },
+        { "label": "Result", "content": "= 1200 + 60 + 60 − 40 = 1,280" },
+        { "label": "Trap", "content": "The base for interest cost is the beginning PBO; benefits paid must be subtracted—the two omitted items correspond exactly to choices B/C." }
       ],
-      "source": "CFA L2 Curriculum, Employment Compensation, PBO 滚动计算",
+      "source": "CFA L2 Curriculum, Employment Compensation, PBO roll-forward calculation",
       "verified": { "method": "author-recheck", "by": "main-agent" }
     },
     {
@@ -52,9 +52,9 @@
       "case": "CASE-FSA-pension-1",
       "topic": "FSA",
       "module": "Employee Compensation: Post-Employment and Share-Based",
-      "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+      "los": "IFRS vs US GAAP: allocation of the three components of periodic pension cost (P&L vs OCI)",
       "type": "calc",
-      "stem": "IFRS 下,本年度计入 P&L 的养老金费用最接近:",
+      "stem": "Under IFRS, the pension expense recognized in P&L for the current year is closest to:",
       "choices": { "A": "75", "B": "57", "C": "120" },
       "answer": "A",
       "explanations": {
@@ -63,10 +63,10 @@
         "C": "错。120 = 60 + 60,只算了义务的 interest cost,漏了计划资产产生的利息收入抵减。"
       },
       "steps": [
-        { "label": "公式", "content": "IFRS P&L 费用 = service cost + (期初PBO − 期初资产)×折现率" },
-        { "label": "代入", "content": "= 60 + (1200 − 900)×5.0%" },
-        { "label": "结果", "content": "= 60 + 15 = 75" },
-        { "label": "陷阱", "content": "IFRS 的资产回报在 P&L 里只按折现率算;实际回报与之的差额进 OCI。" }
+        { "label": "Formula", "content": "IFRS P&L expense = service cost + (beginning PBO − beginning plan assets) × discount rate" },
+        { "label": "Substitute", "content": "= 60 + (1200 − 900)×5.0%" },
+        { "label": "Result", "content": "= 60 + 15 = 75" },
+        { "label": "Trap", "content": "Under IFRS the return on assets in P&L is computed using only the discount rate; the difference between this and the actual return goes to OCI." }
       ],
       "source": "CFA L2 Curriculum, Employment Compensation, IFRS periodic pension cost",
       "verified": { "method": "author-recheck", "by": "main-agent" }
@@ -76,13 +76,13 @@
       "case": "CASE-FSA-pension-1",
       "topic": "FSA",
       "module": "Employee Compensation: Post-Employment and Share-Based",
-      "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+      "los": "IFRS vs US GAAP: allocation of the three components of periodic pension cost (P&L vs OCI)",
       "type": "concept",
-      "stem": "计划资产实际回报 63 与计入 P&L 的资产利息收入之间的差额 18,IFRS 下应:",
+      "stem": "The difference of 18 between the actual return on plan assets of 63 and the interest income on plan assets recognized in P&L should, under IFRS, be:",
       "choices": {
-        "A": "计入 OCI (remeasurement),后续不摊回 P&L",
-        "B": "直接计入当期 P&L",
-        "C": "计入 OCI,超过 corridor 部分摊回 P&L"
+        "A": "recognized in OCI (as a remeasurement), with no subsequent amortization back to P&L",
+        "B": "recognized directly in current-period P&L",
+        "C": "recognized in OCI, with the portion exceeding the corridor amortized back to P&L"
       },
       "answer": "A",
       "explanations": {
@@ -90,7 +90,7 @@
         "B": "错。进 P&L 的资产回报只有按折现率计的 45;差额留在 OCI,避免波动污染利润表。",
         "C": "错。corridor 摊销是 US GAAP 的选择性处理;IFRS 不允许摊回。"
       },
-      "source": "CFA L2 Curriculum, Employment Compensation, remeasurements 归属",
+      "source": "CFA L2 Curriculum, Employment Compensation, allocation of remeasurements",
       "verified": { "method": "author-recheck", "by": "main-agent" }
     }
   ]

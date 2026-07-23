@@ -16,11 +16,11 @@
       "topic": "FSA",
       "los": "FX translation: temporal vs current rate method",
       "type": "concept",
-      "stem": "子公司功能货币为母公司报告货币（即采用 temporal method 折算）。期末折算以历史成本计量的存货时，应使用哪种汇率？",
+      "stem": "A subsidiary's functional currency is the parent's presentation currency (i.e., the temporal method is used for translation). When translating inventory measured at historical cost at the reporting date, which exchange rate should be applied?",
       "choices": {
-        "A": "期末即期汇率 (current rate)",
-        "B": "购入存货时的历史汇率 (historical rate)",
-        "C": "当期平均汇率 (average rate)"
+        "A": "The period-end spot rate (current rate)",
+        "B": "The historical rate in effect when the inventory was purchased (historical rate)",
+        "C": "The average rate for the period (average rate)"
       },
       "answer": "B",
       "explanations": {
@@ -28,18 +28,18 @@
         "B": "对。Temporal method 的核心规则：非货币性项目按其计量属性配套汇率——历史成本计量的存货/固定资产用历史汇率，公允价值计量的用计量日汇率。",
         "C": "错。平均汇率在 temporal method 下用于大多数收入费用项目（COGS、折旧除外，它们跟随对应资产用历史汇率）。"
       },
-      "source": "CFA L2 Curriculum, Multinational Operations; 任何 Notes 的 temporal/current rate 对照表"
+      "source": "CFA L2 Curriculum, Multinational Operations; the temporal/current rate comparison table in any Notes provider"
     },
     {
       "id": "FSA-pension-ifrs-1",
       "topic": "FSA",
       "los": "Pension: components of periodic pension cost under IFRS",
       "type": "concept",
-      "stem": "IFRS 下，DB 养老金计划的精算重估损益 (remeasurements) 的会计处理是：",
+      "stem": "Under IFRS, the accounting treatment of the actuarial remeasurements of a defined benefit pension plan is to:",
       "choices": {
-        "A": "计入当期 P&L",
-        "B": "计入 OCI，且后续不摊销回 P&L",
-        "C": "计入 OCI，后续按 corridor 法摊销回 P&L"
+        "A": "recognize them in current-period P&L",
+        "B": "recognize them in OCI, with no subsequent amortization back to P&L",
+        "C": "recognize them in OCI, subsequently amortized back to P&L under the corridor approach"
       },
       "answer": "B",
       "explanations": {
@@ -54,7 +54,7 @@
       "topic": "Equity",
       "los": "FCFF from net income",
       "type": "calc",
-      "stem": "NI=100, D&A=20, 利息费用=10, 税率=25%, FCInv=30, WCInv=10。FCFF 最接近：",
+      "stem": "NI = 100, D&A = 20, interest expense = 10, tax rate = 25%, FCInv = 30, WCInv = 10. FCFF is closest to:",
       "choices": {
         "A": "87.5",
         "B": "90.0",
@@ -67,19 +67,19 @@
         "C": "错。67.5 = 漏加了 NCC (D&A 20)。检查口诀：NI 起步四步走——加非现金、加税后利息、减两个 Inv。"
       },
       "steps": [
-        { "label": "公式", "content": "FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv" },
-        { "label": "代入", "content": "= 100 + 20 + 10×(1−0.25) − 30 − 10" },
-        { "label": "结果", "content": "= 100 + 20 + 7.5 − 40 = 87.5" },
-        { "label": "陷阱", "content": "利息必须税后加回 (×0.75)。直接加 10 会得到错误选项 B 的 90。" }
+        { "label": "Formula", "content": "FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv" },
+        { "label": "Substitute", "content": "= 100 + 20 + 10×(1−0.25) − 30 − 10" },
+        { "label": "Result", "content": "= 100 + 20 + 7.5 − 40 = 87.5" },
+        { "label": "Trap", "content": "Interest must be added back after tax (×0.75). Adding back 10 directly gives the incorrect choice B of 90." }
       ],
-      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF 定义式"
+      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF definitional formula"
     },
     {
       "id": "EQ-ri-calc-1",
       "topic": "Equity",
       "los": "Residual income computation",
       "type": "calc",
-      "stem": "期初账面净资产 BV0=400, NI=50, 股权成本 re=10%。当期 residual income 为：",
+      "stem": "Beginning book value of equity BV0 = 400, NI = 50, cost of equity re = 10%. The residual income for the period is:",
       "choices": {
         "A": "10",
         "B": "50",
@@ -92,10 +92,10 @@
         "C": "错。45 = 50 − 0.10×50，把 equity charge 算在了 NI 上而不是期初账面净资产上。"
       },
       "steps": [
-        { "label": "公式", "content": "RI = NI − equity charge，equity charge = re × 期初BV" },
-        { "label": "代入", "content": "= 50 − 0.10 × 400" },
-        { "label": "结果", "content": "= 50 − 40 = 10" },
-        { "label": "陷阱", "content": "equity charge 的基数是期初账面净资产 BV0，不是 NI 也不是期末 BV。" }
+        { "label": "Formula", "content": "RI = NI − equity charge, where equity charge = re × beginning BV" },
+        { "label": "Substitute", "content": "= 50 − 0.10 × 400" },
+        { "label": "Result", "content": "= 50 − 40 = 10" },
+        { "label": "Trap", "content": "The base for the equity charge is beginning book value of equity BV0, not NI and not ending BV." }
       ],
       "source": "CFA L2 Curriculum, Residual Income Valuation"
     },
@@ -104,7 +104,7 @@
       "topic": "FI",
       "los": "OAS vs Z-spread for bonds with embedded options",
       "type": "concept",
-      "stem": "对一只可赎回债券 (callable bond)，OAS 与 Z-spread 的关系是：",
+      "stem": "For a callable bond, the relationship between the OAS and the Z-spread is:",
       "choices": {
         "A": "OAS > Z-spread",
         "B": "OAS = Z-spread",
@@ -123,11 +123,11 @@
       "topic": "FI",
       "los": "Effect of interest rate volatility on callable/putable bond values",
       "type": "concept",
-      "stem": "其他条件不变，利率波动率上升时，可赎回债券 (callable bond) 的价值：",
+      "stem": "Holding all else equal, when interest rate volatility rises, the value of a callable bond:",
       "choices": {
-        "A": "上升",
-        "B": "下降",
-        "C": "不变"
+        "A": "increases",
+        "B": "decreases",
+        "C": "is unchanged"
       },
       "answer": "B",
       "explanations": {
