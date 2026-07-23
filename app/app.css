@@ -123,6 +123,14 @@ input[type=date], input[type=number], input[type=text], input[type=password] {
 .btnrow button { flex: 1; min-width: 40%; padding: 11px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--card); color: var(--text); cursor: pointer; font-size: .88rem; }
 .btnrow button.danger { color: var(--red); border-color: var(--red); }
 textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); padding: 10px; font-size: .8rem; }
+/* 脑图 */
+.chiprow { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 8px; -webkit-overflow-scrolling: touch; }
+.topicchip { flex: 0 0 auto; padding: 7px 12px; border-radius: 999px; border: 1.5px solid var(--border); background: var(--card); color: var(--text); font-size: .82rem; cursor: pointer; white-space: nowrap; }
+.topicchip.on { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.topicchip .freq { margin-left: 4px; }
+.mapbox { height: 68vh; border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--bg); touch-action: none; margin-top: 10px; }
+.mapbox svg { display: block; }
+
 /* 公式渲染 */
 .mf { font-family: "Cambria Math", "Latin Modern Math", Georgia, serif; font-style: italic; white-space: nowrap; }
 .mf sub, .mf sup { font-style: normal; }

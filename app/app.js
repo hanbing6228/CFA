@@ -526,67 +526,94 @@ function freqBadge(meta) {
   if (w >= 9) return { cls: 'mid', label: '中高频' };
   return { cls: 'mid', label: '中频' };
 }
-let FRAME_SORT = 'curriculum';   // curriculum | weight
+let FRAME_TOPIC = null;   // 当前脑图科目
+let FRAME_VIEW = 'map';   // map | list
+
+function weakSetOf() {
+  const stats = Store.statsData();
+  const w = new Set();
+  for (const [t, td] of Object.entries(stats))
+    for (const [los, l] of Object.entries(td.los))
+      if (l.n >= 2 && l.right / l.n < 0.6) w.add(t + '|' + los);
+  return w;
+}
 
 function renderFrames() {
   const main = $('#main');
   main.innerHTML = '';
-  main.appendChild(el('h1', '', '框架图'));
-  const legend = el('div', 'card muted');
-  legend.innerHTML = '一行一个考点。<span class="freq f">𝑓 必背</span>公式 · ⚠️ 陷阱 · <span class="freq hi">高频</span>=大权重科目 · 🔴 你的弱点(自动标红置顶)。冲刺期只刷这里。';
-  main.appendChild(legend);
-
-  // 排序切换
-  const toggle = el('div', 'btnrow');
-  const t1 = el('button', FRAME_SORT === 'curriculum' ? 'primary' : '', '按大纲顺序');
-  const t2 = el('button', FRAME_SORT === 'weight' ? 'primary' : '', '按考频排序');
-  t1.style.cssText = t2.style.cssText = 'flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--text)';
-  if (FRAME_SORT === 'curriculum') t1.style.borderColor = 'var(--accent)';
-  if (FRAME_SORT === 'weight') t2.style.borderColor = 'var(--accent)';
-  t1.onclick = () => { FRAME_SORT = 'curriculum'; renderFrames(); };
-  t2.onclick = () => { FRAME_SORT = 'weight'; renderFrames(); };
-  toggle.appendChild(t1); toggle.appendChild(t2);
-  main.appendChild(toggle);
-
+  main.appendChild(el('h1', '', '框架脑图'));
   const frames = Store.bank.frames || {};
-  const stats = Store.statsData();
-  const weakSet = new Set();
-  for (const [t, td] of Object.entries(stats)) {
-    for (const [los, l] of Object.entries(td.los)) {
-      if (l.n >= 2 && l.right / l.n < 0.6) weakSet.add(t + '|' + los);
-    }
-  }
-  let topics = Object.keys(frames);
-  if (FRAME_SORT === 'curriculum') {
-    topics.sort((a, b) => CURRICULUM_ORDER.indexOf(a) - CURRICULUM_ORDER.indexOf(b));
-  } else {
-    topics.sort((a, b) => (Store.bank.topics[b] || {}).weight - (Store.bank.topics[a] || {}).weight);
-  }
+  const topics = Object.keys(frames).sort((a, b) => CURRICULUM_ORDER.indexOf(a) - CURRICULUM_ORDER.indexOf(b));
+  if (!FRAME_TOPIC || !frames[FRAME_TOPIC]) FRAME_TOPIC = topics[0];
+
+  // 科目 chips (大纲顺序 + 高频徽章)
+  const chips = el('div', 'chiprow');
   for (const t of topics) {
     const meta = Store.bank.topics[t] || {};
     const fb = freqBadge(meta);
-    const head = el('div', 'topichead');
-    head.appendChild(el('h2', '', `${esc(t)} <span class="muted">${esc(meta.name_cn || '')}</span>`));
-    head.appendChild(el('span', `freq ${fb.cls}`, fb.label));
-    head.appendChild(el('span', 'muted', `权重~${meta.weight || '?'}%`));
-    main.appendChild(head);
-    for (const [mod, lines] of Object.entries(frames[t])) {
-      const card = el('div', 'card');
-      card.appendChild(el('h2', '', esc(mod)));
-      const sorted = lines.slice().sort((a, b) =>   // 弱点行置顶
-        (weakSet.has(t + '|' + (b.los || '')) ? 1 : 0) - (weakSet.has(t + '|' + (a.los || '')) ? 1 : 0));
-      for (const ln of sorted) {
-        const weak = ln.los && weakSet.has(t + '|' + ln.los);
-        const row = el('div', `losrow${weak ? ' weak' : ''}`);
-        let badges = '';
-        if (weak) badges += '🔴 ';
-        if (ln.f) badges += '<span class="freq f">𝑓</span>';
-        if (ln.trap) badges += '⚠️ ';
-        row.appendChild(el('div', '', badges + fmt(ln.t)));
-        card.appendChild(row);
+    const chip = el('button', 'topicchip' + (t === FRAME_TOPIC ? ' on' : ''),
+      `${esc(t)} <span class="freq ${fb.cls}">${fb.label}</span>`);
+    chip.onclick = () => { FRAME_TOPIC = t; renderFrames(); };
+    chips.appendChild(chip);
+  }
+  main.appendChild(chips);
+
+  const bar = el('div', 'btnrow');
+  const bMap = el('button', FRAME_VIEW === 'map' ? 'primary' : '', '🧠 脑图');
+  const bList = el('button', FRAME_VIEW === 'list' ? 'primary' : '', '📋 列表');
+  bMap.style.cssText = bList.style.cssText = 'flex:1;padding:8px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--text)';
+  (FRAME_VIEW === 'map' ? bMap : bList).style.borderColor = 'var(--accent)';
+  bMap.onclick = () => { FRAME_VIEW = 'map'; renderFrames(); };
+  bList.onclick = () => { FRAME_VIEW = 'list'; renderFrames(); };
+  bar.appendChild(bMap); bar.appendChild(bList);
+  main.appendChild(bar);
+
+  const weakSet = weakSetOf();
+  const meta = Store.bank.topics[FRAME_TOPIC] || {};
+
+  if (FRAME_VIEW === 'map') {
+    main.appendChild(el('p', 'muted', `双指缩放 · 拖动平移 · 🔴 弱点 · 𝑓 公式 · ⚠️ 陷阱`));
+    // 构造脑图树: 科目 → module → 考点
+    const tree = { name: `${FRAME_TOPIC} ${meta.name_cn || ''}`, children: [] };
+    for (const [mod, lines] of Object.entries(frames[FRAME_TOPIC])) {
+      const mnode = { name: mod, children: [] };
+      for (const ln of lines) {
+        const weak = ln.los && weakSet.has(FRAME_TOPIC + '|' + ln.los);
+        mnode.children.push({
+          name: (ln.f ? '𝑓 ' : '') + (ln.trap ? '⚠ ' : '') + ln.t.replace(/\$/g, ''),
+          weak,
+        });
       }
-      main.appendChild(card);
+      if (mnode.children.some(c => c.weak)) mnode.weak = true;
+      tree.children.push(mnode);
     }
+    const box = el('div', 'mapbox');
+    main.appendChild(box);
+    requestAnimationFrame(() => MindMap.render(box, tree));
+    return;
+  }
+
+  // 列表视图
+  const head = el('div', 'topichead');
+  head.appendChild(el('h2', '', `${esc(FRAME_TOPIC)} ${esc(meta.name_cn || '')}`));
+  head.appendChild(el('span', 'muted', `权重~${meta.weight || '?'}%`));
+  main.appendChild(head);
+  for (const [mod, lines] of Object.entries(frames[FRAME_TOPIC])) {
+    const card = el('div', 'card');
+    card.appendChild(el('h2', '', esc(mod)));
+    const sorted = lines.slice().sort((a, b) =>
+      (weakSet.has(FRAME_TOPIC + '|' + (b.los || '')) ? 1 : 0) - (weakSet.has(FRAME_TOPIC + '|' + (a.los || '')) ? 1 : 0));
+    for (const ln of sorted) {
+      const weak = ln.los && weakSet.has(FRAME_TOPIC + '|' + ln.los);
+      const row = el('div', `losrow${weak ? ' weak' : ''}`);
+      let badges = '';
+      if (weak) badges += '🔴 ';
+      if (ln.f) badges += '<span class="freq f">𝑓</span>';
+      if (ln.trap) badges += '⚠️ ';
+      row.appendChild(el('div', '', badges + fmt(ln.t)));
+      card.appendChild(row);
+    }
+    main.appendChild(card);
   }
 }
 
