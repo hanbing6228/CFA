@@ -1,0 +1,1634 @@
+{
+ "topic": "FSA",
+ "tree": {
+  "name": "FSA",
+  "children": [
+   {
+    "name": "LM1 Intercorporate Investments",
+    "children": [
+     {
+      "name": "Overview",
+      "trap": 1,
+      "children": [
+       {
+        "name": "Categorization of investment",
+        "children": [
+         {
+          "name": "Degree of influence: Financial assets = No significant; Associates = Significant; Business combinations = Controlling; Joint Ventures = Shared control"
+         },
+         {
+          "name": "Typical ownership%: Financial assets = <20%; Associates = 20% - 50%; Business combinations = > 50%; Joint Ventures = Varies"
+         },
+         {
+          "name": "Investee: Financial assets = N/A; Associates = Associate; Business combinations = Subsidiary; Joint Ventures = N/A"
+         },
+         {
+          "name": "New financial reporting (post IFRS 9 taking effect): Financial assets = FV through P/L, FV through OCI, Amortized cost; Associates = Equity method; Business combinations = Consolidation; Joint Ventures = Equity method"
+         },
+         {
+          "name": "U.S. GAAP: Financial assets = Trading security, AFS, HTM; Associates = Equity method; Business combinations = Consolidation; Joint Ventures = Equity method"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Financial assets",
+      "trap": 1,
+      "children": [
+       {
+        "name": "Summary of reporting methods",
+        "children": [
+         {
+          "name": "Balance sheet — FV through P/L: Fair value; FV through OCI: Fair value, Unrealized G/L ->OCI (I/S when realized), 例外：在IFRS下，投资外国债券的外汇变动计入I/S; Amortized cost: Amortized cost"
+         },
+         {
+          "name": "Income statement — FV through P/L: Interest, Dividend, Realized or unrealized G/L; FV through OCI: Interest, Dividend, Realized G/L; Amortized cost: Interest, Realized G/L"
+         }
+        ]
+       },
+       {
+        "name": "Classification",
+        "children": [
+         {
+          "name": "Amortized cost (Debt only)",
+          "children": [
+           {
+            "name": "Business model test: The financial assets are being held to collect contractual cash flows"
+           },
+           {
+            "name": "Cash flow characteristic test: The contractual cash flows are solely payments of principal and interest on principal."
+           }
+          ]
+         },
+         {
+          "name": "FVPL: Fair value through profit or loss  (D & E)",
+          "children": [
+           {
+            "name": "Debt——Held-for-trading or amortized cost results in accounting mismatch"
+           },
+           {
+            "name": "Equity——Held-for-trading must be classified as FVPL; others may be classified as either FVTPL or FVOCI, irrevocable"
+           }
+          ]
+         },
+         {
+          "name": "FVOCI: Fair Value through other comprehensive income  (D & E)",
+          "children": [
+           {
+            "name": "Designated at FVOCI"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Classification and measurement (IFRS 9)",
+        "children": [
+         {
+          "name": "Flowchart (Debt / Equity classification)",
+          "children": [
+           {
+            "name": "Debt → Yes → 2 Criteria → Yes → Amortized Cost"
+           },
+           {
+            "name": "Debt → 2 Criteria → No → Held for Trading"
+           },
+           {
+            "name": "Held for Trading → Yes → FVPL"
+           },
+           {
+            "name": "Equity → Yes → Held for Trading → Designated at FVOCI"
+           },
+           {
+            "name": "Designated at FVOCI → No → FVPL; Yes → FVOCI"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Associates",
+      "trap": 1,
+      "children": [
+       {
+        "name": "Eqity method overview",
+        "children": [
+         {
+          "name": "Recognize the cost of investment at inception"
+         },
+         {
+          "name": "One-line consolidation"
+         },
+         {
+          "name": "Share the results of investee",
+          "children": [
+           {
+            "name": "Investee's earnings increase the investment account"
+           },
+           {
+            "name": "Decrease in the investment when dividend from investee declared"
+           }
+          ]
+         },
+         {
+          "name": "Carrying amount of investment in the B/S",
+          "children": [
+           {
+            "name": "= cost of investment + (adj. accumulated net profit of the investee – accumulated dividends declared by the investee) * percentage of interest owned",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "Gain is recognized in I/S",
+          "children": [
+           {
+            "name": "= current year's net profit of the investee * percentage of interest owned",
+            "f": 1
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Equity method More complicated issues",
+        "children": [
+         {
+          "name": "Goodwill = Acquisition cost - Fair value of net identifiable assets",
+          "f": 1
+         },
+         {
+          "name": "Depreciation adjustment",
+          "children": [
+           {
+            "name": "Percentage of interest owned * (FV of PP&E - BV of PP&E)",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "Transaction with associates",
+          "children": [
+           {
+            "name": "Upstream (associates to investor)"
+           },
+           {
+            "name": "Downstream (investor to associates)"
+           },
+           {
+            "name": "Percentage of interest owned *Unrealized profit",
+            "f": 1
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Impairment",
+        "children": [
+         {
+          "name": "IFRS",
+          "children": [
+           {
+            "name": "Events with impact on the investment's future CF"
+           }
+          ]
+         },
+         {
+          "name": "US GAAP",
+          "children": [
+           {
+            "name": "If the fair value of the investment declines below its carrying value and the decline is determined to be permanent"
+           }
+          ]
+         },
+         {
+          "name": "Both prohibit the reversal of impairment losses even if the fair value later increases"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Business combinations",
+      "trap": 1,
+      "children": [
+       {
+        "name": "Form of business combination",
+        "children": [
+         {
+          "name": "Merger A + B = A"
+         },
+         {
+          "name": "Acquisition A + B = (A + B)"
+         },
+         {
+          "name": "Consolidation A + B = C"
+         },
+         {
+          "name": "SPE & VIE"
+         }
+        ]
+       },
+       {
+        "name": "Acquisition method",
+        "children": [
+         {
+          "name": "B/S",
+          "children": [
+           {
+            "name": "A（母BV）+A（子FV）-支付对价 = A（合）",
+            "f": 1
+           },
+           {
+            "name": "母公司报表Investment消除"
+           },
+           {
+            "name": "合并报表Goodwill单独列示（Full GW & Partial GW）"
+           },
+           {
+            "name": "合并报表Equity = 母公司报表Equity + MI"
+           }
+          ]
+         },
+         {
+          "name": "I/S",
+          "children": [
+           {
+            "name": "Sales & Expenses 合并"
+           },
+           {
+            "name": "子公司报表Depreciation、Amortization调整"
+           },
+           {
+            "name": "母公司报表Investment income消除"
+           },
+           {
+            "name": "合并报表Profits attributed to MI"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Minority Interests (MI)"
+       },
+       {
+        "name": "Goodwill",
+        "children": [
+         {
+          "name": "Goodwill impairment test",
+          "children": [
+           {
+            "name": "IFRS",
+            "children": [
+             {
+              "name": "Carrying amount of the cash generating unit (including GW)> the recoverable amount"
+             }
+            ]
+           },
+           {
+            "name": "US GAAP",
+            "children": [
+             {
+              "name": "Identification of impairment: Carrying value of the reporting unit (including GW) > the FV of the reporting unit"
+             },
+             {
+              "name": "Measurement of the loss: Impairment loss = difference between the implied FV of the reporting unit's goodwill and its carrying amount"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Goodwill & MI",
+          "children": [
+           {
+            "name": "Full Goodwill",
+            "children": [
+             {
+              "name": "Allowed in both US GAAP and IFRS"
+             },
+             {
+              "name": "Full goodwill = 全额对价 – 全额FV口径的可识别净资产",
+              "f": 1
+             },
+             {
+              "name": "Minority Interests = 全额对价×少数股东比例",
+              "f": 1
+             }
+            ]
+           },
+           {
+            "name": "Partial Goodwill",
+            "children": [
+             {
+              "name": "Only allowed under IFRS"
+             },
+             {
+              "name": "Partial goodwill = 支付对价 - 全额FV口径的可识别净资产×收购比例",
+              "f": 1
+             },
+             {
+              "name": "Minority Interests = 全额FV口径的可识别净资产×少数股东比例",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Joint ventures",
+      "children": [
+       {
+        "name": "Both IFRS and US GAAP require the equity method of accounting for joint ventures"
+       }
+      ]
+     },
+     {
+      "name": "Other topics",
+      "children": [
+       {
+        "name": "Effect of the methods",
+        "trap": 1,
+        "children": [
+         {
+          "name": "Equity method: Net income Same, Equity Lower, Asset & liabilities Lower, Sales Lower"
+         },
+         {
+          "name": "Acquisition method: Net income Same, Equity Higher, Asset & liabilities Higher, Sales Higher"
+         }
+        ]
+       },
+       {
+        "name": "Analyst issues - Equity method",
+        "trap": 1,
+        "children": [
+         {
+          "name": "One-line consolidation"
+         },
+         {
+          "name": "Earnings (equity method)>earnings (passive investment)"
+         },
+         {
+          "name": "Quality of the equity method earnings"
+         }
+        ]
+       },
+       {
+        "name": "SPE & VIE",
+        "children": [
+         {
+          "name": "IFRS",
+          "children": [
+           {
+            "name": "The investor has the ability to exert influence on the financial and operating policy of the entity"
+           },
+           {
+            "name": "the investor has rights, to variable returns from its involvement with the investee"
+           }
+          ]
+         },
+         {
+          "name": "US GAAP",
+          "children": [
+           {
+            "name": "Total equity at risk is insufficient to finance activities without financial support from other parties"
+           },
+           {
+            "name": "Equity investors lack the ability to make decisions, the obligation to absorb losses, The right to receive returns"
+           }
+          ]
+         },
+         {
+          "name": "The primary beneficiary of a VIE must consolidate it as its subsidiary regardless of how much of an equity investment it has in the VIE"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "LM2 Employee Compensation: Post-Employment and Share-Based",
+    "children": [
+     {
+      "name": "Share-Based Compensation",
+      "children": [
+       {
+        "name": "Types of Employee Compensation",
+        "children": [
+         {
+          "name": "Table: Category / Definition / Common examples",
+          "children": [
+           {
+            "name": "Category | Definition | Common examples"
+           },
+           {
+            "name": "Short-term benefits | Compensation expected to be paid within 12 months. | Salaries and wages; Annual bonuses; Non-monetary benefits such as medical care; Contributions to social security schemes; Paid leave"
+           },
+           {
+            "name": "Long-term benefits | Compensation expected to be paid after 12 months. | Long-term paid leave (e.g., sabbatical); Long-term disability benefits"
+           }
+          ]
+         },
+         {
+          "name": "Table: Category / Definition / Common examples",
+          "children": [
+           {
+            "name": "Category | Definition | Common examples"
+           },
+           {
+            "name": "Termination benefits | Compensation paid in the event of employee termination. | Severance; Continued access to medical and other non-monetary benefits; Career counseling and outplacement services"
+           },
+           {
+            "name": "Share-based compensation | Compensation in the form of, or in reference to, shares of the employer's stock. | Restricted stock; Stock options"
+           },
+           {
+            "name": "Post-employment benefits | Compensation expected to be paid after employee retirement. | Pension and lump sum payments to retirees; Retiree life insurance and medical care"
+           }
+          ]
+         },
+         {
+          "name": "Short-Term Benefits vs. Share-Based Compensation and Post-Employment Benefits",
+          "children": [
+           {
+            "name": " | Short-Term Benefits (e.g., Salaries) | Share-Based Compensation | Post-Employment Benefits"
+           },
+           {
+            "name": "Typical vesting period | Days or weeks | Years | Years, decades"
+           },
+           {
+            "name": "Form of payment | Cash | Shares* | Cash"
+           },
+           {
+            "name": "Amount recognized over the vesting period | Undiscounted salary, wage, etc. | Fair value, measured on the grant date | Present value of estimated future benefits"
+           },
+           {
+            "name": "*Some companies pay share-based compensation settled in cash, which is accounted for like short-term benefits."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Share-Based Compensation",
+        "children": [
+         {
+          "name": "Share-based compensation is typically awarded as a bonus to highly compensated employees, such as managers and those in technical roles."
+         },
+         {
+          "name": "Advantages",
+          "children": [
+           {
+            "name": "It aligns employees' financial interests with those of shareholders, reducing principal-agency conflicts of interest."
+           },
+           {
+            "name": "Multi-year vesting periods, common in share-based compensation plans, improves employee retention."
+           },
+           {
+            "name": "Finally, share-based compensation has the advantage of requiring no cash outlay, thereby preserving liquidity."
+           }
+          ]
+         },
+         {
+          "name": "Disadvantages",
+          "children": [
+           {
+            "name": "The recipient of the share-based compensation may have limited influence over the company's share price, so share-based compensation may not necessarily reward individual performance or influence their actions."
+           },
+           {
+            "name": "Increased firm ownership may lead to suboptimal risk-taking by managers. Fearing a large share price decline and loss of personal wealth, managers may seek less risky and less profitable investment."
+           },
+           {
+            "name": "Managers already hold concentrated positions in their employer by way of their salary and reputation, which share ownership can compound."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Financial Reporting for Share-based Compensation",
+        "children": [
+         {
+          "name": "The offsetting entry to compensation expense is made to an equity, not liability, account on the balance sheet because compensation is settled in shares not cash."
+         },
+         {
+          "name": "Vesting is over multiple years, so a single grant affects the financial statements over multiple years."
+         },
+         {
+          "name": "Fair value is used as the measurement basis, rather than the undiscounted amount to be paid at settlement."
+         },
+         {
+          "name": "Instruments Used in Share-Based Compensation Plans",
+          "children": [
+           {
+            "name": "Instrument | Also Known as | Description"
+           },
+           {
+            "name": "Restricted stock | Restricted stock awards RSUs; Performance shares or performance share units | Awards of shares or share-like units with sale and other restrictions that are lifted upon vesting."
+           },
+           {
+            "name": "Stock options | Share options | Awards of non-tradeable call options, typically at the money, on the employer's stock."
+           },
+           {
+            "name": "Stock appreciation-based | Stock appreciation rights; Phantom shares | Awards of cash or shares based on the performance of shares over a period."
+           },
+           {
+            "name": "Stock purchase-based | Employee stock purchase plan; Employee stock ownership plan | Permits employees to purchase a limited number of newly issued shares at a discount."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Share-based compensation",
+      "children": [
+       {
+        "name": "Overview",
+        "children": [
+         {
+          "name": "Equity settled",
+          "children": [
+           {
+            "name": "Stock options"
+           },
+           {
+            "name": "Stock grants"
+           }
+          ]
+         },
+         {
+          "name": "Cash settled",
+          "children": [
+           {
+            "name": "Stock appreciation rights"
+           },
+           {
+            "name": "Phantom shares"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Disadvantages",
+        "children": [
+         {
+          "name": "Do not provide desired incentives as the managers may have limited influence over the market value."
+         },
+         {
+          "name": "Lead managers to be risk averse or excessive risk-taking as they cares about the market value."
+         },
+         {
+          "name": "May dilute the shareholders' interests."
+         }
+        ]
+       },
+       {
+        "name": "Sensitivity factor",
+        "children": [
+         {
+          "name": "Sensitivity factor (Greek) | Input (↑) | Value of call"
+         },
+         {
+          "name": "Vega | Volatility (σ) | ↑"
+         },
+         {
+          "name": "Rho | Risk-free rate (r) | ↑"
+         },
+         {
+          "name": "Theta | Time to expiration (T) | ↑"
+         },
+         {
+          "name": " | Dividend | ↓"
+         }
+        ]
+       },
+       {
+        "name": "Typical post-retirement plans",
+        "children": [
+         {
+          "name": "Defined-contribution pension plan (DC)"
+         },
+         {
+          "name": "Defined-benefit pension plan (DB)"
+         },
+         {
+          "name": "Other post-retirement benefits (OPB)"
+         },
+         {
+          "name": "Table: DC / DB / OPB",
+          "children": [
+           {
+            "name": " | DC | DB | OPB"
+           },
+           {
+            "name": "Amount of benefit | Not determined; Depends on future value of plan assets | Pre-determined | Depends on specifications of plan"
+           },
+           {
+            "name": "Investment risk | Born by employee | Born by employer | Depends"
+           },
+           {
+            "name": "Employer's obligation | Make periodic contributions | Make pre-determined payment to retiree | Similar to DB; Usually unfunded"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Tax Windfalls and Shortfalls",
+        "children": [
+         {
+          "name": "IFRS and US GAAP Treatment of Tax Windfalls and Shortfalls from Share-Based Compensation",
+          "children": [
+           {
+            "name": " | IFRS | US GAAP"
+           },
+           {
+            "name": "Share price on settlement date > share price on grant date (excess tax benefit or tax windfall) | Gain recognized directly in stockholders' equity. | Decrease in income tax expense on the income statement."
+           },
+           {
+            "name": "Share price on settlement date < share price on grant date (tax shortfall) | Loss recognized directly in stockholders' equity. | Increase in income tax expense on the income statement."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Illustration of DB",
+      "trap": 1,
+      "children": [
+       {
+        "name": "Projected Benefit Obligation (PBO)"
+       },
+       {
+        "name": "Accumulated Benefit Obligation (ABO)"
+       },
+       {
+        "name": "Vested Benefit Obligation (VBO)"
+       },
+       {
+        "name": "示意图 (timeline): Current B/S date — Servicing period — Date of retirement — Payment of pension; PBO ← discounting ← PV of Pension payment"
+       },
+       {
+        "name": "Measuring a DB plan's obligations",
+        "children": [
+         {
+          "name": "1.Calculation final salary"
+         },
+         {
+          "name": "2.PMT=Final salary*系数*service years",
+          "f": 1
+         },
+         {
+          "name": "3.Calculation value at retirement"
+         },
+         {
+          "name": "4.Discounting"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Financial statement reporting",
+      "trap": 1,
+      "children": [
+       {
+        "name": "B/S",
+        "children": [
+         {
+          "name": "Pension plan's funded status",
+          "children": [
+           {
+            "name": "Funded status = Fair value of the plan assets – PV of the defined benefit obligation",
+            "f": 1
+           },
+           {
+            "name": "Plan Assets: Fair value at the end of the year = Fair value at the beginning of the year + Employer contributions + Actual return - Benefit paid to employee",
+            "f": 1
+           },
+           {
+            "name": "PBO: PBO at the end of the year = PBO at the beginning of the year + Current service cost + Interest costs + Past service cost (plan amendments during the year) + Actuarial losses - Actuarial gains during the year - Benefit paid to employee",
+            "f": 1
+           },
+           {
+            "name": "Plan asset > PBO → Overfunded; Plan asset < PBO → Underfunded"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Periodic pension cost",
+        "children": [
+         {
+          "name": "IFRS",
+          "children": [
+           {
+            "name": "B/S (IFRS)",
+            "children": [
+             {
+              "name": "FV side: Cash -Δ; FV BGN; +E.C +Δ; +A.R; -B.P; FV END"
+             },
+             {
+              "name": "PBO side: PBO BGN; +C.S.C; +I; +P.S.C; +A/L - A/G; -B.P; PBO END"
+             },
+             {
+              "name": "R/E = -C.S.C; -P.S.C; -I; +\"E(R)\""
+             },
+             {
+              "name": "OCI: Remeasurement (广义) = 狭义 A/L or A/G; Diff A(R) and \"E(R)\""
+             }
+            ]
+           },
+           {
+            "name": "I/S (IFRS)",
+            "children": [
+             {
+              "name": "Services Cost = +C.S.C; +P.S.C"
+             },
+             {
+              "name": "Net Interest Expense = +I; -\"E(R)\""
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "US GAAP",
+          "children": [
+           {
+            "name": "B/S (US GAAP)",
+            "children": [
+             {
+              "name": "FV side: Cash -Δ; FV BGN; +E.C +Δ; +A.R; -B.P; FV END"
+             },
+             {
+              "name": "PBO side: PBO BGN; +C.S.C; +I; +P.S.C; +A/L - A/G; -B.P; PBO END"
+             },
+             {
+              "name": "R/E = -C.S.C; -I; +E(R)"
+             },
+             {
+              "name": "OCI: -Unamortized P.S.C (9/10 负); ±Unamortized 广义 A/L or A/G = 狭义 A/L or A/G, Diff A(R) and E(R)"
+             }
+            ]
+           },
+           {
+            "name": "I/S (US GAAP)",
+            "children": [
+             {
+              "name": "+C.S.C; +I; -E(R)"
+             },
+             {
+              "name": "+Amort = P.S.C (1/10); 广义 A/L or A/G = 狭义 A/L or A/G, Diff A(R) and E(R) → corridor approach"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Effect of changing pension assumption",
+          "children": [
+           {
+            "name": "Assumption | Impact on B/S | Impact on Periodic Cost"
+           },
+           {
+            "name": "Discount rate ↑ | Lower obligation | Lower periodic pension costs"
+           },
+           {
+            "name": "Rate of compensation increase ↑ | Higher obligation | Higher service costs"
+           },
+           {
+            "name": "Expected return on plan assets ↑ | No effect | Not applicable for IFRS; Lower periodic pension expense under US GAAP"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "LM3 Multinational Operations",
+    "children": [
+     {
+      "name": "Foreign currency transactions",
+      "children": [
+       {
+        "name": "Transactions occurs dominated in foreign currency"
+       },
+       {
+        "name": "Summary of impact due to changes in Foreign Currency",
+        "children": [
+         {
+          "name": "Export sales | Types of Exposure: Asset (A/R) | Foreign Currency Appreciation: Gain | Foreign Currency Depreciation: Loss"
+         },
+         {
+          "name": "Import purchase | Types of Exposure: Liability (A/P) | Foreign Currency Appreciation: Loss | Foreign Currency Depreciation: Gain"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Classification of currency",
+      "trap": 1,
+      "children": [
+       {
+        "name": "Currency types (Definition | Adoption in FS)",
+        "children": [
+         {
+          "name": "Reporting Currency/Presentation currency | Definition: Currency in which financial statement amounts are presented | Adoption in FS: The entity's financial statement shall be finally converted to reporting currency based on specific reporting requirement"
+         },
+         {
+          "name": "Functional Currency | Definition: Currency of the primary economic environment in which an entity operates | Adoption in FS: The functional currency best reflects the \"substance\" of the subsidiary economic activities. In accordance with GAAP, the FS is recorded in functional currency"
+         },
+         {
+          "name": "Local Currency | Definition: Currency of the country in which the entity is located | Adoption in FS: The financial statement prepared by the entity is usually in local currency (it's not the GAAP requirement but usually regulatory requirement)"
+         }
+        ]
+       },
+       {
+        "name": "Local Currency --Re-measurement / Temporal Method--> Functional Currency --Translation / Current rate Method--> Reporting Currency"
+       }
+      ]
+     },
+     {
+      "name": "Translation of foreign currency financial statements",
+      "trap": 1,
+      "children": [
+       {
+        "name": "B/S",
+        "children": [
+         {
+          "name": "Asset and Liabilities - Monetary | Exchange Rate (Temporal Method): Current | Exchange Rate (Current Rate Method): Current"
+         },
+         {
+          "name": "Asset and Liabilities - Non-monetary (inventories, U/R) | Exchange Rate (Temporal Method): Historical | Exchange Rate (Current Rate Method): Current"
+         },
+         {
+          "name": "Equity - Capitals | Exchange Rate (Temporal Method): Historical | Exchange Rate (Current Rate Method): Historical"
+         }
+        ]
+       },
+       {
+        "name": "I/S",
+        "children": [
+         {
+          "name": "Revenues and expenses | Exchange Rate (Temporal Method): Average | Exchange Rate (Current Rate Method): Average"
+         },
+         {
+          "name": "Exceptions of expenses - COGS | Exchange Rate (Temporal Method): Historical | Exchange Rate (Current Rate Method): Average"
+         },
+         {
+          "name": "Exceptions of expenses - Depreciation | Exchange Rate (Temporal Method): Historical | Exchange Rate (Current Rate Method): Average"
+         },
+         {
+          "name": "Gains and Losses - Translation G/L | Exchange Rate (Temporal Method): I/S (Affecting retained earnings, no CTA) | Exchange Rate (Current Rate Method): B/S, (equity, resulting in CTA, cumulative translation adjustment)"
+         }
+        ]
+       },
+       {
+        "name": "Current rate method",
+        "children": [
+         {
+          "name": "1.I/S，利润表中所有科目都使用平均汇率转换，只需计算平均汇率下的NI"
+         },
+         {
+          "name": "2.B/S，资产负债表中A&L，资产端和负债端均用现时汇率，只需计算现时汇率下的A&L"
+         },
+         {
+          "name": "3.B/S，资产负债表中E，其中Capital用历史汇率，R/E由BASE计算得出，CTA由差值计算得出"
+         }
+        ]
+       },
+       {
+        "name": "Temporal method",
+        "children": [
+         {
+          "name": "1.B/S，资产负债表中A&L，将所有货币性资产用现时汇率转换，非货币性资产资产使用历史汇率，加总得到A；将所有货币性负债用现时汇率转换，非货币性负债使用历史汇率，加总得到L"
+         },
+         {
+          "name": "2.B/S，资产负债表中E，其中Capital用历史汇率，R/E由A=L+Capital+R/E计算得出"
+         },
+         {
+          "name": "3.I/S，利润表中，Sales使用平均汇率，COGS使用历史汇率，SG&A使用平均汇率，折摊费用使用历史汇率，利息费用使用平均汇率，税费使用平均汇率，计算得出NI（Before translation）"
+         },
+         {
+          "name": "4.I/S，NI（After translation）由BASE计算得出，期初R/E+NI（After translation）-Div=期末R/E"
+         },
+         {
+          "name": "5.Translation G/L=NI（Before translation）-NI（After translation）",
+          "f": 1
+         }
+        ]
+       },
+       {
+        "name": "B/S exposure",
+        "children": [
+         {
+          "name": "Temporal method：net exposure = monetary assets - monetary liabilities",
+          "f": 1
+         },
+         {
+          "name": "Current rate method：net exposure = shareholder's equity",
+          "f": 1
+         }
+        ]
+       },
+       {
+        "name": "Summary of financial ratios",
+        "children": [
+         {
+          "name": "C$ appreciating | Pure B/S and pure I/S ratios (compared with original subsidiary's): The same (current ratio, quick ratio, LTD-to-capital) | B/S and I/S mix ratios (compared with original subsidiary's): ROA: Lower, ROE: Lower, Turnovers: Lower"
+         },
+         {
+          "name": "C$ depreciating | Pure B/S and pure I/S ratios (compared with original subsidiary's): The same (current ratio, quick ratio, LTD-to-capital) | B/S and I/S mix ratios (compared with original subsidiary's): ROA: Higher, ROE: Higher, Turnovers: Higher"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Highly inflationary economies",
+      "children": [
+       {
+        "name": "Adjustment rules",
+        "children": [
+         {
+          "name": "Cumulative 3-year inflation > 100% (average 26% per year)"
+         },
+         {
+          "name": "US GAAP:Temporal method"
+         },
+         {
+          "name": "IFRS: 1.Restated for inflation  2.使用Current currency rate转换"
+         }
+        ]
+       },
+       {
+        "name": "Restated rules",
+        "children": [
+         {
+          "name": "B/S表中，Inv需要调增，capital需要调增，R/E需要调增，但R/E是根据A=L+E原则的配平项（调整通胀后B/S表不平衡，通过调整R/E使得B/S重新配平，也可理解为调整了Net purchasing power gain/loss的NI进入R/E），B/S表是存量数据，其调整的通胀倍数为：Ending inflation/Beginning inflation"
+         },
+         {
+          "name": "I/S表中，Revenue需要调增、Expense需要调增，I/S表是流量数据，其调整的通胀倍数为：Ending inflation/Average inflation"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Other topics",
+      "children": [
+       {
+        "name": "Effective tax rate",
+        "children": [
+         {
+          "name": "Changes in the applicable tax rates"
+         },
+         {
+          "name": "Changes in the mix of profits earned in different jurisdictions"
+         }
+        ]
+       },
+       {
+        "name": "Revenue growth issue",
+        "children": [
+         {
+          "name": "For a multinational company, sales growth is driven not only by changes in volume and price but also by changes in the exchange rates between the reporting currency and the currency in which sales are made"
+         }
+        ]
+       },
+       {
+        "name": "Foreign exchange risk",
+        "children": [
+         {
+          "name": "Foreign exchange risk refers to the changes in the value of assets, liabilities and future sales due to depreciation or appreciation of currency"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "LM4 Analysis of Financial Institutions",
+    "children": [
+     {
+      "name": "Feature of financial institutions",
+      "children": [
+       {
+        "name": "Systematic importance"
+       },
+       {
+        "name": "Heavily regulated"
+       },
+       {
+        "name": "Assets are predominantly financial assets"
+       }
+      ]
+     },
+     {
+      "name": "Financial regulations",
+      "children": [
+       {
+        "name": "Basel III",
+        "children": [
+         {
+          "name": "Minimum capital requirement"
+         },
+         {
+          "name": "Minimum luquidity"
+         },
+         {
+          "name": "Stable funding"
+         }
+        ]
+       },
+       {
+        "name": "Other regulatory institutions",
+        "children": [
+         {
+          "name": "The Financial Stability Board"
+         },
+         {
+          "name": "The International Association of Deposit Insurers"
+         },
+         {
+          "name": "The International Association of Insurance Supervisors (IAIS)"
+         },
+         {
+          "name": "The International Organization of Securities Commissions (IOSCO)"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "CAMELS",
+      "children": [
+       {
+        "name": "Capital adequacy",
+        "children": [
+         {
+          "name": "Capital Adequacy = Capital / (Risk − weighted Assets)",
+          "f": 1
+         },
+         {
+          "name": "Risk-weighted assets",
+          "children": [
+           {
+            "name": "The higher the risk of the asset, the higher the risk-adjusted weight"
+           },
+           {
+            "name": "Risk−weighted Assets = ∑[($)Asset × risk-adjusted weight]",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "Total Capital 8%",
+          "children": [
+           {
+            "name": "Total Tier 1 Capital 6%",
+            "children": [
+             {
+              "name": "Common Equity Tier 1 Capital 4.5%"
+             },
+             {
+              "name": "Other Tier 1 Capital"
+             }
+            ]
+           },
+           {
+            "name": "Tier 2 Capital"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Asset quality",
+        "children": [
+         {
+          "name": "The concept of asset quality",
+          "children": [
+           {
+            "name": "Composition of a bank's assets"
+           },
+           {
+            "name": "Strength of the overall risk management processes by which the assets are generated and managed"
+           }
+          ]
+         },
+         {
+          "name": "Primary assets of bank",
+          "children": [
+           {
+            "name": "Loans (amortized cost = amortized cost - allowances for loan losses)",
+            "children": [
+             {
+              "name": "Quality for loans depends on",
+              "children": [
+               {
+                "name": "Creditworthiness of the borrowers"
+               },
+               {
+                "name": "Adequacy of adjustments for expected loan losses"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Financial assets",
+            "children": [
+             {
+              "name": "Classification of Financial Assets",
+              "children": [
+               {
+                "name": "IFRS | U.S. GAAP"
+               },
+               {
+                "name": "Debt & Equity | Debt | Equity"
+               },
+               {
+                "name": "FVPL | FVPL | FVPL;"
+               },
+               {
+                "name": "FVOCI | FVOCI | If no fair value,"
+               },
+               {
+                "name": "Amortized Cost | Amortized Cost | CV=Cost-impairment"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Management capabilities",
+        "children": [
+         {
+          "name": "Ability to identify and control risk",
+          "children": [
+           {
+            "name": "Credit risk"
+           },
+           {
+            "name": "Market risk"
+           },
+           {
+            "name": "Operating risk"
+           },
+           {
+            "name": "Legal risk"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Earnings sufficiency",
+        "children": [
+         {
+          "name": "Sufficient earnings"
+         },
+         {
+          "name": "Fair value hierarchy"
+         }
+        ]
+       },
+       {
+        "name": "Liquidity position",
+        "children": [
+         {
+          "name": "The Liquidity Coverage Ratio (LCR) = Highly liquid assets / Bank's expected cash outflow",
+          "f": 1
+         },
+         {
+          "name": "The Net Stable Funding Ratio (NSFR) = Available stable funding / Bank's required stable funding",
+          "f": 1
+         },
+         {
+          "name": "Other regulations for liquidity",
+          "children": [
+           {
+            "name": "Concentration of funding"
+           },
+           {
+            "name": "Contractual maturity mismatch"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Sensitivity to market risk",
+        "children": [
+         {
+          "name": "Types of market risk",
+          "children": [
+           {
+            "name": "Interest rate risk"
+           },
+           {
+            "name": "Exchange rate risk"
+           },
+           {
+            "name": "Equity price risk"
+           },
+           {
+            "name": "Commodity price risk"
+           }
+          ]
+         },
+         {
+          "name": "Banks disclose information about the sensitivity of earnings to different market conditions"
+         }
+        ]
+       },
+       {
+        "name": "Purpose of CAMELS",
+        "children": [
+         {
+          "name": "Evaluate a bank conducts an analysis"
+         },
+         {
+          "name": "Equity or debt investment analysis of banks"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Other factors considered",
+      "children": [
+       {
+        "name": "Government support"
+       },
+       {
+        "name": "Government ownership"
+       },
+       {
+        "name": "Mission of banking entity"
+       },
+       {
+        "name": "Corporate culture"
+       }
+      ]
+     },
+     {
+      "name": "Analytical considerations",
+      "children": [
+       {
+        "name": "Competitive environment"
+       },
+       {
+        "name": "Off-balance-sheet items"
+       },
+       {
+        "name": "Segment information"
+       },
+       {
+        "name": "Currency exposure"
+       },
+       {
+        "name": "Risk factors"
+       },
+       {
+        "name": "Basel III disclosures"
+       }
+      ]
+     },
+     {
+      "name": "Analyzing an Insurance Company",
+      "children": [
+       {
+        "name": "Property and Casualty Insurance Companies",
+        "children": [
+         {
+          "name": "Operations: Product"
+         },
+         {
+          "name": "Operations: Distribution"
+         },
+         {
+          "name": "Earnings characteristics",
+          "children": [
+           {
+            "name": "Loss and loss adjustment expense ratio = (Loss expense + Loss adjustment expense)/Net premiums earned",
+            "f": 1
+           },
+           {
+            "name": "Underwriting expense ratio = Underwriting expense/Net premiums written",
+            "f": 1
+           },
+           {
+            "name": "Combined ratio = Loss and loss adjustment expense ratio + Underwriting expense ratio",
+            "f": 1
+           },
+           {
+            "name": "Dividends to policyholders (shareholders) ratio = Dividends to policyholders (shareholders)/Net premiums earned",
+            "f": 1
+           },
+           {
+            "name": "Combined ratio after dividends = Combined ratio + Dividends to policyholders (shareholders) ratio",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "Investment Returns"
+         },
+         {
+          "name": "Liquidity"
+         },
+         {
+          "name": "Capitalization"
+         }
+        ]
+       },
+       {
+        "name": "Life and Health Insurance Companies",
+        "children": [
+         {
+          "name": "Operations: Product"
+         },
+         {
+          "name": "Operations: Distribution"
+         },
+         {
+          "name": "Earnings characteristics",
+          "children": [
+           {
+            "name": "Main expenses:",
+            "children": [
+             {
+              "name": "Life insurance: benefit payments"
+             },
+             {
+              "name": "Other types of insurance: contract surrender (early cancellation)"
+             }
+            ]
+           },
+           {
+            "name": "Profitability measures",
+            "children": [
+             {
+              "name": "ROA"
+             },
+             {
+              "name": "ROE"
+             },
+             {
+              "name": "Growth and volatility of capital"
+             },
+             {
+              "name": "Book value per share"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Investment Returns"
+         },
+         {
+          "name": "Liquidity"
+         },
+         {
+          "name": "Capitalization"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "LM5 Evaluating Quality of Financial Reports",
+    "children": [
+     {
+      "name": "The quality of financial reports",
+      "children": [
+       {
+        "name": "Quality spectrum",
+        "children": [
+         {
+          "name": "Quality Spectrum of Financial Reports",
+          "children": [
+           {
+            "name": "GAAP（符合会计准则）、decision-useful（决策有用）、sustainable（可持续）and adequate returns（充足的回报） — Quality Spectrum: HIGH"
+           },
+           {
+            "name": "GAAP、decision-useful、not sustainable、Low \"earnings quality\""
+           },
+           {
+            "name": "Within GAAP、but biased choices（选择有利的会计方法）"
+           },
+           {
+            "name": "Within GAAP、but \"earnings management\"（Real EM，Accounting EM）（符合 GAAP 规定，但存在盈利的管理）"
+           },
+           {
+            "name": "Non-compliant Accounting（不遵守会计准则）"
+           },
+           {
+            "name": "Fictitious transactions（伪造交易） — Quality Spectrum: LOW"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Potential Problems",
+        "children": [
+         {
+          "name": "Reported amounts and timing of recognition",
+          "children": [
+           {
+            "name": "Sheet element | Recognition | Net income | Equity | liability | Asset",
+            "children": [
+             {
+              "name": "Revenue | Aggressive, premature, and fictitious | Net income ↑ | Equity ↑ | liability N/A | Asset ↑"
+             },
+             {
+              "name": "Expenses | Omission and delayed | Net income ↑ | Equity ↑ | liability ↓ | Asset ↑"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Classification issues"
+         },
+         {
+          "name": "Mergers and acquistions issues"
+         },
+         {
+          "name": "Financial reporting that diverges from economic reality"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Evaluating the quality of financial reports",
+      "children": [
+       {
+        "name": "Quantitative tools to assess the likelihood of misreporting",
+        "children": [
+         {
+          "name": "Beneish model",
+          "children": [
+           {
+            "name": "M-score"
+           }
+          ]
+         },
+         {
+          "name": "Limitations of quantitative models"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "The quality of earnings",
+      "children": [
+       {
+        "name": "Indicators of earnings quality",
+        "children": [
+         {
+          "name": "Earnings persistence and related measures of accruals"
+         },
+         {
+          "name": "Mean reversion in earnings"
+         }
+        ]
+       },
+       {
+        "name": "Bankruptcy prediction models",
+        "children": [
+         {
+          "name": "Altman model"
+         },
+         {
+          "name": "Limitation of Altman model"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Cash flow quality",
+      "children": [
+       {
+        "name": "Indicators of cash flow quality"
+       }
+      ]
+     },
+     {
+      "name": "The quality of B/S",
+      "children": [
+       {
+        "name": "Completeness"
+       },
+       {
+        "name": "Unbiased measurement"
+       },
+       {
+        "name": "Clear presentation"
+       }
+      ]
+     },
+     {
+      "name": "Sources of information about risk"
+     }
+    ]
+   },
+   {
+    "name": "LM6 Integration of FSA Techniques",
+    "children": [
+     {
+      "name": "Financial statement analysis framework",
+      "children": [
+       {
+        "name": "Define the purpose and context of the analysis"
+       },
+       {
+        "name": "Collect input data"
+       },
+       {
+        "name": "Process input data, as required, into analytically useful data"
+       },
+       {
+        "name": "Analyze/interpret the data"
+       },
+       {
+        "name": "Develop and communicate conclusions and recommendations"
+       },
+       {
+        "name": "Follow-up"
+       }
+      ]
+     },
+     {
+      "name": "DuPont analysis"
+     },
+     {
+      "name": "Financial reporting quality",
+      "children": [
+       {
+        "name": "Aggregated accruals = accrual-based earnings – cash earnings"
+       }
+      ]
+     },
+     {
+      "name": "Measure earning quality",
+      "children": [
+       {
+        "name": "B/S approach",
+        "children": [
+         {
+          "name": "AR_B/S = AA_B/S / ((NOA_t − NOA_t−1)/2)",
+          "f": 1
+         }
+        ]
+       },
+       {
+        "name": "CF approach",
+        "children": [
+         {
+          "name": "AR_C/F = AA_C/F / ((NOA_t − NOA_t−1)/2)",
+          "f": 1
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

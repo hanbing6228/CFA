@@ -1,0 +1,1570 @@
+{
+ "topic": "FI",
+ "tree": {
+  "name": "FI",
+  "children": [
+   {
+    "name": "Term Structure and Interest Rates Dynamics",
+    "children": [
+     {
+      "name": "Spot yield curve & forward yield curve",
+      "children": [
+       {
+        "name": "Discount factor",
+        "children": [
+         {
+          "name": "一定小于1"
+         }
+        ]
+       },
+       {
+        "name": "Relationship",
+        "children": [
+         {
+          "name": "Forward curve lie above if spot curve upward sloping"
+         },
+         {
+          "name": "Z2相当于平均数，f(1,1)相当于边际数，边际数高于平均数，拉高平均数，同理边际数小于平均数，拉低平均数"
+         }
+        ]
+       },
+       {
+        "name": "Forward pricing model",
+        "children": [
+         {
+          "name": "根据无套利定价理论（no-arbitrage argument），为远期合约定价"
+         }
+        ]
+       },
+       {
+        "name": "Active bond portfolio management",
+        "children": [
+         {
+          "name": "Future spot rate vs. forward rate",
+          "children": [
+           {
+            "name": "判断buy or sell",
+            "children": [
+             {
+              "name": "如果交易者预期未来即期利率将低于当前远期利率的预测（未来短期利率↓，未来zero-coupon bond price↑，价格上涨，多头获利，因此应该使用远期合约做多债券），那么远期合约价值预计会增加。交易者将买入远期合约"
+             },
+             {
+              "name": "反之，交易者将卖出远期合约"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Riding the yield down",
+          "children": [
+           {
+            "name": "前提",
+            "children": [
+             {
+              "name": "1. Yield curve is upward sloping"
+             },
+             {
+              "name": "2. Yield curve remain stable over investment horizon"
+             }
+            ]
+           },
+           {
+            "name": "效果",
+            "children": [
+             {
+              "name": "Buying bonds with a maturity longer than the investment horizon would realize a higher return"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "5 Benchmark curves",
+      "children": [
+       {
+        "name": "Par curve",
+        "children": [
+         {
+          "name": "Par rate: 是指使得付息政府债券的定价等于其面值的YTM"
+         },
+         {
+          "name": "coupon rate = YTM = par rate",
+          "f": 1
+         },
+         {
+          "name": "Bootstrapping",
+          "children": [
+           {
+            "name": "通过Par rate, 求解Spot rate"
+           },
+           {
+            "name": "后期用于构建二叉树计算benchmark curve"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "YTM",
+        "children": [
+         {
+          "name": "Relationship with spot curve",
+          "children": [
+           {
+            "name": "YTM相当于spot rate的平均值"
+           }
+          ]
+         },
+         {
+          "name": "一般来说，YTM不是债券的期望回报率",
+          "children": [
+           {
+            "name": "1. Interest rate is volatile"
+           },
+           {
+            "name": "2. Yield curve is generally upward or downward sloping"
+           },
+           {
+            "name": "3. There is significant risk of default"
+           },
+           {
+            "name": "4. Bond may have embeded options"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Swap rate",
+        "children": [
+         {
+          "name": "Swap curve作用",
+          "children": [
+           {
+            "name": "Par Swap: Vfixed = Vfloater",
+            "f": 1,
+            "children": [
+             {
+              "name": "Swap rate = Par rate",
+              "f": 1
+             }
+            ]
+           },
+           {
+            "name": "Non-par swap, CFA不要求"
+           }
+          ]
+         },
+         {
+          "name": "Swap rate curves & Government spot curves",
+          "children": [
+           {
+            "name": "High liquid market",
+            "children": [
+             {
+              "name": "Reason 1: Significant flexibility and customization in swap contract's design"
+             },
+             {
+              "name": "Reason 2: Most efficient way to hedge interest rate risk"
+             }
+            ]
+           },
+           {
+            "name": "Flexible maturities"
+           },
+           {
+            "name": "More relevant risk measure"
+           },
+           {
+            "name": "Unregulated"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "5 Spreads (公式、风险)",
+      "children": [
+       {
+        "name": "Swap spread",
+        "children": [
+         {
+          "name": "Swap rate - Treasury yield",
+          "f": 1,
+          "children": [
+           {
+            "name": "两者 matching maturity"
+           }
+          ]
+         },
+         {
+          "name": "大型公司 vs 政府",
+          "children": [
+           {
+            "name": "Default risk"
+           },
+           {
+            "name": "Liquidity risk"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "I-spread",
+        "children": [
+         {
+          "name": "Bond rate - Swap rate",
+          "f": 1,
+          "children": [
+           {
+            "name": "两者 matching maturity"
+           }
+          ]
+         },
+         {
+          "name": "一般公司 vs 大型公司",
+          "children": [
+           {
+            "name": "Default risk"
+           },
+           {
+            "name": "Liquidity risk"
+           }
+          ]
+         },
+         {
+          "name": "用 Linear interpolated 来构建 swap curve",
+          "children": [
+           {
+            "name": "缺点：Downward gap"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Z-spread",
+        "children": [
+         {
+          "name": "Constant basis point spread"
+         },
+         {
+          "name": "More accurate than I spread and Swap spread"
+         },
+         {
+          "name": "Zero interest rate volatility assumption",
+          "children": [
+           {
+            "name": "Not appropriate for embedded option bond"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "TED spread",
+        "children": [
+         {
+          "name": "Libor - T bill rate",
+          "f": 1,
+          "children": [
+           {
+            "name": "两者 matching maturity"
+           },
+           {
+            "name": "the secured overnight financing rate (SOFR)"
+           }
+          ]
+         },
+         {
+          "name": "大型商业银行 vs 美联储",
+          "children": [
+           {
+            "name": "Risk in the banking system",
+            "children": [
+             {
+              "name": "LIBOR不是无风险的，其代表离岸美元的利率，体现银行体系的融资成本"
+             },
+             {
+              "name": "T-bill是无风险的，代表在岸美元的利率，体现美国政府的融资成本"
+             },
+             {
+              "name": "差值TED Spread代表银行的信用风险（银行间贷款违约的风险概率）"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "LIBOR-OIS spread",
+        "children": [
+         {
+          "name": "Libor - OIS",
+          "f": 1,
+          "children": [
+           {
+            "name": "OIS是一种互换利率，其中互换的定期浮动利率等于支付期间每一天的隔夜利率（或隔夜指数利率）的几何平均值"
+           },
+           {
+            "name": "an indicator of the risk and liquidity of money market securities"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Traditional term structure theory",
+      "children": [
+       {
+        "name": "Pure (unbiased) expectations theory",
+        "children": [
+         {
+          "name": "长期利率等于预期未来短期利率的几何平均值"
+         },
+         {
+          "name": "The forward rate is an unbiased predictor of the future spot rate"
+         },
+         {
+          "name": "Shortcomings: fail to consider the riskiness of bond investing"
+         }
+        ]
+       },
+       {
+        "name": "Local expectation theory",
+        "children": [
+         {
+          "name": "仅保留了短期债券投资的风险中性假设"
+         }
+        ]
+       },
+       {
+        "name": "Liquidity preference theory",
+        "children": [
+         {
+          "name": "纯预期理论的改良",
+          "children": [
+           {
+            "name": "liquidity premium exists"
+           },
+           {
+            "name": "可以解释收益曲率线向上倾斜的形状"
+           }
+          ]
+         },
+         {
+          "name": "Incomplete explanation",
+          "children": [
+           {
+            "name": "The existence of liquidity premiums implies that the yield curve will typically be upward sloping"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Segmented market theory",
+        "children": [
+         {
+          "name": "independently segmented market"
+         }
+        ]
+       },
+       {
+        "name": "Preferred habitat theory",
+        "children": [
+         {
+          "name": "对特定到期期限具有强烈的偏好"
+         },
+         {
+          "name": "足够多的风险溢价，能改变投资偏好"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Managing yield curve risks",
+      "children": [
+       {
+        "name": "Parallel/Non-parallel",
+        "children": [
+         {
+          "name": "Effective duration"
+         },
+         {
+          "name": "Key rate duration"
+         }
+        ]
+       },
+       {
+        "name": "Factor model",
+        "children": [
+         {
+          "name": "判断Level、steepness、curvature"
+         },
+         {
+          "name": "Decompose yield curve movement"
+         }
+        ]
+       },
+       {
+        "name": "Term structure of interest rate volatilities"
+       }
+      ]
+     },
+     {
+      "name": "Developing interest rate views using macroeconomic variables",
+      "children": [
+       {
+        "name": "Inflation",
+        "children": [
+         {
+          "name": "Research shows that inflation explains one-third of short and medium term bond yield variation, and explain two-thirds of long term yield variation"
+         }
+        ]
+       },
+       {
+        "name": "Economic growth",
+        "children": [
+         {
+          "name": "Economic growth forecasts impact long-term rate. Increased economic activity would raise long-term bond yield"
+         }
+        ]
+       },
+       {
+        "name": "Monetary policy",
+        "children": [
+         {
+          "name": "During economic expansions, monetary authorities raise benchmark rates to help control inflation"
+         },
+         {
+          "name": "During economic recessions or anticipated recessions, the monetary authority cuts benchmark rates to help stimulate economic activity"
+         }
+        ]
+       },
+       {
+        "name": "Fiscal policy",
+        "children": [
+         {
+          "name": "Fiscal supply-side effects affect bond prices and yields by increasing (decreasing) yields when budget deficits rise (fall)"
+         }
+        ]
+       },
+       {
+        "name": "Maturity structure of debt",
+        "children": [
+         {
+          "name": "Longer government debt maturity structures predict greater excess bond returns"
+         }
+        ]
+       },
+       {
+        "name": "Investor demand",
+        "children": [
+         {
+          "name": "A flight to quality is often associated with bullish flattening"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "The Arbitrage-Free Valuation Framework",
+    "children": [
+     {
+      "name": "The meaning of arbitrage-free",
+      "children": [
+       {
+        "name": "Law of one price"
+       },
+       {
+        "name": "Arbitrage opportunities",
+        "children": [
+         {
+          "name": "Value additivity",
+          "children": [
+           {
+            "name": "Implications: Stripping & Reconstitution"
+           }
+          ]
+         },
+         {
+          "name": "Dominance"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Interest rate trees and arbitrage-free valuation",
+      "children": [
+       {
+        "name": "Binomial interest rate tree construction",
+        "children": [
+         {
+          "name": "Step 1: Assumption (4)",
+          "children": [
+           {
+            "name": "Interest rate model: lognormal random walk"
+           },
+           {
+            "name": "Equal probability"
+           },
+           {
+            "name": "Assumed volatility of theone-year rate"
+           },
+           {
+            "name": "Benchmark curve"
+           }
+          ]
+         },
+         {
+          "name": "Step 2: Calculate mid forward rate"
+         },
+         {
+          "name": "Step 3: Calculate other one-year forward rate"
+         },
+         {
+          "name": "Step 4: Calibrate, match market price"
+         }
+        ]
+       },
+       {
+        "name": "利率二叉树重要特征",
+        "children": [
+         {
+          "name": "N期二叉树，用于给N+1年的债券定价"
+         },
+         {
+          "name": "每一时段的利率水平都是在期初确定好的，用于给当期期末的现金流进行折现"
+         },
+         {
+          "name": "不同时段的利率是独立的，但在同一时段内，利率之间是可以相互推导的"
+         }
+        ]
+       },
+       {
+        "name": "Option-free bond valuation",
+        "children": [
+         {
+          "name": "在使用利率二叉树估值时，其顺序是是从后向前一期一期进行折现，向前折现时，要考虑每个时间点的现金流（coupon），这点非常容易忘记"
+         }
+        ]
+       },
+       {
+        "name": "Pathwise valuation",
+        "children": [
+         {
+          "name": "对于一个有n期的利率二叉树，将会有2^n条路径"
+         },
+         {
+          "name": "估值步骤",
+          "children": [
+           {
+            "name": "确认二叉树有几条路径"
+           },
+           {
+            "name": "分别计算每条路径在0时点的债券估值"
+           },
+           {
+            "name": "所有路径求数学平均值，即为债券的最终估值"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Monte Carlo simulation model",
+      "children": [
+       {
+        "name": "Characteristics",
+        "children": [
+         {
+          "name": "Increasing the number of paths increases the accuracy of the estimate in a statistical sense. It does not mean the model is closer to the true fundamental value of the security"
+         }
+        ]
+       },
+       {
+        "name": "适合有路径依赖的证券估值",
+        "children": [
+         {
+          "name": "MBS"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Term structure models",
+      "children": [
+       {
+        "name": "Equilibrium term structure model",
+        "children": [
+         {
+          "name": "理论基础",
+          "children": [
+           {
+            "name": "假设：资金市场处于资金需求等于资金供给的完美状态",
+            "children": [
+             {
+              "name": "在均衡条件下，使用基本经济变量（一个或多个）describe term structure"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "基本思想",
+          "children": [
+           {
+            "name": "主要从定量的角度研究，如何得出∆r，通常∆r由两个部分影响",
+            "children": [
+             {
+              "name": "1．趋势项（与时间相关）"
+             },
+             {
+              "name": "2．随机扰动项（符合某个分布的随机变量）"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "应用",
+          "children": [
+           {
+            "name": "Single factor model",
+            "children": [
+             {
+              "name": "CIR model"
+             },
+             {
+              "name": "Vasicek model"
+             },
+             {
+              "name": "相同：确定性部分a(b-r)dt,确保利率向长期（平均）利率均值复归，而调整速度则由严格的正参数a决定。"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Arbitrage-free model",
+        "children": [
+         {
+          "name": "基本思想",
+          "children": [
+           {
+            "name": "假设参考集定价正确"
+           },
+           {
+            "name": "模型计算出的参考集的理论价格与其市场价格相等"
+           },
+           {
+            "name": "相对于均衡模型的优势：匹配当前市场价格"
+           }
+          ]
+         },
+         {
+          "name": "Ho-Lee Model"
+         },
+         {
+          "name": "Kalotay–Williams–Fabozzi (KWF) model",
+          "children": [
+           {
+            "name": "KWF model is analogous to the Ho–Lee model in that it assumes constant drift, no mean reversion, and constant volatility"
+           },
+           {
+            "name": "However, the stochastic differential equation describes the dynamics of the log of the short rate, and as a result, the log of the short rate is distributed normally, meaning the short rate itself is distributed lognormally"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Valuation and Analysis: Bonds with Embedded Options",
+    "children": [
+     {
+      "name": "Embedded options",
+      "children": [
+       {
+        "name": "Option styles",
+        "children": [
+         {
+          "name": "European style",
+          "children": [
+           {
+            "name": "只能在锁定期后的某一天内行使"
+           }
+          ]
+         },
+         {
+          "name": "American style",
+          "children": [
+           {
+            "name": "锁定期后可以随时行使期权"
+           }
+          ]
+         },
+         {
+          "name": "Bermudan style",
+          "children": [
+           {
+            "name": "在锁定期后的一系列固定日期行使"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Simple options",
+        "children": [
+         {
+          "name": "Callable bond"
+         },
+         {
+          "name": "Putable bond"
+         },
+         {
+          "name": "Extendible bond",
+          "children": [
+           {
+            "name": "可展期1年的2年期可展期债券，相当于3年期，锁定期2年的可回售债券"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Complex options",
+        "children": [
+         {
+          "name": "Estate put",
+          "children": [
+           {
+            "name": "The value of the estate put depends on the bondholder's life expectancy"
+           },
+           {
+            "name": "预期寿命越短，遗产回售期权的价值就越大"
+           },
+           {
+            "name": "如果债券持有人的寿命比债券的期限还长，则嵌入的期权将没有价值"
+           }
+          ]
+         },
+         {
+          "name": "Sinking fund bonds",
+          "children": [
+           {
+            "name": "set aside funds over time to retire the bond issue"
+           },
+           {
+            "name": "reducing credit risk"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Valuation",
+      "children": [
+       {
+        "name": "Valuation of callable or putable bond"
+       },
+       {
+        "name": "Valuation of call or put option"
+       },
+       {
+        "name": "Effect of volatility on the valuation"
+       },
+       {
+        "name": "OAS",
+        "children": [
+         {
+          "name": "Build 二叉树",
+          "children": [
+           {
+            "name": "Add on all nodes in the tree"
+           }
+          ]
+         },
+         {
+          "name": "Application - relative valuation",
+          "children": [
+           {
+            "name": "Lower than required OAS, overpriced"
+           },
+           {
+            "name": "Higher than required OAS, underpriced"
+           },
+           {
+            "name": "For option-free bond，OAS = Z-spread"
+           },
+           {
+            "name": "Callable bond: Z-spread > OAS",
+            "children": [
+             {
+              "name": "OAS = Z-spread – Vcall",
+              "f": 1
+             }
+            ]
+           },
+           {
+            "name": "Putable bond: Z-spread < OAS",
+            "children": [
+             {
+              "name": "OAS = Z-spread + Vput",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Effect of interest rate volatility on OAS",
+          "children": [
+           {
+            "name": "Callable: 当波动率上升时Vcall价值上升，而Z-spread不受利率波动的影响，因此OAS将下降"
+           },
+           {
+            "name": "Putbale: 当波动率上升时，Vput价值上升，而Z-spread不受利率波动的影响，因此OAS将上升"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Interest rate risk",
+      "children": [
+       {
+        "name": "Effect of interest rate level change",
+        "children": [
+         {
+          "name": "callable bond在利率下降时，具有负凸性"
+         },
+         {
+          "name": "putable bond在利率上升时，具有更凸性"
+         }
+        ]
+       },
+       {
+        "name": "Effect of yield curve shape change",
+        "children": [
+         {
+          "name": "Callable",
+          "children": [
+           {
+            "name": "Interest rate decline",
+            "children": [
+             {
+              "name": "callable bond行权的可能性上升，call option价值上升"
+             }
+            ]
+           },
+           {
+            "name": "upward sloping yield curve",
+            "children": [
+             {
+              "name": "future interest rate increase, call option value decrease"
+             }
+            ]
+           },
+           {
+            "name": "Yield curve become flatten",
+            "children": [
+             {
+              "name": "future interest rate decrease, call option value increase"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Putable",
+          "children": [
+           {
+            "name": "Interest rate increase",
+            "children": [
+             {
+              "name": "putable bond行权的可能性上升，put option价值上升"
+             }
+            ]
+           },
+           {
+            "name": "upward-sloping yield curve",
+            "children": [
+             {
+              "name": "future interest rate increase, put option value increase"
+             }
+            ]
+           },
+           {
+            "name": "Yield curve become flatten",
+            "children": [
+             {
+              "name": "future interest rate decrease, put option value decrease"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Effective duration and convexity",
+        "children": [
+         {
+          "name": "使用 binomial model计算",
+          "children": [
+           {
+            "name": "Step 1: Calculate the implied OAS to the benchmark curve"
+           },
+           {
+            "name": "Step 2: Shift the benchmark curve down, generate a new interest rate tree, revalue the bond"
+           },
+           {
+            "name": "Step 3: Shift the banchmark curve up, generate a new interest rate tree, revalue the bond"
+           },
+           {
+            "name": "Step 4: Calculate ED and EC"
+           }
+          ]
+         },
+         {
+          "name": "ED problem",
+          "children": [
+           {
+            "name": "One-sided duration"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Key Rate Duration on option embeded bond",
+        "children": [
+         {
+          "name": "定性结论（3）",
+          "children": [
+           {
+            "name": "Option-free bond",
+            "children": [
+             {
+              "name": "到期日的关键利率久期影响最大"
+             },
+             {
+              "name": "平价债券，到期日的关键利率久期与有效久期相同，其他关键利率久期均为零"
+             },
+             {
+              "name": "关键利率久期有时可能为负值"
+             }
+            ]
+           },
+           {
+            "name": "Callable bond",
+            "children": [
+             {
+              "name": "low coupon rate, maturity-matched rate has highest effect on bond value"
+             },
+             {
+              "name": "Coupon rate increase, time-to-exercise rate has highest effect"
+             }
+            ]
+           },
+           {
+            "name": "Putable bond",
+            "children": [
+             {
+              "name": "high coupon rate, maturity-matched rate has highest effect on bond value"
+             },
+             {
+              "name": "Coupon rate decrease, time-to-exercise rate has highest effect"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Capped floater or floored floater",
+      "children": [
+       {
+        "name": "Valuation",
+        "children": [
+         {
+          "name": "Value of capped floater = Value of straight bond – Value of embedded cap",
+          "f": 1
+         },
+         {
+          "name": "Value of floored floater = Value of straight bond + Value of embedded floor",
+          "f": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Convertible bond",
+      "children": [
+       {
+        "name": "术语",
+        "children": [
+         {
+          "name": "Conversion Price = bond issue price/conversion ratio",
+          "f": 1
+         },
+         {
+          "name": "Market Conversion Price = market price of bond/conversion ratio",
+          "f": 1
+         },
+         {
+          "name": "Conversion value = market price of stock × conversion ratio",
+          "f": 1
+         },
+         {
+          "name": "market conversion premium per share 用可转债投资股票的溢价"
+         },
+         {
+          "name": "Min value = max {conversion value, straight value}",
+          "f": 1
+         }
+        ]
+       },
+       {
+        "name": "Risk-return characteristics of convertible bond"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Credit Analysis Models",
+    "children": [
+     {
+      "name": "Measures of Credit risk",
+      "children": [
+       {
+        "name": "Expected loss",
+        "children": [
+         {
+          "name": "EL=PD× LGD(%) × Expected exposure",
+          "f": 1,
+          "children": [
+           {
+            "name": "Probability of default",
+            "children": [
+             {
+              "name": "Actual vs. Risk-neutral",
+              "children": [
+               {
+                "name": "Risk-neutral prob. higher than actual prob."
+               }
+              ]
+             },
+             {
+              "name": "Hazard rate",
+              "children": [
+               {
+                "name": "Conditional probability"
+               }
+              ]
+             },
+             {
+              "name": "POD",
+              "children": [
+               {
+                "name": "Joint probability"
+               },
+               {
+                "name": "P（违约|之前没有违约）* P（之前没有违约）"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "LGD (%)=100- recovery rate"
+           },
+           {
+            "name": "Expected exposure",
+            "children": [
+             {
+              "name": "单一利率（YTM）折现"
+             },
+             {
+              "name": "利率二叉树折现（含波动性假设）"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "CVA = the sum of PV of expected loss"
+       },
+       {
+        "name": "Credit spread"
+       }
+      ]
+     },
+     {
+      "name": "Arbitrage-free valuation",
+      "children": [
+       {
+        "name": "分类",
+        "children": [
+         {
+          "name": "Valuing zero coupon bond"
+         },
+         {
+          "name": "Valuing risky fixed-rate bond"
+         },
+         {
+          "name": "Valuing risky floating-rate bond"
+         },
+         {
+          "name": "审题注意：Expected exposure，单一利率折现 or 二叉树折现；Hazard rate，constant or change"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Credit scoring and credit ratings",
+      "children": [
+       {
+        "name": "区别",
+        "children": [
+         {
+          "name": "Credit scores 用于小企业和个人的零售贷款市场"
+         },
+         {
+          "name": "Credit ratings 用于公司和政府实体发行的债券市场，以及资产支持证券（ABS）"
+         }
+        ]
+       },
+       {
+        "name": "缺点",
+        "children": [
+         {
+          "name": "Credit scoring",
+          "children": [
+           {
+            "name": "只能比较信用好坏，不能比较信用好多少"
+           },
+           {
+            "name": "个人经济状况变化，打分模型没有体现"
+           },
+           {
+            "name": "对于不同的贷款，违约的概率是不同的"
+           }
+          ]
+         },
+         {
+          "name": "Credit rating",
+          "children": [
+           {
+            "name": "信用评级的稳定性以牺牲违约概率的相关性为代价"
+           },
+           {
+            "name": "没有根据商业周期调整违约概率"
+           },
+           {
+            "name": "评级机构的收入是发行人支付的，可能存在利益冲突"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Notching"
+       }
+      ]
+     },
+     {
+      "name": "Credit transition matrix",
+      "children": [
+       {
+        "name": "Reduces the expected return",
+        "children": [
+         {
+          "name": "Probabilities for change are not symmetrically distributed around the current rating"
+         },
+         {
+          "name": "The increase in the credit spread is much larger for downgrades"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Models for credit risk",
+      "children": [
+       {
+        "name": "对比",
+        "children": [
+         {
+          "name": "Structural model analysis",
+          "children": [
+           {
+            "name": "Option analogy公式",
+            "children": [
+             {
+              "name": "Debt = asset - call on asset"
+             },
+             {
+              "name": "Debt = risk-free debt - put on asset"
+             }
+            ]
+           },
+           {
+            "name": "假设条件",
+            "children": [
+             {
+              "name": "公司的资产在无套利的无摩擦市场上交易（现实中并非如此）"
+             },
+             {
+              "name": "（公司有一个简单的B/S表）债务是在T时点到期的零息债"
+             },
+             {
+              "name": "结构模型的违约概率是内生的变量"
+             }
+            ]
+           },
+           {
+            "name": "优点",
+            "children": [
+             {
+              "name": "提供了违约的经济原理（A_T-K），并解释了为什么会发生违约"
+             },
+             {
+              "name": "利用期权定价模型对风险债务进行估值"
+             }
+            ]
+           },
+           {
+            "name": "缺点",
+            "children": [
+             {
+              "name": "Assumptions of simple balance sheet and traded assets are not realistic"
+             },
+             {
+              "name": "Limitations in available data"
+             },
+             {
+              "name": "Not explicitly consider the business cycle"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Reduced form model analysis",
+          "children": [
+           {
+            "name": "假设条件",
+            "children": [
+             {
+              "name": "违约视为随机发生的外生（外部）变量"
+             }
+            ]
+           },
+           {
+            "name": "优点",
+            "children": [
+             {
+              "name": "The inputs are observable variables,"
+             },
+             {
+              "name": "Directly reflect the business cycle in the credit risk measure"
+             }
+            ]
+           },
+           {
+            "name": "缺点",
+            "children": [
+             {
+              "name": "Not explain the economic reasons for default"
+             },
+             {
+              "name": "简化模型假设违约是一个“惊喜”（违约是意外发生的随机事件），可以在任何时候发生。实际上，违约很少令人意外（违约事件的发生通常有背后的经济原因，违约事件发生前通常都会有一定的迹象），因为发行机构通常在最终事件（违约）发生前已多次被降级"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Interpreting changes in credit spread",
+      "children": [
+       {
+        "name": "Probability of default",
+        "children": [
+         {
+          "name": "Positively correlated with credit spread"
+         }
+        ]
+       },
+       {
+        "name": "Recovery rate",
+        "children": [
+         {
+          "name": "Negatively correlated with credit spread"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Term structure of credit spreads",
+      "children": [
+       {
+        "name": "主要推动因素（4）",
+        "children": [
+         {
+          "name": "Credit quality"
+         },
+         {
+          "name": "Financial conditions"
+         },
+         {
+          "name": "Market supply and demand dynamics"
+         },
+         {
+          "name": "Company-value model results"
+         }
+        ]
+       },
+       {
+        "name": "Two further considerations",
+        "children": [
+         {
+          "name": "Appropriate risk-free or benchmark rates"
+         },
+         {
+          "name": "Similar credit characteristics"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Credit analysis for securitized debt",
+      "children": [
+       {
+        "name": "Asset pool characteristics",
+        "children": [
+         {
+          "name": "Concentration",
+          "children": [
+           {
+            "name": "Granularity"
+           }
+          ]
+         },
+         {
+          "name": "Similarity"
+         }
+        ]
+       },
+       {
+        "name": "Servicer quality"
+       },
+       {
+        "name": "Structure of secured debt",
+        "children": [
+         {
+          "name": "SPE"
+         },
+         {
+          "name": "Credit enhancement"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Credit Default Swaps",
+    "children": [
+     {
+      "name": "CDS",
+      "children": [
+       {
+        "name": "CDS 术语",
+        "children": [
+         {
+          "name": "reference obligation"
+         },
+         {
+          "name": "reference entity"
+         },
+         {
+          "name": "CDS spread"
+         },
+         {
+          "name": "fixed coupon"
+         }
+        ]
+       },
+       {
+        "name": "The credit protection buyer is short and the credit protection seller is long",
+        "children": [
+         {
+          "name": "CDS买方是信用质量的空头，因为信用质量下降时，标的债券价格下跌，CDS买方将会受益，因此CDS对于多头和空头的定义与传统投资品相反"
+         }
+        ]
+       },
+       {
+        "name": "Types of CDS",
+        "children": [
+         {
+          "name": "Single-name CDS"
+         },
+         {
+          "name": "Index CDS",
+          "children": [
+           {
+            "name": "Higher credit correlation, more costly"
+           },
+           {
+            "name": "the protection for each issuer is equal"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "结算方式",
+      "children": [
+       {
+        "name": "Physical settlement",
+        "children": [
+         {
+          "name": "Cheapest-to-deliver"
+         }
+        ]
+       },
+       {
+        "name": "Cash settlement"
+       },
+       {
+        "name": "Common types of credit events",
+        "children": [
+         {
+          "name": "Bankruptcy"
+         },
+         {
+          "name": "Failure to pay"
+         },
+         {
+          "name": "Restructuring",
+          "children": [
+           {
+            "name": "In US , not consider as a credit event"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Market price of CDS",
+      "children": [
+       {
+        "name": "Pricing",
+        "children": [
+         {
+          "name": "Premium leg"
+         },
+         {
+          "name": "Protection leg"
+         },
+         {
+          "name": "Upfront premium = PV of protection leg - PV of premium leg",
+          "f": 1
+         },
+         {
+          "name": "Upfront premium ≈ (Credit spread - Fixed coupon) × Duration",
+          "f": 1,
+          "children": [
+           {
+            "name": "Duration: of underlying bond"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Valuation",
+        "children": [
+         {
+          "name": "% change = Change in spread × Duration",
+          "f": 1
+         },
+         {
+          "name": "Termination to monetizing gain or loss"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Applications of CDS",
+      "children": [
+       {
+        "name": "Naked CDS"
+       },
+       {
+        "name": "Long/short trade"
+       },
+       {
+        "name": "Curve trade"
+       },
+       {
+        "name": "Basis trade"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
