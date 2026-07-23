@@ -1,0 +1,295 @@
+{
+ "topic": "Equity",
+ "tree": {
+  "name": "Equity",
+  "children": [
+   {
+    "name": "Private Company Valuation",
+    "children": [
+     {
+      "name": "Private vs public companies",
+      "children": [
+       {
+        "name": "Public Versus Private Company Features",
+        "children": [
+         {
+          "name": "Company-Specific Factors",
+          "children": [
+           {
+            "name": "Life-cycle stage"
+           },
+           {
+            "name": "Smaller Size"
+           },
+           {
+            "name": "Concentrated Ownership"
+           },
+           {
+            "name": "Quality and depth of management"
+           },
+           {
+            "name": "Owner/Manager Overlap"
+           },
+           {
+            "name": "Limited Disclosures"
+           }
+          ]
+         },
+         {
+          "name": "Stock-specific factors",
+          "children": [
+           {
+            "name": "Illiquidity"
+           },
+           {
+            "name": "Concentration of control"
+           },
+           {
+            "name": "Sale Restrictions"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Uses of Private Company Valuation",
+      "children": [
+       {
+        "name": "Transaction-related valuations",
+        "children": [
+         {
+          "name": "Venture capital financing (early stage)"
+         },
+         {
+          "name": "Private equity financing (growth or buyout stage)"
+         },
+         {
+          "name": "IPO"
+         },
+         {
+          "name": "Debt financing"
+         },
+         {
+          "name": "Acquisitions and divestitures"
+         },
+         {
+          "name": "Bankruptcy"
+         }
+        ]
+       },
+       {
+        "name": "Compliance-related valuation",
+        "children": [
+         {
+          "name": "Share-based incentive compensation"
+         },
+         {
+          "name": "Financial reporting"
+         },
+         {
+          "name": "Tax purposes"
+         }
+        ]
+       },
+       {
+        "name": "Litigation-related valuation"
+       }
+      ]
+     },
+     {
+      "name": "Private Company Valuation Areas of Focus",
+      "children": [
+       {
+        "name": "Three key areas related to private company valuation",
+        "children": [
+         {
+          "name": "Normalized Earnings",
+          "children": [
+           {
+            "name": "Economic benefits adjusted for nonrecurring, non-economic, ongoing anomalies which prevent direct comparisons to publicly owned entities."
+           }
+          ]
+         },
+         {
+          "name": "Estimating Cash Flow",
+          "children": [
+           {
+            "name": "The assumptions included in cash flow estimates may differ if a small minority equity interest is appraised rather than the total equity of a business"
+           },
+           {
+            "name": "Many development stage companies and some mature companies are subject to significant uncertainties regarding future operations and cash flows. One possible solution involves projecting the different possible future scenarios"
+           },
+           {
+            "name": "Appraiser should be aware of potential managerial biases"
+           },
+           {
+            "name": "Some analysts believe that FCFF valuation is practically more robust than FCFE valuation when substantial capital structure changes are in view"
+           }
+          ]
+         },
+         {
+          "name": "Estimating The Discount Rate For Private",
+          "children": [
+           {
+            "name": "Estimating the discount rate",
+            "children": [
+             {
+              "name": "Required Rate of Return Models"
+             },
+             {
+              "name": "Size premium"
+             },
+             {
+              "name": "Availability and cost of debt"
+             },
+             {
+              "name": "Acquirer versus target"
+             },
+             {
+              "name": "Projection risk"
+             },
+             {
+              "name": "Lifecycle stage"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Discounts and Premiums",
+        "children": [
+         {
+          "name": "DLOC"
+         },
+         {
+          "name": "DLOM"
+         },
+         {
+          "name": "Total discount"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Private Company Valuation Approaches",
+      "children": [
+       {
+        "name": "Income Approach",
+        "children": [
+         {
+          "name": "Free cash flow method"
+         },
+         {
+          "name": "Capitalized cash flow method"
+         },
+         {
+          "name": "Excess earnings method",
+          "children": [
+           {
+            "name": "Total Capital = Working Capital + Fixed Assets + Intangible Assets",
+            "f": 1
+           },
+           {
+            "name": "Total Capital – Debt = Value of equity",
+            "f": 1
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Market Approach",
+        "children": [
+         {
+          "name": "Guideline public company method",
+          "children": [
+           {
+            "name": "In private company valuation as has been noted, valuation based on multiples of similar public companies is often referred to as the guideline public company method (GPCM)"
+           },
+           {
+            "name": "Adjust for the differences in leverage between private companies and comparable public companies.",
+            "children": [
+             {
+              "name": "Step 1: “unlever” observed public company beta"
+             },
+             {
+              "name": "Step 2: derive a levered beta"
+             }
+            ]
+           },
+           {
+            "name": "To estimate a control premium",
+            "children": [
+             {
+              "name": "Type of transactionType of transaction: compared with financial transactions, control premiums for an acquisition by a strategic buyer are typically larger"
+             },
+             {
+              "name": "Industry factorsIndustry factors: pricing of public companies in the sector may reflect some part of a possible control premium in the share prices"
+             },
+             {
+              "name": "Type of considerationType of consideration: transactions involving the exchange of significant amounts of stock might be less relevant as a basis of measuring a control premium because of the possibility that acquiring companies time such transactions during periods when their management perceives that shares of their company are overvalued in the marketplace"
+             },
+             {
+              "name": "The multiple resulting from applying a control premium to pricing multiples from publicly-traded companies should be assessed for reasonableness"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Guideline transactions method",
+          "children": [
+           {
+            "name": "The GTM uses pricing multiples derived from acquisitions of public or private companies. Transaction multiples would be the most relevant evidence for valuation of a controlling interest in a private company"
+           },
+           {
+            "name": "A number of factors need to be considered in assessing transaction-based pricing multiples",
+            "children": [
+             {
+              "name": "Synergies: the pricing of strategic acquisitions may include payment for anticipated synergies"
+             },
+             {
+              "name": "Contingent consideration: contingent consideration represents potential future payments to the seller that are contingent on the achievement of certain agreed on occurrences"
+             },
+             {
+              "name": "Non-cash consideration: acquisitions may include stock in the consideration. The cash equivalent value of a large block of stock may create uncertainty regarding the transaction price"
+             },
+             {
+              "name": "Availability of transactions: Meaningful transactions for a specific private company may be limited. The relevance of pricing indications from a historical transaction may be challenged given any significant changes to the company, industry, or economy over the period."
+             },
+             {
+              "name": "Changes between transaction date and valuation date: Changes in market conditions could result in different risk and growth expectations, requiring an adjustment to the pricing multiple."
+             },
+             {
+              "name": "Differences in company size, country, tax status, and leverage may also be relevant."
+             }
+            ]
+           },
+           {
+            "name": "Prior transation method"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Asset-based Approach",
+        "children": [
+         {
+          "name": "V equity = FV asset – FV liability（没有考虑公司的增长，适合破产清算时估值）",
+          "f": 1
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

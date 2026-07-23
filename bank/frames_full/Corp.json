@@ -1,0 +1,498 @@
+{
+ "topic": "Corp",
+ "tree": {
+  "name": "Corp",
+  "children": [
+   {
+    "name": "LM1 Analysis of Dividends and Share Repurchases",
+    "children": [
+     {
+      "name": "Dividends: forms and effects on shareholder wealth and issuing Company’s Financial Ratios",
+      "children": [
+       {
+        "name": "Cash dividends",
+        "children": [
+         {
+          "name": "Regular cash dividends",
+          "children": [
+           {
+            "name": "Many companies choose to distribute cash to their shareholders on a regular schedule. Most companies that pay cash dividends strive to maintain or increase their dividends"
+           }
+          ]
+         },
+         {
+          "name": "Extra or special (irregular) dividends",
+          "children": [
+           {
+            "name": "An extra dividend or special dividend is a dividend paid by a company that does not pay dividends on a regular schedule or a dividend that supplements regular cash dividends with an extra payment"
+           }
+          ]
+         },
+         {
+          "name": "Liquidating dividends",
+          "children": [
+           {
+            "name": "Goes out of business and the net assets of the company (after all liabilities have been paid) are distributed to shareholders"
+           }
+          ]
+         },
+         {
+          "name": "The effect on shareholders’ wealth and financial ratios",
+          "children": [
+           {
+            "name": "Reduces both the value of the company’s assets and the market value of equity (by reducing retained earnings)"
+           },
+           {
+            "name": "No effect on shareholder wealth"
+           },
+           {
+            "name": "Liquidity ratio such as the cash ratio and current ratio decreases"
+           },
+           {
+            "name": "Financial leverage ratios such as debt-to-equity ratio and debt-to-asset ratios increases"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Stock Dividends",
+        "children": [
+         {
+          "name": "With a stock dividend (also known as a bonus issue of shares), the company distributes additional shares (typically 2-10% of the shares then outstanding) of its common stock to shareholders instead of cash"
+         },
+         {
+          "name": "The effect on shareholders’ wealth and financial ratios",
+          "children": [
+           {
+            "name": "No effect on shareholders’ wealth, asset and equity"
+           },
+           {
+            "name": "Retained earnings are reduced by the value of stock dividends paid, contributed capital increases by the same amount"
+           },
+           {
+            "name": "The number of shares outstanding increases"
+           },
+           {
+            "name": "Price decreases, EPS decreases, P/E constant"
+           },
+           {
+            "name": "Stock dividends have no effect on liquidity ratios (cash ratios, current ratios) and financial leverage ratios (D/E, D/A)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Stock Splits",
+        "children": [
+         {
+          "name": "If a company announces a two-for-one stock split, each shareholder will be issued an additional share for each share currently owned. Thus, a shareholder will have twice as many shares after the split as before the split."
+         },
+         {
+          "name": "The effect on shareholders’ wealth and financial ratios",
+          "children": [
+           {
+            "name": "No effect on the market value of the shareholders’ wealth and total shareholders’ equity"
+           },
+           {
+            "name": "The numbers of shares outstanding increases, price decreases, EPS decreases"
+           },
+           {
+            "name": "Have no effect on liquidity ratios and financial ratios"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Reverse stock split",
+        "children": [
+         {
+          "name": "A reverse stock split increases the share prices and reduces the number of shares outstanding, with no effect on the market value of a company’s equity or on shareholders’ total cost basis"
+         },
+         {
+          "name": "The effect on shareholders’ wealth and financial ratios",
+          "children": [
+           {
+            "name": "Increase the share price"
+           },
+           {
+            "name": "Reduce the number of shares outstanding"
+           },
+           {
+            "name": "No effect on the market value of the firm’s equity or on shareholders’ total cost basis"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Dividend policy and company value: theory",
+      "children": [
+       {
+        "name": "Dividend policy does not matter",
+        "children": [
+         {
+          "name": "under perfect capital market assumptions—a company’s dividend policy should have no impact on its cost of capital or on shareholder wealth"
+         }
+        ]
+       },
+       {
+        "name": "Dividend policy matters: the bird in the hand argument",
+        "children": [
+         {
+          "name": "even under perfect capital markets assumptions, investors prefer a dollar of dividends to a dollar of potential capital gains from reinvesting earnings because they view dividends as less risky"
+         }
+        ]
+       },
+       {
+        "name": "Dividend policy matters: The tax argument",
+        "children": [
+         {
+          "name": "The investors prefer the way that incur lower tax"
+         },
+         {
+          "name": "Dividends are taxed at higher rates than capital gains"
+         },
+         {
+          "name": "Taken to its extreme, this argument would advocate a zero payout ratio"
+         }
+        ]
+       },
+       {
+        "name": "Other theoretical issues",
+        "children": [
+         {
+          "name": "The information content of dividend actions: signaling",
+          "children": [
+           {
+            "name": "信号理论，投资者试图通过股利政策去解读公司的内在情况，投资者的解读会影响股价，通常公司分红是positive signal，说明公司对未来有信心，但另一个角度，分红说明公司已经没有好的投资机会"
+           }
+          ]
+         },
+         {
+          "name": "Agency costs and dividends as a mechanism to control them",
+          "children": [
+           {
+            "name": "代理人问题，探讨股东和管理层之间，以及股东和债券人之间的利益冲突"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Factors affecting dividend policy in practice",
+      "children": [
+       {
+        "name": "Investment Opportunities",
+        "children": [
+         {
+          "name": "More profitable investment opportunity, less cash dividend"
+         }
+        ]
+       },
+       {
+        "name": "The Expected Volatility of Future Earnings",
+        "children": [
+         {
+          "name": "The more volatile earnings are, the greater the risk that a given dividend increase may not be covered by earnings in a future time period"
+         }
+        ]
+       },
+       {
+        "name": "Financial Flexibility",
+        "children": [
+         {
+          "name": "When increasing financial flexibility is an important concern, a company may decide to distribute money to shareholders primarily by means of share repurchases rather than regular dividends"
+         }
+        ]
+       },
+       {
+        "name": "Flotation Costs",
+        "children": [
+         {
+          "name": "Flotation costs make it more expensive for companies to raise new equity capital than to use their own internally generated funds"
+         }
+        ]
+       },
+       {
+        "name": "Contractual and Legal Restrictions",
+        "children": [
+         {
+          "name": "Impairment of capital rule: dividend paid < retained earnings"
+         },
+         {
+          "name": "Debt covenants: a response to the agency problems that exist between shareholders and bondholders and are put in place to limit the ability of the shareholders to expropriate wealth from bondholders"
+         }
+        ]
+       },
+       {
+        "name": "Tax Considerations",
+        "children": [
+         {
+          "name": "Double-taxation",
+          "children": [
+           {
+            "name": "Effective tax rate = corporate tax rate + (1 - corporate tax rate) × (individual tax rate)",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "Split-tax rate system",
+          "children": [
+           {
+            "name": "公司的NI，先分离成R/E和股利两部分，再根据不同的税率进行课税（通常股利的税率低于R/E的税率）"
+           }
+          ]
+         },
+         {
+          "name": "Tax-imputation system",
+          "children": [
+           {
+            "name": "有效税率 = 个人边际税率，即以个人边际税率为基准，公司的所得税在此基础之上多退少补"
+           }
+          ]
+         },
+         {
+          "name": "Dividends or capital gains",
+          "children": [
+           {
+            "name": "All other things being equal, one could expect that the lower an investor’s tax rate on dividends relative to his or her tax rate on capital gains, the stronger the investor’s preference for dividends"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Payout policies",
+      "children": [
+       {
+        "name": "Stable Dividend Policy",
+        "children": [
+         {
+          "name": "Regular dividends are paid that generally do not reflect short-term volatility in earnings"
+         },
+         {
+          "name": "Target payout adjustment model",
+          "children": [
+           {
+            "name": "Expected dividend = Last dividend + (Expected earnings×Target payout ratio - Previous dividend) ×Adjustment factor",
+            "f": 1
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Constant Dividend Payout Ratio Policy",
+        "children": [
+         {
+          "name": "In this type of policy, a dividend payout ratio decided on by the company is applied to current earnings to calculate the dividend"
+         }
+        ]
+       },
+       {
+        "name": "Global Trends in Payout Policy",
+        "children": [
+         {
+          "name": "相对来说回购比现金股利好，因此美国公司更倾向于回购"
+         },
+         {
+          "name": "在大多数发达市场，长期来看现金股利呈现下降状态，即全球趋势是现金股利越来越少"
+         },
+         {
+          "name": "美国自20世纪80年代初，英国和欧洲大陆自90年代初，参与回购的公司比例呈现上升趋势"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Share repurchases",
+      "children": [
+       {
+        "name": "Overview",
+        "children": [
+         {
+          "name": "Share repurchase: a share repurchase is a transaction in which a company buys back its own shares"
+         },
+         {
+          "name": "Treasury shares: shares that have been issued and subsequently repurchased are classified as treasury shares if they may be reissued or canceled shares if they will be retired; in either case, they are not then considered for dividends, voting, or computing earnings per share."
+         }
+        ]
+       },
+       {
+        "name": "Share repurchase methods",
+        "children": [
+         {
+          "name": "Buy in the open market",
+          "children": [
+           {
+            "name": "在公开市场中回购"
+           }
+          ]
+         },
+         {
+          "name": "Buy back a fixed number of shares at a fixed price",
+          "children": [
+           {
+            "name": "按约固定价值回购固定数量的股票"
+           }
+          ]
+         },
+         {
+          "name": "Dutch auction",
+          "children": [
+           {
+            "name": "荷兰式拍卖，通过对现有股东的要约收购，公司规定了可接受的价格区间"
+           }
+          ]
+         },
+         {
+          "name": "Repurchase by direct negotiation",
+          "children": [
+           {
+            "name": "公司直接与大股东谈判回购其股票"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Financial Statement Effects of Repurchases",
+        "children": [
+         {
+          "name": "Using the company’s surplus cash",
+          "children": [
+           {
+            "name": "B/S",
+            "children": [
+             {
+              "name": "Asset and equity decreases"
+             },
+             {
+              "name": "Leverage ratio (D/E) increases"
+             }
+            ]
+           },
+           {
+            "name": "I/S",
+            "children": [
+             {
+              "name": "Earnings yield < interest income and earnings, EPS decreases"
+             },
+             {
+              "name": "Earnings yield > interest income and earnings, EPS increases"
+             },
+             {
+              "name": "Earnings yield = interest income and earnings, EPS constant"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Using debt to finance the repurchase",
+          "children": [
+           {
+            "name": "B/S",
+            "children": [
+             {
+              "name": "Asset constant, equity decreases"
+             },
+             {
+              "name": "Leverage (D/E) increases"
+             }
+            ]
+           },
+           {
+            "name": "I/S",
+            "children": [
+             {
+              "name": "Earnings yield < after-tax cost of financing the repurchase, EPS decreases"
+             },
+             {
+              "name": "Earnings yield > after-tax cost of financing the repurchase, EPS increases"
+             },
+             {
+              "name": "Earnings yield = after-tax cost of financing the repurchase, EPS constant"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Effects of share repurchase on BVPS",
+          "children": [
+           {
+            "name": "BVPS > market price (repurchase price), BVPS increases"
+           },
+           {
+            "name": "BVPS < market price (repurchase price), BVPS decreases"
+           },
+           {
+            "name": "BVPS = market price (repurchase price), BVPS constant"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Valuation Equivalence of Cash Dividends and Share Repurchases: The Baseline",
+        "children": [
+         {
+          "name": "Share repurchases are equivalent to cash dividends of equal amount in their effect on shareholders’ wealth, all other things being equal"
+         }
+        ]
+       },
+       {
+        "name": "The Dividend versus Share Repurchase Decision",
+        "children": [
+         {
+          "name": "Tax advantages：当TD > TCG时，则回购的方式优于现金股利"
+         },
+         {
+          "name": "Share price support/signaling：回购会对股价形成支撑，传递正面信号"
+         },
+         {
+          "name": "Added flexibility：回购股票的灵活性更好"
+         },
+         {
+          "name": "Offsetting dilution from employee stock options：回购可抵消EPS的稀释"
+         },
+         {
+          "name": "Increase financial leverage：回购会增加财务杠杆"
+         }
+        ]
+       },
+       {
+        "name": "Summary"
+       }
+      ]
+     },
+     {
+      "name": "Analysis of Dividend Safety",
+      "children": [
+       {
+        "name": "Dividend coverage ratio = net income/dividend paid",
+        "f": 1
+       },
+       {
+        "name": "FCFE coverage ratio = FCFE/(dividends + share repurchases)",
+        "f": 1
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
