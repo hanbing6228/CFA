@@ -1,0 +1,3360 @@
+{
+  "cases": [
+    {
+      "id": "FI-mock-jackson",
+      "topic": "FI",
+      "title": "Mark Jackson",
+      "background": "Mark Jackson is a credit portfolio manager. He is reviewing several positions in his portfolio. Jackson holds an A-rated bond issued by Don Vallejo, a large US tequila producer. The bond has a YTM of 1.0% and a modified duration of 4.5. He computes its expected 1-year total return under a credit rating migration scenario based on the 1-year credit transition matrix in Exhibit 1 where, for example, the probability of an AAA-rated bond having an A rating at the end of the year is 3%. He also uses the expected credit spread change of an A-rated bond for each possible credit rating migration, as shown in Exhibit 2. Next, Jackson performs a credit analysis for a commercial ABS collateralized by short-term loans to small US retailers. He notes that the loan pool is granular and homogeneous. Jackson considers three approaches for the credit analysis of the ABS: loan-by-loan, portfolio-based, or statistics-based. Jackson owns $20 million of face value of Bond X, a bond issued by Electric Motors, Incorporated. Jackson recently bought protection using a $20 million notional value CDS on Electric Motors. Two bonds can be delivered to settle the CDS upon a credit event: Bond X and Bond Y. Electric Motors declares bankruptcy, triggering a credit event on the CDS. Upon default, Bond X trades at 40% of its face value and Bond Y trades at 35% of its face value. Jackson expects that the CDS curve of Crispy Chips, Inc., which is currently upward sloping, will flatten in the near term. Crispy Chips CDS contracts have 1-year, 3-year, and 5-year maturities. He considers using one of the following curve strategies to profit from his expectation. He assumes equal absolute notional values for each trade in each strategy. Strategy 1: Sell protection using the 1-year contract and buy protection using the 5-year contract. Strategy 2: Buy protection using the 3-year contract and sell protection using the 5-year contract. Strategy 3: Buy protection using the 1-year contract and sell protection using the 5-year contract.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (1-year credit transition matrix, entries in %)",
+          "table": [
+            [
+              "From/To",
+              "AAA",
+              "AA",
+              "A",
+              "BBB",
+              "BB",
+              "B",
+              "CCC"
+            ],
+            [
+              "AAA",
+              "85",
+              "4",
+              "3",
+              "2",
+              "2",
+              "2",
+              "2"
+            ],
+            [
+              "AA",
+              "5",
+              "83",
+              "4",
+              "3",
+              "3",
+              "1",
+              "1"
+            ],
+            [
+              "A",
+              "2",
+              "3",
+              "88",
+              "2",
+              "2",
+              "2",
+              "1"
+            ],
+            [
+              "BBB",
+              "1",
+              "1",
+              "3",
+              "90",
+              "3",
+              "1",
+              "1"
+            ],
+            [
+              "BB",
+              "1",
+              "1",
+              "3",
+              "4",
+              "85",
+              "4",
+              "2"
+            ],
+            [
+              "B",
+              "0",
+              "0",
+              "1",
+              "2",
+              "3",
+              "87",
+              "7"
+            ],
+            [
+              "CCC",
+              "0",
+              "0",
+              "0",
+              "2",
+              "5",
+              "11",
+              "82"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Expected change in credit spread (in bps) for an A-rated bond by migration",
+          "table": [
+            [
+              "AAA",
+              "AA",
+              "A",
+              "BBB",
+              "BB",
+              "B",
+              "CCC"
+            ],
+            [
+              "-50",
+              "-30",
+              "0",
+              "40",
+              "60",
+              "80",
+              "150"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FSA-mock-romano",
+      "topic": "FSA",
+      "title": "Serrana Romano",
+      "background": "Serrana Romano is a financial analyst reviewing Celeste S.A., a Uruguayan corporation. Celeste reports under IFRS, its reporting currency is the Uruguayan Peso (UYU), and its financial year end is 31 December. Romano uses the following UYU/USD (number of UYU per 1 USD) exchange rate information for the most recent year. On 15 November of the most recent year, Celeste exported goods for USD 5 million to an unaffiliated US customer on credit. The total amount remained outstanding as of 31 December. Salto Corp. and Monte Corp. are two wholly owned subsidiaries of Celeste that are located in the US. There are no intercompany transactions. In both subsidiaries, the only non-monetary assets are inventory and fixed assets, and all liabilities are monetary. Celeste translates Salto’s financial statements using the current rate method. In the most recent year, Salto’s revenue was USD 120 million and cost of sales was USD 65 million. The average exchange rate for inventory purchases was 42.81 UYU/USD. Celeste uses the temporal method to translate Monte’s financial statements. Romano evaluates the effect on Celeste’s total shareholders’ equity if Monte’s financial statements had been translated using the same method as Salto. The average exchange rate for both inventory and fixed assets purchases was 42.15 UYU/USD. Celeste has recently acquired a new subsidiary that operates in a country with a highly inflationary economy. In compliance with IFRS, the subsidiary prepares financial statements restated for inflation in the local currency. At the end of the current reporting period, Celeste will prepare consolidated financial statements using the new subsidiary’s financial statements, and translate them using the exchange rate at the reporting period end.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Exchange Rate UYU/USD",
+          "table": [
+            [
+              "Date",
+              "Exchange Rate UYU/USD"
+            ],
+            [
+              "1 January",
+              "41.88"
+            ],
+            [
+              "15 November",
+              "42.95"
+            ],
+            [
+              "31 December",
+              "44.63"
+            ],
+            [
+              "Average for the year",
+              "43.26"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FSA-mock-alison",
+      "topic": "FSA",
+      "title": "Zachary Alison",
+      "background": "Zachary Alison is analyzing the earnings and financial reporting quality of Apex, a consumer electronics manufacturer. The company reports its financial statements according to US GAAP. In Exhibit 1, Alison compiles selected financial statement data for Apex for the year just ended. Alison then assesses the company's earnings quality by calculating the cash-flow-based accruals ratio. When reviewing the notes to Apex's most recent financial statements, Alison observes that some inventory is held in preparation for product launches. This inventory is not expected to be sold within one year and was reclassified as other non-current assets in the year just ended. This is the first year Apex has made such a reclassification. Alison determines how the reclassification affects its financial ratios. Apex recently announced that it will purchase an 80% interest in Beast Electronics (Beast) for $24 million and will gain control over Beast. Beast's identifiable net assets have a fair value of $25 million and the fair value of the entire company is $30 million.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 ($ millions)",
+          "table": [
+            [
+              "",
+              "Year Just Ended ($ millions)",
+              "Prior Year ($ millions)"
+            ],
+            [
+              "Net operating assets",
+              "280",
+              "229"
+            ],
+            [
+              "Net income",
+              "83",
+              "64"
+            ],
+            [
+              "Operating cash flow",
+              "113",
+              "77"
+            ],
+            [
+              "Investing cash flow",
+              "(58)",
+              "(39)"
+            ],
+            [
+              "Financing cash flow",
+              "5",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EQ-mock-zern",
+      "topic": "Equity",
+      "title": "Nicole Zern",
+      "background": "Nicole Zern, an equity analyst, is reviewing preliminary research reports developed by her team for two wireless telecommunications companies: LuftComm and PrimaNet. LuftComm: After reviewing the preliminary report for LuftComm, Zern decides to revise it slightly. She notes that interest expense is tax-deductible and collects the selected financial data for LuftComm shown in Exhibit 1. Assuming the clean surplus relation holds, Zern uses the data in Exhibit 1 to calculate residual income for the year and then estimates the implied growth rate of earnings for LuftComm based on the current market price. PrimaNet: Zern first notes that the team's preliminary report on PrimaNet uses a multistage residual income model with a persistence factor of 0.12, one-quarter of the industry average of 0.48. Zern next assumes the clean surplus relation holds, and uses the data in Exhibit 2 to update the report based on a finite-horizon multistage residual income model.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (LuftComm)",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Book value of total assets at beginning of the year (millions)",
+              "€5,000"
+            ],
+            [
+              "Book value of total debt at beginning of the year (millions)",
+              "€3,000"
+            ],
+            [
+              "EBIT (millions)",
+              "€700"
+            ],
+            [
+              "Corporate tax rate",
+              "15.0%"
+            ],
+            [
+              "ROE",
+              "22.1%"
+            ],
+            [
+              "Cost of equity",
+              "16.0%"
+            ],
+            [
+              "Pretax cost of debt",
+              "6.0%"
+            ],
+            [
+              "Market price per share",
+              "€44.65"
+            ],
+            [
+              "P/B ratio",
+              "1.90"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2 (PrimaNet)",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Current book value per share",
+              "€18.50"
+            ],
+            [
+              "Present value of residual income per share for Year 1",
+              "€2.25"
+            ],
+            [
+              "Present value of residual income per share for Year 2",
+              "€2.00"
+            ],
+            [
+              "Forecasted book value per share at end of Year 2",
+              "€23.75"
+            ],
+            [
+              "Forecasted market price per share at end of Year 2",
+              "€26.50"
+            ],
+            [
+              "Cost of equity",
+              "12.8%"
+            ],
+            [
+              "WACC",
+              "6.5%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FI-mock-eng",
+      "topic": "FI",
+      "title": "Michael Eng",
+      "background": "Michael Eng manages institutional client portfolios of US Treasury securities. He expects that spot rates one year from now will be the same as they are today. Eng implements a strategy of rolling down the yield curve in one of the managed portfolios. Current information on rates is shown in Exhibit 1. Eng is reviewing the portfolios of his two largest clients. Client 1 restricts Eng to buy only bonds with maturities of three years or less. Even though Eng expects the return of 5-year maturity bonds to be superior to that of 3-year maturity bonds, he continues to invest in 3-year maturities for Client 1's portfolio. Client 2's portfolio consists of 1-year, 3-year and 5-year zero-coupon bonds and has an effective duration of 3.20. Eng is concerned about the effect a twist in the yield curve would have on this portfolio. The portfolio's 1-year key rate duration is 0.25 and its 3-year key rate duration is 1.10.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Spot Rates and 1-year Implied Forward Rates",
+          "table": [
+            [
+              "Spot Rate",
+              "1-year Implied Forward Rate"
+            ],
+            [
+              "r(1) = 0.75%",
+              "f(0,1) = 0.75%"
+            ],
+            [
+              "r(2) = 1.20%",
+              "f(1,1) = 1.65%"
+            ],
+            [
+              "r(3) = 1.45%",
+              "f(2,1) = 1.95%"
+            ],
+            [
+              "r(4) = 1.65%",
+              "f(3,1) = 2.25%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FI-mock-bisht",
+      "topic": "FI",
+      "title": "Yuvan Bisht",
+      "background": "Yuvan Bisht, a fixed-income portfolio manager, is reviewing investments in his fund. Bisht values a convertible bond issued one year ago by Doredum at a par value of $100. Each bond can be converted to 25 shares of Doredum common stock. The current share price is $3.80. A comparable option-free bond of the same maturity is valued at $105. Based on Doredum's strong operating performance, Bisht expects its share price will reach $8.00 in one year. Next, Bisht values a 3% default-free annual coupon bond with a 2-year maturity. The bond is putable at par ($100) at the end of Year 1. He estimates the binomial interest rate tree shown in Exhibit 1, assuming interest rate volatility of 15% and that branching from each node to a high state and to a low state occurs with equal probability. Bisht considers a scenario in which the assumed level of interest rate volatility increases from 15% to 25%. He considers the impact of this scenario on the value of the putable bond. Bisht analyzes the effects of an interest rate scenario in which there is a non-parallel shift in the yield curve, where the only change in the curve is a 30 bp increase in the 2-year benchmark. He considers the most appropriate measure to evaluate the putable bond's sensitivity to this scenario.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Binomial interest rate tree (15% volatility; rates cited in the solutions)",
+          "table": [
+            [
+              "Node",
+              "1-year rate"
+            ],
+            [
+              "Year 0 (spot)",
+              "2.00%"
+            ],
+            [
+              "Year 1, high state (t1,H)",
+              "4.64%"
+            ],
+            [
+              "Year 1, low state (t1,L)",
+              "3.44%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EQ-mock-albertson",
+      "topic": "Equity",
+      "title": "David Albertson",
+      "background": "David Albertson is an equity analyst at an investment bank. He is preparing updated research reports on two companies, Xita Incorporated and Garc Company. Xita Incorporated: In Albertson's previous report on Xita, the stock had a forward P/E ratio of 14.9 and a trailing P/E ratio of 15.7. He considers a likely explanation for the difference in the P/E ratios. Albertson indicates in his updated report that Xita's profits are cyclical. Using the data for the past four years in Exhibit 1, he computes Xita's normalized EPS based on the average ROE method. He determines that Year 1 through Year 4 (the most recent year) constitutes a full business cycle. Garc Company: Albertson next reviews Garc, which operates in a previously mature industry that now has high growth potential due to a recent technological innovation. Garc's debt-to-equity ratio is significantly higher than the average of its competitors. Garc spent heavily on advertising to create and maintain its brand, which is an important asset. The company is favored by many investors because its dividend payout ratio is the highest in its industry. Albertson considers several potential metrics to use in valuing Garc. During the past year, Garc's share price rose from $27.95 to $31.05 per share and the company paid an annual dividend of $1.24 per share. Over the same period, the market index rose from 550.40 to 602.21 and had an average dividend yield of 3.4%. Albertson computes Garc's relative strength compared to the index, which is a common technical indicator.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (Xita)",
+          "table": [
+            [
+              "",
+              "Year 1",
+              "Year 2",
+              "Year 3",
+              "Year 4"
+            ],
+            [
+              "EPS",
+              "$3.19",
+              "$2.21",
+              "$0.37",
+              "$2.56"
+            ],
+            [
+              "Book value per share",
+              "$10.90",
+              "$12.50",
+              "$12.60",
+              "$13.30"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FSA-mock-traske",
+      "topic": "FSA",
+      "title": "Susan Traske",
+      "background": "Susan Traske is an analyst specializing in financial institutions. She is evaluating Sigmar, a large US-based commercial bank. Traske uses the CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) approach in her evaluation of Sigmar. As part of this analysis, she examines Sigmar's liquidity ratios and notes that the bank's net stable funding ratio has increased steadily over the past three years. She then investigates which components of the ratio explain this trend. Traske reviews Sigmar's employee compensation policy and notes that a large restricted stock grant vested during the current year. The share price on the settlement date was greater than the share price on the grant date. Recognizing that Sigmar prepares its financial statements in accordance with US GAAP, Traske considers the effect of the vested grant on Sigmar's income tax expense for the current year. Sigmar sponsors a defined benefit pension plan for employees. Sigmar's pension disclosure for the most recent year is shown in Exhibit 1 (amounts in $ millions). Traske notes that there was no amortization of past service costs, no amortization of actuarial gains or losses, and no amortization of differences between actual and expected return on plan assets. Finally, Traske compares the overall efficiency of the underwriting operations of three property and casualty insurance companies based on the information in Exhibit 2.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (amounts in $ millions)",
+          "table": [
+            [
+              "Item",
+              "$ millions"
+            ],
+            [
+              "Interest cost",
+              "2,875"
+            ],
+            [
+              "Current service cost",
+              "535"
+            ],
+            [
+              "Actual return on plan assets",
+              "2,895"
+            ],
+            [
+              "Expected return on plan assets",
+              "3,000"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2",
+          "table": [
+            [
+              "",
+              "Insurer A",
+              "Insurer B",
+              "Insurer C"
+            ],
+            [
+              "Loss and loss adjustment ratio",
+              "60.2%",
+              "66.4%",
+              "63.1%"
+            ],
+            [
+              "Underwriting expense ratio",
+              "42.3%",
+              "30.8%",
+              "32.5%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EQ-mock-laver",
+      "topic": "Equity",
+      "title": "Shawn Laver",
+      "background": "Shawn Laver, a buy-side analyst, is evaluating three companies: Globac, Waltun, and Dentoc. Laver first values Globac, a natural resources company that has significant iron ore reserves. Due to its weak growth prospects, Globac has generated negative earnings and negative operating cash flows in recent years. This trend appears likely to continue for the foreseeable future. Next, Laver computes Waltun's FCFF using the most recent fiscal year data (in $ millions) provided in Exhibit 1. Waltun has a tax rate of 30% and its financial statements are prepared under US GAAP. Laver computes Dentoc's FCFE for the most recent year to be $750 million. He believes the company will have annual growth of 12% for each of the next three years, followed by a decline to the industry-average growth rate of 4%. Laver assumes a required rate of return on equity of 10% and a WACC of 9%. Using a two-stage model, Laver estimates the intrinsic value of Dentoc's common equity. Six months later, Laver revises his FCFE projections of Dentoc to incorporate the impact of several financial decisions approved by the company's board: Decision 1: Dentoc will pay a cash dividend of $2 per share to its common shareholders. Decision 2: Dentoc will buy back 1 million shares of its own common stock. Decision 3: Dentoc will modify its capital structure by increasing its level of debt by 5%.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (Waltun, $ millions)",
+          "table": [
+            [
+              "Item",
+              "$ millions"
+            ],
+            [
+              "Net income",
+              "500"
+            ],
+            [
+              "Depreciation expense",
+              "25"
+            ],
+            [
+              "Interest expense",
+              "50"
+            ],
+            [
+              "Investment in fixed capital",
+              "75"
+            ],
+            [
+              "Investment in working capital",
+              "150"
+            ],
+            [
+              "Cash flow from operations",
+              "375"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FSA-mock-clerc",
+      "topic": "FSA",
+      "title": "Jules Clerc",
+      "background": "Jules Clerc is an equity analyst at an asset management firm. Clerc is evaluating Lonza Credit Inc., a bank that prepares its financial statements under IFRS and has a 31 December year end. The bank is subject to the Basel III regulatory framework. Lonza offers a defined benefit pension plan to its employees. To evaluate the pension plan, Clerc uses the data (in EUR millions) for the most recent year in Exhibit 1. Based on the data from Exhibit 1, Clerc calculates the pension plan's funded status for the most recent year as part of her valuation of Lonza. On 1 January of the current year, Lonza granted 4 million stock options to employees. The options vest 3 years after the grant date and expire 6 years after the grant date. The fair value per option was EUR 1.8 on the grant date. Lonza is planning to issue 5 million restricted stock units (RSUs) to its employees. The RSUs will vest two years after issuance. Clerc uses a profitability measure – free cash flow as a percentage of revenues – to analyze Lonza. He considers how this measure would be affected immediately after the issuance of the RSUs. Clerc uses the CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) approach to evaluate Lonza. Clerc gathers Lonza's liquidity ratios over the past two years in Exhibit 2.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (EUR millions)",
+          "table": [
+            [
+              "Item",
+              "EUR millions"
+            ],
+            [
+              "Benefit obligations at beginning of year",
+              "1,415"
+            ],
+            [
+              "Benefit obligations at end of year",
+              "1,440"
+            ],
+            [
+              "Fair value of plan assets at beginning of year",
+              "1,470"
+            ],
+            [
+              "Fair value of plan assets at end of year",
+              "1,480"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2",
+          "table": [
+            [
+              "",
+              "Most Recent Year",
+              "Prior Year"
+            ],
+            [
+              "Liquidity Coverage Ratio",
+              "95%",
+              "110%"
+            ],
+            [
+              "Net Stable Funding Ratio",
+              "95%",
+              "90%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EQ-mock-kassam",
+      "topic": "Equity",
+      "title": "Julia Kassam",
+      "background": "Julia Kassam is a portfolio manager who is reviewing public and private equity investments for her clients. Erebor Limited: Kassam values a manufacturing company, Erebor, using the EV/EBIDTA ratio. The company's last reported EBIDTA is $90 million. Kassam collects relevant financial information (in $ millions) in Exhibit 1. Biotechnology Sector: One of Kassam’s clients wants to increase their exposure to growth stocks in the biotechnology sector. The sector currently has a median P/E ratio of 10.7 and is expected to grow at 7%. Kassam uses the PEG ratio to identify overvalued stocks from her list of three selected biotechnology stocks in Exhibit 2. Altair Corp.: Kassam evaluates the stock of Altair, which is a recently listed, high growth, biotechnology company. She is considering a stable market-based multiple to value the stock and does not want to make any adjustments to the reported financial statements. After reviewing recent analyst reports, Kassam notices that Altair has internally generated brands that are not shown as intangible assets on Altair's balance sheet. Further, she notes that certain discretionary accounting decisions about expenses have led to an inaccurate representation of Altair's economic performance. Becq Inc.: Kassam values Becq, a small private company, using the excess earnings method. Relevant financial information is shown in Exhibit 3.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (Erebor, $ millions)",
+          "table": [
+            [
+              "",
+              "Debt",
+              "Common Stock",
+              "Preferred Stock",
+              "Cash and Cash Equivalents"
+            ],
+            [
+              "Market Value",
+              "880",
+              "550",
+              "210",
+              "375"
+            ],
+            [
+              "Book Value",
+              "630",
+              "280",
+              "270",
+              "375"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2 (Biotechnology stocks)",
+          "table": [
+            [
+              "",
+              "Price per Share",
+              "Earnings per Share",
+              "Annual Growth Rate"
+            ],
+            [
+              "Company A",
+              "$49.75",
+              "$5.42",
+              "6.00%"
+            ],
+            [
+              "Company B",
+              "$12.63",
+              "$1.71",
+              "8.24%"
+            ],
+            [
+              "Company C",
+              "$31.28",
+              "$2.93",
+              "4.50%"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 3 (Becq)",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Fixed assets",
+              "$725,000"
+            ],
+            [
+              "Working capital",
+              "$315,000"
+            ],
+            [
+              "Last reported earnings",
+              "$191,290"
+            ],
+            [
+              "Residual income growth rate",
+              "2.50%"
+            ],
+            [
+              "Required return on fixed assets",
+              "8.50%"
+            ],
+            [
+              "Required return on working capital",
+              "3.25%"
+            ],
+            [
+              "Discount rate",
+              "11.25%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FI-mock-plessinger",
+      "topic": "FI",
+      "title": "Sandra Plessinger",
+      "background": "Sandra Plessinger is evaluating several bonds for the fixed-income portfolios she manages. She first considers the following 2-year, default-free bonds with embedded options: Bond A is a 5% annual pay coupon bond and is callable at par ($100) at the end of year 1. Bond B is a 5% annual pay coupon bond and is putable at par ($100) at the end of year 1. To analyze these bonds, Plessinger creates a binomial interest rate tree using the rates in Exhibit 1, assuming an interest rate volatility of 20%, with branching from each node to a high state and a low state occurring with equal probability. Plessinger also considers the effective convexity of Bond B. Plessinger next evaluates a 3-year maturity, callable investment-grade corporate bond. She computes an OAS of 51 bps using the same binomial interest rate tree in Exhibit 1. Plessinger considers the impact on the bond's OAS under a scenario where the bond's price is unchanged and interest rate volatility increases from 20% to 25%. Finally, still using the binomial interest rate tree in Exhibit 1, Plessinger analyzes a 3-year, default-free capped floating rate bond with a par value of $100. The bond pays an annual coupon equal to the 1-year reference rate, is set in arrears, and is capped at 5.0%.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Binomial interest rate tree (20% volatility; 1-year rates cited in the solutions)",
+          "table": [
+            [
+              "Node",
+              "1-year rate"
+            ],
+            [
+              "Year 0",
+              "2.00%"
+            ],
+            [
+              "Year 1, low state",
+              "4.08%"
+            ],
+            [
+              "Year 1, high state",
+              "6.09%"
+            ],
+            [
+              "Year 2, high-high state",
+              "7.32%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EQ-mock-mccormick",
+      "topic": "Equity",
+      "title": "Terry McCormick",
+      "background": "Terry McCormick is a US-equity analyst working for a large wealth management firm. He is currently working on DCF valuations of various publicly traded firms, which report under the US GAAP. Firm A: McCormick wants to identify the most appropriate approach to value Firm A, which consistently had positive FCFE during the past decade. Management is about to start an aggressive growth strategy primarily financed with debt. McCormick expects highly fluctuating amounts of net borrowing for the next three years. McCormick also expects annual earnings growth rate to fluctuate between 25% and 35% during the next three years before it gradually declines to long-run sustainable rate of 2%. Firm B: McCormick calculates FCFE for the most recent fiscal year and gathers the selected financial information in Exhibit 1 (in $ millions). Firm C: McCormick reviews his FCFE valuation model for Firm C. Firm C's management has just announced that they will issue new common stock during the next year. McCormick evaluates the potential effect of this change on next year's FCFE forecast. Firm D: McCormick estimates the intrinsic value of Firm E's common equity using the FCFF approach. McCormick calculates the present value of the firm's future FCFF as $800 million. McCormick estimates that $75 million of the firm's cash holdings is not necessary to generate operating cash flows. Current market values of the firm's debt and preferred stock are $250 million and $150 million respectively.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (Firm B, $ millions)",
+          "table": [
+            [
+              "Item",
+              "$ millions"
+            ],
+            [
+              "CFO",
+              "535"
+            ],
+            [
+              "Investment in fixed capital",
+              "110"
+            ],
+            [
+              "Interest expense",
+              "70"
+            ],
+            [
+              "Net borrowing",
+              "65"
+            ],
+            [
+              "Tax rate",
+              "30%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FSA-mock-tay",
+      "topic": "FSA",
+      "title": "Alex Tay",
+      "background": "Alex Tay is an analyst researching Buttery Ranch International. Buttery is a Hong Kong SAR-based retail company reporting under IFRS. Buttery and its subsidiaries have fiscal years ending on 31 December. Buttery's functional and presentation currency is the USD. Tay collects components of Buttery's net sales growth from various markets of the most recent year in Exhibit 1. Creamy Meadows is a subsidiary of Buttery. Creamy began operations in Indonesia on 1 January of the most recent year and uses the Indonesian Rupiah (IDR) as its functional currency. Buttery uses the temporal method to translate Creamy's financial results. For the most recent year, Creamy had a net monetary liability and the IDR strengthened against the USD. Tay believes that the translation method may distort the financial and operating measures of the international subsidiary. To verify this, Tay compares Creamy's translated ratios to the ratios calculated under the local currency by using the exchange rates of the most recent year in Exhibit 2. Finally, Tay analyzes another subsidiary of Buttery, Dairy Barn. Dairy uses the local currency of its home market as its functional currency. Buttery used the current rate method to translate Dairy's financial statements in the most recent year. Dairy's home market has been experiencing high inflation and Tay expects it to be classified as a hyperinflationary economy beginning in the current year.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Components of net sales growth by market",
+          "table": [
+            [
+              "Market",
+              "Volume Growth",
+              "Price Growth",
+              "Foreign Currency Exchange"
+            ],
+            [
+              "Thailand",
+              "5%",
+              "0%",
+              "4%"
+            ],
+            [
+              "Malaysia",
+              "4%",
+              "5%",
+              "–4%"
+            ],
+            [
+              "Hong Kong SAR",
+              "–4%",
+              "8%",
+              "0%"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. IDR per USD (Amount of IDR per 1 USD)",
+          "table": [
+            [
+              "Date",
+              "IDR per USD"
+            ],
+            [
+              "1 January of the most recent year",
+              "15,000"
+            ],
+            [
+              "Average for the most recent year",
+              "14,700"
+            ],
+            [
+              "Weighted average rate when inventory was purchased",
+              "14,700"
+            ],
+            [
+              "31 December of the most recent year",
+              "14,000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FI-mock-xiaoli",
+      "topic": "FI",
+      "title": "Xiao Li",
+      "background": "Xiao Li is a private wealth manager who focuses on fixed income markets. He is reviewing the term structure of interest rates for his domestic market. Li observes that lender and borrower preferences strongly influence yield curve shape, especially for longer-term maturities. For example, Li has detected that the curve has a persistent dip at the 10-year maturity, and that investors in 10-year bonds are not willing to shift to 8- or 12-year bonds even when yields in those maturities are relatively high. Li reviews Exhibit 1, which contains current shorter-term government bond spot rates. Using the spot curve, Li computes forward rates. He then forecasts that in three years the 2-year spot rate will equal 2.20%, the current 2-year spot rate, but that the remainder of the spot rate curve will be consistent with current forward rates. Li evaluates what his forecast implies about the valuation of a 5-year zero-coupon bond today. Li is assisting Client A to select an appropriate investment strategy, who has a 2-year investment horizon. The client expects the yield curve to remain unchanged over the 2-year horizon. Li recommends implementing a ride the yield curve strategy using government bonds for Client A. Li studies the characteristics and effects of yield curve volatility. He uses the 3.25% monthly standard deviation of the 15-year government-bond yield to estimate an annual yield volatility of 11.26%. Li also calculates key rate durations for various maturities. He concludes that the higher key rate durations associated with longer-term rates leads to higher long-term annualized term structure volatility.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Current shorter-term government bond spot rates",
+          "table": [
+            [
+              "Maturity",
+              "Spot Rate"
+            ],
+            [
+              "1-year",
+              "2.02%"
+            ],
+            [
+              "2-year",
+              "2.20%"
+            ],
+            [
+              "3-year",
+              "2.38%"
+            ],
+            [
+              "4-year",
+              "2.52%"
+            ],
+            [
+              "5-year",
+              "2.64%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FSA-mock-mcandrew",
+      "topic": "FSA",
+      "title": "Carol McAndrew",
+      "background": "Carol McAndrew, an equity analyst, specializes in evaluating manufacturing companies. McAndrew is currently evaluating Acme Industries, a large, diversified manufacturing company that reports under IFRS. During a recent conference call, Acme management disclosed its intent to raise EUR 40 million to fund new investments by borrowing against Acme's EUR 50 million of receivables. Management indicated that it is evaluating two different options to accomplish this objective: Option 1: Borrow directly against the receivables of EUR 50 million; Option 2: Create a special purpose entity (SPE), invest EUR 10 million in the SPE, have the SPE borrow EUR 40 million, and then use the funds to purchase EUR 50 million of receivables from Acme. McAndrew considers the potential impact of these options on Acme's consolidated debt-to-assets ratio, assuming that Acme will be able to influence the financial and operating policy of the SPE, and will be expected to absorb any losses that the SPE may incur. Next, McAndrew examines whether there are any accounting warning signs related to the overstatement of Acme's net income. After reviewing Acme's financial reports and industry data for the most recent year, McAndrew makes the following observations: Observation 1: Receivables growth is lower than revenue growth. Observation 2: Management compensation is largely tied to financial results. Observation 3: Depreciable lives of Acme's fixed assets are shorter than those of industry peers. McAndrew also reviews Acme's Beneish M-scores and Altman Z-scores for the past three years and notes that both scores have steadily declined during this time. Finally, after making any necessary adjustments, McAndrew uses the following data (in EUR millions) to compute Acme's cash-flow-based accruals ratio for the most recent year: Net income: 7,050; Operating cash flow: 9,826; Investing cash flow: –8,410; Financing cash flow: 5,390; Average net operating assets: 45,894.",
+      "exhibits": [
+        {
+          "title": "Cash-flow-based accruals ratio inputs (EUR millions)",
+          "table": [
+            [
+              "Item",
+              "EUR millions"
+            ],
+            [
+              "Net income",
+              "7,050"
+            ],
+            [
+              "Operating cash flow",
+              "9,826"
+            ],
+            [
+              "Investing cash flow",
+              "–8,410"
+            ],
+            [
+              "Financing cash flow",
+              "5,390"
+            ],
+            [
+              "Average net operating assets",
+              "45,894"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EQ-mock-bala",
+      "topic": "Equity",
+      "title": "Ulu Bala",
+      "background": "Ulu Bala, an analyst for ValEwe Consulting, has been hired to provide valuations for several firm clients. Firm A is a rapidly growing automotive parts distributor that has asked Bala to provide an estimated fair value of its common stock. Bala selects the appropriate valuation model based on the following information about Firm A: The firm's dividend payout ratio has been stable over the last 10 years and is expected to remain stable, regardless of future profitability. Planned expansion into new markets will require significant annual capital expenditures, which will result in dividends exceeding free cash flow to equity. Compared with peers, the firm has an aggressive policy with respect to reported earnings, as well as a lower quality of accounting disclosure. Firm B is a regional utilities provider. Firm B’s current stock price is $19.00 and Bala uses the dividend discount model to value the stock. In Exhibit 1, Bala forecasts Firm B’s earnings for the next three years. He assumes a required return on equity of 8% and a 60% retention ratio. By the end of Year 3, Bala expects Firm B’s stock price to be $21.50. ValEwe's approach is to consider a stock to be fairly valued if its price is within 2% of its estimated fair value. Firm C is a power generation company. Bala forecasts that Firm C's earnings will grow by 8% per year and the cost of equity will remain at 11% for the foreseeable future. Using the DuPont model and the information in Exhibit 2, Bala estimates Firm C's sustainable growth rate. Bala then values Firm C's stock using the Gordon growth model. He evaluates the sensitivity of the stock price from the model under a scenario where both the forecasted cost of equity and the earnings growth rate increase by 50 bps.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1 (Firm B forecasted EPS)",
+          "table": [
+            [
+              "",
+              "Year 1",
+              "Year 2",
+              "Year 3"
+            ],
+            [
+              "Forecasted EPS",
+              "$1.27",
+              "$1.62",
+              "$1.91"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2 (Firm C)",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Last year’s EPS",
+              "$3.20"
+            ],
+            [
+              "Dividend payout ratio",
+              "45.0%"
+            ],
+            [
+              "Net profit margin",
+              "11.5%"
+            ],
+            [
+              "Total assets/equity",
+              "2.25"
+            ],
+            [
+              "Total asset turnover",
+              "0.65"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FI-mock-kehoe",
+      "topic": "FI",
+      "title": "Cathryn Kehoe",
+      "background": "Cathryn Kehoe is the senior credit analyst for the State Teachers' Pension Fund. She is conducting credit analysis of an ABS held in the fund's portfolio. The ABS is backed by a large number of short-term credit card receivables that are homogeneous. Each receivable is small relative to the total value of the pool. Kehoe proposes purchasing a 3-year corporate bond issued by Valisker, Inc. The YTM on the Valisker bond is 2.60%. The bond has a credit rating of AA and a modified duration of 2.82. The relevant portion of a 1-year corporate transition matrix, along with corresponding credit spreads, is presented in Exhibit 1. In the matrix, for example, the probability of an AAA-rated bond becoming an A-rated bond at the end of the year is 1.2%. The fund owns $5 million of a 7-year senior unsecured bond issued by Gonk Industries. Kehoe recommends the fund buy $5 million of credit protection on Gonk using a 5-year CDS. The CDS has a 5-year senior unsecured bond as its reference obligation. Summary data for the CDS are presented in Exhibit 2. Two months later, a major accounting scandal is uncovered at Gonk and the firm quickly files for bankruptcy. Gonk has three series of bonds outstanding: 3-year subordinated unsecured bonds trading at 20% of par value; 5-year senior unsecured bonds trading at 40% of par value; 7-year senior unsecured bonds trading at 30% of par value.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. 1-year corporate transition matrix (entries in %) and credit spreads",
+          "table": [
+            [
+              "From/To",
+              "AAA",
+              "AA",
+              "A",
+              "BBB",
+              "BB"
+            ],
+            [
+              "AAA",
+              "90.0",
+              "8.6",
+              "1.2",
+              "0.2",
+              "0.0"
+            ],
+            [
+              "AA",
+              "2.0",
+              "88.0",
+              "8.0",
+              "1.4",
+              "0.6"
+            ],
+            [
+              "A",
+              "0.1",
+              "1.5",
+              "87.5",
+              "7.5",
+              "1.0"
+            ],
+            [
+              "BBB",
+              "0.0",
+              "0.5",
+              "4.5",
+              "85.0",
+              "7.0"
+            ],
+            [
+              "BB",
+              "0.0",
+              "0.0",
+              "0.2",
+              "7.7",
+              "80.0"
+            ],
+            [
+              "Credit spread",
+              "0.65%",
+              "0.95%",
+              "1.20%",
+              "1.80%",
+              "3.60%"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. CDS on Gonk Industries",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Credit spread",
+              "4.0%"
+            ],
+            [
+              "Duration",
+              "4.5 years"
+            ],
+            [
+              "Coupon rate",
+              "5.0%"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "FI-mock-jackson-1",
+      "case": "FI-mock-jackson",
+      "topic": "FI",
+      "module": "Credit Analysis Models",
+      "los": "Credit migration: expected return under a transition matrix",
+      "type": "calc",
+      "stem": "The expected 1-year total return for the Don Vallejo A-rated bond under Jackson’s credit migration scenario is closest to:",
+      "choices": {
+        "A": "–0.14%.",
+        "B": "0.86%.",
+        "C": "0.95%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the expected total return of the A-rated bond is the sum of the YTM and the expected percentage change in bond value. The YTM is 1%, while the expected return due to a credit spread change can be computed as (minus) the expected spread change (subject to migration) times the modified duration of the bond of 4.5. In turn, the expected spread change for an A-rated bond is the probability-weighted spread change, where the probabilities are retrieved from the transition matrix row with the label rating of \"A\". We first compute the expected percentage price change using the modified duration of 4.5 for each rating migration. From A to AAA: –4.5 × –0.5% = 2.25%; From A to AA: –4.5 × –0.3% = 1.35%; From A to A: –4.5 × 0% = 0%; From A to BBB: –4.5 × 0.4% = –1.8%; From A to BB: –4.5 × 0.6% = –2.7%; From A to B: –4.5 × 0.8% = –3.6%; From A to CCC: –4.5 × 1.5% = –6.75%. The expected price return is computed by multiplying each price change by the appropriate probability from the transition matrix in the row with the label rating of \"A\". Expected price return = 2.25% × 0.02 + 1.35% × 0.03 + 0% × 0.88 – 1.8% × 0.02 – 2.7% × 0.02 – 3.6% × 0.02 – 6.75% × 0.01 = –0.144%. The expected total return of the bond is therefore: –0.144% + 1% = 0.856%, which is rounded to 0.86%.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Expected total return = YTM + expected % price change; expected % price change = Σ [ (–ModDur × Δspread) × migration probability ] using the A-rating row"
+        },
+        {
+          "label": "代入",
+          "content": "–ModDur × Δspread per migration: A→AAA –4.5×–0.5%=2.25%; A→AA 1.35%; A→A 0%; A→BBB –1.8%; A→BB –2.7%; A→B –3.6%; A→CCC –6.75%; weight by 0.02,0.03,0.88,0.02,0.02,0.02,0.01"
+        },
+        {
+          "label": "结果",
+          "content": "Expected price return = –0.144%; total return = –0.144% + 1% = 0.856% ≈ 0.86%"
+        },
+        {
+          "label": "陷阱",
+          "content": "Use the row of the CURRENT rating (A) for probabilities; add the 1% YTM back to the price effect."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-jackson-2",
+      "case": "FI-mock-jackson",
+      "topic": "FI",
+      "module": "Credit Analysis Models",
+      "los": "Credit analysis approaches for structured finance (loan-by-loan / portfolio / statistics-based)",
+      "type": "concept",
+      "stem": "The most suitable approach for the credit analysis of the commercial ABS is:",
+      "choices": {
+        "A": "loan-by-loan.",
+        "B": "portfolio-based.",
+        "C": "statistics-based."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because a loan-by-loan approach is not suitable when the portfolio is granular and homogeneous. Evaluating each loan on an individual basis is too time-consuming and therefore it is not suitable in this case. A loan-by-loan approach would be inefficient because of the large number of basically similar loans.",
+        "B": "B is incorrect because a portfolio-based approach is not suitable when the portfolio of loans is short-term, as the portfolio does not materially change in the short term. Short-term structured finance vehicles with granular, homogeneous assets tend to be evaluated using a statistics-based approach to the existing book of loans. A portfolio-based approach is instead more suitable when the portfolio of loans is medium-term/dynamic and therefore subject to change over time.",
+        "C": "C is correct because short-term structured finance vehicles with granular, homogeneous assets tend to be evaluated using a statistics-based approach to the existing book of loans. A statistics-based approach is most suitable when the portfolio of loans is short-term (and therefore fairly static), granular, and homogeneous, like in this case. Portfolio statistics are sufficient to appropriately analyze the credit of the loan pool."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-jackson-3",
+      "case": "FI-mock-jackson",
+      "topic": "FI",
+      "module": "Credit Default Swaps",
+      "los": "CDS settlement: cheapest-to-deliver and combined position proceeds",
+      "type": "calc",
+      "stem": "At settlement of the Electric Motors CDS, the total proceeds from Jackson’s Bond X and CDS positions are:",
+      "choices": {
+        "A": "$19 million.",
+        "B": "$20 million.",
+        "C": "$21 million."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because Jackson holds a $20 million position in Bond X, and simultaneously has bought protection using a CDS contract referencing Electric Motors. Upon default, the value of the position is computed as follows: The position on Bond X is valued $20 million × 40% = $8 million. The payoff on the CDS contract is $20 million × 65% = $13 million. The cheapest-to-deliver (CTD) contract is the one which shall be chosen to deliver. As Bond Y trades at 35% of face value while Bond X trades at 40% of face value, Bond Y is the CTD contract and therefore the recovery rate of the CDS contract is 65%. The total proceeds from the combined position are therefore $8 million + $13 million = $21 million."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Total proceeds = value of Bond X held + CDS payoff; CDS payoff = notional × (1 – recovery of CTD)"
+        },
+        {
+          "label": "代入",
+          "content": "Bond X = $20m × 40% = $8m; CTD is Bond Y at 35% → recovery = 35%, so payoff = $20m × (1–35%) = $20m × 65% = $13m"
+        },
+        {
+          "label": "结果",
+          "content": "$8m + $13m = $21 million"
+        },
+        {
+          "label": "陷阱",
+          "content": "CDS payoff uses the cheapest-to-deliver (lowest price = Bond Y at 35%), not the bond actually held (Bond X at 40%)."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-jackson-4",
+      "case": "FI-mock-jackson",
+      "topic": "FI",
+      "module": "Credit Default Swaps",
+      "los": "CDS curve trades: profiting from an expected flattening",
+      "type": "concept",
+      "stem": "Which of the following strategies should profit the most from the expected flattening of the Crispy Chips CDS curve?",
+      "choices": {
+        "A": "Strategy 1",
+        "B": "Strategy 2",
+        "C": "Strategy 3"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because, as the Crispy Chips CDS curve is expected to flatten, Jackson should sell protection using the 5-year contract in order to maximize the gains from a tightening of long-term CDS spreads. On the contrary, buying protection using the 1-year contract minimizes the losses from widening of short-term CDS spreads. Strategy 1 incorrectly suggests that selling protection is profitable when CDS spreads increase (rather than decrease), and conversely that buying protection is profitable when CDS spreads decrease (rather than increase).",
+        "B": "B is incorrect because, as the Crispy Chips CDS curve is expected to flatten, Jackson should sell protection using the 5-year contract in order to maximize the gains from a tightening of long-term CDS spreads. On the contrary, buying protection using the 3-year contract is not the best strategy—losses are minimized when Jackson buys protection using the 1-year contract rather than the 3-year contract. Strategy 2 is not the one which Jackson should implement, as Strategy 3 is more profitable.",
+        "C": "C is correct because, as the Crispy Chips CDS curve is expected to flatten, Jackson should sell protection using the 5-year contract in order to maximize the gains from a tightening of long-term CDS spreads. On the contrary, buying protection using the 1-year contract minimizes the losses from widening of short-term CDS spreads. Put differently, protection at the short end is expected to become more expensive, so he should buy it now, while protection at the long end is becoming cheaper, so he should sell it now. Strategy 3 is the one which Jackson should implement as it yields the maximum profit, should Jackson's expected flattening of the CDS curve materialize."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-romano-5",
+      "case": "FSA-mock-romano",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "Foreign currency transaction gain/loss on a monetary item",
+      "type": "calc",
+      "stem": "The foreign currency transaction gain (in UYU millions) on exported goods reported by Celeste in the most recent year is closest to:",
+      "choices": {
+        "A": "0.",
+        "B": "6.9.",
+        "C": "8.4."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because for foreign currency transactions whose settlement dates fall in subsequent accounting periods, both IFRS and US GAAP require adjustments to reflect intervening changes in currency exchange rates. Foreign currency transaction gain and losses are reported on the income statement. As the export receivable is in USD and the USD appreciated against the UYP from 15 November (42.95 UYU/USD) to 31 December (44.63 UYU/USD), the receivable that remains outstanding as of 31 December generates a foreign transaction gain of: Foreign transaction gain = USD 5 million (44.63 – 42.95) = UYU 8.4 million"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Transaction gain = FC receivable × (rate at year-end – rate at transaction date)"
+        },
+        {
+          "label": "代入",
+          "content": "= USD 5 million × (44.63 – 42.95)"
+        },
+        {
+          "label": "结果",
+          "content": "= USD 5 million × 1.68 = UYU 8.4 million"
+        },
+        {
+          "label": "陷阱",
+          "content": "Use transaction-date rate (15 Nov 42.95) not the 1 Jan or average rate; the USD receivable gains as USD appreciates."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-romano-6",
+      "case": "FSA-mock-romano",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "Current rate method: translating revenue and cost of sales at the average rate",
+      "type": "calc",
+      "stem": "Salto’s contribution to Celeste’s consolidated gross profit (in UYU millions) in the most recent year is closest to:",
+      "choices": {
+        "A": "2,379.",
+        "B": "2,409.",
+        "C": "2,455."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because Celeste uses the current rate method to translate Salto’s financial statements. Under such methods, revenues and expenses are translated at the exchange rate that existed when the transaction took place. For practical reasons, a rate that approximates the exchange rates at the dates of the transactions, such as an average exchange rate, may be used. Therefore, Salto’s translated gross profit (Salto’s contribution to Celeste’s consolidated gross profit) in the most recent year is: Gross profit = Revenue (USD) × Average exchange rate – Cost of sales (USD) × Average exchange rate; Gross profit = USD 120 million × 43.26 – USD 65 million × 43.26 = UYU 2,379.3 million ~ UYU 2,379",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Under the current rate method, revenue and COGS are translated at the average rate: Gross profit = (Rev – COS) × average rate"
+        },
+        {
+          "label": "代入",
+          "content": "= (USD 120m – USD 65m) × 43.26 = USD 55m × 43.26"
+        },
+        {
+          "label": "结果",
+          "content": "= UYU 2,379.3 million ≈ UYU 2,379"
+        },
+        {
+          "label": "陷阱",
+          "content": "Current rate method uses the average rate (43.26), NOT the 42.81 inventory-purchase rate (that historical rate is used only under the temporal method)."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-romano-7",
+      "case": "FSA-mock-romano",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "Temporal vs. current rate method: effect on total shareholders’ equity",
+      "type": "concept",
+      "stem": "If Monte's results had been translated using the current rate method, its total shareholders' equity would have been:",
+      "choices": {
+        "A": "lower.",
+        "B": "the same.",
+        "C": "higher."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because the method Celeste used to translate Monte’s financial statements (temporal method) resulted in total shareholders’ equity that was lower than it would have been under the current rate method.",
+        "B": "See correct answer C.",
+        "C": "C is correct because Celeste uses the temporal method to translate Monte’s financial statements. Under this method, monetary assets and liabilities (in USD) are translated at the current exchange rate, non-monetary assets and liabilities measured at historical cost (in USD) are translated at historical exchange rates. Monte’s monetary assets and liabilities were translated using the end-of-year exchange rate (44.63 UYU/USD). Monte’s non-monetary assets (the only non-monetary assets are inventory and fixed assets, and all liabilities are monetary) were translated using the average exchange rate prevailing at time of purchase (42.15 UYU/USD). This last exchange rate is lower than the end-of-year exchange rate. If Celeste had used the method used for Salto to translate Monte’s financial statements (the current rate method), all assets and liabilities (in USD) would have been translated (into UYU) at the current exchange rate at balance sheet date (44.63 UYU/USD). Therefore, the method Celeste used to translate Monte’s financial statements (temporal method) resulted in total shareholders’ equity that was lower than it would have been under the current rate method."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-romano-8",
+      "case": "FSA-mock-romano",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "Hyperinflationary economy translation under IFRS (IAS 29 restate then current rate)",
+      "type": "concept",
+      "stem": "Is Romano correct about the method that Celeste should use to translate the new subsidiary’s financial statements?",
+      "choices": {
+        "A": "Yes",
+        "B": "No, because Celeste should use the temporal method",
+        "C": "No, because Celeste should use the average exchange rate for the income statement"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because when a foreign entity is located in a highly inflationary economy IFRS requires that the foreign entity’s financial statements first be restated for local inflation using the procedures outlined in IAS 29. Then, the inflation-restated foreign currency financial statements are translated into the parent’s presentation currency using the current exchange rate. Therefore, Romano is correct about the method that Celeste should use to translate the new subsidiary’s financial statements.",
+        "B": "B is incorrect because Celeste should use the method indicated by Romano to translate the new subsidiary’s financial statements, and not the temporal method.",
+        "C": "C is incorrect because Celeste should use the method indicated by Romano to translate the new subsidiary’s financial statements. This method uses the current exchange rate as of year-end both for the balance sheet and the income statement."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-alison-21",
+      "case": "FSA-mock-alison",
+      "topic": "FSA",
+      "module": "Financial Reporting Quality",
+      "los": "Cash-flow-based accruals ratio",
+      "type": "calc",
+      "stem": "Apex's cash-flow-based accruals ratio for the year just ended is closest to:",
+      "choices": {
+        "A": "9%.",
+        "B": "10%.",
+        "C": "11%."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because the cash flow accruals ratio for the year just ended is 11% as follows: = [NI1 − (CFO1 + CFI1)] / [(NOA1 + NOA0) / 2] where: NI = net income; CFO = cash flow from operations; CFI = cash flow from investing; NOA = net operating assets. = [83 − [113 + (–58)]] / [(280 + 229) / 2] = [83 − (55)] / [(509) / 2] = 28 / 254.5 ≈ 11%"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Cash-flow-based accruals ratio = [NI – (CFO + CFI)] / [average NOA]"
+        },
+        {
+          "label": "代入",
+          "content": "= [83 – (113 + (–58))] / [(280 + 229)/2]"
+        },
+        {
+          "label": "结果",
+          "content": "= [83 – 55] / 254.5 = 28 / 254.5 ≈ 11%"
+        },
+        {
+          "label": "陷阱",
+          "content": "CFI is negative (–58), so CFO + CFI = 55; denominator is AVERAGE NOA, not ending NOA."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-alison-22",
+      "case": "FSA-mock-alison",
+      "topic": "FSA",
+      "module": "Financial Reporting Quality",
+      "los": "Effect of reclassifying inventory to non-current assets on ratios",
+      "type": "concept",
+      "stem": "As a result of Apex's reclassification of its inventory in the year that has just ended, which of the following ratios most likely increased?",
+      "choices": {
+        "A": "Current ratio",
+        "B": "Inventory turnover",
+        "C": "Days of inventory on hand"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because Apex's reclassifies its inventory, which is part of current assets, to other non-current assets therefore the current ratio will decrease because current assets will decrease and current liabilities will stay the same.",
+        "B": "B is correct because the inventory turnover calculated using the reported inventory number will most likely increase because the amount of inventory relative to cost of goods sold will decrease.",
+        "C": "C is incorrect because the number of days of inventory on hand calculated using the reported inventory number will most likely decrease because the amount of inventory relative to cost of goods sold will decrease."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-alison-23",
+      "case": "FSA-mock-alison",
+      "topic": "FSA",
+      "module": "Intercorporate Investments",
+      "los": "Accounting for a controlling equity investment (acquisition method)",
+      "type": "concept",
+      "stem": "Apex should account for its purchase of Beast using the:",
+      "choices": {
+        "A": "equity method.",
+        "B": "acquisition method.",
+        "C": "proportionate consolidation method."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because if Apex is deemed to have control over Beast, it would use the acquisition method to account for Beast in its consolidated financial statements. The equity method is used for some joint ventures and when there is significant influence but not control. In this case, Apex has an 80% stake and has control over Beast.",
+        "B": "B is correct because if Apex is deemed to have control over Beast, it would use the acquisition method to account for Beast in its consolidated financial statements. In this case, Apex has an 80% stake and has control over Beast.",
+        "C": "C is incorrect because if Apex is deemed to have control over Beast, it would use the acquisition method to account for Beast in its consolidated financial statements. Proportionate consolidation is used for joint ventures. In this case, Apex has an 80% stake and has control over Beast."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-alison-24",
+      "case": "FSA-mock-alison",
+      "topic": "FSA",
+      "module": "Intercorporate Investments",
+      "los": "Full goodwill method (US GAAP)",
+      "type": "calc",
+      "stem": "As a result of its purchase of Beast, Apex should recognize goodwill of:",
+      "choices": {
+        "A": "$4 million.",
+        "B": "$5 million.",
+        "C": "$6 million."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because Apex reports under US GAAP, and should report $5 million under the full goodwill method. Full goodwill = Fair value of entity – Fair value of identifiable net assets = $30 million – $25 million = $5 million.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Full goodwill (US GAAP) = Fair value of entire entity – Fair value of identifiable net assets"
+        },
+        {
+          "label": "代入",
+          "content": "= $30 million – $25 million"
+        },
+        {
+          "label": "结果",
+          "content": "= $5 million"
+        },
+        {
+          "label": "陷阱",
+          "content": "US GAAP requires FULL goodwill: use fair value of the whole entity ($30m), not the $24m purchase price of the 80% stake."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-zern-25",
+      "case": "EQ-mock-zern",
+      "topic": "Equity",
+      "module": "Residual Income Valuation",
+      "los": "Residual income = Net income – equity charge",
+      "type": "calc",
+      "stem": "The residual income for LuftComm is closest to:",
+      "choices": {
+        "A": "€122 million.",
+        "B": "€200 million.",
+        "C": "€275 million."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because LuftComm’s residual income of €122 million can be calculated using net income and the equity charge (Residual Income = Net Income – Equity Charge) or using net operating profit after taxes and the total capital charge (NOPAT = EBIT × (1 – Tax rate)). Option 1 – Using Net Income and the Equity Charge (€ millions): EBIT 700; Less Interest Expense (180); = Pretax Income 520; Less Income Taxes (78); = Net Income 442. Equity Charge = Book Value of Equity × Cost of Equity = (Book Value of Assets – Book Value of Debt) × Cost of Equity = (5,000 – 3,000) × 0.16 = 320. Residual Income = Net Income – Equity Charge = 442 – 320 = 122. Option 2 – Using NOPAT and the Total Capital Charge (€ millions): NOPAT = EBIT × (1 – Tax Rate) = 700 × (1 – 0.15) = 595. Debt Charge = Book Value of Debt × Pretax Cost of Debt × (1 – Tax Rate) = 3,000 × 0.06 × (1 – 0.15) = 153. Equity Charge = (5,000 – 3,000) × 0.16 = 320. Total Capital Charge = 153 + 320 = 473. Residual Income = NOPAT – Total Capital Charge = 595 – 473 = 122.",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Residual Income = Net Income – Equity Charge; Equity Charge = (Assets – Debt) × Cost of equity"
+        },
+        {
+          "label": "代入",
+          "content": "Net Income: EBIT 700 – interest (3,000×6%=180) = 520 pretax; – taxes (520×15%=78) = 442. Equity Charge = (5,000–3,000)×0.16 = 320"
+        },
+        {
+          "label": "结果",
+          "content": "Residual Income = 442 – 320 = €122 million"
+        },
+        {
+          "label": "陷阱",
+          "content": "Interest expense = pretax cost of debt × book debt (180); equity charge uses book equity = assets – debt, not total assets."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-zern-26",
+      "case": "EQ-mock-zern",
+      "topic": "Equity",
+      "module": "Residual Income Valuation",
+      "los": "Single-stage RI model: solving for implied earnings growth",
+      "type": "calc",
+      "stem": "Based on the single-stage residual income model, the implied growth rate of earnings for LuftComm is closest to:",
+      "choices": {
+        "A": "6.1%.",
+        "B": "9.2%.",
+        "C": "12.8%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the implied growth rate of earnings from the single-stage residual income model is calculated by solving for g in the following equation: V0 = B0 + B0[(ROE – r)/ (r – g)] which gives the following: g = r – [((ROE – r) × B0)/ (V0 – B0)]. Book value per share can be calculated using the given price-to-book ratio and market price per share as follows: Book value per share (B0) = Market price per share/Price-to-book ratio = 44.65 / 1.90 = 23.50. Using the market price per share (44.65) as V0, the book value (23.50) as B0, the ROE (22.1%), and the cost of equity (16%) as r, the implied growth rate (g) can be solved as follows: g = r – [((ROE – r) × B0) / (V0 – B0)] = 0.160 – [((0.221 – 0.160) × 23.50) / (44.65 – 23.50)] = 0.09222 ≈ 9.2%",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "From V0 = B0 + B0[(ROE – r)/(r – g)], solve g = r – [((ROE – r) × B0)/(V0 – B0)]"
+        },
+        {
+          "label": "代入",
+          "content": "B0 = price / P/B = 44.65 / 1.90 = 23.50; g = 0.160 – [((0.221 – 0.160) × 23.50)/(44.65 – 23.50)]"
+        },
+        {
+          "label": "结果",
+          "content": "g = 0.160 – (1.4335 / 21.15) = 0.09222 ≈ 9.2%"
+        },
+        {
+          "label": "陷阱",
+          "content": "Derive B0 from price ÷ P/B (23.50), not the €44.65 price; V0 is the market price."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-zern-27",
+      "case": "EQ-mock-zern",
+      "topic": "Equity",
+      "module": "Residual Income Valuation",
+      "los": "Persistence factor determinants",
+      "type": "concept",
+      "stem": "Relative to the industry, the persistence factor used in the preliminary report on PrimaNet is most consistent with the firm having:",
+      "choices": {
+        "A": "lower levels of dividend payouts.",
+        "B": "lower levels of accounting returns.",
+        "C": "higher levels of accounting accruals."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because PrimaNet’s persistence is lower than the industry average, which is inconsistent with low dividend payouts. Instead, low dividend payout is associated with higher residual income persistence.",
+        "B": "B is incorrect because PrimaNet’s persistence is lower than the industry average, which is inconsistent with low levels of accounting rates of return (ROE). Instead, high or extreme levels of accounting return (ROE) are associated with lower residual income persistence.",
+        "C": "C is correct because the persistence factor utilized in the preliminary report on PrimaNet is significantly lower than the industry average. High or extreme levels of accounting accruals is consistent with lower residual income persistence."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-zern-28",
+      "case": "EQ-mock-zern",
+      "topic": "Equity",
+      "module": "Residual Income Valuation",
+      "los": "Finite-horizon multistage RI model with premium terminal value",
+      "type": "calc",
+      "stem": "Based on the finite-horizon multistage residual income model, PrimaNet's intrinsic value per share is closest to:",
+      "choices": {
+        "A": "€24.91.",
+        "B": "€25.17.",
+        "C": "€25.50."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because the intrinsic value per share of €24.91 is calculated by adding the present value of residual income in Year 1, present value of income in Year 2, and the present value of the terminal value (premium of market value over book value) at the end of Year 2. Where: V0 = Intrinsic value per share today; B0 = Book value per share today = €18.50 in Exhibit 2. The middle term is the sum of the present values of residual income for each year of the forecast period = €2.25 for Year 1 and €2.00 for Year 2. PT = market price at the end of the forecast period = €26.50; BT = book value at the end of the forecast period = €23.75; r = cost of equity = 12.8%. V0 = 18.50 + 2.25 + 2.00 + [(26.50 - 23.75) / (1.128)2] = €24.91",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "V0 = B0 + Σ PV(residual income) + PV of terminal premium; terminal premium = (PT – BT)/(1+r)^T"
+        },
+        {
+          "label": "代入",
+          "content": "= 18.50 + 2.25 + 2.00 + [(26.50 – 23.75)/(1.128)^2]"
+        },
+        {
+          "label": "结果",
+          "content": "= 18.50 + 4.25 + (2.75/1.2724) = 18.50 + 4.25 + 2.16 = €24.91"
+        },
+        {
+          "label": "陷阱",
+          "content": "RI values are already present values (add directly); discount only the terminal premium (PT–BT) at the cost of equity, not WACC."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-eng-33",
+      "case": "FI-mock-eng",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "YTM of a coupon bond vs. the spot curve",
+      "type": "calc",
+      "stem": "The current yield to maturity (YTM) on a default-free, 1.2% annual-pay, three-year coupon bond is closest to:",
+      "choices": {
+        "A": "1.2%.",
+        "B": "1.45%.",
+        "C": "2.25%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the YTM on a three-year coupon bond will be closest to the three-year spot rate, regardless of coupon. The three-year spot rate is 1.45%. The price of the bond is calculated as the present value of cash flows. PV = PMT/(1 + z1)1 + PMT/(1 +z2)2 + PMT + 100/(1 + z3)3, Where PMT = coupon and z = spot rate for each time period. PV = 1.2/1.0075+1.2/1.0122+101.2/1.01453 = 1.19107 + 1.17171 + 96.9224 = 99.2852. Next, solve for YTM: PV = –99.2852, FV=100, n=3, PMT=1.2 and solving for I/Y = YTM = 1.445% ≈ 1.45%.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Price the bond off the spot curve, then solve for the single YTM that reprices it; YTM ≈ the 3-year spot rate"
+        },
+        {
+          "label": "代入",
+          "content": "PV = 1.2/1.0075 + 1.2/1.0120^2 + 101.2/1.0145^3 = 1.19107 + 1.17171 + 96.9224 = 99.2852"
+        },
+        {
+          "label": "结果",
+          "content": "PV=–99.2852, FV=100, N=3, PMT=1.2 → I/Y = 1.445% ≈ 1.45%"
+        },
+        {
+          "label": "陷阱",
+          "content": "The YTM lands near the 3-year spot rate (1.45%), not the coupon (1.2%) or the forward f(3,1)=2.25%."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-eng-34",
+      "case": "FI-mock-eng",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "Rolling down the curve: return equals the forward rate when the curve is unchanged",
+      "type": "calc",
+      "stem": "Given Eng's expectation for spot rates, the first-year return on a 3-year zero-coupon bond is closest to:",
+      "choices": {
+        "A": "0.75%.",
+        "B": "1.45%.",
+        "C": "1.95%."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because under Eng's spot curve expectation the total return will be the one-year forward rate for year 3. We can see that if the spot rate curve is unchanged, then each bond rolls down the curve and earns the forward rate. This can be shown mathematically by calculating the price of a 3-year zero coupon bond today. Price = 1/(1 + spot rate)3 = 1/(1.01453) = 0.957732. With an unchanged yield curve, this bond will become a 2-year zero coupon bond in one year with a price = 1/(1 + spot rate)2 = 1/(1.01202) = 0.976425. The first year return = 0.976425/0.957732 – 1 ≈ 1.95%, which equals f(2,1) from Exhibit 1."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "With an unchanged spot curve, a 1-year holding-period return on a zero equals the relevant 1-year forward rate f(2,1)"
+        },
+        {
+          "label": "代入",
+          "content": "P(now,3yr)=1/1.0145^3=0.957732; P(in 1yr, now 2yr)=1/1.0120^2=0.976425"
+        },
+        {
+          "label": "结果",
+          "content": "Return = 0.976425/0.957732 – 1 ≈ 1.95% = f(2,1)"
+        },
+        {
+          "label": "陷阱",
+          "content": "The bond rolls from the 3-year to the 2-year spot; the roll return equals f(2,1)=1.95%, not the 3-year spot 1.45%."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-eng-35",
+      "case": "FI-mock-eng",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "Term structure theories: segmented markets",
+      "type": "concept",
+      "stem": "Client 1's restriction regarding the securities Eng can purchase is most consistent with the assumptions underlying the:",
+      "choices": {
+        "A": "preferred habitat theory.",
+        "B": "liquidity preference theory.",
+        "C": "segmented markets theory."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because the preferred habitat theory postulates that if the expected additional returns to be gained become large enough, institutions will be willing to deviate from their preferred maturities or habitats. Eng is not able to do that due to his investor-imposed constraints.",
+        "B": "B is incorrect because the liquidity preference theory focuses on investor's risk aversion and the fact that they demand a liquidity premium for added interest rate risk. Eng would prefer to invest in longer-term maturities to capture this premium but cannot. Also, Client 1 does not direct Eng to purchase only three-year maturity bonds to capture a possible liquidity premium, but that Eng can purchase securities up to three years. This direction indicates the client does not have a preference to capture the liquidity premium if it exists. Liquidity preference theory asserts that liquidity premiums exist to compensate investors for the added interest rate risk they face when lending long term and that these premiums increase with maturity.",
+        "C": "C is correct because due to the direction from the Client, Eng continues to invest only in 3-year maturities even though he expects 5-year maturities to offer superior expected returns. The segmented markets theory assumes that market participants are either unwilling or unable to invest in anything other than securities of their preferred maturity. It follows that the yield of securities of a particular maturity is determined entirely by the supply and demand for funds of that particular maturity."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-eng-36",
+      "case": "FI-mock-eng",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "Key rate durations sum to effective duration",
+      "type": "calc",
+      "stem": "The 5-year key rate duration for Client 2's portfolio is closest to:",
+      "choices": {
+        "A": "1.60.",
+        "B": "1.85.",
+        "C": "1.95."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because for Portfolio 2 the sum of the three portfolio key rate durations must equal the portfolio's effective duration. Effective duration = 1-year key rate duration + 3-year key rate duration + 5-year key rate duration = 3.20 = 0.25 + 1.10 + 5-year key rate duration. 5-year key rate duration = 3.20 – 0.25 – 1.10 = 1.85. Key rate duration measures the portfolio risk exposure to each key rate. If all the key rates move by the same amount, then the yield curve has made a parallel shift, and as a result, the proportional change in value has to be consistent with effective duration.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Sum of key rate durations = effective duration"
+        },
+        {
+          "label": "代入",
+          "content": "3.20 = 0.25 (1-yr) + 1.10 (3-yr) + KRD(5-yr)"
+        },
+        {
+          "label": "结果",
+          "content": "KRD(5-yr) = 3.20 – 0.25 – 1.10 = 1.85"
+        },
+        {
+          "label": "陷阱",
+          "content": "The individual key rate durations must sum to effective duration (a parallel shift); solve for the missing one."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-bisht-1",
+      "case": "FI-mock-bisht",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Minimum value of a convertible bond (max of conversion value and straight value)",
+      "type": "calc",
+      "stem": "The minimum value today of the Doredum convertible bond is:",
+      "choices": {
+        "A": "$95.",
+        "B": "$100.",
+        "C": "$105."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because the minimum value of a convertible bond is equal to greater of (i) the conversion value (underlying share price conversion ratio) and (ii) the value of the underlying option-free bond. Based on the information in the vignette, $105 is the value of the underlying option-free bond, which is greater than the conversion value of $3.80 × $25 = $95"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Minimum (floor) value of a convertible = max(conversion value, straight/option-free bond value)"
+        },
+        {
+          "label": "代入",
+          "content": "Conversion value = share price × conversion ratio = $3.80 × 25 = $95; straight bond value = $105"
+        },
+        {
+          "label": "结果",
+          "content": "max($95, $105) = $105"
+        },
+        {
+          "label": "陷阱",
+          "content": "Take the GREATER of the two floors; use the current $3.80 share price, not the expected $8.00."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-bisht-2",
+      "case": "FI-mock-bisht",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Valuing a putable bond on a binomial tree",
+      "type": "calc",
+      "stem": "Based on the binomial interest rate tree, the value of the putable bond is closest to:",
+      "choices": {
+        "A": "$98.04.",
+        "B": "$100.00.",
+        "C": "$100.98."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because the value of the 2-yr putable bond equals the present value of future cash flows and where in any period if the price is lower than 100, the bond will be putable at 100. The value at the end of period 1 at t1,H = 4.64% equals ((103+103)/2)/(1.0464) = 98.43, where 103 is the total cash flow at maturity (Par = 100 and coupon = 3). As this bond is putable at the end of year 1 at par, the value is set to 100. The value at the end of period 1 at t1,L = 3.44% equals ((103+103)/2)/(1.0344) = 99.57. As this bond is putable at the end of year 1 at par, the value is set to 100. The value today equals: [((100+100)/2) + 3]/1.020 = 100.98, where 2.00% is the spot rate."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Backward-induct on the tree; at each Year-1 node, if the computed value < 100, exercise the put and set value = 100"
+        },
+        {
+          "label": "代入",
+          "content": "t1,H: (103)/(1.0464)=98.43 → put to 100; t1,L: (103)/(1.0344)=99.57 → put to 100; today: [(100+100)/2 + 3]/1.020"
+        },
+        {
+          "label": "结果",
+          "content": "= (100 + 3)/1.020 = 100.98"
+        },
+        {
+          "label": "陷阱",
+          "content": "The put floors both Year-1 node values at 100; add the Year-0 coupon of 3 before discounting at the 2.00% spot."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-bisht-3",
+      "case": "FI-mock-bisht",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Effect of higher interest rate volatility on a putable bond",
+      "type": "concept",
+      "stem": "Under Bisht’s volatility scenario, the value of the putable bond would most likely:",
+      "choices": {
+        "A": "decrease.",
+        "B": "not change.",
+        "C": "increase."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because under a scenario where interest rate volatility is assumed to be higher, the value of the putable bond increases. The value of the putable bond is the i) value of a similar straight bond plus the ii) value of the put option. Therefore, with higher interest rate volatility, the value of the put option increases, causing the overall value of the putable bond to increase and not decrease.",
+        "B": "B is incorrect because the value of any embedded option, regardless of the type of option, increases with interest rate volatility and hence impacts the value of the bond.",
+        "C": "C is correct because under a scenario where interest rate volatility is assumed to be higher, the value of the putable bond increases. The value of the putable bond is the i) value of a similar straight bond plus the ii) value of the put option. Therefore, with higher interest rate volatility, the value of the put option increases, causing the overall value of the putable bond to increase."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-bisht-4",
+      "case": "FI-mock-bisht",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Choosing key rate duration for a non-parallel shift",
+      "type": "concept",
+      "stem": "Based on his interest rate scenario, which of the following types of duration would be most appropriate for Bisht to use in evaluating the putable bond?",
+      "choices": {
+        "A": "Key rate duration",
+        "B": "Effective duration",
+        "C": "One-sided duration"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because the key rate durations reflect the sensitivity of the bond’s price to change in specific maturities on the benchmark yield curve. Thus, key rate durations help identify the ‘shaping risk’ for bonds—that is, the bond’s sensitivity to changes with the shape of the yield curve (e.g., steepening and flattening). In this case, the interest rate scenario is for a non-parallel shift in the yield curve with only the 2-year benchmark rate changing.",
+        "B": "B is incorrect because the effective duration indicates the sensitivity of the bond’s price to a parallel shift of the benchmark yield curve - normally calculated by averaging the changes resulting from shifting the benchmark yield curve up and down by the same amount and not change in one-specific maturity. Effective duration is less appropriate for measuring sensitivity to non-parallel shifts as in this case.",
+        "C": "C is incorrect because one-sided duration is the effective duration when interest rates go up or down and are better at capturing the interest rate sensitivity of a callable or putable bond than the normal effective durations, as the upside is capped in the callable bond and down-side is capped in the putable bond. However, since the measure is based on effective duration, it is still based on a parallel shift in the yield curve and not non-parallel shift as per the case here."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-albertson-5",
+      "case": "EQ-mock-albertson",
+      "topic": "Equity",
+      "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
+      "los": "Trailing vs. forward P/E and rising earnings",
+      "type": "concept",
+      "stem": "Which of the following would best explain the difference between the two Xita P/E ratios in Albertson's previous report?",
+      "choices": {
+        "A": "Rising earnings",
+        "B": "Negative expected growth",
+        "C": "An estimated stock value below the current market price"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because for companies with rising earnings, the forward P/E will be smaller than the trailing P/E because the denominator in the forward P/E calculation will be larger. In the previous report, Xita had a forward P/E ratio of 14.9 and a trailing P/E ratio of 15.7, which is consistent with rising earnings at the company.",
+        "B": "B is incorrect because with the numerator (current stock price) being the same in both ratios, any difference between the trailing and forward P/E ratios must arise from differences in earnings per share. Any expected increase in earnings, even if positive growth was slower than forecast, will result in a forward P/E less than the trailing P/E. If the earnings growth forecast was negative, the forward P/E would be greater, not smaller (as in the vignette), as the forward P/E denominator would be smaller than the trailing P/E denominator.",
+        "C": "C is incorrect because the numerator (current stock price) is the same in both the trailing and forward P/E ratios."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-albertson-6",
+      "case": "EQ-mock-albertson",
+      "topic": "Equity",
+      "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
+      "los": "Normalized EPS via the average ROE method",
+      "type": "calc",
+      "stem": "Xita's normalized EPS based on the average ROE method is closest to:",
+      "choices": {
+        "A": "$2.08.",
+        "B": "$2.13.",
+        "C": "$2.30."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because in the method of average return on equity normalized EPS is calculated as the average return on equity (ROE) from the most recent full cycle, multiplied by current book value per share. Each year's ROE is computed by dividing EPS by BVPS, giving ROE values, by year, of: Year 1: 3.19/10.90 = 29.3%; Year 2: 2.21/12.50 =17.7%; Year 3: 0.37/12.60 = 2.9%; Year 4: 2.56/13.30 =19.2%. The average ROE for Years 1 to 4 is (29.3 + 17.7 + 2.9 + 19.2)]/4 = 17.28%. Multiplying this by the current BVPS ($13.30 in Year 4) results in normalized EPS of $2.30."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Normalized EPS = (average ROE over the full cycle) × current BVPS; annual ROE = EPS/BVPS"
+        },
+        {
+          "label": "代入",
+          "content": "ROEs: 3.19/10.90=29.3%, 2.21/12.50=17.7%, 0.37/12.60=2.9%, 2.56/13.30=19.2%; average = (29.3+17.7+2.9+19.2)/4 = 17.28%"
+        },
+        {
+          "label": "结果",
+          "content": "Normalized EPS = 17.28% × $13.30 = $2.30"
+        },
+        {
+          "label": "陷阱",
+          "content": "Average the ROEs (not the EPS), then multiply by the CURRENT (Year 4) BVPS of $13.30."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-albertson-7",
+      "case": "EQ-mock-albertson",
+      "topic": "Equity",
+      "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
+      "los": "Choosing an appropriate multiple (EV/Sales) given capital structure and intangibles",
+      "type": "concept",
+      "stem": "Which of the following is the most appropriate metric for Albertson to use in valuing Garc?",
+      "choices": {
+        "A": "Dividend yield",
+        "B": "Price to book ratio",
+        "C": "Enterprise value to sales ratio"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect as dividend yield is only one component of total return; not using all information related to expected return is suboptimal. With growth opportunities arising in the industry, capital gains are likely to be an important source of future returns. In addition, the investment required to capitalize on the growth opportunities may adversely affect Garc's ability to pay dividends in the future – especially because Garc's dividend payout ratio is the highest in the industry, which is attractive to many of its current investors. A useful metric in assessing the safety of the dividend is the payout ratio: A high payout relative to other companies operating in the same industry may indicate a less secure dividend because the dividend is less well covered by earnings.",
+        "B": "B is incorrect as a material portion of Garc's value arises from the value of its brand, which as an internally generated intangible asset is not shown on the balance sheet (and thus not reflected in book value per share). Assets in addition to those recognized in financial statements may be critical operating factors. For example, in many service companies, human capital—the value of skills and knowledge possessed by the workforce—is more important than physical capital as an operating factor, but it is not reflected as an asset on the balance sheet. In addition, accounting effects on book value may compromise how useful book value is as a measure of the shareholders’ investment in the company. In general, intangible assets that are generated internally (as opposed to being acquired) are not shown as assets on a company’s balance sheet. For example, companies account for advertising and marketing as expenses, so the value of internally generated brands, which are created and maintained by advertising and marketing activities, do not appear as assets on a company’s balance sheet under IFRS or US GAAP.",
+        "C": "C is correct because the numerator of the EV/Sales ratio is the firm's total value of debt and equity. EV/S is an alternative sales-based ratio that is particularly useful when comparing companies with diverse capital structures, which applies to Garc's industry. Sales is an appropriate denominator as sales growth is consistent and not as variable as earnings. In addition, sales are generally less subject to distortion or manipulation than are other fundamentals, such as EPS or book value."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-albertson-8",
+      "case": "EQ-mock-albertson",
+      "topic": "Equity",
+      "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
+      "los": "Relative strength technical indicator vs. an index",
+      "type": "calc",
+      "stem": "Garc's relative strength compared to the market index over the past year is closest to:",
+      "choices": {
+        "A": "1.0153.",
+        "B": "1.0168.",
+        "C": "1.0241."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because the relative strength measure of Garc against the market index is 1.0154. The value of Garc divided by the index at the beginning of the period is 27.95 / 550.40 = 0.050781; the relative strength on that day is thus 0.050781 / 0.050781 = 1.0000. At the end of the time frame, the value of Garc divided by the index is 31.05 / 602.21 = 0.051560. Thus, over the time frame the relative strength measure for Garc is 0.051560 / 0.050781 = 1.0153. Dividends are not incorporated into the relative strength calculation because relative strength is based strictly on price movement. Also, the valuation indicators we call momentum indicators relate either price or a fundamental, such as earnings, to the time series of their own past values. A simple relative-strength indicator of the second type (i.e., the stock’s performance relative to the performance of some group of stocks) is the stock’s performance divided by the performance of an equity index. If the value of this ratio increases, the stock price increases relative to the index and displays positive relative strength.",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Relative strength = (stock/index at end) ÷ (stock/index at start); price only, dividends excluded"
+        },
+        {
+          "label": "代入",
+          "content": "Start: 27.95/550.40 = 0.050781; End: 31.05/602.21 = 0.051560"
+        },
+        {
+          "label": "结果",
+          "content": "0.051560 / 0.050781 = 1.0153"
+        },
+        {
+          "label": "陷阱",
+          "content": "Relative strength uses PRICES only — ignore the $1.24 dividend and the index dividend yield."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-traske-21",
+      "case": "FSA-mock-traske",
+      "topic": "FSA",
+      "module": "Analysis of Financial Institutions",
+      "los": "Net stable funding ratio drivers (CAMELS liquidity)",
+      "type": "concept",
+      "stem": "An increase in which of the following would best explain the trend in Sigmar's net stable funding ratio?",
+      "choices": {
+        "A": "Loans to customers",
+        "B": "Long-term debt liabilities",
+        "C": "High-quality liquid assets"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because an increase in loans to customers (a component of the bank's asset base) would be consistent with a decrease, not an increase, in the NSFR.",
+        "B": "B is correct because the Net Stable Funding Ratio (NSFR) is expressed as the minimum percentage of a bank’s required stable funding that must be sourced from available stable funding. For this ratio, required stable funding (the denominator) is a function of the composition and maturity of a bank’s asset base, whereas available stable funding (the numerator) is a function of the composition and maturity of a bank’s funding sources (i.e., capital and deposits and other liabilities). The NSFR has steadily increased over the past three years. Accordingly, an increase in long-term debt liabilities (a funding source) would be consistent with an increase in the NSFR.",
+        "C": "C is incorrect because highly liquid assets do not enter the calculation of the Net Stable Funding Ratio."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-traske-22",
+      "case": "FSA-mock-traske",
+      "topic": "FSA",
+      "module": "Employee Compensation: Post-Employment and Share-Based",
+      "los": "Excess tax benefit on share-based compensation (US GAAP)",
+      "type": "concept",
+      "stem": "The difference in share price between the grant date and the settlement date for the large restricted stock grant will most likely:",
+      "choices": {
+        "A": "decrease income tax expense.",
+        "B": "have no effect on income tax expense.",
+        "C": "increase income tax expense."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because a higher share price at settlement versus the grant date results in a higher tax deduction than the cumulative stock-based compensation expense. This is known as an excess tax benefit or tax windfall because taxable income and tax expense are reduced.",
+        "B": "B is incorrect because Sigmar follows US GAAP, so a difference in share price between the settlement date and the grant date will cause income tax expense to increase or decrease.",
+        "C": "C is incorrect because a lower (not higher) share price at settlement versus at the grant date results in a lower tax deduction than the cumulative stock-based compensation expense."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-traske-23",
+      "case": "FSA-mock-traske",
+      "topic": "FSA",
+      "module": "Employee Compensation: Post-Employment and Share-Based",
+      "los": "Total periodic pension cost in P&L (US GAAP: service + interest – expected return)",
+      "type": "calc",
+      "stem": "The total pension expense (in $ millions) reported on Sigmar's income statement for the most recent year is:",
+      "choices": {
+        "A": "410.",
+        "B": "515.",
+        "C": "535."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because there is no amortization of past service costs or actuarial gains and losses, hence the total pension expense (in $ millions) is computed as: Current service cost + Interest cost – Expected return on plan assets = 535 + 2,875 – 3,000 = 410.",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "US GAAP income-statement pension expense = current service cost + interest cost – expected return on plan assets (no amortizations here)"
+        },
+        {
+          "label": "代入",
+          "content": "= 535 + 2,875 – 3,000"
+        },
+        {
+          "label": "结果",
+          "content": "= 410"
+        },
+        {
+          "label": "陷阱",
+          "content": "Use EXPECTED return (3,000) on the income statement, not actual return (2,895); the 105 difference goes to OCI."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-traske-24",
+      "case": "FSA-mock-traske",
+      "topic": "FSA",
+      "module": "Analysis of Financial Institutions",
+      "los": "Combined ratio to compare P&C underwriting efficiency",
+      "type": "calc",
+      "stem": "Which insurer's underwriting operation is the most efficient overall?",
+      "choices": {
+        "A": "Insurer A",
+        "B": "Insurer B",
+        "C": "Insurer C"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because Insurer C has the lowest combined ratio (63.1% + 32.5% = 95.6%) compared to Insurer A (60.2% + 42.3% = 102.5%) and Insurer B (66.4% + 30.8% = 97.2%). Combined ratio = Loss and loss adjustment expense ratio + Underwriting expense ratio. This ratio indicates the overall efficiency of an underwriting operation. A combined ratio of less than 100% is considered efficient."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Combined ratio = loss and loss adjustment ratio + underwriting expense ratio; lowest = most efficient"
+        },
+        {
+          "label": "代入",
+          "content": "A: 60.2%+42.3%=102.5%; B: 66.4%+30.8%=97.2%; C: 63.1%+32.5%=95.6%"
+        },
+        {
+          "label": "结果",
+          "content": "Insurer C has the lowest combined ratio (95.6%), so it is the most efficient"
+        },
+        {
+          "label": "陷阱",
+          "content": "Add BOTH ratios; a lower combined ratio (and below 100%) signals better underwriting, so don't pick on loss ratio alone."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-laver-29",
+      "case": "EQ-mock-laver",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "Choosing a valuation model for a negative-earnings asset-rich firm",
+      "type": "concept",
+      "stem": "Which of the following valuation methods would be most appropriate to value Globac?",
+      "choices": {
+        "A": "Asset-based valuation",
+        "B": "Discounted cash flow model",
+        "C": "Relative valuation using P/E multiple"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because Globac has significant iron ore reserves. Asset-based valuation would be a better fit given the company is struggling financially and the value of the company will be derived from its assets (in this case iron ore reserves). Asset-based valuation values a company on the basis of the market value of the assets or resources it controls. Hence, the method is a reasonable approach.",
+        "B": "B is incorrect because earnings are negative and likely to remain negative due to which the discounted cash flow model cannot be applied.",
+        "C": "C is incorrect because earnings are negative and likely to remain negative. Hence, the company cannot be valued using P/E relative to its peers. A relative valuation model estimates an asset’s value relative to that of another asset. The idea underlying relative valuation is that similar assets should sell at similar prices."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-laver-30",
+      "case": "EQ-mock-laver",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "FCFF from net income (add back after-tax interest)",
+      "type": "calc",
+      "stem": "Waltun's FCFF for the most recent year (in $ millions) is:",
+      "choices": {
+        "A": "335.",
+        "B": "350.",
+        "C": "360."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because FCFF = NI + Dep + Int(1 – Tax rate) – FCInv – WCInv. Net income = NI = 500; Depreciation = Dep = 25; Interest expense = Int = 50; Tax rate = 30%; Fixed capital investment = FCInv = 75; Working capital investment = WCInv = 150. FCFF = 500 + 25 + 50 × (1 – 30%) – 75 – 150 = 335. Alternate calculation: FCFF = CFO + Int(1 – Tax rate) – FCInv; FCFF = 375 + 50 × (1 – 30%) – 75 = 335.",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "FCFF = NI + Dep + Int×(1 – tax) – FCInv – WCInv  (or CFO + Int×(1 – tax) – FCInv)"
+        },
+        {
+          "label": "代入",
+          "content": "= 500 + 25 + 50×(1–0.30) – 75 – 150 = 500 + 25 + 35 – 75 – 150"
+        },
+        {
+          "label": "结果",
+          "content": "= 335"
+        },
+        {
+          "label": "陷阱",
+          "content": "Add back interest on an AFTER-tax basis (50×0.70=35); from CFO you do NOT subtract WCInv again (already in CFO)."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-laver-31",
+      "case": "EQ-mock-laver",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "Two-stage FCFE model intrinsic value",
+      "type": "calc",
+      "stem": "Based on Laver's assumptions, the intrinsic value (in $ millions) of Dentoc's common equity is closest to:",
+      "choices": {
+        "A": "14,807.",
+        "B": "16,055.",
+        "C": "19,300."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the equity value is the sum of PV of FCFEs and PV of Terminal Value (TV). FCFE: Year 1 = 750 × 1.12 = 840; Year 2 = 840 × 1.12 = 940.8; Year 3 = 940.8 × 1.12 = 1,053.696. TV at Year 3 = 1,053.696 × (1 + 4%) / (10% – 4%) = 18,264.064. Sums: Year 1 = 840; Year 2 = 940.8; Year 3 = 1,053.696 + 18,264.064 = 19,317.760. PV: 840/(1.10)^1 = 763.636; 940.8/(1.10)^2 = 777.521; 19,317.760/(1.10)^3 = 14,513.719. Sum of PV = 16,054.876 ≈ 16,055.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Equity value = Σ PV(FCFE, Years 1–3) + PV(terminal value); TV3 = FCFE3×(1+g)/(r – g), discount at r=10%"
+        },
+        {
+          "label": "代入",
+          "content": "FCFE: 840, 940.8, 1,053.696; TV3 = 1,053.696×1.04/(0.10–0.04) = 18,264.064; add to FCFE3 = 19,317.760"
+        },
+        {
+          "label": "结果",
+          "content": "PV = 840/1.10 + 940.8/1.10^2 + 19,317.760/1.10^3 = 763.636 + 777.521 + 14,513.719 = 16,054.9 ≈ 16,055"
+        },
+        {
+          "label": "陷阱",
+          "content": "Discount FCFE at the required return on equity r=10% (not WACC 9%); TV uses the long-run 4% growth."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-laver-32",
+      "case": "EQ-mock-laver",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "Which shareholder/financing decision affects FCFE (leverage change)",
+      "type": "concept",
+      "stem": "Which decision will most likely impact Laver's revised FCFE projections of Dentoc?",
+      "choices": {
+        "A": "Decision 1",
+        "B": "Decision 2",
+        "C": "Decision 3"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because changing leverage (changing the amount of debt financing in the company’s capital structure), does have some effects on FCFE particularly. An increase in leverage will not affect FCFF (although it might affect the calculations used to arrive at FCFF). An increase in leverage affects FCFE in two ways. In the year the debt is issued, it increases the FCFE by the amount of debt issued. After the debt is issued, FCFE is then reduced by the after-tax interest expense. Further, FCFE is calculated by adding net borrowings to FCFF and reducing the tax-adjusted interest payments."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-clerc-5",
+      "case": "FSA-mock-clerc",
+      "topic": "FSA",
+      "module": "Employee Compensation: Post-Employment and Share-Based",
+      "los": "Funded status = fair value of plan assets – pension obligation",
+      "type": "calc",
+      "stem": "What is the funded status of Lonza's pension plan at the end of the most recent year?",
+      "choices": {
+        "A": "Underfunded by EUR 15 million",
+        "B": "Overfunded by EUR 10 million",
+        "C": "Overfunded by EUR 40 million"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because funded status of a defined benefit pension plan can be calculated as Funded status = Fair value of plan assets – Pension obligation. Funded status at the end of the year = Fair value of plan assets at the end of year – Benefit obligations at the end of year = EUR 1,480 million – EUR 1,440 million = EUR 40 million."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Funded status = fair value of plan assets – pension (benefit) obligation, both at year-end"
+        },
+        {
+          "label": "代入",
+          "content": "= EUR 1,480 million – EUR 1,440 million"
+        },
+        {
+          "label": "结果",
+          "content": "= +EUR 40 million (overfunded)"
+        },
+        {
+          "label": "陷阱",
+          "content": "Use END-of-year values for both; a positive result means overfunded (assets > obligation)."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-clerc-6",
+      "case": "FSA-mock-clerc",
+      "topic": "FSA",
+      "module": "Employee Compensation: Post-Employment and Share-Based",
+      "los": "Share-based comp expense: grant-date fair value over vesting period",
+      "type": "calc",
+      "stem": "For the current year, Lonza's compensation expense related to its stock options will be:",
+      "choices": {
+        "A": "EUR 1.2 million.",
+        "B": "EUR 2.4 million.",
+        "C": "EUR 7.2 million."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the amount of compensation expense that Lonza will recognize on its income statement in the most recent year is calculated as follows: Compensation expense = (Number of options granted x Fair value of options at grant date) / Number of years in vesting period = (4 million x EUR 1.8 per option) / 3 = EUR 7.2 million / 3 = EUR 2.4 million.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Annual comp expense = (options granted × grant-date fair value) ÷ vesting period"
+        },
+        {
+          "label": "代入",
+          "content": "= (4 million × EUR 1.8) / 3 years"
+        },
+        {
+          "label": "结果",
+          "content": "= EUR 7.2 million / 3 = EUR 2.4 million"
+        },
+        {
+          "label": "陷阱",
+          "content": "Amortize over the 3-year VESTING period, not the 6-year life; EUR 7.2m is the total, not the annual expense."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-clerc-7",
+      "case": "FSA-mock-clerc",
+      "topic": "FSA",
+      "module": "Analysis of Financial Institutions",
+      "los": "Effect of RSU issuance (non-cash) on free-cash-flow-to-revenue",
+      "type": "concept",
+      "stem": "After the issuance of Lonza's RSUs, the profitability measure used by Clerc would:",
+      "choices": {
+        "A": "decrease.",
+        "B": "remain the same.",
+        "C": "increase."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because the issuance of RSUs is a non-cash event that does not affect free cash flow nor revenues. The ratio of free cash flow to revenues would have decreased if the RSU were assumed to be a cash event.",
+        "B": "B is correct because the issuance of RSUs has no effect on cash flows and has no impact on revenues. As a result, the ratio of free cash flows to revenues will be unchanged immediately after the RSU issuance.",
+        "C": "C is incorrect because both free cash flow and revenues are not affected by the RSU issuance."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-clerc-8",
+      "case": "FSA-mock-clerc",
+      "topic": "FSA",
+      "module": "Analysis of Financial Institutions",
+      "los": "Interpreting LCR and NSFR (Basel III / CAMELS liquidity)",
+      "type": "concept",
+      "stem": "Based on Lonza's liquidity ratios at the end of the most recent year, which of the following is correct?",
+      "choices": {
+        "A": "Lonza's Net Stable Funding Ratio has deteriorated from the prior year",
+        "B": "Lonza's required stable funding is higher than its available stable funding",
+        "C": "Lonza can withstand cash outflows 5% higher than its 30-day liquidity needs in a stress scenario"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because a higher Net Stable Funding ratio indicated improvement, i.e. it indicates that an institution has a higher amount of available net stable funding compared with required net stable funding. In Lonza's case, the ratio has increased from 90% to 95% and has therefore improved, not deteriorated.",
+        "B": "B is correct because the Net Stable Funding ratio is below 100%, which indicates that required stable funding is higher than available stable funding at the end of the most recent year. The Net Stable Funding Ratio is defined as the ratio of Available Stable Funding (numerator) over Required Stable Funding (denominator).",
+        "C": "C is incorrect because at the end of the most recent year, Lonza's Liquidity Coverage ratio is 95%, which indicates that it can only withstand cash flows that are 5% below (not above) its 30-day liquidity needs in a stress scenario."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-kassam-13",
+      "case": "EQ-mock-kassam",
+      "topic": "Equity",
+      "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
+      "los": "EV/EBITDA: computing enterprise value",
+      "type": "calc",
+      "stem": "Erebor's EV/EBIDTA ratio is closest to:",
+      "choices": {
+        "A": "9.",
+        "B": "14.",
+        "C": "22."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "Enterprise Value = Market value of common equity + Market value of preferred stock + Market value of debt – cash and investments (specifically, cash, cash equivalents, and short-term investments). EV = (550 + 210 + 880 – 375) = 1,265. EV/EBIDTA = 1,265/90 = 14.056 ≈ 14.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "EV = MV(common equity) + MV(preferred) + MV(debt) – cash & equivalents; then EV/EBITDA"
+        },
+        {
+          "label": "代入",
+          "content": "EV = 550 + 210 + 880 – 375 = 1,265; EBITDA = 90"
+        },
+        {
+          "label": "结果",
+          "content": "EV/EBITDA = 1,265/90 = 14.056 ≈ 14"
+        },
+        {
+          "label": "陷阱",
+          "content": "Use MARKET values (not book), and subtract cash; EBITDA is the last reported $90m."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-kassam-14",
+      "case": "EQ-mock-kassam",
+      "topic": "Equity",
+      "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
+      "los": "PEG ratio to identify an overvalued stock",
+      "type": "calc",
+      "stem": "Based on the PEG ratio, which company is overvalued compared to the industry?",
+      "choices": {
+        "A": "Company A",
+        "B": "Company B",
+        "C": "Company C"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because Company A's P/E ratio will be 9.18 (49.75/5.42) and the PEG ratio will be 1.53 (9.18/6.00). Hence, the stock is fairly valued on the basis of the PEG ratio of 1.53 when compared to the sector median of 1.53 (10.7/7).",
+        "B": "B is incorrect because Company B's P/E ratio will be 7.39 (12.63/1.71) and the PEG ratio will be 0.90 (7.39/8.24). Hence, Company B is undervalued on the basis of the PEG ratio of 0.90 when compared to the sector median of 1.53 (10.7/7). Stocks with lower PEG ratios are more attractive than stocks with higher PEG ratios, all else being equal.",
+        "C": "C is correct because the P/E ratio will be 10.7 (31.28/2.93) and the PEG ratio will be 2.37 (10.7/4.50). Company C is overvalued based on the PEG ratio stock of 2.37 when compared to the sector median of 1.53 (10.7/7)."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "PEG = (P/E) ÷ growth rate; higher-than-sector PEG signals overvaluation. Sector PEG = 10.7/7 = 1.53"
+        },
+        {
+          "label": "代入",
+          "content": "A: (49.75/5.42)/6 = 9.18/6 = 1.53; B: (12.63/1.71)/8.24 = 7.39/8.24 = 0.90; C: (31.28/2.93)/4.50 = 10.7/4.50 = 2.37"
+        },
+        {
+          "label": "结果",
+          "content": "Company C's PEG 2.37 > sector 1.53 → overvalued"
+        },
+        {
+          "label": "陷阱",
+          "content": "Divide P/E by the growth rate (as a whole number, e.g., 6 not 0.06); compare each PEG to the sector median 1.53."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-kassam-15",
+      "case": "EQ-mock-kassam",
+      "topic": "Equity",
+      "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
+      "los": "Choosing a stable multiple (P/S) given intangibles and earnings distortion",
+      "type": "concept",
+      "stem": "Which of the following valuation ratios is most suitable for Kassam to value Altair?",
+      "choices": {
+        "A": "Price-to-book ratio",
+        "B": "Price-to-sales ratio",
+        "C": "Price-to-earnings ratio"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because one of the possible drawbacks of the P/B is its inability to capture critical operating assets required in addition to those recognized in financial statements. Intangible assets that are generated internally (as opposed to being acquired) are not shown as assets on a company’s balance sheet. For example, companies account for advertising and marketing as expenses, so the value of internally generated brands, which are created and maintained by advertising and marketing activities, do not appear as assets on a company’s balance sheet under IFRS or US GAAP. Accounting effects such as these may impair the comparability of P/B among companies unless appropriate analyst adjustments are made – hence, it will not be the most suitable indicator for Kassam to use.",
+        "B": "B is correct because Kassam wants to use a stable multiple without making any considerable adjustments to reported financials, P/S is a suitable multiple. Sales are generally less subject to distortion or manipulation than are other fundamentals, such as EPS or book value and because sales are generally more stable than EPS, which reflects operating and financial leverage, P/S is generally more stable than P/E.",
+        "C": "C is incorrect because earnings are more prone to manipulation due to discretionary accounting decision about expenses which can distort EPS as a reflection of economic performance. Hence, such distortions may affect the comparability of P/Es among companies and will not be the most suitable indicator for Kassam to use without making any adjustments."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-kassam-16",
+      "case": "EQ-mock-kassam",
+      "topic": "Equity",
+      "module": "Private Company Valuation",
+      "los": "Excess earnings method",
+      "type": "calc",
+      "stem": "Based on Exhibit 3, the value of Becq using the excess earnings method is closest to:",
+      "choices": {
+        "A": "$1,400,000.",
+        "B": "$2,440,000.",
+        "C": "$3,080,000."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the valuation using the excess earnings method involves estimating earnings remaining after deducting amounts that reflect the required returns on working capital and fixed assets (i.e., the tangible assets). This residual amount of earnings (i.e., “excess earnings”) is capitalized by using the growing perpetuity formula from the CCM to obtain an estimate of the value of intangible assets. For valuing the entire business, the values of working capital and fixed assets are added to the capitalized value of intangibles. Required return on working capital (315,000 × 3.25%) = 10,237.50. Required return on fixed assets (725,000 × 8.50%) = 61,625.00. Residual earnings (191,290 – 10,237.50 – 61,625) = 119,427.50. Value of intangible assets 119,427.50 × (1 + 2.50%)/(11.25% – 2.50%) = 1,399,008. Total value of the company (1,399,008 + 315,000 + 725,000) = 2,439,007.86 (closest to 2,440,000).",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Excess earnings = earnings – return on WC – return on FA; capitalize via growing perpetuity, then add WC + FA"
+        },
+        {
+          "label": "代入",
+          "content": "Return on WC = 315,000×3.25% = 10,237.50; return on FA = 725,000×8.50% = 61,625; residual = 191,290 – 10,237.50 – 61,625 = 119,427.50; intangibles = 119,427.50×1.025/(0.1125–0.025) = 1,399,008"
+        },
+        {
+          "label": "结果",
+          "content": "Total value = 1,399,008 + 315,000 + 725,000 = 2,439,008 ≈ $2,440,000"
+        },
+        {
+          "label": "陷阱",
+          "content": "Capitalize the EXCESS earnings (not total earnings), then add back the tangible WC and FA to value the whole business."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-plessinger-17",
+      "case": "FI-mock-plessinger",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Valuing a callable bond on a binomial tree",
+      "type": "calc",
+      "stem": "Based on the binomial interest rate tree, the value of Bond A is closest to:",
+      "choices": {
+        "A": "$102.44.",
+        "B": "$102.87.",
+        "C": "$103.37."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because we start at the end of the tree and work backwards to determine the value at each node recognizing that if the value is greater than 100, it is optimal to call the bond at par (i.e., it is optimal to call the bond at par if the future 1-year rate is less than the coupon of 5%). Because this is a 2-year bond, the relevant rates to use are the Year 0 (2%) and Year 1 rates (4.08% and 6.09%). We start at the end of the interest rate tree, where the bond makes a payment of 105 (principal plus coupon). Interest rates at Year 1 are 6.09% and 4.08% and Year 1 values are computed as follows: At a rate of 6.09%, the bond value is 105/1.0609 = 98.97. At a rate of 4.08%, the value would be 105/1.0408 = 100.88 and the bond would be called at its par value of 100. Year 1 values are then 98.97 and 100. Working backwards to Year 0, with a rate of 2%, we discount the Year 1 values (plus the $5 coupon) to arrive at two values: (100 + 5)/1.02 = 102.9412; (98.97 + 5)/1.02 = 101.9339. With equal probabilities, the value at Year 0 is then the equally weighted average which is 102.4375 or 102.44.",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Backward-induct; at each Year-1 node, if the value > 100 the issuer calls, so cap value at 100 (call when rate < 5% coupon)"
+        },
+        {
+          "label": "代入",
+          "content": "Year 1: 105/1.0609 = 98.97 (kept); 105/1.0408 = 100.88 → called at 100. Year 0: [(100+5)/1.02 + (98.97+5)/1.02]/2"
+        },
+        {
+          "label": "结果",
+          "content": "= (102.9412 + 101.9339)/2 = 102.4375 ≈ 102.44"
+        },
+        {
+          "label": "陷阱",
+          "content": "Issuer's call caps the node value at 100 (the opposite of a put); add the $5 coupon at each node before discounting at 2%."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-plessinger-18",
+      "case": "FI-mock-plessinger",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Effective convexity of a putable bond cannot be negative",
+      "type": "concept",
+      "stem": "The effective convexity of Bond B:",
+      "choices": {
+        "A": "cannot be negative.",
+        "B": "will become negative if the rate in Year 1 is less than the bond's coupon.",
+        "C": "will become negative if the rate in Year 1 is greater than the bond's coupon."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because an option-free bond has positive convexity, and the addition of the right to put the bond back to the issuing firm reinforces this. Consequently, the convexity of Bond B which is a putable bond cannot be negative.",
+        "B": "B is incorrect because unlike a callable bond, the putable bond B cannot have an effective convexity that is negative. If the Year 1 rate is less than the coupon, the bond would sell at a premium and the put option would not be exercised, effectively making the bond behave like a straight bond (that would have positive convexity).",
+        "C": "C is incorrect because unlike a callable bond, the putable bond B cannot have an effective convexity that is negative. If the Year 1 rate is greater than the coupon, the put option would be in the money and simply provides a floor for its price without affecting the upside price appreciation."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-plessinger-19",
+      "case": "FI-mock-plessinger",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Effect of higher volatility on a callable bond's OAS",
+      "type": "concept",
+      "stem": "Under Plessinger's scenario, the OAS of the corporate bond will:",
+      "choices": {
+        "A": "decrease.",
+        "B": "not change.",
+        "C": "increase."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because under her scenario Plessinger assumes an increase in interest rate volatility (from 20% to 25%) which will lead to a decrease in the callable bond's OAS. We can see this by examining the bond's Z-spread. At zero volatility, the OAS is the Z-spread. For a bond with an embedded option, the Z-spread will capture differences in credit risk, liquidity and optionality relative to the benchmark curve. Increasing the interest rate volatility will increase the value of the embedded option and since we keep the bond price fixed (Z-spread is fixed too), the remaining spread (i.e., the OAS) must decline since Z-spread = OAS + option cost. The OAS is the spread remaining adjusted for the cost of the option.",
+        "B": "B is incorrect because an increase in the assumed interest rate volatility leads to a decrease in the OAS for the callable bond.",
+        "C": "C is incorrect because an increase in the assumed interest rate volatility leads to a decrease in the OAS for the callable bond."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-plessinger-20",
+      "case": "FI-mock-plessinger",
+      "topic": "FI",
+      "module": "Valuation and Analysis of Bonds with Embedded Options",
+      "los": "Valuing a capped floating-rate bond",
+      "type": "concept",
+      "stem": "The value of the capped floating rate bond analyzed by Plessinger is:",
+      "choices": {
+        "A": "less than its par value.",
+        "B": "equal to its par value.",
+        "C": "greater than its par value."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because the capped floater will have its rate limited to 5% and there are instances where the rate could be greater than 5%. The case text states the following: The floater's coupon pays the one-year reference rate annually, set in arrears, and is capped at 5.0%. To evaluate the default-free capped floater we must look at the exhibit that shows the evolution of 1-year rates based on a volatility of 20% and the spot rates from the exhibit. There are two instances where the cap would be in force; in Year 1 if rates are 6.09% and in Year 2 if rates are 7.32%. In both of these instances the floating rate bond will have a value less than its par value of 100. Working backwards, we will arrive at a value less than 100. In the absence of the cap, the floating rate bond would sell at par at each annual reset date.",
+        "B": "B is incorrect because there are cases where the cap will be in effect and as a result the floating rate bond will sell for less than its par value. While the spot rates in the exhibit are all less than the 5% cap, it is the evolution of 1-year rates in the binomial interest rate tree that is used to evaluate the cap and in this case there are rates which exceed the cap.",
+        "C": "C is incorrect because in this case, the capped floating rate bond cannot sell for more than its par value. With the presence of the 5% cap, the capped floater will sell for less than its par value."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-mccormick-29",
+      "case": "EQ-mock-mccormick",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "Choosing FCFF three-stage for changing capital structure",
+      "type": "concept",
+      "stem": "Which of the following is the most appropriate approach to use for valuing Firm A?",
+      "choices": {
+        "A": "Two-stage FCFE model",
+        "B": "Three-stage FCFE model",
+        "C": "Three-stage FCFF model"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because earnings growth follows a three-stage model and FCFF is preferred over FCFE when capital structure is expected to change. Three stages: Since Firm A's earnings will go through a period of gradual decline between the high growth phase and stable growth phase, the overall growth regime is best characterized with three stages. FCFF: FCFE is not appropriate when capital structure is expected to change. For Firm A, highly fluctuating amounts of net borrowing is expected due to primarily debt-financed aggressive growth strategy. Therefore, FCFF is more appropriate than FCFE.",
+        "B": "B is incorrect because FCFE is not appropriate when capital structure is expected to change. For Firm A, highly fluctuating amounts of net borrowing is expected due to primarily debt-financed aggressive growth strategy. Therefore, FCFF is more appropriate than FCFE.",
+        "C": "C is correct because earnings growth follows a three-stage model and FCFF is preferred over FCFE when capital structure is expected to change. Three stages: A common model is a three-stage model with constant growth rates in Stages 1 and 3 and a declining growth rate in Stage 2. Since Firm A's earnings will go through a period of gradual decline between the high growth phase and stable growth phase, the overall growth regime is best characterized with three stages. 1) Stage 1 (high growth stage): Next three years characterized 25%-35% annual growth. 2) Stage 2 (declining growth stage): Period where annual growth rate declines to stable growth level of 2%. 3) Stage 3 (stable growth stage): Time period where annual growth rate is stabilized at the long-term sustainable rate of 2%. In addition, three-stage models are often considered to be good approximations for cash flow streams that, in reality, fluctuate from year to year. Consistently, McCormick's expectations suggest that Firm A's earnings are expected to fluctuate due to the management's aggressive growth strategy. FCFF: Finally, if a company’s capital structure is relatively stable, using FCFE to value equity is more direct and simpler than using FCFF. The FCFF model is often chosen, however, in two other cases: [1] A levered company with negative FCFE and [2] A levered company with a changing capital structure. For Firm A, highly fluctuating amounts of net borrowing is expected due to primarily debt-financed aggressive growth strategy. Therefore, FCFF is more appropriate than FCFE."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-mccormick-30",
+      "case": "EQ-mock-mccormick",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "FCFE from CFO",
+      "type": "calc",
+      "stem": "Firm B's FCFE (in $ millions) is closest to:",
+      "choices": {
+        "A": "425.",
+        "B": "474.",
+        "C": "490."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because Free cash flow to equity (FCFE) can be calculated starting from cash flow from operations (CFO). FCFE = CFO – FCInv + Net borrowing where, CFO: Cash flow from operations = 535; FCInv: Investment in fixed capital = 110; Net borrowing = 65. FCFE = 535 – 110 + 65 = 490."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "FCFE = CFO – FCInv + Net borrowing"
+        },
+        {
+          "label": "代入",
+          "content": "= 535 – 110 + 65"
+        },
+        {
+          "label": "结果",
+          "content": "= 490"
+        },
+        {
+          "label": "陷阱",
+          "content": "Starting from CFO, interest expense is NOT added back (it is not in CFO for equity holders); just subtract FCInv and add net borrowing."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-mccormick-31",
+      "case": "EQ-mock-mccormick",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "Share issuance does not affect FCFE",
+      "type": "concept",
+      "stem": "Given Firm C's announced change, next year's FCFE forecast will most likely:",
+      "choices": {
+        "A": "decrease.",
+        "B": "remain unchanged.",
+        "C": "increase."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because next year's FCFE will not be affected by the common stock issuance. This is because transactions between the company and its shareholders (through cash dividends, share repurchases, and share issuances) do not affect free cash flow.",
+        "B": "B is correct because transactions between the company and its shareholders (through cash dividends, share repurchases, and share issuances) do not affect free cash flow. Transactions that involve exchanging cash flows between the firm and shareholders represent the use of FCFE whereas FCFE represents cash flows available to stockholders and is irrelevant to how firm uses its FCFE.",
+        "C": "C is incorrect because next year's FCFE will not be affected by the common stock issuance. This is because transactions between the company and its shareholders (through cash dividends, share repurchases, and share issuances) do not affect free cash flow."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-mccormick-32",
+      "case": "EQ-mock-mccormick",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "Equity value from FCFF (add non-operating, subtract debt and preferred)",
+      "type": "calc",
+      "stem": "The intrinsic value of Firm D's equity based on FCFF approach is closest to:",
+      "choices": {
+        "A": "$400 million.",
+        "B": "$475 million.",
+        "C": "$550 million."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the intrinsic value of Firm D's equity based on the FCFF approach can be calculated as: Intrinsic value of the equity = Value of operating assets + Value of non-operating assets – Market value of debt – Market value of preferred stock where, Value of operating assets = present value of future FCFF = $800 million; Value of non-operating assets = $75 million; Market value of debt = $250 million; Market value of preferred stock = $150 million. Intrinsic value of the equity = 800 + 75 – 250 – 150 = $475 million.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Equity value = PV(FCFF) + non-operating assets – MV(debt) – MV(preferred)"
+        },
+        {
+          "label": "代入",
+          "content": "= 800 + 75 – 250 – 150"
+        },
+        {
+          "label": "结果",
+          "content": "= $475 million"
+        },
+        {
+          "label": "陷阱",
+          "content": "Add back the $75m excess (non-operating) cash, then subtract BOTH debt and preferred stock from firm value."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-tay-1",
+      "case": "FSA-mock-tay",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "Sustainable sales growth: organic (volume + price) vs. currency",
+      "type": "calc",
+      "stem": "The market with the highest sustainable sales growth rate is:",
+      "choices": {
+        "A": "Thailand.",
+        "B": "Malaysia.",
+        "C": "Hong Kong SAR."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because growth in sales from volume was only 5 percent and price was 0 percent. Growth in net sales was strongly contributed by changes in exchange rate (4 percent). Growth in sales that comes from changes in volume or price is arguably more sustainable than growth in sales that comes from changes in exchange rates.",
+        "B": "B is correct because the growth in sales for Malaysia came from change in volume and price. At 4 + 5 = 9 percent, the organic sales growth was the greatest compared to Thailand (5 + 0 = 5) or Hong Kong SAR (–4 + 8 = 4). Growth in sales that comes from changes in volume or price is arguably more sustainable than growth in sales that comes from changes in exchange rates.",
+        "C": "C is incorrect because overall sustainable sales growth was 4 percent. Growth in price was the highest at 8 percent, while growth in sales from volume was –4 percent. Thus, overall sustainable sales growth was 8 – 4 = 4 percent. This is lower than the 9 percent reported in Malaysia."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Sustainable (organic) sales growth = volume growth + price growth (exclude currency effect)"
+        },
+        {
+          "label": "代入",
+          "content": "Thailand: 5 + 0 = 5%; Malaysia: 4 + 5 = 9%; Hong Kong SAR: –4 + 8 = 4%"
+        },
+        {
+          "label": "结果",
+          "content": "Malaysia has the highest organic growth at 9%"
+        },
+        {
+          "label": "陷阱",
+          "content": "Exclude the foreign-currency component; currency-driven growth (e.g., Thailand's 4%) is not sustainable."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-tay-2",
+      "case": "FSA-mock-tay",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "Temporal method: translation gain/loss with net monetary liability",
+      "type": "concept",
+      "stem": "For the most recent year, as a result of consolidating Creamy's results, Buttery would recognize a:",
+      "choices": {
+        "A": "translation loss in the income statement.",
+        "B": "translation gain in the income statement.",
+        "C": "negative translation adjustment in the balance sheet."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because Creamy had a net monetary liability position and the IDR strengthened against the USD. Using the temporal method, a foreign currency translation loss is recognized in the income statement under these conditions.",
+        "B": "B is incorrect because Creamy had a net monetary liability position and the IDR strengthened against the USD. Using the temporal method, a foreign currency translation loss, not gain, is recognized in the income statement under these conditions.",
+        "C": "C is incorrect because Creamy had a net monetary liability position and the IDR strengthened against the USD. Using the temporal method, a foreign currency translation loss is recognized in the income statement, not a negative translation adjustment in the balance sheet under these conditions."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-tay-3",
+      "case": "FSA-mock-tay",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "Temporal method: which ratio is unchanged after translation",
+      "type": "concept",
+      "stem": "Which of the following ratios for Creamy most likely remains unchanged after translation for the most recent year?",
+      "choices": {
+        "A": "Current ratio",
+        "B": "COGS to sales ratio",
+        "C": "Sales to receivables ratio"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because current ratio = current assets / current liabilities and the numerator and denominator are translated using different exchange rates. Current assets comprise both monetary assets (cash, receivables) and non-monetary assets (inventory) and current liabilities tend to be monetary in nature. Most liabilities are monetary liabilities. Under the temporal method, monetary assets and liabilities are translated at the year end rate of 14,000. Inventory is a non-monetary asset and it is translated using the weighted average historical exchange rate when purchased or 14,700. This changes the numerator after translation. The denominator which is current liabilities are mostly monetary and translated at the year end rate of 14,000. Accordingly, the current ratio after translation changes. Inventory is translated at the historical exchange rate under the temporal method.",
+        "B": "B is correct because both the numerator and denominator are translated at the same rate resulting in the translated ratio being the same as the ratio in local currency. Under the temporal method, sales is translated using the average rate and COGS is translated at the historical exchange rate that inventory was purchased. Both the average rate and the weighted average historical rate when inventory was purchased rate are 14,700. The numerator and denominator are translated at the same rate. Accordingly, the translated ratio is the same as the ratio calculated using the local currency. Cost of goods sold is translated using the exchange rates that existed when the inventory items assumed to have been sold during the year were acquired.",
+        "C": "C is incorrect because the numerator and denominator are translated using different exchange rates. Under the temporal method, sales (the numerator) is translated using the average rate of 14,700. Receivables (the denominator) are monetary assets and translated at the year end rate of 14,000. Accordingly, the ratio after translation changes and is different from the ratio calculated using the local currency."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-tay-4",
+      "case": "FSA-mock-tay",
+      "topic": "FSA",
+      "module": "Multinational Operations",
+      "los": "IAS 29 restatement of non-monetary items in hyperinflation",
+      "type": "concept",
+      "stem": "If Tay's expectation is correct, when translating Dairy's current year financial statements, Buttery is required to restate Dairy's:",
+      "choices": {
+        "A": "inventory.",
+        "B": "accounts payable.",
+        "C": "accounts receivable."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because non-monetary assets are restated for changes in the general purchasing power of the monetary unit and then the inflation adjusted statements are translated using the current exchange rate. IFRS require the foreign currency financial statements first to be restated for inflation using the procedures of IAS 29. The restated cost is determined by applying to the historical cost the change in the general price index from the date of acquisition to the balance sheet date. Since inventory is carried at historical cost, the restated cost is determined by applying to the historical cost the change in the general price index from the date of acquisition to the balance sheet date before translation.",
+        "B": "B is incorrect because under IAS 29, monetary items (such as cash, accounts receivable and accounts payable) are not restated because they are already expressed in terms of the monetary unit current at the balance sheet date.",
+        "C": "C is incorrect because under IAS 29, monetary items (such as cash, accounts receivables and accounts payable) are not restated because they are already expressed in terms of the monetary unit current at the balance sheet date."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-xiaoli-17",
+      "case": "FI-mock-xiaoli",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "Term structure theories: segmented markets",
+      "type": "concept",
+      "stem": "Li's observations about the shape of the yield curve are most consistent with the:",
+      "choices": {
+        "A": "preferred habitat theory.",
+        "B": "liquidity preference theory.",
+        "C": "segmented markets theory."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because Li’s view of the market is not supported by the preferred habitat theory. Under the preferred habitat theory, investors will strongly prefer to transact within a defined maturity range, but if yields are sufficiently attractive outside that range, they will migrate to the alternative maturities.",
+        "B": "B is incorrect because Li’s view of the market is not supported by the liquidity preference theory. Under the liquidity preference theory, forward rates are not unbiased estimates of future spot rates, because investors expect to earn a liquidity premium that increases the farther out on the yield curve they go. The liquidity preference theory is inconsistent with borrower and lender preferences influencing the shape of the yield curve.",
+        "C": "C is correct because Li’s view of the market is supported by the segmented markets theory. This theory assumes that investors access the bond market only in specific maturity ranges, and will not move outside those ranges even if yields become more attractive in alternative maturities."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-xiaoli-18",
+      "case": "FI-mock-xiaoli",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "Forward rate framework: valuation when future spot < forward",
+      "type": "concept",
+      "stem": "Given his forecast, Li should consider a 5-year zero-coupon bond today to be:",
+      "choices": {
+        "A": "undervalued.",
+        "B": "fairly valued.",
+        "C": "overvalued."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because if Li’s forecast is correct, bond cash flows are currently being discounted at higher rates than the rates that will be used to discount them in the future, so 5-year bonds are currently undervalued. The current bond value is based on the implied forward rate observed for those final two years, and the bond's value will be higher if that two-year rate is lower in the future.",
+        "B": "B is incorrect because a bond will be fairly valued today only if future spot rates equal implied forward rates calculated using today's yield curve. In this case, future spot rates are forecasted to be lower than implied forward rates, which means bond cash flows are presently being discounted at too high a rate, producing a price that is low relative to fair value.",
+        "C": "C is incorrect because a bond will be overvalued today only if future spot rates exceed implied forward rates calculated using today's yield curve. In this case, future spot rates are forecasted to be lower than implied forward rates, which means bond cash flows are presently being discounted at too high a rate, producing a price that is low relative to fair value."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-xiaoli-19",
+      "case": "FI-mock-xiaoli",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "Riding the yield curve: buy maturity longer than horizon",
+      "type": "concept",
+      "stem": "To implement the strategy for Client A, Li should buy a:",
+      "choices": {
+        "A": "1-year government bond.",
+        "B": "2-year government bond.",
+        "C": "3-year government bond."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because riding the yield curve involves buying securities with maturities that are greater than the investor’s investment horizon. In this case, the investment horizon is two years, so buying a one-year security would not be correct.",
+        "B": "B is incorrect because riding the yield curve involves buying securities with maturities that are greater than the investor’s investment horizon. In this case, the investment horizon is two years, so buying a two-year security would not be correct.",
+        "C": "C is correct because riding the yield curve involves buying securities with maturities that are greater than the investor’s investment horizon. In this case, the investment horizon is two years, and the correct security to purchase has a three-year maturity. When the yield curve is upward sloping (as in Exhibit 1) and the investor does not expect a change in its level or shape, conditions are favorable for this strategy. The investor buys a security with a longer maturity than the investment horizon, and sells when the investment horizon date is reached. Assuming an upward-sloping yield curve, the passage of time causes the yield on the bond to decrease, which provides extra return to the investor."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-xiaoli-20",
+      "case": "FI-mock-xiaoli",
+      "topic": "FI",
+      "module": "The Term Structure and Interest Rate Dynamics",
+      "los": "Annualizing yield volatility; key rate duration vs. volatility term structure",
+      "type": "calc",
+      "stem": "Are Li's calculation and conclusion related to key rate duration and term structure volatility correct?",
+      "choices": {
+        "A": "Yes",
+        "B": "No, only his annualized volatility estimate is correct",
+        "C": "No, only his conclusion related to key rate duration and term structure volatility is correct"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because although the annualized volatility estimate is calculated correctly, the statement about key rate duration and yield curve volatility is incorrect.",
+        "B": "B is correct because the monthly standard deviation of yield curve volatility can be annualized by multiplying it by the square root of 12. So, 3.25% ×12^(1/2) ≈11.26%.",
+        "C": "C is incorrect because while it is true that longer-term securities have higher key rate durations, the volatility term structure typically shows that short-term rates are more volatile than long-term rates. Key rate duration measures the effect on a bond's price of a change in yield at a particular point on the yield curve. However, key rate duration does not measure the propensity of rates at different maturities to be volatile."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Annualized yield volatility = monthly standard deviation × √12; key rate duration ≠ measure of rate volatility"
+        },
+        {
+          "label": "代入",
+          "content": "3.25% × √12 = 3.25% × 3.4641 ≈ 11.26% (calculation correct)"
+        },
+        {
+          "label": "结果",
+          "content": "Volatility estimate is correct, but the KRD conclusion is wrong → answer B"
+        },
+        {
+          "label": "陷阱",
+          "content": "Short-term rates are typically MORE volatile than long-term rates; high KRD does not imply high term-structure volatility."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-mcandrew-21",
+      "case": "FSA-mock-mcandrew",
+      "topic": "FSA",
+      "module": "Intercorporate Investments",
+      "los": "SPE consolidation under IFRS (control) and debt-to-assets",
+      "type": "concept",
+      "stem": "Acme's consolidated debt-to-assets ratio would most likely be:",
+      "choices": {
+        "A": "lower under Option 1 compared to Option 2.",
+        "B": "the same under either Option 1 or Option 2.",
+        "C": "higher under Option 1 compared to Option 2."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because Acme has the ability to influence the financial and operating policy of the SPE and will absorb any losses the SPE may incur, and is thus exposed to variable returns from the SPE. Therefore, the consolidated balance sheet (of Acme) would look exactly the same as if it borrowed directly against the receivables.",
+        "B": "B is correct because IFRS require consolidation if the substance of the relationship indicates control by the sponsor. Under IFRS 10, Consolidated Financial Statements and SIC-12, Consolidation-Special Purpose Entities, the definition of control extends to a broad range of activities. The control concept requires judgment and evaluation of relevant factors to determine whether control exists. Control is present when 1) the investor has the ability to exert influence on the financial and operating policy of the entity; and 2) is exposed, or has rights, to variable returns from its involvement with the investee. Acme has the ability to influence the financial and operating policy of the SPE and will absorb any losses the SPE may incur, and is thus exposed to variable returns from the SPE. Therefore, the consolidated balance sheet (of Acme) would look exactly the same as if it borrowed directly against the receivables.",
+        "C": "C is incorrect because IFRS require consolidation if the substance of the relationship indicates control by the sponsor. Acme has the ability to influence the financial and operating policy of the SPE and will absorb any losses the SPE may incur, and is thus exposed to variable returns from the SPE. Therefore, the consolidated balance sheet (of Acme) would look exactly the same as if it borrowed directly against the receivables."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-mcandrew-22",
+      "case": "FSA-mock-mcandrew",
+      "topic": "FSA",
+      "module": "Financial Reporting Quality",
+      "los": "Accounting warning signs of net income overstatement",
+      "type": "concept",
+      "stem": "Which observation is most likely a potential accounting warning sign related to the overstatement of net income?",
+      "choices": {
+        "A": "Observation 1",
+        "B": "Observation 2",
+        "C": "Observation 3"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because a higher (not lower) growth rate in receivables compared to revenue is a potential accounting warning sign of overstated or accelerated revenue recognition, which would lead to overstatement of net income.",
+        "B": "B is correct because management compensation that is largely tied to financial results is a potential accounting warning sign related to overstated net income.",
+        "C": "C is incorrect because longer (not shorter) depreciable lives would be a potential accounting warning sign related to overstated net income."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-mcandrew-23",
+      "case": "FSA-mock-mcandrew",
+      "topic": "FSA",
+      "module": "Financial Reporting Quality",
+      "los": "Interpreting Beneish M-score and Altman Z-score trends",
+      "type": "concept",
+      "stem": "The trend in Beneish M-scores and Altman Z-scores most likely indicates that:",
+      "choices": {
+        "A": "the likelihood of misreporting and the likelihood of bankruptcy have both increased.",
+        "B": "the likelihood of misreporting has increased, but the likelihood of bankruptcy has decreased.",
+        "C": "the likelihood of misreporting has decreased, but the likelihood of bankruptcy has increased."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because higher M-scores (i.e., less negative numbers) indicate an increased probability of earnings manipulation and a higher Z-score is better. Acme's M-scores and Z-scores have both declined steadily. A decline in both M-scores and Z-scores would most likely indicate that the likelihood of misreporting (M-score) has decreased, but the likelihood of bankruptcy (Z-score) has increased.",
+        "B": "B is incorrect because higher M-scores (i.e., less negative numbers) indicate an increased probability of earnings manipulation and a higher Z-score is better. Acme's M-scores and Z-scores have both declined steadily. A decline in both M-scores and Z-scores would most likely indicate that the likelihood of misreporting (M-score) has decreased, but the likelihood of bankruptcy (Z-score) has increased.",
+        "C": "C is correct because higher M-scores (i.e., less negative numbers) indicate an increased probability of earnings manipulation and a higher Z-score is better. A decline in both M-scores and Z-scores would most likely indicate that the likelihood of misreporting (M-score) has decreased, but the likelihood of bankruptcy (Z-score) has increased."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FSA-mock-mcandrew-24",
+      "case": "FSA-mock-mcandrew",
+      "topic": "FSA",
+      "module": "Financial Reporting Quality",
+      "los": "Cash-flow-based accruals ratio",
+      "type": "calc",
+      "stem": "Acme's cash-flow-based accruals ratio for the most recent year is closest to:",
+      "choices": {
+        "A": "12.3%.",
+        "B": "14.8%.",
+        "C": "18.4%."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because the cash-flow-based accruals ratio is computed using the following equation: [NI – (CFO + CFI)]/Average NOA where: NI = net income; CFO = operating cash flow; CFI = investing cash flow; NOA = average net operating assets. Acme's cash-flow-based accruals ratio = [7,050 – (9,826 – 8,410)]/45,894 ≈ 0.1228 ≈ 12.3%.",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Cash-flow-based accruals ratio = [NI – (CFO + CFI)] / average NOA"
+        },
+        {
+          "label": "代入",
+          "content": "= [7,050 – (9,826 + (–8,410))] / 45,894 = [7,050 – 1,416] / 45,894"
+        },
+        {
+          "label": "结果",
+          "content": "= 5,634 / 45,894 ≈ 0.1228 ≈ 12.3%"
+        },
+        {
+          "label": "陷阱",
+          "content": "CFI is negative (–8,410) so CFO + CFI = 1,416; ignore financing cash flow entirely."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-bala-25",
+      "case": "EQ-mock-bala",
+      "topic": "Equity",
+      "module": "Free Cash Flow Valuation",
+      "los": "Choosing a model when dividends exceed FCFE",
+      "type": "concept",
+      "stem": "Which of the following valuation models is most appropriate for Firm A?",
+      "choices": {
+        "A": "Free cash flow model",
+        "B": "Residual income model",
+        "C": "Dividend discount model"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because Firm A is planning significant expansion, which will result in dividends exceeding free cash flow to equity. Generally, defining returns as free cash flow and using the FCFE (and FCFF) models are most suitable when the company is dividend-paying but dividends significantly exceed or fall short of free cash flow to equity.",
+        "B": "B is incorrect because the residual income model relies on the quality of accounting to be good, so that an analyst can appropriately adjust net income and book value. If the quality of accounting disclosure is good, the analyst may be able to calculate residual income by making appropriate adjustments (to reported net income and book value, in particular). In some cases, the degree of distortion and the quality of accounting disclosure can be such that the application of the residual income model is error-prone.",
+        "C": "C is incorrect because Firm A is planning to maintain dividend payments at pre-expansion levels, regardless of future profitability. The DDM is most suitable when the board of directors has established a dividend policy that bears an understandable and consistent relationship to the company’s profitability. The fact that the dividend payout ratio has been stable for the last 10 years is not relevant going forward."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-bala-26",
+      "case": "EQ-mock-bala",
+      "topic": "Equity",
+      "module": "Discounted Dividend Valuation",
+      "los": "Multi-year DDM with terminal price; fair-value band",
+      "type": "calc",
+      "stem": "Based on the dividend discount model, Bala should consider Firm B’s common stock to be:",
+      "choices": {
+        "A": "undervalued.",
+        "B": "fairly valued.",
+        "C": "overvalued."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "A is incorrect because the current share price of $19.00 is only 1.6% above the fair value of $18.70. Given ValEwe's valuation policy of considering a stock to be fairly valued if its price is within 2% of its estimated fair value, Firm B should be considered fairly valued.",
+        "B": "B is correct because the value of Firm B’s stock is the present value of the expected dividends for the next three years plus the present value of the expected price at the end of Year 3. V0 = D1/(1 + r)1 + D2/(1 + r)2 + D3/(1 + r)3 + P3/(1 + r)3 where: D1 = expected dividend received at the end of Year 1; D2 = expected dividend received at the end of Year 2; D3 = expected dividend received at the end of Year 3; P3 = expected price at the end of Year 3 = $21.50; r = required return on equity = 8.0%. Given a dividend payout ratio of 40% (= 1 – retention ratio = 1 – 60%), D1 = EPS1 × dividend payout ratio = $1.27 × 40% = $0.51; D2 = EPS2 × dividend payout ratio = $1.62 × 40% = $0.65; D3 = EPS3 × dividend payout ratio = $1.91 × 40% = $0.76. V0 = $0.51/(1.08)1 + $0.65/(1.08)2 + $0.76/(1.08)3 + $21.50/(1.08)3 = $18.70. The current share price of $19.00 is only 1.6% above this estimate of $18.70. Given ValEwe's valuation policy of considering a stock to be fairly valued if its price is within 2% of its estimated fair value, Firm B should be considered fairly valued.",
+        "C": "C is incorrect because the current price of $19.00 is only 1.6% above the fair value of $18.70. Given ValEwe's valuation policy of considering a stock to be fairly valued if its price is within 2% of its estimated fair value, Firm B should be considered fairly valued."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "V0 = Σ Dt/(1+r)^t + P3/(1+r)^3; Dt = EPSt × payout ratio; payout = 1 – retention = 40%"
+        },
+        {
+          "label": "代入",
+          "content": "D1=1.27×40%=0.51, D2=1.62×40%=0.65, D3=1.91×40%=0.76; V0 = 0.51/1.08 + 0.65/1.08^2 + 0.76/1.08^3 + 21.50/1.08^3"
+        },
+        {
+          "label": "结果",
+          "content": "V0 = $18.70; price $19.00 is 1.6% above → within 2% band → fairly valued"
+        },
+        {
+          "label": "陷阱",
+          "content": "Payout = 1 – retention (40%), not 60%; the $19.00 vs $18.70 gap (1.6%) is inside the 2% fair-value band."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-bala-27",
+      "case": "EQ-mock-bala",
+      "topic": "Equity",
+      "module": "Discounted Dividend Valuation",
+      "los": "Sustainable growth rate via DuPont (g = b × ROE)",
+      "type": "calc",
+      "stem": "Based on the DuPont model, the sustainable growth rate for Firm C is closest to:",
+      "choices": {
+        "A": "5.14%.",
+        "B": "7.57%.",
+        "C": "9.25%."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "See correct answer C.",
+        "B": "See correct answer C.",
+        "C": "C is correct because the sustainable growth rate is the rate of dividend (and earnings) growth that can be sustained for a given level of return on equity, assuming that the capital structure is constant through time and that additional common stock is not issued. Based on the DuPont model, the sustainable growth rate can be expressed as a function of profit margin, retention rate, asset turnover, and financial leverage: g = (1 – Dividend Payout Ratio) × Net Profit Margin × Total Asset Turnover × (Total Assets/Equity). For Firm C, g = (1 – 45%) × 11.5% × 0.65 × 2.25 = 9.25%"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "g = retention rate × ROE, with ROE via DuPont = net profit margin × asset turnover × (assets/equity)"
+        },
+        {
+          "label": "代入",
+          "content": "g = (1 – 45%) × 11.5% × 0.65 × 2.25"
+        },
+        {
+          "label": "结果",
+          "content": "= 0.55 × 0.115 × 0.65 × 2.25 = 9.25%"
+        },
+        {
+          "label": "陷阱",
+          "content": "Retention = 1 – payout (0.55); multiply all three DuPont components for ROE before applying retention."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "EQ-mock-bala-28",
+      "case": "EQ-mock-bala",
+      "topic": "Equity",
+      "module": "Discounted Dividend Valuation",
+      "los": "Gordon growth sensitivity when r and g rise equally",
+      "type": "concept",
+      "stem": "Under Bala's sensitivity scenario, Firm C's estimated share price is expected to:",
+      "choices": {
+        "A": "decrease.",
+        "B": "stay the same.",
+        "C": "increase."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because, although the spread between the cost of equity and the earnings growth rate remains constant, next year’s dividend will increase, thereby resulting in a higher estimated stock price.",
+        "B": "See correct answer C.",
+        "C": "C is correct because the formula for valuing a firm's common stock with the Gordon growth model is V0 = D0 × (1 + g) / (r – g), where D0 = dividend just paid; g = expected constant growth rate in dividends (or earnings); r = cost of equity. So, if the numerator goes up (g increases) while the denominator stays the same (both r and g increase by the same amount), V0 increases."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-kehoe-29",
+      "case": "FI-mock-kehoe",
+      "topic": "FI",
+      "module": "Credit Analysis Models",
+      "los": "Credit analysis approaches for a granular homogeneous ABS",
+      "type": "concept",
+      "stem": "Based on the characteristics of the receivables backing the ABS, which credit analysis approach is most appropriate?",
+      "choices": {
+        "A": "Loan-by-loan",
+        "B": "Portfolio-based",
+        "C": "Statistics-based"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "A is incorrect because a loan-by-loan approach is more appropriate for non-granular, heterogeneous portfolios. The ABS in the fund portfolio is homogeneous and granular because there are many relatively small receivables in the pool. A loan-by-loan approach would be inefficient because of the large number of basically similar loans.",
+        "B": "B is incorrect because short-term structured finance vehicles with granular, homogeneous assets tend to be evaluated using a statistics-based approach to the existing book of loans. If the risk horizon were medium-term, a portfolio-based approach would be more appropriate because the portfolio is not static but changes over time.",
+        "C": "C is correct because short-term structured finance vehicles with granular, homogeneous assets tend to be evaluated using a statistics-based approach to the existing book of loans. The credit card ABS is granular, with many small loans relative to the size of the total portfolio. The credit card receivables are also homogeneous, and the risk horizon is short-term. Investors in this type of ABS will base their probability of default on the mean default probability, recovery rate, and variance of a portfolio of borrowers reflecting the distribution of FICO scores within the pool rather than conducting an analysis of individual borrowers. These statistics are sufficient to gauge the key credit metrics of the loan pool and therefore point to a statistics-based approach for credit analysis."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-kehoe-30",
+      "case": "FI-mock-kehoe",
+      "topic": "FI",
+      "module": "Credit Analysis Models",
+      "los": "Expected 1-year total return under a transition matrix",
+      "type": "calc",
+      "stem": "Based on the 1-year corporate transition matrix, the expected 1-year total return on the Valisker bond is closest to:",
+      "choices": {
+        "A": "2.48%.",
+        "B": "2.56%.",
+        "C": "2.65%."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "A is correct because the expected return on the bond over the next year is its YTM minus the expected percentage change in the bond value over the year. First, we must calculate the expected percentage price change for each possible transition as the product of the modified duration and the change in the spread: From AA to AAA: –2.82 × (0.65% – 0.95%) = +0.846%; From AA to A: –2.82 × (1.20% – 0.95%) = –0.705%; From AA to BBB: –2.82 × (1.80% – 0.95%) = –2.397%; From AA to BB: –2.82 × (3.60% – 0.95%) = –7.473%. The probabilities of migration can now be used to calculate the expected percentage change in the bond value over the year. The expected percentage change in bond value for an AA-rated corporate bond is found by multiplying each expected percentage price change by its respective credit transition probability found in the row associated with the AA rating and summing the products: (0.02 × 0.846%) + (0.88 × 0%) + (0.08 × –0.705%) + (0.014 × –2.397%) + (0.006 × –7.473%) = –0.11788%. Therefore, the expected return on the bond over the next year is its YTM minus 0.11788%: 2.60% – 0.11788% = 2.48212% ~ 2.48%.",
+        "B": "See correct answer A.",
+        "C": "See correct answer A."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Expected return = YTM + Σ [ (–ModDur × Δspread) × probability ] using the AA-rating row"
+        },
+        {
+          "label": "代入",
+          "content": "Price changes: AA→AAA +0.846%, AA→A –0.705%, AA→BBB –2.397%, AA→BB –7.473%; weight by 0.02, 0.88(stay), 0.08, 0.014, 0.006"
+        },
+        {
+          "label": "结果",
+          "content": "Expected % change = –0.11788%; return = 2.60% – 0.11788% = 2.48%"
+        },
+        {
+          "label": "陷阱",
+          "content": "Δspread is measured from the current AA spread (0.95%); staying AA (prob 0.88) has 0% change; add YTM back."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-kehoe-31",
+      "case": "FI-mock-kehoe",
+      "topic": "FI",
+      "module": "Credit Default Swaps",
+      "los": "CDS upfront premium ≈ (spread – coupon) × duration",
+      "type": "calc",
+      "stem": "The upfront premium the fund would receive for purchasing the CDS protection on Gonk Industries is closest to:",
+      "choices": {
+        "A": "$200,000.",
+        "B": "$225,000.",
+        "C": "$250,000."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because an approximation for the upfront premium is (Credit spread – Fixed coupon rate) × Duration of the CDS. To buy 5-year CDS protection, an investor would have to pay a 500 bps coupon plus the present value of the difference between that coupon and the current market spread (400 bps). In this case, the upfront premium is approximately: Upfront premium % ≈ (Credit spread – Fixed coupon) × Duration = (4.0% – 5.0%) × 4.5 = –4.5%. The upfront premium is then converted to a dollar value: Upfront premium % × Notional = –4.5% × $5,000,000 = –$225,000. Because the company’s credit spread is less than the fixed coupon, the protection seller must pay the upfront premium to the protection buyer.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Upfront premium % ≈ (credit spread – fixed coupon) × CDS duration; then × notional"
+        },
+        {
+          "label": "代入",
+          "content": "= (4.0% – 5.0%) × 4.5 = –4.5%; × $5,000,000"
+        },
+        {
+          "label": "结果",
+          "content": "= –$225,000 (negative → protection buyer RECEIVES it because spread < coupon)"
+        },
+        {
+          "label": "陷阱",
+          "content": "Spread (4%) < coupon (5%) makes the premium negative, so the buyer receives $225,000; use the CDS duration 4.5, not the bond's."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "FI-mock-kehoe-32",
+      "case": "FI-mock-kehoe",
+      "topic": "FI",
+      "module": "Credit Default Swaps",
+      "los": "CDS cash settlement via cheapest-to-deliver (rank-eligible)",
+      "type": "calc",
+      "stem": "The cash settlement amount for the fund from the Gonk Industries CDS is closest to:",
+      "choices": {
+        "A": "$3,000,000.",
+        "B": "$3,500,000.",
+        "C": "$4,000,000."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "See correct answer B.",
+        "B": "B is correct because the cheapest-to-deliver, or lowest-priced, instrument is the 7-year senior unsecured bond trading at 30% of par. Although the 3-year bond trades at a lower price, it is subordinated and, therefore, does not qualify for coverage under the CDS. Note that, even though the reference bond for the CDS is the 5-year bond, the fund will receive payment on the CDS based on the cheapest-to-deliver obligation regardless of maturity. Any debt obligation issued by the borrower that is ranked equal to or higher than the reference obligation with respect to the priority of claims is covered. Loss given default (LGD) = 1 – Recovery rate (%) = 1 – 30% = 70%. Payout amount = LGD × Notional = 70% × $5,000,000 = $3,500,000.",
+        "C": "See correct answer B."
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "Payout = LGD × notional; LGD = 1 – recovery of the cheapest-to-deliver ELIGIBLE (rank ≥ reference) obligation"
+        },
+        {
+          "label": "代入",
+          "content": "CTD eligible = 7-year senior at 30% of par (the 3-year at 20% is subordinated → ineligible); LGD = 1 – 30% = 70%"
+        },
+        {
+          "label": "结果",
+          "content": "Payout = 70% × $5,000,000 = $3,500,000"
+        },
+        {
+          "label": "陷阱",
+          "content": "The subordinated 3-year bond (20%) is cheaper but ranks below the reference obligation, so it does not qualify; use the 7-year senior at 30%."
+        }
+      ],
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    }
+  ]
+}

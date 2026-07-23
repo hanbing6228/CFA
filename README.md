@@ -21,11 +21,13 @@
 | 弱点 | LOS 级正确率看板，🔴 = 复习≥2次且<60%（调度器自动加频这些题） | UWorld/Achievable LOS 级追踪 |
 | 设置 | 考期/额度/AI督学 token/备份导出导入 | — |
 
-## 题库（96 题，全部经对抗性校验）
+## 题库（299 题，全十科覆盖）
 
-- FSA / Equity / FI 各 32 题（A 档三科，权重合计 30–45%），覆盖 71 个 LOS
-- **权威性三重保证**：① 锚定 2026 官方课纲结构（`bank/los_map.json`，经全网校准：2026 权重与 45 个 LM 与 2025 一致）② 每题标注课纲出处 ③ 生成后由独立 agent 对抗性复核——calc 题不看解析从题干重算、干扰项验证"确实等于常见错误算法的结果"、概念题查歧义，96/96 通过（含 3 处修复）
-- 扩题：`prompts/generate_questions.md`（生成）+ `prompts/import_bank.md`（从你自己的真题资料改编导入，1071 道已提取待用）
+- **Mock 真题逐字导入**（`bank/cases_*.json`）：从两套 2026 L2 Mock 逐字提取 50 个完整 vignette / 200 题，覆盖全十科，原文题干/Exhibit 表格/逐选项解析照录，每道计算题带四步推导（源自原卷 Solution）。calc 题全部重算核对通过。
+- **原创补充题**（`FSA/Equity/FI.json + seed.json`）：99 题，早期生成 + 独立 agent 对抗性校验。
+- 题数分布：FSA 59 · FI 56 · Equity 56 · Ethics 24 · QM/PM/Econ/Derivatives 各 20 · Alts 16 · Corp 8。
+- Case 题型：背景 + Exhibit 表格 + 4 连题，同 case 连续出现、背景可折叠（quiz 与 Mock 模式均支持）。
+- 扩库：`import/` 里另有 ~1071 道 .pages 真题待逐字导入；`prompts/import_bank.md` 记录流程。
 - 改完题库跑 `python3 tool/cfa.py build` 重新生成 `app/bank.json`，git push 即更新到手机
 
 ## 🤖 AI 督学（ADHD 适配）
