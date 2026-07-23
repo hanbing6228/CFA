@@ -59,77 +59,70 @@ function renderToday() {
   const { streak, doneToday } = Store.streakInfo();
 
   const ph = Store.phase();
+  const proj = Store.projectedScore();
+  const pClr = proj >= 0.70 ? 'var(--green)' : proj >= 0.60 ? 'var(--amber)' : 'var(--red)';
+
+  // 顶部极简状态条
+  const top = el('div', 'today-top');
+  top.innerHTML = `<span>${ph.icon} ${esc(ph.name)} · 距考 <b>${dte}</b> 天</span>`
+    + (streak > 0 ? `<span>🔥 ${streak}</span>` : '');
+  main.appendChild(top);
+
+  // 主行动卡: 两个数字 + 一个大按钮
   const hero = el('div', 'card hero');
-  hero.appendChild(el('div', 'days',
-    `${ph.icon} <b>${ph.name}</b> · 距考试 <b>${dte}</b> 天<br><span class="muted">${ph.desc}</span>`));
-  hero.appendChild(el('h1', '', doneToday ? '今天已经赢了 ✅' : '今天的仗很小,能赢'));
   const duo = el('div', 'duo');
-  duo.appendChild(el('div', 'card', `<div class="num">${dues.length}</div><div class="lbl">到期复习</div>`));
+  duo.appendChild(el('div', 'card', `<div class="num">${dues.length}</div><div class="lbl">复习</div>`));
   duo.appendChild(el('div', 'card', `<div class="num">${news.length}</div><div class="lbl">新题</div>`));
   hero.appendChild(duo);
-
-  const btn = el('button', 'bigbtn', total ? '开始 · 先做 1 题就算赢' : '今天没有任务 🎉');
+  const btn = el('button', 'bigbtn', doneToday ? '今天已完成 ✅ 再来一组' : (total ? '开始 · 先做 1 题就算赢' : '今天没有任务 🎉'));
   btn.disabled = !total;
   btn.onclick = () => { location.hash = '#quiz'; };
   hero.appendChild(btn);
-
-  const pills = el('div', 'pillrow');
-  pills.appendChild(el('span', 'pill', `⏱ 预计 ${est} 分钟`));
-  if (nLessons) pills.appendChild(el('span', 'pill', `📖 含 ${nLessons} 节微课`));
-  pills.appendChild(el('span', 'pill', `🎯 保留率 ${FSRS.desiredRetention(ec).toFixed(2)}`));
-  if (streak > 0) pills.appendChild(el('span', 'pill', `🔥 连续 ${streak} 天`));
-  if (Store.db.xp > 0) pills.appendChild(el('span', 'pill', `⭐ ${Store.db.xp} XP`));
-  hero.appendChild(pills);
-  if (est > Store.settings().timeBudget) {
-    hero.appendChild(el('p', 'warn', `今天超时间预算了——做完复习就够,新题可跳过`));
-  }
+  hero.appendChild(el('div', 'today-sub', `约 ${est} 分钟${nLessons ? ` · 含 ${nLessons} 节微课` : ''}`));
   main.appendChild(hero);
 
-  if (dues.length) {
-    const byTopic = {};
-    dues.forEach(q => { byTopic[q.topic] = (byTopic[q.topic] || 0) + 1; });
-    const detail = Object.entries(byTopic).sort((a, b) => b[1] - a[1])
-      .map(([t, n]) => `${t}×${n}`).join(' · ');
-    main.appendChild(el('div', 'card muted', `复习分布: ${esc(detail)}`));
-  }
-  // Mock 提示 (冲刺包机制: 百日冲刺每2周, 冲刺包每周)
-  const sinceMock = Store.daysSinceMock();
-  if (ph.key === 'hundred' || ph.key === 'sprint') {
-    const cadence = ph.key === 'sprint' ? 7 : 14;
-    const dueMock = sinceMock >= cadence;
-    const mc = el('div', 'card');
-    mc.appendChild(el('div', '', `📝 <b>Mock 20 题</b> <span class="muted">${sinceMock === Infinity ? '还没做过' : `上次 ${sinceMock} 天前`} · 本阶段每 ${cadence} 天一次</span>`));
-    const mb = el('button', 'bigbtn' + (dueMock ? '' : ' secondary'), dueMock ? '该做 Mock 了 ▸' : '提前做一次 Mock');
-    mb.style.marginTop = '10px';
-    mb.onclick = () => { location.hash = '#mock'; };
-    mc.appendChild(mb);
-    main.appendChild(mc);
+  // 🧠 智能今日聚焦: 高权重×低正确率的科目
+  const ts = Store.topicStats();
+  const ranked = Object.values(ts)
+    .map(s => ({ ...s, gap: (s.weight || 0) * (1 - (s.acc == null ? 0.4 : s.acc)) }))
+    .sort((a, b) => b.gap - a.gap);
+  const focus = ranked[0];
+  if (focus) {
+    const fc = el('div', 'card focus-card');
+    const why = focus.acc == null ? '还没测过, 先探底' : (focus.acc < 0.6 ? '高权重弱项, 攻它最划算' : '保持手感');
+    fc.innerHTML = `<div class="focus-label">🧠 今日聚焦</div>
+      <div class="focus-topic">${esc(focus.topic)} <span class="muted">${esc(focus.name_cn || '')}</span></div>
+      <div class="muted">${why} · 权重~${focus.weight}%${focus.acc != null ? ` · 当前 ${Math.round(focus.acc * 100)}%` : ''}</div>`;
+    const fb = el('button', 'focus-btn', `专攻 ${esc(focus.topic)} ▸`);
+    fb.onclick = () => {
+      Quiz.session = Store.practiceTopic(focus.topic, 10);
+      if (!Quiz.session.length) { toast('这科暂无可练的题'); return; }
+      Quiz.idx = 0; Quiz.right = 0; location.hash = '#quiz';
+    };
+    fc.appendChild(fb);
+    main.appendChild(fc);
   }
 
-  // 作战计划卡: 通过率预测 (可点进详情)
-  const proj = Store.projectedScore();
-  const pClr = proj >= 0.70 ? 'var(--green)' : proj >= 0.60 ? 'var(--amber)' : 'var(--red)';
-  const plan = el('div', 'card');
-  plan.style.cursor = 'pointer';
-  plan.innerHTML = `<div style="display:flex;align-items:center;gap:14px">
-      <div style="text-align:center">
-        <div style="font-size:2rem;font-weight:800;color:${pClr}">${Math.round(proj * 100)}%</div>
-        <div class="lbl">预计得分</div>
-      </div>
-      <div style="flex:1">
-        <b>🎯 作战计划</b> <span class="muted">· 过线约需 70%</span>
-        <div class="muted" style="margin-top:4px">${proj >= 0.70 ? '照这样稳过 ✅' : '还差一口气, 点开看该攻哪科 ▸'}</div>
-      </div>
-      <div style="font-size:1.4rem;color:var(--muted)">▸</div>
-    </div>`;
+  // 通过率(可点进作战计划)
+  const plan = el('div', 'card planbar');
+  plan.innerHTML = `<div class="pb-num" style="color:${pClr}">${Math.round(proj * 100)}%</div>
+    <div class="pb-txt"><b>预计得分</b> <span class="muted">过线~70%</span><div class="muted">${proj >= 0.70 ? '照这样能过 ✅' : '点开看该攻哪科 ▸'}</div></div><div class="pb-arrow">▸</div>`;
   plan.onclick = () => { location.hash = '#plan'; };
   main.appendChild(plan);
 
-  const s = Store.settings();
-  if (!s.ghToken) {
-    const c = el('div', 'card muted',
-      `🤖 AI 督学未连接——去<a href="#settings" style="color:var(--accent)">设置</a>里贴一个 GitHub token,晚上没做题我会来提醒你`);
-    main.appendChild(c);
+  // Mock (仅冲刺阶段到期时提示)
+  const sinceMock = Store.daysSinceMock();
+  if (ph.key === 'hundred' || ph.key === 'sprint') {
+    const cadence = ph.key === 'sprint' ? 7 : 14;
+    if (sinceMock >= cadence) {
+      const mc = el('div', 'card');
+      mc.innerHTML = `📝 <b>该做 Mock 了</b> <span class="muted">· ${sinceMock === Infinity ? '还没做过' : sinceMock + ' 天没做'}</span>`;
+      const mb = el('button', 'bigbtn', '开始 Mock 20 题 ▸');
+      mb.style.marginTop = '10px';
+      mb.onclick = () => { location.hash = '#mock'; };
+      mc.appendChild(mb);
+      main.appendChild(mc);
+    }
   }
 }
 
@@ -663,6 +656,25 @@ function openNodeSheet(node, topic) {
   // 相关题数
   const rel = Store.bank.questions.filter(q => q.topic === topic &&
     (node.los ? (q.los === node.los || (q.los || '').includes(node.los.slice(0, 12))) : (q.module === node.module)));
+  // 关联微课: 有则可当场展开
+  const lesson = node.los && Store.bank.lessons ? Store.bank.lessons[topic + '|' + node.los] : null;
+  if (lesson && lesson.length) {
+    const lBtn = el('button', 'bigbtn secondary', `📖 看这个考点的微课 (${lesson.length} 卡)`);
+    lBtn.onclick = () => {
+      lBtn.style.display = 'none';
+      const box = el('div', 'sheet-lesson');
+      for (const cc of lesson) {
+        const kind = lessonKind(cc.h);
+        const lc = el('div', `lesson-card lk-${kind.cls}`);
+        lc.appendChild(el('h2', '', `${kind.icon} ${esc(cc.h)}`));
+        lc.appendChild(el('div', 'lesson-body', richText(cc.b)));
+        box.appendChild(lc);
+      }
+      panel.insertBefore(box, lBtn.nextSibling);
+    };
+    panel.appendChild(lBtn);
+  }
+
   const practiceBtn = el('button', 'bigbtn', `✍️ 练相关题 (${rel.length} 道)`);
   practiceBtn.disabled = !rel.length;
   practiceBtn.onclick = () => {

@@ -44,8 +44,19 @@ nav a.active { color: var(--accent); }
 h1 { font-size: 1.3rem; margin: 8px 0 4px; }
 h2 { font-size: 1.05rem; margin: 4px 0; }
 
-/* 今日屏 */
-.hero { text-align: center; padding: 22px 16px; }
+/* 今日屏 (精简版) */
+.today-top { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; color: var(--muted); padding: 4px 2px 10px; }
+.today-top b { color: var(--amber); }
+.today-sub { text-align: center; font-size: .8rem; color: var(--muted); margin-top: 10px; }
+.focus-card { border-left: 5px solid var(--accent); }
+.focus-label { font-size: .78rem; color: var(--accent); font-weight: 700; }
+.focus-topic { font-size: 1.25rem; font-weight: 800; margin: 2px 0 4px; }
+.focus-btn { width: 100%; margin-top: 12px; padding: 12px; border-radius: 12px; border: 0; background: var(--accent); color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.planbar { display: flex; align-items: center; gap: 14px; cursor: pointer; }
+.planbar .pb-num { font-size: 2rem; font-weight: 800; flex: 0 0 auto; }
+.planbar .pb-txt { flex: 1; }
+.planbar .pb-arrow { font-size: 1.4rem; color: var(--muted); }
+.hero { text-align: center; padding: 20px 16px; }
 .hero .days { font-size: .85rem; color: var(--muted); }
 .hero .days b { color: var(--amber); font-size: 1.05rem; }
 .duo { display: flex; gap: 12px; }
@@ -68,12 +79,14 @@ h2 { font-size: 1.05rem; margin: 4px 0; }
 .qhead .tag { background: var(--accent-soft); color: var(--accent); border-radius: 6px; padding: 2px 8px; }
 .progress { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; margin-bottom: 14px; }
 .progress i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
-.stem { font-size: 1.02rem; margin-bottom: 14px; white-space: pre-wrap; }
+.stem { font-size: 1.1rem; line-height: 1.7; margin: 4px 0 18px; white-space: pre-wrap; font-weight: 500; }
+.qhint { font-size: .78rem; color: var(--muted); margin: -10px 0 12px; }
 .choice {
-  display: block; width: 100%; text-align: left; margin: 8px 0; padding: 13px 14px;
-  border: 1.5px solid var(--border); border-radius: 12px; background: var(--card);
-  color: var(--text); font-size: .95rem; cursor: pointer; line-height: 1.45;
+  display: block; width: 100%; text-align: left; margin: 10px 0; padding: 15px 16px;
+  border: 1.5px solid var(--border); border-radius: 14px; background: var(--card);
+  color: var(--text); font-size: 1rem; cursor: pointer; line-height: 1.55;
 }
+.choice > b { color: var(--accent); margin-right: 4px; }
 .choice.right { border-color: var(--green); background: var(--green-soft); }
 .choice.wrong { border-color: var(--red); background: var(--red-soft); }
 .choice.dim { opacity: .75 }
@@ -132,6 +145,7 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .sheet-full { font-size: 1.08rem; line-height: 1.65; margin-bottom: 12px; }
 .sheet-kp { font-size: .82rem; color: var(--muted); background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; margin-bottom: 14px; }
 .sheet-panel textarea { min-height: 70px; margin-bottom: 8px; }
+.sheet-lesson { margin: 8px 0; }
 
 /* 作战计划 */
 .planrow { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border); }
