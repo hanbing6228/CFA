@@ -642,6 +642,8 @@ function freqBadge(meta) {
 }
 let FRAME_TOPIC = null;   // 当前脑图科目
 let FRAME_VIEW = 'map';   // map | list
+let FRAMES_MANIFEST = null;   // 原版脑图图片清单 {topic:[png...]}
+fetch('frames/manifest.json').then(r => r.ok ? r.json() : null).then(m => { FRAMES_MANIFEST = m; }).catch(() => {});
 
 /* 全屏脑图浮层: 点节点进来并定位, 支持缩放/平移, 点节点继续聚焦 */
 function openMindmapFS(tree, focusNode) {
@@ -666,6 +668,69 @@ function openMindmapFS(tree, focusNode) {
       if (target) ctl.focus(target);
     }
   });
+}
+
+/* 原版脑图: 全屏图片查看器 (双指缩放/拖动, 多页可翻) */
+function openImageFS(srcs, title) {
+  const list = Array.isArray(srcs) ? srcs : [srcs];
+  let pi = 0;
+  const ov = el('div', 'fs-overlay');
+  const bar = el('div', 'fs-bar');
+  const label = el('span', '', `📄 ${esc(title || '原版脑图')}${list.length > 1 ? ` (${pi + 1}/${list.length})` : ''}`);
+  bar.appendChild(label);
+  const close = el('button', 'fs-close', '✕');
+  close.onclick = () => ov.remove();
+  bar.appendChild(close);
+  ov.appendChild(bar);
+  const box = el('div', 'fs-map');
+  ov.appendChild(box);
+
+  let scale = 1, tx = 0, ty = 0, natW = 0, natH = 0;
+  const img = el('img', 'fsimg', '');
+  box.appendChild(img);
+  const apply = () => { img.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; };
+  function load(i) {
+    img.style.opacity = '0';
+    img.onload = () => {
+      natW = img.naturalWidth; natH = img.naturalHeight;
+      const cw = box.clientWidth, ch = box.clientHeight;
+      scale = Math.min(cw / natW, ch / natH) * 0.98;
+      tx = (cw - natW * scale) / 2; ty = (ch - natH * scale) / 2;
+      apply(); img.style.opacity = '1';
+    };
+    img.src = list[i];
+    label.textContent = `📄 ${title || '原版脑图'}${list.length > 1 ? ` (${i + 1}/${list.length})` : ''}`;
+  }
+  if (list.length > 1) {
+    const nav = el('div', 'fs-imgnav');
+    const prev = el('button', '', '◀'); const next = el('button', '', '▶');
+    prev.onclick = () => { pi = (pi - 1 + list.length) % list.length; load(pi); };
+    next.onclick = () => { pi = (pi + 1) % list.length; load(pi); };
+    nav.appendChild(prev); nav.appendChild(next);
+    ov.appendChild(nav);
+  }
+
+  const pointers = new Map();
+  let lx = 0, ly = 0, pinch = 0;
+  box.addEventListener('pointerdown', e => { box.setPointerCapture(e.pointerId); pointers.set(e.pointerId, { x: e.clientX, y: e.clientY }); if (pointers.size === 1) { lx = e.clientX; ly = e.clientY; } });
+  box.addEventListener('pointermove', e => {
+    if (!pointers.has(e.pointerId)) return;
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const pts = [...pointers.values()];
+    if (pts.length === 2) {
+      const d = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+      const mid = { x: (pts[0].x + pts[1].x) / 2, y: (pts[0].y + pts[1].y) / 2 };
+      const r = box.getBoundingClientRect();
+      if (pinch) { const ns = Math.min(6, Math.max(0.2, scale * d / pinch)); const mx = mid.x - r.left, my = mid.y - r.top; tx = mx - (mx - tx) * (ns / scale); ty = my - (my - ty) * (ns / scale); scale = ns; apply(); }
+      pinch = d;
+    } else if (pointers.size === 1) { tx += e.clientX - lx; ty += e.clientY - ly; lx = e.clientX; ly = e.clientY; apply(); }
+  });
+  const up = e => { pointers.delete(e.pointerId); if (pointers.size < 2) pinch = 0; };
+  box.addEventListener('pointerup', up); box.addEventListener('pointercancel', up);
+  box.addEventListener('wheel', e => { e.preventDefault(); const r = box.getBoundingClientRect(); const mx = e.clientX - r.left, my = e.clientY - r.top; const ns = Math.min(6, Math.max(0.2, scale * (e.deltaY < 0 ? 1.15 : 0.87))); tx = mx - (mx - tx) * (ns / scale); ty = my - (my - ty) * (ns / scale); scale = ns; apply(); }, { passive: false });
+
+  document.body.appendChild(ov);
+  requestAnimationFrame(() => load(pi));
 }
 
 /* 脑图节点详情底卡: 全文 + 知识点 + 笔记 + 练相关题 */
@@ -797,10 +862,20 @@ function renderFrames() {
       if (mnode.children.some(c => c.weak)) mnode.weak = true;
       tree.children.push(mnode);
     }
-    const fsBtn = el('button', '', '⛶ 全屏脑图');
-    fsBtn.style.cssText = 'width:100%;padding:9px;border-radius:10px;border:1.5px solid var(--accent);background:var(--card);color:var(--accent);font-weight:600;margin-bottom:8px';
+    const btnRow2 = el('div', 'btnrow');
+    btnRow2.style.marginBottom = '8px';
+    const fsBtn = el('button', '', '⛶ 交互脑图全屏');
+    fsBtn.style.cssText = 'flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--accent);background:var(--card);color:var(--accent);font-weight:600';
     fsBtn.onclick = () => openMindmapFS(tree, null);
-    main.appendChild(fsBtn);
+    btnRow2.appendChild(fsBtn);
+    const orig = (FRAMES_MANIFEST || {})[FRAME_TOPIC];
+    if (orig && orig.length) {
+      const oBtn = el('button', '', '📄 原版脑图');
+      oBtn.style.cssText = 'flex:1;padding:9px;border-radius:10px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;font-weight:600';
+      oBtn.onclick = () => openImageFS(orig.map(f => 'frames/' + f), `${FRAME_TOPIC} 原版脑图`);
+      btnRow2.appendChild(oBtn);
+    }
+    main.appendChild(btnRow2);
     const box = el('div', 'mapbox');
     main.appendChild(box);
     requestAnimationFrame(() => MindMap.render(box, tree, { onNodeTap: (node) => openNodeSheet(node, FRAME_TOPIC) }));

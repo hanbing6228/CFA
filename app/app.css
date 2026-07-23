@@ -178,6 +178,9 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .fs-close { width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); font-size: 1.1rem; cursor: pointer; }
 .fs-map { flex: 1; overflow: hidden; touch-action: none; }
 .fs-map svg { display: block; }
+.fsimg { position:absolute; top:0; left:0; transform-origin:0 0; will-change:transform; max-width:none; transition:opacity .15s; }
+.fs-imgnav { position:absolute; bottom:calc(16px + env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); display:flex; gap:14px; z-index:2; }
+.fs-imgnav button { width:44px; height:44px; border-radius:50%; border:0; background:var(--accent); color:#fff; font-size:1.1rem; }
 
 /* 公式渲染 */
 .mf { font-family: "Cambria Math", "Latin Modern Math", Georgia, serif; font-style: italic; white-space: nowrap; }
