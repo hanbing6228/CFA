@@ -1,0 +1,778 @@
+{
+ "topic": "Econ",
+ "tree": {
+  "name": "Econ",
+  "children": [
+   {
+    "name": "Currency Exchange Rates: Understanding Equilibrium Value",
+    "children": [
+     {
+      "name": "Foreign Exchange Market Concepts",
+      "children": [
+       {
+        "name": "Quotation",
+        "children": [
+         {
+          "name": "Price currency(P)"
+         },
+         {
+          "name": "Base currency(B)"
+         }
+        ]
+       },
+       {
+        "name": "Bid-offer spread 的影响因素",
+        "children": [
+         {
+          "name": "Dealer",
+          "children": [
+           {
+            "name": "Bid-offer spread in the interbank market"
+           },
+           {
+            "name": "Size of the transaction",
+            "children": [
+             {
+              "name": "Retail quote"
+             }
+            ]
+           },
+           {
+            "name": "Relationship between the dealer and the client"
+           }
+          ]
+         },
+         {
+          "name": "Interbank Market",
+          "children": [
+           {
+            "name": "Currency pair involved"
+           },
+           {
+            "name": "Time of the day"
+           },
+           {
+            "name": "Market volatility"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Cross rate",
+        "children": [
+         {
+          "name": "相乘同边，相除对角，乘小除大"
+         },
+         {
+          "name": "Triangular arbitrage",
+          "trap": 1,
+          "children": [
+           {
+            "name": "Converting from currency A to currency B, then from currency B to currency C, then from currency C back to A. If we end up with more of currency A at the end than we started with, we've earned an arbitrage profit."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Forward rate",
+        "children": [
+         {
+          "name": "Forward premium"
+         },
+         {
+          "name": "Forward discount"
+         }
+        ]
+       },
+       {
+        "name": "Mark-to-market value",
+        "trap": 1,
+        "children": [
+         {
+          "name": "Vt = (FPt − FP)(contract size) / [1 + R(days/360)]",
+          "f": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "International parity conditions",
+      "children": [
+       {
+        "name": "Interest rate parity",
+        "children": [
+         {
+          "name": "Covered interest rate parity",
+          "trap": 1,
+          "children": [
+           {
+            "name": "Covered interest arbitrage",
+            "children": [
+             {
+              "name": "If F/S > (1+rx)/(1+ry)",
+              "f": 1,
+              "children": [
+               {
+                "name": "Profit= F/S × (1+ry) − (1+rx)",
+                "f": 1
+               }
+              ]
+             },
+             {
+              "name": "If F/S < (1+rx)/(1+ry)",
+              "f": 1,
+              "children": [
+               {
+                "name": "Profit= S/F × (1+rx) − (1+ry)",
+                "f": 1
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "F(f/d) = S(f/d) × [1 + if(Actual/360)] / [1 + id(Actual/360)]",
+            "f": 1,
+            "children": [
+             {
+              "name": "Interest differential =forward differential"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Uncovered interest rate parity",
+          "trap": 1,
+          "children": [
+           {
+            "name": "短、中期不成立，长期可能成立"
+           },
+           {
+            "name": "E(St)/S0 = (1+rx)/(1+ry)",
+            "f": 1,
+            "children": [
+             {
+              "name": "%ΔS^e_(f/d) = if − id",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Forward rate parity",
+          "children": [
+           {
+            "name": "(F − S0)/S0 = E(%ΔS)",
+            "f": 1,
+            "children": [
+             {
+              "name": "Both covered and uncovered interest rate parity hold"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Purchasing power parity",
+        "children": [
+         {
+          "name": "Law of one price",
+          "children": [
+           {
+            "name": "Absolute version of PPP"
+           }
+          ]
+         },
+         {
+          "name": "Relative version of PPP",
+          "trap": 1,
+          "children": [
+           {
+            "name": "St/S0 = [(1+πX)/(1+πY)]^t",
+            "f": 1,
+            "children": [
+             {
+              "name": "%ΔS_(X/Y) ≅ πX − πY",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Ex ante version of PPP",
+          "trap": 1,
+          "children": [
+           {
+            "name": "E(St)/S0 = (1+π^e_X)/(1+π^e_Y)",
+            "f": 1,
+            "children": [
+             {
+              "name": "%ΔS^e_(X/Y) ≅ π^e_X − π^e_Y",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "International Fisher relation",
+        "trap": 1,
+        "children": [
+         {
+          "name": "Fisher effect",
+          "children": [
+           {
+            "name": "r^N_X = r^R_X + π^e_X",
+            "f": 1
+           }
+          ]
+         },
+         {
+          "name": "当UIRP和ex ante PPP都成立",
+          "children": [
+           {
+            "name": "Real interest rate parity",
+            "children": [
+             {
+              "name": "r^N_X − r^N_Y = π^e_X − π^e_Y",
+              "f": 1
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Carry trade",
+      "trap": 1,
+      "children": [
+       {
+        "name": "UIRP unhold"
+       },
+       {
+        "name": "Risk and reward",
+        "children": [
+         {
+          "name": "Interest rate differential"
+         },
+         {
+          "name": "Reverse exchange rate movements"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Impact of BOPs flows",
+      "children": [
+       {
+        "name": "Current account",
+        "children": [
+         {
+          "name": "Flow supply/demand channel",
+          "children": [
+           {
+            "name": "Persistent current account surplus",
+            "children": [
+             {
+              "name": "Appreciation"
+             }
+            ]
+           },
+           {
+            "name": "Persistent current account deficits",
+            "children": [
+             {
+              "name": "Depreciation"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Portfolio balance channel"
+         },
+         {
+          "name": "Debt sustainability channel",
+          "children": [
+           {
+            "name": "Deficit country's external debt is unsustainable",
+            "children": [
+             {
+              "name": "Depreciation"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Capital account",
+        "children": [
+         {
+          "name": "Higher short-term interest rate",
+          "children": [
+           {
+            "name": "Appreciation"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Monetary and fiscal policies",
+      "children": [
+       {
+        "name": "Mundell-Fleming model",
+        "trap": 1,
+        "children": [
+         {
+          "name": "不考虑价格与通胀变动"
+         },
+         {
+          "name": "影响机制",
+          "children": [
+           {
+            "name": "High capital mobility",
+            "children": [
+             {
+              "name": "Expansionary fiscal policy",
+              "children": [
+               {
+                "name": "本币升值"
+               }
+              ]
+             },
+             {
+              "name": "Restrictive fiscal policy",
+              "children": [
+               {
+                "name": "本币贬值"
+               }
+              ]
+             },
+             {
+              "name": "Expansionary monetary policy",
+              "children": [
+               {
+                "name": "本币贬值"
+               }
+              ]
+             },
+             {
+              "name": "Restrictive monetary policy",
+              "children": [
+               {
+                "name": "本币升值"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Low capital mobility",
+            "children": [
+             {
+              "name": "Expansionary fiscal policy",
+              "children": [
+               {
+                "name": "本币贬值"
+               }
+              ]
+             },
+             {
+              "name": "Restrictive fiscal policy",
+              "children": [
+               {
+                "name": "本币升值"
+               }
+              ]
+             },
+             {
+              "name": "Expansionary monetary policy",
+              "children": [
+               {
+                "name": "本币贬值"
+               }
+              ]
+             },
+             {
+              "name": "Restrictive monetary policy",
+              "children": [
+               {
+                "name": "本币升值"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Monetary model",
+        "children": [
+         {
+          "name": "总产出不变，货币供应影响通胀"
+         },
+         {
+          "name": "影响机制",
+          "children": [
+           {
+            "name": "Pure monetary model",
+            "children": [
+             {
+              "name": "Exchange rates reflect inflations"
+             }
+            ]
+           },
+           {
+            "name": "Dornbusch overshooting model",
+            "children": [
+             {
+              "name": "Exchange rate overshoot long-run PPP path in the short run."
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Portfolio balance approach",
+        "children": [
+         {
+          "name": "与Mundell-Fleming model的比较"
+         },
+         {
+          "name": "Governments run large budget deficits on a sustainable baisis in the long run",
+          "children": [
+           {
+            "name": "Depreciation"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Exchange rate management:",
+      "children": [
+       {
+        "name": "Emerging market central banks are more efficient"
+       }
+      ]
+     },
+     {
+      "name": "Currency crisis",
+      "children": [
+       {
+        "name": "Warning signs（9个）",
+        "children": [
+         {
+          "name": "Liberalized capital markets"
+         },
+         {
+          "name": "Large inflows of foreign capital"
+         },
+         {
+          "name": "Banking crisis"
+         },
+         {
+          "name": "Fixed/partially fixed exchange rates"
+         },
+         {
+          "name": "Foreign exchange reserves decline precipitously"
+         },
+         {
+          "name": "Currency has risen substantially"
+         },
+         {
+          "name": "Exports/imports deteriorate"
+         },
+         {
+          "name": "Money growth rise"
+         },
+         {
+          "name": "Inflation is significantly higher"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Economic Growth",
+    "children": [
+     {
+      "name": "Factors affecting growth",
+      "children": [
+       {
+        "name": "Savings and Investments"
+       },
+       {
+        "name": "Financial markets and intermediaries"
+       },
+       {
+        "name": "Political stability, rule of law, and property rights"
+       },
+       {
+        "name": "Education and health care systems"
+       },
+       {
+        "name": "Tax and regulatory systems"
+       },
+       {
+        "name": "Free trade and unrestricted capital flows"
+       }
+      ]
+     },
+     {
+      "name": "Potential GDP",
+      "children": [
+       {
+        "name": "Grinold-Kroner decomposition of the return to equity",
+        "trap": 1,
+        "children": [
+         {
+          "name": "E(R)=dy + Δ(P/E) + i + g - ΔS",
+          "f": 1
+         },
+         {
+          "name": "ΔS = nbb + rd",
+          "f": 1
+         }
+        ]
+       },
+       {
+        "name": "Potential GDP growth",
+        "children": [
+         {
+          "name": "Higher",
+          "children": [
+           {
+            "name": "Higher real interest rate and expected real asset return"
+           }
+          ]
+         },
+         {
+          "name": "Lower than actual GDP growth",
+          "children": [
+           {
+            "name": "Upward pressure on inflation"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Determinants of economic growth",
+      "children": [
+       {
+        "name": "Cobb-Douglas production function",
+        "trap": 1,
+        "children": [
+         {
+          "name": "Y = AK^α L^(1-α)",
+          "f": 1
+         },
+         {
+          "name": "Labor productivity",
+          "children": [
+           {
+            "name": "y = Y/L = A(K/L)^α = Ak^α",
+            "f": 1,
+            "children": [
+             {
+              "name": "Capital deepening",
+              "children": [
+               {
+                "name": "Move along the production function"
+               }
+              ]
+             },
+             {
+              "name": "Technological progress",
+              "children": [
+               {
+                "name": "Upward shift in the entire production function"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Growth accounting",
+          "children": [
+           {
+            "name": "Δ Y/Y =ΔA/A + αΔK/K + (1 − α)ΔL/L",
+            "f": 1
+           },
+           {
+            "name": "Growth rate in potential GDP",
+            "children": [
+             {
+              "name": "long-term growth rate of labor force + long-term growth rate in labor productivity"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Inputs",
+        "children": [
+         {
+          "name": "Natural resource",
+          "children": [
+           {
+            "name": "Dutch disease"
+           }
+          ]
+         },
+         {
+          "name": "Labor supply",
+          "children": [
+           {
+            "name": "Either employed or unemployed"
+           },
+           {
+            "name": "Human capital"
+           }
+          ]
+         },
+         {
+          "name": "Capital",
+          "children": [
+           {
+            "name": "ICT"
+           },
+           {
+            "name": "Non ICT"
+           },
+           {
+            "name": "Technology"
+           },
+           {
+            "name": "Infrastructure"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Theories of growth",
+      "children": [
+       {
+        "name": "Classical model",
+        "children": [
+         {
+          "name": "No growth in per capita output in the long run"
+         }
+        ]
+       },
+       {
+        "name": "Neoclassical model",
+        "trap": 1,
+        "children": [
+         {
+          "name": "Steady state rate of growth",
+          "children": [
+           {
+            "name": "Δk/k=Δy/y",
+            "f": 1
+           },
+           {
+            "name": "G* = θ/(1−α) + %ΔL",
+            "f": 1
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Endogenous growth theory",
+        "children": [
+         {
+          "name": "技术进步是内生变量",
+          "children": [
+           {
+            "name": "Saving rate 上升，增加研发投入，可持续增加人均产出"
+           },
+           {
+            "name": "不存在steady state"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Convergence",
+      "children": [
+       {
+        "name": "分类",
+        "children": [
+         {
+          "name": "Absolute convergence",
+          "children": [
+           {
+            "name": "Absolute convergence means that developing countries, regardless of their particular characteristics, will eventually catch up with the developed countries and match them in per capita output."
+           }
+          ]
+         },
+         {
+          "name": "Conditional convergence",
+          "children": [
+           {
+            "name": "Convergence is conditional on the countries having the same saving rate, population growth rate, and production function.If these conditions hold, the neoclassical model implies convergence to the same level of per capita output as well as the same steady state growth rate."
+           }
+          ]
+         },
+         {
+          "name": "Club convergence",
+          "children": [
+           {
+            "name": "Poor countries can join the club if they make appropriate institutional changes"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Growth in an open economy"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -3025,6 +3025,781 @@
     }
    ]
   },
+  "Econ": {
+   "name": "Econ",
+   "children": [
+    {
+     "name": "Currency Exchange Rates: Understanding Equilibrium Value",
+     "children": [
+      {
+       "name": "Foreign Exchange Market Concepts",
+       "children": [
+        {
+         "name": "Quotation",
+         "children": [
+          {
+           "name": "Price currency(P)"
+          },
+          {
+           "name": "Base currency(B)"
+          }
+         ]
+        },
+        {
+         "name": "Bid-offer spread 的影响因素",
+         "children": [
+          {
+           "name": "Dealer",
+           "children": [
+            {
+             "name": "Bid-offer spread in the interbank market"
+            },
+            {
+             "name": "Size of the transaction",
+             "children": [
+              {
+               "name": "Retail quote"
+              }
+             ]
+            },
+            {
+             "name": "Relationship between the dealer and the client"
+            }
+           ]
+          },
+          {
+           "name": "Interbank Market",
+           "children": [
+            {
+             "name": "Currency pair involved"
+            },
+            {
+             "name": "Time of the day"
+            },
+            {
+             "name": "Market volatility"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Cross rate",
+         "children": [
+          {
+           "name": "相乘同边，相除对角，乘小除大"
+          },
+          {
+           "name": "Triangular arbitrage",
+           "trap": 1,
+           "children": [
+            {
+             "name": "Converting from currency A to currency B, then from currency B to currency C, then from currency C back to A. If we end up with more of currency A at the end than we started with, we've earned an arbitrage profit."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Forward rate",
+         "children": [
+          {
+           "name": "Forward premium"
+          },
+          {
+           "name": "Forward discount"
+          }
+         ]
+        },
+        {
+         "name": "Mark-to-market value",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Vt = (FPt − FP)(contract size) / [1 + R(days/360)]",
+           "f": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "International parity conditions",
+       "children": [
+        {
+         "name": "Interest rate parity",
+         "children": [
+          {
+           "name": "Covered interest rate parity",
+           "trap": 1,
+           "children": [
+            {
+             "name": "Covered interest arbitrage",
+             "children": [
+              {
+               "name": "If F/S > (1+rx)/(1+ry)",
+               "f": 1,
+               "children": [
+                {
+                 "name": "Profit= F/S × (1+ry) − (1+rx)",
+                 "f": 1
+                }
+               ]
+              },
+              {
+               "name": "If F/S < (1+rx)/(1+ry)",
+               "f": 1,
+               "children": [
+                {
+                 "name": "Profit= S/F × (1+rx) − (1+ry)",
+                 "f": 1
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "F(f/d) = S(f/d) × [1 + if(Actual/360)] / [1 + id(Actual/360)]",
+             "f": 1,
+             "children": [
+              {
+               "name": "Interest differential =forward differential"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Uncovered interest rate parity",
+           "trap": 1,
+           "children": [
+            {
+             "name": "短、中期不成立，长期可能成立"
+            },
+            {
+             "name": "E(St)/S0 = (1+rx)/(1+ry)",
+             "f": 1,
+             "children": [
+              {
+               "name": "%ΔS^e_(f/d) = if − id",
+               "f": 1
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Forward rate parity",
+           "children": [
+            {
+             "name": "(F − S0)/S0 = E(%ΔS)",
+             "f": 1,
+             "children": [
+              {
+               "name": "Both covered and uncovered interest rate parity hold"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Purchasing power parity",
+         "children": [
+          {
+           "name": "Law of one price",
+           "children": [
+            {
+             "name": "Absolute version of PPP"
+            }
+           ]
+          },
+          {
+           "name": "Relative version of PPP",
+           "trap": 1,
+           "children": [
+            {
+             "name": "St/S0 = [(1+πX)/(1+πY)]^t",
+             "f": 1,
+             "children": [
+              {
+               "name": "%ΔS_(X/Y) ≅ πX − πY",
+               "f": 1
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Ex ante version of PPP",
+           "trap": 1,
+           "children": [
+            {
+             "name": "E(St)/S0 = (1+π^e_X)/(1+π^e_Y)",
+             "f": 1,
+             "children": [
+              {
+               "name": "%ΔS^e_(X/Y) ≅ π^e_X − π^e_Y",
+               "f": 1
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "International Fisher relation",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Fisher effect",
+           "children": [
+            {
+             "name": "r^N_X = r^R_X + π^e_X",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "当UIRP和ex ante PPP都成立",
+           "children": [
+            {
+             "name": "Real interest rate parity",
+             "children": [
+              {
+               "name": "r^N_X − r^N_Y = π^e_X − π^e_Y",
+               "f": 1
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Carry trade",
+       "trap": 1,
+       "children": [
+        {
+         "name": "UIRP unhold"
+        },
+        {
+         "name": "Risk and reward",
+         "children": [
+          {
+           "name": "Interest rate differential"
+          },
+          {
+           "name": "Reverse exchange rate movements"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Impact of BOPs flows",
+       "children": [
+        {
+         "name": "Current account",
+         "children": [
+          {
+           "name": "Flow supply/demand channel",
+           "children": [
+            {
+             "name": "Persistent current account surplus",
+             "children": [
+              {
+               "name": "Appreciation"
+              }
+             ]
+            },
+            {
+             "name": "Persistent current account deficits",
+             "children": [
+              {
+               "name": "Depreciation"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Portfolio balance channel"
+          },
+          {
+           "name": "Debt sustainability channel",
+           "children": [
+            {
+             "name": "Deficit country's external debt is unsustainable",
+             "children": [
+              {
+               "name": "Depreciation"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Capital account",
+         "children": [
+          {
+           "name": "Higher short-term interest rate",
+           "children": [
+            {
+             "name": "Appreciation"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Monetary and fiscal policies",
+       "children": [
+        {
+         "name": "Mundell-Fleming model",
+         "trap": 1,
+         "children": [
+          {
+           "name": "不考虑价格与通胀变动"
+          },
+          {
+           "name": "影响机制",
+           "children": [
+            {
+             "name": "High capital mobility",
+             "children": [
+              {
+               "name": "Expansionary fiscal policy",
+               "children": [
+                {
+                 "name": "本币升值"
+                }
+               ]
+              },
+              {
+               "name": "Restrictive fiscal policy",
+               "children": [
+                {
+                 "name": "本币贬值"
+                }
+               ]
+              },
+              {
+               "name": "Expansionary monetary policy",
+               "children": [
+                {
+                 "name": "本币贬值"
+                }
+               ]
+              },
+              {
+               "name": "Restrictive monetary policy",
+               "children": [
+                {
+                 "name": "本币升值"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Low capital mobility",
+             "children": [
+              {
+               "name": "Expansionary fiscal policy",
+               "children": [
+                {
+                 "name": "本币贬值"
+                }
+               ]
+              },
+              {
+               "name": "Restrictive fiscal policy",
+               "children": [
+                {
+                 "name": "本币升值"
+                }
+               ]
+              },
+              {
+               "name": "Expansionary monetary policy",
+               "children": [
+                {
+                 "name": "本币贬值"
+                }
+               ]
+              },
+              {
+               "name": "Restrictive monetary policy",
+               "children": [
+                {
+                 "name": "本币升值"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Monetary model",
+         "children": [
+          {
+           "name": "总产出不变，货币供应影响通胀"
+          },
+          {
+           "name": "影响机制",
+           "children": [
+            {
+             "name": "Pure monetary model",
+             "children": [
+              {
+               "name": "Exchange rates reflect inflations"
+              }
+             ]
+            },
+            {
+             "name": "Dornbusch overshooting model",
+             "children": [
+              {
+               "name": "Exchange rate overshoot long-run PPP path in the short run."
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Portfolio balance approach",
+         "children": [
+          {
+           "name": "与Mundell-Fleming model的比较"
+          },
+          {
+           "name": "Governments run large budget deficits on a sustainable baisis in the long run",
+           "children": [
+            {
+             "name": "Depreciation"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Exchange rate management:",
+       "children": [
+        {
+         "name": "Emerging market central banks are more efficient"
+        }
+       ]
+      },
+      {
+       "name": "Currency crisis",
+       "children": [
+        {
+         "name": "Warning signs（9个）",
+         "children": [
+          {
+           "name": "Liberalized capital markets"
+          },
+          {
+           "name": "Large inflows of foreign capital"
+          },
+          {
+           "name": "Banking crisis"
+          },
+          {
+           "name": "Fixed/partially fixed exchange rates"
+          },
+          {
+           "name": "Foreign exchange reserves decline precipitously"
+          },
+          {
+           "name": "Currency has risen substantially"
+          },
+          {
+           "name": "Exports/imports deteriorate"
+          },
+          {
+           "name": "Money growth rise"
+          },
+          {
+           "name": "Inflation is significantly higher"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Economic Growth",
+     "children": [
+      {
+       "name": "Factors affecting growth",
+       "children": [
+        {
+         "name": "Savings and Investments"
+        },
+        {
+         "name": "Financial markets and intermediaries"
+        },
+        {
+         "name": "Political stability, rule of law, and property rights"
+        },
+        {
+         "name": "Education and health care systems"
+        },
+        {
+         "name": "Tax and regulatory systems"
+        },
+        {
+         "name": "Free trade and unrestricted capital flows"
+        }
+       ]
+      },
+      {
+       "name": "Potential GDP",
+       "children": [
+        {
+         "name": "Grinold-Kroner decomposition of the return to equity",
+         "trap": 1,
+         "children": [
+          {
+           "name": "E(R)=dy + Δ(P/E) + i + g - ΔS",
+           "f": 1
+          },
+          {
+           "name": "ΔS = nbb + rd",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Potential GDP growth",
+         "children": [
+          {
+           "name": "Higher",
+           "children": [
+            {
+             "name": "Higher real interest rate and expected real asset return"
+            }
+           ]
+          },
+          {
+           "name": "Lower than actual GDP growth",
+           "children": [
+            {
+             "name": "Upward pressure on inflation"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Determinants of economic growth",
+       "children": [
+        {
+         "name": "Cobb-Douglas production function",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Y = AK^α L^(1-α)",
+           "f": 1
+          },
+          {
+           "name": "Labor productivity",
+           "children": [
+            {
+             "name": "y = Y/L = A(K/L)^α = Ak^α",
+             "f": 1,
+             "children": [
+              {
+               "name": "Capital deepening",
+               "children": [
+                {
+                 "name": "Move along the production function"
+                }
+               ]
+              },
+              {
+               "name": "Technological progress",
+               "children": [
+                {
+                 "name": "Upward shift in the entire production function"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Growth accounting",
+           "children": [
+            {
+             "name": "Δ Y/Y =ΔA/A + αΔK/K + (1 − α)ΔL/L",
+             "f": 1
+            },
+            {
+             "name": "Growth rate in potential GDP",
+             "children": [
+              {
+               "name": "long-term growth rate of labor force + long-term growth rate in labor productivity"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Inputs",
+         "children": [
+          {
+           "name": "Natural resource",
+           "children": [
+            {
+             "name": "Dutch disease"
+            }
+           ]
+          },
+          {
+           "name": "Labor supply",
+           "children": [
+            {
+             "name": "Either employed or unemployed"
+            },
+            {
+             "name": "Human capital"
+            }
+           ]
+          },
+          {
+           "name": "Capital",
+           "children": [
+            {
+             "name": "ICT"
+            },
+            {
+             "name": "Non ICT"
+            },
+            {
+             "name": "Technology"
+            },
+            {
+             "name": "Infrastructure"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Theories of growth",
+       "children": [
+        {
+         "name": "Classical model",
+         "children": [
+          {
+           "name": "No growth in per capita output in the long run"
+          }
+         ]
+        },
+        {
+         "name": "Neoclassical model",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Steady state rate of growth",
+           "children": [
+            {
+             "name": "Δk/k=Δy/y",
+             "f": 1
+            },
+            {
+             "name": "G* = θ/(1−α) + %ΔL",
+             "f": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Endogenous growth theory",
+         "children": [
+          {
+           "name": "技术进步是内生变量",
+           "children": [
+            {
+             "name": "Saving rate 上升，增加研发投入，可持续增加人均产出"
+            },
+            {
+             "name": "不存在steady state"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Convergence",
+       "children": [
+        {
+         "name": "分类",
+         "children": [
+          {
+           "name": "Absolute convergence",
+           "children": [
+            {
+             "name": "Absolute convergence means that developing countries, regardless of their particular characteristics, will eventually catch up with the developed countries and match them in per capita output."
+            }
+           ]
+          },
+          {
+           "name": "Conditional convergence",
+           "children": [
+            {
+             "name": "Convergence is conditional on the countries having the same saving rate, population growth rate, and production function.If these conditions hold, the neoclassical model implies convergence to the same level of per capita output as well as the same steady state growth rate."
+            }
+           ]
+          },
+          {
+           "name": "Club convergence",
+           "children": [
+            {
+             "name": "Poor countries can join the club if they make appropriate institutional changes"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Growth in an open economy"
+      }
+     ]
+    }
+   ]
+  },
   "Equity": {
    "name": "Equity",
    "children": [
@@ -5474,6 +6249,1585 @@
            "trap": 1
           }
          ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "PM": {
+   "name": "PM",
+   "children": [
+    {
+     "name": "Economics and Investment Markets",
+     "children": [
+      {
+       "name": "Real default-free interest rates",
+       "children": [
+        {
+         "name": "Inter-temporal rate of substitution",
+         "children": [
+          {
+           "name": "m和当前消费反向关系",
+           "children": [
+            {
+             "name": "m上升，代表用当前消费交换未来财富的意愿变强，当前消费降低"
+            },
+            {
+             "name": "m下降，代表用当前消费交换未来财富的意愿变弱，当前消费增加"
+            }
+           ]
+          },
+          {
+           "name": "m和真实无风险利率, l, 负相关"
+          }
+         ]
+        },
+        {
+         "name": "Covariance term：一年后债券的价格P(t+1)与m的协方差",
+         "children": [
+          {
+           "name": "one-period default-free bond",
+           "children": [
+            {
+             "name": "Covariance term is zero"
+            },
+            {
+             "name": "因为未来价格是一个已知常数"
+            }
+           ]
+          },
+          {
+           "name": "s-period default-free bond",
+           "children": [
+            {
+             "name": "Covariance term < 0"
+            },
+            {
+             "name": "Covariance term > 0, as economy goes extremely bad"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "受影响",
+         "children": [
+          {
+           "name": "与GDP growth 正相关"
+          },
+          {
+           "name": "与GDP volatility 正相关"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Nominal default-free interest rates",
+       "children": [
+        {
+         "name": "Short term bond",
+         "children": [
+          {
+           "name": "获得预期通货膨胀补偿"
+          }
+         ]
+        },
+        {
+         "name": "Long term bond",
+         "children": [
+          {
+           "name": "获得预期通胀和通胀不确定性的补偿",
+           "children": [
+            {
+             "name": "Breakeven inflation rate"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "受影响",
+         "children": [
+          {
+           "name": "the inflation environment，正相关"
+          },
+          {
+           "name": "与GDP growth, 正相关"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Valuation of corporate bond",
+       "children": [
+        {
+         "name": "Credit risk premium",
+         "children": [
+          {
+           "name": "债券评级，负相关"
+          },
+          {
+           "name": "行业周期性，正相关"
+          },
+          {
+           "name": "公司财务能力，负相关"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Valuation of equity",
+       "children": [
+        {
+         "name": "equity risk premium",
+         "children": [
+          {
+           "name": "包含信用风险"
+          },
+          {
+           "name": "也包含股东所承担的超过公司信用债风险的其他风险"
+          },
+          {
+           "name": "equity risk premium > 0",
+           "children": [
+            {
+             "name": "Bad consumption hedge: pay less when I need money to consume"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "受影响",
+         "children": [
+          {
+           "name": "P/E ratio, 较高的估值对应较低的回报"
+          },
+          {
+           "name": "P/B ratio，越高，对增长的期望越大，如果增长没有达到预期，安全边际就较低"
+          },
+          {
+           "name": "成长股的风险比价值股的风险大"
+          },
+          {
+           "name": "小盘股的风险更大"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Valuation of commercial real estate",
+       "children": [
+        {
+         "name": "liquidity risk premium"
+        },
+        {
+         "name": "bad consumption hedge"
+        },
+        {
+         "name": "受影响",
+         "children": [
+          {
+           "name": "GDP越好，流动性风险越低（负相关）"
+          },
+          {
+           "name": "杠杆越高，流动性风险越大（正相关）"
+          },
+          {
+           "name": "房地产价格越高，流动性风险越高（正相关）"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "P_t^i = Σ_{s=1}^{N} E_t[CF̃_{t+s}^i] / (1 + l_{t,s} + θ_{t,s} + π_{t,s} + γ_{t,s}^i + κ_{t,s}^i + φ_{t,s}^i)^s",
+       "f": 1
+      }
+     ]
+    },
+    {
+     "name": "Analysis of Active Portfolio Management",
+     "children": [
+      {
+       "name": "Value added",
+       "children": [
+        {
+         "name": "Choice of Benchmark",
+         "children": [
+          {
+           "name": "基准代表投资者将从中选择的资产"
+          },
+          {
+           "name": "可以低成本复制"
+          },
+          {
+           "name": "基准权重事前可验证，回报的数据事后可及时获得"
+          }
+         ]
+        },
+        {
+         "name": "Measuring",
+         "children": [
+          {
+           "name": "Ra = Rp - Rb",
+           "f": 1,
+           "children": [
+            {
+             "name": "局限：不能了解主动回报的来源"
+            }
+           ]
+          },
+          {
+           "name": "R_A = Σ(i=1 to N) Δω_i · R_Ai",
+           "f": 1,
+           "children": [
+            {
+             "name": "可以了解主动回报来自超配或低配某个成分"
+            }
+           ]
+          },
+          {
+           "name": "R_A = Σ(j=1 to M) ω_P,j(R_P,j − R_B,j) [Security Selection] + Σ(j=1 to M)(ω_P,j − ω_B,j)R_B,j [Asset Allocation]",
+           "f": 1,
+           "children": [
+            {
+             "name": "可以了解主动回报来自资产配置还是个股选择"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Sharpe ratio & information ratio",
+       "children": [
+        {
+         "name": "以无风险利率进行借贷，不会影响组合的夏普比率（夏普比率不变），即cash addition和leverage不会影响sharpe ratio"
+        },
+        {
+         "name": "无约束投资组合的信息比率不受主动权重激进程度的影响"
+        }
+       ]
+      },
+      {
+       "name": "Construct optimal portfolios",
+       "children": [
+        {
+         "name": "σ*_RA = (IR / SR_B) · σ_RB",
+         "f": 1
+        },
+        {
+         "name": "1. 计算最优组合的主动风险"
+        },
+        {
+         "name": "2. 通过调整主动管理组合和基准投资组合的权重来调整主动风险，将现有主动风险调整成最优主动风险"
+        },
+        {
+         "name": "SR_P^2 = SR_B^2 + IR^2",
+         "f": 1,
+         "children": [
+          {
+           "name": "最优组合的SR"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Information coefficient & Transfer coefficient",
+       "children": [
+        {
+         "name": "Information coefficient",
+         "children": [
+          {
+           "name": "信息系数是N个预测的主动回报μi和N个已实现的主动回报RAi之间的事前的横截面相关性"
+          },
+          {
+           "name": "取值范围[-1，1]"
+          },
+          {
+           "name": "越高说明基金经理的预测的准确性越高"
+          },
+          {
+           "name": "（现实中）基金经理对不同证券预测的IC是不同的，但在研究过程中，我们假设是相同的"
+          }
+         ]
+        },
+        {
+         "name": "Transfer coefficient",
+         "children": [
+          {
+           "name": "预测的主动证券回报和实际的主动权重之间的横截面相关系数"
+          },
+          {
+           "name": "取值范围[-1，1]"
+          },
+          {
+           "name": "-1说明在组合构建的过程中完全没有贯彻自己的预测，1说明在组合构建的过程中完全落实了自己的预测"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Fundamental law",
+       "children": [
+        {
+         "name": "The basic fundamental law"
+        },
+        {
+         "name": "The full fundamental law"
+        },
+        {
+         "name": "Practical constraints",
+         "children": [
+          {
+           "name": "some investors are constrained to be long only"
+          },
+          {
+           "name": "may exist limits on turnover"
+          }
+         ]
+        },
+        {
+         "name": "提高IR的方法",
+         "children": [
+          {
+           "name": "提高BR",
+           "children": [
+            {
+             "name": "BR上升，会导致IC下降，独立预测的次数变多，预测的准确性会下降"
+            }
+           ]
+          },
+          {
+           "name": "提高IC",
+           "children": [
+            {
+             "name": "预测的次数越少，预测的准确性越高，因此IC提高会带来BR的降低"
+            }
+           ]
+          },
+          {
+           "name": "提升TC",
+           "children": [
+            {
+             "name": "选择限制较少的市场进行交易，可以在短时间内快速提升TC"
+            }
+           ]
+          },
+          {
+           "name": "通过选择限制少的市场更可能提高IR"
+          }
+         ]
+        },
+        {
+         "name": "Ex Post Performance Measurement",
+         "children": [
+          {
+           "name": "实际业绩都将与预期值有所不同"
+          },
+          {
+           "name": "用一个噪声项来表示投资组合的实际主动回报和条件期望主动回报（基于真实IC计算的主动回报）之间的任何差异"
+          },
+          {
+           "name": "R_A = E(R_A|IC_R) + Noise",
+           "f": 1,
+           "children": [
+            {
+             "name": "R_A代表真实的主动回报；"
+            },
+            {
+             "name": "E(R_A|IC_R)代表基于真实IC计算出的期望主动回报；"
+            },
+            {
+             "name": "Noise代表两者之间的差异"
+            },
+            {
+             "name": "主动回报的方差分两部分",
+             "children": [
+              {
+               "name": "由真实IC解释的部分 TC^2"
+              },
+              {
+               "name": "由约束引起的噪声的方差 1-TC^2"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "实务中的限制问题",
+         "children": [
+          {
+           "name": "投资者倾向于高估自己的IC"
+          },
+          {
+           "name": "独立预测不独立，根据两两间的相关系数计算实际猜测次数"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Exchange-Traded Funds: Mechanics and Applications",
+     "children": [
+      {
+       "name": "ETF Mechanics",
+       "children": [
+        {
+         "name": "Primary market",
+         "children": [
+          {
+           "name": "Creation/Redemption Process"
+          },
+          {
+           "name": "Between ETF 基金经理 和 AP"
+          }
+         ]
+        },
+        {
+         "name": "Secondary market",
+         "children": [
+          {
+           "name": "Buy & sell"
+          },
+          {
+           "name": "Between AP 和 investor"
+          }
+         ]
+        },
+        {
+         "name": "Arbitrage gap: 交易成本",
+         "children": [
+          {
+           "name": "Wider for ETF with illiquid holding"
+          },
+          {
+           "name": "Wider for time difference"
+          }
+         ]
+        },
+        {
+         "name": "Less capital gain",
+         "children": [
+          {
+           "name": "不是No capital gain, 会发生Index成分rebalance的情况，此时ETF调整可能产生Capital gain"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Understanding ETFs",
+       "children": [
+        {
+         "name": "Best – managed ETF",
+         "children": [
+          {
+           "name": "Low cost"
+          },
+          {
+           "name": "Closely track index"
+          },
+          {
+           "name": "Lowest possible tax exposure"
+          }
+         ]
+        },
+        {
+         "name": "Expense Ratios",
+         "children": [
+          {
+           "name": "Lower cost compared with mutual fund",
+           "children": [
+            {
+             "name": "部分原因是ETF提供商不必跟踪个人投资者的账户"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Index Tracking/Tracking Error",
+         "children": [
+          {
+           "name": "ETF 和 index 的日业绩差异的标准差（年）"
+          },
+          {
+           "name": "Limitation 1: not reveal the fund is under – or over perform"
+          },
+          {
+           "name": "Limitation 2: not reveal the distribution of error"
+          },
+          {
+           "name": "Source of tracking error",
+           "children": [
+            {
+             "name": "1. Fee and expense, ETF 有经营费用，降低回报"
+            },
+            {
+             "name": "2. Sampling / optimization, 抽样部分成分股 / 优化成分股权重，非完全复制指数"
+            },
+            {
+             "name": "3. Depositary receipts and other ETFs, 基金持有的证券可能不同于指数中的证券"
+            },
+            {
+             "name": "4. Index change, 成分股调整需要时间，延迟会造成误差"
+            },
+            {
+             "name": "5. Fund accounting practices, 不同的会计计算方法"
+            },
+            {
+             "name": "6. Regulatory and tax requirement, 投资海外证券面对不同的监管要求（如提前征收利息所得税）和税率"
+            },
+            {
+             "name": "7. Asset manager operation",
+             "children": [
+              {
+               "name": "Security lending, 借出证券获得收入"
+              },
+              {
+               "name": "foreign dividend recapture, 税收减免"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Tax Issues",
+         "children": [
+          {
+           "name": "通常ETF基金必须分配年内实现的资本利得"
+          },
+          {
+           "name": "Tax fairness",
+           "children": [
+            {
+             "name": "MF: 基金的持有人赎回份额，基金经理就必须卖出证券，卖出证券的税务费用由所有基金持有人共同承担"
+            },
+            {
+             "name": "ETF: 赎回ETF份额是物物交易的形式，授权参与者得到的是一篮子股票，如果授权参与者想要获得现金，则需要自己卖掉这些股票，因此相当于投资者自己支付了资本利得税"
+            }
+           ]
+          },
+          {
+           "name": "Tax efficiency",
+           "children": [
+            {
+             "name": "ETF基金经理可以在AP赎回ETF份额时，将unrealized gain 较大的股票作为赎回篮子的组成部分以实物交换的形式交割给AP，从而减少ETF基金的潜在资本利得"
+            }
+           ]
+          },
+          {
+           "name": "Tax on sale",
+           "children": [
+            {
+             "name": "在大多数地区，ETF是根据其持有的相关资产来征税的"
+            }
+           ]
+          },
+          {
+           "name": "Return-of-capital dividend – 又名liquidating dividend（清算股利），这是资本返还，不是收益，不征税"
+          }
+         ]
+        },
+        {
+         "name": "ETF Trading Costs",
+         "children": [
+          {
+           "name": "Bid-Ask Spreads",
+           "children": [
+            {
+             "name": "Creation/redemption fee, and diect trading cost, such as brokerage, 正相关"
+            },
+            {
+             "name": "Bid-ask spread of underlying security, 正相关"
+            },
+            {
+             "name": "Compensation for dealer's risk, 正相关"
+            },
+            {
+             "name": "Dealer's desired profit spread, 正相关"
+            },
+            {
+             "name": "Available of receive an offsetting ETF order, 负相关"
+            }
+           ]
+          },
+          {
+           "name": "Premiums and Discounts",
+           "children": [
+            {
+             "name": "NAV < Price, 客户用高于公允价值的价格买入ETF, cost"
+            },
+            {
+             "name": "NAV > Price, 客户用低于公允价值的价格买入ETF, negative cost"
+            }
+           ]
+          },
+          {
+           "name": "Commission"
+          }
+         ]
+        },
+        {
+         "name": "Total Costs of ETF Ownership",
+         "children": [
+          {
+           "name": "Trading cost"
+          },
+          {
+           "name": "On-going cost",
+           "children": [
+            {
+             "name": "Management fee"
+            },
+            {
+             "name": "Tracking error",
+             "children": [
+              {
+               "name": "could be positive or negative cost"
+              }
+             ]
+            },
+            {
+             "name": "Portfolio turnover",
+             "children": [
+              {
+               "name": "频繁换仓减少回报"
+              }
+             ]
+            },
+            {
+             "name": "Taxable gain or loss",
+             "children": [
+              {
+               "name": "Taxable loss: negative cost"
+              }
+             ]
+            },
+            {
+             "name": "Security lending",
+             "children": [
+              {
+               "name": "negative cost"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Types of ETF risks",
+         "children": [
+          {
+           "name": "Counterparty risk",
+           "children": [
+            {
+             "name": "Settlement risk：运营中使用了OTC的衍生品，到期对手违约"
+            },
+            {
+             "name": "Security lending"
+            },
+            {
+             "name": "ETN：虚拟合约，不持有底层资产，完全依赖发行方的信用，具有最大的对手方风险。"
+            }
+           ]
+          },
+          {
+           "name": "Fund closures",
+           "children": [
+            {
+             "name": "Regulation"
+            },
+            {
+             "name": "Competition"
+            },
+            {
+             "name": "Corporate action"
+            },
+            {
+             "name": "Creation halts"
+            },
+            {
+             "name": "Change in investment strategy"
+            }
+           ]
+          },
+          {
+           "name": "Investor-related Risk"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "ETFs in Portfolio Management",
+       "children": [
+        {
+         "name": "ETF Strategies",
+         "children": [
+          {
+           "name": "Top-down"
+          },
+          {
+           "name": "Bottom-up"
+          },
+          {
+           "name": "Factors",
+           "children": [
+            {
+             "name": "Portfolio efficiency"
+            },
+            {
+             "name": "Asset class exposure management"
+            },
+            {
+             "name": "Active and factor investing"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Efficient Portfolio Management"
+        },
+        {
+         "name": "Asset Class Exposure Management"
+        },
+        {
+         "name": "Active and Factor Investing"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Using Multifactor Models",
+     "children": [
+      {
+       "name": "APT",
+       "children": [
+        {
+         "name": "用途：定价模型，用于计算期望收益E(R)"
+        },
+        {
+         "name": "Assumptions",
+         "children": [
+          {
+           "name": "非系统性风险已经被分散，只对系统性风险进行补偿"
+          },
+          {
+           "name": "不存在套利机会"
+          }
+         ]
+        },
+        {
+         "name": "模型",
+         "children": [
+          {
+           "name": "APT模型没有残差项，它是一个均衡模型，而非回归模型，公式两边同时取期望，消除残差（残差的期望为零）"
+          },
+          {
+           "name": "factor risk premium, λj",
+           "children": [
+            {
+             "name": "expected return for a portfolio with a sensitivity of 1 to factor j and a sensitivity of 0 to all other factors (pure portfolio)"
+            },
+            {
+             "name": "现实世界很难观察到这样的pure portfolio",
+             "children": [
+              {
+               "name": "使用long-short strategy来isolate",
+               "children": [
+                {
+                 "name": "比如long small-cap,short large cap来isolate出size risk factor"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "APT套利",
+         "children": [
+          {
+           "name": "Long - short 时，使两边 sensitivity 相同"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Multifactor models",
+       "children": [
+        {
+         "name": "Macroeconomic factor model",
+         "children": [
+          {
+           "name": "资产的回报率是由三部分构成",
+           "children": [
+            {
+             "name": "宏观风险因子可以解释的回报",
+             "children": [
+              {
+               "name": "预料到的部分（expected return）"
+              },
+              {
+               "name": "未预料到的部分（surprises）",
+               "children": [
+                {
+                 "name": "Surprise = actual value – predicted (expected) value",
+                 "f": 1
+                },
+                {
+                 "name": "宏观经济变量中的意外因素可以显著的解释股票回报"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "残差：宏观风险因子并没有反应出的公司自身的一些风险，通常都是非系统性风险"
+            }
+           ]
+          },
+          {
+           "name": "回归得出Factor sensitivity"
+          },
+          {
+           "name": "使用时间序列数据"
+          }
+         ]
+        },
+        {
+         "name": "Fundamental factor model",
+         "children": [
+          {
+           "name": "截距：表示当这家公司的所有的基本面指标都处于行业平均值时的收益率"
+          },
+          {
+           "name": "计算Standardized beta",
+           "children": [
+            {
+             "name": "特殊情况：Dummy variable"
+            }
+           ]
+          },
+          {
+           "name": "使用横截面数据"
+          }
+         ]
+        },
+        {
+         "name": "Statistical factor model（简单了解）",
+         "children": [
+          {
+           "name": "利用统计学找到相关性（不要求有经济学意义）"
+          },
+          {
+           "name": "两类",
+           "children": [
+            {
+             "name": "Factor analysis models（因素分析模型）"
+            },
+            {
+             "name": "Principal components models（主成份分析模型）"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Fixed-income multifactor models",
+       "children": [
+        {
+         "name": "Macroeconomic multifactor models"
+        },
+        {
+         "name": "Fundamental multifactor models",
+         "children": [
+          {
+           "name": "Simplistic approach"
+          }
+         ]
+        },
+        {
+         "name": "Risk and style multifactor models"
+        }
+       ]
+      },
+      {
+       "name": "Applications of multifactor models",
+       "children": [
+        {
+         "name": "Return attribution",
+         "children": [
+          {
+           "name": "Active return",
+           "children": [
+            {
+             "name": "Factor tilts"
+            },
+            {
+             "name": "Security selection"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Risk attribution",
+         "children": [
+          {
+           "name": "Active risk squared",
+           "children": [
+            {
+             "name": "Active factor risk"
+            },
+            {
+             "name": "Active specific risk（security selection risk）"
+            }
+           ]
+          },
+          {
+           "name": "Information ratio"
+          }
+         ]
+        },
+        {
+         "name": "Portfolio construction",
+         "children": [
+          {
+           "name": "Passive management"
+          },
+          {
+           "name": "Active management"
+          },
+          {
+           "name": "Rules-based active management"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Measuring and Managing Market Risk",
+     "children": [
+      {
+       "name": "Value at Risk",
+       "children": [
+        {
+         "name": "Definition",
+         "children": [
+          {
+           "name": "VaR states at some significance level (often 1 % or 5%) the minimum loss during a specified time period"
+          },
+          {
+           "name": "衡量VaR的因素",
+           "children": [
+            {
+             "name": "Probability：概率/显著性水平"
+            },
+            {
+             "name": "Time period：时间期限"
+            },
+            {
+             "name": "Distributions of portfolio's return：收益率分布"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Dual interpretation",
+         "children": [
+          {
+           "name": "左侧对应小概率和最小损失（minimum or at least）"
+          },
+          {
+           "name": "右侧对应大概率和最大损失（maximum or no more than）"
+          }
+         ]
+        },
+        {
+         "name": "Estimating Method",
+         "children": [
+          {
+           "name": "Analytical method",
+           "children": [
+            {
+             "name": "计算",
+             "children": [
+              {
+               "name": "基于正态分布假设和计算左尾置信区间"
+              },
+              {
+               "name": "Adjustment for different period",
+               "children": [
+                {
+                 "name": "标准差调整需要遵循平方根法则"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "优缺点",
+             "children": [
+              {
+               "name": "优点",
+               "children": [
+                {
+                 "name": "作为一个数字，易于计算，易于理解"
+                },
+                {
+                 "name": "允许对风险的相关性进行建模"
+                }
+               ]
+              },
+              {
+               "name": "缺点",
+               "children": [
+                {
+                 "name": "假设收益率的正态分布"
+                },
+                {
+                 "name": "很大的投资组合难以估算标准差，即组合中资产过多，导致两两之间的协方差矩阵计算量巨大"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Historical method",
+           "children": [
+            {
+             "name": "优点",
+             "children": [
+              {
+               "name": "非常容易计算和理解"
+              },
+              {
+               "name": "不需要假设收益率的分布"
+              }
+             ]
+            },
+            {
+             "name": "缺点",
+             "children": [
+              {
+               "name": "假设历史收益的模式在未来将会重复"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Monte Carlo method",
+           "children": [
+            {
+             "name": "优点",
+             "children": [
+              {
+               "name": "适用于任意的分布假设"
+              }
+             ]
+            },
+            {
+             "name": "缺点",
+             "children": [
+              {
+               "name": "GIGO"
+              },
+              {
+               "name": "模型的复杂性可能会导致对结果准确性的过度自信"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "VaR本身的优缺点",
+         "children": [
+          {
+           "name": "主要优点",
+           "children": [
+            {
+             "name": "Simple concept"
+            },
+            {
+             "name": "Easily communicated concept"
+            },
+            {
+             "name": "Facilitates capital allocation decisions：促进资本配置决策，例如，某个部门的VaR值大，则应该配置更多的资本用于抵御风险"
+            },
+            {
+             "name": "Widely accepted by regulators"
+            }
+           ]
+          },
+          {
+           "name": "主要缺点",
+           "children": [
+            {
+             "name": "Subjectivity：显著性水平的选择具有主观性"
+            },
+            {
+             "name": "Underestimating the frequency of extreme events"
+            },
+            {
+             "name": "没有考虑到流动性（可能发生流动性差导致 无法变现止损）"
+            },
+            {
+             "name": "Vulnerability to trending or volatility regimes：易受趋势或波动机制的影响",
+             "children": [
+              {
+               "name": "可能实际波动性和估计的波动性不符"
+              }
+             ]
+            },
+            {
+             "name": "Oversimplification：过于简单（实务中左尾可能不服从正态分布）"
+            },
+            {
+             "name": "Disregard of right-tail events：忽略右尾事件"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Extensions of VaR",
+         "children": [
+          {
+           "name": "Conditional VaR",
+           "children": [
+            {
+             "name": "如果超出VaR临界值，产生的（算数）平均损失"
+            },
+            {
+             "name": "CVaR>VaR",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "Incremental VaR",
+           "children": [
+            {
+             "name": "头寸规模相对于剩余头寸发生变化，VaR值发生的变化"
+            },
+            {
+             "name": "例如AB两个资产的VaR（AB），加入资产C后VaR（ABC），则IVaR=VaR（ABC）–VaR（AB）"
+            }
+           ]
+          },
+          {
+           "name": "Marginal VaR",
+           "children": [
+            {
+             "name": "概念上与增量风险价值相似"
+            },
+            {
+             "name": "反映头寸很小变化的影响"
+            },
+            {
+             "name": "资产每增加$1所带来的VaR值的增加(一阶导)"
+            }
+           ]
+          },
+          {
+           "name": "relative VaR",
+           "children": [
+            {
+             "name": "衡量给定投资组合的绩效可能偏离其基准的程度"
+            },
+            {
+             "name": "Relative VaR = VaR（portfolio）–VaR（benchmark）",
+             "f": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Other key risk measures",
+       "children": [
+        {
+         "name": "Sensitivity",
+         "children": [
+          {
+           "name": "优点",
+           "children": [
+            {
+             "name": "风险衡量工具和特定风险一一对应"
+            }
+           ]
+          },
+          {
+           "name": "缺点",
+           "children": [
+            {
+             "name": "只能衡量特定风险，缺乏通用性"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Scenario risk measures",
+         "children": [
+          {
+           "name": "分类",
+           "children": [
+            {
+             "name": "Historical scenarios",
+             "children": [
+              {
+               "name": "假设一个历史上真实出现过的情景"
+              }
+             ]
+            },
+            {
+             "name": "Hypothetical scenarios",
+             "children": [
+              {
+               "name": "假设一个历史上未出现过的情景"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "优点",
+           "children": [
+            {
+             "name": "考虑到流动性（补充VaR的缺点）"
+            },
+            {
+             "name": "不需要正态分布假设"
+            },
+            {
+             "name": "不依赖历史数据"
+            }
+           ]
+          },
+          {
+           "name": "缺点",
+           "children": [
+            {
+             "name": "Historical scenarios",
+             "children": [
+              {
+               "name": "历史情景不会以完全相同的方式再次发生"
+              }
+             ]
+            },
+            {
+             "name": "Hypothetical scenarios",
+             "children": [
+              {
+               "name": "难以模拟不同资产间的相互影响"
+              },
+              {
+               "name": "难以建立适当的限制"
+              },
+              {
+               "name": "很难模拟出真实的环境"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Applications of Risk Measures",
+       "children": [
+        {
+         "name": "Banks",
+         "children": [
+          {
+           "name": "Liquidity gap",
+           "children": [
+            {
+             "name": "Current asset - current liability",
+             "f": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Asset Managers",
+         "children": [
+          {
+           "name": "position limits"
+          },
+          {
+           "name": "redemption risk,"
+          }
+         ]
+        },
+        {
+         "name": "Hedge Funds",
+         "children": [
+          {
+           "name": "gross exposure",
+           "children": [
+            {
+             "name": "单看净敞口可能发生上下collar先后被击穿导致巨额损失"
+            }
+           ]
+          },
+          {
+           "name": "Maximum drawdown",
+           "children": [
+            {
+             "name": "最大回撤"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Pension Fund",
+         "children": [
+          {
+           "name": "surplus at risk",
+           "children": [
+            {
+             "name": "盈余风险，对盈余做VaR值的分析"
+            }
+           ]
+          },
+          {
+           "name": "glide path",
+           "children": [
+            {
+             "name": "调降路径"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Insurers",
+         "children": [
+          {
+           "name": "economic capital",
+           "children": [
+            {
+             "name": "经济资本"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Using Constraints in Market Risk Management"
+      }
+     ]
+    },
+    {
+     "name": "Backtesting and Simulation",
+     "children": [
+      {
+       "name": "Backtesting",
+       "children": [
+        {
+         "name": "Objective",
+         "children": [
+          {
+           "name": "Offer investors insight and rigor to the investment process"
+          },
+          {
+           "name": "A rejection or acceptance criterion for an investment strategy"
+          },
+          {
+           "name": "Widely used by quantitative and fundamental managers"
+          },
+          {
+           "name": "Uncover the historical efficacy of the criterion"
+          }
+         ]
+        },
+        {
+         "name": "Step",
+         "children": [
+          {
+           "name": "Strategy design",
+           "children": [
+            {
+             "name": "Key parameters",
+             "children": [
+              {
+               "name": "Investment universe"
+              },
+              {
+               "name": "Return definition"
+              },
+              {
+               "name": "Rebalancing frequency and transaction cost"
+              },
+              {
+               "name": "Start and end date"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Historical investment simulation",
+           "children": [
+            {
+             "name": "Rolling windows"
+            }
+           ]
+          },
+          {
+           "name": "Analysis of backtesting output",
+           "children": [
+            {
+             "name": "Maximum drawdown"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Common problems",
+         "children": [
+          {
+           "name": "Survivorship bias",
+           "children": [
+            {
+             "name": "Point-in-time data"
+            }
+           ]
+          },
+          {
+           "name": "Look-ahead bias",
+           "children": [
+            {
+             "name": "Reporting lags"
+            },
+            {
+             "name": "Data revisions"
+            },
+            {
+             "name": "Data vendors add new companies to their databases"
+            }
+           ]
+          },
+          {
+           "name": "Data snooping(P-hacking)",
+           "children": [
+            {
+             "name": "May be mitigated by setting a much higher hurdle than  typical"
+            },
+            {
+             "name": "Cross validation"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Historical scenario analysis",
+       "children": [
+        {
+         "name": "Regime changes",
+         "children": [
+          {
+           "name": "Expansions and recessions"
+          },
+          {
+           "name": "High- and low- volatility regimes"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Simulation analysis",
+       "children": [
+        {
+         "name": "Historical simulation",
+         "children": [
+          {
+           "name": "Non-deterministic rolling-window backtest"
+          },
+          {
+           "name": "Bootstrapping"
+          }
+         ]
+        },
+        {
+         "name": "Monte Carlo simulation",
+         "children": [
+          {
+           "name": "High flexible"
+          },
+          {
+           "name": "Distribution should describe the key empirical patterns of the underlying data"
+          },
+          {
+           "name": "Account for the correlations",
+           "children": [
+            {
+             "name": "Multivariate distribution"
+            }
+           ]
+          },
+          {
+           "name": "Complexity of the functional form and number of parameters are important"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Sensitivity analysis",
+       "children": [
+        {
+         "name": "Student's t-distribution"
         }
        ]
       }
