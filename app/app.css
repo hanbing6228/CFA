@@ -134,6 +134,10 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .mf-text { font-style: normal; }
 .mf-acc { position: relative; }
 
+/* 单块解析 (.pages 真题) */
+.single-expl { margin-top: 12px; padding: 12px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 10px 10px 0; font-size: .9rem; }
+.single-expl .ans { white-space: pre-wrap; margin-top: 6px; }
+
 /* 内联 AI 家教 */
 .tutor-box { margin-top: 10px; border: 1.5px solid var(--accent); border-radius: 12px; padding: 12px; background: var(--accent-soft); font-size: .9rem; }
 .tutor-box .ans { white-space: pre-wrap; margin-top: 6px; }

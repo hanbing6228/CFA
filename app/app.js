@@ -269,12 +269,20 @@ function onAnswer(q, picked, card, choicesBox) {
     else if (k === picked) b.classList.add('wrong');
     else b.classList.add('dim');
   });
+  // 单块解析题(.pages 真题): 选项下方直接给一整段原文解析
+  if (!q.explanations && q.explanation) {
+    const ex = el('div', 'single-expl');
+    const freqNote = q.freq ? ` · <span class="muted">本题历史正确率 ${q.freq}%</span>` : '';
+    ex.innerHTML = `<b>${correct ? '✅ 答对' : '❌ 正确答案 ' + q.answer}</b>${freqNote}<div class="ans">${fmt(q.explanation)}</div>`;
+    card.appendChild(ex);
+  } else {
   // 默认展开: 我选的 + 正确答案; 其余点击可看 (交互性核心)
   [...choicesBox.children].forEach(b => {
     const k = b.dataset.k;
     if (k === picked || k === q.answer) toggleWhy(q, b);
     else addHint(b, q);
   });
+  }
 
   // calc 题: 分步揭示
   if (q.steps && q.steps.length) {

@@ -473,10 +473,12 @@ def cmd_build() -> None:
                 errors.append(f"{qid}: choices 必须恰好 A/B/C")
             if q.get("answer") not in ch:
                 errors.append(f"{qid}: answer 不在 choices 中")
-            if sorted(q.get("explanations", {}).keys()) != sorted(ch.keys()):
-                errors.append(f"{qid}: explanations 键与 choices 不一致")
-            if q.get("type") == "calc" and not q.get("steps"):
-                errors.append(f"{qid}: calc 题缺 steps")
+            single_expl = isinstance(q.get("explanation"), str) and q["explanation"]
+            if not single_expl:   # 逐选项解析题: 键须与 choices 一致
+                if sorted(q.get("explanations", {}).keys()) != sorted(ch.keys()):
+                    errors.append(f"{qid}: explanations 键与 choices 不一致")
+                if q.get("type") == "calc" and not q.get("steps"):
+                    errors.append(f"{qid}: calc 题缺 steps")
             if not q.get("source"):
                 errors.append(f"{qid}: 缺 source 出处")
             questions.append(q)

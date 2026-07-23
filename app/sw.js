@@ -1,6 +1,6 @@
 /* 离线壳: 静态资源 cache-first, bank.json network-first (保证题库更新可达) */
 'use strict';
-const CACHE = 'cfa-l2-v5';
+const CACHE = 'cfa-l2-v6';
 const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'fsrs.js', 'store.js', 'mathfmt.js', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png'];
 
 self.addEventListener('install', e => {
