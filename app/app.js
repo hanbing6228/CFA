@@ -555,6 +555,31 @@ function freqBadge(meta) {
 let FRAME_TOPIC = null;   // 当前脑图科目
 let FRAME_VIEW = 'map';   // map | list
 
+/* 全屏脑图浮层: 点节点进来并定位, 支持缩放/平移, 点节点继续聚焦 */
+function openMindmapFS(tree, focusNode) {
+  const ov = el('div', 'fs-overlay');
+  const bar = el('div', 'fs-bar');
+  bar.appendChild(el('span', '', '🧠 脑图 · 双指缩放 / 拖动 / 点节点聚焦'));
+  const close = el('button', 'fs-close', '✕');
+  close.onclick = () => ov.remove();
+  bar.appendChild(close);
+  ov.appendChild(bar);
+  const box = el('div', 'fs-map');
+  ov.appendChild(box);
+  document.body.appendChild(ov);
+  requestAnimationFrame(() => {
+    const ctl = MindMap.render(box, tree, {
+      onNodeTap: (node, focus) => focus(node),   // 全屏内点节点 → 聚焦该节点
+    });
+    if (focusNode && ctl) {
+      // 匹配到同名节点(树被重建过)后聚焦
+      let target = null;
+      (function find(n) { if (n.name === focusNode.name) target = n; (n.children || []).forEach(find); })(tree);
+      if (target) ctl.focus(target);
+    }
+  });
+}
+
 function weakSetOf() {
   const stats = Store.statsData();
   const w = new Set();
@@ -613,9 +638,13 @@ function renderFrames() {
       if (mnode.children.some(c => c.weak)) mnode.weak = true;
       tree.children.push(mnode);
     }
+    const fsBtn = el('button', '', '⛶ 全屏脑图');
+    fsBtn.style.cssText = 'width:100%;padding:9px;border-radius:10px;border:1.5px solid var(--accent);background:var(--card);color:var(--accent);font-weight:600;margin-bottom:8px';
+    fsBtn.onclick = () => openMindmapFS(tree, null);
+    main.appendChild(fsBtn);
     const box = el('div', 'mapbox');
     main.appendChild(box);
-    requestAnimationFrame(() => MindMap.render(box, tree));
+    requestAnimationFrame(() => MindMap.render(box, tree, { onNodeTap: (node) => openMindmapFS(tree, node) }));
     return;
   }
 

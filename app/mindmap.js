@@ -59,7 +59,8 @@ const MindMap = (() => {
     return byd;
   }
 
-  function render(container, tree) {
+  function render(container, tree, opts) {
+    opts = opts || {};
     container.innerHTML = '';
     const maxChars = [14, 18, 24];
     layout(tree, 0, maxChars);
@@ -104,7 +105,9 @@ const MindMap = (() => {
     })(tree);
 
     // 节点
+    const allNodes = [];
     (function nodes(n) {
+      allNodes.push(n);
       const rect = document.createElementNS(NS, 'rect');
       rect.setAttribute('x', n.x); rect.setAttribute('y', n.y - n.h / 2);
       rect.setAttribute('width', n.w); rect.setAttribute('height', n.h);
@@ -113,6 +116,7 @@ const MindMap = (() => {
       rect.setAttribute('fill', isRoot ? accent : cardBg);
       rect.setAttribute('stroke', n.weak ? red : (isMod ? accent : border));
       rect.setAttribute('stroke-width', n.weak ? 2 : 1.2);
+      rect.style.cursor = 'pointer';
       g.appendChild(rect);
       n.lines.forEach((ln, i) => {
         const t = document.createElementNS(NS, 'text');
@@ -128,58 +132,88 @@ const MindMap = (() => {
     })(tree);
 
     container.appendChild(svg);
-    enablePanZoom(container, svg, g, maxX + PADX, maxY + PADY);
+    return enablePanZoom(container, svg, g, maxX + PADX, maxY + PADY, allNodes, opts);
   }
 
-  function enablePanZoom(container, svg, g, contentW, contentH) {
+  function enablePanZoom(container, svg, g, contentW, contentH, allNodes, opts) {
     const cw = container.clientWidth || 340;
+    const ch = container.clientHeight || 460;
     let scale = Math.min(1, (cw - 8) / contentW);
     let tx = 8, ty = 8;
     const apply = () => g.setAttribute('transform', `translate(${tx},${ty}) scale(${scale})`);
     svg.setAttribute('width', cw);
-    svg.setAttribute('height', Math.min(contentH * scale + 16, container.clientHeight || 460));
+    svg.setAttribute('height', ch);
     apply();
 
-    let dragging = false, lx = 0, ly = 0;
+    // 定位到某节点: 居中 + 放大到易读
+    function focus(node, targetScale) {
+      const ns = targetScale || Math.min(1.3, Math.max(0.6, 300 / node.w));
+      const nx = node.x + node.w / 2, ny = node.y;   // 节点中心(内容坐标)
+      scale = ns;
+      tx = cw / 2 - nx * scale;
+      ty = ch / 2 - ny * scale;
+      apply();
+    }
+
+    let lx = 0, ly = 0, moved = 0, downX = 0, downY = 0;
     const pointers = new Map();
-    let pinchDist = 0, pinchMid = null;
+    let pinchDist = 0;
+
+    function hitTest(clientX, clientY) {
+      const r = svg.getBoundingClientRect();
+      const cx = (clientX - r.left - tx) / scale;
+      const cy = (clientY - r.top - ty) / scale;
+      for (const n of allNodes) {
+        if (cx >= n.x && cx <= n.x + n.w && cy >= n.y - n.h / 2 && cy <= n.y + n.h / 2) return n;
+      }
+      return null;
+    }
 
     svg.addEventListener('pointerdown', e => {
       svg.setPointerCapture(e.pointerId);
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
-      if (pointers.size === 1) { dragging = true; lx = e.clientX; ly = e.clientY; }
+      if (pointers.size === 1) { lx = e.clientX; ly = e.clientY; downX = e.clientX; downY = e.clientY; moved = 0; }
     });
     svg.addEventListener('pointermove', e => {
       if (!pointers.has(e.pointerId)) return;
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
       const pts = [...pointers.values()];
-      if (pts.length === 2) {                    // 双指缩放
+      if (pts.length === 2) {
         const d = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
         const mid = { x: (pts[0].x + pts[1].x) / 2, y: (pts[0].y + pts[1].y) / 2 };
         const r = svg.getBoundingClientRect();
         if (pinchDist) {
-          const ns = Math.min(3, Math.max(0.2, scale * d / pinchDist));
+          const nscale = Math.min(3, Math.max(0.2, scale * d / pinchDist));
           const mx = mid.x - r.left, my = mid.y - r.top;
-          tx = mx - (mx - tx) * (ns / scale);
-          ty = my - (my - ty) * (ns / scale);
-          scale = ns; apply();
+          tx = mx - (mx - tx) * (nscale / scale); ty = my - (my - ty) * (nscale / scale);
+          scale = nscale; apply();
         }
-        pinchDist = d; pinchMid = mid;
-      } else if (dragging) {                     // 拖动平移
+        pinchDist = d;
+      } else if (pointers.size === 1) {
+        moved += Math.abs(e.clientX - lx) + Math.abs(e.clientY - ly);
         tx += e.clientX - lx; ty += e.clientY - ly; lx = e.clientX; ly = e.clientY; apply();
       }
     });
-    const up = e => { pointers.delete(e.pointerId); if (pointers.size < 2) pinchDist = 0; if (!pointers.size) dragging = false; };
+    const up = e => {
+      if (pointers.size === 1 && moved < 8 && opts.onNodeTap) {   // 轻点(非拖动) → 命中节点
+        const n = hitTest(e.clientX, e.clientY);
+        if (n) opts.onNodeTap(n, focus);
+      }
+      pointers.delete(e.pointerId);
+      if (pointers.size < 2) pinchDist = 0;
+    };
     svg.addEventListener('pointerup', up);
-    svg.addEventListener('pointercancel', up);
+    svg.addEventListener('pointercancel', () => { pointers.clear(); pinchDist = 0; });
     svg.addEventListener('wheel', e => {
       e.preventDefault();
       const r = svg.getBoundingClientRect();
       const mx = e.clientX - r.left, my = e.clientY - r.top;
-      const ns = Math.min(3, Math.max(0.2, scale * (e.deltaY < 0 ? 1.12 : 0.89)));
-      tx = mx - (mx - tx) * (ns / scale); ty = my - (my - ty) * (ns / scale);
-      scale = ns; apply();
+      const nscale = Math.min(3, Math.max(0.2, scale * (e.deltaY < 0 ? 1.12 : 0.89)));
+      tx = mx - (mx - tx) * (nscale / scale); ty = my - (my - ty) * (nscale / scale);
+      scale = nscale; apply();
     }, { passive: false });
+
+    return { focus };
   }
 
   return { render };

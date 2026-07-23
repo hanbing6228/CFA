@@ -130,6 +130,11 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .topicchip .freq { margin-left: 4px; }
 .mapbox { height: 68vh; border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--bg); touch-action: none; margin-top: 10px; }
 .mapbox svg { display: block; }
+.fs-overlay { position: fixed; inset: 0; z-index: 50; background: var(--bg); display: flex; flex-direction: column; }
+.fs-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; padding-top: calc(12px + env(safe-area-inset-top)); border-bottom: 1px solid var(--border); font-size: .82rem; color: var(--muted); background: var(--card); }
+.fs-close { width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); font-size: 1.1rem; cursor: pointer; }
+.fs-map { flex: 1; overflow: hidden; touch-action: none; }
+.fs-map svg { display: block; }
 
 /* 公式渲染 */
 .mf { font-family: "Cambria Math", "Latin Modern Math", Georgia, serif; font-style: italic; white-space: nowrap; }
