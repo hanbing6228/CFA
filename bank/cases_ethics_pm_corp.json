@@ -1,0 +1,1858 @@
+{
+  "_note": "官方(已过期/公开)金程 2026 L2 Mock 中 Ethics/PM/Corp 三科 vignette 的逐字导入 (verbatim). 结构照 case_demo.json。solutions/解析为原文。",
+  "cases": [
+    {
+      "id": "CASE-Corp-Edberg",
+      "topic": "Corp",
+      "title": "Greta Edberg / Alfa Corporation (Dividends, Repurchases & Governance)",
+      "background": "Greta Edberg is an activist investor with Sintra Partners. Sintra recently acquired a 9.9% equity position in Alfa Corporation and is seeking two board seats. Alfa is a mature company that has maintained a constant dividend payout ratio and does not currently have a share repurchase program. In public comments, Edberg recommends a material increase in Alfa's dividend payout ratio and benchmarking the payout to Alfa's competitors.\n\nEdberg tells Alfa's management that Minskar, one of Alfa's competitors, has a 75% target payout ratio with an adjustment period of four years. Minskar's most recent annual dividend was $0.25 per share. Minskar's EPS is expected to be $1.30 in Year 1 and $1.10 in Year 2 of the adjustment period.\n\nAs an alternative to Alfa increasing dividends, Edberg proposes a one-time share repurchase using borrowed funds. Edberg's current EPS forecast for Alfa for the next year is $1.50. The company currently has 2,267,000 shares outstanding, its current share price is $30, and its after-tax cost of borrowing is 4.25%. Edberg calculates the revised EPS forecast for Alfa, assuming that 250,000 shares are repurchased immediately at the current share price.\n\nTaylor Greene, an analyst, oversees the integration of ESG factors into Sintra's investment analysis. Greene analyzes current policies and practices related to Alfa's board and recommends changes that would increase governance effectiveness. Alfa's board has 13 members, seven of whom are independent, and is chaired by the company's CEO. The board has audit, compensation, nomination, risk and compliance, and governance committees.",
+      "exhibits": []
+    },
+    {
+      "id": "CASE-Corp-Singh",
+      "topic": "Corp",
+      "title": "Pinku Singh / Axiom (Cost of Capital & Corporate Restructuring)",
+      "background": "Pinku Singh is the chief financial officer (CFO) of Axiom, a publicly traded conglomerate that is split into three divisions. Singh wants to optimize the corporate and financing structure of the company and begins by determining which division has the lowest cost of capital based on the asset profiles presented in Exhibit 1.\n\nSingh employs the build-up approach to estimate the specific-company risk premium (SCRP) for Axiom. The firm's cost of equity is 13.5%. Singh estimates the market equity risk premium to be 7.0%, the industry risk premium to be 0.0% and the size premium for Axiom to be 1.2%. The risk-free rate is 3.0% and Axiom has a beta of 1.5.\n\nSingh would like to take advantage of the under-leveraged balance sheet of Axiom while ensuring that the company's current shareholders retain control. Singh considers what corporate actions could achieve these objectives.\n\nDivision B generated an EBITDA of $10.8 million last year and is valued at 6.0x EV/EBITDA. Division B has two segments: a wholesale segment which contributed 20% to the division's EBITDA (comparable wholesale retailers are valued at 7.0x EV/EBITDA), and a consumer segment which contributed 80% to the division's EBITDA (comparable consumer retailers are valued at 5.1x EV/EBITDA). Singh evaluates if spinning off Division B's wholesale segment would have a material impact on shareholder value, which she defines as a change in shareholder value of greater than 5%.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Asset profiles by division",
+          "table": [
+            [
+              "",
+              "Division A",
+              "Division B",
+              "Division C"
+            ],
+            [
+              "Nature of assets",
+              "Mostly tangible",
+              "Mostly tangible",
+              "Mostly intangible"
+            ],
+            [
+              "Fungibility of assets",
+              "Non-fungible",
+              "Fungible",
+              "Non-fungible"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CASE-PM-Diamond",
+      "topic": "PM",
+      "title": "Mary Diamond (Multifactor Models, ETF Cost & APT Arbitrage)",
+      "background": "Mary Diamond, a portfolio manager, uses quantitative models for portfolio construction and attribution analysis.\n\nAs potential additions to her portfolio, Diamond identifies three ETFs (ETF 1, ETF 2, and ETF 3) that replicate US-based equity indexes. She believes that these ETFs are affected by two common macroeconomic factors: surprises in inflation, F_INFL, and surprises in unemployment, F_UNEMP. Diamond estimates the following two-factor macroeconomic model equations that describe the returns of each ETF, where error terms are denoted by e:\n  R_ETF1 = 0.07 + 1.4 F_INFL - 0.6 F_UNEMP + e_ETF1\n  R_ETF2 = 0.09 + 0.6 F_INFL - 0.8 F_UNEMP + e_ETF2\n  R_ETF3 = 0.08 + 1.5 F_INFL - 0.2 F_UNEMP + e_ETF3\n\nDiamond next estimates the cost of ownership for ETF 1 over a 15-month holding period. She gathers the following information for her estimate: round-trip trading commission is 0.05%; bid-offer spread on purchase and sale is 0.20%; annual management fee is 0.08%.\n\nDiamond uses a fundamental factor model to decompose the active return of an external equity manager's portfolio (Exhibit 1). Diamond calculates the manager's active return attributable to security selection to be 1%.\n\nFinally, Diamond identifies three well-diversified portfolios (Exhibit 2). She believes that the expected returns of these portfolios are best modeled with a single-factor model consistent with arbitrage pricing theory. After reviewing the data, Diamond concludes that an arbitrage opportunity exists and considers three strategies:\n  Strategy 1: Buy $2,000,000 of Z; sell short $1,600,000 of X and sell short $400,000 of Y.\n  Strategy 2: Buy $600,000 of X and buy $1,400,000 of Z; sell short $2,000,000 of Y.\n  Strategy 3: Buy $200,000 of Y and buy $1,800,000 of Z; sell short $2,000,000 of X.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Fundamental factor model - manager vs benchmark",
+          "table": [
+            [
+              "Factor",
+              "Factor Sensitivity (Manager's portfolio)",
+              "Factor Sensitivity (Benchmark)",
+              "Factor Return"
+            ],
+            [
+              "Factor 1",
+              "-1.00",
+              "-0.60",
+              "-2.00%"
+            ],
+            [
+              "Factor 2",
+              "0.50",
+              "0.25",
+              "3.50%"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Well-diversified portfolios (single-factor / APT)",
+          "table": [
+            [
+              "Portfolio",
+              "Expected Return",
+              "Factor Sensitivity"
+            ],
+            [
+              "X",
+              "7%",
+              "0.50"
+            ],
+            [
+              "Y",
+              "9%",
+              "0.85"
+            ],
+            [
+              "Z",
+              "11%",
+              "1.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CASE-PM-Nicola",
+      "topic": "PM",
+      "title": "Adriani Nicola (VaR Methods & Backtest Distribution Analysis)",
+      "background": "Adriani Nicola is an analyst for an investment consulting firm. She is preparing an analysis of equity funds for an institutional client.\n\nNicola evaluates risk metrics for the Lagunas Fund. For her current analysis, Nicola calculates a 5% daily VaR using the parametric method. Lagunas has $175 million in assets under management and is expected to have an annual return of 8.80% with a standard deviation of 14.25%. She assumes 250 trading days in a year. In a standard normal distribution, a 5% VaR is 1.65 standard deviations below the expected value.\n\nNicola supplements her analysis with an annual 5% VaR using the historical simulation approach over a 10-year period. She observes higher volatility in recent years, which she expects to persist in the future. Nicola is concerned that VaR using the historical simulation approach may not adequately reflect the higher volatility and considers potential revisions to this approach.\n\nThe Lagunas Fund has a large position in ABC stock, whose price has been extremely volatile. The portfolio manager has proposed reducing the fund's position in ABC stock by 3%. Nicola considers a measure to capture how the VaR of the fund would change if the reduction was implemented.\n\nNicola evaluates three multifactor equity strategies that use a risk parity approach. Each strategy's objective is to achieve market returns with potential for upside, while managing volatility and extreme downside risk. Nicola backtests the three strategies using monthly returns from the past 20 years (Exhibit 1).",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Backtest results (monthly returns)",
+          "table": [
+            [
+              "",
+              "Mean Return",
+              "Maximum Return",
+              "Minimum Return",
+              "Standard Deviation",
+              "Skewness",
+              "Kurtosis"
+            ],
+            [
+              "Strategy A",
+              "0.71%",
+              "3.60%",
+              "-2.40%",
+              "1.46%",
+              "0.15",
+              "8.70"
+            ],
+            [
+              "Strategy B",
+              "0.68%",
+              "3.40%",
+              "-2.30%",
+              "1.39%",
+              "-0.25",
+              "6.50"
+            ],
+            [
+              "Strategy C",
+              "0.70%",
+              "3.50%",
+              "-2.35%",
+              "1.44%",
+              "0.65",
+              "4.20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CASE-PM-Grap",
+      "topic": "PM",
+      "title": "Aaron Grap (Backtesting, Survivorship Bias & VaR)",
+      "background": "Aaron Grap is an investment manager at a hedge fund. He is assessing a new absolute return trading strategy that combines ten different investment factors and is to be used by an equity market-neutral fund.\n\nGrap backtests the strategy using a model with the following parameters: investment universe is the TOP100 Index (the 100 largest listed companies in the country); backtesting period is the past ten years; rebalancing frequency is monthly (simulated using rolling windows); formation of factor portfolios - for each factor, buy the top 20% and sell the bottom 20% of stocks ranked by the factor over the previous 12 months; weighting of factor portfolios is risk parity.\n\nThe TOP100 Index is updated regularly and its composition has significantly changed over the 10-year backtesting period. Grap wants to ensure that survivorship bias is mitigated and compares three alternative methods to form factor portfolios in each rolling window:\n  Method A only uses the companies that were in the TOP100 Index at any given point in time t.\n  Method B only uses the companies that were in the TOP100 Index at the end of the 10-year period.\n  Method C only uses the companies that have been in the TOP100 Index for the entire 10-year period.\n\nBased on the backtesting analysis, Grap estimates that the absolute return trading strategy has a mean monthly return of 0.5% and a standard deviation of monthly returns of 7.1%. Grap assumes the statistical properties of the return distribution are constant over the year and calculates the annual 5% parametric VaR of the strategy, which is 1.65 standard deviations below the expected value.\n\nGrap performs a complementary risk analysis using a risk measure that can give him a better understanding of the downside risk of the absolute return trading strategy. The strategy is benchmarked against cash.",
+      "exhibits": []
+    },
+    {
+      "id": "CASE-PM-Chu",
+      "topic": "PM",
+      "title": "Martin Chu (Economics & Investment Markets / Active FI)",
+      "background": "Martin Chu is a portfolio manager for actively managed, long-only fixed-income accounts.\n\nChu examines the potential impact of GDP growth and inflation on the yields of default-free government bonds in Countries A, B, and C. Chu uses her forecasts in Exhibit 1 to identify the bond market with the largest expected increase in real yields.\n\nIn Country D, the YTM of zero-coupon, inflation-protected government bonds is 0.8% for the 1-year maturity and 1.0% for the 2-year maturity. In the same market, the YTM of a 2-year zero-coupon nominal government bond is 3.0%. Chu calculates the expected 2-year average inflation rate in Country D.\n\nChu reviews a diversified US bond portfolio, Portfolio A. His objective is to determine which of three sectors' spreads can be expected to narrow the most if the economy recovers from a business downturn:\n  Sector A: Investment grade consumer cyclical\n  Sector B: Speculative grade consumer cyclical\n  Sector C: Speculative grade consumer noncyclical\n\nFor Portfolio B, in addition to the long-only constraint, the client proposes adding a second constraint specifying maximum overweights and underweights of 10% relative to the portfolio's benchmark. Chu and the client discuss whether this policy change would impact the portfolio's optimal level of active risk.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Forecast changes",
+          "table": [
+            [
+              "Country",
+              "Forecast Change in Nominal GDP Growth Rate",
+              "Forecast Change in Inflation Rate"
+            ],
+            [
+              "A",
+              "+50 bps",
+              "+10 bps"
+            ],
+            [
+              "B",
+              "+65 bps",
+              "+30 bps"
+            ],
+            [
+              "C",
+              "-40 bps",
+              "+12 bps"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CASE-PM-Li",
+      "topic": "PM",
+      "title": "Li Guoqing (ETF Cost, APT Arbitrage & Factor Model Classification)",
+      "background": "Li Guoqing is a fund manager who is reviewing four similar ETFs. He calculates the expected 1-year holding period cost for ETF 1 based on the information in Exhibit 1.\n\nLi believes that the four ETFs share the same factor and that there are arbitrage opportunities among them, based on the data in Exhibit 2. Using arbitrage pricing theory (APT), Li considers the following trading strategies:\n  Strategy 1: Sell short $6 million of ETF 1 and $4 million of ETF 3; buy $10 million of ETF 2.\n  Strategy 2: Sell short $6 million of ETF 2 and $4 million of ETF 4; buy $10 million of ETF 3.\n  Strategy 3: Buy $4 million of ETF 2 and $6 million of ETF 4; sell short $10 million of ETF 3.\n\nLi uses a two-factor model to analyze the returns of one of the equity portfolios in his fund. He examines how fund returns, R_P, are related to surprises in inflation, F_INFL, and GDP growth, F_GDP:\n  R_P = a_P + b_P1 F_INFL + b_P2 F_GDP + e_P.\nLi estimates the expected return of the portfolio to be 1.8% and uses an error term of 0.2%. The actual and predicted values of inflation and GDP growth, and the portfolio's sensitivities, are in Exhibit 3.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. ETF 1 cost inputs",
+          "table": [
+            [
+              "Item",
+              "ETF 1"
+            ],
+            [
+              "Annual management fee",
+              "0.50%"
+            ],
+            [
+              "One-way trading commission",
+              "0.10%"
+            ],
+            [
+              "Bid-ask spread on purchase and sale",
+              "0.20%"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Expected return and factor sensitivity",
+          "table": [
+            [
+              "",
+              "ETF 1",
+              "ETF 2",
+              "ETF 3",
+              "ETF 4"
+            ],
+            [
+              "Expected return",
+              "2.60%",
+              "3.00%",
+              "3.50%",
+              "4.00%"
+            ],
+            [
+              "Factor sensitivity",
+              "0.6",
+              "1.0",
+              "1.6",
+              "2.0"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 3. Two-factor model inputs (%)",
+          "table": [
+            [
+              "Variable",
+              "Actual Value (%)",
+              "Predicted Value (%)",
+              "Factor Sensitivity"
+            ],
+            [
+              "Inflation",
+              "1.2",
+              "0.8",
+              "3.0"
+            ],
+            [
+              "GDP growth",
+              "-3.5",
+              "-4.0",
+              "0.8"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CASE-Ethics-Denton",
+      "topic": "Ethics",
+      "title": "Michael Denton (AI Disclosure, Referral Fees, Conflicts & Priority of Transactions)",
+      "background": "Michael Denton, CFA, founded WestLedge Financial, a registered investment advisory firm, five years ago. WestLedge is a small firm with just three employees. Denton is the firm's only investment professional, while the other two employees handle administrative tasks.\n\nIn a prior quarterly report to clients, Denton wrote that he had been researching artificial intelligence (AI) for over a year and believed it may improve WestLedge's existing investment process. Since distributing that report, Denton has begun using AI to generate corporate earnings forecasts and screen securities for potential purchase in the firm's growth-oriented equity portfolios. He does not incorporate AI into the investment process for WestLedge's other equity strategies. Because AI is used only for growth-oriented portfolios, Denton does not disclose the use of AI in the firm's current quarterly client report.\n\nDenton actively encourages referrals. A friend, Karri Lynch, has regularly referred clients over the past three years. Denton has offered to pay Lynch referral fees but she always declines, saying she is just helping a friend and will not accept compensation. Denton does not disclose to clients that he has offered to pay referral fees to Lynch. Each year, Denton and Lynch vacation together and Denton always pays for both of their plane tickets from his personal bank account. Denton does not disclose the payments for Lynch's travel.\n\nDenton recently accepted an unpaid position on the investment committee of XLR Corporation's pension plan. XLR is a publicly traded biotechnology company that Denton has been recommending to clients. Denton was recommended for the committee position by Martin Hunter, the CEO of XLR, who is also a client of WestLedge. Denton does not disclose to clients his appointment or that Hunter is a client.\n\nHunter asks Denton for his opinion on Bio13, a biotechnology company that just went public. After performing appropriate due diligence, Denton recommends that Hunter buy shares of Bio13. Denton also informs Hunter that he plans to buy Bio13 shares in his own personal account but has determined that Bio13 is not suitable for any of his other clients. Hunter asks Denton to delay purchasing Bio13 shares in Hunter's account for 30 days, at which time his annual bonus will be deposited. Denton immediately buys shares of Bio13 in his own account, and his purchase temporarily increases the price of the shares. Thirty days later, Denton purchases shares of Bio13 in Hunter's account.",
+      "exhibits": []
+    },
+    {
+      "id": "CASE-Ethics-Brown",
+      "topic": "Ethics",
+      "title": "Pamela Brown (Performance Presentation, Fair Dealing / IPO, Directed Brokerage & Additional Compensation)",
+      "background": "Pamela Brown, CFA, is a financial planner at Metulla Investment Management, a private wealth management firm. Brown is preparing to meet with Jonathan Cliff, a prospective client, to review a sample of Metulla's strategies suitable for Cliff's risk tolerance and return objectives.\n\nDuring the meeting, Brown presents the latest performance report for Metulla's flagship large-cap equity composite, prepared by Brown's team. The composite return calculation includes the returns of terminated accounts. The report's disclosure regarding terminated accounts does not state the dates when the accounts were terminated. Metulla does not claim compliance with the GIPS standards.\n\nBrown provides an overview of Metulla's IPO allocation policies, demonstrating how she recently allocated shares from an IPO suitable for clients with a small-cap mandate. The IPO was oversubscribed and Metulla received 100,000 shares. Exhibit 1 lists Metulla's small-cap-mandate accounts, including some accounts of family members of Metulla's employees, with the number of shares subscribed by each group. All accounts pay fees according to Metulla's standard fee schedule. Employees do not have beneficial interest in family members' accounts.\n\nOne month later, Cliff hires Brown to manage his account. Cliff instructs that his trades be directed to Brinkman Securities LLC. Brown notifies Cliff in writing that Brinkman does not provide best execution, but nonetheless executes trades for Cliff's account with Brinkman. Brinkman provides Brown with 'soft dollars' for each of Cliff's trades. Brown uses the soft dollars to benefit Metulla's institutional clients.\n\nBrown recently prepared an IPS for a family friend who is not one of Metulla's clients. In exchange, Brown accepted a $1,000 consulting fee. Separately, Brown received a one-year gift membership to an exclusive golf club from one of Metulla's clients. For this additional compensation, Brown disclosed neither the consulting fee nor the gift membership to Metulla.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Small-cap-mandate accounts and IPO subscriptions",
+          "table": [
+            [
+              "",
+              "Type of Account",
+              "Clients",
+              "IPO Subscription (Number of Shares)"
+            ],
+            [
+              "Group 1",
+              "Discretionary",
+              "Family members",
+              "25,000"
+            ],
+            [
+              "Group 2",
+              "Discretionary",
+              "Non-family members",
+              "70,000"
+            ],
+            [
+              "Group 3",
+              "Nondiscretionary",
+              "Non-family members",
+              "30,000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CASE-Ethics-Darko",
+      "topic": "Ethics",
+      "title": "Rodrick Darko (Independence, Diligence, Supervisor Responsibilities & Confidentiality)",
+      "background": "Rodrick Darko, CFA, is a senior research analyst at TTN Capital, a large full-service brokerage and investment firm. Darko is invited to an analyst conference hosted by Bloom Data Centers, a company covered by Darko. Bloom arranges to pay for the commercial flights for all analysts attending the conference. Bloom also provides a company-branded mug as a gift to all analysts who attend. Darko accepts the travel arrangement and the gift.\n\nDarko is building a model to support a research report on Ncenter Corp. As a source for the model, Darko relies on a third-party research provider that was approved by TTN's research division. He does not perform his own due diligence on the research provider. Darko's analysis includes both positive and negative growth scenarios, but Darko decides to include only the positive growth scenario in his report.\n\nDarko's supervisor is concerned about recent policy violations by employees in his department. During a compliance training meeting, Darko suggests three initiatives to improve compliance:\n  Initiative 1: Periodically update compliance procedures to ensure that the measures are adequate under the law.\n  Initiative 2: Educate personnel regarding the compliance procedures only when they join the firm.\n  Initiative 3: Issue periodic reminders of the compliance procedures to appropriate personnel.\n\nAnne Garcia, CFA, works in TTN's client services department. Garcia meets with a client and receives information that makes her suspect the client has committed tax fraud. Garcia sends a company-wide email detailing her suspicions. The regulator contacts Garcia as part of its investigation into the client's suspected tax fraud and requests information regarding the client; Garcia provides the information to the regulator as required by local law.",
+      "exhibits": []
+    },
+    {
+      "id": "CASE-Ethics-Silva",
+      "topic": "Ethics",
+      "title": "Theodore Silva (Referral Arrangement, Priority of Transactions, Mosaic Theory & Record Retention)",
+      "background": "Theodore Silva, CFA, manages equity funds at Tritium Asset Management, which recently adopted the Standards. Silva is reviewing some of the firm's policies and procedures for compliance.\n\nSilva has a referral arrangement with Sterling Group, a large brokerage and research firm. In return for referring institutional clients to Silva, Sterling Group is allowed to advertise at Tritium's annual equity conference without paying a fee. Silva does not disclose this arrangement to referred clients because he does not pay Sterling Group for any referrals. Silva directs trade execution to Sterling for the referred clients because Sterling is an approved broker that provides best execution. Silva does not use Sterling's research.\n\nSilva conducts due diligence on a mid-cap packaging company whose stock is actively traded. He determines the fundamentals are strong and buys its stock for one of the equity funds he manages. Silva provides commentary on the company's prospects in his monthly client newsletter. Silva has owned the company's stock in his personal portfolio for many years and has disclosed this in the fund's communications. A few weeks after releasing the newsletter, Silva sells some of his personal position as part of rebalancing his personal portfolio, earning a substantial profit.\n\nSilva plays golf with the CFO of a small fintech company, RizenPay. During the round the CFO tells Silva that the last few weeks have been very busy and that the company is growing fast and doing well financially. The next day Silva purchases the latest fintech report prepared by an industry expert. The report is not available publicly and can only be purchased for a fee; it is well-researched and projects that RizenPay will take market share from competitors. A day later, Silva buys RizenPay stock for his funds.\n\nTritium's recommended policy for record retention is to maintain records of investment actions and client communications in electronic format. Silva is accustomed to retaining all relevant files in hard copy form and does not store any records electronically. He saves records for 5 years, after which they are destroyed. Local regulations require record retention for 5 years.",
+      "exhibits": []
+    },
+    {
+      "id": "CASE-Ethics-Murphy",
+      "topic": "Ethics",
+      "title": "Owen Murphy (Misrepresentation/Attribution, Market Manipulation, Confidentiality & Supervision)",
+      "background": "Owen Murphy, CFA, is a sell-side analyst covering the technology industry for Crozet Investments, a financial advisory firm. He prepares a research report on Company A and gathers forecasts from multiple external data providers. Murphy combines this information with a quantitative model developed by Jane Jones while she was an analyst at Crozet. Jones is no longer with Crozet.\n\nSharon Gaskill, CFA, is the CEO of Company B, a small, publicly traded fintech firm. Crozet has recently initiated coverage of Company B, and Murphy is the assigned analyst. To increase attention to Company B, Gaskill participates in several interviews with the local press and accepts speaking engagements at industry conferences. Investors who hear her enthusiasm are convinced that Company B offers promising growth and buy shares, and the increased demand leads to an increase in Company B's share price.\n\nCrozet is located in a city where many movies are filmed. Several famous actors are clients of James Bass, CFA, one of Crozet's financial advisors. At a family picnic, Bass describes the profile of his current clients as high-net-worth individuals in the movie business. One family member recalls a story about an actor who filed for bankruptcy, and Bass confirms this actor is a former client.\n\nMurphy's supervisor manages a large research department and cannot personally evaluate the conduct of all employees. The supervisor hires a deputy manager to oversee several employees and ensures the deputy is properly trained. The supervisor establishes the following policies to assist with compliance:\n  Policy 1: A monetary incentive will be offered as a reward for ethical behavior.\n  Policy 2: The deputy manager will be responsible for evaluating the ethical conduct of department members.",
+      "exhibits": []
+    },
+    {
+      "id": "CASE-Ethics-Dines",
+      "topic": "Ethics",
+      "title": "Mary Dines (Best Execution/Proxy Voting, Fair Dealing, Performance Presentation & Additional Compensation)",
+      "background": "Mary Dines, CFA, is a senior portfolio manager at Prism Wealth Management, a private wealth management firm. Dines was recently hired by Jerry Kagan, a successful software entrepreneur, to manage his investment portfolio on a discretionary basis.\n\nDuring their initial meeting, Dines proposes using Prism's preferred broker to execute trades. Kagan informs Dines that he wishes to trade through another broker owned by a friend. Although Dines knows that Prism's preferred broker would provide better execution, without further discussion she agrees to follow Kagan's wishes and use his broker. Dines also explains that she will not vote any proxies that would not benefit Kagan's account based on a cost-benefit analysis.\n\nAt a subsequent meeting, Dines informs Kagan of premium services offered by her firm at an additional cost, including direct access to senior research professionals. Kagan decides not to purchase them. A few days later Prism publishes a report changing its recommendation on Cromwell Inc., a cybersecurity company, to a sell. Shortly after publication Dines sets up calls for her premium clients to discuss the report with the senior analyst who authored it, but does not set up such a call for Kagan. The next day Kagan calls Dines and asks her to buy Cromwell shares for his account. Dines knows Kagan is an expert in the cybersecurity sector and places the order without informing him of the firm's recent recommendation change.\n\nSeveral months later, Dines creates a performance presentation for Kagan that shows the past five years of return data for the top and bottom deciles of all Prism accounts managed with the same strategy. The presentation includes a disclosure stating that the performance is shown before taxes and gross of fees.\n\nKagan offers Dines a bonus equal to 1% of any profits above the 12% annual return target. Dines obtains written permission to enter into this arrangement and accepts the offer. Additionally, Kagan offers Dines the use of his luxury yacht over the coming weekend. Dines uses the yacht but does not inform her employer because the offer is not related to the return target.",
+      "exhibits": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "Corp-Edberg-9",
+      "case": "CASE-Corp-Edberg",
+      "topic": "Corp",
+      "module": "Analysis of Dividends and Share Repurchases",
+      "los": "Analysis of Dividends and Share Repurchases: 股利政策与代理成本 (过度投资 / 股东-债权人冲突) 的方向",
+      "type": "concept",
+      "stem": "The implementation of Edberg's recommendation regarding Alfa's dividend payout ratio would most likely:",
+      "choices": {
+        "A": "reduce management's ability to invest in negative NPV projects.",
+        "B": "increase the agency conflict between Alfa's managers and shareholders.",
+        "C": "reduce the agency conflict between Alfa's bondholders and shareholders."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Increasing the dividend payout ratio (paying out a higher percentage of earnings as dividends) constrains management's access to capital and thus their ability to overinvest by taking on negative NPV projects. Managers may obtain private benefits from negative-NPV projects because such projects grow the size of the company and enlarge the manager's span of control. By paying out free cash flow to equity in dividends, managers are constrained in their ability to overinvest.",
+        "B": "Incorrect. Increasing the payout ratio would reduce, not increase, the agency conflict between managers and shareholders. As a mature company, paying out more dividends dissuades managers from overinvesting in negative-NPV projects.",
+        "C": "Incorrect. Increasing the payout ratio would increase, not reduce, the agency conflict between bondholders and shareholders. When a company has debt outstanding, paying dividends reduces the cash cushion available for fixed required payments to bondholders."
+      },
+      "source": "Mock A S2 Q9",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Corp-Edberg-10",
+      "case": "CASE-Corp-Edberg",
+      "topic": "Corp",
+      "module": "Analysis of Dividends and Share Repurchases",
+      "los": "Analysis of Dividends and Share Repurchases: 目标支付比例调整模型 (target payout adjustment model)",
+      "type": "calc",
+      "stem": "Using a target payout adjustment model, the expected increase in Minskar's dividend per share in Year 2 of the adjustment period is closest to:",
+      "choices": {
+        "A": "$0.10.",
+        "B": "$0.15.",
+        "C": "$0.18."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Expected increase in dividends = (Expected earnings x Target payout ratio - Previous dividend) x Adjustment factor, with adjustment factor = 1/4 = 0.25. Year 1: ($1.30 x 0.75 - $0.25) x 0.25 = $0.18125, giving a Year 1 dividend of $0.43125. Year 2: ($1.10 x 0.75 - $0.43125) x 0.25 = $0.0984 = approx $0.10.",
+        "B": "Incorrect. $0.15 does not follow from the target payout adjustment model; the Year 2 increment computes to approximately $0.10 once the Year 1 dividend ($0.43125) is carried forward as the previous dividend.",
+        "C": "Incorrect. $0.18 is the Year 1 dividend increase ($0.18125), not the Year 2 increase. Year 2 must use the updated previous dividend of $0.43125 (not the original $0.25)."
+      },
+      "source": "Mock A S2 Q10",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "ΔDPS = (预期EPS x 目标支付率 − 上期DPS) x 调整系数; 调整系数 = 1/调整年数 = 1/4 = 0.25"
+        },
+        {
+          "label": "代入",
+          "content": "Year 1: (1.30x0.75 − 0.25)x0.25 = 0.18125 → Year 1 DPS = 0.25 + 0.18125 = 0.43125"
+        },
+        {
+          "label": "结果",
+          "content": "Year 2: (1.10x0.75 − 0.43125)x0.25 = 0.0984 ≈ $0.10"
+        },
+        {
+          "label": "陷阱",
+          "content": "第二年必须用滚动更新后的上期股利 0.43125, 而非原始 0.25; 用 0.25 会算出约 $0.18 的偏高值 (即 C)"
+        }
+      ]
+    },
+    {
+      "id": "Corp-Edberg-11",
+      "case": "CASE-Corp-Edberg",
+      "topic": "Corp",
+      "module": "Analysis of Dividends and Share Repurchases",
+      "los": "Analysis of Dividends and Share Repurchases: 借款回购对 EPS 的影响 (earnings yield vs 税后借款成本)",
+      "type": "calc",
+      "stem": "If the proposed share repurchase is implemented immediately, Edberg's revised EPS forecast for Alfa for the next year would be closest to:",
+      "choices": {
+        "A": "$1.36.",
+        "B": "$1.53.",
+        "C": "$1.69."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $1.36 understates EPS; the correct figure of $1.53 results after subtracting the after-tax cost of the borrowed funds and dividing by the reduced share count.",
+        "B": "Correct. Earnings = EPS x shares = $1.50 x 2,267,000 = $3,400,500. Funds to repurchase = $30 x 250,000 = $7,500,000. After-tax cost of funds = 4.25% x $7,500,000 = $318,750. Shares after repurchase = 2,267,000 - 250,000 = 2,017,000. EPS = ($3,400,500 - $318,750) / 2,017,000 = $3,081,750 / 2,017,000 = approx $1.53.",
+        "C": "Incorrect. $1.69 overstates EPS by omitting the after-tax financing cost of the borrowed funds (i.e., dividing $3,400,500 by 2,017,000 = approx $1.69) - the interest cost of the debt-financed buyback must be deducted."
+      },
+      "source": "Mock A S2 Q11",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "回购后EPS = (盈利 − 税后借款成本) / 回购后股数"
+        },
+        {
+          "label": "代入",
+          "content": "盈利=1.50x2,267,000=3,400,500; 回购资金=30x250,000=7,500,000; 税后成本=7,500,000x4.25%=318,750; 股数=2,267,000−250,000=2,017,000"
+        },
+        {
+          "label": "结果",
+          "content": "EPS = (3,400,500 − 318,750)/2,017,000 = 3,081,750/2,017,000 ≈ $1.53"
+        },
+        {
+          "label": "陷阱",
+          "content": "既要减去借款的税后利息成本 (漏减→$1.69), 又要减少流通股数; 两项都不能漏"
+        }
+      ]
+    },
+    {
+      "id": "Corp-Edberg-12",
+      "case": "CASE-Corp-Edberg",
+      "topic": "Corp",
+      "module": "ESG Considerations",
+      "los": "ESG Considerations: 董事会治理评估 (CEO duality / 独立董事 / 委员会结构)",
+      "type": "concept",
+      "stem": "Which of the following characteristics of Alfa's board is most likely to pose the greatest potential governance concern?",
+      "choices": {
+        "A": "Roles of the CEO",
+        "B": "Number and type of committees",
+        "C": "Number of independent directors"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Alfa's CEO also serves as board chair (CEO duality), which is not a characteristic of effective corporate governance. CEO duality may compromise the monitoring and oversight role of the board relative to separate independent chairperson and CEO roles; a lead independent director is often appointed to protect investor interests when the roles are combined.",
+        "B": "Incorrect. Alfa has a comprehensive set of committees (audit, compensation, nomination, risk and compliance, and governance), consistent with sound governance practice.",
+        "C": "Incorrect. Seven of the 13 directors (54%) are independent - a majority. A lack of independent directors would be a negative, but that is not the case here."
+      },
+      "source": "Mock A S2 Q12",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Corp-Singh-1",
+      "case": "CASE-Corp-Singh",
+      "topic": "Corp",
+      "module": "Cost of Capital: Advanced Topics",
+      "los": "Cost of Capital: Advanced Topics: 资产性质 (有形/无形, 可替代性) 对资本成本的影响",
+      "type": "concept",
+      "stem": "Based on their asset profiles, which of Axiom's divisions most likely has the lowest cost of capital?",
+      "choices": {
+        "A": "Division A",
+        "B": "Division B",
+        "C": "Division C"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Division A's assets are mostly tangible but non-fungible. Based on the lower fungibility, its cost of capital is expected to be relatively higher than Division B's.",
+        "B": "Correct. Division B's assets are mostly tangible and fungible. Companies with primarily tangible assets can generally access debt capital at lower cost because they can pledge these assets as collateral, and fungible (interchangeable, highly liquid) assets support lower-cost capital than non-fungible, illiquid assets such as specialized PP&E. So Division B's cost of capital is expected to be the lowest.",
+        "C": "Incorrect. Division C's assets are mostly intangible and non-fungible, so its cost of capital is expected to be relatively higher than that of Division A and Division B."
+      },
+      "source": "Mock B S1 Q1",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Corp-Singh-2",
+      "case": "CASE-Corp-Singh",
+      "topic": "Corp",
+      "module": "Cost of Capital: Advanced Topics",
+      "los": "Cost of Capital: Advanced Topics: build-up approach 求 specific-company risk premium",
+      "type": "calc",
+      "stem": "Based on the build-up approach, the SCRP for Axiom is:",
+      "choices": {
+        "A": "2.3%.",
+        "B": "3.0%.",
+        "C": "3.5%."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Under the build-up approach, re = rf + ERP + SP + SCRP, so SCRP = re - (rf + ERP + SP) = 13.5% - (3.0% + 7.0% + 1.2%) = 2.3%.",
+        "B": "Incorrect. 3.0% is simply the risk-free rate, not the specific-company risk premium.",
+        "C": "Incorrect. 3.5% results from omitting the size premium: 13.5% - (3.0% + 7.0%) = 3.5%. The 1.2% size premium must be subtracted."
+      },
+      "source": "Mock B S1 Q2",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "build-up: re = rf + ERP + SP + SCRP → SCRP = re − (rf + ERP + SP)"
+        },
+        {
+          "label": "代入",
+          "content": "= 13.5% − (3.0% + 7.0% + 1.2%)"
+        },
+        {
+          "label": "结果",
+          "content": "= 13.5% − 11.2% = 2.3%"
+        },
+        {
+          "label": "陷阱",
+          "content": "build-up 法不使用 beta; 题中 beta=1.5 是干扰项, 不要套 CAPM 的 β×ERP; 也别漏减 size premium"
+        }
+      ]
+    },
+    {
+      "id": "Corp-Singh-3",
+      "case": "CASE-Corp-Singh",
+      "topic": "Corp",
+      "module": "Corporate Restructuring",
+      "los": "Corporate Restructuring: 重组类型识别 (dividend recapitalization vs LBO vs reorganization)",
+      "type": "concept",
+      "stem": "Which of the following corporate actions would best meet Singh's objectives?",
+      "choices": {
+        "A": "Reorganization",
+        "B": "Leveraged buyout",
+        "C": "Dividend recapitalization"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. A reorganization is a court-supervised restructuring for companies facing insolvency, in which a bankruptcy court oversees negotiations between the company and its creditors. Axiom is under-leveraged, not insolvent, so this does not apply.",
+        "B": "Incorrect. In a leveraged buyout (LBO) an acquirer uses substantial debt to finance the acquisition of a target and then restructures it. An LBO is an acquirer-led strategy and would not allow Axiom's current shareholders to retain control.",
+        "C": "Correct. In a dividend recapitalization the issuer restructures the mix of debt and equity - typically from equity to debt via debt-financed dividends or share repurchases - to reduce the WACC by replacing expensive equity with cheaper debt. Because the number of outstanding shares falls while the value of the corporation does not change, value to shareholders can increase, and shareholders' stakes are not diluted. This exactly meets Singh's objectives."
+      },
+      "source": "Mock B S1 Q3",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Corp-Singh-4",
+      "case": "CASE-Corp-Singh",
+      "topic": "Corp",
+      "module": "Corporate Restructuring",
+      "los": "Corporate Restructuring: 分拆的 sum-of-the-parts 估值与股东价值影响",
+      "type": "calc",
+      "stem": "Based on Singh's analysis, spinning off the wholesale segment for Division B would lead to:",
+      "choices": {
+        "A": "a material decrease in shareholder wealth.",
+        "B": "no material impact on shareholder wealth.",
+        "C": "a material increase in shareholder wealth."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Multiply each segment's EBITDA by the relevant comparable EV/EBITDA multiple and sum to get the sum-of-the-parts (SOTP) EV: wholesale = 7.0 x 20% x $10.8 = $15.120; consumer = 5.1 x 80% x $10.8 = $44.064; SOTP = $59.184. Singh's combined EV of Division B = 6.0 x $10.8 = $64.800. Change = ($59.184 - $64.800) / $64.800 = -8.7%. The market assigns positive value to synergies between the segments, so there is a material decrease of 8.7% in shareholder wealth post spin-off.",
+        "B": "Incorrect. This result comes from mistakenly averaging the comparable multiples: average = (7.0 + 5.1)/2 = 6.05; SOTP = 6.05 x $10.8 = $65.340; change = ($65.340 - $64.800)/$64.800 = 0.8% (< 5%, no material impact). The multiples must be weighted by each segment's EBITDA contribution, not simple-averaged.",
+        "C": "Incorrect. This result comes from interchanging the comparable multiples: 5.1 x 20% x $10.8 = $11.016 and 7.0 x 80% x $10.8 = $60.480; SOTP = $71.496; change = +10.3% (material increase). The multiples are swapped between segments."
+      },
+      "source": "Mock B S1 Q4",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "分拆后 SOTP EV = Σ(可比 EV/EBITDA × 该分部 EBITDA 占比 × 分部总 EBITDA); 与合并 EV 比较"
+        },
+        {
+          "label": "代入",
+          "content": "wholesale: 7.0×20%×10.8=15.120; consumer: 5.1×80%×10.8=44.064; SOTP=59.184; 合并 EV=6.0×10.8=64.800"
+        },
+        {
+          "label": "结果",
+          "content": "(59.184 − 64.800)/64.800 = −8.7%, 降幅 > 5% → 股东财富实质性减少"
+        },
+        {
+          "label": "陷阱",
+          "content": "B 档=对倍数取简单平均(6.05); C 档=把两分部倍数互换; 两者都会得到错误方向/幅度"
+        }
+      ]
+    },
+    {
+      "id": "PM-Diamond-9",
+      "case": "CASE-PM-Diamond",
+      "topic": "PM",
+      "module": "Multifactor Models",
+      "los": "Multifactor Models: 宏观因子模型截距 = 资产预期收益",
+      "type": "concept",
+      "stem": "Based on the two-factor macroeconomic model, which ETF has the highest expected return?",
+      "choices": {
+        "A": "ETF 1",
+        "B": "ETF 2",
+        "C": "ETF 3"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. ETF 1 has the lowest expected return of 7%. In a macroeconomic factor model the intercept term represents the asset's expected return; the ETF with the highest intercept has the highest expected return.",
+        "B": "Correct. ETF 2 has the highest intercept term of 9%. The intercept reflects the effects of the predicted values of the macroeconomic variables on expected returns; the expected returns on ETF 1, ETF 2 and ETF 3 are 7%, 9% and 8% respectively, so ETF 2 has the highest expected return.",
+        "C": "Incorrect. ETF 3's expected return is 8% (the second highest). Although ETF 3 has the highest sensitivity to inflation surprises and the lowest to unemployment surprises, factor sensitivities are not relevant to expected return - only the intercept is."
+      },
+      "source": "Mock A S1 Q9",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Diamond-10",
+      "case": "CASE-PM-Diamond",
+      "topic": "PM",
+      "module": "ETF Mechanics",
+      "los": "ETF Mechanics: ETF 持有期总成本 (交易成本 + 按期摊销管理费)",
+      "type": "calc",
+      "stem": "Excluding any compounding effects, the expected total holding period cost of investing in ETF 1 is closest to:",
+      "choices": {
+        "A": "0.33%.",
+        "B": "0.35%.",
+        "C": "0.41%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 0.33% results from using the annual management fee (0.08%) without scaling it to the 15-month holding period: 0.05% + 0.20% + 0.08% = 0.33%.",
+        "B": "Correct. Expected total holding period cost = trading costs (round-trip commission + bid-ask spread) plus management fees adjusted for the holding period: 0.05% + 0.20% + (15/12) x 0.08% = 0.35%.",
+        "C": "Incorrect. 0.41% overstates the cost; the management fee is prorated by 15/12 (= 0.10%), not otherwise inflated. The correct total is 0.35%."
+      },
+      "source": "Mock A S1 Q10",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "总持有期成本 = 往返交易佣金 + 买卖价差 + (持有月数/12) × 年管理费"
+        },
+        {
+          "label": "代入",
+          "content": "= 0.05% + 0.20% + (15/12) × 0.08%"
+        },
+        {
+          "label": "结果",
+          "content": "= 0.05% + 0.20% + 0.10% = 0.35%"
+        },
+        {
+          "label": "陷阱",
+          "content": "管理费要按 15/12 摊算 (=0.10%); 直接用年费 0.08% 会得 0.33% (即 A)"
+        }
+      ]
+    },
+    {
+      "id": "PM-Diamond-11",
+      "case": "CASE-PM-Diamond",
+      "topic": "PM",
+      "module": "Analysis of Active Portfolio Management",
+      "los": "Analysis of Active Portfolio Management: 基本面因子模型分解主动收益 (factor tilt vs security selection)",
+      "type": "calc",
+      "stem": "Which of the following had the largest contribution to the manager's active return?",
+      "choices": {
+        "A": "Tilt on Factor 1",
+        "B": "Tilt on Factor 2",
+        "C": "Security selection"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. The contribution of the Factor 1 tilt = [(-1.00) - (-0.60)] x (-2.00%) = 0.8%, which is smaller than the 1% from security selection.",
+        "B": "Incorrect. The contribution of the Factor 2 tilt = (0.50 - 0.25) x 3.50% = 0.875%, which is smaller than the 1% from security selection.",
+        "C": "Correct. Fundamental factor models decompose active return into factor tilts (managerial factor tilts x factor returns) and security selection. Factor 1 tilt = 0.8%; Factor 2 tilt = 0.875%; security selection = 1%. Total active return = 0.8% + 0.875% + 1% = 2.675%, so security selection is the largest contributor."
+      },
+      "source": "Mock A S1 Q11",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "因子 tilt 贡献 = (组合敏感度 − 基准敏感度) × 因子收益; 总主动收益 = Σtilt + security selection"
+        },
+        {
+          "label": "代入",
+          "content": "Factor1: (−1.00−(−0.60))×(−2.00%)=0.8%; Factor2: (0.50−0.25)×3.50%=0.875%; security selection=1%"
+        },
+        {
+          "label": "结果",
+          "content": "总主动收益 = 0.8% + 0.875% + 1% = 2.675%; 三者中 security selection (1%) 最大"
+        },
+        {
+          "label": "陷阱",
+          "content": "Factor1 是负敏感度差 × 负因子收益 = 正贡献 (0.8%), 注意别把符号弄反"
+        }
+      ]
+    },
+    {
+      "id": "PM-Diamond-12",
+      "case": "CASE-PM-Diamond",
+      "topic": "PM",
+      "module": "Multifactor Models",
+      "los": "Multifactor Models: APT 套利策略 (零因子敏感度 + 正预期收益)",
+      "type": "calc",
+      "stem": "The arbitrage opportunity identified by Diamond can be best exploited with:",
+      "choices": {
+        "A": "Strategy 1.",
+        "B": "Strategy 2.",
+        "C": "Strategy 3."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Strategy 1's factor sensitivity = 100% x 1.00 - 80% x 0.50 - 20% x 0.85 = 0.430, which is not zero, so any return reflects risk exposure rather than arbitrage.",
+        "B": "Correct. An arbitrage opportunity earns a positive expected net profit without risk and with no net investment. All three strategies have zero net investment ($2m long vs $2m short). Only Strategy 2 has zero factor sensitivity: 30% x 0.50 + 70% x 1.00 - 100% x 0.85 = 0. With a positive expected return, it is the only true arbitrage.",
+        "C": "Incorrect. Strategy 3's factor sensitivity = 10% x 0.85 + 90% x 1.00 - 100% x 0.50 = 0.485, which is not zero, so it carries factor risk rather than being a pure arbitrage."
+      },
+      "source": "Mock A S1 Q12",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "套利需: 净投资=0, 组合因子敏感度=0, 预期收益>0; 因子敏感度 = Σ(美元权重 × 各组合敏感度)"
+        },
+        {
+          "label": "代入",
+          "content": "Str1=100%×1.00−80%×0.50−20%×0.85=0.430; Str2=30%×0.50+70%×1.00−100%×0.85=0; Str3=10%×0.85+90%×1.00−100%×0.50=0.485"
+        },
+        {
+          "label": "结果",
+          "content": "仅 Strategy 2 因子敏感度=0 且预期收益为正 → 唯一套利机会"
+        },
+        {
+          "label": "陷阱",
+          "content": "Str1、Str3 净投资虽为 0, 但因子敏感度≠0, 收益来自风险暴露而非套利"
+        }
+      ]
+    },
+    {
+      "id": "PM-Nicola-13",
+      "case": "CASE-PM-Nicola",
+      "topic": "PM",
+      "module": "Measuring/Managing Market Risk (VaR)",
+      "los": "Measuring/Managing Market Risk (VaR): 参数法日 VaR 计算 (年→日换算)",
+      "type": "calc",
+      "stem": "In Nicola's current analysis, the 5% daily parametric VaR for the Lagunas Fund is closest to:",
+      "choices": {
+        "A": "$1.52 million.",
+        "B": "$2.54 million.",
+        "C": "$2.66 million."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $1.52 million understates the VaR and does not follow from correctly converting the annual return and standard deviation to daily figures.",
+        "B": "Correct. Convert to daily figures: daily return = 0.0880/250 = 0.000352; daily standard deviation = 0.1425/sqrt(250) = 0.00901249. Step 1: 0.00901249 x 1.65 = 0.01487061. Step 2: 0.000352 - 0.01487061 = -0.01451861. Step 3: change sign to 0.01451861. Step 4: 0.01451861 x $175,000,000 = $2,540,757 = approx $2.54 million.",
+        "C": "Incorrect. $2.66 million overstates the loss - e.g., it results from not subtracting the (positive) daily mean return from 1.65 x daily standard deviation. The mean term must be netted out."
+      },
+      "source": "Mock A S2 Q13",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "日 VaR = −[日均收益 − 1.65×日σ] × 组合价值; 日均=年/250, 日σ=年σ/√250"
+        },
+        {
+          "label": "代入",
+          "content": "日均=0.0880/250=0.000352; 日σ=0.1425/√250=0.00901249; 1.65×0.00901249=0.01487061"
+        },
+        {
+          "label": "结果",
+          "content": "(0.01487061 − 0.000352)=0.01451861; ×175,000,000 ≈ $2,540,757 ≈ $2.54m"
+        },
+        {
+          "label": "陷阱",
+          "content": "标准差按 √250 缩放 (不是 250); 并且要减去日均收益项, 漏减会高估 (≈$2.6m+)"
+        }
+      ]
+    },
+    {
+      "id": "PM-Nicola-14",
+      "case": "CASE-PM-Nicola",
+      "topic": "PM",
+      "module": "Measuring/Managing Market Risk (VaR)",
+      "los": "Measuring/Managing Market Risk (VaR): 历史模拟法的改进 (近期观测加权)",
+      "type": "concept",
+      "stem": "Given Nicola's volatility expectation, the most appropriate revision when supplementing her analysis with an annual 5% VaR would be to:",
+      "choices": {
+        "A": "use a wider confidence interval.",
+        "B": "assume a normal distribution of returns.",
+        "C": "increase the weight of more recent observations."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. A wider confidence interval (e.g., 95% to 99%) produces a larger VaR estimate but does not directly incorporate Nicola's view that recent higher volatility will persist.",
+        "B": "Incorrect. The historical simulation approach is not constrained by a normality assumption; imposing normality would not incorporate the expectation of persistent recent higher volatility.",
+        "C": "Correct. In their basic forms both the parametric and historical simulation methods weight all observations equally. The historical simulation method can be adjusted by weighting more recent observations more heavily and more distant observations less, incorporating the higher recent volatility."
+      },
+      "source": "Mock A S2 Q14",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Nicola-15",
+      "case": "CASE-PM-Nicola",
+      "topic": "PM",
+      "module": "Measuring/Managing Market Risk (VaR)",
+      "los": "Measuring/Managing Market Risk (VaR): incremental VaR 的用途 (仓位变动对组合 VaR 的影响)",
+      "type": "concept",
+      "stem": "Which of the following would best capture the effect on the Lagunas Fund's VaR of the proposed reduction in the ABC stock position?",
+      "choices": {
+        "A": "Relative VaR",
+        "B": "Conditional VaR",
+        "C": "Incremental VaR"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Relative VaR measures how far a portfolio's performance might deviate from its benchmark; it does not capture how portfolio VaR changes when a position size is changed relative to the other positions.",
+        "B": "Incorrect. Conditional VaR is the average loss conditional on exceeding the VaR cutoff; it does not capture how portfolio VaR changes when a position size is changed.",
+        "C": "Correct. Incremental VaR measures how the portfolio VaR changes if a position size is changed relative to the remaining positions - one recalculates VaR under the proposed allocation and takes the difference between the 'before' and 'after' VaR. The proposed 3% change in the ABC position is exactly this type of change."
+      },
+      "source": "Mock A S2 Q15",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Nicola-16",
+      "case": "CASE-PM-Nicola",
+      "topic": "PM",
+      "module": "Backtesting and Simulation",
+      "los": "Backtesting and Simulation: 用回测分布矩 (偏度/峰度) 筛选策略",
+      "type": "concept",
+      "stem": "Based on the backtest results, the multifactor equity strategy that best achieves the investment objective is:",
+      "choices": {
+        "A": "Strategy A.",
+        "B": "Strategy B.",
+        "C": "Strategy C."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Strategy A has returns and volatility similar to Strategy C but a lower probability of positive returns (lower positive skewness) and fatter tails (higher kurtosis, 8.70), which can lead to extreme negative surprises.",
+        "B": "Incorrect. Strategy B has returns and volatility similar to Strategy C but a lower probability of positive returns (negative skewness of -0.25) and fatter tails (higher kurtosis, 6.50).",
+        "C": "Correct. Strategy C best meets the objective of achieving market returns with upside potential while managing volatility and extreme downside risk: it has similar returns and volatility to A and B but the highest positive skewness (0.65) - higher probability of positive returns - and the lowest kurtosis (4.20) - less fat-tailed."
+      },
+      "source": "Mock A S2 Q16",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Grap-9",
+      "case": "CASE-PM-Grap",
+      "topic": "PM",
+      "module": "Backtesting and Simulation",
+      "los": "Backtesting and Simulation: rolling-window 回测流程 (重叠窗口 / 两层迭代)",
+      "type": "concept",
+      "stem": "Which of the following will Grap's backtesting model require?",
+      "choices": {
+        "A": "Non-overlapping rolling windows",
+        "B": "Two iterations of the rolling-window procedure",
+        "C": "A 13-month in-sample period for each rolling window"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The procedure requires overlapping rolling windows. Portfolios are formed each month based on factor ranks over the previous 12 months, so each window has a 1-month out-of-sample period and a 12-month in-sample period, 11 months of which overlap with the previous window's in-sample period.",
+        "B": "Correct. The model requires two iterations of the rolling-window procedure, one for each layer: (1) constructing the factor portfolios, and (2) computing the risk parity weighting. A second rolling-window pass over the same span is needed to estimate the variance-covariance matrix of the factor portfolios (avoiding look-ahead bias) before optimizing the equal-risk-contribution weights.",
+        "C": "Incorrect. Each rolling window uses a 12-month, not 13-month, in-sample period (portfolios are formed on factor ranks over the previous 12 months, with a 1-month out-of-sample period)."
+      },
+      "source": "Mock B S1 Q9",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Grap-10",
+      "case": "CASE-PM-Grap",
+      "topic": "PM",
+      "module": "Backtesting and Simulation",
+      "los": "Backtesting and Simulation: survivorship bias 与 point-in-time 数据",
+      "type": "concept",
+      "stem": "To mitigate survivorship bias, which method should Grap use when forming factor portfolios?",
+      "choices": {
+        "A": "Method A",
+        "B": "Method B",
+        "C": "Method C"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. To mitigate survivorship bias Grap should use point-in-time data - in each rolling window, form factor portfolios using only the companies that were in the TOP100 Index at that point in time. Survivorship bias arises from using data that reflects only entities that survived; tracking all companies that ever existed (casualties as well as survivors) in a correct point-in-time fashion is recommended.",
+        "B": "Incorrect. Using only the companies in the index at the end of the period introduces survivorship bias, because in the past one could not know which companies would survive or be added later.",
+        "C": "Incorrect. Using only companies that were in the index throughout the entire 10-year period also introduces survivorship bias by excluding casualties."
+      },
+      "source": "Mock B S1 Q10",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Grap-11",
+      "case": "CASE-PM-Grap",
+      "topic": "PM",
+      "module": "Measuring/Managing Market Risk (VaR)",
+      "los": "Measuring/Managing Market Risk (VaR): 年化参数法 VaR 计算 (均值×12, σ×√12)",
+      "type": "calc",
+      "stem": "The annual 5% parametric VaR of the absolute return trading strategy is closest to:",
+      "choices": {
+        "A": "11.2%.",
+        "B": "34.6%.",
+        "C": "38.8%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 11.2% is the monthly VaR mistaken for an annual figure: -[0.5% - 1.65 x 7.1%] = -[0.5% - 11.715%] = 11.2%. The inputs must be annualized first.",
+        "B": "Correct. Annual 5% parametric VaR = -[E(Rp) - 1.65 x sigma_p]. Annualize: E(Rp) = 12 x 0.5% = 6.0%; sigma_p = sqrt(12) x 7.1% = 24.6%; 1.65 x 24.6% = 40.6%. VaR = -[6.0% - 40.6%] = 34.6%.",
+        "C": "Incorrect. 38.8% results from annualizing the mean with sqrt(12) instead of x12 (i.e., -[sqrt(12) x 0.5% - 40.6%] = approx 38.8%). The mean is annualized by x12 while the standard deviation is annualized by sqrt(12)."
+      },
+      "source": "Mock B S1 Q11",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "年 VaR = −[E(Rp) − 1.65×σp]; 年 E(Rp)=12×月均, 年 σ=√12×月σ"
+        },
+        {
+          "label": "代入",
+          "content": "E(Rp)=12×0.5%=6.0%; σp=√12×7.1%=24.6%; 1.65×24.6%=40.6%"
+        },
+        {
+          "label": "结果",
+          "content": "−[6.0% − 40.6%] = 34.6%"
+        },
+        {
+          "label": "陷阱",
+          "content": "均值按 ×12 年化、标准差按 ×√12 年化, 缩放方式不同; 不年化→11.2%(A), 均值误用√12→38.8%(C)"
+        }
+      ]
+    },
+    {
+      "id": "PM-Grap-12",
+      "case": "CASE-PM-Grap",
+      "topic": "PM",
+      "module": "Measuring/Managing Market Risk (VaR)",
+      "los": "Measuring/Managing Market Risk (VaR): 下行风险度量选择 (maximum drawdown)",
+      "type": "concept",
+      "stem": "For his complementary risk analysis, which of the following risk measures should Grap use?",
+      "choices": {
+        "A": "Relative VaR",
+        "B": "Surplus at risk",
+        "C": "Maximum drawdown"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Relative VaR (ex ante tracking error) adds no information here. For an absolute return strategy benchmarked against cash, relative VaR equals VaR - cash has zero volatility, so it cancels out - which Grap has already considered.",
+        "B": "Incorrect. Surplus at risk is relevant for pension funds (assets entered as long positions and liabilities as short fixed-income positions), not for a hedge fund / asset manager.",
+        "C": "Correct. Maximum drawdown - often the worst-returning month or quarter, or the worst peak-to-trough decline - is a useful downside-risk measure for an equity market-neutral strategy and should supplement historical standard deviation or beta measures."
+      },
+      "source": "Mock B S1 Q12",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Chu-33",
+      "case": "CASE-PM-Chu",
+      "topic": "PM",
+      "module": "Economics and Investment Markets",
+      "los": "Economics and Investment Markets: 实际 GDP 增长变化对实际利率的影响",
+      "type": "calc",
+      "stem": "Based on Chu's forecasts, which of the following bond markets should experience the largest increase in real yields?",
+      "choices": {
+        "A": "Country A",
+        "B": "Country B",
+        "C": "Country C"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Country A's expected real GDP growth change = 50 bps - 10 bps = +40 bps, larger than the +35 bps (B) and -52 bps (C). An increase in real GDP growth raises the real default-free interest rate: more future goods and services reduce investors' willingness to substitute over time, lowering saving and raising borrowing, so the real rate rises.",
+        "B": "Incorrect. Country B's real GDP growth change = 65 bps - 30 bps = +35 bps, 5 bps smaller than Country A's. The larger nominal GDP growth change for B is not the relevant metric.",
+        "C": "Incorrect. Country C's forecast is a 52 bps decrease in real GDP growth (-40 bps - 12 bps), implying a decrease rather than an increase in its real interest rate."
+      },
+      "source": "Mock B S1 Q33",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "实际 GDP 增长变化 = 名义 GDP 增长变化 − 通胀变化; 实际利率随实际增长上升"
+        },
+        {
+          "label": "代入",
+          "content": "A: +50−10=+40bps; B: +65−30=+35bps; C: −40−12=−52bps"
+        },
+        {
+          "label": "结果",
+          "content": "Country A 实际增长升幅最大 (+40bps) → 实际收益率增幅最大"
+        },
+        {
+          "label": "陷阱",
+          "content": "比较的是实际增长 (名义−通胀), 不是名义 GDP 增长; B 名义更高但实际更低"
+        }
+      ]
+    },
+    {
+      "id": "PM-Chu-34",
+      "case": "CASE-PM-Chu",
+      "topic": "PM",
+      "module": "Economics and Investment Markets",
+      "los": "Economics and Investment Markets: break-even inflation 与通胀风险溢价",
+      "type": "calc",
+      "stem": "The expected 2-year average inflation rate in Country D is most likely:",
+      "choices": {
+        "A": "less than 2%.",
+        "B": "equal to 2%.",
+        "C": "greater than 2%."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. The 2-year nominal bond's YTM reflects a positive risk premium for inflation uncertainty. The break-even inflation (BEI) rate = nominal yield - real yield = 3% - 1% = 2%, but BEI = expected inflation plus an inflation risk premium. Therefore the expected 2-year average inflation is less than 2%.",
+        "B": "Incorrect. 2% is the break-even inflation rate (3% - 1%), which overstates expected inflation because it still includes the inflation uncertainty risk premium.",
+        "C": "Incorrect. Because BEI embeds a positive inflation risk premium, expected inflation is below the 2% break-even rate, not above it."
+      },
+      "source": "Mock B S1 Q34",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "break-even inflation (BEI) = 名义收益率 − 实际收益率; 预期通胀 = BEI − 通胀风险溢价"
+        },
+        {
+          "label": "代入",
+          "content": "2 年 BEI = 3.0% − 1.0% = 2.0%"
+        },
+        {
+          "label": "结果",
+          "content": "BEI 含正的通胀不确定性风险溢价, 故预期通胀 < 2.0%"
+        },
+        {
+          "label": "陷阱",
+          "content": "2% 是含风险溢价的 breakeven, 高估真实预期通胀; 且只用 2 年期实际/名义收益率, 不用 1 年期 0.8%"
+        }
+      ]
+    },
+    {
+      "id": "PM-Chu-35",
+      "case": "CASE-PM-Chu",
+      "topic": "PM",
+      "module": "Economics and Investment Markets",
+      "los": "Economics and Investment Markets: 信用利差与商业周期 / 评级 / 行业敏感度",
+      "type": "concept",
+      "stem": "For Portfolio A, which of the following sectors most likely satisfies Chu's objective concerning credit spreads?",
+      "choices": {
+        "A": "Sector A",
+        "B": "Sector B",
+        "C": "Sector C"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Sector A (investment grade, cyclical) will narrow less than Sector B. Both A and B are consumer cyclical and business-cycle sensitive, but speculative grade bonds are more cycle-sensitive than investment grade, so B narrows more than A.",
+        "B": "Correct. Sector B is both speculative grade and cyclical, making it more sensitive to improving economic conditions than Sector A (cyclical but investment grade) or Sector C (speculative grade but noncyclical). Spreads on lower-rated, cyclical issuers widen the most in downturns and narrow the most in recoveries.",
+        "C": "Incorrect. Sector C (speculative grade, noncyclical) will narrow less than Sector B. Both are speculative grade, but B is cyclical while C is noncyclical, so B's spread compression should be greater."
+      },
+      "source": "Mock B S1 Q35",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Chu-36",
+      "case": "CASE-PM-Chu",
+      "topic": "PM",
+      "module": "Analysis of Active Portfolio Management",
+      "los": "Analysis of Active Portfolio Management: 约束、transfer coefficient 与最优主动风险",
+      "type": "concept",
+      "stem": "If the client's proposal regarding Portfolio B's constraints is implemented, the portfolio's optimal level of active risk would most likely:",
+      "choices": {
+        "A": "decrease.",
+        "B": "remain the same.",
+        "C": "increase."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. The additional constraint lowers the expected information ratio by reducing the transfer coefficient (TC). From sigma_A = TC x (IR* / SR_B) x sigma_B, portfolio constraints reduce the transfer of active return forecasts into active weights, lowering TC and thus the optimal level of active risk.",
+        "B": "Incorrect. Leaving active risk unchanged would require the fall in TC to be offset by a proportional rise in IR, but skill and other factors are held constant, so optimal active risk must fall.",
+        "C": "Incorrect. The added constraint reduces the transfer coefficient and therefore lowers, not raises, the optimal level of active risk."
+      },
+      "source": "Mock B S1 Q36",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Li-13",
+      "case": "CASE-PM-Li",
+      "topic": "PM",
+      "module": "ETF Mechanics",
+      "los": "ETF Mechanics: ETF 1 年持有期成本 (round-trip 交易成本 + 管理费)",
+      "type": "calc",
+      "stem": "Excluding any compounding effects, the expected 1-year holding period cost for investing in ETF 1 is:",
+      "choices": {
+        "A": "0.80%.",
+        "B": "0.90%.",
+        "C": "1.10%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 0.80% results from counting the trading costs one-way only (0.10% + 0.20%) plus the 0.50% fee. Commission and spread must be counted on a round-trip basis.",
+        "B": "Correct. Holding period cost = round-trip trade cost + management fee for the period. Round-trip trade cost = (one-way commission x 2) + (1/2 bid-ask spread x 2) = (0.10% x 2) + (1/2 x 0.20% x 2) = 0.20% + 0.20% = 0.40%. 12-month cost = 0.40% + (12/12) x 0.50% = 0.90%.",
+        "C": "Incorrect. 1.10% results from not halving the bid-ask spread: (0.10% x 2) + (0.20% x 2) + 0.50% = 1.10%. Only half of the quoted spread is incurred on each side."
+      },
+      "source": "Mock B S2 Q13",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "持有期成本 = 往返交易成本 + 期间管理费; 往返成本 = (单边佣金×2) + (½价差×2)"
+        },
+        {
+          "label": "代入",
+          "content": "往返 = (0.10%×2) + (½×0.20%×2) = 0.20% + 0.20% = 0.40%; 管理费 = 12/12×0.50% = 0.50%"
+        },
+        {
+          "label": "结果",
+          "content": "0.40% + 0.50% = 0.90%"
+        },
+        {
+          "label": "陷阱",
+          "content": "价差按往返计但单边取½ (漏半→1.10%); 佣金按往返双边 (只算单边→0.80%)"
+        }
+      ]
+    },
+    {
+      "id": "PM-Li-14",
+      "case": "CASE-PM-Li",
+      "topic": "PM",
+      "module": "Multifactor Models",
+      "los": "Multifactor Models: APT 套利策略选择 (0 因子风险 + 最高收益)",
+      "type": "calc",
+      "stem": "The most profitable strategy to exploit the arbitrage opportunities is:",
+      "choices": {
+        "A": "Strategy 1.",
+        "B": "Strategy 2.",
+        "C": "Strategy 3."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Strategy 1's expected return is only $4,000 (with zero factor risk): -($6m x 2.6% + $4m x 3.5%) + $10m x 3.0% = -($0.156m + $0.14m) + $0.30m = $0.004m. It is a valid but lower-return arbitrage.",
+        "B": "Incorrect. Strategy 2 earns $10,000 but has a residual factor risk of 0.2, so it is not a true arbitrage: factor risk = -[6/10 x 1.0 + 4/10 x 2.0] + 10/10 x 1.6 = -(0.6 + 0.8) + 1.6 = 0.2.",
+        "C": "Correct. Strategy 3 has the highest return of $10,000 with zero factor risk. Expected return = $4m x 3.0% + $6m x 4.0% - $10m x 3.5% = $0.12m + $0.24m - $0.35m = $0.01m. Factor risk = 4/10 x 1.0 + 6/10 x 2.0 - 10/10 x 1.6 = 0.4 + 1.2 - 1.6 = 0."
+      },
+      "source": "Mock B S2 Q14",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "套利策略需因子风险=0 且预期收益最高; 因子风险=Σ(权重×敏感度), 预期收益=Σ(美元×收益)"
+        },
+        {
+          "label": "代入",
+          "content": "Str1: 收益$4,000, 风险0; Str2: 收益$10,000, 风险0.2; Str3: 收益$10,000, 风险0"
+        },
+        {
+          "label": "结果",
+          "content": "Str2、Str3 收益同为 $10,000, 但 Str2 残留因子风险 0.2 非套利 → 选 Strategy 3"
+        },
+        {
+          "label": "陷阱",
+          "content": "高收益 ≠ 套利; 必须先确认因子风险为 0, Str2 因残留 0.2 被排除"
+        }
+      ]
+    },
+    {
+      "id": "PM-Li-15",
+      "case": "CASE-PM-Li",
+      "topic": "PM",
+      "module": "Multifactor Models",
+      "los": "Multifactor Models: 因子模型分类 (macroeconomic / fundamental / statistical)",
+      "type": "concept",
+      "stem": "Li's two-factor model is best categorized as a:",
+      "choices": {
+        "A": "statistical factor model.",
+        "B": "fundamental factor model.",
+        "C": "macroeconomic factor model."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. In a statistical factor model, statistical methods (factor analysis or principal components) are applied to historical returns to extract factors that are themselves portfolios of the securities defined by portfolio weights - not surprises in macroeconomic variables.",
+        "B": "Incorrect. In a fundamental factor model the factors are attributes of stocks or companies (e.g., book-to-price, market cap, P/E, financial leverage) that explain cross-sectional differences in returns; sensitivities (attributes) are specified first and factor returns estimated by regression.",
+        "C": "Correct. In a macroeconomic factor model the factors are surprises in macroeconomic variables - such as inflation risk and GDP growth - that significantly explain returns. The factor (surprise) series is developed first and the factor sensitivities are then estimated through regressions, as Li does."
+      },
+      "source": "Mock B S2 Q15",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "PM-Li-16",
+      "case": "CASE-PM-Li",
+      "topic": "PM",
+      "module": "Multifactor Models",
+      "los": "Multifactor Models: 宏观两因子模型求实际收益 (surprise = actual − predicted)",
+      "type": "calc",
+      "stem": "Based on the two-factor model, the return on Li's portfolio is:",
+      "choices": {
+        "A": "1.8%.",
+        "B": "2.8%.",
+        "C": "3.6%."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. 1.8% is only the intercept a_P (the expected return); it omits the factor-surprise contributions and the error term.",
+        "B": "Incorrect. 2.8% results from dropping one of the factor contributions or the error term; the full sum is 3.6%.",
+        "C": "Correct. R_P = a_P + b_P1 F_INFL + b_P2 F_GDP + e_P, where each factor is a surprise (actual - predicted). R_P = 1.8% + 3.0 x (1.2% - 0.8%) + 0.8 x (-3.5% - (-4.0%)) + 0.2% = 1.8% + 3.0 x 0.4% + 0.8 x 0.5% + 0.2% = 1.8% + 1.2% + 0.4% + 0.2% = 3.6%."
+      },
+      "source": "Mock B S2 Q16",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "R_P = a_P + b_P1×(通胀 actual−predicted) + b_P2×(GDP actual−predicted) + e_P"
+        },
+        {
+          "label": "代入",
+          "content": "= 1.8% + 3.0×(1.2%−0.8%) + 0.8×(−3.5%−(−4.0%)) + 0.2%"
+        },
+        {
+          "label": "结果",
+          "content": "= 1.8% + 1.2% + 0.4% + 0.2% = 3.6%"
+        },
+        {
+          "label": "陷阱",
+          "content": "因子是 surprise = actual − predicted, 不能直接用 actual 值; 别漏加误差项 0.2%"
+        }
+      ]
+    },
+    {
+      "id": "Ethics-Denton-41",
+      "case": "CASE-Ethics-Denton",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: V(B) Communication with Clients (投资流程变更的持续披露)",
+      "type": "concept",
+      "stem": "In his actions relating to the use of AI, does Denton comply with the Standards?",
+      "choices": {
+        "A": "Yes",
+        "B": "No, he violates the Standard relating to fair dealing",
+        "C": "No, he violates the Standard relating to communication with clients and prospective clients"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Denton must keep clients informed on an ongoing basis about changes to the investment process, especially newly identified significant risks and limitations; he failed to do so and thus violates Standard V(B).",
+        "B": "Incorrect. Standard III(B) Fair Dealing is not implicated. Denton is allowed to pursue different disciplines for different investment styles - using AI for growth-oriented portfolios but not other strategies is not a fair-dealing violation.",
+        "C": "Correct. Denton must disclose the basic format and general principles of his investment processes and promptly disclose any changes that might materially affect them, along with significant limitations and risks. Some clients might consider AI untested; by not disclosing this change in his current quarterly report he violates Standard V(B) Communication with Clients and Prospective Clients."
+      },
+      "source": "Mock A S1 Q41",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Denton-42",
+      "case": "CASE-Ethics-Denton",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: VI(C) Referral Fees (向推荐人提供的各种补偿披露)",
+      "type": "concept",
+      "stem": "With respect to the referrals from Lynch, does Denton comply with the Standards?",
+      "choices": {
+        "A": "Yes",
+        "B": "No, because he did not disclose the payments for travel",
+        "C": "No, because he did not disclose the offer of referral fees"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Under Standard VI(C) Referral Fees, Denton must inform clients referred by Lynch of all forms of compensation, consideration, or benefit provided to Lynch - including the plane tickets he buys for her each year.",
+        "B": "Correct. The airfare Denton pays for Lynch is a benefit provided for the recommendation of his services and must be disclosed to referred clients under Standard VI(C). By not disclosing the travel payments, Denton violates the Standard.",
+        "C": "Incorrect. There is no requirement to disclose an offer of referral fees that was not accepted. Had Lynch accepted and payments been made, it would have required disclosure."
+      },
+      "source": "Mock A S1 Q42",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Denton-43",
+      "case": "CASE-Ethics-Denton",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: VI(A) Disclosure of Conflicts + III(E) Confidentiality",
+      "type": "concept",
+      "stem": "With respect to the investment committee position, does Denton violate the Standards?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by not disclosing that Hunter is a client",
+        "C": "Yes, by not disclosing his appointment to the committee"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Denton's appointment to XLR's pension plan investment committee should be disclosed to clients and prospective clients because the new responsibilities could create conflicts of interest, so there is a violation.",
+        "B": "Incorrect. The fact that Hunter is a client is confidential information that should not be disclosed to other clients. Under Standard III(E) Preservation of Confidentiality, none of the exceptions (illegal activity, disclosure required by law, client permission) apply.",
+        "C": "Correct. Under Standard VI(A) Disclosure of Conflicts, Denton must make full and fair disclosure of matters that could impair his independence and objectivity. Service as an investment committee member poses conflicts (duties to clients vs the company, potential compensation, access to material nonpublic information), so his appointment must be disclosed to clients and prospective clients."
+      },
+      "source": "Mock A S1 Q43",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Denton-44",
+      "case": "CASE-Ethics-Denton",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: VI(B) Priority of Transactions / II(B) Market Manipulation",
+      "type": "concept",
+      "stem": "Did Denton comply with the Standards when purchasing Bio13 shares in his personal account?",
+      "choices": {
+        "A": "Yes",
+        "B": "No, he violated the Standard relating to market manipulation",
+        "C": "No, he violated the Standard relating to priority of transactions"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Denton did not violate Standard VI(B) Priority of Transactions. He did not trade ahead of (front-run) his client: Hunter had disclosed he would not buy Bio13 for 30 days and was not disadvantaged. Denton's demand for liquidity was temporary, and Bio13's price 30 days later is driven by subsequent developments in the biotech market and the company.",
+        "B": "Incorrect. The trade is not market manipulation. Although it temporarily moved Bio13's price, there was no intent to mislead market participants and the impact was temporary, not a determinant of the price Hunter pays 30 days later.",
+        "C": "Incorrect. Denton did not front-run his client. Hunter had disclosed he would not purchase for 30 days and was not disadvantaged; the temporary market impact does not determine Hunter's later price."
+      },
+      "source": "Mock A S1 Q44",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Brown-33",
+      "case": "CASE-Ethics-Brown",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(D) Performance Presentation (terminated accounts 披露)",
+      "type": "concept",
+      "stem": "Does Brown violate the Standards when presenting her composite performance?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, with respect to the termination dates",
+        "C": "Yes, with respect to the accounts included in the return calculation"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The performance report does not disclose the termination dates for terminated accounts, which violates Standard III(D) Performance Presentation.",
+        "B": "Correct. Under Standard III(D), performance information must be fair, accurate, and complete. Including terminated accounts is acceptable, but the report must clearly indicate when the accounts were terminated. Because it does not disclose the termination dates, the report is not fair, accurate, and complete, so Brown violates the Standard.",
+        "C": "Incorrect. Including terminated accounts in the composite's return calculation is itself compliant with Standard III(D); the problem is only the missing termination dates."
+      },
+      "source": "Mock A S2 Q33",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Brown-34",
+      "case": "CASE-Ethics-Brown",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(B) Fair Dealing (IPO pro-rata 分配)",
+      "type": "calc",
+      "stem": "To comply with the Standards, how many shares should Brown have allocated to Group 3?",
+      "choices": {
+        "A": "5,000",
+        "B": "24,000",
+        "C": "30,000"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 5,000 shares would not reflect a pro rata allocation across all fee-paying accounts; Group 3's correct pro rata share is 24,000.",
+        "B": "Correct. Under Standard III(B) Fair Dealing, all fee-paying accounts - discretionary or nondiscretionary, family members or other clients - must be included in the IPO allocation on a pro rata basis. Group 3 receives 100,000 x [30,000 / (25,000 + 70,000 + 30,000)] = 100,000 x 30,000/125,000 = 24,000 shares.",
+        "C": "Incorrect. 30,000 is Group 3's subscription amount, not its pro rata allocation of the 100,000 oversubscribed shares; the correct allocation is 24,000."
+      },
+      "source": "Mock A S2 Q34",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "公式",
+          "content": "按 III(B) Fair Dealing, IPO 需对所有付费账户 (含 non-discretionary/家属) 按认购比例 pro rata 分配"
+        },
+        {
+          "label": "代入",
+          "content": "Group 3 = 100,000 × [30,000 / (25,000 + 70,000 + 30,000)]"
+        },
+        {
+          "label": "结果",
+          "content": "= 100,000 × 30,000/125,000 = 24,000 股"
+        },
+        {
+          "label": "陷阱",
+          "content": "家属账户与 non-discretionary 账户只要付费就须纳入分配; 别把认购数 30,000 直接当作分配数"
+        }
+      ]
+    },
+    {
+      "id": "Ethics-Brown-35",
+      "case": "CASE-Ethics-Brown",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(A) Loyalty/Prudence/Care (directed brokerage & soft dollars)",
+      "type": "concept",
+      "stem": "Brown violates the Standards in relation to Cliff's directed brokerage arrangement due to:",
+      "choices": {
+        "A": "the use of soft dollars only.",
+        "B": "failure to obtain best execution only.",
+        "C": "both the use of soft dollars and failure to obtain best execution."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Brokerage commissions are an asset of the client and must be used to benefit that client. Brown violates Standard III(A) Loyalty, Prudence, and Care by using the soft dollars generated from Cliff's trades to benefit Metulla's institutional clients rather than Cliff.",
+        "B": "Incorrect. Brown notified Cliff in writing that Brinkman does not provide best execution. In a directed brokerage arrangement, disclosing to the client that best execution may not be obtained fulfills her obligation, so failure to obtain best execution is not the violation.",
+        "C": "Incorrect. Brown violates the Standards only regarding the use of soft dollars, not the failure to obtain best execution (which she disclosed). Using Cliff's commissions to benefit other clients violates the duty of loyalty."
+      },
+      "source": "Mock A S2 Q35",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Brown-36",
+      "case": "CASE-Ethics-Brown",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: IV(B) Additional Compensation Arrangements",
+      "type": "concept",
+      "stem": "With regard to Brown's additional compensation, the Standards require that she obtain Metulla's consent for:",
+      "choices": {
+        "A": "the gift only.",
+        "B": "the consulting fee only.",
+        "C": "both the gift and the consulting fee."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Both the gift (non-monetary) and the consulting fee (monetary) require written consent from the employer under Standard IV(B).",
+        "B": "Incorrect. Both the gift and the consulting fee require written consent from the employer under Standard IV(B).",
+        "C": "Correct. Under Standard IV(B) Additional Compensation Arrangements, members must not accept gifts, benefits, or compensation that might create a conflict of interest with the employer's interest without written consent from all parties. Compensation includes direct and indirect benefits; both the gift membership and the $1,000 consulting fee require written consent, which Brown did not obtain, so she violates the Standard."
+      },
+      "source": "Mock A S2 Q36",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Darko-37",
+      "case": "CASE-Ethics-Darko",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: I(B) Independence and Objectivity (paid travel vs token gift)",
+      "type": "concept",
+      "stem": "Does Darko violate the Standards regarding the Bloom conference?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by accepting the travel arrangement only",
+        "C": "Yes, by accepting the travel arrangement and the gift"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Darko violates Standard I(B) Independence and Objectivity by accepting the travel arrangement. Best practice is to use commercial transportation at one's own or the firm's expense rather than accept paid travel from an outside company.",
+        "B": "Correct. When attending meetings at a covered company, members should pay for their own commercial transportation; no covered company should reimburse air transportation. Because Bloom is covered by Darko, accepting the flights would appear to compromise his independence and objectivity, violating Standard I(B).",
+        "C": "Incorrect. Accepting the branded mug is not a violation. Members may accept token (low-value) items given to all attendees; a mug is a modest gift that should not impair objectivity. Only the travel arrangement is a violation."
+      },
+      "source": "Mock A S2 Q37",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Darko-38",
+      "case": "CASE-Ethics-Darko",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: V(A) Diligence and Reasonable Basis (scenario omission / third-party research)",
+      "type": "concept",
+      "stem": "Does Darko violate the Standards regarding his work on the Ncenter research report?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, regarding the third-party research provider",
+        "C": "Yes, regarding his scenario choice in the report"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Darko violates Standard V(A) Diligence and Reasonable Basis by including only the positive growth scenario and omitting the negative one. He does not violate by using the approved third-party research.",
+        "B": "Incorrect. A member may rely on others in the firm to determine that third-party research is sound and use it in good faith, unless there is reason to question its validity. TTN's research division approved the provider, so Darko need not perform his own due diligence; this is not a violation.",
+        "C": "Correct. Members must have a reasonable and adequate basis for any analysis or recommendation. Omitting potentially negative outcomes may misrepresent the true economic value of an investment; scenario analysis should include factors likely to have a substantial influence, including extremely positive and negative scenarios. Reporting only the positive scenario violates Standard V(A)."
+      },
+      "source": "Mock A S2 Q38",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Darko-39",
+      "case": "CASE-Ethics-Darko",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: IV(C) Responsibilities of Supervisors (compliance program)",
+      "type": "concept",
+      "stem": "Which compliance initiative suggested by Darko is not consistent with the Standards?",
+      "choices": {
+        "A": "Initiative 1",
+        "B": "Initiative 2",
+        "C": "Initiative 3"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Under the guidance for Standard IV(C) Responsibilities of Supervisors, once a compliance program is in place a supervisor should periodically update procedures to ensure they remain adequate under the law. Initiative 1 is consistent with the Standards.",
+        "B": "Correct. Under Standard IV(C), a supervisor should continually educate personnel about the compliance procedures. Educating personnel only when they join the firm is inadequate; compliance education should be ongoing, so Initiative 2 is not consistent with the Standards.",
+        "C": "Incorrect. Under Standard IV(C), a supervisor should issue periodic reminders of the procedures to appropriate personnel. Initiative 3 is consistent with the Standards."
+      },
+      "source": "Mock A S2 Q39",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Darko-40",
+      "case": "CASE-Ethics-Darko",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(E) Preservation of Confidentiality (illegal activity / regulator)",
+      "type": "concept",
+      "stem": "Do Garcia's actions regarding her client's suspected tax fraud violate the Standards?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by sharing the information in the email",
+        "C": "Yes, by sharing the information with the regulator"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Garcia violates Standard III(E) Preservation of Confidentiality by emailing information about a specific client's suspected tax fraud to all internal personnel. She should report to appropriate authorities or authorized fellow employees working for the client, not the whole company.",
+        "B": "Correct. The most conservative and effective way to comply with Standard III(E) is to avoid disclosing client information except to authorized fellow employees working for the client. Sending a company-wide email about the suspected tax fraud, regardless of whether recipients are authorized, violates Standard III(E).",
+        "C": "Incorrect. If disclosure is required by law, or the information concerns illegal activities by the client, the member may have an obligation to report to authorities. Suspected tax fraud is illegal activity and the regulator requested the information as part of its investigation, so providing it to the regulator is not a violation."
+      },
+      "source": "Mock A S2 Q40",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Silva-37",
+      "case": "CASE-Ethics-Silva",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: VI(C) Referral Fees (non-cash 推荐安排的披露)",
+      "type": "concept",
+      "stem": "Does Silva violate the Standards in his dealings with Sterling Group?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by not disclosing the conference arrangement with Sterling to clients",
+        "C": "Yes, by using Sterling's brokerage for trade execution without using its other services"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Silva violates Standard VI(C) Referral Fees by not disclosing the referral arrangement. Even without a cash payment, Silva benefits from the referrals and gives Sterling free advertising in exchange, which must be disclosed.",
+        "B": "Correct. Members must disclose when they provide compensation or benefit to others who refer prospective clients. Although no cash is paid, Tritium benefits from Sterling's referrals and gives Sterling advertising with monetary value in return. This arrangement must be disclosed to clients so they can assess Tritium's incentives; not disclosing it violates Standard VI(C).",
+        "C": "Incorrect. The Standards require best execution but do not mandate using a broker's research. Because Sterling provides best execution, using it for trade execution without using its research is not a violation."
+      },
+      "source": "Mock B S1 Q37",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Silva-38",
+      "case": "CASE-Ethics-Silva",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: VI(B) Priority of Transactions (个人交易不损害客户)",
+      "type": "concept",
+      "stem": "Did Silva violate the Standards when selling his personal stake in the packaging company?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, because he sold the shares at a profit",
+        "C": "Yes, by acting against his own recommendation"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Silva did not violate Standard VI(B) Priority of Transactions. The fund purchased the actively traded stock before Silva sold personally, so his personal sale - even at a profit - did not disadvantage clients. Members may transact personally as long as clients are not harmed.",
+        "B": "Incorrect. Standard VI(B) does not limit personal transactions merely because they are profitable, as long as clients are given priority and are not harmed. Silva bought for the fund before transacting personally.",
+        "C": "Incorrect. Standard VI(B) does not prohibit a member from taking the opposite side of his own trade or acting differently from a current recommendation, as long as clients are not disadvantaged."
+      },
+      "source": "Mock B S1 Q38",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Silva-39",
+      "case": "CASE-Ethics-Silva",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: II(A) Material Nonpublic Information / mosaic theory",
+      "type": "concept",
+      "stem": "Did Silva violate the Standard relating to material nonpublic information by buying RizenPay's stock?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by trading on the information shared by the CFO",
+        "C": "Yes, by trading on the information shared in the industry report"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Silva did not violate Standard II(A) Material Nonpublic Information. The CFO's comments were nonpublic but non-material. Silva used the mosaic theory - combining non-material nonpublic information with the industry expert's report - to reach his conclusion, which is permissible.",
+        "B": "Incorrect. The CFO's information was nonpublic but not material - a general statement about the company's financial condition that would not by itself affect the stock price - and Silva did not trade solely on it, so there is no violation.",
+        "C": "Incorrect. Members may compensate individuals for their insights. The industry report is available to anyone who pays for it and is based on point-of-sale data, so it is not material nonpublic information; using it is not a violation."
+      },
+      "source": "Mock B S1 Q39",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Silva-40",
+      "case": "CASE-Ethics-Silva",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: V(C) Record Retention (格式与年限)",
+      "type": "concept",
+      "stem": "Does Silva violate the Standards with respect to record retention?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, because of the format in which the records are kept",
+        "C": "Yes, because records must be retained for a minimum period of 7 years"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Silva did not violate Standard V(C) Record Retention. Records may be kept in hard copy or electronic form, and firms may set the applicable time frame. Because local regulations require 5-year retention and Silva retains records for 5 years, he complies.",
+        "B": "Incorrect. Standard V(C) does not require a specific format; records may be kept in hard copy or electronic form.",
+        "C": "Incorrect. Standard V(C) does not mandate 7-year retention. The 7-year minimum is only a recommendation in the absence of regulatory or firm guidance; here local regulation requires 5 years, which Silva meets."
+      },
+      "source": "Mock B S1 Q40",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Murphy-41",
+      "case": "CASE-Ethics-Murphy",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: I(C) Misrepresentation (来源引用 / 前雇员模型归属)",
+      "type": "concept",
+      "stem": "To comply with the Standards in his research on Company A, Murphy must cite:",
+      "choices": {
+        "A": "Jones only.",
+        "B": "the data providers only.",
+        "C": "both Jones and the data providers."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Murphy must cite the data providers but is not required to cite Jones. Research and models developed while employed by a firm are the property of the firm, which may issue future reports without attributing prior analysts.",
+        "B": "Correct. Under Standard I(C) Misrepresentation, preparing research from multiple sources without acknowledging them is a violation; members must give credit where due and reveal sources of forecasts and data. Murphy must cite the external data providers. He need not cite Jones, whose model is now firm property and who has left the firm.",
+        "C": "Incorrect. Murphy must cite the data providers, but citing Jones is not required - models developed while employed at the firm belong to the firm, which may use them without attributing the departed analyst."
+      },
+      "source": "Mock B S1 Q41",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Murphy-42",
+      "case": "CASE-Ethics-Murphy",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: II(B) Market Manipulation (intent 是否存在)",
+      "type": "concept",
+      "stem": "Does Gaskill violate the Standard relating to market manipulation with her interviews and speaking engagements?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by engaging in information-based manipulation",
+        "C": "Yes, by engaging in transaction-based manipulation"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Gaskill does not violate Standard II(B) Market Manipulation. Market manipulation involves disseminating false or misleading information or transactions intended to deceive; intent is critical. There is no evidence Gaskill spread false information or that trades were intended to distort prices.",
+        "B": "Incorrect. Information-based manipulation requires dissemination of false or misleading information; there is no evidence Gaskill did so.",
+        "C": "Incorrect. Transaction-based manipulation requires transactions intended to distort the price-setting mechanism; Standard II(B) does not preclude legitimate strategies, and there is no evidence of intent to distort prices."
+      },
+      "source": "Mock B S1 Q42",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Murphy-43",
+      "case": "CASE-Ethics-Murphy",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(E) Preservation of Confidentiality (former client)",
+      "type": "concept",
+      "stem": "Does Bass violate the Standard relating to preservation of confidentiality at the family picnic?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, in relation to his former client only",
+        "C": "Yes, in relation to both his current clients and his former client"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Bass violates Standard III(E) Preservation of Confidentiality by naming his former client. The Standard protects client information even after the relationship ends.",
+        "B": "Correct. Standard III(E) requires preserving the confidentiality of information from clients, prospective clients, and former clients, and it continues to apply after the relationship ends. By confirming and naming his former client, Bass violates Standard III(E) with respect to that former client.",
+        "C": "Incorrect. Bass does not name his current clients or discuss their finances; describing the general profile of clients he serves is not a breach. He violates the Standard only with respect to the former client he named."
+      },
+      "source": "Mock B S1 Q43",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Murphy-44",
+      "case": "CASE-Ethics-Murphy",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: IV(C) Responsibilities of Supervisors (激励与授权)",
+      "type": "concept",
+      "stem": "Does Murphy's supervisor violate the Standards in his oversight of the department?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by establishing Policy 1",
+        "C": "Yes, by establishing Policy 2"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Neither policy violates Standard IV(C) Responsibilities of Supervisors. Offering incentives - monetary or otherwise - to reward ethical behavior is an acceptable way to assist employees in meeting their obligations, and supervisors of large numbers of employees may delegate supervisory duties to properly trained subordinates.",
+        "B": "Incorrect. Monetary incentives to reward ethical behavior do not violate Standard IV(C); they help employees comply with their legal and ethical obligations.",
+        "C": "Incorrect. Delegating supervisory responsibility to a trained deputy does not violate Standard IV(C). Members with oversight of large numbers of employees may delegate to subordinates who directly oversee the others."
+      },
+      "source": "Mock B S1 Q44",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Dines-41",
+      "case": "CASE-Ethics-Dines",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(A) Loyalty/Prudence/Care (best execution / proxy voting)",
+      "type": "concept",
+      "stem": "Does Dines violate the Standards in the initial meeting with Kagan?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, regarding her proxy voting policy",
+        "C": "Yes, regarding the broker for Kagan's account"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Dines violates Standard III(A) Loyalty, Prudence, and Care by not acting in the client's best interest - she failed to inform Kagan that his preferred broker may not provide best execution.",
+        "B": "Incorrect. Dines does not violate the Standards regarding proxy voting. Voting proxies is part of the duty of loyalty, but a cost-benefit analysis may show that voting all proxies does not benefit the client; members should disclose their proxy voting policies, which Dines did.",
+        "C": "Correct. Under Standard III(A), members must place clients' interests first and seek best execution. In a directed brokerage situation the manager should inform the client that they may not be getting best execution. Kagan's preferred broker is clearly not the best execution option, and Dines failed to inform him, violating Standard III(A)."
+      },
+      "source": "Mock B S2 Q41",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Dines-42",
+      "case": "CASE-Ethics-Dines",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(B) Fair Dealing (客户下单与当前推荐相反)",
+      "type": "concept",
+      "stem": "Does Dines violate the Standards in her actions related to Cromwell?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, because of her actions related to the buy order for Kagan's account",
+        "C": "Yes, because of her actions related to setting up calls with the senior analyst"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Dines violates Standard III(B) Fair Dealing. She did not violate it by arranging analyst calls only for premium clients, but she did violate it by not informing Kagan of the changed Cromwell recommendation before executing his buy order.",
+        "B": "Correct. Under Standard III(B) Fair Dealing, if clients place orders contrary to a current recommendation, they should be advised of the changed recommendation before the order is accepted. Because Prism had changed its rating to a sell, Kagan should have been informed before his buy order was executed. Failing to do so - even though Kagan is a sector expert - violates the Standard.",
+        "C": "Incorrect. Dines is not required to offer premium services to all clients and did not provide advance information. Fair dealing means dealing fairly, not equally; she waited until after publication to set up the premium-client calls, which is permissible."
+      },
+      "source": "Mock B S2 Q42",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Dines-43",
+      "case": "CASE-Ethics-Dines",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: III(D) Performance Presentation (代表性账户 / 加权复合)",
+      "type": "concept",
+      "stem": "Dines violates the Standards in her performance presentation for Kagan with regard to:",
+      "choices": {
+        "A": "the account sample only.",
+        "B": "the disclosure of taxes and fees only.",
+        "C": "both the account sample and the disclosure of taxes and fees."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Under Standard III(D) Performance Presentation, communications must be fair, accurate, and complete. Presenting only the top and bottom decile of accounts gives an inaccurate and incomplete picture of the strategy's overall performance; a weighted-average composite of similar portfolios should be used. Using selected accounts is the violation.",
+        "B": "Incorrect. The tax and fee disclosure is compliant. Disclosures should fully explain the results (e.g., gross of fees, before taxes), which this disclosure does; net returns would vary by each client's fees and tax status.",
+        "C": "Incorrect. Dines violates Standard III(D) with respect to the account sample (using only two deciles rather than a weighted composite) but not with respect to the tax/fee disclosure."
+      },
+      "source": "Mock B S2 Q43",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "Ethics-Dines-44",
+      "case": "CASE-Ethics-Dines",
+      "topic": "Ethics",
+      "module": "Application of the Code and Standards",
+      "los": "Application of the Code and Standards: IV(B) Additional Compensation Arrangements (bonus 已获批 vs 游艇未披露)",
+      "type": "concept",
+      "stem": "Does Dines violate the Standards with respect to either Kagan's bonus offer or the use of his yacht?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, with respect to Kagan's bonus offer",
+        "C": "Yes, with respect to the use of Kagan's yacht"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Dines violates Standard IV(B) Additional Compensation Arrangements by not disclosing the yacht arrangement. She does not violate with respect to the profit share because she informed her employer and obtained permission.",
+        "B": "Incorrect. Dines does not violate Standard IV(B) by accepting the share of profits. She obtained written permission from her employer, so the bonus arrangement is compliant even though it is a direct share of client profits.",
+        "C": "Correct. Under Standard IV(B), members must not accept gifts, benefits, or consideration that might create a conflict of interest with the employer's interest without written consent from all parties. Although the yacht is not monetary compensation, it could create a conflict (favoring Kagan over other clients) and should have been reported to the employer for consent before accepting. By not informing her employer, Dines violates Standard IV(B)."
+      },
+      "source": "Mock B S2 Q44",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    }
+  ]
+}
