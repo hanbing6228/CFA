@@ -3,14 +3,14 @@
     {
       "id": "FSA-FX-funcccy-1",
       "topic": "FSA",
-      "los": "功能货币判定 → 方法选择",
+      "los": "Determining the functional currency → selecting the translation method",
       "module": "Multinational Operations",
       "type": "concept",
-      "stem": "某海外子公司自主经营：销售定价、采购、融资均以当地货币进行，现金流基本不汇回母公司。据此判定其功能货币为当地货币。母公司合并报表折算该子公司报表时应采用：",
+      "stem": "A foreign subsidiary operates autonomously: it sets sales prices, purchases, and financing in the local currency, and its cash flows are essentially not remitted to the parent. On this basis, its functional currency is determined to be the local currency. When the parent translates the subsidiary's financial statements for consolidation, it should use:",
       "choices": {
-        "A": "Current rate method（现行汇率法）",
-        "B": "Temporal method（时态法）",
-        "C": "由管理层在两法中自由选择"
+        "A": "The current rate method",
+        "B": "The temporal method",
+        "C": "Either method, at management's discretion"
       },
       "answer": "A",
       "explanations": {
@@ -18,7 +18,7 @@
         "B": "错。Temporal method 用于功能货币 = 母公司报告货币的场景（子公司只是母公司的延伸，如销售办事处），此时做的是 remeasurement 而非 translation。本题所有经营特征都指向自主实体。",
         "C": "错。方法选择不是会计政策选择，而是由功能货币判定强制决定的。认为可自选是对该框架最根本的误解。"
       },
-      "source": "CFA L2 Curriculum, Multinational Operations, 功能货币判定与折算方法选择",
+      "source": "CFA L2 Curriculum, Multinational Operations, determining the functional currency and selecting the translation method",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -27,14 +27,14 @@
     {
       "id": "FSA-FX-currentrate-1",
       "topic": "FSA",
-      "los": "Temporal vs current rate method: 各报表项目适用汇率",
+      "los": "Temporal vs. current rate method: exchange rate applied to each financial statement item",
       "module": "Multinational Operations",
       "type": "trap",
-      "stem": "采用 current rate method 折算子公司报表时，下列哪个项目不使用期末现行汇率折算？",
+      "stem": "When translating a subsidiary's financial statements using the current rate method, which of the following items is NOT translated at the period-end current exchange rate?",
       "choices": {
-        "A": "存货 (inventory)",
-        "B": "普通股股本 (common stock)",
-        "C": "应付账款 (accounts payable)"
+        "A": "Inventory",
+        "B": "Common stock",
+        "C": "Accounts payable"
       },
       "answer": "B",
       "explanations": {
@@ -42,7 +42,7 @@
         "B": "对。Current rate method 的例外项：股本类权益项目用历史汇率（发行日汇率），股利用宣告日汇率。正因为资产负债用现行汇率而股本用历史汇率，差额才需要 CTA 来配平。记法：'资产负债全现行，股本历史，损益平均，轧差进 CTA'。",
         "C": "错。应付账款是负债，current rate method 下全部资产与负债一律用期末现行汇率。"
       },
-      "source": "CFA L2 Curriculum, Multinational Operations, current rate method 各项目适用汇率",
+      "source": "CFA L2 Curriculum, Multinational Operations, exchange rates applied to each item under the current rate method",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -51,14 +51,14 @@
     {
       "id": "FSA-FX-exposure-1",
       "topic": "FSA",
-      "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
+      "los": "Exposure under the two methods (net asset vs. net monetary) and where the gain/loss is reported (P&L vs. CTA/OCI)",
       "module": "Multinational Operations",
       "type": "trap",
-      "stem": "Temporal method 下，母公司面临的折算风险敞口 (translation exposure) 是子公司的：",
+      "stem": "Under the temporal method, the parent's translation exposure to the subsidiary is the subsidiary's:",
       "choices": {
-        "A": "净资产头寸 (net asset position, 即股东权益)",
-        "B": "净货币资产/负债头寸 (net monetary asset or liability position)",
-        "C": "总资产头寸"
+        "A": "Net asset position (i.e., shareholders' equity)",
+        "B": "Net monetary asset or liability position",
+        "C": "Total asset position"
       },
       "answer": "B",
       "explanations": {
@@ -66,7 +66,7 @@
         "B": "对。Temporal method 下只有货币性项目（现金、应收、应付、长期债务）按现行汇率重新计量，非货币性项目锁定在历史汇率，所以敞口只剩净货币头寸。典型公司货币负债多于货币资产 → net monetary liability exposure。记法：'temporal 只动货币项，敞口自然是净货币'。",
         "C": "错。总资产不是任何一种方法的 exposure 定义；敞口永远是'随汇率重估的项目'的净额，不是全部资产。"
       },
-      "source": "CFA L2 Curriculum, Multinational Operations, 两法下的 balance sheet exposure",
+      "source": "CFA L2 Curriculum, Multinational Operations, balance sheet exposure under the two methods",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -75,10 +75,10 @@
     {
       "id": "FSA-FX-cogs-1",
       "topic": "FSA",
-      "los": "Temporal vs current rate method: 各报表项目适用汇率",
+      "los": "Temporal vs. current rate method: exchange rate applied to each financial statement item",
       "module": "Multinational Operations",
       "type": "calc",
-      "stem": "子公司采用 temporal method 折算（FIFO 计价）。期初存货 LC100（购入时汇率 $0.80/LC），本期采购 LC500（平均汇率 $0.85/LC），期末存货 LC120（购入时汇率 $0.90/LC），期末现行汇率 $0.92/LC。折算后 COGS 最接近：",
+      "stem": "A subsidiary is translated using the temporal method (FIFO costing). Beginning inventory is LC100 (exchange rate at purchase $0.80/LC), purchases during the period are LC500 (average rate $0.85/LC), ending inventory is LC120 (exchange rate at purchase $0.90/LC), and the period-end current rate is $0.92/LC. Translated COGS is closest to:",
       "choices": {
         "A": "$397",
         "B": "$408",
@@ -92,23 +92,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "Temporal 法: 折算 COGS = BI×历史汇率(BI) + Purchases×平均汇率 − EI×历史汇率(EI)；LC 口径 COGS = 100 + 500 − 120 = LC480"
+          "label": "Formula",
+          "content": "Temporal method: translated COGS = BI×historical rate(BI) + Purchases×average rate − EI×historical rate(EI); in LC terms, COGS = 100 + 500 − 120 = LC480"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "100×0.80 + 500×0.85 − 120×0.90 = 80 + 425 − 108"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "$397"
         },
         {
-          "label": "陷阱",
-          "content": "不能用 480×平均(=408) 或 480×期末存货汇率(=432) 一揽子折算；temporal 法下 COGS 必须逐成分配套各自历史汇率"
+          "label": "Trap",
+          "content": "Do not translate as a lump sum using 480×average (=408) or 480×ending-inventory rate (=432); under the temporal method, each component of COGS must be matched to its own historical rate"
         }
       ],
-      "source": "CFA L2 Curriculum, Multinational Operations, temporal method 下 COGS 折算",
+      "source": "CFA L2 Curriculum, Multinational Operations, translating COGS under the temporal method",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -117,14 +117,14 @@
     {
       "id": "FSA-FX-cta-1",
       "topic": "FSA",
-      "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
+      "los": "Exposure under the two methods (net asset vs. net monetary) and where the gain/loss is reported (P&L vs. CTA/OCI)",
       "module": "Multinational Operations",
       "type": "calc",
-      "stem": "子公司功能货币为当地货币 LC，全年净资产保持 LC2,000 不变（当年无利润、无股利）。汇率由年初 $0.50/LC 贬至年末 $0.45/LC。当年折算产生的影响是：",
+      "stem": "A subsidiary's functional currency is the local currency LC. Its net assets remain unchanged at LC2,000 all year (no earnings and no dividends during the year). The exchange rate depreciates from $0.50/LC at the beginning of the year to $0.45/LC at year-end. The translation effect for the year is:",
       "choices": {
-        "A": "$100 折算损失，计入 OCI 中的 CTA",
-        "B": "$100 折算损失，计入当期 P&L",
-        "C": "$100 折算利得，计入 OCI 中的 CTA"
+        "A": "A $100 translation loss, recorded in the CTA within OCI",
+        "B": "A $100 translation loss, recorded in current-period P&L",
+        "C": "A $100 translation gain, recorded in the CTA within OCI"
       },
       "answer": "A",
       "explanations": {
@@ -134,23 +134,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "CTA 变动 ≈ 净资产敞口 × (期末汇率 − 期初汇率)（净资产全年不变的简化情形）"
+          "label": "Formula",
+          "content": "Change in CTA ≈ net asset exposure × (ending rate − beginning rate) (simplified case where net assets are constant all year)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "2,000 × (0.45 − 0.50) = 2,000 × (−0.05)"
         },
         {
-          "label": "结果",
-          "content": "−$100，即 $100 损失，计入 OCI 的 CTA"
+          "label": "Result",
+          "content": "−$100, i.e., a $100 loss, recorded in the CTA within OCI"
         },
         {
-          "label": "陷阱",
-          "content": "两个易错点：把 CTA 记到 P&L（那是 temporal 法）；正敞口 + 货币贬值误判为利得"
+          "label": "Trap",
+          "content": "Two common errors: recording the CTA in P&L (that is the temporal method); and misjudging a positive exposure plus a depreciating currency as a gain"
         }
       ],
-      "source": "CFA L2 Curriculum, Multinational Operations, current rate method 下 CTA 计算与归属",
+      "source": "CFA L2 Curriculum, Multinational Operations, computing and reporting the CTA under the current rate method",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -159,14 +159,14 @@
     {
       "id": "FSA-FX-hyperinf-1",
       "topic": "FSA",
-      "los": "Hyperinflation 处理 (IFRS restate vs GAAP temporal)",
+      "los": "Accounting for hyperinflation (IFRS restate vs. US GAAP temporal)",
       "module": "Multinational Operations",
       "type": "concept",
-      "stem": "子公司位于恶性通胀经济体（三年累计通胀超过 100%）。IFRS 与 US GAAP 对其报表折算的要求分别是：",
+      "stem": "A subsidiary operates in a hyperinflationary economy (cumulative inflation over three years exceeds 100%). The requirements under IFRS and US GAAP, respectively, for translating its financial statements are:",
       "choices": {
-        "A": "IFRS：先按通胀重述 (restate) 报表，再按现行汇率折算；US GAAP：视功能货币为母公司报告货币，采用 temporal method",
-        "B": "IFRS：采用 temporal method；US GAAP：先按通胀重述再按现行汇率折算",
-        "C": "两套准则均要求直接采用 current rate method，不做任何调整"
+        "A": "IFRS: first restate the statements for inflation, then translate at the current rate; US GAAP: treat the functional currency as the parent's presentation currency and apply the temporal method",
+        "B": "IFRS: apply the temporal method; US GAAP: first restate for inflation, then translate at the current rate",
+        "C": "Both standards require applying the current rate method directly, with no adjustment"
       },
       "answer": "A",
       "explanations": {
@@ -174,7 +174,7 @@
         "B": "错。把两套准则的处理整个记反了——这是本考点唯一但致命的陷阱，考试就考你有没有记串。",
         "C": "错。恶性通胀下直接用 current rate 折算会让历史成本资产在报告货币中被严重低估（'消失的资产'问题），两套准则都不允许不做调整。"
       },
-      "source": "CFA L2 Curriculum, Multinational Operations, hyperinflationary economies 处理",
+      "source": "CFA L2 Curriculum, Multinational Operations, accounting for hyperinflationary economies",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -183,13 +183,13 @@
     {
       "id": "FSA-FX-ratio-1",
       "topic": "FSA",
-      "los": "两法对比率的影响 (pure BS/IS ratio 不变性)",
+      "los": "Effect of the two methods on ratios (invariance of pure BS/IS ratios)",
       "module": "Multinational Operations",
       "type": "trap",
-      "stem": "子公司报表按 current rate method 折算成母公司货币后，下列哪个比率与折算前（当地货币口径）保持不变？",
+      "stem": "After a subsidiary's statements are translated into the parent's currency using the current rate method, which of the following ratios is unchanged from before translation (local-currency basis)?",
       "choices": {
-        "A": "Current ratio（流动比率）",
-        "B": "Total asset turnover（总资产周转率）",
+        "A": "Current ratio",
+        "B": "Total asset turnover",
         "C": "ROA"
       },
       "answer": "A",
@@ -198,7 +198,7 @@
         "B": "错。Total asset turnover = 收入(平均汇率)/资产(期末汇率)，分子分母用了不同汇率，约不掉，属于混合比率，折算后会变。",
         "C": "错。ROA = 净利润(平均汇率)/总资产(期末汇率)，同样是跨表混合比率，折算会改变其数值。"
       },
-      "source": "CFA L2 Curriculum, Multinational Operations, current rate method 对财务比率的影响",
+      "source": "CFA L2 Curriculum, Multinational Operations, effect of the current rate method on financial ratios",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -207,10 +207,10 @@
     {
       "id": "FSA-pension-pbo-1",
       "topic": "FSA",
-      "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+      "los": "DB plans: components and roll-forward of the PBO (service cost, interest cost, benefits paid)",
       "module": "Employee Compensation: Post-Employment and Share-Based",
       "type": "calc",
-      "stem": "某 DB 计划期初 pension obligation 为 1,000，折现率 5%。当年 current service cost 80，支付退休金 60，年末因精算假设调整产生精算损失 (actuarial loss) 30。年末 pension obligation 最接近：",
+      "stem": "A DB plan has a beginning pension obligation of 1,000 and a discount rate of 5%. During the year, current service cost is 80, benefits paid are 60, and an actuarial loss of 30 arises at year-end from a change in actuarial assumptions. The year-end pension obligation is closest to:",
       "choices": {
         "A": "1,100",
         "B": "1,070",
@@ -224,23 +224,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "期末 PBO = 期初 PBO + service cost + 期初 PBO×折现率 − benefits paid + actuarial loss"
+          "label": "Formula",
+          "content": "Ending PBO = beginning PBO + service cost + beginning PBO×discount rate − benefits paid + actuarial loss"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "1,000 + 80 + 1,000×5% − 60 + 30 = 1,000 + 80 + 50 − 60 + 30"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "1,100"
         },
         {
-          "label": "陷阱",
-          "content": "benefits paid 是减项不是加项；精算损失增加义务、不能因为它进 OCI 就漏掉"
+          "label": "Trap",
+          "content": "Benefits paid is a deduction, not an addition; the actuarial loss increases the obligation and must not be omitted just because it is reported in OCI"
         }
       ],
-      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, pension obligation 变动表",
+      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, pension obligation roll-forward",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -249,10 +249,10 @@
     {
       "id": "FSA-pension-gaapexp-1",
       "topic": "FSA",
-      "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+      "los": "IFRS vs. US GAAP: reporting of the three components of periodic pension cost (P&L vs. OCI)",
       "module": "Employee Compensation: Post-Employment and Share-Based",
       "type": "calc",
-      "stem": "US GAAP 下：current service cost 80，interest cost 50，计划资产期初 900，expected return on plan assets 7%，actual return 45。不考虑摊销项，当期计入 P&L 的 pension expense 最接近：",
+      "stem": "Under US GAAP: current service cost is 80, interest cost is 50, beginning plan assets are 900, the expected return on plan assets is 7%, and the actual return is 45. Ignoring any amortization, the pension expense recognized in P&L for the period is closest to:",
       "choices": {
         "A": "67",
         "B": "85",
@@ -266,23 +266,23 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "US GAAP P&L pension expense = service cost + interest cost − expected return on plan assets"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "80 + 50 − 900×7% = 80 + 50 − 63"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "67"
         },
         {
-          "label": "陷阱",
-          "content": "用 expected 而非 actual return（差额进 OCI）；漏减回报会得到 130"
+          "label": "Trap",
+          "content": "Use the expected, not the actual, return (the difference goes to OCI); omitting the return altogether gives 130"
         }
       ],
-      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, US GAAP periodic pension cost 成分",
+      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, components of periodic pension cost under US GAAP",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -291,10 +291,10 @@
     {
       "id": "FSA-pension-netint-1",
       "topic": "FSA",
-      "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+      "los": "IFRS vs. US GAAP: reporting of the three components of periodic pension cost (P&L vs. OCI)",
       "module": "Employee Compensation: Post-Employment and Share-Based",
       "type": "calc",
-      "stem": "IFRS 下：期初 pension obligation 1,000，期初计划资产公允价值 800，折现率 5%，公司对计划资产的长期预期回报率为 7%。当期计入 P&L 的 net interest cost 最接近：",
+      "stem": "Under IFRS: the beginning pension obligation is 1,000, the beginning fair value of plan assets is 800, the discount rate is 5%, and the company's long-term expected return on plan assets is 7%. The net interest cost recognized in P&L for the period is closest to:",
       "choices": {
         "A": "10",
         "B": "50",
@@ -308,23 +308,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "IFRS net interest cost = (期初义务 − 期初计划资产) × 折现率"
+          "label": "Formula",
+          "content": "IFRS net interest cost = (beginning obligation − beginning plan assets) × discount rate"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "(1,000 − 800) × 5% = 200 × 5%"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "10"
         },
         {
-          "label": "陷阱",
-          "content": "IFRS 不使用 expected return on plan assets；套用 7% 会得到 −6，只算义务利息会得到 50"
+          "label": "Trap",
+          "content": "IFRS does not use the expected return on plan assets; applying 7% gives −6, and counting only the interest on the obligation gives 50"
         }
       ],
-      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, IFRS net interest 计算",
+      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, computing net interest under IFRS",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -333,14 +333,14 @@
     {
       "id": "FSA-pension-assump-1",
       "topic": "FSA",
-      "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
+      "los": "Direction of the effect of assumption changes (discount rate / compensation growth rate) on the liability and expense",
       "module": "Employee Compensation: Post-Employment and Share-Based",
       "type": "concept",
-      "stem": "其他条件不变，DB 计划所用折现率上升，对 pension obligation 与 current service cost 的影响分别是：",
+      "stem": "All else equal, if the discount rate used for a DB plan rises, the effects on the pension obligation and on current service cost, respectively, are:",
       "choices": {
-        "A": "两者都下降",
-        "B": "Obligation 下降，service cost 上升",
-        "C": "Obligation 上升，service cost 下降"
+        "A": "Both decrease",
+        "B": "The obligation decreases, service cost increases",
+        "C": "The obligation increases, service cost decreases"
       },
       "answer": "A",
       "explanations": {
@@ -348,7 +348,7 @@
         "B": "错。service cost 是当年新增服务对应的未来给付的现值，同样受折现率压缩，不会反向上升。",
         "C": "错。方向完全记反。注意区分：折现率上升时 interest cost 方向才是不确定的（率升×基数降），但义务和 service cost 的方向毫无悬念是降。"
       },
-      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, 折现率假设的影响",
+      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, effect of the discount rate assumption",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -357,14 +357,14 @@
     {
       "id": "FSA-pension-assump-2",
       "topic": "FSA",
-      "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
+      "los": "Direction of the effect of assumption changes (discount rate / compensation growth rate) on the liability and expense",
       "module": "Employee Compensation: Post-Employment and Share-Based",
       "type": "trap",
-      "stem": "某公司（US GAAP，final-pay 型 DB 计划）希望降低资产负债表上报告的 pension obligation。下列假设调整中最能达到目的的是：",
+      "stem": "A company (US GAAP, final-pay DB plan) wants to lower the pension obligation reported on its balance sheet. Which of the following assumption changes would best achieve this?",
       "choices": {
-        "A": "提高折现率",
-        "B": "提高薪酬增长率 (rate of compensation growth)",
-        "C": "提高 expected return on plan assets"
+        "A": "Increase the discount rate",
+        "B": "Increase the rate of compensation growth",
+        "C": "Increase the expected return on plan assets"
       },
       "answer": "A",
       "explanations": {
@@ -372,7 +372,7 @@
         "B": "错。final-pay 计划的给付随最终薪酬水平走，薪酬增长率越高、未来给付越大，义务是上升而非下降。",
         "C": "错。这是本题的核心陷阱：expected return on plan assets 只影响 US GAAP 下的 P&L 费用平滑，完全不进入 obligation 的计量——义务的现值只由折现率、薪酬增长等给付端假设决定。想靠它降负债是徒劳的。"
       },
-      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, 精算假设对负债与费用的影响",
+      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, effect of actuarial assumptions on the liability and expense",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -381,14 +381,14 @@
     {
       "id": "FSA-sbc-1",
       "topic": "FSA",
-      "los": "Share-based compensation: expense 确认时点与计量",
+      "los": "Share-based compensation: timing of expense recognition and measurement",
       "module": "Employee Compensation: Post-Employment and Share-Based",
       "type": "concept",
-      "stem": "公司授予员工股票期权（equity-settled，服务期/vesting period 为 3 年）。该股权激励费用的计量与确认方式是：",
+      "stem": "A company grants employees stock options (equity-settled, with a 3-year service/vesting period). The measurement and recognition of the related compensation expense is:",
       "choices": {
-        "A": "按授予日 (grant date) 公允价值计量，在 3 年服务期内分摊确认，后续不因股价变动重新计量",
-        "B": "按每个资产负债表日的公允价值重新计量，变动计入当期费用",
-        "C": "在行权日按内在价值 (intrinsic value) 一次性确认费用"
+        "A": "Measured at grant-date fair value and recognized over the 3-year service period, with no subsequent remeasurement for changes in the share price",
+        "B": "Remeasured at fair value each balance sheet date, with changes recognized in current-period expense",
+        "C": "Recognized in full at the exercise date based on intrinsic value"
       },
       "answer": "A",
       "explanations": {
@@ -396,7 +396,7 @@
         "B": "错。逐期重新计量是 cash-settled（如 SARs 现金结算）类负债型激励的处理——负债要随公允价值浮动，权益型不用。两类结算方式的计量规则最易混淆。",
         "C": "错。行权日内在价值法是早已废弃的旧处理；现行准则下费用在服务期内确认，且用的是公允价值（含时间价值），不是行权时的内在价值。"
       },
-      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, share-based compensation 计量",
+      "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, measurement of share-based compensation",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -405,14 +405,14 @@
     {
       "id": "FSA-interco-classify-1",
       "topic": "FSA",
-      "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
+      "los": "Classification: mapping accounting methods to financial assets / associates / joint ventures / business combinations",
       "module": "Intercorporate Investments",
       "type": "concept",
-      "stem": "公司持有另一家公司 25% 有表决权股份，可向其董事会派驻代表并参与经营决策，但不构成控制。该投资应采用的会计处理是：",
+      "stem": "A company holds 25% of the voting shares of another company, can appoint a representative to its board, and participates in operating decisions, but does not have control. The appropriate accounting treatment for this investment is:",
       "choices": {
-        "A": "Equity method（权益法）",
-        "B": "以公允价值计量且变动计入损益 (FVPL)",
-        "C": "全面合并 (consolidation)"
+        "A": "The equity method",
+        "B": "Fair value through profit or loss (FVPL)",
+        "C": "Full consolidation"
       },
       "answer": "A",
       "explanations": {
@@ -420,7 +420,7 @@
         "B": "错。FVPL 等金融资产处理适用于无重大影响的被动投资（通常 <20% 且无其他影响证据）；本题的董事会席位已明确构成重大影响。",
         "C": "错。合并要求控制（通常 >50% 表决权或其他控制证据），25% 且'不构成控制'排除了合并。"
       },
-      "source": "CFA L2 Curriculum, Intercorporate Investments, 投资分类与会计方法对应",
+      "source": "CFA L2 Curriculum, Intercorporate Investments, classifying investments and mapping accounting methods",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -429,14 +429,14 @@
     {
       "id": "FSA-interco-jv-1",
       "topic": "FSA",
-      "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
+      "los": "Classification: mapping accounting methods to financial assets / associates / joint ventures / business combinations",
       "module": "Intercorporate Investments",
       "type": "concept",
-      "stem": "两家公司各持 50% 设立一家合营企业 (joint venture)，双方共同控制。IFRS 下该合营方对 JV 投资一般要求的会计处理是：",
+      "stem": "Two companies each hold 50% of a joint venture and share joint control. Under IFRS, the accounting treatment generally required of a venturer for its investment in the JV is:",
       "choices": {
-        "A": "Equity method（权益法）",
-        "B": "Proportionate consolidation（比例合并）",
-        "C": "全面合并并确认 50% 少数股东权益"
+        "A": "The equity method",
+        "B": "Proportionate consolidation",
+        "C": "Full consolidation with recognition of a 50% non-controlling interest"
       },
       "answer": "A",
       "explanations": {
@@ -444,7 +444,7 @@
         "B": "错。比例合并是旧准则 (IAS 31) 曾允许的备选处理，现行 IFRS 11 已基本取消——这是新旧准则记串的经典陷阱。",
         "C": "错。全面合并要求单方控制；共同控制下双方都不满足合并条件，也谈不上确认 NCI。"
       },
-      "source": "CFA L2 Curriculum, Intercorporate Investments, joint venture 的会计处理",
+      "source": "CFA L2 Curriculum, Intercorporate Investments, accounting for joint ventures",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -453,10 +453,10 @@
     {
       "id": "FSA-interco-equity-1",
       "topic": "FSA",
-      "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
+      "los": "Equity method: initial recognition, investment income, dividends, and allocation of excess purchase price",
       "module": "Intercorporate Investments",
       "type": "calc",
-      "stem": "年初以 300 购入被投资方 30% 股份（无超额购买价），采用 equity method。当年被投资方净利润 100，宣告并支付股利 40。年末投资账面价值最接近：",
+      "stem": "At the beginning of the year, an investor purchases 30% of an investee for 300 (no excess purchase price) and uses the equity method. During the year the investee reports net income of 100 and declares and pays dividends of 40. The year-end carrying value of the investment is closest to:",
       "choices": {
         "A": "318",
         "B": "330",
@@ -470,23 +470,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "期末投资账面价值 = 初始成本 + 持股比例×NI − 持股比例×股利"
+          "label": "Formula",
+          "content": "Ending carrying value = initial cost + ownership %×NI − ownership %×dividends"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "300 + 0.30×100 − 0.30×40 = 300 + 30 − 12"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "318"
         },
         {
-          "label": "陷阱",
-          "content": "股利必须按份额减（不减→330，全额减→290）；权益法下股利不是收入"
+          "label": "Trap",
+          "content": "Dividends must be deducted at the ownership share (not deducting → 330, deducting the full amount → 290); under the equity method dividends are not income"
         }
       ],
-      "source": "CFA L2 Curriculum, Intercorporate Investments, equity method 账面价值滚动",
+      "source": "CFA L2 Curriculum, Intercorporate Investments, equity method carrying-value roll-forward",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -495,10 +495,10 @@
     {
       "id": "FSA-interco-equity-2",
       "topic": "FSA",
-      "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
+      "los": "Equity method: initial recognition, investment income, dividends, and allocation of excess purchase price",
       "module": "Intercorporate Investments",
       "type": "calc",
-      "stem": "以 500 购入被投资方 20% 股份。购买日被投资方净资产账面价值 2,000（20% 份额 = 400）。超额购买价 100 中，60 归因于被低估的 PP&E（剩余年限 10 年，直线折旧），其余 40 为商誉。当年被投资方净利润 150。投资方当年确认的 equity income 最接近：",
+      "stem": "An investor purchases 20% of an investee for 500. At the acquisition date the investee's net assets have a book value of 2,000 (the 20% share = 400). Of the excess purchase price of 100, 60 is attributable to undervalued PP&E (remaining life 10 years, straight-line depreciation) and the remaining 40 is goodwill. The investee reports net income of 150 for the year. The equity income the investor recognizes for the year is closest to:",
       "choices": {
         "A": "24",
         "B": "30",
@@ -512,23 +512,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "Equity income = 持股比例×NI − 归因于可折旧资产的超额购买价 ÷ 剩余年限"
+          "label": "Formula",
+          "content": "Equity income = ownership %×NI − (excess purchase price attributable to depreciable assets ÷ remaining life)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "0.20×150 − 60/10 = 30 − 6"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "24"
         },
         {
-          "label": "陷阱",
-          "content": "商誉部分 40 不摊销（摊了→20）；漏掉全部摊销→30"
+          "label": "Trap",
+          "content": "The goodwill portion of 40 is not amortized (amortizing it → 20); omitting all amortization → 30"
         }
       ],
-      "source": "CFA L2 Curriculum, Intercorporate Investments, equity method 超额购买价分摊",
+      "source": "CFA L2 Curriculum, Intercorporate Investments, allocation of excess purchase price under the equity method",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -537,10 +537,10 @@
     {
       "id": "FSA-interco-goodwill-1",
       "topic": "FSA",
-      "los": "Full goodwill vs partial goodwill",
+      "los": "Full goodwill vs. partial goodwill",
       "module": "Intercorporate Investments",
       "type": "calc",
-      "stem": "母公司以 800 收购子公司 80% 股权，购买日子公司可辨认净资产公允价值为 900，按购买对价推算的子公司整体公允价值为 1,000。Partial goodwill method 下确认的商誉最接近：",
+      "stem": "A parent acquires 80% of a subsidiary for 800. At the acquisition date the fair value of the subsidiary's identifiable net assets is 900, and the implied total fair value of the subsidiary based on the consideration paid is 1,000. The goodwill recognized under the partial goodwill method is closest to:",
       "choices": {
         "A": "80",
         "B": "100",
@@ -554,23 +554,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "Partial goodwill = 购买对价 − 持股比例 × 可辨认净资产公允价值"
+          "label": "Formula",
+          "content": "Partial goodwill = consideration paid − ownership % × fair value of identifiable net assets"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "800 − 0.80×900 = 800 − 720"
         },
         {
-          "label": "结果",
-          "content": "80（对照: full goodwill = 1,000 − 900 = 100）"
+          "label": "Result",
+          "content": "80 (for comparison: full goodwill = 1,000 − 900 = 100)"
         },
         {
-          "label": "陷阱",
-          "content": "full 与 partial 相差的 20 = NCI 份额商誉；0.2×900=180 是 partial 法下的 NCI，不是商誉"
+          "label": "Trap",
+          "content": "The 20 difference between full and partial is the NCI's share of goodwill; 0.2×900=180 is the NCI under the partial method, not goodwill"
         }
       ],
-      "source": "CFA L2 Curriculum, Intercorporate Investments, full vs partial goodwill 计算",
+      "source": "CFA L2 Curriculum, Intercorporate Investments, computing full vs. partial goodwill",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -579,14 +579,14 @@
     {
       "id": "FSA-interco-ratio-1",
       "topic": "FSA",
-      "los": "Acquisition method vs equity method 对报表比率的影响",
+      "los": "Effect of the acquisition method vs. the equity method on reported ratios",
       "module": "Intercorporate Investments",
       "type": "concept",
-      "stem": "对同一笔投资，若采用 acquisition method（全面合并）而非 equity method，合并后母公司报表的 net profit margin 通常：",
+      "stem": "For the same investment, if the acquisition method (full consolidation) is used rather than the equity method, the consolidated parent's net profit margin will generally be:",
       "choices": {
-        "A": "更低",
-        "B": "更高",
-        "C": "不变"
+        "A": "Lower",
+        "B": "Higher",
+        "C": "Unchanged"
       },
       "answer": "A",
       "explanations": {
@@ -594,7 +594,7 @@
         "B": "错。合并不会创造更高的利润率——利润没变、收入变大，方向只能向下。误选此项通常是把'收入更高'直接等同于'比率更好'。",
         "C": "错。不变的是归母净利润的绝对额，不是利润率；只要收入口径变了，margin 就变。"
       },
-      "source": "CFA L2 Curriculum, Intercorporate Investments, acquisition vs equity method 对比率的影响",
+      "source": "CFA L2 Curriculum, Intercorporate Investments, effect of the acquisition vs. equity method on ratios",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -603,14 +603,14 @@
     {
       "id": "FSA-interco-impair-1",
       "topic": "FSA",
-      "los": "Impairment 处理 (IFRS vs US GAAP)",
+      "los": "Impairment treatment (IFRS vs. US GAAP)",
       "module": "Intercorporate Investments",
       "type": "trap",
-      "stem": "企业合并中确认的商誉 (goodwill)，其后续计量的正确描述是：",
+      "stem": "Which of the following correctly describes the subsequent measurement of goodwill recognized in a business combination?",
       "choices": {
-        "A": "按估计使用年限直线摊销",
-        "B": "不摊销，至少每年做减值测试；减值损失一经确认，IFRS 与 US GAAP 下均不得转回",
-        "C": "不摊销，每年减值测试；若后续价值回升，IFRS 下可将减值转回"
+        "A": "Amortized on a straight-line basis over its estimated useful life",
+        "B": "Not amortized; tested for impairment at least annually; once recognized, an impairment loss may not be reversed under either IFRS or US GAAP",
+        "C": "Not amortized; tested for impairment annually; if value subsequently recovers, the impairment may be reversed under IFRS"
       },
       "answer": "B",
       "explanations": {
@@ -618,7 +618,7 @@
         "B": "对。商誉每年（及出现减值迹象时）测试减值，且减值不可转回——这一点 IFRS 与 US GAAP 罕见地完全一致。记法：'商誉减值是单行道'。",
         "C": "错。这是本题陷阱：IFRS 下多数长期资产的减值确实可以转回，但商誉是明文例外（IAS 36 禁止转回商誉减值），拿一般规则套商誉就中招。"
       },
-      "source": "CFA L2 Curriculum, Intercorporate Investments, goodwill impairment 处理",
+      "source": "CFA L2 Curriculum, Intercorporate Investments, accounting for goodwill impairment",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -627,14 +627,14 @@
     {
       "id": "FSA-fininst-camels-1",
       "topic": "FSA",
-      "los": "CAMELS 框架各维度含义",
+      "los": "Meaning of each dimension of the CAMELS framework",
       "module": "Analysis of Financial Institutions",
       "type": "concept",
-      "stem": "银行分析的 CAMELS 框架中，字母 \"S\" 代表：",
+      "stem": "In the CAMELS framework for analyzing banks, the letter \"S\" stands for:",
       "choices": {
-        "A": "Sensitivity to market risk（对市场风险的敏感性）",
-        "B": "Solvency（偿付能力）",
-        "C": "Stability（经营稳定性）"
+        "A": "Sensitivity to market risk",
+        "B": "Solvency",
+        "C": "Stability of operations"
       },
       "answer": "A",
       "explanations": {
@@ -642,7 +642,7 @@
         "B": "错。偿付能力的内容被 C（capital adequacy）覆盖，CAMELS 中没有单独的 Solvency 维度——用直觉英文单词硬凑是常见失分方式。",
         "C": "错。Stability 不是 CAMELS 的组成部分；框架六个维度是固定的，考试就考精确对应。"
       },
-      "source": "CFA L2 Curriculum, Analysis of Financial Institutions, CAMELS 框架",
+      "source": "CFA L2 Curriculum, Analysis of Financial Institutions, the CAMELS framework",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -651,14 +651,14 @@
     {
       "id": "FSA-fininst-liquidity-1",
       "topic": "FSA",
-      "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+      "los": "Banks: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
       "module": "Analysis of Financial Institutions",
       "type": "concept",
-      "stem": "巴塞尔框架下，Liquidity Coverage Ratio (LCR) 衡量的是银行：",
+      "stem": "Under the Basel framework, the Liquidity Coverage Ratio (LCR) measures a bank's:",
       "choices": {
-        "A": "持有的优质流动性资产 (HQLA) 能否覆盖 30 天压力情景下的预期净现金流出",
-        "B": "可用稳定资金对一年期所需稳定资金的覆盖程度",
-        "C": "CET1 资本对风险加权资产的覆盖程度"
+        "A": "Whether its holdings of high-quality liquid assets (HQLA) can cover expected net cash outflows under a 30-day stress scenario",
+        "B": "The extent to which available stable funding covers required stable funding over a one-year horizon",
+        "C": "The extent to which CET1 capital covers risk-weighted assets"
       },
       "answer": "A",
       "explanations": {
@@ -666,7 +666,7 @@
         "B": "错。这是 NSFR (Net Stable Funding Ratio) 的定义——available stable funding / required stable funding，期限视角是一年。两个流动性指标的期限最易混淆。",
         "C": "错。CET1/RWA 是资本充足率指标，属于 capital adequacy 维度，与流动性监管指标是两套体系。"
       },
-      "source": "CFA L2 Curriculum, Analysis of Financial Institutions, LCR 与 NSFR",
+      "source": "CFA L2 Curriculum, Analysis of Financial Institutions, LCR and NSFR",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -675,14 +675,14 @@
     {
       "id": "FSA-fininst-combined-1",
       "topic": "FSA",
-      "los": "保险: P&C vs life 的关键比率 (combined ratio 等)",
+      "los": "Insurance: key ratios for P&C vs. life (combined ratio, etc.)",
       "module": "Analysis of Financial Institutions",
       "type": "calc",
-      "stem": "某 P&C 保险公司：net premiums earned 100，赔付及理赔费用 (losses and loss adjustment expenses) 70，承保费用 (underwriting expenses) 25。其 combined ratio 及承保结论是：",
+      "stem": "A P&C insurer has net premiums earned of 100, losses and loss adjustment expenses of 70, and underwriting expenses of 25. Its combined ratio and the underwriting conclusion are:",
       "choices": {
-        "A": "95%，承保盈利",
-        "B": "95%，承保亏损",
-        "C": "70%，承保盈利"
+        "A": "95%, an underwriting profit",
+        "B": "95%, an underwriting loss",
+        "C": "70%, an underwriting profit"
       },
       "answer": "A",
       "explanations": {
@@ -692,20 +692,20 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "Combined ratio = (losses + LAE)/net premiums earned + underwriting expenses/net premiums earned"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "70/100 + 25/100 = 70% + 25%"
         },
         {
-          "label": "结果",
-          "content": "95%；<100% → 承保盈利"
+          "label": "Result",
+          "content": "95%; <100% → underwriting profit"
         },
         {
-          "label": "陷阱",
-          "content": "只算 loss ratio 得 70%；方向判定以 100% 为界，越低越好"
+          "label": "Trap",
+          "content": "Using only the loss ratio gives 70%; the direction is judged against the 100% line, where lower is better"
         }
       ],
       "source": "CFA L2 Curriculum, Analysis of Financial Institutions, P&C combined ratio",
@@ -717,14 +717,14 @@
     {
       "id": "FSA-fininst-cet1-1",
       "topic": "FSA",
-      "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+      "los": "Banks: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
       "module": "Analysis of Financial Institutions",
       "type": "trap",
-      "stem": "下列项目中，不计入银行 Common Equity Tier 1 (CET1) 资本的是：",
+      "stem": "Which of the following is NOT included in a bank's Common Equity Tier 1 (CET1) capital?",
       "choices": {
-        "A": "普通股股本",
-        "B": "留存收益",
-        "C": "优先股 (preferred stock)"
+        "A": "Common stock",
+        "B": "Retained earnings",
+        "C": "Preferred stock"
       },
       "answer": "C",
       "explanations": {
@@ -732,7 +732,7 @@
         "B": "错（该项计入）。留存收益属于普通股股东权益，是 CET1 的标准组成部分。",
         "C": "对。优先股不属于 common equity，符合条件的优先股计入的是 Additional Tier 1（合计构成 Tier 1）。陷阱在于'优先股也是权益'的直觉——资本分层看的是吸收损失的顺序，不是会计科目归属。"
       },
-      "source": "CFA L2 Curriculum, Analysis of Financial Institutions, 资本充足层级 CET1/AT1",
+      "source": "CFA L2 Curriculum, Analysis of Financial Institutions, capital adequacy tiers CET1/AT1",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -741,14 +741,14 @@
     {
       "id": "FSA-quality-spectrum-1",
       "topic": "FSA",
-      "los": "报告质量 vs 盈余质量的区分与频谱",
+      "los": "Distinguishing reporting quality from earnings quality, and the quality spectrum",
       "module": "Evaluating Quality of Financial Reports",
       "type": "concept",
-      "stem": "某公司财务报表完全符合 GAAP、披露充分且中立，但本年利润主要来自一次性出售总部大楼的处置收益。对其报告质量 (reporting quality) 与盈余质量 (earnings quality) 的正确评价是：",
+      "stem": "A company's financial statements fully comply with GAAP and are adequately and neutrally disclosed, but this year's earnings come mainly from a one-time gain on the disposal of its headquarters building. The correct assessment of its reporting quality and earnings quality is:",
       "choices": {
-        "A": "报告质量高，盈余质量低",
-        "B": "报告质量低，盈余质量高",
-        "C": "两者都低"
+        "A": "High reporting quality, low earnings quality",
+        "B": "Low reporting quality, high earnings quality",
+        "C": "Both are low"
       },
       "answer": "A",
       "explanations": {
@@ -756,7 +756,7 @@
         "B": "错。方向颠倒：合规充分披露恰恰是高报告质量的定义；把'利润成色差'误安到报告质量头上，说明没分清两个概念的对象。",
         "C": "错。低报告质量意味着报表本身不可信（如操纵、隐瞒），本题报表如实反映了一次性收益，报告质量并不低。"
       },
-      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, 报告质量与盈余质量频谱",
+      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, the reporting quality and earnings quality spectrum",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -765,14 +765,14 @@
     {
       "id": "FSA-quality-mscore-1",
       "topic": "FSA",
-      "los": "Beneish M-score / Altman Z-score 变量方向含义",
+      "los": "Direction and meaning of the variables in the Beneish M-score / Altman Z-score",
       "module": "Evaluating Quality of Financial Reports",
       "type": "trap",
-      "stem": "某公司的 Beneish M-score 由 −2.5 升至 −1.5。该变化的正确解读是：",
+      "stem": "A company's Beneish M-score rises from −2.5 to −1.5. The correct interpretation of this change is:",
       "choices": {
-        "A": "盈余操纵的概率上升",
-        "B": "盈余操纵的概率下降",
-        "C": "财务困境（破产）风险上升"
+        "A": "The probability of earnings manipulation has increased",
+        "B": "The probability of earnings manipulation has decreased",
+        "C": "The risk of financial distress (bankruptcy) has increased"
       },
       "answer": "A",
       "explanations": {
@@ -780,7 +780,7 @@
         "B": "错。方向记反，通常是被 Altman Z-score 带偏——Z 是越高越安全，M 是越高越危险，两个模型的'好方向'正好相反。",
         "C": "错。破产预测是 Altman Z-score 的领地（Z 越低破产风险越高）；M-score 只回答'报表像不像被操纵'，不预测破产。模型用途混淆是本考点第二大陷阱。"
       },
-      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, Beneish M-score 解读",
+      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, interpreting the Beneish M-score",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -789,14 +789,14 @@
     {
       "id": "FSA-quality-classify-1",
       "topic": "FSA",
-      "los": "常见操纵手法: 收入确认、分类腾挪、准备金调节",
+      "los": "Common manipulation techniques: revenue recognition, classification shifting, reserve management",
       "module": "Evaluating Quality of Financial Reports",
       "type": "trap",
-      "stem": "一家 IFRS 报告公司将 interest paid 的列报由经营活动 (CFO) 改为筹资活动 (CFF)（IFRS 允许该选择）。此重分类的效果是：",
+      "stem": "An IFRS-reporting company changes the presentation of interest paid from operating activities (CFO) to financing activities (CFF) (IFRS permits this choice). The effect of this reclassification is:",
       "choices": {
-        "A": "CFO 提高，总现金流量不变",
-        "B": "CFO 与总现金流量同时提高",
-        "C": "对 CFO 无影响，因为 interest paid 必须列在经营活动中"
+        "A": "CFO increases, total cash flow is unchanged",
+        "B": "Both CFO and total cash flow increase",
+        "C": "No effect on CFO, because interest paid must be classified within operating activities"
       },
       "answer": "A",
       "explanations": {
@@ -804,7 +804,7 @@
         "B": "错。重分类是零和搬运：CFO 多出来的正好是 CFF 少掉的，总现金流量不可能因列报位置改变而增加。",
         "C": "错。'必须列 CFO'是 US GAAP 的规则；IFRS 恰恰允许 interest paid 选择 CFO 或 CFF——两套准则的现金流分类弹性差异正是这种腾挪的空间所在。"
       },
-      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, 现金流分类腾挪",
+      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, cash flow classification shifting",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -813,14 +813,14 @@
     {
       "id": "FSA-quality-cfo-1",
       "topic": "FSA",
-      "los": "现金流质量信号",
+      "los": "Cash flow quality signals",
       "module": "Evaluating Quality of Financial Reports",
       "type": "concept",
-      "stem": "评估盈余质量时，关于经营现金流 (CFO) 与净利润 (NI) 关系的正确判断是：",
+      "stem": "When assessing earnings quality, the correct judgment about the relationship between operating cash flow (CFO) and net income (NI) is:",
       "choices": {
-        "A": "NI 持续显著高于 CFO（大量正应计）是盈余质量的警示信号",
-        "B": "只要 NI 保持增长，CFO 低于 NI 属于正常现象，无需关注",
-        "C": "CFO 持续高于 NI 才是盈余被操纵的典型信号"
+        "A": "NI persistently and materially exceeding CFO (large positive accruals) is a warning signal for earnings quality",
+        "B": "As long as NI keeps growing, CFO being below NI is normal and warrants no attention",
+        "C": "CFO persistently exceeding NI is the typical signal of manipulated earnings"
       },
       "answer": "A",
       "explanations": {
@@ -828,7 +828,7 @@
         "B": "错。恰恰是'NI 好看但收不到现金'的组合最需要警惕——增长的账面利润可能来自激进收入确认或少提准备。",
         "C": "错。方向反了。CFO 稳定覆盖并超过 NI 通常是盈余质量好的表现（折旧等非现金费用压低 NI 属正常）；持续的高正应计才指向操纵风险。"
       },
-      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, 现金流与应计质量信号",
+      "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, cash flow and accruals quality signals",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -837,10 +837,10 @@
     {
       "id": "FSA-integ-dupont-1",
       "topic": "FSA",
-      "los": "DuPont 扩展分解定位问题",
+      "los": "Using the extended DuPont decomposition to locate the problem",
       "module": "Integration of Financial Statement Analysis Techniques",
       "type": "calc",
-      "stem": "五因子 DuPont 数据：tax burden (NI/EBT) = 0.75，interest burden (EBT/EBIT) = 0.90，EBIT margin = 20%，asset turnover = 1.2，financial leverage = 2.0。ROE 最接近：",
+      "stem": "Five-factor DuPont data: tax burden (NI/EBT) = 0.75, interest burden (EBT/EBIT) = 0.90, EBIT margin = 20%, asset turnover = 1.2, financial leverage = 2.0. ROE is closest to:",
       "choices": {
         "A": "32.4%",
         "B": "16.2%",
@@ -854,23 +854,23 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "ROE = (NI/EBT) × (EBT/EBIT) × (EBIT/Revenue) × (Revenue/Assets) × (Assets/Equity)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "0.75 × 0.90 × 0.20 × 1.2 × 2.0"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "0.324 = 32.4%"
         },
         {
-          "label": "陷阱",
-          "content": "漏杠杆得 16.2%，漏税负得 43.2%；先数因子再按计算器"
+          "label": "Trap",
+          "content": "Omitting leverage gives 16.2%, omitting tax burden gives 43.2%; count the factors before hitting the calculator"
         }
       ],
-      "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, 五因子 DuPont 分解",
+      "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, five-factor DuPont decomposition",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -879,14 +879,14 @@
     {
       "id": "FSA-integ-equity-1",
       "topic": "FSA",
-      "los": "会计调整对比率的综合影响 (表外、equity method 剥离等)",
+      "los": "Combined effect of accounting adjustments on ratios (off-balance-sheet items, stripping out equity-method results, etc.)",
       "module": "Integration of Financial Statement Analysis Techniques",
       "type": "concept",
-      "stem": "分析师评估某公司核心经营盈利能力时，常把 equity method 联营收益从净利润中剔除后再计算 net profit margin，原因是：",
+      "stem": "When assessing a company's core operating profitability, analysts often remove equity-method income from associates from net income before computing net profit margin, because:",
       "choices": {
-        "A": "联营公司的利润份额计入了 NI，但其收入并未计入 revenue，导致 margin 被系统性高估",
-        "B": "Equity method 收益属于未实现收益，会计上本不应确认",
-        "C": "剔除后 margin 会上升，更能反映管理层业绩"
+        "A": "The share of the associates' profit is included in NI, but their revenue is not included in revenue, which systematically overstates the margin",
+        "B": "Equity-method income is unrealized income that should not be recognized under the accounting standards",
+        "C": "Removing it raises the margin, which better reflects management's performance"
       },
       "answer": "A",
       "explanations": {
@@ -894,7 +894,7 @@
         "B": "错。Equity method 收益是准则要求确认的合法收益，不是未实现收益；剥离是分析性调整（口径统一），不是纠正会计错误。",
         "C": "错。方向说反了：剔除只在分子做减法（收入不变），margin 通常下降而非上升——这正说明原口径被高估。"
       },
-      "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, equity method 对比率的分析性调整",
+      "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, analytical adjustment of ratios for the equity method",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
