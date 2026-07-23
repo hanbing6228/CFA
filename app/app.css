@@ -163,6 +163,7 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .extable { border-collapse: collapse; font-size: .82rem; min-width: 100%; }
 .extable th, .extable td { border: 1px solid var(--border); padding: 5px 8px; text-align: left; white-space: nowrap; }
 .extable th { background: var(--card); }
+.eximg { max-width: 100%; height: auto; margin: 8px 0; border-radius: 8px; background: #fff; }
 
 .toast {
   position: fixed; left: 50%; bottom: 84px; transform: translateX(-50%);

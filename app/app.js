@@ -107,7 +107,12 @@ function casePanel(q, expanded) {
   const d = el('details', 'casebox');
   if (expanded) d.open = true;
   d.appendChild(el('summary', '', `📄 ${esc(c.title)} <span class="muted">(案例背景与图表)</span>`));
-  d.appendChild(el('p', 'casebg', fmt(c.background)));
+  if (c.background) d.appendChild(el('p', 'casebg', fmt(c.background)));
+  for (const src of c.images || []) {     // PDF 抽出的 Exhibit 图表/公式图
+    const im = el('img', 'eximg');
+    im.loading = 'lazy'; im.src = src; im.alt = 'Exhibit';
+    d.appendChild(im);
+  }
   for (const ex of c.exhibits || []) {
     d.appendChild(el('div', 'extitle', esc(ex.title)));
     const wrap = el('div', 'exwrap');
