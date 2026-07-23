@@ -9885,38 +9885,38 @@
   "CASE-FSA-pension-1": {
    "id": "CASE-FSA-pension-1",
    "topic": "FSA",
-   "title": "Meridian Industrials 养老金分析",
-   "background": "分析师 Lena Fischer 正在评估 Meridian Industrials(按 IFRS 报告)的 DB 养老金计划对财报的影响。她整理了本年度计划数据(Exhibit 1),并注意到公司披露的折现率为 5.0%,计划资产实际回报为 63。Fischer 想弄清费用在 P&L 与 OCI 之间的归属。",
+   "title": "Meridian Industrials Pension Analysis",
+   "background": "Analyst Lena Fischer is assessing the impact of Meridian Industrials' (which reports under IFRS) defined benefit pension plan on its financial statements. She has compiled the plan's data for the current year (Exhibit 1) and notes that the company discloses a discount rate of 5.0% and an actual return on plan assets of 63. Fischer wants to determine how the expense is allocated between P&L and OCI.",
    "exhibits": [
     {
-     "title": "Exhibit 1. DB 计划本年度数据 (百万)",
+     "title": "Exhibit 1. DB Plan Data for the Current Year (in millions)",
      "table": [
       [
-       "项目",
-       "金额"
+       "Item",
+       "Amount"
       ],
       [
-       "期初 PBO",
+       "Beginning PBO",
        "1,200"
       ],
       [
-       "期初计划资产",
+       "Beginning plan assets",
        "900"
       ],
       [
-       "当期 service cost",
+       "Current service cost",
        "60"
       ],
       [
-       "折现率",
+       "Discount rate",
        "5.0%"
       ],
       [
-       "benefits paid",
+       "Benefits paid",
        "40"
       ],
       [
-       "计划资产实际回报",
+       "Actual return on plan assets",
        "63"
       ]
      ]
@@ -14180,14 +14180,14 @@
   {
    "id": "EQ-mispricing-1",
    "topic": "Equity",
-   "los": "内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)",
+   "los": "Intrinsic value vs. market price; the two components of mispricing (V−P and analyst's estimation error)",
    "module": "Equity Valuation: Applications and Processes",
    "type": "concept",
-   "stem": "分析师估计的内在价值为 V_E，市场价格为 P，真实（不可观测）内在价值为 V。V_E − P 这一'表观错误定价'应如何分解？",
+   "stem": "An analyst estimates an intrinsic value of V_E, the market price is P, and the true (unobservable) intrinsic value is V. How should the 'apparent mispricing' V_E − P be decomposed?",
    "choices": {
-    "A": "V_E − P 全部是可捕捉的 alpha——只要估值与价格不等，就存在真实错误定价",
-    "B": "V_E − P = (V − P) + (V_E − V)，即真实 mispricing 加上分析师自身的估值误差",
-    "C": "V_E − P 应分解为系统性风险溢价与流动性折价两部分"
+    "A": "All of V_E − P is capturable alpha—whenever the estimated value differs from price, true mispricing exists",
+    "B": "V_E − P = (V − P) + (V_E − V), i.e., the true mispricing plus the analyst's own valuation error",
+    "C": "V_E − P should be decomposed into a systematic risk premium and a liquidity discount"
    },
    "answer": "B",
    "explanations": {
@@ -14195,7 +14195,7 @@
     "B": "对。表观 mispricing = 真实 mispricing (V − P) + 估值误差 (V_E − V)。记法：'你看到的差价 = 市场错的 + 你错的'。只有前者才是可获利的来源，后者是你的风险。",
     "C": "错。这是资产定价里的溢价分解语言，与 mispricing 分解无关——最易被'听起来专业'的表述带偏。"
    },
-   "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, intrinsic value 与 mispricing 分解",
+   "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, intrinsic value and the decomposition of mispricing",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14204,14 +14204,14 @@
   {
    "id": "EQ-absrel-1",
    "topic": "Equity",
-   "los": "绝对 vs 相对估值模型适用场景",
+   "los": "Absolute vs. relative valuation models and their appropriate use",
    "module": "Equity Valuation: Applications and Processes",
    "type": "concept",
-   "stem": "关于绝对估值 (absolute valuation) 与相对估值 (relative valuation) 模型，下列说法正确的是：",
+   "stem": "Regarding absolute valuation and relative valuation models, which of the following statements is correct?",
    "choices": {
-    "A": "DDM、FCF 模型、residual income 模型均为绝对估值模型，直接估计资产的内在价值",
-    "B": "Justified P/E 由 GGM 推导而来，因此属于纯相对估值，不依赖任何绝对模型假设",
-    "C": "相对估值能够识别整个行业板块被系统性高估的情形"
+    "A": "DDM, FCF models, and the residual income model are all absolute valuation models that directly estimate an asset's intrinsic value",
+    "B": "Because the justified P/E is derived from the GGM, it is a pure relative-valuation measure that relies on no absolute-model assumptions",
+    "C": "Relative valuation can identify situations in which an entire industry sector is systematically overvalued"
    },
    "answer": "A",
    "explanations": {
@@ -14219,7 +14219,7 @@
     "B": "错。justified multiple 恰恰是把绝对模型 (GGM) 的结论翻译成乘数形式，它的每个输入 (r, g, payout) 都来自绝对模型假设——这是'justified'与'comparables'两类乘数用法最易混淆之处。",
     "C": "错。相对估值只能判断标的相对可比公司的高低估。若整个板块被高估，板块内'相对便宜'的股票仍可能绝对高估——这正是相对法的固有盲区。"
    },
-   "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, 绝对与相对估值模型",
+   "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, absolute and relative valuation models",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14228,10 +14228,10 @@
   {
    "id": "EQ-ggm-1",
    "topic": "Equity",
-   "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
+   "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
-   "stem": "某公司刚支付股利 D0 = 2.00，股利预期永续增长 g = 5%，要求回报率 r = 10%。用 GGM 计算的股票价值最接近：",
+   "stem": "A company has just paid a dividend of D0 = 2.00. Dividends are expected to grow in perpetuity at g = 5%, and the required rate of return is r = 10%. Using the GGM, the value of the stock is closest to:",
    "choices": {
     "A": "40.00",
     "B": "21.00",
@@ -14245,20 +14245,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "V0 = D1/(r − g)，其中 D1 = D0 × (1 + g)"
+     "label": "Formula",
+     "content": "V0 = D1/(r − g), where D1 = D0 × (1 + g)"
     },
     {
-     "label": "代入",
-     "content": "D1 = 2.00 × 1.05 = 2.10；V0 = 2.10/(0.10 − 0.05)"
+     "label": "Substitute",
+     "content": "D1 = 2.00 × 1.05 = 2.10; V0 = 2.10/(0.10 − 0.05)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "V0 = 2.10/0.05 = 42.00"
     },
     {
-     "label": "陷阱",
-     "content": "题干给的是'刚支付'的 D0，必须先乘 (1+g)；分母是 r−g 不是 r。两个陷阱分别对应错误选项 40.00 与 21.00"
+     "label": "Pitfall",
+     "content": "The stem gives the just-paid D0, which must first be grown by (1+g); the denominator is r−g, not r. These two traps correspond to the wrong answers 40.00 and 21.00 respectively."
     }
    ],
    "source": "CFA L2 Curriculum, Discounted Dividend Valuation, Gordon growth model",
@@ -14270,10 +14270,10 @@
   {
    "id": "EQ-ggm-2",
    "topic": "Equity",
-   "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
+   "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
-   "stem": "某股票当前价格 P0 = 50，刚支付股利 D0 = 2.50，市场预期股利永续增长 g = 4%。若价格等于 GGM 价值，隐含的要求回报率 r 最接近：",
+   "stem": "A stock currently trades at P0 = 50 and has just paid a dividend of D0 = 2.50. The market expects dividends to grow in perpetuity at g = 4%. If the price equals the GGM value, the implied required rate of return r is closest to:",
    "choices": {
     "A": "9.2%",
     "B": "9.0%",
@@ -14287,23 +14287,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "P0 = D1/(r−g) 反解得 r = D1/P0 + g"
+     "label": "Formula",
+     "content": "P0 = D1/(r−g), rearranged to r = D1/P0 + g"
     },
     {
-     "label": "代入",
-     "content": "D1 = 2.50 × 1.04 = 2.60；r = 2.60/50 + 0.04"
+     "label": "Substitute",
+     "content": "D1 = 2.50 × 1.04 = 2.60; r = 2.60/50 + 0.04"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "r = 0.052 + 0.04 = 9.2%"
     },
     {
-     "label": "陷阱",
-     "content": "分子必须用 D1 而非 D0（否则得 9.0%）；股息率之外别忘加 g（否则得 5.2%）"
+     "label": "Pitfall",
+     "content": "The numerator must use D1, not D0 (otherwise you get 9.0%); and don't forget to add g on top of the dividend yield (otherwise you get 5.2%)."
     }
    ],
-   "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM 隐含要求回报",
+   "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM implied required return",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14312,10 +14312,10 @@
   {
    "id": "EQ-2stage-1",
    "topic": "Equity",
-   "los": "两阶段/H-model 计算与适用",
+   "los": "Two-stage / H-model computation and application",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
-   "stem": "D0 = 1.00，未来 2 年股利每年增长 20%，之后永续增长 5%，r = 10%。两阶段 DDM 下股票价值最接近：",
+   "stem": "D0 = 1.00. Dividends grow at 20% per year for the next 2 years and then grow at 5% in perpetuity, with r = 10%. Under a two-stage DDM, the value of the stock is closest to:",
    "choices": {
     "A": "26.08",
     "B": "27.27",
@@ -14329,20 +14329,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "V0 = D1/(1+r) + (D2 + TV2)/(1+r)²，TV2 = D3/(r − g_L)"
+     "label": "Formula",
+     "content": "V0 = D1/(1+r) + (D2 + TV2)/(1+r)², where TV2 = D3/(r − g_L)"
     },
     {
-     "label": "代入",
-     "content": "D1=1.20, D2=1.44, D3=1.512；TV2 = 1.512/0.05 = 30.24"
+     "label": "Substitute",
+     "content": "D1=1.20, D2=1.44, D3=1.512; TV2 = 1.512/0.05 = 30.24"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "V0 = 1.20/1.10 + 31.68/1.21 = 1.0909 + 26.1818 ≈ 27.27"
     },
     {
-     "label": "陷阱",
-     "content": "TV2 分子是 D3 不是 D2（错则得 26.08）；TV2 折 2 期不是 3 期（错则得 25.00）"
+     "label": "Pitfall",
+     "content": "The TV2 numerator is D3, not D2 (the error gives 26.08); TV2 is discounted 2 periods, not 3 (the error gives 25.00)."
     }
    ],
    "source": "CFA L2 Curriculum, Discounted Dividend Valuation, two-stage DDM",
@@ -14354,10 +14354,10 @@
   {
    "id": "EQ-hmodel-1",
    "topic": "Equity",
-   "los": "两阶段/H-model 计算与适用",
+   "los": "Two-stage / H-model computation and application",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
-   "stem": "D0 = 1.00，当前增长率 gS = 14%，预计在 8 年内线性下降至长期增长率 gL = 6% 并保持，r = 10%。用 H-model 计算的股票价值最接近：",
+   "stem": "D0 = 1.00, the current growth rate is gS = 14%, and growth is expected to decline linearly over 8 years to a long-run growth rate of gL = 6% and remain there, with r = 10%. Using the H-model, the value of the stock is closest to:",
    "choices": {
     "A": "34.50",
     "B": "42.50",
@@ -14371,20 +14371,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "V0 = [D0(1+gL) + D0 × H × (gS − gL)]/(r − gL)，H = 线性下降年数/2"
+     "label": "Formula",
+     "content": "V0 = [D0(1+gL) + D0 × H × (gS − gL)]/(r − gL), where H = (years of linear decline)/2"
     },
     {
-     "label": "代入",
-     "content": "H = 8/2 = 4；V0 = [1.00×1.06 + 1.00×4×(0.14−0.06)]/(0.10−0.06)"
+     "label": "Substitute",
+     "content": "H = 8/2 = 4; V0 = [1.00×1.06 + 1.00×4×(0.14−0.06)]/(0.10−0.06)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "V0 = (1.06 + 0.32)/0.04 = 1.38/0.04 = 34.50"
     },
     {
-     "label": "陷阱",
-     "content": "H 取下降期的一半（用全长 8 得 42.50）；别漏超额增长项（漏则得 26.50）"
+     "label": "Pitfall",
+     "content": "H is half the decline period (using the full 8 years gives 42.50); don't omit the excess-growth term (omitting it gives 26.50)."
     }
    ],
    "source": "CFA L2 Curriculum, Discounted Dividend Valuation, H-model",
@@ -14396,14 +14396,14 @@
   {
    "id": "EQ-pvgo-1",
    "topic": "Equity",
-   "los": "PVGO 分解: E/r + PVGO",
+   "los": "PVGO decomposition: E/r + PVGO",
    "module": "Discounted Dividend Valuation",
    "type": "concept",
-   "stem": "GGM 框架下，股票价格可分解为 P0 = E1/r + PVGO。关于该分解，下列说法正确的是：",
+   "stem": "Within the GGM framework, a stock's price can be decomposed as P0 = E1/r + PVGO. Regarding this decomposition, which of the following statements is correct?",
    "choices": {
-    "A": "E1/r 假设公司将全部盈利再投资，因此代表'增长价值'",
-    "B": "PVGO 恒为正，因为增长总会创造价值",
-    "C": "E1/r 是 100% 分红、零增长下的价值；PVGO 可以为负——当再投资回报 ROE 低于 r 时增长毁灭价值"
+    "A": "E1/r assumes the company reinvests all of its earnings and therefore represents the 'growth value'",
+    "B": "PVGO is always positive, because growth always creates value",
+    "C": "E1/r is the value under a 100% payout with zero growth; PVGO can be negative—when the reinvestment return ROE is below r, growth destroys value"
    },
    "answer": "C",
    "explanations": {
@@ -14411,7 +14411,7 @@
     "B": "错。这是 PVGO 最重要的反直觉点：增长本身不创造价值，只有 ROE > r 的再投资才创造价值。ROE < r 时公司越扩张 PVGO 越负。",
     "C": "对。P0 = E1/r（把全部盈利当永续股利折现的无增长价值）+ PVGO（增长机会现值）。记法：'先算躺平价值，再看增长是加分还是减分'——PVGO 的符号由 ROE 与 r 的大小关系决定。"
    },
-   "source": "CFA L2 Curriculum, Discounted Dividend Valuation, PVGO 分解",
+   "source": "CFA L2 Curriculum, Discounted Dividend Valuation, PVGO decomposition",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14420,10 +14420,10 @@
   {
    "id": "EQ-sgr-1",
    "topic": "Equity",
-   "los": "SGR = b × ROE (与 PRAT 扩展)",
+   "los": "SGR = b × ROE (and the PRAT extension)",
    "module": "Discounted Dividend Valuation",
    "type": "trap",
-   "stem": "某公司 dividend payout ratio = 40%，ROE = 15%。其 sustainable growth rate (SGR) 最接近：",
+   "stem": "A company has a dividend payout ratio of 40% and ROE = 15%. Its sustainable growth rate (SGR) is closest to:",
    "choices": {
     "A": "6.0%",
     "B": "9.0%",
@@ -14437,20 +14437,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "SGR = b × ROE，b = 1 − dividend payout ratio"
+     "label": "Formula",
+     "content": "SGR = b × ROE, where b = 1 − dividend payout ratio"
     },
     {
-     "label": "代入",
-     "content": "b = 1 − 0.40 = 0.60；SGR = 0.60 × 0.15"
+     "label": "Substitute",
+     "content": "b = 1 − 0.40 = 0.60; SGR = 0.60 × 0.15"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "SGR = 9.0%"
     },
     {
-     "label": "陷阱",
-     "content": "题干给 payout 不给 b——用 payout×ROE 得 6.0% 正是命题人埋的坑；忽略分红用 ROE 本身得 15.0% 同样是坑"
+     "label": "Pitfall",
+     "content": "The stem gives payout, not b—using payout×ROE gives 6.0%, exactly the trap the setter buried; ignoring dividends and using ROE itself gives 15.0%, another trap."
     }
    ],
    "source": "CFA L2 Curriculum, Discounted Dividend Valuation, sustainable growth rate",
@@ -14462,14 +14462,14 @@
   {
    "id": "EQ-ggm-3",
    "topic": "Equity",
-   "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
+   "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
    "module": "Discounted Dividend Valuation",
    "type": "trap",
-   "stem": "分析师对一只股票估计 D1 = 2.00、永续增长率 g = 12%、要求回报率 r = 10%，套用 GGM。正确的处理是：",
+   "stem": "An analyst estimates D1 = 2.00, a perpetual growth rate g = 12%, and a required return r = 10% for a stock, and applies the GGM. The correct treatment is:",
    "choices": {
-    "A": "照公式计算 2.00/(0.10−0.12) = −100，负值说明股票严重高估，应卖空",
-    "B": "对分母取绝对值，得 2.00/0.02 = 100",
-    "C": "GGM 在 g ≥ r 时失效，且 12% 的永续增长假设本身不合理——应改用多阶段模型，并把长期 g 压到不超过宏观经济长期增速"
+    "A": "Apply the formula to get 2.00/(0.10−0.12) = −100; the negative value shows the stock is severely overvalued and should be sold short",
+    "B": "Take the absolute value of the denominator to get 2.00/0.02 = 100",
+    "C": "The GGM breaks down when g ≥ r, and a perpetual growth assumption of 12% is itself unreasonable—use a multi-stage model instead and cap the long-run g at no more than the long-run growth rate of the macroeconomy"
    },
    "answer": "C",
    "explanations": {
@@ -14477,7 +14477,7 @@
     "B": "错。对分母取绝对值没有任何理论依据，纯属'让数字能算出来'的数字游戏。模型假设错了，修数字不如修模型。",
     "C": "对。两层问题都要看到：(1) 数学上 g ≥ r 使 GGM 失效；(2) 经济上没有公司能永续以 12% 增长——永续 g 的上限约为经济名义增速。高增长期该用两阶段或 H-model 处理。口诀：'g 贴近 r，价值上天；g 超过 r，换模型'。"
    },
-   "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM 适用条件与敏感性",
+   "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM applicability conditions and sensitivity",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14486,10 +14486,10 @@
   {
    "id": "EQ-fcff-ebit-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
    "module": "Free Cash Flow Valuation",
    "type": "calc",
-   "stem": "EBIT = 200，利息费用 = 20，税率 = 25%，D&A = 40，FCInv = 60，WCInv = 20。FCFF 最接近：",
+   "stem": "EBIT = 200, interest expense = 20, tax rate = 25%, D&A = 40, FCInv = 60, WCInv = 20. FCFF is closest to:",
    "choices": {
     "A": "110.0",
     "B": "160.0",
@@ -14503,20 +14503,20 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "FCFF = EBIT(1−t) + D&A − FCInv − WCInv"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "FCFF = 200×(1−0.25) + 40 − 60 − 20"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "FCFF = 150 + 40 − 80 = 110.0"
     },
     {
-     "label": "陷阱",
-     "content": "EBIT 必须税后化（漏乘得 160）；利息是干扰项，EBIT 路径完全不涉及利息调整（多减税后利息得 95）"
+     "label": "Pitfall",
+     "content": "EBIT must be put on an after-tax basis (omitting the (1−t) factor gives 160); interest is a distractor—the EBIT route involves no interest adjustment at all (subtracting after-tax interest gives 95)."
     }
    ],
    "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF from EBIT",
@@ -14528,10 +14528,10 @@
   {
    "id": "EQ-fcff-ebitda-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
    "module": "Free Cash Flow Valuation",
    "type": "calc",
-   "stem": "EBITDA = 150，D&A = 30，税率 = 30%，FCInv = 40，WCInv = 10。FCFF 最接近：",
+   "stem": "EBITDA = 150, D&A = 30, tax rate = 30%, FCInv = 40, WCInv = 10. FCFF is closest to:",
    "choices": {
     "A": "55.0",
     "B": "64.0",
@@ -14545,20 +14545,20 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "FCFF = EBITDA(1−t) + D&A×t − FCInv − WCInv"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "FCFF = 150×0.70 + 30×0.30 − 40 − 10"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "FCFF = 105 + 9 − 50 = 64.0"
     },
     {
-     "label": "陷阱",
-     "content": "EBITDA 路径加的是折旧税盾 D&A×t = 9，不是 D&A 全额 30（全额加回得 85，漏加税盾得 55）"
+     "label": "Pitfall",
+     "content": "The EBITDA route adds back only the depreciation tax shield D&A×t = 9, not the full D&A of 30 (adding back the full amount gives 85, omitting the tax shield gives 55)."
     }
    ],
    "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF from EBITDA",
@@ -14573,7 +14573,7 @@
    "los": "FCFE = FCFF − Int(1−t) + net borrowing",
    "module": "Free Cash Flow Valuation",
    "type": "calc",
-   "stem": "FCFF = 100，利息费用 = 20，税率 = 25%，当年新增借款 30、偿还借款 20（net borrowing = 10）。FCFE 最接近：",
+   "stem": "FCFF = 100, interest expense = 20, tax rate = 25%, with new borrowing of 30 and debt repayment of 20 during the year (net borrowing = 10). FCFE is closest to:",
    "choices": {
     "A": "90.0",
     "B": "105.0",
@@ -14587,23 +14587,23 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "FCFE = FCFF − Int×(1−t) + net borrowing"
     },
     {
-     "label": "代入",
-     "content": "net borrowing = 30 − 20 = 10；FCFE = 100 − 20×0.75 + 10"
+     "label": "Substitute",
+     "content": "net borrowing = 30 − 20 = 10; FCFE = 100 − 20×0.75 + 10"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "FCFE = 100 − 15 + 10 = 95.0"
     },
     {
-     "label": "陷阱",
-     "content": "利息必须税后（全额减得 90）；净借款是加项、税后利息是减项，方向反了得 105"
+     "label": "Pitfall",
+     "content": "Interest must be after-tax (subtracting the full amount gives 90); net borrowing is added and after-tax interest is subtracted—reversing the signs gives 105."
     }
    ],
-   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF 与 FCFE 的关系",
+   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, the relationship between FCFF and FCFE",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14612,10 +14612,10 @@
   {
    "id": "EQ-fcf-1stage-1",
    "topic": "Equity",
-   "los": "单阶段/两阶段 FCF 模型计算",
+   "los": "Single-stage / two-stage FCF model computation",
    "module": "Free Cash Flow Valuation",
    "type": "calc",
-   "stem": "预期 FCFF1 = 60，WACC = 9%，股权要求回报 re = 12%，FCFF 永续增长 g = 4%。债务市值 = 400，流通股数 = 50。每股股权价值最接近：",
+   "stem": "Expected FCFF1 = 60, WACC = 9%, required return on equity re = 12%, and FCFF grows in perpetuity at g = 4%. The market value of debt is 400 and there are 50 shares outstanding. The value of equity per share is closest to:",
    "choices": {
     "A": "16.00",
     "B": "24.00",
@@ -14629,23 +14629,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "Firm value = FCFF1/(WACC − g)；Equity value = Firm value − 债务市值；每股 = Equity/股数"
+     "label": "Formula",
+     "content": "Firm value = FCFF1/(WACC − g); Equity value = Firm value − market value of debt; per share = Equity/shares"
     },
     {
-     "label": "代入",
-     "content": "Firm = 60/(0.09−0.04) = 1200；Equity = 1200 − 400 = 800"
+     "label": "Substitute",
+     "content": "Firm = 60/(0.09−0.04) = 1200; Equity = 1200 − 400 = 800"
     },
     {
-     "label": "结果",
-     "content": "每股 = 800/50 = 16.00"
+     "label": "Result",
+     "content": "Per share = 800/50 = 16.00"
     },
     {
-     "label": "陷阱",
-     "content": "FCFF 必须配 WACC（误配 re 得 7.00）；整体价值要先减债务再除股数（忘减得 24.00）"
+     "label": "Pitfall",
+     "content": "FCFF must be paired with WACC (mispairing with re gives 7.00); firm value must have debt subtracted before dividing by shares (forgetting to subtract gives 24.00)."
     }
    ],
-   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, 单阶段 FCFF 模型",
+   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, single-stage FCFF model",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14654,14 +14654,14 @@
   {
    "id": "EQ-fcff-vs-fcfe-1",
    "topic": "Equity",
-   "los": "何时 FCFF 优于 FCFE (资本结构不稳/FCFE为负)",
+   "los": "When FCFF is preferred over FCFE (unstable capital structure / negative FCFE)",
    "module": "Free Cash Flow Valuation",
    "type": "concept",
-   "stem": "下列哪种情形下，用 FCFF 折现（再减去债务价值得到股权价值）比直接折现 FCFE 更合适？",
+   "stem": "In which of the following situations is discounting FCFF (and then subtracting the value of debt to obtain equity value) more appropriate than discounting FCFE directly?",
    "choices": {
-    "A": "公司股利支付稳定且与盈利能力挂钩",
-    "B": "公司杠杆水平预计发生大幅变动，或 FCFE 当前为负",
-    "C": "估值视角是无控制权的少数股东"
+    "A": "The company pays a stable dividend that is tied to its earning power",
+    "B": "The company's leverage is expected to change substantially, or FCFE is currently negative",
+    "C": "The valuation is taken from the perspective of a non-controlling minority shareholder"
    },
    "answer": "B",
    "explanations": {
@@ -14669,7 +14669,7 @@
     "B": "对。两大经典场景：(1) 资本结构剧变时，net borrowing 波动使 FCFE 极难预测，而 FCFF 不受融资决策干扰；(2) FCFE 为负时无法直接折现。记法：'借钱的事看不清，就退到 FCFF 这个融资前口径'。",
     "C": "错。少数股东视角对应的是 DDM——小股东拿不到自由现金流的控制权，只能拿股利。FCF 模型本身隐含控制权视角。"
    },
-   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF vs FCFE 模型选择",
+   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, choosing between the FCFF and FCFE models",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14678,14 +14678,14 @@
   {
    "id": "EQ-wcinv-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
    "module": "Free Cash Flow Valuation",
    "type": "concept",
-   "stem": "计算 FCFF/FCFE 时使用的 working capital investment (WCInv)，其营运资本口径正确的是：",
+   "stem": "For the working capital investment (WCInv) used in computing FCFF/FCFE, the correct measure of working capital is:",
    "choices": {
-    "A": "直接使用资产负债表上流动资产减流动负债 (CA − CL) 的变动",
-    "B": "排除现金及等价物，但应包含 notes payable 等短期有息负债",
-    "C": "排除现金及等价物，同时排除 notes payable 与当期到期的长期债务等短期有息负债后的营运资本变动"
+    "A": "The change in current assets minus current liabilities (CA − CL) taken directly from the balance sheet",
+    "B": "The change excluding cash and cash equivalents, but including short-term interest-bearing debt such as notes payable",
+    "C": "The change in working capital excluding cash and cash equivalents and also excluding short-term interest-bearing debt such as notes payable and current maturities of long-term debt"
    },
    "answer": "C",
    "explanations": {
@@ -14693,7 +14693,7 @@
     "B": "错。只排除现金排了一半。Notes payable 与当期到期长债是融资项目，其变动属于 net borrowing（FCFE 里单独处理），混进 WCInv 会与融资现金流重复计算。",
     "C": "对。估值用的营运资本 = (CA − cash) − (CL − 短期有息负债)。口诀：'掐头去尾——头上掐掉现金，尾上去掉有息'。留下的才是真正支撑经营的应收、存货、应付等项目。"
    },
-   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, WCInv 的定义与口径",
+   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, the definition and measurement of WCInv",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14702,10 +14702,10 @@
   {
    "id": "EQ-fcff-cfo-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
    "module": "Free Cash Flow Valuation",
    "type": "trap",
-   "stem": "CFO = 120（利息费用已在经营活动中扣除），利息费用 = 30，税率 = 25%，D&A = 25，FCInv = 50。FCFF 最接近：",
+   "stem": "CFO = 120 (interest expense has been deducted within operating activities), interest expense = 30, tax rate = 25%, D&A = 25, FCInv = 50. FCFF is closest to:",
    "choices": {
     "A": "92.5",
     "B": "117.5",
@@ -14719,20 +14719,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "FCFF = CFO + Int×(1−t) − FCInv（CFO 已含 NCC 与 WCInv）"
+     "label": "Formula",
+     "content": "FCFF = CFO + Int×(1−t) − FCInv (CFO already includes NCC and WCInv)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "FCFF = 120 + 30×(1−0.25) − 50"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "FCFF = 120 + 22.5 − 50 = 92.5"
     },
     {
-     "label": "陷阱",
-     "content": "D&A 与 WCInv 已在 CFO 中，再加/再减就是重复计算（加 D&A 得 117.5）；利息必须税后加回（全额得 100.0）"
+     "label": "Pitfall",
+     "content": "D&A and WCInv are already in CFO, so adding/subtracting them again is double-counting (adding D&A gives 117.5); interest must be added back after tax (the full amount gives 100.0)."
     }
    ],
    "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF from CFO",
@@ -14744,10 +14744,10 @@
   {
    "id": "EQ-jpe-1",
    "topic": "Equity",
-   "los": "Justified P/E (leading/trailing) 由 GGM 推导",
+   "los": "Justified P/E (leading/trailing) derived from the GGM",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "calc",
-   "stem": "某公司 dividend payout ratio = 40%，ROE = 15%，要求回报率 r = 12%，增长率按 SGR 估计。justified leading P/E 最接近：",
+   "stem": "A company has a dividend payout ratio of 40%, ROE = 15%, and a required return r = 12%, with growth estimated from the SGR. The justified leading P/E is closest to:",
    "choices": {
     "A": "14.53",
     "B": "13.33",
@@ -14761,20 +14761,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "g = b × ROE；justified leading P/E = P0/E1 = (1−b)/(r−g)"
+     "label": "Formula",
+     "content": "g = b × ROE; justified leading P/E = P0/E1 = (1−b)/(r−g)"
     },
     {
-     "label": "代入",
-     "content": "b = 1−0.40 = 0.60；g = 0.60×0.15 = 9%；P/E = 0.40/(0.12−0.09)"
+     "label": "Substitute",
+     "content": "b = 1−0.40 = 0.60; g = 0.60×0.15 = 9%; P/E = 0.40/(0.12−0.09)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "leading P/E = 0.40/0.03 = 13.33"
     },
     {
-     "label": "陷阱",
-     "content": "leading 分子不乘 (1+g)（乘了就是 trailing 的 14.53）；分子是 payout 不是 b（用 b 得 20.00）"
+     "label": "Pitfall",
+     "content": "The leading numerator is not multiplied by (1+g) (multiplying gives the trailing value 14.53); the numerator is payout, not b (using b gives 20.00)."
     }
    ],
    "source": "CFA L2 Curriculum, Market-Based Valuation, justified leading P/E",
@@ -14786,10 +14786,10 @@
   {
    "id": "EQ-jpe-2",
    "topic": "Equity",
-   "los": "Justified P/E (leading/trailing) 由 GGM 推导",
+   "los": "Justified P/E (leading/trailing) derived from the GGM",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "trap",
-   "stem": "dividend payout ratio = 50%，g = 4%，r = 10%。分析师要与'基于最近四个季度已实现 EPS'计算的市场 P/E 作比较，应计算的 justified trailing P/E 最接近：",
+   "stem": "Dividend payout ratio = 50%, g = 4%, r = 10%. The analyst wants to compare against a market P/E computed on the basis of 'realized EPS over the most recent four quarters.' The justified trailing P/E that should be computed is closest to:",
    "choices": {
     "A": "8.33",
     "B": "17.33",
@@ -14803,23 +14803,23 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "justified trailing P/E = P0/E0 = (1−b)(1+g)/(r−g)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "P/E = 0.50 × 1.04/(0.10 − 0.04)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "trailing P/E = 0.52/0.06 = 8.67"
     },
     {
-     "label": "陷阱",
-     "content": "市场 P/E 用已实现 EPS（E0）时必须配 trailing 公式；套 leading 公式得 8.33，两者差 (1+g) 倍——leading/trailing 混用是乘数比较的头号错误"
+     "label": "Pitfall",
+     "content": "When the market P/E uses realized EPS (E0), the trailing formula must be used; applying the leading formula gives 8.33, and the two differ by a factor of (1+g)—mixing up leading and trailing is the number-one error in multiple comparisons."
     }
    ],
-   "source": "CFA L2 Curriculum, Market-Based Valuation, justified trailing P/E 与口径匹配",
+   "source": "CFA L2 Curriculum, Market-Based Valuation, justified trailing P/E and matching the earnings basis",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14828,10 +14828,10 @@
   {
    "id": "EQ-jpb-1",
    "topic": "Equity",
-   "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)",
+   "los": "P/B and the ROE−r relationship; justified P/B = (ROE−g)/(r−g)",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "calc",
-   "stem": "ROE = 16%，要求回报率 r = 12%，长期增长率 g = 6%。justified P/B 最接近：",
+   "stem": "ROE = 16%, required return r = 12%, long-run growth rate g = 6%. The justified P/B is closest to:",
    "choices": {
     "A": "1.67",
     "B": "0.67",
@@ -14845,20 +14845,20 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "justified P/B = (ROE − g)/(r − g)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "P/B = (0.16 − 0.06)/(0.12 − 0.06)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "P/B = 0.10/0.06 ≈ 1.67"
     },
     {
-     "label": "陷阱",
-     "content": "分子是 ROE−g 不是 ROE−r（后者得 0.67，与 RI 公式记串）；自检：ROE>r 时 P/B 必须大于 1"
+     "label": "Pitfall",
+     "content": "The numerator is ROE−g, not ROE−r (the latter gives 0.67, confusing it with the RI formula); sanity check: when ROE>r, P/B must be greater than 1."
     }
    ],
    "source": "CFA L2 Curriculum, Market-Based Valuation, justified P/B",
@@ -14870,14 +14870,14 @@
   {
    "id": "EQ-pb-roe-1",
    "topic": "Equity",
-   "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)",
+   "los": "P/B and the ROE−r relationship; justified P/B = (ROE−g)/(r−g)",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "concept",
-   "stem": "基于 justified P/B = (ROE−g)/(r−g)，下列说法正确的是：",
+   "stem": "Based on justified P/B = (ROE−g)/(r−g), which of the following statements is correct?",
    "choices": {
-    "A": "提高增长率 g 总会提高 justified P/B",
-    "B": "ROE > r 时 justified P/B > 1，且此时 g 越高 P/B 越高；ROE < r 时提高 g 反而压低 P/B",
-    "C": "ROE = r 时 justified P/B = 0"
+    "A": "Raising the growth rate g always raises the justified P/B",
+    "B": "When ROE > r, the justified P/B > 1, and in that case a higher g raises P/B; when ROE < r, raising g instead lowers P/B",
+    "C": "When ROE = r, the justified P/B = 0"
    },
    "answer": "B",
    "explanations": {
@@ -14885,7 +14885,7 @@
     "B": "对。P/B 与 1 的大小关系完全由 ROE−r 的符号决定，g 只是放大器：赚超额收益时放大向上，亏超额收益时放大向下。口诀：'ROE 对 r，定方向；g 定力度'。",
     "C": "错。ROE = r 时分子分母同为 (r−g)，P/B = 1 而不是 0——赚的恰好是要求回报，市场只愿意按账面价值定价。"
    },
-   "source": "CFA L2 Curriculum, Market-Based Valuation, P/B 与 ROE−r 的关系",
+   "source": "CFA L2 Curriculum, Market-Based Valuation, the relationship between P/B and ROE−r",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14894,14 +14894,14 @@
   {
    "id": "EQ-evebitda-1",
    "topic": "Equity",
-   "los": "EV/EBITDA 适用场景与陷阱",
+   "los": "EV/EBITDA — appropriate uses and pitfalls",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "concept",
-   "stem": "关于 EV/EBITDA 乘数，下列说法正确的是：",
+   "stem": "Regarding the EV/EBITDA multiple, which of the following statements is correct?",
    "choices": {
-    "A": "EV = 股权市值 + 债务市值，不需要扣减现金及等价物",
-    "B": "EBITDA 已反映公司间资本密集度差异，因此重资产公司之间可直接比较",
-    "C": "适合比较资本结构差异较大的公司，且净利润为负时 EBITDA 往往仍为正、乘数仍可用"
+    "A": "EV = market value of equity + market value of debt, with no need to subtract cash and cash equivalents",
+    "B": "EBITDA already reflects differences in capital intensity across companies, so capital-intensive companies can be compared directly",
+    "C": "It is suitable for comparing companies with differing capital structures, and when net income is negative EBITDA is often still positive so the multiple remains usable"
    },
    "answer": "C",
    "explanations": {
@@ -14909,7 +14909,7 @@
     "B": "错。恰恰相反：EBITDA 在折旧摊销之前，完全没有反映维持性资本开支的差异。资本密集度不同的公司比 EV/EBITDA 会系统性误导——这是 EBITDA 乘数最重要的陷阱。",
     "C": "对。EV 是全部资本口径、EBITDA 是利息之前的利润口径，上下匹配，天然中和了杠杆差异；且 EBITDA 为负比 EPS 为负少见得多。口诀：'比杠杆不同的公司，上 EV 口径；但别忘了它看不见 capex'。"
    },
-   "source": "CFA L2 Curriculum, Market-Based Valuation, EV/EBITDA 的适用与局限",
+   "source": "CFA L2 Curriculum, Market-Based Valuation, the uses and limitations of EV/EBITDA",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14918,14 +14918,14 @@
   {
    "id": "EQ-peg-1",
    "topic": "Equity",
-   "los": "PEG 的用法与缺陷",
+   "los": "The use and drawbacks of the PEG ratio",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "trap",
-   "stem": "分析师声称：'PEG 更低的股票一定比 PEG 更高的股票更被低估。'该说法最主要的问题是：",
+   "stem": "An analyst claims: 'A stock with a lower PEG is necessarily more undervalued than a stock with a higher PEG.' The most important problem with this claim is:",
    "choices": {
-    "A": "PEG 隐含 P/E 与 g 之间的线性关系，且未对风险差异和增长可持续期进行调整",
-    "B": "PEG 只能用 trailing P/E 计算，用 leading P/E 计算会使结论无效",
-    "C": "PEG 只适用于增长率为负的公司"
+    "A": "PEG implies a linear relationship between P/E and g, and it does not adjust for differences in risk or in the duration over which growth can be sustained",
+    "B": "PEG can only be computed with a trailing P/E; computing it with a leading P/E invalidates the conclusion",
+    "C": "PEG only applies to companies with negative growth rates"
    },
    "answer": "A",
    "explanations": {
@@ -14933,7 +14933,7 @@
     "B": "错。PEG 用 leading 或 trailing P/E 都可以，关键是可比公司之间口径一致。口径问题是使用规范，不是 PEG 的固有缺陷——拿'规范'当'缺陷'是干扰项的经典造法。",
     "C": "错。方向说反了：g ≤ 0 时 PEG 失去意义（负 PEG 无法排序），PEG 恰恰只在正增长公司之间才可用。"
    },
-   "source": "CFA L2 Curriculum, Market-Based Valuation, PEG ratio 的缺陷",
+   "source": "CFA L2 Curriculum, Market-Based Valuation, the drawbacks of the PEG ratio",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14942,10 +14942,10 @@
   {
    "id": "EQ-ri-1stage-1",
    "topic": "Equity",
-   "los": "单阶段 RI 模型: V0 = BV0 + (ROE−r)×BV0/(r−g)",
+   "los": "Single-stage RI model: V0 = BV0 + (ROE−r)×BV0/(r−g)",
    "module": "Residual Income Valuation",
    "type": "calc",
-   "stem": "每股期初账面价值 BV0 = 20，长期 ROE = 14%，股权要求回报 r = 10%，RI 永续增长 g = 6%。单阶段 RI 模型下每股价值最接近：",
+   "stem": "Beginning book value per share BV0 = 20, long-run ROE = 14%, required return on equity r = 10%, and residual income grows in perpetuity at g = 6%. Under the single-stage RI model, the value per share is closest to:",
    "choices": {
     "A": "60.00",
     "B": "40.00",
@@ -14959,23 +14959,23 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "V0 = BV0 + (ROE − r)×BV0/(r − g)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "V0 = 20 + (0.14 − 0.10)×20/(0.10 − 0.06)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "V0 = 20 + 0.80/0.04 = 20 + 20 = 40.00"
     },
     {
-     "label": "陷阱",
-     "content": "分子是 ROE−r 不是 ROE−g（后者得 60）；别忘了 BV0 打底（漏加得 20）"
+     "label": "Pitfall",
+     "content": "The numerator is ROE−r, not ROE−g (the latter gives 60); don't forget BV0 as the base (omitting it gives 20)."
     }
    ],
-   "source": "CFA L2 Curriculum, Residual Income Valuation, 单阶段 RI 模型",
+   "source": "CFA L2 Curriculum, Residual Income Valuation, single-stage RI model",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -14984,10 +14984,10 @@
   {
    "id": "EQ-ri-omega-1",
    "topic": "Equity",
-   "los": "Persistence factor ω 的含义与取值影响",
+   "los": "The persistence factor ω — meaning and impact of its value",
    "module": "Residual Income Valuation",
    "type": "calc",
-   "stem": "每股 BV0 = 10，预期明年 RI1 = 1.50，此后 RI 每年按 persistence factor ω = 0.60 衰减，r = 10%。RI 模型下每股价值最接近：",
+   "stem": "Book value per share BV0 = 10, next year's residual income is expected to be RI1 = 1.50, and thereafter RI decays each year by a persistence factor ω = 0.60, with r = 10%. Under the RI model, the value per share is closest to:",
    "choices": {
     "A": "25.00",
     "B": "3.00",
@@ -15001,23 +15001,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "衰减 RI 现值 = RI1/(1 + r − ω)；V0 = BV0 + RI1/(1 + r − ω)"
+     "label": "Formula",
+     "content": "PV of decaying RI = RI1/(1 + r − ω); V0 = BV0 + RI1/(1 + r − ω)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "V0 = 10 + 1.50/(1 + 0.10 − 0.60)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "V0 = 10 + 1.50/0.50 = 10 + 3.00 = 13.00"
     },
     {
-     "label": "陷阱",
-     "content": "ω=0.6 时分母是 1+r−ω=0.50，不能按永续年金除以 r（得 25.00）；BV0 是价值锚，漏加得 3.00"
+     "label": "Pitfall",
+     "content": "With ω=0.6 the denominator is 1+r−ω=0.50; you cannot treat it as a perpetuity and divide by r (which gives 25.00); BV0 is the value anchor, and omitting it gives 3.00."
     }
    ],
-   "source": "CFA L2 Curriculum, Residual Income Valuation, persistence factor 与 continuing RI",
+   "source": "CFA L2 Curriculum, Residual Income Valuation, persistence factor and continuing RI",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -15026,14 +15026,14 @@
   {
    "id": "EQ-cleansurplus-1",
    "topic": "Equity",
-   "los": "Clean surplus 假设及其违反的后果",
+   "los": "The clean surplus assumption and the consequences of violating it",
    "module": "Residual Income Valuation",
    "type": "concept",
-   "stem": "RI 模型依赖 clean surplus 关系：BV1 = BV0 + NI − dividends。下列哪一项会违反该关系？",
+   "stem": "The RI model relies on the clean surplus relation: BV1 = BV0 + NI − dividends. Which of the following would violate this relation?",
    "choices": {
-    "A": "外币报表折算差额 (CTA) 绕过利润表直接计入 OCI",
-    "B": "公司支付现金股利",
-    "C": "公司计提折旧与摊销费用"
+    "A": "Foreign currency translation adjustments (CTA) that bypass the income statement and go directly to OCI",
+    "B": "The company paying a cash dividend",
+    "C": "The company recognizing depreciation and amortization expense"
    },
    "answer": "A",
    "explanations": {
@@ -15041,7 +15041,7 @@
     "B": "错。股利本来就是 clean surplus 关系式中的一项 (−dividends)，与股东的资本交易不构成违反。把'绕过利润表的损益'和'与股东的交易'混为一谈是本考点最常见的错误。",
     "C": "错。D&A 完整地经过利润表进入 NI，是最'干净'的项目，与 clean surplus 无冲突。"
    },
-   "source": "CFA L2 Curriculum, Residual Income Valuation, clean surplus 假设的违反",
+   "source": "CFA L2 Curriculum, Residual Income Valuation, violations of the clean surplus assumption",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -15050,14 +15050,14 @@
   {
    "id": "EQ-ri-applic-1",
    "topic": "Equity",
-   "los": "RI vs DDM/FCF 适用场景",
+   "los": "RI vs. DDM/FCF — appropriate use",
    "module": "Residual Income Valuation",
    "type": "concept",
-   "stem": "相比 DDM 与 FCF 模型，residual income 模型最适合下列哪种公司？",
+   "stem": "Compared with the DDM and FCF models, the residual income model is most appropriate for which of the following companies?",
    "choices": {
-    "A": "频繁通过 OCI 确认大额损益、会计透明度低的公司",
-    "B": "不支付股利、预期未来多年 FCF 为负，但账面价值与 ROE 可较可靠预测的公司",
-    "C": "价值主要集中在远期终值的高成长早期公司——因为 RI 模型对终值的依赖最大"
+    "A": "A company that frequently recognizes large gains and losses through OCI and has low accounting transparency",
+    "B": "A company that pays no dividends and is expected to have negative FCF for many years, but whose book value and ROE can be forecast fairly reliably",
+    "C": "An early-stage high-growth company whose value is concentrated in the distant terminal value—because the RI model relies most heavily on the terminal value"
    },
    "answer": "B",
    "explanations": {
@@ -15065,7 +15065,7 @@
     "B": "对。RI 的经典适用场景：不分红（DDM 失效）、FCF 长期为负（FCF 模型难用），只要 BV 与 ROE 可预测，RI 依然能落地。口诀：'没股利没现金流，还有账面价值可依靠'。",
     "C": "错。方向反了：RI 模型的价值大头由当期 BV0 与近期超额收益构成，对终值的依赖比 DDM/FCF 小——这正是 RI 的优点之一，干扰项把优点说成了缺点再倒扣回来。"
    },
-   "source": "CFA L2 Curriculum, Residual Income Valuation, RI 模型适用场景",
+   "source": "CFA L2 Curriculum, Residual Income Valuation, appropriate use of the RI model",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -15077,7 +15077,7 @@
    "los": "RI = NI − re×BV0 = (ROE−re)×BV0",
    "module": "Residual Income Valuation",
    "type": "trap",
-   "stem": "期初账面权益 BV0 = 100，当期 NI = 20，当期未支付股利也无其他权益变动，故期末账面权益 BV1 = 120。股权成本 re = 10%。当期 residual income 最接近：",
+   "stem": "Beginning book value of equity BV0 = 100, current-period NI = 20, and with no dividends paid and no other changes in equity during the period, ending book value of equity BV1 = 120. The cost of equity re = 10%. The current-period residual income is closest to:",
    "choices": {
     "A": "8.0",
     "B": "9.0",
@@ -15091,23 +15091,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "RI = NI − re × BV0（期初账面权益）"
+     "label": "Formula",
+     "content": "RI = NI − re × BV0 (beginning book value of equity)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "RI = 20 − 0.10 × 100"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "RI = 20 − 10 = 10.0"
     },
     {
-     "label": "陷阱",
-     "content": "equity charge 基于期初 BV0=100；用期末 120 得 8.0、用平均 110 得 9.0，题干给出 BV1 就是干扰项"
+     "label": "Pitfall",
+     "content": "The equity charge is based on beginning BV0 = 100; using ending 120 gives 8.0 and using the average 110 gives 9.0—the stem provides BV1 purely as a distractor."
     }
    ],
-   "source": "CFA L2 Curriculum, Residual Income Valuation, RI 定义与 equity charge",
+   "source": "CFA L2 Curriculum, Residual Income Valuation, definition of RI and the equity charge",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -15116,14 +15116,14 @@
   {
    "id": "EQ-dloc-dlom-1",
    "topic": "Equity",
-   "los": "DLOC 与 DLOM 的叠加计算: 总折扣 = 1−(1−DLOC)(1−DLOM)",
+   "los": "Combining DLOC and DLOM: total discount = 1−(1−DLOC)(1−DLOM)",
    "module": "Private Company Valuation",
    "type": "calc",
-   "stem": "某私营公司按控股、可流通基础估出的每股价值为 100 元。对一笔少数股权、无流通性的股份，适用 DLOC = 20%、DLOM = 25%。该笔股份的每股价值最接近：",
+   "stem": "A private company is valued at 100 per share on a controlling, marketable basis. For a minority, non-marketable interest, a DLOC of 20% and a DLOM of 25% apply. The value per share of that interest is closest to:",
    "choices": {
-    "A": "60 元",
-    "B": "55 元",
-    "C": "75 元"
+    "A": "60",
+    "B": "55",
+    "C": "75"
    },
    "answer": "A",
    "explanations": {
@@ -15133,23 +15133,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "价值 = 基准价值 × (1 − DLOC) × (1 − DLOM)；总折扣 = 1 − (1−DLOC)(1−DLOM)"
+     "label": "Formula",
+     "content": "Value = base value × (1 − DLOC) × (1 − DLOM); total discount = 1 − (1−DLOC)(1−DLOM)"
     },
     {
-     "label": "代入",
-     "content": "价值 = 100 × (1 − 0.20) × (1 − 0.25) = 100 × 0.80 × 0.75"
+     "label": "Substitute",
+     "content": "Value = 100 × (1 − 0.20) × (1 − 0.25) = 100 × 0.80 × 0.75"
     },
     {
-     "label": "结果",
-     "content": "价值 = 60 元（总折扣 40%）"
+     "label": "Result",
+     "content": "Value = 60 (total discount 40%)"
     },
     {
-     "label": "陷阱",
-     "content": "两折扣是乘法叠加，直接相加 45% 得 55 元是最常见错误；只用其中一个折扣得 75 元"
+     "label": "Pitfall",
+     "content": "The two discounts combine multiplicatively; simply adding them to 45% gives 55, the most common error; applying only one of the discounts gives 75."
     }
    ],
-   "source": "CFA L2 Curriculum, Private Company Valuation, DLOC 与 DLOM 的叠加",
+   "source": "CFA L2 Curriculum, Private Company Valuation, combining DLOC and DLOM",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -15158,14 +15158,14 @@
   {
    "id": "EQ-pcv-methods-1",
    "topic": "Equity",
-   "los": "三种方法: income / market / asset-based",
+   "los": "The three approaches: income / market / asset-based",
    "module": "Private Company Valuation",
    "type": "concept",
-   "stem": "私营公司估值中，excess earnings method 与 guideline transactions method 分别属于哪类方法？",
+   "stem": "In private company valuation, the excess earnings method and the guideline transactions method belong to which categories of approach, respectively?",
    "choices": {
-    "A": "market approach 与 income approach",
-    "B": "income approach 与 market approach",
-    "C": "asset-based approach 与 market approach"
+    "A": "The market approach and the income approach",
+    "B": "The income approach and the market approach",
+    "C": "The asset-based approach and the market approach"
    },
    "answer": "B",
    "explanations": {
@@ -15173,7 +15173,7 @@
     "B": "对。Income approach 三件套：FCF 法、capitalized cash flow method、excess earnings method；market approach 三件套：guideline public company (GPCM)、guideline transactions (GTM)、prior transactions。口诀：'折现归 income，比价归 market，清点家底归 asset-based'。",
     "C": "错。Excess earnings method 虽然要先给营运资本和固定资产分配回报，但其核心是把剩余盈利资本化为无形资产价值，课纲将其归入 income approach 而非 asset-based。"
    },
-   "source": "CFA L2 Curriculum, Private Company Valuation, 三大估值方法分类",
+   "source": "CFA L2 Curriculum, Private Company Valuation, classification of the three valuation approaches",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -15182,14 +15182,14 @@
   {
    "id": "EQ-buildup-1",
    "topic": "Equity",
-   "los": "CAPM 扩展: build-up method, expanded CAPM",
+   "los": "CAPM extensions: build-up method, expanded CAPM",
    "module": "Private Company Valuation",
    "type": "trap",
-   "stem": "用 build-up method 估计私营公司股权要求回报率时，与 expanded CAPM 相比的关键区别是：",
+   "stem": "When using the build-up method to estimate the required return on equity for a private company, the key difference from the expanded CAPM is:",
    "choices": {
-    "A": "build-up method 用行业 beta 乘以股权风险溢价后，再加 size premium",
-    "B": "expanded CAPM 不包含 size premium 与 company-specific premium",
-    "C": "build-up method 不使用 beta（相当于 beta 取 1），在无风险利率上直接叠加 ERP、size premium 与 company-specific premium"
+    "A": "The build-up method multiplies an industry beta by the equity risk premium and then adds a size premium",
+    "B": "The expanded CAPM does not include a size premium or a company-specific premium",
+    "C": "The build-up method does not use beta (equivalent to setting beta = 1), and simply stacks the ERP, size premium, and company-specific premium on top of the risk-free rate"
    },
    "answer": "C",
    "explanations": {
@@ -15197,7 +15197,7 @@
     "B": "错。恰恰相反：expanded CAPM = rf + beta×ERP + size premium + company-specific premium，'expanded'扩的就是这两个溢价。没有这两项的是普通 CAPM。",
     "C": "对。私营公司没有市场价格序列可估 beta，build-up method 直接令 beta = 1：r = rf + ERP + size premium + industry premium + company-specific premium。口诀：'估不出 beta 就不用 beta，全靠往上堆溢价'。"
    },
-   "source": "CFA L2 Curriculum, Private Company Valuation, build-up method 与 expanded CAPM",
+   "source": "CFA L2 Curriculum, Private Company Valuation, build-up method and expanded CAPM",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -15206,10 +15206,10 @@
   {
    "id": "FI-forward-1",
    "topic": "FI",
-   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+   "los": "Spot/forward/par curve relationships; forward rate model calculation",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "calc",
-   "stem": "1 年期 spot rate S1 = 3%，2 年期 spot rate S2 = 4%（年复利）。1 年后起算的 1 年期 forward rate f(1,1) 最接近：",
+   "stem": "The 1-year spot rate S1 = 3% and the 2-year spot rate S2 = 4% (annual compounding). The 1-year forward rate beginning 1 year from today, f(1,1), is closest to:",
    "choices": {
     "A": "5.01%",
     "B": "0.97%",
@@ -15223,20 +15223,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "(1+S2)^2 = (1+S1) × (1+f(1,1))，即 f(1,1) = (1+S2)^2/(1+S1) − 1"
+     "label": "Formula",
+     "content": "(1+S2)^2 = (1+S1) × (1+f(1,1)), i.e. f(1,1) = (1+S2)^2/(1+S1) − 1"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "f(1,1) = 1.04^2 / 1.03 − 1 = 1.0816 / 1.03 − 1"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 1.050097 − 1 ≈ 5.01%"
     },
     {
-     "label": "陷阱",
-     "content": "期数次方最易错：分子用长期限的次方、分母用短期限的次方。快速校验：上行曲线下 f(1,1) 应高于 S2 = 4%。"
+     "label": "Pitfall",
+     "content": "The compounding exponents are the most common error: apply the longer maturity's exponent in the numerator and the shorter maturity's exponent in the denominator. Quick check: with an upward-sloping curve, f(1,1) should exceed S2 = 4%."
     }
    ],
    "source": "CFA L2 Curriculum, The Term Structure and Interest Rate Dynamics, forward rate model",
@@ -15248,10 +15248,10 @@
   {
    "id": "FI-forward-2",
    "topic": "FI",
-   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+   "los": "Spot/forward/par curve relationships; forward rate model calculation",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "calc",
-   "stem": "2 年期 spot rate S2 = 4%，3 年期 spot rate S3 = 5%（年复利）。2 年后起算的 1 年期 forward rate f(2,1) 最接近：",
+   "stem": "The 2-year spot rate S2 = 4% and the 3-year spot rate S3 = 5% (annual compounding). The 1-year forward rate beginning 2 years from today, f(2,1), is closest to:",
    "choices": {
     "A": "7.03%",
     "B": "6.01%",
@@ -15265,20 +15265,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "(1+S3)^3 = (1+S2)^2 × (1+f(2,1))，即 f(2,1) = (1+S3)^3/(1+S2)^2 − 1"
+     "label": "Formula",
+     "content": "(1+S3)^3 = (1+S2)^2 × (1+f(2,1)), i.e. f(2,1) = (1+S3)^3/(1+S2)^2 − 1"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "f(2,1) = 1.05^3 / 1.04^2 − 1 = 1.157625 / 1.0816 − 1"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 1.070289 − 1 ≈ 7.03%"
     },
     {
-     "label": "陷阱",
-     "content": "分子分母各自的次方必须等于各自的期限（3 和 2）。近似检验：3×5% − 2×4% = 7%，与精确值 7.03% 接近即算对了。"
+     "label": "Pitfall",
+     "content": "Each exponent in the numerator and denominator must equal its own maturity (3 and 2). Approximate check: 3×5% − 2×4% = 7%, which is close to the exact value of 7.03%."
     }
    ],
    "source": "CFA L2 Curriculum, The Term Structure and Interest Rate Dynamics, forward rate model",
@@ -15290,10 +15290,10 @@
   {
    "id": "FI-curve-1",
    "topic": "FI",
-   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+   "los": "Spot/forward/par curve relationships; forward rate model calculation",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "concept",
-   "stem": "收益率曲线向上倾斜（upward-sloping）时，同一期限上 par rate、spot rate、forward rate 的大小排序为：",
+   "stem": "When the yield curve is upward-sloping, the ordering of the par rate, spot rate, and forward rate at a given maturity is:",
    "choices": {
     "A": "forward > spot > par",
     "B": "spot > forward > par",
@@ -15314,14 +15314,14 @@
   {
    "id": "FI-ride-1",
    "topic": "FI",
-   "los": "Riding the yield curve 策略条件",
+   "los": "Conditions for the riding-the-yield-curve strategy",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "concept",
-   "stem": "投资期限为 1 年的投资者采用 riding the yield curve（rolling down the yield curve）策略获取超额回报，需要满足的条件是：",
+   "stem": "For an investor with a 1-year investment horizon to earn excess return using the riding-the-yield-curve (rolling down the yield curve) strategy, the required condition is:",
    "choices": {
-    "A": "收益率曲线向上倾斜且预期在持有期内保持不变，买入期限长于 1 年的债券",
-    "B": "预期利率将上升，买入期限恰好等于 1 年的债券锁定收益",
-    "C": "收益率曲线向上倾斜，买入期限短于 1 年的债券以降低久期风险"
+    "A": "The yield curve is upward-sloping and is expected to remain unchanged over the holding period, and the investor buys a bond with a maturity longer than 1 year",
+    "B": "Interest rates are expected to rise, and the investor buys a bond with a maturity of exactly 1 year to lock in the yield",
+    "C": "The yield curve is upward-sloping, and the investor buys a bond with a maturity shorter than 1 year to reduce duration risk"
    },
    "answer": "A",
    "explanations": {
@@ -15338,14 +15338,14 @@
   {
    "id": "FI-theory-1",
    "topic": "FI",
-   "los": "利率期限结构理论 (纯预期/流动性偏好/市场分割等)",
+   "los": "Term structure theories (pure expectations / liquidity preference / market segmentation, etc.)",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "concept",
-   "stem": "在 liquidity preference theory（流动性偏好理论）下，向上倾斜的收益率曲线意味着：",
+   "stem": "Under the liquidity preference theory, an upward-sloping yield curve implies:",
    "choices": {
-    "A": "不一定意味着市场预期短期利率上升——即使预期利率不变甚至小幅下降，流动性溢价也可能使曲线上行",
-    "B": "市场一定预期未来短期利率上升",
-    "C": "长短期债券市场彼此分割，各自的供需独立决定利率"
+    "A": "It does not necessarily imply that the market expects short-term rates to rise—even if rates are expected to stay flat or even decline slightly, the liquidity premium can still make the curve slope upward",
+    "B": "The market definitely expects future short-term rates to rise",
+    "C": "The markets for long- and short-term bonds are segmented, with each determined independently by its own supply and demand"
    },
    "answer": "A",
    "explanations": {
@@ -15362,10 +15362,10 @@
   {
    "id": "FI-ted-1",
    "topic": "FI",
-   "los": "Swap spread, Z-spread, TED spread 含义",
+   "los": "Meaning of swap spread, Z-spread, and TED spread",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "calc",
-   "stem": "市场数据：3 个月 Libor（MRR）= 2.10%，3 个月 T-bill 收益率 = 1.60%，2 年期 swap rate = 2.80%，2 年期国债收益率 = 2.45%。TED spread 为：",
+   "stem": "Market data: 3-month Libor (MRR) = 2.10%, 3-month T-bill yield = 1.60%, 2-year swap rate = 2.80%, 2-year Treasury yield = 2.45%. The TED spread is:",
    "choices": {
     "A": "0.50%",
     "B": "0.35%",
@@ -15379,20 +15379,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "TED spread = 3 个月 Libor(MRR) − 3 个月 T-bill 收益率"
+     "label": "Formula",
+     "content": "TED spread = 3-month Libor (MRR) − 3-month T-bill yield"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "TED = 2.10% − 1.60%"
     },
     {
-     "label": "结果",
-     "content": "= 0.50%（50 bp）"
+     "label": "Result",
+     "content": "= 0.50% (50 bp)"
     },
     {
-     "label": "陷阱",
-     "content": "不要抓到两个利率就相减：swap spread 用同期限 swap 与国债，TED 只用 3 个月 Libor 与 3 个月 T-bill。"
+     "label": "Pitfall",
+     "content": "Do not simply subtract any two rates you find: the swap spread uses the same-maturity swap and Treasury, whereas the TED spread uses only the 3-month Libor and the 3-month T-bill."
     }
    ],
    "source": "CFA L2 Curriculum, The Term Structure and Interest Rate Dynamics, swap spread / TED spread",
@@ -15404,14 +15404,14 @@
   {
    "id": "FI-krd-1",
    "topic": "FI",
-   "los": "Key rate duration 与曲线形变管理",
+   "los": "Key rate duration and management of curve reshaping",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "trap",
-   "stem": "一只 10 年期零息国债，其 key rate duration 的分布特征是：",
+   "stem": "For a 10-year zero-coupon Treasury bond, the distribution of its key rate durations is characterized by:",
    "choices": {
-    "A": "几乎全部集中在 10 年期这一个关键期限点上，其他期限点的 key rate duration 约为零",
-    "B": "在各关键期限点上大致均匀分布，因为总久期约为 10",
-    "C": "集中在短端，因为短端利率波动最频繁"
+    "A": "Almost entirely concentrated at the single 10-year key maturity, with the key rate durations at other maturity points being approximately zero",
+    "B": "Roughly evenly distributed across the key maturity points, because the total duration is about 10",
+    "C": "Concentrated at the short end, because short-term rates fluctuate most frequently"
    },
    "answer": "A",
    "explanations": {
@@ -15428,14 +15428,14 @@
   {
    "id": "FI-forward-3",
    "topic": "FI",
-   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
+   "los": "Spot/forward/par curve relationships; forward rate model calculation",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "trap",
-   "stem": "若未来各期 spot rate 的实际走势恰好等于当前 forward 曲线隐含的水平，则在同一持有期内，持有长期债券相对滚动持有短期债券的超额回报为：",
+   "stem": "If future spot rates evolve exactly as implied by today's forward curve, then over a given holding period the excess return of holding a long-term bond relative to rolling over short-term bonds is:",
    "choices": {
-    "A": "零——所有期限策略实现相同的持有期回报",
-    "B": "为正——曲线上行时长债票息更高，必然跑赢",
-    "C": "为负——长债久期更大，利率上升时亏损更多"
+    "A": "Zero—all maturity strategies realize the same holding-period return",
+    "B": "Positive—with an upward-sloping curve the long-term bond has a higher coupon and must outperform",
+    "C": "Negative—the long-term bond has greater duration and loses more when rates rise"
    },
    "answer": "A",
    "explanations": {
@@ -15452,10 +15452,10 @@
   {
    "id": "FI-tree-1",
    "topic": "FI",
-   "los": "Binomial tree: backward induction 定价",
+   "los": "Binomial tree: backward induction valuation",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "calc",
-   "stem": "2 年期年付息债券，票面利率 4%，面值 100。二叉树利率（各节点为未来 1 年利率，风险中性概率各 0.5）：t=0 节点 3.0%；t=1 上节点 4.5%，下节点 3.5%。用 backward induction 计算债券当前价值最接近：",
+   "stem": "A 2-year annual-pay bond has a coupon rate of 4% and a face value of 100. Binomial tree rates (each node is the 1-year rate going forward, with risk-neutral probabilities of 0.5 each): the t=0 node is 3.0%; at t=1 the upper node is 4.5% and the lower node is 3.5%. Using backward induction, the current value of the bond is closest to:",
    "choices": {
     "A": "100.97",
     "B": "97.09",
@@ -15469,20 +15469,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "每个节点：V = 0.5×[(Vu + C) + (Vd + C)] / (1 + r节点)；末期现金流 = 面值 + 票息 = 104"
+     "label": "Formula",
+     "content": "At each node: V = 0.5×[(Vu + C) + (Vd + C)] / (1 + r_node); final cash flow = face value + coupon = 104"
     },
     {
-     "label": "代入",
-     "content": "t=1 上节点：104/1.045 = 99.5215；下节点：104/1.035 = 100.4831。t=0：V0 = 0.5×[(99.5215+4)+(100.4831+4)]/1.03 = 0.5×208.0046/1.03"
+     "label": "Substitute",
+     "content": "t=1 upper node: 104/1.045 = 99.5215; lower node: 104/1.035 = 100.4831. t=0: V0 = 0.5×[(99.5215+4)+(100.4831+4)]/1.03 = 0.5×208.0046/1.03"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 104.0023/1.03 ≈ 100.97"
     },
     {
-     "label": "陷阱",
-     "content": "两个高频错误：折回时漏加当期票息（得 97.09）、最后一步忘折现（得 104.00）。每退一层自查：加票息了吗？除以 1+r 了吗？"
+     "label": "Pitfall",
+     "content": "Two frequent errors: forgetting to add the current coupon when discounting back (gives 97.09), and forgetting to discount at the final step (gives 104.00). At each step back, check: did I add the coupon? Did I divide by 1+r?"
     }
    ],
    "source": "CFA L2 Curriculum, The Arbitrage-Free Valuation Framework, backward induction",
@@ -15494,10 +15494,10 @@
   {
    "id": "FI-tree-2",
    "topic": "FI",
-   "los": "Binomial tree: backward induction 定价",
+   "los": "Binomial tree: backward induction valuation",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "calc",
-   "stem": "年付息 3% 的债券，二叉树 t=1 两个节点的债券价值（不含当期票息）分别为：上节点 98.80，下节点 100.50，概率各 0.5。t=0 的 1 年利率为 2.5%。债券在 t=0 的价值最接近：",
+   "stem": "For a bond paying an annual coupon of 3%, the bond values (excluding the current coupon) at the two t=1 nodes of a binomial tree are: upper node 98.80 and lower node 100.50, each with probability 0.5. The 1-year rate at t=0 is 2.5%. The value of the bond at t=0 is closest to:",
    "choices": {
     "A": "100.15",
     "B": "97.22",
@@ -15511,20 +15511,20 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "V0 = 0.5×[(Vu + C) + (Vd + C)] / (1 + r0)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "V0 = 0.5×[(98.80+3) + (100.50+3)] / 1.025 = 0.5×(101.80+103.50)/1.025 = 102.65/1.025"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "≈ 100.15"
     },
     {
-     "label": "陷阱",
-     "content": "题目给的节点值若注明'不含票息'（ex-coupon），折回时必须加票息；若给的是'含票息全价'则不能重复加。审题先确认口径。"
+     "label": "Pitfall",
+     "content": "If the node values are stated ex-coupon, you must add the coupon when discounting back; if they are stated as full (cum-coupon) prices, you must not add it again. Confirm the convention when reading the problem."
     }
    ],
    "source": "CFA L2 Curriculum, The Arbitrage-Free Valuation Framework, backward induction",
@@ -15536,10 +15536,10 @@
   {
    "id": "FI-calib-1",
    "topic": "FI",
-   "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})",
+   "los": "Tree calibration and the relationship to interest rate volatility (adjacent nodes ×e^{2σ})",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "calc",
-   "stem": "对数正态二叉利率树中，某期下节点利率为 3.00%，假设利率波动率 σ = 15%。同期相邻上节点的利率最接近：",
+   "stem": "In a lognormal binomial interest rate tree, the lower node rate in a given period is 3.00%, assuming an interest rate volatility of σ = 15%. The rate at the adjacent upper node in the same period is closest to:",
    "choices": {
     "A": "4.05%",
     "B": "3.49%",
@@ -15553,20 +15553,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "对数正态树同期相邻节点：r_u = r_d × e^{2σ}"
+     "label": "Formula",
+     "content": "Adjacent same-period nodes in a lognormal tree: r_u = r_d × e^{2σ}"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "r_u = 3.00% × e^{2×0.15} = 3.00% × e^{0.30} = 3.00% × 1.34986"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "≈ 4.05%"
     },
     {
-     "label": "陷阱",
-     "content": "指数是 2σ 不是 σ；且是乘 e^{2σ} 而非加 2σ。若给出隔两档的节点（相隔 2 格），则相差 e^{4σ}，以此类推。"
+     "label": "Pitfall",
+     "content": "The exponent is 2σ, not σ; and you multiply by e^{2σ}, not add 2σ. If the nodes are two steps apart, the ratio becomes e^{4σ}, and so on."
     }
    ],
    "source": "CFA L2 Curriculum, The Arbitrage-Free Valuation Framework, interest rate tree calibration",
@@ -15578,14 +15578,14 @@
   {
    "id": "FI-calib-2",
    "topic": "FI",
-   "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})",
+   "los": "Tree calibration and the relationship to interest rate volatility (adjacent nodes ×e^{2σ})",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "concept",
-   "stem": "构建 arbitrage-free 二叉利率树时，'校准 (calibration)' 的直接目标是：",
+   "stem": "When constructing an arbitrage-free binomial interest rate tree, the direct objective of 'calibration' is:",
    "choices": {
-    "A": "在给定波动率假设下调整各期节点利率，使树对基准债券（benchmark bonds）的定价与其市场价格一致",
-    "B": "调整节点利率使其等于历史利率的实际路径",
-    "C": "调整波动率假设使所有节点利率等于对应的 forward rate"
+    "A": "Under a given volatility assumption, to adjust the node rates in each period so that the tree prices benchmark bonds consistently with their market prices",
+    "B": "To adjust the node rates so they equal the actual historical path of interest rates",
+    "C": "To adjust the volatility assumption so that all node rates equal the corresponding forward rates"
    },
    "answer": "A",
    "explanations": {
@@ -15602,14 +15602,14 @@
   {
    "id": "FI-mc-1",
    "topic": "FI",
-   "los": "Pathwise valuation 与 Monte Carlo 适用场景",
+   "los": "Pathwise valuation and applicable scenarios for Monte Carlo",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "concept",
-   "stem": "对 MBS（mortgage-backed securities）估值时，必须使用 Monte Carlo 模拟而非二叉树 backward induction 的根本原因是：",
+   "stem": "In valuing mortgage-backed securities (MBS), the fundamental reason Monte Carlo simulation must be used instead of binomial-tree backward induction is:",
    "choices": {
-    "A": "MBS 现金流具有路径依赖性——提前还款取决于利率走过的历史路径，而 backward induction 中每个节点无法记住到达该节点的路径",
-    "B": "MBS 期限太长，二叉树节点数量会超出计算能力",
-    "C": "Monte Carlo 不需要利率波动率假设，比二叉树更客观"
+    "A": "MBS cash flows are path-dependent—prepayment depends on the historical path interest rates have taken, whereas in backward induction each node cannot remember the path by which it was reached",
+    "B": "MBS have such long maturities that the number of binomial tree nodes exceeds computational capacity",
+    "C": "Monte Carlo does not require an interest rate volatility assumption, making it more objective than the binomial tree"
    },
    "answer": "A",
    "explanations": {
@@ -15626,14 +15626,14 @@
   {
    "id": "FI-tree-3",
    "topic": "FI",
-   "los": "Binomial tree: backward induction 定价",
+   "los": "Binomial tree: backward induction valuation",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "trap",
-   "stem": "用校准好的二叉利率树给一只不含权（option-free）债券定价，并与直接用当前 spot 曲线折现现金流的结果比较，二者关系是：",
+   "stem": "Using a calibrated binomial interest rate tree to value an option-free bond and comparing the result with discounting the cash flows directly along the current spot curve, the relationship between the two is:",
    "choices": {
-    "A": "必然相等，且与树采用的波动率假设无关",
-    "B": "波动率假设越高，树上得到的价值越低",
-    "C": "树上价值系统性高于 spot 曲线折现值，因为树包含了利率上行情景"
+    "A": "They are necessarily equal, and independent of the volatility assumption used in the tree",
+    "B": "The higher the volatility assumption, the lower the value obtained from the tree",
+    "C": "The tree value is systematically higher than the spot-curve discounted value, because the tree incorporates upward interest rate scenarios"
    },
    "answer": "A",
    "explanations": {
@@ -15650,10 +15650,10 @@
   {
    "id": "FI-callable-tree-1",
    "topic": "FI",
-   "los": "V_call = V_straight − V_callable; V_put 类似",
+   "los": "V_call = V_straight − V_callable; V_put analogous",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "calc",
-   "stem": "2 年期年付息 4.5% 债券，面值 100，发行人可在 t=1 付息后按 100 赎回。二叉树利率（概率各 0.5）：t=0 为 3.5%；t=1 上节点 5.0%，下节点 3.0%。该 callable bond 当前价值最接近：",
+   "stem": "A 2-year annual-pay bond has a coupon rate of 4.5% and a face value of 100. The issuer may call the bond at 100 at t=1 after the coupon is paid. Binomial tree rates (probabilities of 0.5 each): t=0 is 3.5%; at t=1 the upper node is 5.0% and the lower node is 3.0%. The current value of this callable bond is closest to:",
    "choices": {
     "A": "100.74",
     "B": "101.44",
@@ -15667,20 +15667,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "含权节点值 = min(V节点, call price)；V节点 = 剩余现金流/(1+r节点)；折回时 V0 = 0.5×[(V'u+C)+(V'd+C)]/(1+r0)"
+     "label": "Formula",
+     "content": "Value at a callable node = min(V_node, call price); V_node = remaining cash flows/(1+r_node); discounting back: V0 = 0.5×[(V'u+C)+(V'd+C)]/(1+r0)"
     },
     {
-     "label": "代入",
-     "content": "上节点：104.5/1.05 = 99.5238 < 100 → 保留 99.5238；下节点：104.5/1.03 = 101.4563 > 100 → 替换为 100。V0 = 0.5×[(99.5238+4.5)+(100+4.5)]/1.035 = 0.5×208.5238/1.035"
+     "label": "Substitute",
+     "content": "Upper node: 104.5/1.05 = 99.5238 < 100 → keep 99.5238; lower node: 104.5/1.03 = 101.4563 > 100 → replace with 100. V0 = 0.5×[(99.5238+4.5)+(100+4.5)]/1.035 = 0.5×208.5238/1.035"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 104.2619/1.035 ≈ 100.74"
     },
     {
-     "label": "陷阱",
-     "content": "只在低利率（价格高）节点才会触发赎回；与 call price 比较的是除息节点值，不含当期票息。忘记赎回规则得 101.44（straight 价值）。"
+     "label": "Pitfall",
+     "content": "The call is triggered only at low-rate (high-price) nodes; what is compared with the call price is the ex-coupon node value, not including the current coupon. Forgetting the call rule gives 101.44 (the straight-bond value)."
     }
    ],
    "source": "CFA L2 Curriculum, Valuation and Analysis of Bonds with Embedded Options, callable bond valuation with binomial tree",
@@ -15692,10 +15692,10 @@
   {
    "id": "FI-optval-1",
    "topic": "FI",
-   "los": "V_call = V_straight − V_callable; V_put 类似",
+   "los": "V_call = V_straight − V_callable; V_put analogous",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "calc",
-   "stem": "同一发行人、同期限同票息的三只债券估值：不含权债券 102.5，callable 债券 99.8，putable 债券 104.0。嵌入 put option 的价值为：",
+   "stem": "Valuations of three bonds from the same issuer with identical maturity and coupon: the option-free bond is 102.5, the callable bond is 99.8, and the putable bond is 104.0. The value of the embedded put option is:",
    "choices": {
     "A": "1.5",
     "B": "2.7",
@@ -15709,20 +15709,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "V_putable = V_straight + V_put，故 V_put = V_putable − V_straight"
+     "label": "Formula",
+     "content": "V_putable = V_straight + V_put, so V_put = V_putable − V_straight"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "V_put = 104.0 − 102.5"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 1.5"
     },
     {
-     "label": "陷阱",
-     "content": "基准永远是 straight bond。callable 从 straight 里'减'期权（期权归发行人），putable 往 straight 上'加'期权（期权归投资者），方向记反直接选错。"
+     "label": "Pitfall",
+     "content": "The benchmark is always the straight bond. A callable bond 'subtracts' the option from the straight bond (the option belongs to the issuer); a putable bond 'adds' the option to the straight bond (the option belongs to the investor). Reversing the direction leads directly to a wrong choice."
     }
    ],
    "source": "CFA L2 Curriculum, Valuation and Analysis of Bonds with Embedded Options, value of embedded options",
@@ -15734,14 +15734,14 @@
   {
    "id": "FI-oas-2",
    "topic": "FI",
-   "los": "OAS: 定义、与 Z-spread 关系、跨债比较",
+   "los": "OAS: definition, relationship to Z-spread, cross-bond comparison",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "concept",
-   "stem": "分析师比较两只信用与流动性相当的 callable bond：Bond X 的 OAS 为 80bp，同类可比债券的 OAS 集中在 50bp 左右。基于 OAS，Bond X 相对而言：",
+   "stem": "An analyst compares two callable bonds with comparable credit and liquidity: Bond X has an OAS of 80bp, while comparable bonds cluster around an OAS of 50bp. Based on OAS, Bond X is relatively:",
    "choices": {
-    "A": "被低估（cheap），因为剔除期权影响后仍提供高于同类的利差补偿",
-    "B": "被高估（rich），因为更高的利差意味着市场要求更高的风险补偿",
-    "C": "无法比较，因为 OAS 中仍包含期权成本，不同债券期权条款不同"
+    "A": "Undervalued (cheap), because after removing the option effect it still offers spread compensation above its peers",
+    "B": "Overvalued (rich), because a higher spread means the market demands higher risk compensation",
+    "C": "Not comparable, because OAS still contains option cost and different bonds have different option terms"
    },
    "answer": "A",
    "explanations": {
@@ -15758,14 +15758,14 @@
   {
    "id": "FI-ratelevel-1",
    "topic": "FI",
-   "los": "利率水平变动对期权价值与债券价格的非对称影响",
+   "los": "Asymmetric effect of interest rate level changes on option value and bond price",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "concept",
-   "stem": "利率大幅下行时，callable bond 价格表现出'price compression（价格压缩）'，其含义是：",
+   "stem": "When interest rates fall sharply, a callable bond exhibits 'price compression,' which means:",
    "choices": {
-    "A": "价格上涨空间被赎回价附近的水平封顶——利率越低，赎回可能性越大，价格越贴近 call price 而难以继续上行",
-    "B": "价格下跌幅度小于同等 straight bond，因为期权提供了下行保护",
-    "C": "价格与 straight bond 同步上涨，只是波动更剧烈"
+    "A": "The bond's upside price appreciation is capped near the call price—the lower rates go, the greater the likelihood of being called, so the price hugs the call price and struggles to rise further",
+    "B": "The bond's price decline is smaller than that of an equivalent straight bond, because the option provides downside protection",
+    "C": "The bond's price rises in step with the straight bond, just with greater volatility"
    },
    "answer": "A",
    "explanations": {
@@ -15782,10 +15782,10 @@
   {
    "id": "FI-capfloor-1",
    "topic": "FI",
-   "los": "Capped/floored FRN 分解",
+   "los": "Decomposition of capped/floored FRNs",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "concept",
-   "stem": "一只带利率上限的浮息债（capped floater）的价值可分解为：",
+   "stem": "The value of a capped floater (a floating-rate note with an interest rate cap) can be decomposed as:",
    "choices": {
     "A": "V_capped floater = V_straight floater − V_cap",
     "B": "V_capped floater = V_straight floater + V_cap",
@@ -15806,10 +15806,10 @@
   {
    "id": "FI-effdur-1",
    "topic": "FI",
-   "los": "Effective duration/convexity: callable 负凸性区域",
+   "los": "Effective duration/convexity: negative convexity region of callable bonds",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "calc",
-   "stem": "某 callable bond 当前全价 V0 = 100。基准曲线平移 ±50bp 后重新估值：利率下移 50bp 时价格 101.8，上移 50bp 时价格 98.6。该债券的 effective duration 最接近：",
+   "stem": "A callable bond currently has a full price V0 = 100. After a ±50bp parallel shift of the benchmark curve and revaluation: when rates shift down 50bp the price is 101.8, and when rates shift up 50bp the price is 98.6. The bond's effective duration is closest to:",
    "choices": {
     "A": "3.2",
     "B": "6.4",
@@ -15823,20 +15823,20 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "Effective duration = (V− − V+) / (2 × V0 × ΔCurve)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "= (101.8 − 98.6) / (2 × 100 × 0.005)"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 3.2 / 1.0 = 3.2"
     },
     {
-     "label": "陷阱",
-     "content": "分母三件套一个都不能少：2、V0、ΔCurve（小数形式）。50bp = 0.005 不是 0.01；漏 2 结果翻倍。"
+     "label": "Pitfall",
+     "content": "None of the three denominator components may be dropped: 2, V0, and ΔCurve (in decimal form). 50bp = 0.005, not 0.01; dropping the 2 doubles the result."
     }
    ],
    "source": "CFA L2 Curriculum, Valuation and Analysis of Bonds with Embedded Options, effective duration",
@@ -15848,14 +15848,14 @@
   {
    "id": "FI-convexity-1",
    "topic": "FI",
-   "los": "Effective duration/convexity: callable 负凸性区域",
+   "los": "Effective duration/convexity: negative convexity region of callable bonds",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "trap",
-   "stem": "关于含权债券的 effective convexity，下列说法正确的是：",
+   "stem": "Regarding the effective convexity of bonds with embedded options, which of the following statements is correct:",
    "choices": {
-    "A": "callable bond 在利率较低时呈负凸性，putable bond 在各利率水平下均保持正凸性",
-    "B": "putable bond 在利率较高时呈负凸性，因为 put 期权深度实值",
-    "C": "callable bond 在所有利率水平下都呈负凸性"
+    "A": "A callable bond exhibits negative convexity when rates are low, while a putable bond maintains positive convexity at all rate levels",
+    "B": "A putable bond exhibits negative convexity when rates are high, because the put option is deep in the money",
+    "C": "A callable bond exhibits negative convexity at all rate levels"
    },
    "answer": "A",
    "explanations": {
@@ -15872,14 +15872,14 @@
   {
    "id": "FI-oas-3",
    "topic": "FI",
-   "los": "OAS: 定义、与 Z-spread 关系、跨债比较",
+   "los": "OAS: definition, relationship to Z-spread, cross-bond comparison",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "trap",
-   "stem": "分析师对同一只 callable bond（市场价格不变）将利率波动率假设从 10% 上调至 20% 后重新计算 OAS，计算出的 OAS 将：",
+   "stem": "For the same callable bond (with an unchanged market price), an analyst raises the interest rate volatility assumption from 10% to 20% and recomputes the OAS. The recomputed OAS will:",
    "choices": {
-    "A": "下降",
-    "B": "不变，因为 OAS 与波动率假设无关",
-    "C": "上升"
+    "A": "Decrease",
+    "B": "Stay unchanged, because OAS is independent of the volatility assumption",
+    "C": "Increase"
    },
    "answer": "A",
    "explanations": {
@@ -15896,14 +15896,14 @@
   {
    "id": "FI-putdir-1",
    "topic": "FI",
-   "los": "利率水平变动对期权价值与债券价格的非对称影响",
+   "los": "Asymmetric effect of interest rate level changes on option value and bond price",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "trap",
-   "stem": "利率大幅上升时，putable bond 的价格最可能：",
+   "stem": "When interest rates rise sharply, the price of a putable bond will most likely:",
    "choices": {
-    "A": "下跌，但跌幅小于同等条款的 straight bond",
-    "B": "上涨，因为 put 期权价值随利率上升而增加",
-    "C": "与同等条款的 straight bond 跌幅相同"
+    "A": "Fall, but by less than an otherwise-identical straight bond",
+    "B": "Rise, because the value of the put option increases as rates rise",
+    "C": "Fall by the same amount as an otherwise-identical straight bond"
    },
    "answer": "A",
    "explanations": {
@@ -15920,14 +15920,14 @@
   {
    "id": "FI-el-1",
    "topic": "FI",
-   "los": "Expected loss = PD × LGD; recovery rate 关系",
+   "los": "Expected loss = PD × LGD; relationship to recovery rate",
    "module": "Credit Analysis Models",
    "type": "calc",
-   "stem": "某债券风险敞口 1,000 万，违约概率 PD = 2%，预期回收率 (recovery rate) = 40%。expected loss 最接近：",
+   "stem": "A bond has an exposure of 10 million, a probability of default PD = 2%, and an expected recovery rate of 40%. The expected loss is closest to:",
    "choices": {
-    "A": "12 万",
-    "B": "8 万",
-    "C": "20 万"
+    "A": "120,000",
+    "B": "80,000",
+    "C": "200,000"
    },
    "answer": "A",
    "explanations": {
@@ -15937,20 +15937,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "EL = PD × LGD；LGD = 敞口 × (1 − recovery rate)"
+     "label": "Formula",
+     "content": "EL = PD × LGD; LGD = exposure × (1 − recovery rate)"
     },
     {
-     "label": "代入",
-     "content": "LGD = 1000 × (1 − 0.40) = 600 万；EL = 0.02 × 600"
+     "label": "Substitute",
+     "content": "LGD = 1000 × (1 − 0.40) = 6 million; EL = 0.02 × 600"
     },
     {
-     "label": "结果",
-     "content": "= 12 万"
+     "label": "Result",
+     "content": "= 120,000"
     },
     {
-     "label": "陷阱",
-     "content": "recovery rate 必须先转换为损失严重度 (1 − recovery)；直接乘 recovery 得 8 万、忽略回收得 20 万，都是设好的坑。"
+     "label": "Pitfall",
+     "content": "The recovery rate must first be converted into loss severity (1 − recovery); multiplying directly by the recovery rate gives 80,000, and ignoring recovery gives 200,000—both are traps that are set up."
     }
    ],
    "source": "CFA L2 Curriculum, Credit Analysis Models, expected loss / PD / LGD",
@@ -15962,14 +15962,14 @@
   {
    "id": "FI-model-1",
    "topic": "FI",
-   "los": "结构模型 vs 简约模型的假设差异",
+   "los": "Differences in assumptions between structural and reduced-form models",
    "module": "Credit Analysis Models",
    "type": "concept",
-   "stem": "相比结构模型（structural model），简约模型（reduced-form model）的关键假设差异是：",
+   "stem": "Compared with a structural model, the key difference in assumptions of a reduced-form model is:",
    "choices": {
-    "A": "违约被建模为外生的随机事件（违约强度），不要求公司资产价值及其波动率可观测",
-    "B": "把公司股权视为以公司资产为标的、债务面值为行权价的 call option",
-    "C": "要求公司资产在市场上可交易且其价值服从可观测的随机过程"
+    "A": "Default is modeled as an exogenous random event (a default intensity), and the firm's asset value and its volatility are not required to be observable",
+    "B": "It treats the firm's equity as a call option on the firm's assets with a strike price equal to the face value of debt",
+    "C": "It requires the firm's assets to be tradable in the market and to follow an observable stochastic process"
    },
    "answer": "A",
    "explanations": {
@@ -15986,10 +15986,10 @@
   {
    "id": "FI-cva-1",
    "topic": "FI",
-   "los": "Credit valuation adjustment (CVA) 概念",
+   "los": "Concept of credit valuation adjustment (CVA)",
    "module": "Credit Analysis Models",
    "type": "calc",
-   "stem": "1 年期零息公司债，面值 100，无风险利率 3%。若违约（概率 2%）发生在年末，回收率 40%。该债券的 CVA 最接近：",
+   "stem": "A 1-year zero-coupon corporate bond has a face value of 100 and the risk-free rate is 3%. If default (probability 2%) occurs at year-end, the recovery rate is 40%. The bond's CVA is closest to:",
    "choices": {
     "A": "1.17",
     "B": "1.20",
@@ -16003,20 +16003,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "CVA = PV(expected loss)；expected loss = 敞口 × PD × (1 − recovery)"
+     "label": "Formula",
+     "content": "CVA = PV(expected loss); expected loss = exposure × PD × (1 − recovery)"
     },
     {
-     "label": "代入",
-     "content": "年末 EL = 100 × 0.02 × 0.60 = 1.2；CVA = 1.2 / 1.03"
+     "label": "Substitute",
+     "content": "Year-end EL = 100 × 0.02 × 0.60 = 1.2; CVA = 1.2 / 1.03"
     },
     {
-     "label": "结果",
-     "content": "≈ 1.17（公允价值 = 100/1.03 − 1.17 = 97.09 − 1.17 ≈ 95.92）"
+     "label": "Result",
+     "content": "≈ 1.17 (fair value = 100/1.03 − 1.17 = 97.09 − 1.17 ≈ 95.92)"
     },
     {
-     "label": "陷阱",
-     "content": "两个检查点：损失率用 1 − recovery（不是 recovery）；预期损失必须按无风险利率折现成现值。"
+     "label": "Pitfall",
+     "content": "Two checkpoints: use 1 − recovery for the loss rate (not recovery); and the expected loss must be discounted to present value at the risk-free rate."
     }
    ],
    "source": "CFA L2 Curriculum, Credit Analysis Models, credit valuation adjustment",
@@ -16028,14 +16028,14 @@
   {
    "id": "FI-spreadterm-1",
    "topic": "FI",
-   "los": "Credit spread 期限结构含义",
+   "los": "Meaning of the term structure of credit spreads",
    "module": "Credit Analysis Models",
    "type": "trap",
-   "stem": "一家临近财务困境的低评级（CCC 级）发行人，其 credit spread 期限结构最可能呈现：",
+   "stem": "For a low-rated (CCC) issuer approaching financial distress, the term structure of its credit spreads will most likely be:",
    "choices": {
-    "A": "倒挂（短端利差高于长端）",
-    "B": "向上倾斜，因为期限越长不确定性越大",
-    "C": "水平，因为违约风险与期限无关"
+    "A": "Inverted (short-end spreads higher than long-end spreads)",
+    "B": "Upward-sloping, because uncertainty grows with maturity",
+    "C": "Flat, because default risk is independent of maturity"
    },
    "answer": "A",
    "explanations": {
@@ -16055,11 +16055,11 @@
    "los": "Upfront premium ≈ (credit spread − coupon) × duration",
    "module": "Credit Default Swaps",
    "type": "calc",
-   "stem": "某单一名字 CDS：参考实体当前 credit spread 为 350bp，CDS 标准票息 (coupon) 为 100bp，CDS 久期为 4。交易达成时的 upfront premium 约为（以名义本金的百分比表示）：",
+   "stem": "A single-name CDS: the reference entity's current credit spread is 350bp, the standard CDS coupon is 100bp, and the CDS duration is 4. At trade inception, the upfront premium is approximately (expressed as a percentage of notional):",
    "choices": {
-    "A": "protection buyer 向 seller 支付约 10%",
-    "B": "protection buyer 向 seller 支付约 2.5%",
-    "C": "protection seller 向 buyer 支付约 10%"
+    "A": "The protection buyer pays about 10% to the seller",
+    "B": "The protection buyer pays about 2.5% to the seller",
+    "C": "The protection seller pays about 10% to the buyer"
    },
    "answer": "A",
    "explanations": {
@@ -16069,20 +16069,20 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "Upfront premium ≈ (credit spread − CDS coupon) × CDS duration"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "= (3.50% − 1.00%) × 4 = 2.50% × 4"
     },
     {
-     "label": "结果",
-     "content": "= 10% of notional，由 protection buyer 支付给 seller（因 spread > coupon）"
+     "label": "Result",
+     "content": "= 10% of notional, paid by the protection buyer to the seller (because spread > coupon)"
     },
     {
-     "label": "陷阱",
-     "content": "两个检查点：必须乘 duration（否则得 2.5%）；方向由 spread 与 coupon 大小决定——spread > coupon 时 buyer 付，反之 seller 付。"
+     "label": "Pitfall",
+     "content": "Two checkpoints: you must multiply by duration (otherwise you get 2.5%); the direction is determined by the relative size of spread and coupon—when spread > coupon the buyer pays, and vice versa the seller pays."
     }
    ],
    "source": "CFA L2 Curriculum, Credit Default Swaps, upfront premium calculation",
@@ -16094,14 +16094,14 @@
   {
    "id": "FI-cds-mech-1",
    "topic": "FI",
-   "los": "CDS 机制: protection buyer/seller, 触发事件",
+   "los": "CDS mechanics: protection buyer/seller, trigger events",
    "module": "Credit Default Swaps",
    "type": "concept",
-   "stem": "CDS 合约下，参考实体是否发生 credit event（如 bankruptcy、failure to pay、restructuring）的正式认定由谁作出：",
+   "stem": "Under a CDS contract, who makes the formal determination of whether a credit event (such as bankruptcy, failure to pay, or restructuring) has occurred for the reference entity:",
    "choices": {
-    "A": "ISDA 的 Determinations Committee，经绝对多数（supermajority）表决认定",
-    "B": "protection buyer 单方面宣布并提交违约证据即可触发",
-    "C": "主要评级机构将发行人下调至违约级别时自动触发"
+    "A": "ISDA's Determinations Committee, by a supermajority vote",
+    "B": "The protection buyer can trigger it unilaterally by declaring and submitting evidence of default",
+    "C": "It is triggered automatically when a major rating agency downgrades the issuer to default status"
    },
    "answer": "A",
    "explanations": {
@@ -16118,14 +16118,14 @@
   {
    "id": "FI-cds-index-1",
    "topic": "FI",
-   "los": "Index CDS vs single-name; 曲线交易",
+   "los": "Index CDS vs single-name; curve trades",
    "module": "Credit Default Swaps",
    "type": "concept",
-   "stem": "投资者持有基于 125 个等权重成分的 index CDS（如 CDX IG）。当其中一个成分实体发生 credit event 后：",
+   "stem": "An investor holds an index CDS based on 125 equally weighted constituents (such as CDX IG). After a credit event occurs for one of the constituent entities:",
    "choices": {
-    "A": "该实体按其在指数中的权重单独结算，合约名义本金相应减少，其余 124 个名字继续受保护至到期",
-    "B": "整个 index CDS 合约立即终止并全额结算",
-    "C": "违约实体被新实体替换，合约名义本金保持不变"
+    "A": "That entity is settled separately according to its weight in the index, the contract's notional is reduced accordingly, and the remaining 124 names continue to be protected until maturity",
+    "B": "The entire index CDS contract terminates immediately and is settled in full",
+    "C": "The defaulted entity is replaced by a new entity, and the contract's notional remains unchanged"
    },
    "answer": "A",
    "explanations": {
@@ -16142,14 +16142,14 @@
   {
    "id": "FSA-FX-funcccy-1",
    "topic": "FSA",
-   "los": "功能货币判定 → 方法选择",
+   "los": "Determining the functional currency → selecting the translation method",
    "module": "Multinational Operations",
    "type": "concept",
-   "stem": "某海外子公司自主经营：销售定价、采购、融资均以当地货币进行，现金流基本不汇回母公司。据此判定其功能货币为当地货币。母公司合并报表折算该子公司报表时应采用：",
+   "stem": "A foreign subsidiary operates autonomously: it sets sales prices, purchases, and financing in the local currency, and its cash flows are essentially not remitted to the parent. On this basis, its functional currency is determined to be the local currency. When the parent translates the subsidiary's financial statements for consolidation, it should use:",
    "choices": {
-    "A": "Current rate method（现行汇率法）",
-    "B": "Temporal method（时态法）",
-    "C": "由管理层在两法中自由选择"
+    "A": "The current rate method",
+    "B": "The temporal method",
+    "C": "Either method, at management's discretion"
    },
    "answer": "A",
    "explanations": {
@@ -16157,7 +16157,7 @@
     "B": "错。Temporal method 用于功能货币 = 母公司报告货币的场景（子公司只是母公司的延伸，如销售办事处），此时做的是 remeasurement 而非 translation。本题所有经营特征都指向自主实体。",
     "C": "错。方法选择不是会计政策选择，而是由功能货币判定强制决定的。认为可自选是对该框架最根本的误解。"
    },
-   "source": "CFA L2 Curriculum, Multinational Operations, 功能货币判定与折算方法选择",
+   "source": "CFA L2 Curriculum, Multinational Operations, determining the functional currency and selecting the translation method",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16166,14 +16166,14 @@
   {
    "id": "FSA-FX-currentrate-1",
    "topic": "FSA",
-   "los": "Temporal vs current rate method: 各报表项目适用汇率",
+   "los": "Temporal vs. current rate method: exchange rate applied to each financial statement item",
    "module": "Multinational Operations",
    "type": "trap",
-   "stem": "采用 current rate method 折算子公司报表时，下列哪个项目不使用期末现行汇率折算？",
+   "stem": "When translating a subsidiary's financial statements using the current rate method, which of the following items is NOT translated at the period-end current exchange rate?",
    "choices": {
-    "A": "存货 (inventory)",
-    "B": "普通股股本 (common stock)",
-    "C": "应付账款 (accounts payable)"
+    "A": "Inventory",
+    "B": "Common stock",
+    "C": "Accounts payable"
    },
    "answer": "B",
    "explanations": {
@@ -16181,7 +16181,7 @@
     "B": "对。Current rate method 的例外项：股本类权益项目用历史汇率（发行日汇率），股利用宣告日汇率。正因为资产负债用现行汇率而股本用历史汇率，差额才需要 CTA 来配平。记法：'资产负债全现行，股本历史，损益平均，轧差进 CTA'。",
     "C": "错。应付账款是负债，current rate method 下全部资产与负债一律用期末现行汇率。"
    },
-   "source": "CFA L2 Curriculum, Multinational Operations, current rate method 各项目适用汇率",
+   "source": "CFA L2 Curriculum, Multinational Operations, exchange rates applied to each item under the current rate method",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16190,14 +16190,14 @@
   {
    "id": "FSA-FX-exposure-1",
    "topic": "FSA",
-   "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
+   "los": "Exposure under the two methods (net asset vs. net monetary) and where the gain/loss is reported (P&L vs. CTA/OCI)",
    "module": "Multinational Operations",
    "type": "trap",
-   "stem": "Temporal method 下，母公司面临的折算风险敞口 (translation exposure) 是子公司的：",
+   "stem": "Under the temporal method, the parent's translation exposure to the subsidiary is the subsidiary's:",
    "choices": {
-    "A": "净资产头寸 (net asset position, 即股东权益)",
-    "B": "净货币资产/负债头寸 (net monetary asset or liability position)",
-    "C": "总资产头寸"
+    "A": "Net asset position (i.e., shareholders' equity)",
+    "B": "Net monetary asset or liability position",
+    "C": "Total asset position"
    },
    "answer": "B",
    "explanations": {
@@ -16205,7 +16205,7 @@
     "B": "对。Temporal method 下只有货币性项目（现金、应收、应付、长期债务）按现行汇率重新计量，非货币性项目锁定在历史汇率，所以敞口只剩净货币头寸。典型公司货币负债多于货币资产 → net monetary liability exposure。记法：'temporal 只动货币项，敞口自然是净货币'。",
     "C": "错。总资产不是任何一种方法的 exposure 定义；敞口永远是'随汇率重估的项目'的净额，不是全部资产。"
    },
-   "source": "CFA L2 Curriculum, Multinational Operations, 两法下的 balance sheet exposure",
+   "source": "CFA L2 Curriculum, Multinational Operations, balance sheet exposure under the two methods",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16214,10 +16214,10 @@
   {
    "id": "FSA-FX-cogs-1",
    "topic": "FSA",
-   "los": "Temporal vs current rate method: 各报表项目适用汇率",
+   "los": "Temporal vs. current rate method: exchange rate applied to each financial statement item",
    "module": "Multinational Operations",
    "type": "calc",
-   "stem": "子公司采用 temporal method 折算（FIFO 计价）。期初存货 LC100（购入时汇率 $0.80/LC），本期采购 LC500（平均汇率 $0.85/LC），期末存货 LC120（购入时汇率 $0.90/LC），期末现行汇率 $0.92/LC。折算后 COGS 最接近：",
+   "stem": "A subsidiary is translated using the temporal method (FIFO costing). Beginning inventory is LC100 (exchange rate at purchase $0.80/LC), purchases during the period are LC500 (average rate $0.85/LC), ending inventory is LC120 (exchange rate at purchase $0.90/LC), and the period-end current rate is $0.92/LC. Translated COGS is closest to:",
    "choices": {
     "A": "$397",
     "B": "$408",
@@ -16231,23 +16231,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "Temporal 法: 折算 COGS = BI×历史汇率(BI) + Purchases×平均汇率 − EI×历史汇率(EI)；LC 口径 COGS = 100 + 500 − 120 = LC480"
+     "label": "Formula",
+     "content": "Temporal method: translated COGS = BI×historical rate(BI) + Purchases×average rate − EI×historical rate(EI); in LC terms, COGS = 100 + 500 − 120 = LC480"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "100×0.80 + 500×0.85 − 120×0.90 = 80 + 425 − 108"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "$397"
     },
     {
-     "label": "陷阱",
-     "content": "不能用 480×平均(=408) 或 480×期末存货汇率(=432) 一揽子折算；temporal 法下 COGS 必须逐成分配套各自历史汇率"
+     "label": "Trap",
+     "content": "Do not translate as a lump sum using 480×average (=408) or 480×ending-inventory rate (=432); under the temporal method, each component of COGS must be matched to its own historical rate"
     }
    ],
-   "source": "CFA L2 Curriculum, Multinational Operations, temporal method 下 COGS 折算",
+   "source": "CFA L2 Curriculum, Multinational Operations, translating COGS under the temporal method",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16256,14 +16256,14 @@
   {
    "id": "FSA-FX-cta-1",
    "topic": "FSA",
-   "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
+   "los": "Exposure under the two methods (net asset vs. net monetary) and where the gain/loss is reported (P&L vs. CTA/OCI)",
    "module": "Multinational Operations",
    "type": "calc",
-   "stem": "子公司功能货币为当地货币 LC，全年净资产保持 LC2,000 不变（当年无利润、无股利）。汇率由年初 $0.50/LC 贬至年末 $0.45/LC。当年折算产生的影响是：",
+   "stem": "A subsidiary's functional currency is the local currency LC. Its net assets remain unchanged at LC2,000 all year (no earnings and no dividends during the year). The exchange rate depreciates from $0.50/LC at the beginning of the year to $0.45/LC at year-end. The translation effect for the year is:",
    "choices": {
-    "A": "$100 折算损失，计入 OCI 中的 CTA",
-    "B": "$100 折算损失，计入当期 P&L",
-    "C": "$100 折算利得，计入 OCI 中的 CTA"
+    "A": "A $100 translation loss, recorded in the CTA within OCI",
+    "B": "A $100 translation loss, recorded in current-period P&L",
+    "C": "A $100 translation gain, recorded in the CTA within OCI"
    },
    "answer": "A",
    "explanations": {
@@ -16273,23 +16273,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "CTA 变动 ≈ 净资产敞口 × (期末汇率 − 期初汇率)（净资产全年不变的简化情形）"
+     "label": "Formula",
+     "content": "Change in CTA ≈ net asset exposure × (ending rate − beginning rate) (simplified case where net assets are constant all year)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "2,000 × (0.45 − 0.50) = 2,000 × (−0.05)"
     },
     {
-     "label": "结果",
-     "content": "−$100，即 $100 损失，计入 OCI 的 CTA"
+     "label": "Result",
+     "content": "−$100, i.e., a $100 loss, recorded in the CTA within OCI"
     },
     {
-     "label": "陷阱",
-     "content": "两个易错点：把 CTA 记到 P&L（那是 temporal 法）；正敞口 + 货币贬值误判为利得"
+     "label": "Trap",
+     "content": "Two common errors: recording the CTA in P&L (that is the temporal method); and misjudging a positive exposure plus a depreciating currency as a gain"
     }
    ],
-   "source": "CFA L2 Curriculum, Multinational Operations, current rate method 下 CTA 计算与归属",
+   "source": "CFA L2 Curriculum, Multinational Operations, computing and reporting the CTA under the current rate method",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16298,14 +16298,14 @@
   {
    "id": "FSA-FX-hyperinf-1",
    "topic": "FSA",
-   "los": "Hyperinflation 处理 (IFRS restate vs GAAP temporal)",
+   "los": "Accounting for hyperinflation (IFRS restate vs. US GAAP temporal)",
    "module": "Multinational Operations",
    "type": "concept",
-   "stem": "子公司位于恶性通胀经济体（三年累计通胀超过 100%）。IFRS 与 US GAAP 对其报表折算的要求分别是：",
+   "stem": "A subsidiary operates in a hyperinflationary economy (cumulative inflation over three years exceeds 100%). The requirements under IFRS and US GAAP, respectively, for translating its financial statements are:",
    "choices": {
-    "A": "IFRS：先按通胀重述 (restate) 报表，再按现行汇率折算；US GAAP：视功能货币为母公司报告货币，采用 temporal method",
-    "B": "IFRS：采用 temporal method；US GAAP：先按通胀重述再按现行汇率折算",
-    "C": "两套准则均要求直接采用 current rate method，不做任何调整"
+    "A": "IFRS: first restate the statements for inflation, then translate at the current rate; US GAAP: treat the functional currency as the parent's presentation currency and apply the temporal method",
+    "B": "IFRS: apply the temporal method; US GAAP: first restate for inflation, then translate at the current rate",
+    "C": "Both standards require applying the current rate method directly, with no adjustment"
    },
    "answer": "A",
    "explanations": {
@@ -16313,7 +16313,7 @@
     "B": "错。把两套准则的处理整个记反了——这是本考点唯一但致命的陷阱，考试就考你有没有记串。",
     "C": "错。恶性通胀下直接用 current rate 折算会让历史成本资产在报告货币中被严重低估（'消失的资产'问题），两套准则都不允许不做调整。"
    },
-   "source": "CFA L2 Curriculum, Multinational Operations, hyperinflationary economies 处理",
+   "source": "CFA L2 Curriculum, Multinational Operations, accounting for hyperinflationary economies",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16322,13 +16322,13 @@
   {
    "id": "FSA-FX-ratio-1",
    "topic": "FSA",
-   "los": "两法对比率的影响 (pure BS/IS ratio 不变性)",
+   "los": "Effect of the two methods on ratios (invariance of pure BS/IS ratios)",
    "module": "Multinational Operations",
    "type": "trap",
-   "stem": "子公司报表按 current rate method 折算成母公司货币后，下列哪个比率与折算前（当地货币口径）保持不变？",
+   "stem": "After a subsidiary's statements are translated into the parent's currency using the current rate method, which of the following ratios is unchanged from before translation (local-currency basis)?",
    "choices": {
-    "A": "Current ratio（流动比率）",
-    "B": "Total asset turnover（总资产周转率）",
+    "A": "Current ratio",
+    "B": "Total asset turnover",
     "C": "ROA"
    },
    "answer": "A",
@@ -16337,7 +16337,7 @@
     "B": "错。Total asset turnover = 收入(平均汇率)/资产(期末汇率)，分子分母用了不同汇率，约不掉，属于混合比率，折算后会变。",
     "C": "错。ROA = 净利润(平均汇率)/总资产(期末汇率)，同样是跨表混合比率，折算会改变其数值。"
    },
-   "source": "CFA L2 Curriculum, Multinational Operations, current rate method 对财务比率的影响",
+   "source": "CFA L2 Curriculum, Multinational Operations, effect of the current rate method on financial ratios",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16346,10 +16346,10 @@
   {
    "id": "FSA-pension-pbo-1",
    "topic": "FSA",
-   "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+   "los": "DB plans: components and roll-forward of the PBO (service cost, interest cost, benefits paid)",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "calc",
-   "stem": "某 DB 计划期初 pension obligation 为 1,000，折现率 5%。当年 current service cost 80，支付退休金 60，年末因精算假设调整产生精算损失 (actuarial loss) 30。年末 pension obligation 最接近：",
+   "stem": "A DB plan has a beginning pension obligation of 1,000 and a discount rate of 5%. During the year, current service cost is 80, benefits paid are 60, and an actuarial loss of 30 arises at year-end from a change in actuarial assumptions. The year-end pension obligation is closest to:",
    "choices": {
     "A": "1,100",
     "B": "1,070",
@@ -16363,23 +16363,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "期末 PBO = 期初 PBO + service cost + 期初 PBO×折现率 − benefits paid + actuarial loss"
+     "label": "Formula",
+     "content": "Ending PBO = beginning PBO + service cost + beginning PBO×discount rate − benefits paid + actuarial loss"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "1,000 + 80 + 1,000×5% − 60 + 30 = 1,000 + 80 + 50 − 60 + 30"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "1,100"
     },
     {
-     "label": "陷阱",
-     "content": "benefits paid 是减项不是加项；精算损失增加义务、不能因为它进 OCI 就漏掉"
+     "label": "Trap",
+     "content": "Benefits paid is a deduction, not an addition; the actuarial loss increases the obligation and must not be omitted just because it is reported in OCI"
     }
    ],
-   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, pension obligation 变动表",
+   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, pension obligation roll-forward",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16388,10 +16388,10 @@
   {
    "id": "FSA-pension-gaapexp-1",
    "topic": "FSA",
-   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+   "los": "IFRS vs. US GAAP: reporting of the three components of periodic pension cost (P&L vs. OCI)",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "calc",
-   "stem": "US GAAP 下：current service cost 80，interest cost 50，计划资产期初 900，expected return on plan assets 7%，actual return 45。不考虑摊销项，当期计入 P&L 的 pension expense 最接近：",
+   "stem": "Under US GAAP: current service cost is 80, interest cost is 50, beginning plan assets are 900, the expected return on plan assets is 7%, and the actual return is 45. Ignoring any amortization, the pension expense recognized in P&L for the period is closest to:",
    "choices": {
     "A": "67",
     "B": "85",
@@ -16405,23 +16405,23 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "US GAAP P&L pension expense = service cost + interest cost − expected return on plan assets"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "80 + 50 − 900×7% = 80 + 50 − 63"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "67"
     },
     {
-     "label": "陷阱",
-     "content": "用 expected 而非 actual return（差额进 OCI）；漏减回报会得到 130"
+     "label": "Trap",
+     "content": "Use the expected, not the actual, return (the difference goes to OCI); omitting the return altogether gives 130"
     }
    ],
-   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, US GAAP periodic pension cost 成分",
+   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, components of periodic pension cost under US GAAP",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16430,10 +16430,10 @@
   {
    "id": "FSA-pension-netint-1",
    "topic": "FSA",
-   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+   "los": "IFRS vs. US GAAP: reporting of the three components of periodic pension cost (P&L vs. OCI)",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "calc",
-   "stem": "IFRS 下：期初 pension obligation 1,000，期初计划资产公允价值 800，折现率 5%，公司对计划资产的长期预期回报率为 7%。当期计入 P&L 的 net interest cost 最接近：",
+   "stem": "Under IFRS: the beginning pension obligation is 1,000, the beginning fair value of plan assets is 800, the discount rate is 5%, and the company's long-term expected return on plan assets is 7%. The net interest cost recognized in P&L for the period is closest to:",
    "choices": {
     "A": "10",
     "B": "50",
@@ -16447,23 +16447,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "IFRS net interest cost = (期初义务 − 期初计划资产) × 折现率"
+     "label": "Formula",
+     "content": "IFRS net interest cost = (beginning obligation − beginning plan assets) × discount rate"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "(1,000 − 800) × 5% = 200 × 5%"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "10"
     },
     {
-     "label": "陷阱",
-     "content": "IFRS 不使用 expected return on plan assets；套用 7% 会得到 −6，只算义务利息会得到 50"
+     "label": "Trap",
+     "content": "IFRS does not use the expected return on plan assets; applying 7% gives −6, and counting only the interest on the obligation gives 50"
     }
    ],
-   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, IFRS net interest 计算",
+   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, computing net interest under IFRS",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16472,14 +16472,14 @@
   {
    "id": "FSA-pension-assump-1",
    "topic": "FSA",
-   "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
+   "los": "Direction of the effect of assumption changes (discount rate / compensation growth rate) on the liability and expense",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "concept",
-   "stem": "其他条件不变，DB 计划所用折现率上升，对 pension obligation 与 current service cost 的影响分别是：",
+   "stem": "All else equal, if the discount rate used for a DB plan rises, the effects on the pension obligation and on current service cost, respectively, are:",
    "choices": {
-    "A": "两者都下降",
-    "B": "Obligation 下降，service cost 上升",
-    "C": "Obligation 上升，service cost 下降"
+    "A": "Both decrease",
+    "B": "The obligation decreases, service cost increases",
+    "C": "The obligation increases, service cost decreases"
    },
    "answer": "A",
    "explanations": {
@@ -16487,7 +16487,7 @@
     "B": "错。service cost 是当年新增服务对应的未来给付的现值，同样受折现率压缩，不会反向上升。",
     "C": "错。方向完全记反。注意区分：折现率上升时 interest cost 方向才是不确定的（率升×基数降），但义务和 service cost 的方向毫无悬念是降。"
    },
-   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, 折现率假设的影响",
+   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, effect of the discount rate assumption",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16496,14 +16496,14 @@
   {
    "id": "FSA-pension-assump-2",
    "topic": "FSA",
-   "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
+   "los": "Direction of the effect of assumption changes (discount rate / compensation growth rate) on the liability and expense",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "trap",
-   "stem": "某公司（US GAAP，final-pay 型 DB 计划）希望降低资产负债表上报告的 pension obligation。下列假设调整中最能达到目的的是：",
+   "stem": "A company (US GAAP, final-pay DB plan) wants to lower the pension obligation reported on its balance sheet. Which of the following assumption changes would best achieve this?",
    "choices": {
-    "A": "提高折现率",
-    "B": "提高薪酬增长率 (rate of compensation growth)",
-    "C": "提高 expected return on plan assets"
+    "A": "Increase the discount rate",
+    "B": "Increase the rate of compensation growth",
+    "C": "Increase the expected return on plan assets"
    },
    "answer": "A",
    "explanations": {
@@ -16511,7 +16511,7 @@
     "B": "错。final-pay 计划的给付随最终薪酬水平走，薪酬增长率越高、未来给付越大，义务是上升而非下降。",
     "C": "错。这是本题的核心陷阱：expected return on plan assets 只影响 US GAAP 下的 P&L 费用平滑，完全不进入 obligation 的计量——义务的现值只由折现率、薪酬增长等给付端假设决定。想靠它降负债是徒劳的。"
    },
-   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, 精算假设对负债与费用的影响",
+   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, effect of actuarial assumptions on the liability and expense",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16520,14 +16520,14 @@
   {
    "id": "FSA-sbc-1",
    "topic": "FSA",
-   "los": "Share-based compensation: expense 确认时点与计量",
+   "los": "Share-based compensation: timing of expense recognition and measurement",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "concept",
-   "stem": "公司授予员工股票期权（equity-settled，服务期/vesting period 为 3 年）。该股权激励费用的计量与确认方式是：",
+   "stem": "A company grants employees stock options (equity-settled, with a 3-year service/vesting period). The measurement and recognition of the related compensation expense is:",
    "choices": {
-    "A": "按授予日 (grant date) 公允价值计量，在 3 年服务期内分摊确认，后续不因股价变动重新计量",
-    "B": "按每个资产负债表日的公允价值重新计量，变动计入当期费用",
-    "C": "在行权日按内在价值 (intrinsic value) 一次性确认费用"
+    "A": "Measured at grant-date fair value and recognized over the 3-year service period, with no subsequent remeasurement for changes in the share price",
+    "B": "Remeasured at fair value each balance sheet date, with changes recognized in current-period expense",
+    "C": "Recognized in full at the exercise date based on intrinsic value"
    },
    "answer": "A",
    "explanations": {
@@ -16535,7 +16535,7 @@
     "B": "错。逐期重新计量是 cash-settled（如 SARs 现金结算）类负债型激励的处理——负债要随公允价值浮动，权益型不用。两类结算方式的计量规则最易混淆。",
     "C": "错。行权日内在价值法是早已废弃的旧处理；现行准则下费用在服务期内确认，且用的是公允价值（含时间价值），不是行权时的内在价值。"
    },
-   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, share-based compensation 计量",
+   "source": "CFA L2 Curriculum, Employee Compensation: Post-Employment and Share-Based, measurement of share-based compensation",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16544,14 +16544,14 @@
   {
    "id": "FSA-interco-classify-1",
    "topic": "FSA",
-   "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
+   "los": "Classification: mapping accounting methods to financial assets / associates / joint ventures / business combinations",
    "module": "Intercorporate Investments",
    "type": "concept",
-   "stem": "公司持有另一家公司 25% 有表决权股份，可向其董事会派驻代表并参与经营决策，但不构成控制。该投资应采用的会计处理是：",
+   "stem": "A company holds 25% of the voting shares of another company, can appoint a representative to its board, and participates in operating decisions, but does not have control. The appropriate accounting treatment for this investment is:",
    "choices": {
-    "A": "Equity method（权益法）",
-    "B": "以公允价值计量且变动计入损益 (FVPL)",
-    "C": "全面合并 (consolidation)"
+    "A": "The equity method",
+    "B": "Fair value through profit or loss (FVPL)",
+    "C": "Full consolidation"
    },
    "answer": "A",
    "explanations": {
@@ -16559,7 +16559,7 @@
     "B": "错。FVPL 等金融资产处理适用于无重大影响的被动投资（通常 <20% 且无其他影响证据）；本题的董事会席位已明确构成重大影响。",
     "C": "错。合并要求控制（通常 >50% 表决权或其他控制证据），25% 且'不构成控制'排除了合并。"
    },
-   "source": "CFA L2 Curriculum, Intercorporate Investments, 投资分类与会计方法对应",
+   "source": "CFA L2 Curriculum, Intercorporate Investments, classifying investments and mapping accounting methods",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16568,14 +16568,14 @@
   {
    "id": "FSA-interco-jv-1",
    "topic": "FSA",
-   "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
+   "los": "Classification: mapping accounting methods to financial assets / associates / joint ventures / business combinations",
    "module": "Intercorporate Investments",
    "type": "concept",
-   "stem": "两家公司各持 50% 设立一家合营企业 (joint venture)，双方共同控制。IFRS 下该合营方对 JV 投资一般要求的会计处理是：",
+   "stem": "Two companies each hold 50% of a joint venture and share joint control. Under IFRS, the accounting treatment generally required of a venturer for its investment in the JV is:",
    "choices": {
-    "A": "Equity method（权益法）",
-    "B": "Proportionate consolidation（比例合并）",
-    "C": "全面合并并确认 50% 少数股东权益"
+    "A": "The equity method",
+    "B": "Proportionate consolidation",
+    "C": "Full consolidation with recognition of a 50% non-controlling interest"
    },
    "answer": "A",
    "explanations": {
@@ -16583,7 +16583,7 @@
     "B": "错。比例合并是旧准则 (IAS 31) 曾允许的备选处理，现行 IFRS 11 已基本取消——这是新旧准则记串的经典陷阱。",
     "C": "错。全面合并要求单方控制；共同控制下双方都不满足合并条件，也谈不上确认 NCI。"
    },
-   "source": "CFA L2 Curriculum, Intercorporate Investments, joint venture 的会计处理",
+   "source": "CFA L2 Curriculum, Intercorporate Investments, accounting for joint ventures",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16592,10 +16592,10 @@
   {
    "id": "FSA-interco-equity-1",
    "topic": "FSA",
-   "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
+   "los": "Equity method: initial recognition, investment income, dividends, and allocation of excess purchase price",
    "module": "Intercorporate Investments",
    "type": "calc",
-   "stem": "年初以 300 购入被投资方 30% 股份（无超额购买价），采用 equity method。当年被投资方净利润 100，宣告并支付股利 40。年末投资账面价值最接近：",
+   "stem": "At the beginning of the year, an investor purchases 30% of an investee for 300 (no excess purchase price) and uses the equity method. During the year the investee reports net income of 100 and declares and pays dividends of 40. The year-end carrying value of the investment is closest to:",
    "choices": {
     "A": "318",
     "B": "330",
@@ -16609,23 +16609,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "期末投资账面价值 = 初始成本 + 持股比例×NI − 持股比例×股利"
+     "label": "Formula",
+     "content": "Ending carrying value = initial cost + ownership %×NI − ownership %×dividends"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "300 + 0.30×100 − 0.30×40 = 300 + 30 − 12"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "318"
     },
     {
-     "label": "陷阱",
-     "content": "股利必须按份额减（不减→330，全额减→290）；权益法下股利不是收入"
+     "label": "Trap",
+     "content": "Dividends must be deducted at the ownership share (not deducting → 330, deducting the full amount → 290); under the equity method dividends are not income"
     }
    ],
-   "source": "CFA L2 Curriculum, Intercorporate Investments, equity method 账面价值滚动",
+   "source": "CFA L2 Curriculum, Intercorporate Investments, equity method carrying-value roll-forward",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16634,10 +16634,10 @@
   {
    "id": "FSA-interco-equity-2",
    "topic": "FSA",
-   "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
+   "los": "Equity method: initial recognition, investment income, dividends, and allocation of excess purchase price",
    "module": "Intercorporate Investments",
    "type": "calc",
-   "stem": "以 500 购入被投资方 20% 股份。购买日被投资方净资产账面价值 2,000（20% 份额 = 400）。超额购买价 100 中，60 归因于被低估的 PP&E（剩余年限 10 年，直线折旧），其余 40 为商誉。当年被投资方净利润 150。投资方当年确认的 equity income 最接近：",
+   "stem": "An investor purchases 20% of an investee for 500. At the acquisition date the investee's net assets have a book value of 2,000 (the 20% share = 400). Of the excess purchase price of 100, 60 is attributable to undervalued PP&E (remaining life 10 years, straight-line depreciation) and the remaining 40 is goodwill. The investee reports net income of 150 for the year. The equity income the investor recognizes for the year is closest to:",
    "choices": {
     "A": "24",
     "B": "30",
@@ -16651,23 +16651,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "Equity income = 持股比例×NI − 归因于可折旧资产的超额购买价 ÷ 剩余年限"
+     "label": "Formula",
+     "content": "Equity income = ownership %×NI − (excess purchase price attributable to depreciable assets ÷ remaining life)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "0.20×150 − 60/10 = 30 − 6"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "24"
     },
     {
-     "label": "陷阱",
-     "content": "商誉部分 40 不摊销（摊了→20）；漏掉全部摊销→30"
+     "label": "Trap",
+     "content": "The goodwill portion of 40 is not amortized (amortizing it → 20); omitting all amortization → 30"
     }
    ],
-   "source": "CFA L2 Curriculum, Intercorporate Investments, equity method 超额购买价分摊",
+   "source": "CFA L2 Curriculum, Intercorporate Investments, allocation of excess purchase price under the equity method",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16676,10 +16676,10 @@
   {
    "id": "FSA-interco-goodwill-1",
    "topic": "FSA",
-   "los": "Full goodwill vs partial goodwill",
+   "los": "Full goodwill vs. partial goodwill",
    "module": "Intercorporate Investments",
    "type": "calc",
-   "stem": "母公司以 800 收购子公司 80% 股权，购买日子公司可辨认净资产公允价值为 900，按购买对价推算的子公司整体公允价值为 1,000。Partial goodwill method 下确认的商誉最接近：",
+   "stem": "A parent acquires 80% of a subsidiary for 800. At the acquisition date the fair value of the subsidiary's identifiable net assets is 900, and the implied total fair value of the subsidiary based on the consideration paid is 1,000. The goodwill recognized under the partial goodwill method is closest to:",
    "choices": {
     "A": "80",
     "B": "100",
@@ -16693,23 +16693,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "Partial goodwill = 购买对价 − 持股比例 × 可辨认净资产公允价值"
+     "label": "Formula",
+     "content": "Partial goodwill = consideration paid − ownership % × fair value of identifiable net assets"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "800 − 0.80×900 = 800 − 720"
     },
     {
-     "label": "结果",
-     "content": "80（对照: full goodwill = 1,000 − 900 = 100）"
+     "label": "Result",
+     "content": "80 (for comparison: full goodwill = 1,000 − 900 = 100)"
     },
     {
-     "label": "陷阱",
-     "content": "full 与 partial 相差的 20 = NCI 份额商誉；0.2×900=180 是 partial 法下的 NCI，不是商誉"
+     "label": "Trap",
+     "content": "The 20 difference between full and partial is the NCI's share of goodwill; 0.2×900=180 is the NCI under the partial method, not goodwill"
     }
    ],
-   "source": "CFA L2 Curriculum, Intercorporate Investments, full vs partial goodwill 计算",
+   "source": "CFA L2 Curriculum, Intercorporate Investments, computing full vs. partial goodwill",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16718,14 +16718,14 @@
   {
    "id": "FSA-interco-ratio-1",
    "topic": "FSA",
-   "los": "Acquisition method vs equity method 对报表比率的影响",
+   "los": "Effect of the acquisition method vs. the equity method on reported ratios",
    "module": "Intercorporate Investments",
    "type": "concept",
-   "stem": "对同一笔投资，若采用 acquisition method（全面合并）而非 equity method，合并后母公司报表的 net profit margin 通常：",
+   "stem": "For the same investment, if the acquisition method (full consolidation) is used rather than the equity method, the consolidated parent's net profit margin will generally be:",
    "choices": {
-    "A": "更低",
-    "B": "更高",
-    "C": "不变"
+    "A": "Lower",
+    "B": "Higher",
+    "C": "Unchanged"
    },
    "answer": "A",
    "explanations": {
@@ -16733,7 +16733,7 @@
     "B": "错。合并不会创造更高的利润率——利润没变、收入变大，方向只能向下。误选此项通常是把'收入更高'直接等同于'比率更好'。",
     "C": "错。不变的是归母净利润的绝对额，不是利润率；只要收入口径变了，margin 就变。"
    },
-   "source": "CFA L2 Curriculum, Intercorporate Investments, acquisition vs equity method 对比率的影响",
+   "source": "CFA L2 Curriculum, Intercorporate Investments, effect of the acquisition vs. equity method on ratios",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16742,14 +16742,14 @@
   {
    "id": "FSA-interco-impair-1",
    "topic": "FSA",
-   "los": "Impairment 处理 (IFRS vs US GAAP)",
+   "los": "Impairment treatment (IFRS vs. US GAAP)",
    "module": "Intercorporate Investments",
    "type": "trap",
-   "stem": "企业合并中确认的商誉 (goodwill)，其后续计量的正确描述是：",
+   "stem": "Which of the following correctly describes the subsequent measurement of goodwill recognized in a business combination?",
    "choices": {
-    "A": "按估计使用年限直线摊销",
-    "B": "不摊销，至少每年做减值测试；减值损失一经确认，IFRS 与 US GAAP 下均不得转回",
-    "C": "不摊销，每年减值测试；若后续价值回升，IFRS 下可将减值转回"
+    "A": "Amortized on a straight-line basis over its estimated useful life",
+    "B": "Not amortized; tested for impairment at least annually; once recognized, an impairment loss may not be reversed under either IFRS or US GAAP",
+    "C": "Not amortized; tested for impairment annually; if value subsequently recovers, the impairment may be reversed under IFRS"
    },
    "answer": "B",
    "explanations": {
@@ -16757,7 +16757,7 @@
     "B": "对。商誉每年（及出现减值迹象时）测试减值，且减值不可转回——这一点 IFRS 与 US GAAP 罕见地完全一致。记法：'商誉减值是单行道'。",
     "C": "错。这是本题陷阱：IFRS 下多数长期资产的减值确实可以转回，但商誉是明文例外（IAS 36 禁止转回商誉减值），拿一般规则套商誉就中招。"
    },
-   "source": "CFA L2 Curriculum, Intercorporate Investments, goodwill impairment 处理",
+   "source": "CFA L2 Curriculum, Intercorporate Investments, accounting for goodwill impairment",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16766,14 +16766,14 @@
   {
    "id": "FSA-fininst-camels-1",
    "topic": "FSA",
-   "los": "CAMELS 框架各维度含义",
+   "los": "Meaning of each dimension of the CAMELS framework",
    "module": "Analysis of Financial Institutions",
    "type": "concept",
-   "stem": "银行分析的 CAMELS 框架中，字母 \"S\" 代表：",
+   "stem": "In the CAMELS framework for analyzing banks, the letter \"S\" stands for:",
    "choices": {
-    "A": "Sensitivity to market risk（对市场风险的敏感性）",
-    "B": "Solvency（偿付能力）",
-    "C": "Stability（经营稳定性）"
+    "A": "Sensitivity to market risk",
+    "B": "Solvency",
+    "C": "Stability of operations"
    },
    "answer": "A",
    "explanations": {
@@ -16781,7 +16781,7 @@
     "B": "错。偿付能力的内容被 C（capital adequacy）覆盖，CAMELS 中没有单独的 Solvency 维度——用直觉英文单词硬凑是常见失分方式。",
     "C": "错。Stability 不是 CAMELS 的组成部分；框架六个维度是固定的，考试就考精确对应。"
    },
-   "source": "CFA L2 Curriculum, Analysis of Financial Institutions, CAMELS 框架",
+   "source": "CFA L2 Curriculum, Analysis of Financial Institutions, the CAMELS framework",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16790,14 +16790,14 @@
   {
    "id": "FSA-fininst-liquidity-1",
    "topic": "FSA",
-   "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+   "los": "Banks: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
    "module": "Analysis of Financial Institutions",
    "type": "concept",
-   "stem": "巴塞尔框架下，Liquidity Coverage Ratio (LCR) 衡量的是银行：",
+   "stem": "Under the Basel framework, the Liquidity Coverage Ratio (LCR) measures a bank's:",
    "choices": {
-    "A": "持有的优质流动性资产 (HQLA) 能否覆盖 30 天压力情景下的预期净现金流出",
-    "B": "可用稳定资金对一年期所需稳定资金的覆盖程度",
-    "C": "CET1 资本对风险加权资产的覆盖程度"
+    "A": "Whether its holdings of high-quality liquid assets (HQLA) can cover expected net cash outflows under a 30-day stress scenario",
+    "B": "The extent to which available stable funding covers required stable funding over a one-year horizon",
+    "C": "The extent to which CET1 capital covers risk-weighted assets"
    },
    "answer": "A",
    "explanations": {
@@ -16805,7 +16805,7 @@
     "B": "错。这是 NSFR (Net Stable Funding Ratio) 的定义——available stable funding / required stable funding，期限视角是一年。两个流动性指标的期限最易混淆。",
     "C": "错。CET1/RWA 是资本充足率指标，属于 capital adequacy 维度，与流动性监管指标是两套体系。"
    },
-   "source": "CFA L2 Curriculum, Analysis of Financial Institutions, LCR 与 NSFR",
+   "source": "CFA L2 Curriculum, Analysis of Financial Institutions, LCR and NSFR",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16814,14 +16814,14 @@
   {
    "id": "FSA-fininst-combined-1",
    "topic": "FSA",
-   "los": "保险: P&C vs life 的关键比率 (combined ratio 等)",
+   "los": "Insurance: key ratios for P&C vs. life (combined ratio, etc.)",
    "module": "Analysis of Financial Institutions",
    "type": "calc",
-   "stem": "某 P&C 保险公司：net premiums earned 100，赔付及理赔费用 (losses and loss adjustment expenses) 70，承保费用 (underwriting expenses) 25。其 combined ratio 及承保结论是：",
+   "stem": "A P&C insurer has net premiums earned of 100, losses and loss adjustment expenses of 70, and underwriting expenses of 25. Its combined ratio and the underwriting conclusion are:",
    "choices": {
-    "A": "95%，承保盈利",
-    "B": "95%，承保亏损",
-    "C": "70%，承保盈利"
+    "A": "95%, an underwriting profit",
+    "B": "95%, an underwriting loss",
+    "C": "70%, an underwriting profit"
    },
    "answer": "A",
    "explanations": {
@@ -16831,20 +16831,20 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "Combined ratio = (losses + LAE)/net premiums earned + underwriting expenses/net premiums earned"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "70/100 + 25/100 = 70% + 25%"
     },
     {
-     "label": "结果",
-     "content": "95%；<100% → 承保盈利"
+     "label": "Result",
+     "content": "95%; <100% → underwriting profit"
     },
     {
-     "label": "陷阱",
-     "content": "只算 loss ratio 得 70%；方向判定以 100% 为界，越低越好"
+     "label": "Trap",
+     "content": "Using only the loss ratio gives 70%; the direction is judged against the 100% line, where lower is better"
     }
    ],
    "source": "CFA L2 Curriculum, Analysis of Financial Institutions, P&C combined ratio",
@@ -16856,14 +16856,14 @@
   {
    "id": "FSA-fininst-cet1-1",
    "topic": "FSA",
-   "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+   "los": "Banks: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
    "module": "Analysis of Financial Institutions",
    "type": "trap",
-   "stem": "下列项目中，不计入银行 Common Equity Tier 1 (CET1) 资本的是：",
+   "stem": "Which of the following is NOT included in a bank's Common Equity Tier 1 (CET1) capital?",
    "choices": {
-    "A": "普通股股本",
-    "B": "留存收益",
-    "C": "优先股 (preferred stock)"
+    "A": "Common stock",
+    "B": "Retained earnings",
+    "C": "Preferred stock"
    },
    "answer": "C",
    "explanations": {
@@ -16871,7 +16871,7 @@
     "B": "错（该项计入）。留存收益属于普通股股东权益，是 CET1 的标准组成部分。",
     "C": "对。优先股不属于 common equity，符合条件的优先股计入的是 Additional Tier 1（合计构成 Tier 1）。陷阱在于'优先股也是权益'的直觉——资本分层看的是吸收损失的顺序，不是会计科目归属。"
    },
-   "source": "CFA L2 Curriculum, Analysis of Financial Institutions, 资本充足层级 CET1/AT1",
+   "source": "CFA L2 Curriculum, Analysis of Financial Institutions, capital adequacy tiers CET1/AT1",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16880,14 +16880,14 @@
   {
    "id": "FSA-quality-spectrum-1",
    "topic": "FSA",
-   "los": "报告质量 vs 盈余质量的区分与频谱",
+   "los": "Distinguishing reporting quality from earnings quality, and the quality spectrum",
    "module": "Evaluating Quality of Financial Reports",
    "type": "concept",
-   "stem": "某公司财务报表完全符合 GAAP、披露充分且中立，但本年利润主要来自一次性出售总部大楼的处置收益。对其报告质量 (reporting quality) 与盈余质量 (earnings quality) 的正确评价是：",
+   "stem": "A company's financial statements fully comply with GAAP and are adequately and neutrally disclosed, but this year's earnings come mainly from a one-time gain on the disposal of its headquarters building. The correct assessment of its reporting quality and earnings quality is:",
    "choices": {
-    "A": "报告质量高，盈余质量低",
-    "B": "报告质量低，盈余质量高",
-    "C": "两者都低"
+    "A": "High reporting quality, low earnings quality",
+    "B": "Low reporting quality, high earnings quality",
+    "C": "Both are low"
    },
    "answer": "A",
    "explanations": {
@@ -16895,7 +16895,7 @@
     "B": "错。方向颠倒：合规充分披露恰恰是高报告质量的定义；把'利润成色差'误安到报告质量头上，说明没分清两个概念的对象。",
     "C": "错。低报告质量意味着报表本身不可信（如操纵、隐瞒），本题报表如实反映了一次性收益，报告质量并不低。"
    },
-   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, 报告质量与盈余质量频谱",
+   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, the reporting quality and earnings quality spectrum",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16904,14 +16904,14 @@
   {
    "id": "FSA-quality-mscore-1",
    "topic": "FSA",
-   "los": "Beneish M-score / Altman Z-score 变量方向含义",
+   "los": "Direction and meaning of the variables in the Beneish M-score / Altman Z-score",
    "module": "Evaluating Quality of Financial Reports",
    "type": "trap",
-   "stem": "某公司的 Beneish M-score 由 −2.5 升至 −1.5。该变化的正确解读是：",
+   "stem": "A company's Beneish M-score rises from −2.5 to −1.5. The correct interpretation of this change is:",
    "choices": {
-    "A": "盈余操纵的概率上升",
-    "B": "盈余操纵的概率下降",
-    "C": "财务困境（破产）风险上升"
+    "A": "The probability of earnings manipulation has increased",
+    "B": "The probability of earnings manipulation has decreased",
+    "C": "The risk of financial distress (bankruptcy) has increased"
    },
    "answer": "A",
    "explanations": {
@@ -16919,7 +16919,7 @@
     "B": "错。方向记反，通常是被 Altman Z-score 带偏——Z 是越高越安全，M 是越高越危险，两个模型的'好方向'正好相反。",
     "C": "错。破产预测是 Altman Z-score 的领地（Z 越低破产风险越高）；M-score 只回答'报表像不像被操纵'，不预测破产。模型用途混淆是本考点第二大陷阱。"
    },
-   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, Beneish M-score 解读",
+   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, interpreting the Beneish M-score",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16928,14 +16928,14 @@
   {
    "id": "FSA-quality-classify-1",
    "topic": "FSA",
-   "los": "常见操纵手法: 收入确认、分类腾挪、准备金调节",
+   "los": "Common manipulation techniques: revenue recognition, classification shifting, reserve management",
    "module": "Evaluating Quality of Financial Reports",
    "type": "trap",
-   "stem": "一家 IFRS 报告公司将 interest paid 的列报由经营活动 (CFO) 改为筹资活动 (CFF)（IFRS 允许该选择）。此重分类的效果是：",
+   "stem": "An IFRS-reporting company changes the presentation of interest paid from operating activities (CFO) to financing activities (CFF) (IFRS permits this choice). The effect of this reclassification is:",
    "choices": {
-    "A": "CFO 提高，总现金流量不变",
-    "B": "CFO 与总现金流量同时提高",
-    "C": "对 CFO 无影响，因为 interest paid 必须列在经营活动中"
+    "A": "CFO increases, total cash flow is unchanged",
+    "B": "Both CFO and total cash flow increase",
+    "C": "No effect on CFO, because interest paid must be classified within operating activities"
    },
    "answer": "A",
    "explanations": {
@@ -16943,7 +16943,7 @@
     "B": "错。重分类是零和搬运：CFO 多出来的正好是 CFF 少掉的，总现金流量不可能因列报位置改变而增加。",
     "C": "错。'必须列 CFO'是 US GAAP 的规则；IFRS 恰恰允许 interest paid 选择 CFO 或 CFF——两套准则的现金流分类弹性差异正是这种腾挪的空间所在。"
    },
-   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, 现金流分类腾挪",
+   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, cash flow classification shifting",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16952,14 +16952,14 @@
   {
    "id": "FSA-quality-cfo-1",
    "topic": "FSA",
-   "los": "现金流质量信号",
+   "los": "Cash flow quality signals",
    "module": "Evaluating Quality of Financial Reports",
    "type": "concept",
-   "stem": "评估盈余质量时，关于经营现金流 (CFO) 与净利润 (NI) 关系的正确判断是：",
+   "stem": "When assessing earnings quality, the correct judgment about the relationship between operating cash flow (CFO) and net income (NI) is:",
    "choices": {
-    "A": "NI 持续显著高于 CFO（大量正应计）是盈余质量的警示信号",
-    "B": "只要 NI 保持增长，CFO 低于 NI 属于正常现象，无需关注",
-    "C": "CFO 持续高于 NI 才是盈余被操纵的典型信号"
+    "A": "NI persistently and materially exceeding CFO (large positive accruals) is a warning signal for earnings quality",
+    "B": "As long as NI keeps growing, CFO being below NI is normal and warrants no attention",
+    "C": "CFO persistently exceeding NI is the typical signal of manipulated earnings"
    },
    "answer": "A",
    "explanations": {
@@ -16967,7 +16967,7 @@
     "B": "错。恰恰是'NI 好看但收不到现金'的组合最需要警惕——增长的账面利润可能来自激进收入确认或少提准备。",
     "C": "错。方向反了。CFO 稳定覆盖并超过 NI 通常是盈余质量好的表现（折旧等非现金费用压低 NI 属正常）；持续的高正应计才指向操纵风险。"
    },
-   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, 现金流与应计质量信号",
+   "source": "CFA L2 Curriculum, Evaluating Quality of Financial Reports, cash flow and accruals quality signals",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -16976,10 +16976,10 @@
   {
    "id": "FSA-integ-dupont-1",
    "topic": "FSA",
-   "los": "DuPont 扩展分解定位问题",
+   "los": "Using the extended DuPont decomposition to locate the problem",
    "module": "Integration of Financial Statement Analysis Techniques",
    "type": "calc",
-   "stem": "五因子 DuPont 数据：tax burden (NI/EBT) = 0.75，interest burden (EBT/EBIT) = 0.90，EBIT margin = 20%，asset turnover = 1.2，financial leverage = 2.0。ROE 最接近：",
+   "stem": "Five-factor DuPont data: tax burden (NI/EBT) = 0.75, interest burden (EBT/EBIT) = 0.90, EBIT margin = 20%, asset turnover = 1.2, financial leverage = 2.0. ROE is closest to:",
    "choices": {
     "A": "32.4%",
     "B": "16.2%",
@@ -16993,23 +16993,23 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "ROE = (NI/EBT) × (EBT/EBIT) × (EBIT/Revenue) × (Revenue/Assets) × (Assets/Equity)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "0.75 × 0.90 × 0.20 × 1.2 × 2.0"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "0.324 = 32.4%"
     },
     {
-     "label": "陷阱",
-     "content": "漏杠杆得 16.2%，漏税负得 43.2%；先数因子再按计算器"
+     "label": "Trap",
+     "content": "Omitting leverage gives 16.2%, omitting tax burden gives 43.2%; count the factors before hitting the calculator"
     }
    ],
-   "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, 五因子 DuPont 分解",
+   "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, five-factor DuPont decomposition",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -17018,14 +17018,14 @@
   {
    "id": "FSA-integ-equity-1",
    "topic": "FSA",
-   "los": "会计调整对比率的综合影响 (表外、equity method 剥离等)",
+   "los": "Combined effect of accounting adjustments on ratios (off-balance-sheet items, stripping out equity-method results, etc.)",
    "module": "Integration of Financial Statement Analysis Techniques",
    "type": "concept",
-   "stem": "分析师评估某公司核心经营盈利能力时，常把 equity method 联营收益从净利润中剔除后再计算 net profit margin，原因是：",
+   "stem": "When assessing a company's core operating profitability, analysts often remove equity-method income from associates from net income before computing net profit margin, because:",
    "choices": {
-    "A": "联营公司的利润份额计入了 NI，但其收入并未计入 revenue，导致 margin 被系统性高估",
-    "B": "Equity method 收益属于未实现收益，会计上本不应确认",
-    "C": "剔除后 margin 会上升，更能反映管理层业绩"
+    "A": "The share of the associates' profit is included in NI, but their revenue is not included in revenue, which systematically overstates the margin",
+    "B": "Equity-method income is unrealized income that should not be recognized under the accounting standards",
+    "C": "Removing it raises the margin, which better reflects management's performance"
    },
    "answer": "A",
    "explanations": {
@@ -17033,7 +17033,7 @@
     "B": "错。Equity method 收益是准则要求确认的合法收益，不是未实现收益；剥离是分析性调整（口径统一），不是纠正会计错误。",
     "C": "错。方向说反了：剔除只在分子做减法（收入不变），margin 通常下降而非上升——这正说明原口径被高估。"
    },
-   "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, equity method 对比率的分析性调整",
+   "source": "CFA L2 Curriculum, Integration of Financial Statement Analysis Techniques, analytical adjustment of ratios for the equity method",
    "verified": {
     "method": "adversarial-recheck",
     "by": "independent-agent"
@@ -17044,9 +17044,9 @@
    "case": "CASE-FSA-pension-1",
    "topic": "FSA",
    "module": "Employee Compensation: Post-Employment and Share-Based",
-   "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+   "los": "DB plan: composition and roll-forward of the PBO (service cost, interest cost, benefits paid)",
    "type": "calc",
-   "stem": "基于 Exhibit 1(无精算变动),期末 PBO 最接近:",
+   "stem": "Based on Exhibit 1 (no actuarial changes), the ending PBO is closest to:",
    "choices": {
     "A": "1,280",
     "B": "1,320",
@@ -17060,23 +17060,23 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "期末PBO = 期初PBO + service cost + interest cost − benefits paid (± 精算变动)"
+     "label": "Formula",
+     "content": "Ending PBO = Beginning PBO + service cost + interest cost − benefits paid (± actuarial changes)"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "= 1200 + 60 + 1200×5.0% − 40"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 1200 + 60 + 60 − 40 = 1,280"
     },
     {
-     "label": "陷阱",
-     "content": "interest cost 基数是期初 PBO;benefits paid 必须减——两个漏项正好对应 B/C。"
+     "label": "Trap",
+     "content": "The base for interest cost is the beginning PBO; benefits paid must be subtracted—the two omitted items correspond exactly to choices B/C."
     }
    ],
-   "source": "CFA L2 Curriculum, Employment Compensation, PBO 滚动计算",
+   "source": "CFA L2 Curriculum, Employment Compensation, PBO roll-forward calculation",
    "verified": {
     "method": "author-recheck",
     "by": "main-agent"
@@ -17087,9 +17087,9 @@
    "case": "CASE-FSA-pension-1",
    "topic": "FSA",
    "module": "Employee Compensation: Post-Employment and Share-Based",
-   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+   "los": "IFRS vs US GAAP: allocation of the three components of periodic pension cost (P&L vs OCI)",
    "type": "calc",
-   "stem": "IFRS 下,本年度计入 P&L 的养老金费用最接近:",
+   "stem": "Under IFRS, the pension expense recognized in P&L for the current year is closest to:",
    "choices": {
     "A": "75",
     "B": "57",
@@ -17103,20 +17103,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "IFRS P&L 费用 = service cost + (期初PBO − 期初资产)×折现率"
+     "label": "Formula",
+     "content": "IFRS P&L expense = service cost + (beginning PBO − beginning plan assets) × discount rate"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "= 60 + (1200 − 900)×5.0%"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 60 + 15 = 75"
     },
     {
-     "label": "陷阱",
-     "content": "IFRS 的资产回报在 P&L 里只按折现率算;实际回报与之的差额进 OCI。"
+     "label": "Trap",
+     "content": "Under IFRS the return on assets in P&L is computed using only the discount rate; the difference between this and the actual return goes to OCI."
     }
    ],
    "source": "CFA L2 Curriculum, Employment Compensation, IFRS periodic pension cost",
@@ -17130,13 +17130,13 @@
    "case": "CASE-FSA-pension-1",
    "topic": "FSA",
    "module": "Employee Compensation: Post-Employment and Share-Based",
-   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+   "los": "IFRS vs US GAAP: allocation of the three components of periodic pension cost (P&L vs OCI)",
    "type": "concept",
-   "stem": "计划资产实际回报 63 与计入 P&L 的资产利息收入之间的差额 18,IFRS 下应:",
+   "stem": "The difference of 18 between the actual return on plan assets of 63 and the interest income on plan assets recognized in P&L should, under IFRS, be:",
    "choices": {
-    "A": "计入 OCI (remeasurement),后续不摊回 P&L",
-    "B": "直接计入当期 P&L",
-    "C": "计入 OCI,超过 corridor 部分摊回 P&L"
+    "A": "recognized in OCI (as a remeasurement), with no subsequent amortization back to P&L",
+    "B": "recognized directly in current-period P&L",
+    "C": "recognized in OCI, with the portion exceeding the corridor amortized back to P&L"
    },
    "answer": "A",
    "explanations": {
@@ -17144,7 +17144,7 @@
     "B": "错。进 P&L 的资产回报只有按折现率计的 45;差额留在 OCI,避免波动污染利润表。",
     "C": "错。corridor 摊销是 US GAAP 的选择性处理;IFRS 不允许摊回。"
    },
-   "source": "CFA L2 Curriculum, Employment Compensation, remeasurements 归属",
+   "source": "CFA L2 Curriculum, Employment Compensation, allocation of remeasurements",
    "verified": {
     "method": "author-recheck",
     "by": "main-agent"
@@ -46876,11 +46876,11 @@
    "topic": "FSA",
    "los": "FX translation: temporal vs current rate method",
    "type": "concept",
-   "stem": "子公司功能货币为母公司报告货币（即采用 temporal method 折算）。期末折算以历史成本计量的存货时，应使用哪种汇率？",
+   "stem": "A subsidiary's functional currency is the parent's presentation currency (i.e., the temporal method is used for translation). When translating inventory measured at historical cost at the reporting date, which exchange rate should be applied?",
    "choices": {
-    "A": "期末即期汇率 (current rate)",
-    "B": "购入存货时的历史汇率 (historical rate)",
-    "C": "当期平均汇率 (average rate)"
+    "A": "The period-end spot rate (current rate)",
+    "B": "The historical rate in effect when the inventory was purchased (historical rate)",
+    "C": "The average rate for the period (average rate)"
    },
    "answer": "B",
    "explanations": {
@@ -46888,18 +46888,18 @@
     "B": "对。Temporal method 的核心规则：非货币性项目按其计量属性配套汇率——历史成本计量的存货/固定资产用历史汇率，公允价值计量的用计量日汇率。",
     "C": "错。平均汇率在 temporal method 下用于大多数收入费用项目（COGS、折旧除外，它们跟随对应资产用历史汇率）。"
    },
-   "source": "CFA L2 Curriculum, Multinational Operations; 任何 Notes 的 temporal/current rate 对照表"
+   "source": "CFA L2 Curriculum, Multinational Operations; the temporal/current rate comparison table in any Notes provider"
   },
   {
    "id": "FSA-pension-ifrs-1",
    "topic": "FSA",
    "los": "Pension: components of periodic pension cost under IFRS",
    "type": "concept",
-   "stem": "IFRS 下，DB 养老金计划的精算重估损益 (remeasurements) 的会计处理是：",
+   "stem": "Under IFRS, the accounting treatment of the actuarial remeasurements of a defined benefit pension plan is to:",
    "choices": {
-    "A": "计入当期 P&L",
-    "B": "计入 OCI，且后续不摊销回 P&L",
-    "C": "计入 OCI，后续按 corridor 法摊销回 P&L"
+    "A": "recognize them in current-period P&L",
+    "B": "recognize them in OCI, with no subsequent amortization back to P&L",
+    "C": "recognize them in OCI, subsequently amortized back to P&L under the corridor approach"
    },
    "answer": "B",
    "explanations": {
@@ -46914,7 +46914,7 @@
    "topic": "Equity",
    "los": "FCFF from net income",
    "type": "calc",
-   "stem": "NI=100, D&A=20, 利息费用=10, 税率=25%, FCInv=30, WCInv=10。FCFF 最接近：",
+   "stem": "NI = 100, D&A = 20, interest expense = 10, tax rate = 25%, FCInv = 30, WCInv = 10. FCFF is closest to:",
    "choices": {
     "A": "87.5",
     "B": "90.0",
@@ -46928,30 +46928,30 @@
    },
    "steps": [
     {
-     "label": "公式",
+     "label": "Formula",
      "content": "FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "= 100 + 20 + 10×(1−0.25) − 30 − 10"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 100 + 20 + 7.5 − 40 = 87.5"
     },
     {
-     "label": "陷阱",
-     "content": "利息必须税后加回 (×0.75)。直接加 10 会得到错误选项 B 的 90。"
+     "label": "Trap",
+     "content": "Interest must be added back after tax (×0.75). Adding back 10 directly gives the incorrect choice B of 90."
     }
    ],
-   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF 定义式"
+   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF definitional formula"
   },
   {
    "id": "EQ-ri-calc-1",
    "topic": "Equity",
    "los": "Residual income computation",
    "type": "calc",
-   "stem": "期初账面净资产 BV0=400, NI=50, 股权成本 re=10%。当期 residual income 为：",
+   "stem": "Beginning book value of equity BV0 = 400, NI = 50, cost of equity re = 10%. The residual income for the period is:",
    "choices": {
     "A": "10",
     "B": "50",
@@ -46965,20 +46965,20 @@
    },
    "steps": [
     {
-     "label": "公式",
-     "content": "RI = NI − equity charge，equity charge = re × 期初BV"
+     "label": "Formula",
+     "content": "RI = NI − equity charge, where equity charge = re × beginning BV"
     },
     {
-     "label": "代入",
+     "label": "Substitute",
      "content": "= 50 − 0.10 × 400"
     },
     {
-     "label": "结果",
+     "label": "Result",
      "content": "= 50 − 40 = 10"
     },
     {
-     "label": "陷阱",
-     "content": "equity charge 的基数是期初账面净资产 BV0，不是 NI 也不是期末 BV。"
+     "label": "Trap",
+     "content": "The base for the equity charge is beginning book value of equity BV0, not NI and not ending BV."
     }
    ],
    "source": "CFA L2 Curriculum, Residual Income Valuation"
@@ -46988,7 +46988,7 @@
    "topic": "FI",
    "los": "OAS vs Z-spread for bonds with embedded options",
    "type": "concept",
-   "stem": "对一只可赎回债券 (callable bond)，OAS 与 Z-spread 的关系是：",
+   "stem": "For a callable bond, the relationship between the OAS and the Z-spread is:",
    "choices": {
     "A": "OAS > Z-spread",
     "B": "OAS = Z-spread",
@@ -47007,11 +47007,11 @@
    "topic": "FI",
    "los": "Effect of interest rate volatility on callable/putable bond values",
    "type": "concept",
-   "stem": "其他条件不变，利率波动率上升时，可赎回债券 (callable bond) 的价值：",
+   "stem": "Holding all else equal, when interest rate volatility rises, the value of a callable bond:",
    "choices": {
-    "A": "上升",
-    "B": "下降",
-    "C": "不变"
+    "A": "increases",
+    "B": "decreases",
+    "C": "is unchanged"
    },
    "answer": "B",
    "explanations": {

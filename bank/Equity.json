@@ -3,14 +3,14 @@
     {
       "id": "EQ-mispricing-1",
       "topic": "Equity",
-      "los": "内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)",
+      "los": "Intrinsic value vs. market price; the two components of mispricing (V−P and analyst's estimation error)",
       "module": "Equity Valuation: Applications and Processes",
       "type": "concept",
-      "stem": "分析师估计的内在价值为 V_E，市场价格为 P，真实（不可观测）内在价值为 V。V_E − P 这一'表观错误定价'应如何分解？",
+      "stem": "An analyst estimates an intrinsic value of V_E, the market price is P, and the true (unobservable) intrinsic value is V. How should the 'apparent mispricing' V_E − P be decomposed?",
       "choices": {
-        "A": "V_E − P 全部是可捕捉的 alpha——只要估值与价格不等，就存在真实错误定价",
-        "B": "V_E − P = (V − P) + (V_E − V)，即真实 mispricing 加上分析师自身的估值误差",
-        "C": "V_E − P 应分解为系统性风险溢价与流动性折价两部分"
+        "A": "All of V_E − P is capturable alpha—whenever the estimated value differs from price, true mispricing exists",
+        "B": "V_E − P = (V − P) + (V_E − V), i.e., the true mispricing plus the analyst's own valuation error",
+        "C": "V_E − P should be decomposed into a systematic risk premium and a liquidity discount"
       },
       "answer": "B",
       "explanations": {
@@ -18,7 +18,7 @@
         "B": "对。表观 mispricing = 真实 mispricing (V − P) + 估值误差 (V_E − V)。记法：'你看到的差价 = 市场错的 + 你错的'。只有前者才是可获利的来源，后者是你的风险。",
         "C": "错。这是资产定价里的溢价分解语言，与 mispricing 分解无关——最易被'听起来专业'的表述带偏。"
       },
-      "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, intrinsic value 与 mispricing 分解",
+      "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, intrinsic value and the decomposition of mispricing",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -27,14 +27,14 @@
     {
       "id": "EQ-absrel-1",
       "topic": "Equity",
-      "los": "绝对 vs 相对估值模型适用场景",
+      "los": "Absolute vs. relative valuation models and their appropriate use",
       "module": "Equity Valuation: Applications and Processes",
       "type": "concept",
-      "stem": "关于绝对估值 (absolute valuation) 与相对估值 (relative valuation) 模型，下列说法正确的是：",
+      "stem": "Regarding absolute valuation and relative valuation models, which of the following statements is correct?",
       "choices": {
-        "A": "DDM、FCF 模型、residual income 模型均为绝对估值模型，直接估计资产的内在价值",
-        "B": "Justified P/E 由 GGM 推导而来，因此属于纯相对估值，不依赖任何绝对模型假设",
-        "C": "相对估值能够识别整个行业板块被系统性高估的情形"
+        "A": "DDM, FCF models, and the residual income model are all absolute valuation models that directly estimate an asset's intrinsic value",
+        "B": "Because the justified P/E is derived from the GGM, it is a pure relative-valuation measure that relies on no absolute-model assumptions",
+        "C": "Relative valuation can identify situations in which an entire industry sector is systematically overvalued"
       },
       "answer": "A",
       "explanations": {
@@ -42,7 +42,7 @@
         "B": "错。justified multiple 恰恰是把绝对模型 (GGM) 的结论翻译成乘数形式，它的每个输入 (r, g, payout) 都来自绝对模型假设——这是'justified'与'comparables'两类乘数用法最易混淆之处。",
         "C": "错。相对估值只能判断标的相对可比公司的高低估。若整个板块被高估，板块内'相对便宜'的股票仍可能绝对高估——这正是相对法的固有盲区。"
       },
-      "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, 绝对与相对估值模型",
+      "source": "CFA L2 Curriculum, Equity Valuation: Applications and Processes, absolute and relative valuation models",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -51,10 +51,10 @@
     {
       "id": "EQ-ggm-1",
       "topic": "Equity",
-      "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
+      "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
       "module": "Discounted Dividend Valuation",
       "type": "calc",
-      "stem": "某公司刚支付股利 D0 = 2.00，股利预期永续增长 g = 5%，要求回报率 r = 10%。用 GGM 计算的股票价值最接近：",
+      "stem": "A company has just paid a dividend of D0 = 2.00. Dividends are expected to grow in perpetuity at g = 5%, and the required rate of return is r = 10%. Using the GGM, the value of the stock is closest to:",
       "choices": {
         "A": "40.00",
         "B": "21.00",
@@ -68,20 +68,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "V0 = D1/(r − g)，其中 D1 = D0 × (1 + g)"
+          "label": "Formula",
+          "content": "V0 = D1/(r − g), where D1 = D0 × (1 + g)"
         },
         {
-          "label": "代入",
-          "content": "D1 = 2.00 × 1.05 = 2.10；V0 = 2.10/(0.10 − 0.05)"
+          "label": "Substitute",
+          "content": "D1 = 2.00 × 1.05 = 2.10; V0 = 2.10/(0.10 − 0.05)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "V0 = 2.10/0.05 = 42.00"
         },
         {
-          "label": "陷阱",
-          "content": "题干给的是'刚支付'的 D0，必须先乘 (1+g)；分母是 r−g 不是 r。两个陷阱分别对应错误选项 40.00 与 21.00"
+          "label": "Pitfall",
+          "content": "The stem gives the just-paid D0, which must first be grown by (1+g); the denominator is r−g, not r. These two traps correspond to the wrong answers 40.00 and 21.00 respectively."
         }
       ],
       "source": "CFA L2 Curriculum, Discounted Dividend Valuation, Gordon growth model",
@@ -93,10 +93,10 @@
     {
       "id": "EQ-ggm-2",
       "topic": "Equity",
-      "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
+      "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
       "module": "Discounted Dividend Valuation",
       "type": "calc",
-      "stem": "某股票当前价格 P0 = 50，刚支付股利 D0 = 2.50，市场预期股利永续增长 g = 4%。若价格等于 GGM 价值，隐含的要求回报率 r 最接近：",
+      "stem": "A stock currently trades at P0 = 50 and has just paid a dividend of D0 = 2.50. The market expects dividends to grow in perpetuity at g = 4%. If the price equals the GGM value, the implied required rate of return r is closest to:",
       "choices": {
         "A": "9.2%",
         "B": "9.0%",
@@ -110,23 +110,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "P0 = D1/(r−g) 反解得 r = D1/P0 + g"
+          "label": "Formula",
+          "content": "P0 = D1/(r−g), rearranged to r = D1/P0 + g"
         },
         {
-          "label": "代入",
-          "content": "D1 = 2.50 × 1.04 = 2.60；r = 2.60/50 + 0.04"
+          "label": "Substitute",
+          "content": "D1 = 2.50 × 1.04 = 2.60; r = 2.60/50 + 0.04"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "r = 0.052 + 0.04 = 9.2%"
         },
         {
-          "label": "陷阱",
-          "content": "分子必须用 D1 而非 D0（否则得 9.0%）；股息率之外别忘加 g（否则得 5.2%）"
+          "label": "Pitfall",
+          "content": "The numerator must use D1, not D0 (otherwise you get 9.0%); and don't forget to add g on top of the dividend yield (otherwise you get 5.2%)."
         }
       ],
-      "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM 隐含要求回报",
+      "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM implied required return",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -135,10 +135,10 @@
     {
       "id": "EQ-2stage-1",
       "topic": "Equity",
-      "los": "两阶段/H-model 计算与适用",
+      "los": "Two-stage / H-model computation and application",
       "module": "Discounted Dividend Valuation",
       "type": "calc",
-      "stem": "D0 = 1.00，未来 2 年股利每年增长 20%，之后永续增长 5%，r = 10%。两阶段 DDM 下股票价值最接近：",
+      "stem": "D0 = 1.00. Dividends grow at 20% per year for the next 2 years and then grow at 5% in perpetuity, with r = 10%. Under a two-stage DDM, the value of the stock is closest to:",
       "choices": {
         "A": "26.08",
         "B": "27.27",
@@ -152,20 +152,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "V0 = D1/(1+r) + (D2 + TV2)/(1+r)²，TV2 = D3/(r − g_L)"
+          "label": "Formula",
+          "content": "V0 = D1/(1+r) + (D2 + TV2)/(1+r)², where TV2 = D3/(r − g_L)"
         },
         {
-          "label": "代入",
-          "content": "D1=1.20, D2=1.44, D3=1.512；TV2 = 1.512/0.05 = 30.24"
+          "label": "Substitute",
+          "content": "D1=1.20, D2=1.44, D3=1.512; TV2 = 1.512/0.05 = 30.24"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "V0 = 1.20/1.10 + 31.68/1.21 = 1.0909 + 26.1818 ≈ 27.27"
         },
         {
-          "label": "陷阱",
-          "content": "TV2 分子是 D3 不是 D2（错则得 26.08）；TV2 折 2 期不是 3 期（错则得 25.00）"
+          "label": "Pitfall",
+          "content": "The TV2 numerator is D3, not D2 (the error gives 26.08); TV2 is discounted 2 periods, not 3 (the error gives 25.00)."
         }
       ],
       "source": "CFA L2 Curriculum, Discounted Dividend Valuation, two-stage DDM",
@@ -177,10 +177,10 @@
     {
       "id": "EQ-hmodel-1",
       "topic": "Equity",
-      "los": "两阶段/H-model 计算与适用",
+      "los": "Two-stage / H-model computation and application",
       "module": "Discounted Dividend Valuation",
       "type": "calc",
-      "stem": "D0 = 1.00，当前增长率 gS = 14%，预计在 8 年内线性下降至长期增长率 gL = 6% 并保持，r = 10%。用 H-model 计算的股票价值最接近：",
+      "stem": "D0 = 1.00, the current growth rate is gS = 14%, and growth is expected to decline linearly over 8 years to a long-run growth rate of gL = 6% and remain there, with r = 10%. Using the H-model, the value of the stock is closest to:",
       "choices": {
         "A": "34.50",
         "B": "42.50",
@@ -194,20 +194,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "V0 = [D0(1+gL) + D0 × H × (gS − gL)]/(r − gL)，H = 线性下降年数/2"
+          "label": "Formula",
+          "content": "V0 = [D0(1+gL) + D0 × H × (gS − gL)]/(r − gL), where H = (years of linear decline)/2"
         },
         {
-          "label": "代入",
-          "content": "H = 8/2 = 4；V0 = [1.00×1.06 + 1.00×4×(0.14−0.06)]/(0.10−0.06)"
+          "label": "Substitute",
+          "content": "H = 8/2 = 4; V0 = [1.00×1.06 + 1.00×4×(0.14−0.06)]/(0.10−0.06)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "V0 = (1.06 + 0.32)/0.04 = 1.38/0.04 = 34.50"
         },
         {
-          "label": "陷阱",
-          "content": "H 取下降期的一半（用全长 8 得 42.50）；别漏超额增长项（漏则得 26.50）"
+          "label": "Pitfall",
+          "content": "H is half the decline period (using the full 8 years gives 42.50); don't omit the excess-growth term (omitting it gives 26.50)."
         }
       ],
       "source": "CFA L2 Curriculum, Discounted Dividend Valuation, H-model",
@@ -219,14 +219,14 @@
     {
       "id": "EQ-pvgo-1",
       "topic": "Equity",
-      "los": "PVGO 分解: E/r + PVGO",
+      "los": "PVGO decomposition: E/r + PVGO",
       "module": "Discounted Dividend Valuation",
       "type": "concept",
-      "stem": "GGM 框架下，股票价格可分解为 P0 = E1/r + PVGO。关于该分解，下列说法正确的是：",
+      "stem": "Within the GGM framework, a stock's price can be decomposed as P0 = E1/r + PVGO. Regarding this decomposition, which of the following statements is correct?",
       "choices": {
-        "A": "E1/r 假设公司将全部盈利再投资，因此代表'增长价值'",
-        "B": "PVGO 恒为正，因为增长总会创造价值",
-        "C": "E1/r 是 100% 分红、零增长下的价值；PVGO 可以为负——当再投资回报 ROE 低于 r 时增长毁灭价值"
+        "A": "E1/r assumes the company reinvests all of its earnings and therefore represents the 'growth value'",
+        "B": "PVGO is always positive, because growth always creates value",
+        "C": "E1/r is the value under a 100% payout with zero growth; PVGO can be negative—when the reinvestment return ROE is below r, growth destroys value"
       },
       "answer": "C",
       "explanations": {
@@ -234,7 +234,7 @@
         "B": "错。这是 PVGO 最重要的反直觉点：增长本身不创造价值，只有 ROE > r 的再投资才创造价值。ROE < r 时公司越扩张 PVGO 越负。",
         "C": "对。P0 = E1/r（把全部盈利当永续股利折现的无增长价值）+ PVGO（增长机会现值）。记法：'先算躺平价值，再看增长是加分还是减分'——PVGO 的符号由 ROE 与 r 的大小关系决定。"
       },
-      "source": "CFA L2 Curriculum, Discounted Dividend Valuation, PVGO 分解",
+      "source": "CFA L2 Curriculum, Discounted Dividend Valuation, PVGO decomposition",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -243,10 +243,10 @@
     {
       "id": "EQ-sgr-1",
       "topic": "Equity",
-      "los": "SGR = b × ROE (与 PRAT 扩展)",
+      "los": "SGR = b × ROE (and the PRAT extension)",
       "module": "Discounted Dividend Valuation",
       "type": "trap",
-      "stem": "某公司 dividend payout ratio = 40%，ROE = 15%。其 sustainable growth rate (SGR) 最接近：",
+      "stem": "A company has a dividend payout ratio of 40% and ROE = 15%. Its sustainable growth rate (SGR) is closest to:",
       "choices": {
         "A": "6.0%",
         "B": "9.0%",
@@ -260,20 +260,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "SGR = b × ROE，b = 1 − dividend payout ratio"
+          "label": "Formula",
+          "content": "SGR = b × ROE, where b = 1 − dividend payout ratio"
         },
         {
-          "label": "代入",
-          "content": "b = 1 − 0.40 = 0.60；SGR = 0.60 × 0.15"
+          "label": "Substitute",
+          "content": "b = 1 − 0.40 = 0.60; SGR = 0.60 × 0.15"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "SGR = 9.0%"
         },
         {
-          "label": "陷阱",
-          "content": "题干给 payout 不给 b——用 payout×ROE 得 6.0% 正是命题人埋的坑；忽略分红用 ROE 本身得 15.0% 同样是坑"
+          "label": "Pitfall",
+          "content": "The stem gives payout, not b—using payout×ROE gives 6.0%, exactly the trap the setter buried; ignoring dividends and using ROE itself gives 15.0%, another trap."
         }
       ],
       "source": "CFA L2 Curriculum, Discounted Dividend Valuation, sustainable growth rate",
@@ -285,14 +285,14 @@
     {
       "id": "EQ-ggm-3",
       "topic": "Equity",
-      "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
+      "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
       "module": "Discounted Dividend Valuation",
       "type": "trap",
-      "stem": "分析师对一只股票估计 D1 = 2.00、永续增长率 g = 12%、要求回报率 r = 10%，套用 GGM。正确的处理是：",
+      "stem": "An analyst estimates D1 = 2.00, a perpetual growth rate g = 12%, and a required return r = 10% for a stock, and applies the GGM. The correct treatment is:",
       "choices": {
-        "A": "照公式计算 2.00/(0.10−0.12) = −100，负值说明股票严重高估，应卖空",
-        "B": "对分母取绝对值，得 2.00/0.02 = 100",
-        "C": "GGM 在 g ≥ r 时失效，且 12% 的永续增长假设本身不合理——应改用多阶段模型，并把长期 g 压到不超过宏观经济长期增速"
+        "A": "Apply the formula to get 2.00/(0.10−0.12) = −100; the negative value shows the stock is severely overvalued and should be sold short",
+        "B": "Take the absolute value of the denominator to get 2.00/0.02 = 100",
+        "C": "The GGM breaks down when g ≥ r, and a perpetual growth assumption of 12% is itself unreasonable—use a multi-stage model instead and cap the long-run g at no more than the long-run growth rate of the macroeconomy"
       },
       "answer": "C",
       "explanations": {
@@ -300,7 +300,7 @@
         "B": "错。对分母取绝对值没有任何理论依据，纯属'让数字能算出来'的数字游戏。模型假设错了，修数字不如修模型。",
         "C": "对。两层问题都要看到：(1) 数学上 g ≥ r 使 GGM 失效；(2) 经济上没有公司能永续以 12% 增长——永续 g 的上限约为经济名义增速。高增长期该用两阶段或 H-model 处理。口诀：'g 贴近 r，价值上天；g 超过 r，换模型'。"
       },
-      "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM 适用条件与敏感性",
+      "source": "CFA L2 Curriculum, Discounted Dividend Valuation, GGM applicability conditions and sensitivity",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -309,10 +309,10 @@
     {
       "id": "EQ-fcff-ebit-1",
       "topic": "Equity",
-      "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+      "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
       "module": "Free Cash Flow Valuation",
       "type": "calc",
-      "stem": "EBIT = 200，利息费用 = 20，税率 = 25%，D&A = 40，FCInv = 60，WCInv = 20。FCFF 最接近：",
+      "stem": "EBIT = 200, interest expense = 20, tax rate = 25%, D&A = 40, FCInv = 60, WCInv = 20. FCFF is closest to:",
       "choices": {
         "A": "110.0",
         "B": "160.0",
@@ -326,20 +326,20 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "FCFF = EBIT(1−t) + D&A − FCInv − WCInv"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "FCFF = 200×(1−0.25) + 40 − 60 − 20"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "FCFF = 150 + 40 − 80 = 110.0"
         },
         {
-          "label": "陷阱",
-          "content": "EBIT 必须税后化（漏乘得 160）；利息是干扰项，EBIT 路径完全不涉及利息调整（多减税后利息得 95）"
+          "label": "Pitfall",
+          "content": "EBIT must be put on an after-tax basis (omitting the (1−t) factor gives 160); interest is a distractor—the EBIT route involves no interest adjustment at all (subtracting after-tax interest gives 95)."
         }
       ],
       "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF from EBIT",
@@ -351,10 +351,10 @@
     {
       "id": "EQ-fcff-ebitda-1",
       "topic": "Equity",
-      "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+      "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
       "module": "Free Cash Flow Valuation",
       "type": "calc",
-      "stem": "EBITDA = 150，D&A = 30，税率 = 30%，FCInv = 40，WCInv = 10。FCFF 最接近：",
+      "stem": "EBITDA = 150, D&A = 30, tax rate = 30%, FCInv = 40, WCInv = 10. FCFF is closest to:",
       "choices": {
         "A": "55.0",
         "B": "64.0",
@@ -368,20 +368,20 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "FCFF = EBITDA(1−t) + D&A×t − FCInv − WCInv"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "FCFF = 150×0.70 + 30×0.30 − 40 − 10"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "FCFF = 105 + 9 − 50 = 64.0"
         },
         {
-          "label": "陷阱",
-          "content": "EBITDA 路径加的是折旧税盾 D&A×t = 9，不是 D&A 全额 30（全额加回得 85，漏加税盾得 55）"
+          "label": "Pitfall",
+          "content": "The EBITDA route adds back only the depreciation tax shield D&A×t = 9, not the full D&A of 30 (adding back the full amount gives 85, omitting the tax shield gives 55)."
         }
       ],
       "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF from EBITDA",
@@ -396,7 +396,7 @@
       "los": "FCFE = FCFF − Int(1−t) + net borrowing",
       "module": "Free Cash Flow Valuation",
       "type": "calc",
-      "stem": "FCFF = 100，利息费用 = 20，税率 = 25%，当年新增借款 30、偿还借款 20（net borrowing = 10）。FCFE 最接近：",
+      "stem": "FCFF = 100, interest expense = 20, tax rate = 25%, with new borrowing of 30 and debt repayment of 20 during the year (net borrowing = 10). FCFE is closest to:",
       "choices": {
         "A": "90.0",
         "B": "105.0",
@@ -410,23 +410,23 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "FCFE = FCFF − Int×(1−t) + net borrowing"
         },
         {
-          "label": "代入",
-          "content": "net borrowing = 30 − 20 = 10；FCFE = 100 − 20×0.75 + 10"
+          "label": "Substitute",
+          "content": "net borrowing = 30 − 20 = 10; FCFE = 100 − 20×0.75 + 10"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "FCFE = 100 − 15 + 10 = 95.0"
         },
         {
-          "label": "陷阱",
-          "content": "利息必须税后（全额减得 90）；净借款是加项、税后利息是减项，方向反了得 105"
+          "label": "Pitfall",
+          "content": "Interest must be after-tax (subtracting the full amount gives 90); net borrowing is added and after-tax interest is subtracted—reversing the signs gives 105."
         }
       ],
-      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF 与 FCFE 的关系",
+      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, the relationship between FCFF and FCFE",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -435,10 +435,10 @@
     {
       "id": "EQ-fcf-1stage-1",
       "topic": "Equity",
-      "los": "单阶段/两阶段 FCF 模型计算",
+      "los": "Single-stage / two-stage FCF model computation",
       "module": "Free Cash Flow Valuation",
       "type": "calc",
-      "stem": "预期 FCFF1 = 60，WACC = 9%，股权要求回报 re = 12%，FCFF 永续增长 g = 4%。债务市值 = 400，流通股数 = 50。每股股权价值最接近：",
+      "stem": "Expected FCFF1 = 60, WACC = 9%, required return on equity re = 12%, and FCFF grows in perpetuity at g = 4%. The market value of debt is 400 and there are 50 shares outstanding. The value of equity per share is closest to:",
       "choices": {
         "A": "16.00",
         "B": "24.00",
@@ -452,23 +452,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "Firm value = FCFF1/(WACC − g)；Equity value = Firm value − 债务市值；每股 = Equity/股数"
+          "label": "Formula",
+          "content": "Firm value = FCFF1/(WACC − g); Equity value = Firm value − market value of debt; per share = Equity/shares"
         },
         {
-          "label": "代入",
-          "content": "Firm = 60/(0.09−0.04) = 1200；Equity = 1200 − 400 = 800"
+          "label": "Substitute",
+          "content": "Firm = 60/(0.09−0.04) = 1200; Equity = 1200 − 400 = 800"
         },
         {
-          "label": "结果",
-          "content": "每股 = 800/50 = 16.00"
+          "label": "Result",
+          "content": "Per share = 800/50 = 16.00"
         },
         {
-          "label": "陷阱",
-          "content": "FCFF 必须配 WACC（误配 re 得 7.00）；整体价值要先减债务再除股数（忘减得 24.00）"
+          "label": "Pitfall",
+          "content": "FCFF must be paired with WACC (mispairing with re gives 7.00); firm value must have debt subtracted before dividing by shares (forgetting to subtract gives 24.00)."
         }
       ],
-      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, 单阶段 FCFF 模型",
+      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, single-stage FCFF model",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -477,14 +477,14 @@
     {
       "id": "EQ-fcff-vs-fcfe-1",
       "topic": "Equity",
-      "los": "何时 FCFF 优于 FCFE (资本结构不稳/FCFE为负)",
+      "los": "When FCFF is preferred over FCFE (unstable capital structure / negative FCFE)",
       "module": "Free Cash Flow Valuation",
       "type": "concept",
-      "stem": "下列哪种情形下，用 FCFF 折现（再减去债务价值得到股权价值）比直接折现 FCFE 更合适？",
+      "stem": "In which of the following situations is discounting FCFF (and then subtracting the value of debt to obtain equity value) more appropriate than discounting FCFE directly?",
       "choices": {
-        "A": "公司股利支付稳定且与盈利能力挂钩",
-        "B": "公司杠杆水平预计发生大幅变动，或 FCFE 当前为负",
-        "C": "估值视角是无控制权的少数股东"
+        "A": "The company pays a stable dividend that is tied to its earning power",
+        "B": "The company's leverage is expected to change substantially, or FCFE is currently negative",
+        "C": "The valuation is taken from the perspective of a non-controlling minority shareholder"
       },
       "answer": "B",
       "explanations": {
@@ -492,7 +492,7 @@
         "B": "对。两大经典场景：(1) 资本结构剧变时，net borrowing 波动使 FCFE 极难预测，而 FCFF 不受融资决策干扰；(2) FCFE 为负时无法直接折现。记法：'借钱的事看不清，就退到 FCFF 这个融资前口径'。",
         "C": "错。少数股东视角对应的是 DDM——小股东拿不到自由现金流的控制权，只能拿股利。FCF 模型本身隐含控制权视角。"
       },
-      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF vs FCFE 模型选择",
+      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, choosing between the FCFF and FCFE models",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -501,14 +501,14 @@
     {
       "id": "EQ-wcinv-1",
       "topic": "Equity",
-      "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+      "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
       "module": "Free Cash Flow Valuation",
       "type": "concept",
-      "stem": "计算 FCFF/FCFE 时使用的 working capital investment (WCInv)，其营运资本口径正确的是：",
+      "stem": "For the working capital investment (WCInv) used in computing FCFF/FCFE, the correct measure of working capital is:",
       "choices": {
-        "A": "直接使用资产负债表上流动资产减流动负债 (CA − CL) 的变动",
-        "B": "排除现金及等价物，但应包含 notes payable 等短期有息负债",
-        "C": "排除现金及等价物，同时排除 notes payable 与当期到期的长期债务等短期有息负债后的营运资本变动"
+        "A": "The change in current assets minus current liabilities (CA − CL) taken directly from the balance sheet",
+        "B": "The change excluding cash and cash equivalents, but including short-term interest-bearing debt such as notes payable",
+        "C": "The change in working capital excluding cash and cash equivalents and also excluding short-term interest-bearing debt such as notes payable and current maturities of long-term debt"
       },
       "answer": "C",
       "explanations": {
@@ -516,7 +516,7 @@
         "B": "错。只排除现金排了一半。Notes payable 与当期到期长债是融资项目，其变动属于 net borrowing（FCFE 里单独处理），混进 WCInv 会与融资现金流重复计算。",
         "C": "对。估值用的营运资本 = (CA − cash) − (CL − 短期有息负债)。口诀：'掐头去尾——头上掐掉现金，尾上去掉有息'。留下的才是真正支撑经营的应收、存货、应付等项目。"
       },
-      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, WCInv 的定义与口径",
+      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, the definition and measurement of WCInv",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -525,10 +525,10 @@
     {
       "id": "EQ-fcff-cfo-1",
       "topic": "Equity",
-      "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
+      "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
       "module": "Free Cash Flow Valuation",
       "type": "trap",
-      "stem": "CFO = 120（利息费用已在经营活动中扣除），利息费用 = 30，税率 = 25%，D&A = 25，FCInv = 50。FCFF 最接近：",
+      "stem": "CFO = 120 (interest expense has been deducted within operating activities), interest expense = 30, tax rate = 25%, D&A = 25, FCInv = 50. FCFF is closest to:",
       "choices": {
         "A": "92.5",
         "B": "117.5",
@@ -542,20 +542,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "FCFF = CFO + Int×(1−t) − FCInv（CFO 已含 NCC 与 WCInv）"
+          "label": "Formula",
+          "content": "FCFF = CFO + Int×(1−t) − FCInv (CFO already includes NCC and WCInv)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "FCFF = 120 + 30×(1−0.25) − 50"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "FCFF = 120 + 22.5 − 50 = 92.5"
         },
         {
-          "label": "陷阱",
-          "content": "D&A 与 WCInv 已在 CFO 中，再加/再减就是重复计算（加 D&A 得 117.5）；利息必须税后加回（全额得 100.0）"
+          "label": "Pitfall",
+          "content": "D&A and WCInv are already in CFO, so adding/subtracting them again is double-counting (adding D&A gives 117.5); interest must be added back after tax (the full amount gives 100.0)."
         }
       ],
       "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF from CFO",
@@ -567,10 +567,10 @@
     {
       "id": "EQ-jpe-1",
       "topic": "Equity",
-      "los": "Justified P/E (leading/trailing) 由 GGM 推导",
+      "los": "Justified P/E (leading/trailing) derived from the GGM",
       "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
       "type": "calc",
-      "stem": "某公司 dividend payout ratio = 40%，ROE = 15%，要求回报率 r = 12%，增长率按 SGR 估计。justified leading P/E 最接近：",
+      "stem": "A company has a dividend payout ratio of 40%, ROE = 15%, and a required return r = 12%, with growth estimated from the SGR. The justified leading P/E is closest to:",
       "choices": {
         "A": "14.53",
         "B": "13.33",
@@ -584,20 +584,20 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "g = b × ROE；justified leading P/E = P0/E1 = (1−b)/(r−g)"
+          "label": "Formula",
+          "content": "g = b × ROE; justified leading P/E = P0/E1 = (1−b)/(r−g)"
         },
         {
-          "label": "代入",
-          "content": "b = 1−0.40 = 0.60；g = 0.60×0.15 = 9%；P/E = 0.40/(0.12−0.09)"
+          "label": "Substitute",
+          "content": "b = 1−0.40 = 0.60; g = 0.60×0.15 = 9%; P/E = 0.40/(0.12−0.09)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "leading P/E = 0.40/0.03 = 13.33"
         },
         {
-          "label": "陷阱",
-          "content": "leading 分子不乘 (1+g)（乘了就是 trailing 的 14.53）；分子是 payout 不是 b（用 b 得 20.00）"
+          "label": "Pitfall",
+          "content": "The leading numerator is not multiplied by (1+g) (multiplying gives the trailing value 14.53); the numerator is payout, not b (using b gives 20.00)."
         }
       ],
       "source": "CFA L2 Curriculum, Market-Based Valuation, justified leading P/E",
@@ -609,10 +609,10 @@
     {
       "id": "EQ-jpe-2",
       "topic": "Equity",
-      "los": "Justified P/E (leading/trailing) 由 GGM 推导",
+      "los": "Justified P/E (leading/trailing) derived from the GGM",
       "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
       "type": "trap",
-      "stem": "dividend payout ratio = 50%，g = 4%，r = 10%。分析师要与'基于最近四个季度已实现 EPS'计算的市场 P/E 作比较，应计算的 justified trailing P/E 最接近：",
+      "stem": "Dividend payout ratio = 50%, g = 4%, r = 10%. The analyst wants to compare against a market P/E computed on the basis of 'realized EPS over the most recent four quarters.' The justified trailing P/E that should be computed is closest to:",
       "choices": {
         "A": "8.33",
         "B": "17.33",
@@ -626,23 +626,23 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "justified trailing P/E = P0/E0 = (1−b)(1+g)/(r−g)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "P/E = 0.50 × 1.04/(0.10 − 0.04)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "trailing P/E = 0.52/0.06 = 8.67"
         },
         {
-          "label": "陷阱",
-          "content": "市场 P/E 用已实现 EPS（E0）时必须配 trailing 公式；套 leading 公式得 8.33，两者差 (1+g) 倍——leading/trailing 混用是乘数比较的头号错误"
+          "label": "Pitfall",
+          "content": "When the market P/E uses realized EPS (E0), the trailing formula must be used; applying the leading formula gives 8.33, and the two differ by a factor of (1+g)—mixing up leading and trailing is the number-one error in multiple comparisons."
         }
       ],
-      "source": "CFA L2 Curriculum, Market-Based Valuation, justified trailing P/E 与口径匹配",
+      "source": "CFA L2 Curriculum, Market-Based Valuation, justified trailing P/E and matching the earnings basis",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -651,10 +651,10 @@
     {
       "id": "EQ-jpb-1",
       "topic": "Equity",
-      "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)",
+      "los": "P/B and the ROE−r relationship; justified P/B = (ROE−g)/(r−g)",
       "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
       "type": "calc",
-      "stem": "ROE = 16%，要求回报率 r = 12%，长期增长率 g = 6%。justified P/B 最接近：",
+      "stem": "ROE = 16%, required return r = 12%, long-run growth rate g = 6%. The justified P/B is closest to:",
       "choices": {
         "A": "1.67",
         "B": "0.67",
@@ -668,20 +668,20 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "justified P/B = (ROE − g)/(r − g)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "P/B = (0.16 − 0.06)/(0.12 − 0.06)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "P/B = 0.10/0.06 ≈ 1.67"
         },
         {
-          "label": "陷阱",
-          "content": "分子是 ROE−g 不是 ROE−r（后者得 0.67，与 RI 公式记串）；自检：ROE>r 时 P/B 必须大于 1"
+          "label": "Pitfall",
+          "content": "The numerator is ROE−g, not ROE−r (the latter gives 0.67, confusing it with the RI formula); sanity check: when ROE>r, P/B must be greater than 1."
         }
       ],
       "source": "CFA L2 Curriculum, Market-Based Valuation, justified P/B",
@@ -693,14 +693,14 @@
     {
       "id": "EQ-pb-roe-1",
       "topic": "Equity",
-      "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)",
+      "los": "P/B and the ROE−r relationship; justified P/B = (ROE−g)/(r−g)",
       "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
       "type": "concept",
-      "stem": "基于 justified P/B = (ROE−g)/(r−g)，下列说法正确的是：",
+      "stem": "Based on justified P/B = (ROE−g)/(r−g), which of the following statements is correct?",
       "choices": {
-        "A": "提高增长率 g 总会提高 justified P/B",
-        "B": "ROE > r 时 justified P/B > 1，且此时 g 越高 P/B 越高；ROE < r 时提高 g 反而压低 P/B",
-        "C": "ROE = r 时 justified P/B = 0"
+        "A": "Raising the growth rate g always raises the justified P/B",
+        "B": "When ROE > r, the justified P/B > 1, and in that case a higher g raises P/B; when ROE < r, raising g instead lowers P/B",
+        "C": "When ROE = r, the justified P/B = 0"
       },
       "answer": "B",
       "explanations": {
@@ -708,7 +708,7 @@
         "B": "对。P/B 与 1 的大小关系完全由 ROE−r 的符号决定，g 只是放大器：赚超额收益时放大向上，亏超额收益时放大向下。口诀：'ROE 对 r，定方向；g 定力度'。",
         "C": "错。ROE = r 时分子分母同为 (r−g)，P/B = 1 而不是 0——赚的恰好是要求回报，市场只愿意按账面价值定价。"
       },
-      "source": "CFA L2 Curriculum, Market-Based Valuation, P/B 与 ROE−r 的关系",
+      "source": "CFA L2 Curriculum, Market-Based Valuation, the relationship between P/B and ROE−r",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -717,14 +717,14 @@
     {
       "id": "EQ-evebitda-1",
       "topic": "Equity",
-      "los": "EV/EBITDA 适用场景与陷阱",
+      "los": "EV/EBITDA — appropriate uses and pitfalls",
       "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
       "type": "concept",
-      "stem": "关于 EV/EBITDA 乘数，下列说法正确的是：",
+      "stem": "Regarding the EV/EBITDA multiple, which of the following statements is correct?",
       "choices": {
-        "A": "EV = 股权市值 + 债务市值，不需要扣减现金及等价物",
-        "B": "EBITDA 已反映公司间资本密集度差异，因此重资产公司之间可直接比较",
-        "C": "适合比较资本结构差异较大的公司，且净利润为负时 EBITDA 往往仍为正、乘数仍可用"
+        "A": "EV = market value of equity + market value of debt, with no need to subtract cash and cash equivalents",
+        "B": "EBITDA already reflects differences in capital intensity across companies, so capital-intensive companies can be compared directly",
+        "C": "It is suitable for comparing companies with differing capital structures, and when net income is negative EBITDA is often still positive so the multiple remains usable"
       },
       "answer": "C",
       "explanations": {
@@ -732,7 +732,7 @@
         "B": "错。恰恰相反：EBITDA 在折旧摊销之前，完全没有反映维持性资本开支的差异。资本密集度不同的公司比 EV/EBITDA 会系统性误导——这是 EBITDA 乘数最重要的陷阱。",
         "C": "对。EV 是全部资本口径、EBITDA 是利息之前的利润口径，上下匹配，天然中和了杠杆差异；且 EBITDA 为负比 EPS 为负少见得多。口诀：'比杠杆不同的公司，上 EV 口径；但别忘了它看不见 capex'。"
       },
-      "source": "CFA L2 Curriculum, Market-Based Valuation, EV/EBITDA 的适用与局限",
+      "source": "CFA L2 Curriculum, Market-Based Valuation, the uses and limitations of EV/EBITDA",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -741,14 +741,14 @@
     {
       "id": "EQ-peg-1",
       "topic": "Equity",
-      "los": "PEG 的用法与缺陷",
+      "los": "The use and drawbacks of the PEG ratio",
       "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
       "type": "trap",
-      "stem": "分析师声称：'PEG 更低的股票一定比 PEG 更高的股票更被低估。'该说法最主要的问题是：",
+      "stem": "An analyst claims: 'A stock with a lower PEG is necessarily more undervalued than a stock with a higher PEG.' The most important problem with this claim is:",
       "choices": {
-        "A": "PEG 隐含 P/E 与 g 之间的线性关系，且未对风险差异和增长可持续期进行调整",
-        "B": "PEG 只能用 trailing P/E 计算，用 leading P/E 计算会使结论无效",
-        "C": "PEG 只适用于增长率为负的公司"
+        "A": "PEG implies a linear relationship between P/E and g, and it does not adjust for differences in risk or in the duration over which growth can be sustained",
+        "B": "PEG can only be computed with a trailing P/E; computing it with a leading P/E invalidates the conclusion",
+        "C": "PEG only applies to companies with negative growth rates"
       },
       "answer": "A",
       "explanations": {
@@ -756,7 +756,7 @@
         "B": "错。PEG 用 leading 或 trailing P/E 都可以，关键是可比公司之间口径一致。口径问题是使用规范，不是 PEG 的固有缺陷——拿'规范'当'缺陷'是干扰项的经典造法。",
         "C": "错。方向说反了：g ≤ 0 时 PEG 失去意义（负 PEG 无法排序），PEG 恰恰只在正增长公司之间才可用。"
       },
-      "source": "CFA L2 Curriculum, Market-Based Valuation, PEG ratio 的缺陷",
+      "source": "CFA L2 Curriculum, Market-Based Valuation, the drawbacks of the PEG ratio",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -765,10 +765,10 @@
     {
       "id": "EQ-ri-1stage-1",
       "topic": "Equity",
-      "los": "单阶段 RI 模型: V0 = BV0 + (ROE−r)×BV0/(r−g)",
+      "los": "Single-stage RI model: V0 = BV0 + (ROE−r)×BV0/(r−g)",
       "module": "Residual Income Valuation",
       "type": "calc",
-      "stem": "每股期初账面价值 BV0 = 20，长期 ROE = 14%，股权要求回报 r = 10%，RI 永续增长 g = 6%。单阶段 RI 模型下每股价值最接近：",
+      "stem": "Beginning book value per share BV0 = 20, long-run ROE = 14%, required return on equity r = 10%, and residual income grows in perpetuity at g = 6%. Under the single-stage RI model, the value per share is closest to:",
       "choices": {
         "A": "60.00",
         "B": "40.00",
@@ -782,23 +782,23 @@
       },
       "steps": [
         {
-          "label": "公式",
+          "label": "Formula",
           "content": "V0 = BV0 + (ROE − r)×BV0/(r − g)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "V0 = 20 + (0.14 − 0.10)×20/(0.10 − 0.06)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "V0 = 20 + 0.80/0.04 = 20 + 20 = 40.00"
         },
         {
-          "label": "陷阱",
-          "content": "分子是 ROE−r 不是 ROE−g（后者得 60）；别忘了 BV0 打底（漏加得 20）"
+          "label": "Pitfall",
+          "content": "The numerator is ROE−r, not ROE−g (the latter gives 60); don't forget BV0 as the base (omitting it gives 20)."
         }
       ],
-      "source": "CFA L2 Curriculum, Residual Income Valuation, 单阶段 RI 模型",
+      "source": "CFA L2 Curriculum, Residual Income Valuation, single-stage RI model",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -807,10 +807,10 @@
     {
       "id": "EQ-ri-omega-1",
       "topic": "Equity",
-      "los": "Persistence factor ω 的含义与取值影响",
+      "los": "The persistence factor ω — meaning and impact of its value",
       "module": "Residual Income Valuation",
       "type": "calc",
-      "stem": "每股 BV0 = 10，预期明年 RI1 = 1.50，此后 RI 每年按 persistence factor ω = 0.60 衰减，r = 10%。RI 模型下每股价值最接近：",
+      "stem": "Book value per share BV0 = 10, next year's residual income is expected to be RI1 = 1.50, and thereafter RI decays each year by a persistence factor ω = 0.60, with r = 10%. Under the RI model, the value per share is closest to:",
       "choices": {
         "A": "25.00",
         "B": "3.00",
@@ -824,23 +824,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "衰减 RI 现值 = RI1/(1 + r − ω)；V0 = BV0 + RI1/(1 + r − ω)"
+          "label": "Formula",
+          "content": "PV of decaying RI = RI1/(1 + r − ω); V0 = BV0 + RI1/(1 + r − ω)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "V0 = 10 + 1.50/(1 + 0.10 − 0.60)"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "V0 = 10 + 1.50/0.50 = 10 + 3.00 = 13.00"
         },
         {
-          "label": "陷阱",
-          "content": "ω=0.6 时分母是 1+r−ω=0.50，不能按永续年金除以 r（得 25.00）；BV0 是价值锚，漏加得 3.00"
+          "label": "Pitfall",
+          "content": "With ω=0.6 the denominator is 1+r−ω=0.50; you cannot treat it as a perpetuity and divide by r (which gives 25.00); BV0 is the value anchor, and omitting it gives 3.00."
         }
       ],
-      "source": "CFA L2 Curriculum, Residual Income Valuation, persistence factor 与 continuing RI",
+      "source": "CFA L2 Curriculum, Residual Income Valuation, persistence factor and continuing RI",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -849,14 +849,14 @@
     {
       "id": "EQ-cleansurplus-1",
       "topic": "Equity",
-      "los": "Clean surplus 假设及其违反的后果",
+      "los": "The clean surplus assumption and the consequences of violating it",
       "module": "Residual Income Valuation",
       "type": "concept",
-      "stem": "RI 模型依赖 clean surplus 关系：BV1 = BV0 + NI − dividends。下列哪一项会违反该关系？",
+      "stem": "The RI model relies on the clean surplus relation: BV1 = BV0 + NI − dividends. Which of the following would violate this relation?",
       "choices": {
-        "A": "外币报表折算差额 (CTA) 绕过利润表直接计入 OCI",
-        "B": "公司支付现金股利",
-        "C": "公司计提折旧与摊销费用"
+        "A": "Foreign currency translation adjustments (CTA) that bypass the income statement and go directly to OCI",
+        "B": "The company paying a cash dividend",
+        "C": "The company recognizing depreciation and amortization expense"
       },
       "answer": "A",
       "explanations": {
@@ -864,7 +864,7 @@
         "B": "错。股利本来就是 clean surplus 关系式中的一项 (−dividends)，与股东的资本交易不构成违反。把'绕过利润表的损益'和'与股东的交易'混为一谈是本考点最常见的错误。",
         "C": "错。D&A 完整地经过利润表进入 NI，是最'干净'的项目，与 clean surplus 无冲突。"
       },
-      "source": "CFA L2 Curriculum, Residual Income Valuation, clean surplus 假设的违反",
+      "source": "CFA L2 Curriculum, Residual Income Valuation, violations of the clean surplus assumption",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -873,14 +873,14 @@
     {
       "id": "EQ-ri-applic-1",
       "topic": "Equity",
-      "los": "RI vs DDM/FCF 适用场景",
+      "los": "RI vs. DDM/FCF — appropriate use",
       "module": "Residual Income Valuation",
       "type": "concept",
-      "stem": "相比 DDM 与 FCF 模型，residual income 模型最适合下列哪种公司？",
+      "stem": "Compared with the DDM and FCF models, the residual income model is most appropriate for which of the following companies?",
       "choices": {
-        "A": "频繁通过 OCI 确认大额损益、会计透明度低的公司",
-        "B": "不支付股利、预期未来多年 FCF 为负，但账面价值与 ROE 可较可靠预测的公司",
-        "C": "价值主要集中在远期终值的高成长早期公司——因为 RI 模型对终值的依赖最大"
+        "A": "A company that frequently recognizes large gains and losses through OCI and has low accounting transparency",
+        "B": "A company that pays no dividends and is expected to have negative FCF for many years, but whose book value and ROE can be forecast fairly reliably",
+        "C": "An early-stage high-growth company whose value is concentrated in the distant terminal value—because the RI model relies most heavily on the terminal value"
       },
       "answer": "B",
       "explanations": {
@@ -888,7 +888,7 @@
         "B": "对。RI 的经典适用场景：不分红（DDM 失效）、FCF 长期为负（FCF 模型难用），只要 BV 与 ROE 可预测，RI 依然能落地。口诀：'没股利没现金流，还有账面价值可依靠'。",
         "C": "错。方向反了：RI 模型的价值大头由当期 BV0 与近期超额收益构成，对终值的依赖比 DDM/FCF 小——这正是 RI 的优点之一，干扰项把优点说成了缺点再倒扣回来。"
       },
-      "source": "CFA L2 Curriculum, Residual Income Valuation, RI 模型适用场景",
+      "source": "CFA L2 Curriculum, Residual Income Valuation, appropriate use of the RI model",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -900,7 +900,7 @@
       "los": "RI = NI − re×BV0 = (ROE−re)×BV0",
       "module": "Residual Income Valuation",
       "type": "trap",
-      "stem": "期初账面权益 BV0 = 100，当期 NI = 20，当期未支付股利也无其他权益变动，故期末账面权益 BV1 = 120。股权成本 re = 10%。当期 residual income 最接近：",
+      "stem": "Beginning book value of equity BV0 = 100, current-period NI = 20, and with no dividends paid and no other changes in equity during the period, ending book value of equity BV1 = 120. The cost of equity re = 10%. The current-period residual income is closest to:",
       "choices": {
         "A": "8.0",
         "B": "9.0",
@@ -914,23 +914,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "RI = NI − re × BV0（期初账面权益）"
+          "label": "Formula",
+          "content": "RI = NI − re × BV0 (beginning book value of equity)"
         },
         {
-          "label": "代入",
+          "label": "Substitute",
           "content": "RI = 20 − 0.10 × 100"
         },
         {
-          "label": "结果",
+          "label": "Result",
           "content": "RI = 20 − 10 = 10.0"
         },
         {
-          "label": "陷阱",
-          "content": "equity charge 基于期初 BV0=100；用期末 120 得 8.0、用平均 110 得 9.0，题干给出 BV1 就是干扰项"
+          "label": "Pitfall",
+          "content": "The equity charge is based on beginning BV0 = 100; using ending 120 gives 8.0 and using the average 110 gives 9.0—the stem provides BV1 purely as a distractor."
         }
       ],
-      "source": "CFA L2 Curriculum, Residual Income Valuation, RI 定义与 equity charge",
+      "source": "CFA L2 Curriculum, Residual Income Valuation, definition of RI and the equity charge",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -939,14 +939,14 @@
     {
       "id": "EQ-dloc-dlom-1",
       "topic": "Equity",
-      "los": "DLOC 与 DLOM 的叠加计算: 总折扣 = 1−(1−DLOC)(1−DLOM)",
+      "los": "Combining DLOC and DLOM: total discount = 1−(1−DLOC)(1−DLOM)",
       "module": "Private Company Valuation",
       "type": "calc",
-      "stem": "某私营公司按控股、可流通基础估出的每股价值为 100 元。对一笔少数股权、无流通性的股份，适用 DLOC = 20%、DLOM = 25%。该笔股份的每股价值最接近：",
+      "stem": "A private company is valued at 100 per share on a controlling, marketable basis. For a minority, non-marketable interest, a DLOC of 20% and a DLOM of 25% apply. The value per share of that interest is closest to:",
       "choices": {
-        "A": "60 元",
-        "B": "55 元",
-        "C": "75 元"
+        "A": "60",
+        "B": "55",
+        "C": "75"
       },
       "answer": "A",
       "explanations": {
@@ -956,23 +956,23 @@
       },
       "steps": [
         {
-          "label": "公式",
-          "content": "价值 = 基准价值 × (1 − DLOC) × (1 − DLOM)；总折扣 = 1 − (1−DLOC)(1−DLOM)"
+          "label": "Formula",
+          "content": "Value = base value × (1 − DLOC) × (1 − DLOM); total discount = 1 − (1−DLOC)(1−DLOM)"
         },
         {
-          "label": "代入",
-          "content": "价值 = 100 × (1 − 0.20) × (1 − 0.25) = 100 × 0.80 × 0.75"
+          "label": "Substitute",
+          "content": "Value = 100 × (1 − 0.20) × (1 − 0.25) = 100 × 0.80 × 0.75"
         },
         {
-          "label": "结果",
-          "content": "价值 = 60 元（总折扣 40%）"
+          "label": "Result",
+          "content": "Value = 60 (total discount 40%)"
         },
         {
-          "label": "陷阱",
-          "content": "两折扣是乘法叠加，直接相加 45% 得 55 元是最常见错误；只用其中一个折扣得 75 元"
+          "label": "Pitfall",
+          "content": "The two discounts combine multiplicatively; simply adding them to 45% gives 55, the most common error; applying only one of the discounts gives 75."
         }
       ],
-      "source": "CFA L2 Curriculum, Private Company Valuation, DLOC 与 DLOM 的叠加",
+      "source": "CFA L2 Curriculum, Private Company Valuation, combining DLOC and DLOM",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -981,14 +981,14 @@
     {
       "id": "EQ-pcv-methods-1",
       "topic": "Equity",
-      "los": "三种方法: income / market / asset-based",
+      "los": "The three approaches: income / market / asset-based",
       "module": "Private Company Valuation",
       "type": "concept",
-      "stem": "私营公司估值中，excess earnings method 与 guideline transactions method 分别属于哪类方法？",
+      "stem": "In private company valuation, the excess earnings method and the guideline transactions method belong to which categories of approach, respectively?",
       "choices": {
-        "A": "market approach 与 income approach",
-        "B": "income approach 与 market approach",
-        "C": "asset-based approach 与 market approach"
+        "A": "The market approach and the income approach",
+        "B": "The income approach and the market approach",
+        "C": "The asset-based approach and the market approach"
       },
       "answer": "B",
       "explanations": {
@@ -996,7 +996,7 @@
         "B": "对。Income approach 三件套：FCF 法、capitalized cash flow method、excess earnings method；market approach 三件套：guideline public company (GPCM)、guideline transactions (GTM)、prior transactions。口诀：'折现归 income，比价归 market，清点家底归 asset-based'。",
         "C": "错。Excess earnings method 虽然要先给营运资本和固定资产分配回报，但其核心是把剩余盈利资本化为无形资产价值，课纲将其归入 income approach 而非 asset-based。"
       },
-      "source": "CFA L2 Curriculum, Private Company Valuation, 三大估值方法分类",
+      "source": "CFA L2 Curriculum, Private Company Valuation, classification of the three valuation approaches",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
@@ -1005,14 +1005,14 @@
     {
       "id": "EQ-buildup-1",
       "topic": "Equity",
-      "los": "CAPM 扩展: build-up method, expanded CAPM",
+      "los": "CAPM extensions: build-up method, expanded CAPM",
       "module": "Private Company Valuation",
       "type": "trap",
-      "stem": "用 build-up method 估计私营公司股权要求回报率时，与 expanded CAPM 相比的关键区别是：",
+      "stem": "When using the build-up method to estimate the required return on equity for a private company, the key difference from the expanded CAPM is:",
       "choices": {
-        "A": "build-up method 用行业 beta 乘以股权风险溢价后，再加 size premium",
-        "B": "expanded CAPM 不包含 size premium 与 company-specific premium",
-        "C": "build-up method 不使用 beta（相当于 beta 取 1），在无风险利率上直接叠加 ERP、size premium 与 company-specific premium"
+        "A": "The build-up method multiplies an industry beta by the equity risk premium and then adds a size premium",
+        "B": "The expanded CAPM does not include a size premium or a company-specific premium",
+        "C": "The build-up method does not use beta (equivalent to setting beta = 1), and simply stacks the ERP, size premium, and company-specific premium on top of the risk-free rate"
       },
       "answer": "C",
       "explanations": {
@@ -1020,7 +1020,7 @@
         "B": "错。恰恰相反：expanded CAPM = rf + beta×ERP + size premium + company-specific premium，'expanded'扩的就是这两个溢价。没有这两项的是普通 CAPM。",
         "C": "对。私营公司没有市场价格序列可估 beta，build-up method 直接令 beta = 1：r = rf + ERP + size premium + industry premium + company-specific premium。口诀：'估不出 beta 就不用 beta，全靠往上堆溢价'。"
       },
-      "source": "CFA L2 Curriculum, Private Company Valuation, build-up method 与 expanded CAPM",
+      "source": "CFA L2 Curriculum, Private Company Valuation, build-up method and expanded CAPM",
       "verified": {
         "method": "adversarial-recheck",
         "by": "independent-agent"
