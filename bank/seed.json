@@ -1,141 +1,165 @@
 {
-  "_schema": {
-    "id": "唯一ID: <topic>-<los>-<序号>",
-    "topic": "config.json 中的 topic key",
-    "los": "学习目标编号或短语, weakness tracking 的粒度就是它",
-    "type": "concept | calc | trap",
-    "stem": "题干 (L2 风格但压缩为独立题, vignette 由 Claude 按 prompt 生成)",
-    "choices": "恰好 3 个选项 (CFA 是三选一)",
-    "answer": "正确选项 key",
-    "explanations": "每个选项都要讲透——为什么对/为什么错/踩了什么陷阱 (UWorld 模型)",
-    "source": "ground truth 出处, 用于校验 (教材/Notes/AnalystPrep 题号)"
+ "_schema": {
+  "id": "唯一ID: <topic>-<los>-<序号>",
+  "topic": "config.json 中的 topic key",
+  "los": "学习目标编号或短语, weakness tracking 的粒度就是它",
+  "type": "concept | calc | trap",
+  "stem": "题干 (L2 风格但压缩为独立题, vignette 由 Claude 按 prompt 生成)",
+  "choices": "恰好 3 个选项 (CFA 是三选一)",
+  "answer": "正确选项 key",
+  "explanations": "每个选项都要讲透——为什么对/为什么错/踩了什么陷阱 (UWorld 模型)",
+  "source": "ground truth 出处, 用于校验 (教材/Notes/AnalystPrep 题号)"
+ },
+ "questions": [
+  {
+   "id": "FSA-FX-temporal-1",
+   "topic": "FSA",
+   "los": "FX translation: temporal vs current rate method",
+   "type": "concept",
+   "stem": "A subsidiary's functional currency is the parent's presentation currency (i.e., the temporal method is used for translation). When translating inventory measured at historical cost at the reporting date, which exchange rate should be applied?",
+   "choices": {
+    "A": "The period-end spot rate (current rate)",
+    "B": "The historical rate in effect when the inventory was purchased (historical rate)",
+    "C": "The average rate for the period (average rate)"
+   },
+   "answer": "B",
+   "explanations": {
+    "A": "错。期末即期汇率用于货币性项目（现金、应收应付）。这是 current rate method 下所有资产负债的处理方式，两法最易混淆点。",
+    "B": "对。Temporal method 的核心规则：非货币性项目按其计量属性配套汇率——历史成本计量的存货/固定资产用历史汇率，公允价值计量的用计量日汇率。",
+    "C": "错。平均汇率在 temporal method 下用于大多数收入费用项目（COGS、折旧除外，它们跟随对应资产用历史汇率）。"
+   },
+   "source": "CFA L2 Curriculum, Multinational Operations; the temporal/current rate comparison table in any Notes provider"
   },
-  "questions": [
+  {
+   "id": "FSA-pension-ifrs-1",
+   "topic": "FSA",
+   "los": "Pension: components of periodic pension cost under IFRS",
+   "type": "concept",
+   "stem": "Under IFRS, the accounting treatment of the actuarial remeasurements of a defined benefit pension plan is to:",
+   "choices": {
+    "A": "recognize them in current-period P&L",
+    "B": "recognize them in OCI, with no subsequent amortization back to P&L",
+    "C": "recognize them in OCI, subsequently amortized back to P&L under the corridor approach"
+   },
+   "answer": "B",
+   "explanations": {
+    "A": "错。IFRS 下进 P&L 的只有 service cost（含 past service cost）和 net interest cost/income。",
+    "B": "对。IFRS 把 remeasurements（精算损益 + 计划资产实际回报与 net interest 之差）放 OCI 且永不 recycle。这是 IFRS 与 US GAAP 的高频对比考点。",
+    "C": "错。Corridor 摊销是 US GAAP 的选择性处理，IFRS 已不允许摊销。选这个说明两套准则记串了。"
+   },
+   "source": "CFA L2 Curriculum, Employment Compensation: Post-Employment Benefits"
+  },
+  {
+   "id": "EQ-fcff-calc-1",
+   "topic": "Equity",
+   "los": "FCFF from net income",
+   "type": "calc",
+   "stem": "NI = 100, D&A = 20, interest expense = 10, tax rate = 25%, FCInv = 30, WCInv = 10. FCFF is closest to:",
+   "choices": {
+    "A": "87.5",
+    "B": "90.0",
+    "C": "67.5"
+   },
+   "answer": "A",
+   "explanations": {
+    "A": "对。FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv = 100 + 20 + 10×0.75 − 30 − 10 = 87.5。利息加回必须税后，因为利息抵税的好处不属于全部资本提供者口径。",
+    "B": "错。90 = 加回了全额利息 10 而没乘 (1−t)。这是本 LOS 最常见陷阱。",
+    "C": "错。67.5 = 漏加了 NCC (D&A 20)。检查口诀：NI 起步四步走——加非现金、加税后利息、减两个 Inv。"
+   },
+   "steps": [
     {
-      "id": "FSA-FX-temporal-1",
-      "topic": "FSA",
-      "los": "FX translation: temporal vs current rate method",
-      "type": "concept",
-      "stem": "A subsidiary's functional currency is the parent's presentation currency (i.e., the temporal method is used for translation). When translating inventory measured at historical cost at the reporting date, which exchange rate should be applied?",
-      "choices": {
-        "A": "The period-end spot rate (current rate)",
-        "B": "The historical rate in effect when the inventory was purchased (historical rate)",
-        "C": "The average rate for the period (average rate)"
-      },
-      "answer": "B",
-      "explanations": {
-        "A": "错。期末即期汇率用于货币性项目（现金、应收应付）。这是 current rate method 下所有资产负债的处理方式，两法最易混淆点。",
-        "B": "对。Temporal method 的核心规则：非货币性项目按其计量属性配套汇率——历史成本计量的存货/固定资产用历史汇率，公允价值计量的用计量日汇率。",
-        "C": "错。平均汇率在 temporal method 下用于大多数收入费用项目（COGS、折旧除外，它们跟随对应资产用历史汇率）。"
-      },
-      "source": "CFA L2 Curriculum, Multinational Operations; the temporal/current rate comparison table in any Notes provider"
+     "label": "Formula",
+     "content": "FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv"
     },
     {
-      "id": "FSA-pension-ifrs-1",
-      "topic": "FSA",
-      "los": "Pension: components of periodic pension cost under IFRS",
-      "type": "concept",
-      "stem": "Under IFRS, the accounting treatment of the actuarial remeasurements of a defined benefit pension plan is to:",
-      "choices": {
-        "A": "recognize them in current-period P&L",
-        "B": "recognize them in OCI, with no subsequent amortization back to P&L",
-        "C": "recognize them in OCI, subsequently amortized back to P&L under the corridor approach"
-      },
-      "answer": "B",
-      "explanations": {
-        "A": "错。IFRS 下进 P&L 的只有 service cost（含 past service cost）和 net interest cost/income。",
-        "B": "对。IFRS 把 remeasurements（精算损益 + 计划资产实际回报与 net interest 之差）放 OCI 且永不 recycle。这是 IFRS 与 US GAAP 的高频对比考点。",
-        "C": "错。Corridor 摊销是 US GAAP 的选择性处理，IFRS 已不允许摊销。选这个说明两套准则记串了。"
-      },
-      "source": "CFA L2 Curriculum, Employment Compensation: Post-Employment Benefits"
+     "label": "Substitute",
+     "content": "= 100 + 20 + 10×(1−0.25) − 30 − 10"
     },
     {
-      "id": "EQ-fcff-calc-1",
-      "topic": "Equity",
-      "los": "FCFF from net income",
-      "type": "calc",
-      "stem": "NI = 100, D&A = 20, interest expense = 10, tax rate = 25%, FCInv = 30, WCInv = 10. FCFF is closest to:",
-      "choices": {
-        "A": "87.5",
-        "B": "90.0",
-        "C": "67.5"
-      },
-      "answer": "A",
-      "explanations": {
-        "A": "对。FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv = 100 + 20 + 10×0.75 − 30 − 10 = 87.5。利息加回必须税后，因为利息抵税的好处不属于全部资本提供者口径。",
-        "B": "错。90 = 加回了全额利息 10 而没乘 (1−t)。这是本 LOS 最常见陷阱。",
-        "C": "错。67.5 = 漏加了 NCC (D&A 20)。检查口诀：NI 起步四步走——加非现金、加税后利息、减两个 Inv。"
-      },
-      "steps": [
-        { "label": "Formula", "content": "FCFF = NI + NCC + Int×(1−t) − FCInv − WCInv" },
-        { "label": "Substitute", "content": "= 100 + 20 + 10×(1−0.25) − 30 − 10" },
-        { "label": "Result", "content": "= 100 + 20 + 7.5 − 40 = 87.5" },
-        { "label": "Trap", "content": "Interest must be added back after tax (×0.75). Adding back 10 directly gives the incorrect choice B of 90." }
-      ],
-      "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF definitional formula"
+     "label": "Result",
+     "content": "= 100 + 20 + 7.5 − 40 = 87.5"
     },
     {
-      "id": "EQ-ri-calc-1",
-      "topic": "Equity",
-      "los": "Residual income computation",
-      "type": "calc",
-      "stem": "Beginning book value of equity BV0 = 400, NI = 50, cost of equity re = 10%. The residual income for the period is:",
-      "choices": {
-        "A": "10",
-        "B": "50",
-        "C": "45"
-      },
-      "answer": "A",
-      "explanations": {
-        "A": "对。RI = NI − equity charge = NI − re×BV0 = 50 − 0.10×400 = 10。RI 衡量的是超出股东要求回报的利润。",
-        "B": "错。50 是 NI 本身，没扣 equity charge——RI 的存在意义就是扣掉股权资本的机会成本。",
-        "C": "错。45 = 50 − 0.10×50，把 equity charge 算在了 NI 上而不是期初账面净资产上。"
-      },
-      "steps": [
-        { "label": "Formula", "content": "RI = NI − equity charge, where equity charge = re × beginning BV" },
-        { "label": "Substitute", "content": "= 50 − 0.10 × 400" },
-        { "label": "Result", "content": "= 50 − 40 = 10" },
-        { "label": "Trap", "content": "The base for the equity charge is beginning book value of equity BV0, not NI and not ending BV." }
-      ],
-      "source": "CFA L2 Curriculum, Residual Income Valuation"
-    },
-    {
-      "id": "FI-oas-1",
-      "topic": "FI",
-      "los": "OAS vs Z-spread for bonds with embedded options",
-      "type": "concept",
-      "stem": "For a callable bond, the relationship between the OAS and the Z-spread is:",
-      "choices": {
-        "A": "OAS > Z-spread",
-        "B": "OAS = Z-spread",
-        "C": "OAS < Z-spread"
-      },
-      "answer": "C",
-      "explanations": {
-        "A": "错。OAS > Z-spread 出现在 putable bond：投资者持有期权，option cost 为负。",
-        "B": "错。相等仅当无嵌入期权（option cost = 0）。",
-        "C": "对。OAS = Z-spread − option cost。Callable 的期权在发行人手里、对投资者是成本（option cost > 0），剔除后剩余利差更小。记法：OAS 是'去掉期权噪音后的干净利差'。"
-      },
-      "source": "CFA L2 Curriculum, Valuation and Analysis: Bonds with Embedded Options"
-    },
-    {
-      "id": "FI-callable-vol-1",
-      "topic": "FI",
-      "los": "Effect of interest rate volatility on callable/putable bond values",
-      "type": "concept",
-      "stem": "Holding all else equal, when interest rate volatility rises, the value of a callable bond:",
-      "choices": {
-        "A": "increases",
-        "B": "decreases",
-        "C": "is unchanged"
-      },
-      "answer": "B",
-      "explanations": {
-        "A": "错。上升的是 putable bond：V_putable = V_straight + V_put，波动率↑使 put 更值钱。",
-        "B": "对。V_callable = V_straight − V_call。波动率↑ → 期权价值↑ → 被减掉的 call 更值钱 → callable 价值↓。所有'波动率对含权债'的题都从这两条价值方程出发。",
-        "C": "错。只有不含权债券的价值才不直接受波动率影响。"
-      },
-      "source": "CFA L2 Curriculum, Valuation and Analysis: Bonds with Embedded Options"
+     "label": "Trap",
+     "content": "Interest must be added back after tax (×0.75). Adding back 10 directly gives the incorrect choice B of 90."
     }
-  ]
+   ],
+   "source": "CFA L2 Curriculum, Free Cash Flow Valuation, FCFF definitional formula"
+  },
+  {
+   "id": "EQ-ri-calc-1",
+   "topic": "Equity",
+   "los": "Residual income computation",
+   "type": "calc",
+   "stem": "Beginning book value of equity BV0 = 400, NI = 50, cost of equity re = 10%. The residual income for the period is:",
+   "choices": {
+    "A": "10",
+    "B": "50",
+    "C": "45"
+   },
+   "answer": "A",
+   "explanations": {
+    "A": "对。RI = NI − equity charge = NI − re×BV0 = 50 − 0.10×400 = 10。RI 衡量的是超出股东要求回报的利润。",
+    "B": "错。50 是 NI 本身，没扣 equity charge——RI 的存在意义就是扣掉股权资本的机会成本。",
+    "C": "错。45 = 50 − 0.10×50，把 equity charge 算在了 NI 上而不是期初账面净资产上。"
+   },
+   "steps": [
+    {
+     "label": "Formula",
+     "content": "RI = NI − equity charge, where equity charge = re × beginning BV"
+    },
+    {
+     "label": "Substitute",
+     "content": "= 50 − 0.10 × 400"
+    },
+    {
+     "label": "Result",
+     "content": "= 50 − 40 = 10"
+    },
+    {
+     "label": "Trap",
+     "content": "The base for the equity charge is beginning book value of equity BV0, not NI and not ending BV."
+    }
+   ],
+   "source": "CFA L2 Curriculum, Residual Income Valuation"
+  },
+  {
+   "id": "FI-oas-1",
+   "topic": "FI",
+   "los": "OAS vs Z-spread for bonds with embedded options",
+   "type": "concept",
+   "stem": "For a callable bond, the relationship between the OAS and the Z-spread is:",
+   "choices": {
+    "A": "OAS > Z-spread",
+    "B": "OAS = Z-spread",
+    "C": "OAS < Z-spread"
+   },
+   "answer": "C",
+   "explanations": {
+    "A": "错。OAS > Z-spread 出现在 putable bond：投资者持有期权，option cost 为负。",
+    "B": "错。相等仅当无嵌入期权（option cost = 0）。",
+    "C": "对。OAS = Z-spread − option cost。Callable 的期权在发行人手里、对投资者是成本（option cost > 0），剔除后剩余利差更小。记法：OAS 是'去掉期权噪音后的干净利差'。"
+   },
+   "source": "CFA L2 Curriculum, Valuation and Analysis: Bonds with Embedded Options"
+  },
+  {
+   "id": "FI-callable-vol-1",
+   "topic": "FI",
+   "los": "Effect of interest rate volatility on callable/putable bond values",
+   "type": "concept",
+   "stem": "Holding all else equal, when interest rate volatility rises, the value of a callable bond:",
+   "choices": {
+    "A": "increases",
+    "B": "decreases",
+    "C": "is unchanged"
+   },
+   "answer": "B",
+   "explanations": {
+    "A": "错。上升的是 putable bond：V_putable = V_straight + V_put，波动率↑使 put 更值钱。",
+    "B": "对。V_callable = V_straight − V_call。波动率↑ → 期权价值↑ → 被减掉的 call 更值钱 → callable 价值↓。所有'波动率对含权债'的题都从这两条价值方程出发。",
+    "C": "错。只有不含权债券的价值才不直接受波动率影响。"
+   },
+   "source": "CFA L2 Curriculum, Valuation and Analysis: Bonds with Embedded Options"
+  }
+ ]
 }

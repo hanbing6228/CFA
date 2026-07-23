@@ -182,6 +182,40 @@ function renderToday() {
   }
 }
 
+/* 案例背景排版: 一坨长文 → 分段 + 圆点列表 + 关键数字/Exhibit 高亮 (重点突出) */
+function highlightCase(t) {
+  // Exhibit 引用整体高亮; 关键数字(货币/百分比/小数/年限)高亮; 二选一, 不嵌套
+  return t.replace(/(Exhibit\s+\d+|\$[\d,]+(?:\.\d+)?|\d[\d,]*(?:\.\d+)?%|\b\d[\d,]*(?:\.\d+)?\b)/g, '==$1==');
+}
+/* 案例正文行内渲染: 只做 ==高亮== 与 **加粗**, 不走 $...$ 公式解析
+ * (案例背景是散文, 里面的 $ 是货币符号, 不能当公式分隔符) */
+function caseInline(raw) {
+  let h = esc(raw);
+  h = h.replace(/==([^=]+)==/g, '<mark class="hl">$1</mark>');
+  h = h.replace(/\*\*([^*]+)\*\*/g, '<b class="kw">$1</b>');
+  return h;
+}
+function renderCaseBg(container, raw) {
+  let s = String(raw).replace(/\s*[●•]\s*/g, '\n● ');       // 圆点 → 独立行
+  s = s.replace(/\s+(Exhibit\s+\d+\b)/g, '\n$1');            // Exhibit 引用另起段
+  const lines = s.split('\n').map(x => x.trim()).filter(Boolean);
+  let ul = null;
+  for (const ln of lines) {
+    if (ln.startsWith('● ')) {
+      if (!ul) { ul = el('ul', 'casebul'); container.appendChild(ul); }
+      ul.appendChild(el('li', '', caseInline(highlightCase(ln.slice(2)))));
+      continue;
+    }
+    ul = null;
+    // 长段落按 ~2 句切分, 避免一堵墙
+    const sents = ln.match(/[^.!?]+[.!?]+["')\]]?(?=\s|$)/g) || [ln];
+    let grp = [];
+    const flush = () => { if (grp.length) { container.appendChild(el('p', 'casebg', caseInline(highlightCase(grp.join(' '))))); grp = []; } };
+    for (const st of sents) { grp.push(st.trim()); if (grp.length >= 2) flush(); }
+    flush();
+  }
+}
+
 /* ---------- Case/vignette 面板 (L2 题型: 背景+Exhibit+一组题) ---------- */
 function casePanel(q, expanded) {
   if (!q.case || !Store.bank.cases || !Store.bank.cases[q.case]) return null;
@@ -189,7 +223,7 @@ function casePanel(q, expanded) {
   const d = el('details', 'casebox');
   if (expanded) d.open = true;
   d.appendChild(el('summary', '', `${ic('file')} ${esc(c.title)} <span class="muted">(案例背景与图表)</span>`));
-  if (c.background) d.appendChild(el('p', 'casebg', fmt(c.background)));
+  if (c.background) renderCaseBg(d, c.background);
   for (const src of c.images || []) {     // PDF 抽出的 Exhibit 图表/公式图
     const im = el('img', 'eximg');
     im.loading = 'lazy'; im.src = src; im.alt = 'Exhibit';

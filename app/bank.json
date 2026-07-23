@@ -17378,7 +17378,7 @@
   {
    "id": "EQ-mispricing-1",
    "topic": "Equity",
-   "los": "Intrinsic value vs. market price; the two components of mispricing (V−P and analyst's estimation error)",
+   "los": "内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)",
    "module": "Equity Valuation: Applications and Processes",
    "type": "concept",
    "stem": "An analyst estimates an intrinsic value of V_E, the market price is P, and the true (unobservable) intrinsic value is V. How should the 'apparent mispricing' V_E − P be decomposed?",
@@ -17402,7 +17402,7 @@
   {
    "id": "EQ-absrel-1",
    "topic": "Equity",
-   "los": "Absolute vs. relative valuation models and their appropriate use",
+   "los": "绝对 vs 相对估值模型适用场景",
    "module": "Equity Valuation: Applications and Processes",
    "type": "concept",
    "stem": "Regarding absolute valuation and relative valuation models, which of the following statements is correct?",
@@ -17426,7 +17426,7 @@
   {
    "id": "EQ-ggm-1",
    "topic": "Equity",
-   "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
+   "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
    "stem": "A company has just paid a dividend of D0 = 2.00. Dividends are expected to grow in perpetuity at g = 5%, and the required rate of return is r = 10%. Using the GGM, the value of the stock is closest to:",
@@ -17468,7 +17468,7 @@
   {
    "id": "EQ-ggm-2",
    "topic": "Equity",
-   "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
+   "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
    "stem": "A stock currently trades at P0 = 50 and has just paid a dividend of D0 = 2.50. The market expects dividends to grow in perpetuity at g = 4%. If the price equals the GGM value, the implied required rate of return r is closest to:",
@@ -17510,7 +17510,7 @@
   {
    "id": "EQ-2stage-1",
    "topic": "Equity",
-   "los": "Two-stage / H-model computation and application",
+   "los": "两阶段/H-model 计算与适用",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
    "stem": "D0 = 1.00. Dividends grow at 20% per year for the next 2 years and then grow at 5% in perpetuity, with r = 10%. Under a two-stage DDM, the value of the stock is closest to:",
@@ -17552,7 +17552,7 @@
   {
    "id": "EQ-hmodel-1",
    "topic": "Equity",
-   "los": "Two-stage / H-model computation and application",
+   "los": "两阶段/H-model 计算与适用",
    "module": "Discounted Dividend Valuation",
    "type": "calc",
    "stem": "D0 = 1.00, the current growth rate is gS = 14%, and growth is expected to decline linearly over 8 years to a long-run growth rate of gL = 6% and remain there, with r = 10%. Using the H-model, the value of the stock is closest to:",
@@ -17594,7 +17594,7 @@
   {
    "id": "EQ-pvgo-1",
    "topic": "Equity",
-   "los": "PVGO decomposition: E/r + PVGO",
+   "los": "PVGO 分解: E/r + PVGO",
    "module": "Discounted Dividend Valuation",
    "type": "concept",
    "stem": "Within the GGM framework, a stock's price can be decomposed as P0 = E1/r + PVGO. Regarding this decomposition, which of the following statements is correct?",
@@ -17618,7 +17618,7 @@
   {
    "id": "EQ-sgr-1",
    "topic": "Equity",
-   "los": "SGR = b × ROE (and the PRAT extension)",
+   "los": "SGR = b × ROE (与 PRAT 扩展)",
    "module": "Discounted Dividend Valuation",
    "type": "trap",
    "stem": "A company has a dividend payout ratio of 40% and ROE = 15%. Its sustainable growth rate (SGR) is closest to:",
@@ -17660,7 +17660,7 @@
   {
    "id": "EQ-ggm-3",
    "topic": "Equity",
-   "los": "GGM: formula, sensitivity, implied growth rate / implied required return",
+   "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报",
    "module": "Discounted Dividend Valuation",
    "type": "trap",
    "stem": "An analyst estimates D1 = 2.00, a perpetual growth rate g = 12%, and a required return r = 10% for a stock, and applies the GGM. The correct treatment is:",
@@ -17684,7 +17684,7 @@
   {
    "id": "EQ-fcff-ebit-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
    "module": "Free Cash Flow Valuation",
    "type": "calc",
    "stem": "EBIT = 200, interest expense = 20, tax rate = 25%, D&A = 40, FCInv = 60, WCInv = 20. FCFF is closest to:",
@@ -17726,7 +17726,7 @@
   {
    "id": "EQ-fcff-ebitda-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
    "module": "Free Cash Flow Valuation",
    "type": "calc",
    "stem": "EBITDA = 150, D&A = 30, tax rate = 30%, FCInv = 40, WCInv = 10. FCFF is closest to:",
@@ -17810,7 +17810,7 @@
   {
    "id": "EQ-fcf-1stage-1",
    "topic": "Equity",
-   "los": "Single-stage / two-stage FCF model computation",
+   "los": "单阶段/两阶段 FCF 模型计算",
    "module": "Free Cash Flow Valuation",
    "type": "calc",
    "stem": "Expected FCFF1 = 60, WACC = 9%, required return on equity re = 12%, and FCFF grows in perpetuity at g = 4%. The market value of debt is 400 and there are 50 shares outstanding. The value of equity per share is closest to:",
@@ -17852,7 +17852,7 @@
   {
    "id": "EQ-fcff-vs-fcfe-1",
    "topic": "Equity",
-   "los": "When FCFF is preferred over FCFE (unstable capital structure / negative FCFE)",
+   "los": "何时 FCFF 优于 FCFE (资本结构不稳/FCFE为负)",
    "module": "Free Cash Flow Valuation",
    "type": "concept",
    "stem": "In which of the following situations is discounting FCFF (and then subtracting the value of debt to obtain equity value) more appropriate than discounting FCFE directly?",
@@ -17876,7 +17876,7 @@
   {
    "id": "EQ-wcinv-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
    "module": "Free Cash Flow Valuation",
    "type": "concept",
    "stem": "For the working capital investment (WCInv) used in computing FCFF/FCFE, the correct measure of working capital is:",
@@ -17900,7 +17900,7 @@
   {
    "id": "EQ-fcff-cfo-1",
    "topic": "Equity",
-   "los": "FCFF from NI / EBIT / EBITDA / CFO — the four routes (differences in tax adjustment)",
+   "los": "FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)",
    "module": "Free Cash Flow Valuation",
    "type": "trap",
    "stem": "CFO = 120 (interest expense has been deducted within operating activities), interest expense = 30, tax rate = 25%, D&A = 25, FCInv = 50. FCFF is closest to:",
@@ -17942,7 +17942,7 @@
   {
    "id": "EQ-jpe-1",
    "topic": "Equity",
-   "los": "Justified P/E (leading/trailing) derived from the GGM",
+   "los": "Justified P/E (leading/trailing) 由 GGM 推导",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "calc",
    "stem": "A company has a dividend payout ratio of 40%, ROE = 15%, and a required return r = 12%, with growth estimated from the SGR. The justified leading P/E is closest to:",
@@ -17984,7 +17984,7 @@
   {
    "id": "EQ-jpe-2",
    "topic": "Equity",
-   "los": "Justified P/E (leading/trailing) derived from the GGM",
+   "los": "Justified P/E (leading/trailing) 由 GGM 推导",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "trap",
    "stem": "Dividend payout ratio = 50%, g = 4%, r = 10%. The analyst wants to compare against a market P/E computed on the basis of 'realized EPS over the most recent four quarters.' The justified trailing P/E that should be computed is closest to:",
@@ -18026,7 +18026,7 @@
   {
    "id": "EQ-jpb-1",
    "topic": "Equity",
-   "los": "P/B and the ROE−r relationship; justified P/B = (ROE−g)/(r−g)",
+   "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "calc",
    "stem": "ROE = 16%, required return r = 12%, long-run growth rate g = 6%. The justified P/B is closest to:",
@@ -18068,7 +18068,7 @@
   {
    "id": "EQ-pb-roe-1",
    "topic": "Equity",
-   "los": "P/B and the ROE−r relationship; justified P/B = (ROE−g)/(r−g)",
+   "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "concept",
    "stem": "Based on justified P/B = (ROE−g)/(r−g), which of the following statements is correct?",
@@ -18092,7 +18092,7 @@
   {
    "id": "EQ-evebitda-1",
    "topic": "Equity",
-   "los": "EV/EBITDA — appropriate uses and pitfalls",
+   "los": "EV/EBITDA 适用场景与陷阱",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "concept",
    "stem": "Regarding the EV/EBITDA multiple, which of the following statements is correct?",
@@ -18116,7 +18116,7 @@
   {
    "id": "EQ-peg-1",
    "topic": "Equity",
-   "los": "The use and drawbacks of the PEG ratio",
+   "los": "PEG 的用法与缺陷",
    "module": "Market-Based Valuation: Price and Enterprise Value Multiples",
    "type": "trap",
    "stem": "An analyst claims: 'A stock with a lower PEG is necessarily more undervalued than a stock with a higher PEG.' The most important problem with this claim is:",
@@ -18140,7 +18140,7 @@
   {
    "id": "EQ-ri-1stage-1",
    "topic": "Equity",
-   "los": "Single-stage RI model: V0 = BV0 + (ROE−r)×BV0/(r−g)",
+   "los": "单阶段 RI 模型: V0 = BV0 + (ROE−r)×BV0/(r−g)",
    "module": "Residual Income Valuation",
    "type": "calc",
    "stem": "Beginning book value per share BV0 = 20, long-run ROE = 14%, required return on equity r = 10%, and residual income grows in perpetuity at g = 6%. Under the single-stage RI model, the value per share is closest to:",
@@ -18182,7 +18182,7 @@
   {
    "id": "EQ-ri-omega-1",
    "topic": "Equity",
-   "los": "The persistence factor ω — meaning and impact of its value",
+   "los": "Persistence factor ω 的含义与取值影响",
    "module": "Residual Income Valuation",
    "type": "calc",
    "stem": "Book value per share BV0 = 10, next year's residual income is expected to be RI1 = 1.50, and thereafter RI decays each year by a persistence factor ω = 0.60, with r = 10%. Under the RI model, the value per share is closest to:",
@@ -18224,7 +18224,7 @@
   {
    "id": "EQ-cleansurplus-1",
    "topic": "Equity",
-   "los": "The clean surplus assumption and the consequences of violating it",
+   "los": "Clean surplus 假设及其违反的后果",
    "module": "Residual Income Valuation",
    "type": "concept",
    "stem": "The RI model relies on the clean surplus relation: BV1 = BV0 + NI − dividends. Which of the following would violate this relation?",
@@ -18248,7 +18248,7 @@
   {
    "id": "EQ-ri-applic-1",
    "topic": "Equity",
-   "los": "RI vs. DDM/FCF — appropriate use",
+   "los": "RI vs DDM/FCF 适用场景",
    "module": "Residual Income Valuation",
    "type": "concept",
    "stem": "Compared with the DDM and FCF models, the residual income model is most appropriate for which of the following companies?",
@@ -18314,7 +18314,7 @@
   {
    "id": "EQ-dloc-dlom-1",
    "topic": "Equity",
-   "los": "Combining DLOC and DLOM: total discount = 1−(1−DLOC)(1−DLOM)",
+   "los": "DLOC 与 DLOM 的叠加计算: 总折扣 = 1−(1−DLOC)(1−DLOM)",
    "module": "Private Company Valuation",
    "type": "calc",
    "stem": "A private company is valued at 100 per share on a controlling, marketable basis. For a minority, non-marketable interest, a DLOC of 20% and a DLOM of 25% apply. The value per share of that interest is closest to:",
@@ -18356,7 +18356,7 @@
   {
    "id": "EQ-pcv-methods-1",
    "topic": "Equity",
-   "los": "The three approaches: income / market / asset-based",
+   "los": "三种方法: income / market / asset-based",
    "module": "Private Company Valuation",
    "type": "concept",
    "stem": "In private company valuation, the excess earnings method and the guideline transactions method belong to which categories of approach, respectively?",
@@ -18380,7 +18380,7 @@
   {
    "id": "EQ-buildup-1",
    "topic": "Equity",
-   "los": "CAPM extensions: build-up method, expanded CAPM",
+   "los": "CAPM 扩展: build-up method, expanded CAPM",
    "module": "Private Company Valuation",
    "type": "trap",
    "stem": "When using the build-up method to estimate the required return on equity for a private company, the key difference from the expanded CAPM is:",
@@ -18404,7 +18404,7 @@
   {
    "id": "FI-forward-1",
    "topic": "FI",
-   "los": "Spot/forward/par curve relationships; forward rate model calculation",
+   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "calc",
    "stem": "The 1-year spot rate S1 = 3% and the 2-year spot rate S2 = 4% (annual compounding). The 1-year forward rate beginning 1 year from today, f(1,1), is closest to:",
@@ -18446,7 +18446,7 @@
   {
    "id": "FI-forward-2",
    "topic": "FI",
-   "los": "Spot/forward/par curve relationships; forward rate model calculation",
+   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "calc",
    "stem": "The 2-year spot rate S2 = 4% and the 3-year spot rate S3 = 5% (annual compounding). The 1-year forward rate beginning 2 years from today, f(2,1), is closest to:",
@@ -18488,7 +18488,7 @@
   {
    "id": "FI-curve-1",
    "topic": "FI",
-   "los": "Spot/forward/par curve relationships; forward rate model calculation",
+   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "concept",
    "stem": "When the yield curve is upward-sloping, the ordering of the par rate, spot rate, and forward rate at a given maturity is:",
@@ -18512,7 +18512,7 @@
   {
    "id": "FI-ride-1",
    "topic": "FI",
-   "los": "Conditions for the riding-the-yield-curve strategy",
+   "los": "Riding the yield curve 策略条件",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "concept",
    "stem": "For an investor with a 1-year investment horizon to earn excess return using the riding-the-yield-curve (rolling down the yield curve) strategy, the required condition is:",
@@ -18536,7 +18536,7 @@
   {
    "id": "FI-theory-1",
    "topic": "FI",
-   "los": "Term structure theories (pure expectations / liquidity preference / market segmentation, etc.)",
+   "los": "利率期限结构理论 (纯预期/流动性偏好/市场分割等)",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "concept",
    "stem": "Under the liquidity preference theory, an upward-sloping yield curve implies:",
@@ -18560,7 +18560,7 @@
   {
    "id": "FI-ted-1",
    "topic": "FI",
-   "los": "Meaning of swap spread, Z-spread, and TED spread",
+   "los": "Swap spread, Z-spread, TED spread 含义",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "calc",
    "stem": "Market data: 3-month Libor (MRR) = 2.10%, 3-month T-bill yield = 1.60%, 2-year swap rate = 2.80%, 2-year Treasury yield = 2.45%. The TED spread is:",
@@ -18602,7 +18602,7 @@
   {
    "id": "FI-krd-1",
    "topic": "FI",
-   "los": "Key rate duration and management of curve reshaping",
+   "los": "Key rate duration 与曲线形变管理",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "trap",
    "stem": "For a 10-year zero-coupon Treasury bond, the distribution of its key rate durations is characterized by:",
@@ -18626,7 +18626,7 @@
   {
    "id": "FI-forward-3",
    "topic": "FI",
-   "los": "Spot/forward/par curve relationships; forward rate model calculation",
+   "los": "Spot/forward/par 曲线关系; forward rate model 计算",
    "module": "The Term Structure and Interest Rate Dynamics",
    "type": "trap",
    "stem": "If future spot rates evolve exactly as implied by today's forward curve, then over a given holding period the excess return of holding a long-term bond relative to rolling over short-term bonds is:",
@@ -18650,7 +18650,7 @@
   {
    "id": "FI-tree-1",
    "topic": "FI",
-   "los": "Binomial tree: backward induction valuation",
+   "los": "Binomial tree: backward induction 定价",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "calc",
    "stem": "A 2-year annual-pay bond has a coupon rate of 4% and a face value of 100. Binomial tree rates (each node is the 1-year rate going forward, with risk-neutral probabilities of 0.5 each): the t=0 node is 3.0%; at t=1 the upper node is 4.5% and the lower node is 3.5%. Using backward induction, the current value of the bond is closest to:",
@@ -18692,7 +18692,7 @@
   {
    "id": "FI-tree-2",
    "topic": "FI",
-   "los": "Binomial tree: backward induction valuation",
+   "los": "Binomial tree: backward induction 定价",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "calc",
    "stem": "For a bond paying an annual coupon of 3%, the bond values (excluding the current coupon) at the two t=1 nodes of a binomial tree are: upper node 98.80 and lower node 100.50, each with probability 0.5. The 1-year rate at t=0 is 2.5%. The value of the bond at t=0 is closest to:",
@@ -18734,7 +18734,7 @@
   {
    "id": "FI-calib-1",
    "topic": "FI",
-   "los": "Tree calibration and the relationship to interest rate volatility (adjacent nodes ×e^{2σ})",
+   "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "calc",
    "stem": "In a lognormal binomial interest rate tree, the lower node rate in a given period is 3.00%, assuming an interest rate volatility of σ = 15%. The rate at the adjacent upper node in the same period is closest to:",
@@ -18776,7 +18776,7 @@
   {
    "id": "FI-calib-2",
    "topic": "FI",
-   "los": "Tree calibration and the relationship to interest rate volatility (adjacent nodes ×e^{2σ})",
+   "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "concept",
    "stem": "When constructing an arbitrage-free binomial interest rate tree, the direct objective of 'calibration' is:",
@@ -18800,7 +18800,7 @@
   {
    "id": "FI-mc-1",
    "topic": "FI",
-   "los": "Pathwise valuation and applicable scenarios for Monte Carlo",
+   "los": "Pathwise valuation 与 Monte Carlo 适用场景",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "concept",
    "stem": "In valuing mortgage-backed securities (MBS), the fundamental reason Monte Carlo simulation must be used instead of binomial-tree backward induction is:",
@@ -18824,7 +18824,7 @@
   {
    "id": "FI-tree-3",
    "topic": "FI",
-   "los": "Binomial tree: backward induction valuation",
+   "los": "Binomial tree: backward induction 定价",
    "module": "The Arbitrage-Free Valuation Framework",
    "type": "trap",
    "stem": "Using a calibrated binomial interest rate tree to value an option-free bond and comparing the result with discounting the cash flows directly along the current spot curve, the relationship between the two is:",
@@ -18848,7 +18848,7 @@
   {
    "id": "FI-callable-tree-1",
    "topic": "FI",
-   "los": "V_call = V_straight − V_callable; V_put analogous",
+   "los": "V_call = V_straight − V_callable; V_put 类似",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "calc",
    "stem": "A 2-year annual-pay bond has a coupon rate of 4.5% and a face value of 100. The issuer may call the bond at 100 at t=1 after the coupon is paid. Binomial tree rates (probabilities of 0.5 each): t=0 is 3.5%; at t=1 the upper node is 5.0% and the lower node is 3.0%. The current value of this callable bond is closest to:",
@@ -18890,7 +18890,7 @@
   {
    "id": "FI-optval-1",
    "topic": "FI",
-   "los": "V_call = V_straight − V_callable; V_put analogous",
+   "los": "V_call = V_straight − V_callable; V_put 类似",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "calc",
    "stem": "Valuations of three bonds from the same issuer with identical maturity and coupon: the option-free bond is 102.5, the callable bond is 99.8, and the putable bond is 104.0. The value of the embedded put option is:",
@@ -18932,7 +18932,7 @@
   {
    "id": "FI-oas-2",
    "topic": "FI",
-   "los": "OAS: definition, relationship to Z-spread, cross-bond comparison",
+   "los": "OAS: 定义、与 Z-spread 关系、跨债比较",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "concept",
    "stem": "An analyst compares two callable bonds with comparable credit and liquidity: Bond X has an OAS of 80bp, while comparable bonds cluster around an OAS of 50bp. Based on OAS, Bond X is relatively:",
@@ -18956,7 +18956,7 @@
   {
    "id": "FI-ratelevel-1",
    "topic": "FI",
-   "los": "Asymmetric effect of interest rate level changes on option value and bond price",
+   "los": "利率水平变动对期权价值与债券价格的非对称影响",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "concept",
    "stem": "When interest rates fall sharply, a callable bond exhibits 'price compression,' which means:",
@@ -18980,7 +18980,7 @@
   {
    "id": "FI-capfloor-1",
    "topic": "FI",
-   "los": "Decomposition of capped/floored FRNs",
+   "los": "Capped/floored FRN 分解",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "concept",
    "stem": "The value of a capped floater (a floating-rate note with an interest rate cap) can be decomposed as:",
@@ -19004,7 +19004,7 @@
   {
    "id": "FI-effdur-1",
    "topic": "FI",
-   "los": "Effective duration/convexity: negative convexity region of callable bonds",
+   "los": "Effective duration/convexity: callable 负凸性区域",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "calc",
    "stem": "A callable bond currently has a full price V0 = 100. After a ±50bp parallel shift of the benchmark curve and revaluation: when rates shift down 50bp the price is 101.8, and when rates shift up 50bp the price is 98.6. The bond's effective duration is closest to:",
@@ -19046,7 +19046,7 @@
   {
    "id": "FI-convexity-1",
    "topic": "FI",
-   "los": "Effective duration/convexity: negative convexity region of callable bonds",
+   "los": "Effective duration/convexity: callable 负凸性区域",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "trap",
    "stem": "Regarding the effective convexity of bonds with embedded options, which of the following statements is correct:",
@@ -19070,7 +19070,7 @@
   {
    "id": "FI-oas-3",
    "topic": "FI",
-   "los": "OAS: definition, relationship to Z-spread, cross-bond comparison",
+   "los": "OAS: 定义、与 Z-spread 关系、跨债比较",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "trap",
    "stem": "For the same callable bond (with an unchanged market price), an analyst raises the interest rate volatility assumption from 10% to 20% and recomputes the OAS. The recomputed OAS will:",
@@ -19094,7 +19094,7 @@
   {
    "id": "FI-putdir-1",
    "topic": "FI",
-   "los": "Asymmetric effect of interest rate level changes on option value and bond price",
+   "los": "利率水平变动对期权价值与债券价格的非对称影响",
    "module": "Valuation and Analysis of Bonds with Embedded Options",
    "type": "trap",
    "stem": "When interest rates rise sharply, the price of a putable bond will most likely:",
@@ -19118,7 +19118,7 @@
   {
    "id": "FI-el-1",
    "topic": "FI",
-   "los": "Expected loss = PD × LGD; relationship to recovery rate",
+   "los": "Expected loss = PD × LGD; recovery rate 关系",
    "module": "Credit Analysis Models",
    "type": "calc",
    "stem": "A bond has an exposure of 10 million, a probability of default PD = 2%, and an expected recovery rate of 40%. The expected loss is closest to:",
@@ -19160,7 +19160,7 @@
   {
    "id": "FI-model-1",
    "topic": "FI",
-   "los": "Differences in assumptions between structural and reduced-form models",
+   "los": "结构模型 vs 简约模型的假设差异",
    "module": "Credit Analysis Models",
    "type": "concept",
    "stem": "Compared with a structural model, the key difference in assumptions of a reduced-form model is:",
@@ -19184,7 +19184,7 @@
   {
    "id": "FI-cva-1",
    "topic": "FI",
-   "los": "Concept of credit valuation adjustment (CVA)",
+   "los": "Credit valuation adjustment (CVA) 概念",
    "module": "Credit Analysis Models",
    "type": "calc",
    "stem": "A 1-year zero-coupon corporate bond has a face value of 100 and the risk-free rate is 3%. If default (probability 2%) occurs at year-end, the recovery rate is 40%. The bond's CVA is closest to:",
@@ -19226,7 +19226,7 @@
   {
    "id": "FI-spreadterm-1",
    "topic": "FI",
-   "los": "Meaning of the term structure of credit spreads",
+   "los": "Credit spread 期限结构含义",
    "module": "Credit Analysis Models",
    "type": "trap",
    "stem": "For a low-rated (CCC) issuer approaching financial distress, the term structure of its credit spreads will most likely be:",
@@ -19292,7 +19292,7 @@
   {
    "id": "FI-cds-mech-1",
    "topic": "FI",
-   "los": "CDS mechanics: protection buyer/seller, trigger events",
+   "los": "CDS 机制: protection buyer/seller, 触发事件",
    "module": "Credit Default Swaps",
    "type": "concept",
    "stem": "Under a CDS contract, who makes the formal determination of whether a credit event (such as bankruptcy, failure to pay, or restructuring) has occurred for the reference entity:",
@@ -19316,7 +19316,7 @@
   {
    "id": "FI-cds-index-1",
    "topic": "FI",
-   "los": "Index CDS vs single-name; curve trades",
+   "los": "Index CDS vs single-name; 曲线交易",
    "module": "Credit Default Swaps",
    "type": "concept",
    "stem": "An investor holds an index CDS based on 125 equally weighted constituents (such as CDX IG). After a credit event occurs for one of the constituent entities:",
@@ -19340,7 +19340,7 @@
   {
    "id": "FSA-FX-funcccy-1",
    "topic": "FSA",
-   "los": "Determining the functional currency → selecting the translation method",
+   "los": "功能货币判定 → 方法选择",
    "module": "Multinational Operations",
    "type": "concept",
    "stem": "A foreign subsidiary operates autonomously: it sets sales prices, purchases, and financing in the local currency, and its cash flows are essentially not remitted to the parent. On this basis, its functional currency is determined to be the local currency. When the parent translates the subsidiary's financial statements for consolidation, it should use:",
@@ -19364,7 +19364,7 @@
   {
    "id": "FSA-FX-currentrate-1",
    "topic": "FSA",
-   "los": "Temporal vs. current rate method: exchange rate applied to each financial statement item",
+   "los": "Temporal vs current rate method: 各报表项目适用汇率",
    "module": "Multinational Operations",
    "type": "trap",
    "stem": "When translating a subsidiary's financial statements using the current rate method, which of the following items is NOT translated at the period-end current exchange rate?",
@@ -19388,7 +19388,7 @@
   {
    "id": "FSA-FX-exposure-1",
    "topic": "FSA",
-   "los": "Exposure under the two methods (net asset vs. net monetary) and where the gain/loss is reported (P&L vs. CTA/OCI)",
+   "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
    "module": "Multinational Operations",
    "type": "trap",
    "stem": "Under the temporal method, the parent's translation exposure to the subsidiary is the subsidiary's:",
@@ -19412,7 +19412,7 @@
   {
    "id": "FSA-FX-cogs-1",
    "topic": "FSA",
-   "los": "Temporal vs. current rate method: exchange rate applied to each financial statement item",
+   "los": "Temporal vs current rate method: 各报表项目适用汇率",
    "module": "Multinational Operations",
    "type": "calc",
    "stem": "A subsidiary is translated using the temporal method (FIFO costing). Beginning inventory is LC100 (exchange rate at purchase $0.80/LC), purchases during the period are LC500 (average rate $0.85/LC), ending inventory is LC120 (exchange rate at purchase $0.90/LC), and the period-end current rate is $0.92/LC. Translated COGS is closest to:",
@@ -19454,7 +19454,7 @@
   {
    "id": "FSA-FX-cta-1",
    "topic": "FSA",
-   "los": "Exposure under the two methods (net asset vs. net monetary) and where the gain/loss is reported (P&L vs. CTA/OCI)",
+   "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
    "module": "Multinational Operations",
    "type": "calc",
    "stem": "A subsidiary's functional currency is the local currency LC. Its net assets remain unchanged at LC2,000 all year (no earnings and no dividends during the year). The exchange rate depreciates from $0.50/LC at the beginning of the year to $0.45/LC at year-end. The translation effect for the year is:",
@@ -19496,7 +19496,7 @@
   {
    "id": "FSA-FX-hyperinf-1",
    "topic": "FSA",
-   "los": "Accounting for hyperinflation (IFRS restate vs. US GAAP temporal)",
+   "los": "Hyperinflation 处理 (IFRS restate vs GAAP temporal)",
    "module": "Multinational Operations",
    "type": "concept",
    "stem": "A subsidiary operates in a hyperinflationary economy (cumulative inflation over three years exceeds 100%). The requirements under IFRS and US GAAP, respectively, for translating its financial statements are:",
@@ -19520,7 +19520,7 @@
   {
    "id": "FSA-FX-ratio-1",
    "topic": "FSA",
-   "los": "Effect of the two methods on ratios (invariance of pure BS/IS ratios)",
+   "los": "两法对比率的影响 (pure BS/IS ratio 不变性)",
    "module": "Multinational Operations",
    "type": "trap",
    "stem": "After a subsidiary's statements are translated into the parent's currency using the current rate method, which of the following ratios is unchanged from before translation (local-currency basis)?",
@@ -19544,7 +19544,7 @@
   {
    "id": "FSA-pension-pbo-1",
    "topic": "FSA",
-   "los": "DB plans: components and roll-forward of the PBO (service cost, interest cost, benefits paid)",
+   "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "calc",
    "stem": "A DB plan has a beginning pension obligation of 1,000 and a discount rate of 5%. During the year, current service cost is 80, benefits paid are 60, and an actuarial loss of 30 arises at year-end from a change in actuarial assumptions. The year-end pension obligation is closest to:",
@@ -19586,7 +19586,7 @@
   {
    "id": "FSA-pension-gaapexp-1",
    "topic": "FSA",
-   "los": "IFRS vs. US GAAP: reporting of the three components of periodic pension cost (P&L vs. OCI)",
+   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "calc",
    "stem": "Under US GAAP: current service cost is 80, interest cost is 50, beginning plan assets are 900, the expected return on plan assets is 7%, and the actual return is 45. Ignoring any amortization, the pension expense recognized in P&L for the period is closest to:",
@@ -19628,7 +19628,7 @@
   {
    "id": "FSA-pension-netint-1",
    "topic": "FSA",
-   "los": "IFRS vs. US GAAP: reporting of the three components of periodic pension cost (P&L vs. OCI)",
+   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "calc",
    "stem": "Under IFRS: the beginning pension obligation is 1,000, the beginning fair value of plan assets is 800, the discount rate is 5%, and the company's long-term expected return on plan assets is 7%. The net interest cost recognized in P&L for the period is closest to:",
@@ -19670,7 +19670,7 @@
   {
    "id": "FSA-pension-assump-1",
    "topic": "FSA",
-   "los": "Direction of the effect of assumption changes (discount rate / compensation growth rate) on the liability and expense",
+   "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "concept",
    "stem": "All else equal, if the discount rate used for a DB plan rises, the effects on the pension obligation and on current service cost, respectively, are:",
@@ -19694,7 +19694,7 @@
   {
    "id": "FSA-pension-assump-2",
    "topic": "FSA",
-   "los": "Direction of the effect of assumption changes (discount rate / compensation growth rate) on the liability and expense",
+   "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "trap",
    "stem": "A company (US GAAP, final-pay DB plan) wants to lower the pension obligation reported on its balance sheet. Which of the following assumption changes would best achieve this?",
@@ -19718,7 +19718,7 @@
   {
    "id": "FSA-sbc-1",
    "topic": "FSA",
-   "los": "Share-based compensation: timing of expense recognition and measurement",
+   "los": "Share-based compensation: expense 确认时点与计量",
    "module": "Employee Compensation: Post-Employment and Share-Based",
    "type": "concept",
    "stem": "A company grants employees stock options (equity-settled, with a 3-year service/vesting period). The measurement and recognition of the related compensation expense is:",
@@ -19742,7 +19742,7 @@
   {
    "id": "FSA-interco-classify-1",
    "topic": "FSA",
-   "los": "Classification: mapping accounting methods to financial assets / associates / joint ventures / business combinations",
+   "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
    "module": "Intercorporate Investments",
    "type": "concept",
    "stem": "A company holds 25% of the voting shares of another company, can appoint a representative to its board, and participates in operating decisions, but does not have control. The appropriate accounting treatment for this investment is:",
@@ -19766,7 +19766,7 @@
   {
    "id": "FSA-interco-jv-1",
    "topic": "FSA",
-   "los": "Classification: mapping accounting methods to financial assets / associates / joint ventures / business combinations",
+   "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
    "module": "Intercorporate Investments",
    "type": "concept",
    "stem": "Two companies each hold 50% of a joint venture and share joint control. Under IFRS, the accounting treatment generally required of a venturer for its investment in the JV is:",
@@ -19790,7 +19790,7 @@
   {
    "id": "FSA-interco-equity-1",
    "topic": "FSA",
-   "los": "Equity method: initial recognition, investment income, dividends, and allocation of excess purchase price",
+   "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
    "module": "Intercorporate Investments",
    "type": "calc",
    "stem": "At the beginning of the year, an investor purchases 30% of an investee for 300 (no excess purchase price) and uses the equity method. During the year the investee reports net income of 100 and declares and pays dividends of 40. The year-end carrying value of the investment is closest to:",
@@ -19832,7 +19832,7 @@
   {
    "id": "FSA-interco-equity-2",
    "topic": "FSA",
-   "los": "Equity method: initial recognition, investment income, dividends, and allocation of excess purchase price",
+   "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
    "module": "Intercorporate Investments",
    "type": "calc",
    "stem": "An investor purchases 20% of an investee for 500. At the acquisition date the investee's net assets have a book value of 2,000 (the 20% share = 400). Of the excess purchase price of 100, 60 is attributable to undervalued PP&E (remaining life 10 years, straight-line depreciation) and the remaining 40 is goodwill. The investee reports net income of 150 for the year. The equity income the investor recognizes for the year is closest to:",
@@ -19874,7 +19874,7 @@
   {
    "id": "FSA-interco-goodwill-1",
    "topic": "FSA",
-   "los": "Full goodwill vs. partial goodwill",
+   "los": "Full goodwill vs partial goodwill",
    "module": "Intercorporate Investments",
    "type": "calc",
    "stem": "A parent acquires 80% of a subsidiary for 800. At the acquisition date the fair value of the subsidiary's identifiable net assets is 900, and the implied total fair value of the subsidiary based on the consideration paid is 1,000. The goodwill recognized under the partial goodwill method is closest to:",
@@ -19916,7 +19916,7 @@
   {
    "id": "FSA-interco-ratio-1",
    "topic": "FSA",
-   "los": "Effect of the acquisition method vs. the equity method on reported ratios",
+   "los": "Acquisition method vs equity method 对报表比率的影响",
    "module": "Intercorporate Investments",
    "type": "concept",
    "stem": "For the same investment, if the acquisition method (full consolidation) is used rather than the equity method, the consolidated parent's net profit margin will generally be:",
@@ -19940,7 +19940,7 @@
   {
    "id": "FSA-interco-impair-1",
    "topic": "FSA",
-   "los": "Impairment treatment (IFRS vs. US GAAP)",
+   "los": "Impairment 处理 (IFRS vs US GAAP)",
    "module": "Intercorporate Investments",
    "type": "trap",
    "stem": "Which of the following correctly describes the subsequent measurement of goodwill recognized in a business combination?",
@@ -19964,7 +19964,7 @@
   {
    "id": "FSA-fininst-camels-1",
    "topic": "FSA",
-   "los": "Meaning of each dimension of the CAMELS framework",
+   "los": "CAMELS 框架各维度含义",
    "module": "Analysis of Financial Institutions",
    "type": "concept",
    "stem": "In the CAMELS framework for analyzing banks, the letter \"S\" stands for:",
@@ -19988,7 +19988,7 @@
   {
    "id": "FSA-fininst-liquidity-1",
    "topic": "FSA",
-   "los": "Banks: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+   "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
    "module": "Analysis of Financial Institutions",
    "type": "concept",
    "stem": "Under the Basel framework, the Liquidity Coverage Ratio (LCR) measures a bank's:",
@@ -20012,7 +20012,7 @@
   {
    "id": "FSA-fininst-combined-1",
    "topic": "FSA",
-   "los": "Insurance: key ratios for P&C vs. life (combined ratio, etc.)",
+   "los": "保险: P&C vs life 的关键比率 (combined ratio 等)",
    "module": "Analysis of Financial Institutions",
    "type": "calc",
    "stem": "A P&C insurer has net premiums earned of 100, losses and loss adjustment expenses of 70, and underwriting expenses of 25. Its combined ratio and the underwriting conclusion are:",
@@ -20054,7 +20054,7 @@
   {
    "id": "FSA-fininst-cet1-1",
    "topic": "FSA",
-   "los": "Banks: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+   "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
    "module": "Analysis of Financial Institutions",
    "type": "trap",
    "stem": "Which of the following is NOT included in a bank's Common Equity Tier 1 (CET1) capital?",
@@ -20078,7 +20078,7 @@
   {
    "id": "FSA-quality-spectrum-1",
    "topic": "FSA",
-   "los": "Distinguishing reporting quality from earnings quality, and the quality spectrum",
+   "los": "报告质量 vs 盈余质量的区分与频谱",
    "module": "Evaluating Quality of Financial Reports",
    "type": "concept",
    "stem": "A company's financial statements fully comply with GAAP and are adequately and neutrally disclosed, but this year's earnings come mainly from a one-time gain on the disposal of its headquarters building. The correct assessment of its reporting quality and earnings quality is:",
@@ -20102,7 +20102,7 @@
   {
    "id": "FSA-quality-mscore-1",
    "topic": "FSA",
-   "los": "Direction and meaning of the variables in the Beneish M-score / Altman Z-score",
+   "los": "Beneish M-score / Altman Z-score 变量方向含义",
    "module": "Evaluating Quality of Financial Reports",
    "type": "trap",
    "stem": "A company's Beneish M-score rises from −2.5 to −1.5. The correct interpretation of this change is:",
@@ -20126,7 +20126,7 @@
   {
    "id": "FSA-quality-classify-1",
    "topic": "FSA",
-   "los": "Common manipulation techniques: revenue recognition, classification shifting, reserve management",
+   "los": "常见操纵手法: 收入确认、分类腾挪、准备金调节",
    "module": "Evaluating Quality of Financial Reports",
    "type": "trap",
    "stem": "An IFRS-reporting company changes the presentation of interest paid from operating activities (CFO) to financing activities (CFF) (IFRS permits this choice). The effect of this reclassification is:",
@@ -20150,7 +20150,7 @@
   {
    "id": "FSA-quality-cfo-1",
    "topic": "FSA",
-   "los": "Cash flow quality signals",
+   "los": "现金流质量信号",
    "module": "Evaluating Quality of Financial Reports",
    "type": "concept",
    "stem": "When assessing earnings quality, the correct judgment about the relationship between operating cash flow (CFO) and net income (NI) is:",
@@ -20174,7 +20174,7 @@
   {
    "id": "FSA-integ-dupont-1",
    "topic": "FSA",
-   "los": "Using the extended DuPont decomposition to locate the problem",
+   "los": "DuPont 扩展分解定位问题",
    "module": "Integration of Financial Statement Analysis Techniques",
    "type": "calc",
    "stem": "Five-factor DuPont data: tax burden (NI/EBT) = 0.75, interest burden (EBT/EBIT) = 0.90, EBIT margin = 20%, asset turnover = 1.2, financial leverage = 2.0. ROE is closest to:",
@@ -20216,7 +20216,7 @@
   {
    "id": "FSA-integ-equity-1",
    "topic": "FSA",
-   "los": "Combined effect of accounting adjustments on ratios (off-balance-sheet items, stripping out equity-method results, etc.)",
+   "los": "会计调整对比率的综合影响 (表外、equity method 剥离等)",
    "module": "Integration of Financial Statement Analysis Techniques",
    "type": "concept",
    "stem": "When assessing a company's core operating profitability, analysts often remove equity-method income from associates from net income before computing net profit margin, because:",
@@ -20242,7 +20242,7 @@
    "case": "CASE-FSA-pension-1",
    "topic": "FSA",
    "module": "Employee Compensation: Post-Employment and Share-Based",
-   "los": "DB plan: composition and roll-forward of the PBO (service cost, interest cost, benefits paid)",
+   "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
    "type": "calc",
    "stem": "Based on Exhibit 1 (no actuarial changes), the ending PBO is closest to:",
    "choices": {
@@ -20285,7 +20285,7 @@
    "case": "CASE-FSA-pension-1",
    "topic": "FSA",
    "module": "Employee Compensation: Post-Employment and Share-Based",
-   "los": "IFRS vs US GAAP: allocation of the three components of periodic pension cost (P&L vs OCI)",
+   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
    "type": "calc",
    "stem": "Under IFRS, the pension expense recognized in P&L for the current year is closest to:",
    "choices": {
@@ -20328,7 +20328,7 @@
    "case": "CASE-FSA-pension-1",
    "topic": "FSA",
    "module": "Employee Compensation: Post-Employment and Share-Based",
-   "los": "IFRS vs US GAAP: allocation of the three components of periodic pension cost (P&L vs OCI)",
+   "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
    "type": "concept",
    "stem": "The difference of 18 between the actual return on plan assets of 63 and the interest income on plan assets recognized in P&L should, under IFRS, be:",
    "choices": {

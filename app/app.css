@@ -219,8 +219,8 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .lesson-card h2 { font-size: 1.05rem; margin-bottom: 8px; font-weight: 700; }
 .lesson-body { font-size: 1.02rem; line-height: 1.7; }
 .lesson-body .kw { color: var(--accent); font-weight: 700; }
-.lesson-body .hl, .single-expl .hl, .ans .hl { background: linear-gradient(transparent 55%, rgba(240,180,60,.55) 55%); padding: 0 2px; border-radius: 2px; font-weight: 600; }
-@media (prefers-color-scheme: dark){ .lesson-body .hl { background: linear-gradient(transparent 55%, rgba(240,160,40,.4) 55%); } }
+.lesson-body .hl, .single-expl .hl, .ans .hl, .casebg .hl, .casebul .hl { background: linear-gradient(transparent 55%, rgba(240,180,60,.55) 55%); padding: 0 2px; border-radius: 2px; font-weight: 600; }
+@media (prefers-color-scheme: dark){ .lesson-body .hl, .casebg .hl, .casebul .hl { background: linear-gradient(transparent 55%, rgba(240,160,40,.4) 55%); } }
 .lk-what    { border-left-color: var(--green);  background: var(--green-soft); }
 .lk-what h2 { color: var(--green); }
 .lk-formula { border-left-color: var(--accent); background: var(--accent-soft); }
@@ -239,7 +239,11 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 /* Case/vignette 面板 */
 .casebox { margin-bottom: 14px; border: 1.5px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--accent-soft); }
 .casebox summary { cursor: pointer; font-size: .9rem; font-weight: 600; }
-.casebg { font-size: .88rem; margin: 10px 0; white-space: pre-wrap; }
+.casebg { font-size: .88rem; margin: 9px 0; line-height: 1.62; }
+.casebg:first-of-type { margin-top: 10px; }
+.casebul { margin: 8px 0 8px 2px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.casebul li { font-size: .88rem; line-height: 1.55; padding-left: 18px; position: relative; }
+.casebul li::before { content: ''; position: absolute; left: 3px; top: .58em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 .extitle { font-size: .8rem; font-weight: 700; color: var(--accent); margin: 8px 0 4px; }
 .exwrap { overflow-x: auto; }
 .extable { border-collapse: collapse; font-size: .82rem; min-width: 100%; }
