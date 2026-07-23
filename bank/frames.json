@@ -42,14 +42,14 @@
   },
   "Equity": {
     "Equity Valuation: Applications and Processes": [
-      { "t": "感知错价 V_E−P = 真实错价(V−P) + 估值误差(V_E−V)", "f": 1, "los": "内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)" },
+      { "t": "感知错价 $V_E-P$ = 真实错价$(V-P)$ + 估值误差$(V_E-V)$", "f": 1, "los": "内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)" },
       { "t": "绝对估值(DDM/FCF/RI)给内在价值;相对估值(乘数)给相对贵贱;SOTP 对多元集团,常现 conglomerate discount", "los": "绝对 vs 相对估值模型适用场景" }
     ],
     "Discounted Dividend Valuation": [
-      { "t": "GGM: V0 = D1/(r−g);注意题给 D0 要 ×(1+g)", "f": 1, "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报" },
-      { "t": "两阶段:高增长期逐年折现 + 终值 Dn+1/(r−g) 折 n 期(分子用 n+1 期股利、折 n 期是高频错点)", "f": 1, "trap": 1, "los": "两阶段/H-model 计算与适用" },
-      { "t": "H-model: V0 = [D0(1+gL) + D0×H×(gS−gL)]/(r−gL),H=转换期一半", "f": 1, "los": "两阶段/H-model 计算与适用" },
-      { "t": "P0 = E1/r + PVGO;PVGO>0 需 ROE>r,成长股 PVGO 占比高", "f": 1, "los": "PVGO 分解: E/r + PVGO" },
+      { "t": "GGM: $V_0 = \\frac{D_1}{r-g}$;注意题给 $D_0$ 要 $\\times(1+g)$", "f": 1, "los": "GGM: 公式、敏感性、隐含增长率/隐含要求回报" },
+      { "t": "两阶段:高增长期逐年折现 + 终值 $\\frac{D_{n+1}}{r-g}$ 折 n 期(分子用 n+1 期股利、折 n 期是高频错点)", "f": 1, "trap": 1, "los": "两阶段/H-model 计算与适用" },
+      { "t": "H-model: $V_0 = \\frac{D_0(1+g_L) + D_0\\times H\\times(g_S-g_L)}{r-g_L}$,H=转换期一半", "f": 1, "los": "两阶段/H-model 计算与适用" },
+      { "t": "$P_0 = \\frac{E_1}{r} + PVGO$;PVGO>0 需 ROE>r,成长股 PVGO 占比高", "f": 1, "los": "PVGO 分解: E/r + PVGO" },
       { "t": "g = b×ROE(b=留存率=1−payout);别把 payout 当 b", "f": 1, "trap": 1, "los": "SGR = b × ROE (与 PRAT 扩展)" }
     ],
     "Free Cash Flow Valuation": [
@@ -59,15 +59,15 @@
       { "t": "股权价值 = FCFF模型企业价值 − 债务市值;别忘减债再除股数", "trap": 1, "los": "单阶段/两阶段 FCF 模型计算" }
     ],
     "Market-Based Valuation: Price and Enterprise Value Multiples": [
-      { "t": "Justified leading P/E = payout/(r−g);trailing = payout(1+g)/(r−g),差 (1+g) 倍", "f": 1, "trap": 1, "los": "Justified P/E (leading/trailing) 由 GGM 推导" },
-      { "t": "Justified P/B = (ROE−g)/(r−g);ROE>r 时 P/B>1", "f": 1, "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)" },
+      { "t": "Justified leading P/E = $\\frac{payout}{r-g}$;trailing = $\\frac{payout(1+g)}{r-g}$,差 $(1+g)$ 倍", "f": 1, "trap": 1, "los": "Justified P/E (leading/trailing) 由 GGM 推导" },
+      { "t": "Justified P/B = $\\frac{ROE-g}{r-g}$;ROE>r 时 P/B>1", "f": 1, "los": "P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)" },
       { "t": "EV/EBITDA:跨资本结构可比、EPS为负也能用;忽略 capex 差异是缺陷", "los": "EV/EBITDA 适用场景与陷阱" },
       { "t": "PEG 低≠便宜:未调风险、g 与价值非线性", "trap": 1, "los": "PEG 的用法与缺陷" }
     ],
     "Residual Income Valuation": [
-      { "t": "RI = NI − re×BV0 = (ROE−re)×BV0;equity charge 用期初 BV", "f": 1, "trap": 1, "los": "RI = NI − re×BV0 = (ROE−re)×BV0" },
-      { "t": "单阶段: V0 = BV0 + (ROE−r)×BV0/(r−g)", "f": 1, "los": "单阶段 RI 模型: V0 = BV0 + (ROE−r)×BV0/(r−g)" },
-      { "t": "ω∈[0,1]:ω=1 RI 永续;ω=0 立即消失;终值项 RI_T/(1+r−ω)", "f": 1, "los": "Persistence factor ω 的含义与取值影响" },
+      { "t": "$RI = NI - r_e\\times BV_0 = (ROE - r_e)\\times BV_0$;equity charge 用期初 BV", "f": 1, "trap": 1, "los": "RI = NI − re×BV0 = (ROE−re)×BV0" },
+      { "t": "单阶段: $V_0 = BV_0 + \\frac{(ROE-r)\\times BV_0}{r-g}$", "f": 1, "los": "单阶段 RI 模型: V0 = BV0 + (ROE−r)×BV0/(r−g)" },
+      { "t": "ω∈[0,1]:ω=1 RI 永续;ω=0 立即消失;终值项 $\\frac{RI_T}{1+r-\\omega}$", "f": 1, "los": "Persistence factor ω 的含义与取值影响" },
       { "t": "Clean surplus 要求 BV1 = BV0+NI−Div;OCI 绕道(FX折算、AFS)会破坏,需调整", "trap": 1, "los": "Clean surplus 假设及其违反的后果" },
       { "t": "RI 适用:不分红/FCF为负/终值不确定性高(价值前置于 BV)", "los": "RI vs DDM/FCF 适用场景" }
     ],
@@ -80,7 +80,7 @@
   },
   "FI": {
     "The Term Structure and Interest Rate Dynamics": [
-      { "t": "Forward 定价: (1+z_{A+B})^{A+B} = (1+z_A)^A × (1+f(A,B))^B", "f": 1, "los": "Spot/forward/par 曲线关系; forward rate model 计算" },
+      { "t": "Forward 定价: $(1+z_{A+B})^{A+B} = (1+z_A)^A \\times (1+f(A,B))^B$", "f": 1, "los": "Spot/forward/par 曲线关系; forward rate model 计算" },
       { "t": "上行曲线:forward > spot > par;若未来 spot 走成 forward,持有各债回报同为一期 spot", "los": "Spot/forward/par 曲线关系; forward rate model 计算" },
       { "t": "Riding the curve:曲线上行且预期不变时,买长于持有期的债赚 roll-down", "los": "Riding the yield curve 策略条件" },
       { "t": "Swap spread = swap rate − 同期国债;TED = Libor − T-bill;Z-spread 加在整条 spot 曲线上", "f": 1, "los": "Swap spread, Z-spread, TED spread 含义" },
@@ -88,16 +88,16 @@
       { "t": "Key rate duration:对单一期限点利率的敏感度,管理非平行移动", "los": "Key rate duration 与曲线形变管理" }
     ],
     "The Arbitrage-Free Valuation Framework": [
-      { "t": "Backward induction:节点值 = 0.5×[(Vu+C)+(Vd+C)]/(1+r);风险中性概率各 0.5", "f": 1, "los": "Binomial tree: backward induction 定价" },
-      { "t": "相邻节点利率关系:r_up = r_down × e^{2σ};校准树必须复现无权债市价", "f": 1, "trap": 1, "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})" },
+      { "t": "Backward induction:节点值 = $\\frac{0.5\\times[(V_u+C)+(V_d+C)]}{1+r}$;风险中性概率各 0.5", "f": 1, "los": "Binomial tree: backward induction 定价" },
+      { "t": "相邻节点利率关系:$r_{up} = r_{down}\\times e^{2\\sigma}$;校准树必须复现无权债市价", "f": 1, "trap": 1, "los": "Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})" },
       { "t": "路径依赖现金流(MBS)→ Monte Carlo;无路径依赖 → binomial 树即可", "los": "Pathwise valuation 与 Monte Carlo 适用场景" }
     ],
     "Valuation and Analysis of Bonds with Embedded Options": [
-      { "t": "V_callable = V_straight − V_call;V_putable = V_straight + V_put", "f": 1, "los": "V_call = V_straight − V_callable; V_put 类似" },
+      { "t": "$V_{callable} = V_{straight} - V_{call}$;$V_{putable} = V_{straight} + V_{put}$", "f": 1, "los": "V_call = V_straight − V_callable; V_put 类似" },
       { "t": "波动率↑ → 期权都更值钱 → callable↓、putable↑;无权债与 σ 无关", "trap": 1, "los": "波动率↑对 callable↓/putable↑ 的方向" },
       { "t": "利率降 → call 值↑压制涨幅(负凸性);利率升 → put 托底跌幅", "los": "利率水平变动对期权价值与债券价格的非对称影响" },
       { "t": "OAS = 去期权后的利差:同评级比较,OAS 大 = cheap;σ假设↑ → callable 的 OAS↓", "trap": 1, "los": "OAS: 定义、与 Z-spread 关系、跨债比较" },
-      { "t": "Effective duration = (V− − V+)/(2×V0×Δy);callable 低利率区负凸", "f": 1, "los": "Effective duration/convexity: callable 负凸性区域" },
+      { "t": "Effective duration = $\\frac{V_- - V_+}{2\\times V_0\\times\\Delta y}$;callable 低利率区负凸", "f": 1, "los": "Effective duration/convexity: callable 负凸性区域" },
       { "t": "Capped FRN = straight FRN − cap;floored FRN = straight + floor", "f": 1, "los": "Capped/floored FRN 分解" }
     ],
     "Credit Analysis Models": [

@@ -457,7 +457,7 @@
         },
         {
           "h": "核心公式",
-          "b": "ROE = tax burden (NI/EBT) × interest burden (EBT/EBIT) × EBIT margin (EBIT/Rev) × asset turnover (Rev/Assets) × leverage (Assets/Equity)，五个因子连乘。"
+          "b": "ROE = tax burden ($\\frac{NI}{EBT}$) × interest burden ($\\frac{EBT}{EBIT}$) × EBIT margin ($\\frac{EBIT}{Rev}$) × asset turnover ($\\frac{Rev}{Assets}$) × leverage ($\\frac{Assets}{Equity}$)，五个因子连乘。"
         },
         {
           "h": "迷你算例",
