@@ -1,37 +1,58 @@
 /* 交互式脑图 (零依赖 SVG) —— 双指缩放/拖动平移, 手机可用。
- * 数据: {name, children:[{name, mark, weak, children:[...]}]} 层级树。 */
+ * 节点框随文字自动扩大 (完整显示, 不截断), 按分支 color-code。
+ * 数据: {name, full?, children:[...], f?, trap?, weak?, kind?} 层级树。 */
 'use strict';
 
 const MindMap = (() => {
   const NS = 'http://www.w3.org/2000/svg';
-  const ROW = 30, COLGAP = 46, PADX = 14, PADY = 7, LINE = 15;
+  const COLGAP = 52, PADX = 12, PADY = 8, LINE = 17, GAPY = 10;
 
-  function wrap(text, max) {
-    const words = String(text).split(/(\s+)/);
+  // 用 canvas 精确测量文字宽度 → 框一定装得下, 不溢出
+  const _mc = document.createElement('canvas').getContext('2d');
+  function font(depth) {
+    const size = depth === 0 ? 14 : depth === 1 ? 13 : 12;
+    const weight = depth <= 1 ? 600 : 400;
+    return `${weight} ${size}px system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif`;
+  }
+  function measure(text, f) { _mc.font = f; return _mc.measureText(text).width; }
+
+  // 按像素宽度换行: CJK 逐字可断, 英文按词断; 不做 3 行截断, 全文显示
+  function wrap(text, f, maxW) {
+    const s = String(text);
+    // 切成 token: 连续 ASCII(单词) 或 单个非 ASCII 字符
+    const tokens = s.match(/[\x00-\xff]+|[^\x00-\xff]/g) || [s];
     const lines = []; let cur = '';
-    for (const w of words) {
-      if ((cur + w).length > max && cur) { lines.push(cur.trim()); cur = w; }
-      else cur += w;
+    for (let tk of tokens) {
+      const parts = /[\x00-\xff]/.test(tk) ? tk.split(/(\s+)/) : [tk];
+      for (const p of parts) {
+        if (!p) continue;
+        const test = cur + p;
+        if (cur && measure(test, f) > maxW) { lines.push(cur); cur = p.replace(/^\s+/, ''); }
+        else cur = test;
+      }
     }
-    if (cur.trim()) lines.push(cur.trim());
-    return lines.slice(0, 3);
+    if (cur.trim()) lines.push(cur);
+    return lines.length ? lines : [s];
   }
 
-  // 计算布局: 横向树, 叶子逐行排, 父节点取子节点纵向中点
-  function layout(node, depth, maxChars) {
+  function layout(node, depth) {
     node.depth = depth;
-    node.lines = wrap(node.name, maxChars[Math.min(depth, maxChars.length - 1)]);
+    const f = font(depth);
+    // 深层节点用窄一点的换行宽度, 让树不至于太宽
+    const maxW = depth === 0 ? 200 : depth === 1 ? 220 : depth === 2 ? 240 : 260;
+    node.lines = wrap(node.name, f, maxW);
+    let w = 0;
+    for (const l of node.lines) w = Math.max(w, measure(l, f));
+    node.w = Math.ceil(w) + PADX * 2;
     node.h = node.lines.length * LINE + PADY * 2;
-    if (node.children && node.children.length) {
-      node.children.forEach(c => layout(c, depth + 1, maxChars));
-    }
+    if (node.children && node.children.length) node.children.forEach(c => layout(c, depth + 1));
     return node;
   }
 
   function assignY(node, cursor) {
     if (!node.children || !node.children.length) {
       node.y = cursor.y + node.h / 2;
-      cursor.y += Math.max(node.h, ROW) + 8;
+      cursor.y += node.h + GAPY;
       return node.y;
     }
     const ys = node.children.map(c => assignY(c, cursor));
@@ -39,66 +60,83 @@ const MindMap = (() => {
     return node.y;
   }
 
-  function colWidth(nodes, maxChars, depth) {
-    let w = 0;
-    for (const n of nodes) w = Math.max(w, estWidth(n));
-    return w;
-  }
-  function estWidth(node) {
-    let m = 0;
-    for (const l of node.lines) m = Math.max(m, l.length);
-    return m * 7.6 + PADX * 2;
-  }
-
   function collectByDepth(root) {
     const byd = [];
-    (function walk(n) {
-      (byd[n.depth] = byd[n.depth] || []).push(n);
-      (n.children || []).forEach(walk);
-    })(root);
+    (function walk(n) { (byd[n.depth] = byd[n.depth] || []).push(n); (n.children || []).forEach(walk); })(root);
     return byd;
+  }
+
+  // ---- 配色 (按 depth-1 分支分色, 子孙继承同色系; 支持深浅色主题) ----
+  const HUES = [222, 158, 28, 280, 340, 130, 45, 194, 0, 258, 96, 312];
+  function isDark() {
+    const bg = getComputedStyle(document.body).backgroundColor || 'rgb(255,255,255)';
+    const m = bg.match(/\d+/g);
+    if (!m) return false;
+    const [r, g, b] = m.map(Number);
+    return (0.299 * r + 0.587 * g + 0.114 * b) < 128;
+  }
+  function palette(node, dark) {
+    // 特殊态优先
+    if (node.weak) return dark
+      ? { fill: '#3a1418', stroke: '#f87171', text: '#fca5a5' }
+      : { fill: '#fef2f2', stroke: '#dc2626', text: '#b91c1c' };
+    const hue = node.hue == null ? 222 : node.hue;
+    if (node.depth === 0) return { fill: `hsl(${hue},70%,52%)`, stroke: `hsl(${hue},70%,42%)`, text: '#fff' };
+    if (node.trap) return dark
+      ? { fill: `hsl(38,45%,16%)`, stroke: `hsl(38,80%,55%)`, text: `hsl(40,85%,72%)` }
+      : { fill: `hsl(45,90%,94%)`, stroke: `hsl(38,85%,52%)`, text: `hsl(32,75%,38%)` };
+    if (node.f) return dark
+      ? { fill: `hsl(150,35%,15%)`, stroke: `hsl(150,55%,45%)`, text: `hsl(150,55%,72%)` }
+      : { fill: `hsl(150,60%,94%)`, stroke: `hsl(150,50%,45%)`, text: `hsl(155,55%,30%)` };
+    const d = Math.min(node.depth, 4);
+    if (dark) {
+      const L = [0, 20, 17, 15, 14][d];
+      return { fill: `hsl(${hue},30%,${L}%)`, stroke: `hsl(${hue},40%,42%)`, text: `hsl(${hue},35%,82%)` };
+    }
+    const L = [0, 90, 94, 96, 97][d];
+    return { fill: `hsl(${hue},62%,${L}%)`, stroke: `hsl(${hue},48%,60%)`, text: `hsl(${hue},42%,30%)` };
   }
 
   function render(container, tree, opts) {
     opts = opts || {};
     container.innerHTML = '';
-    const maxChars = [14, 18, 24];
-    layout(tree, 0, maxChars);
+    const dark = isDark();
+    layout(tree, 0);
+    // 给每条 depth-1 分支分配一个色相, 子孙继承
+    (tree.children || []).forEach((c, i) => {
+      const hue = HUES[i % HUES.length];
+      (function paint(n) { n.hue = hue; (n.children || []).forEach(paint); })(c);
+    });
+    tree.hue = 222;
     assignY(tree, { y: PADY });
     const byd = collectByDepth(tree);
-    // 每层 x = 前面各层最大宽度累加
     const colX = [PADX];
     for (let d = 0; d < byd.length; d++) {
-      const w = colWidth(byd[d]);
-      byd[d].forEach(n => { n.x = colX[d]; n.w = Math.max(estWidth(n), 80); });
+      let w = 0;
+      for (const n of byd[d]) w = Math.max(w, n.w);
+      byd[d].forEach(n => { n.x = colX[d]; });
       colX[d + 1] = colX[d] + w + COLGAP;
     }
     let maxY = 0, maxX = 0;
-    (function b(n) { maxY = Math.max(maxY, n.y + n.h); maxX = Math.max(maxX, n.x + (n.w || 100)); (n.children || []).forEach(b); })(tree);
+    (function b(n) { maxY = Math.max(maxY, n.y + n.h / 2); maxX = Math.max(maxX, n.x + n.w); (n.children || []).forEach(b); })(tree);
 
     const svg = document.createElementNS(NS, 'svg');
     svg.setAttribute('width', maxX + PADX);
     svg.setAttribute('height', maxY + PADY);
-    svg.style.cssText = 'font-family:system-ui,sans-serif;';
     const g = document.createElementNS(NS, 'g');
     svg.appendChild(g);
+    const edgeCol = dark ? 'rgba(255,255,255,.22)' : 'rgba(0,0,0,.18)';
 
-    const accent = getComputedStyle(document.body).getPropertyValue('--accent') || '#2563eb';
-    const border = getComputedStyle(document.body).getPropertyValue('--border') || '#ccc';
-    const cardBg = getComputedStyle(document.body).getPropertyValue('--card') || '#fff';
-    const textCol = getComputedStyle(document.body).getPropertyValue('--text') || '#111';
-    const red = getComputedStyle(document.body).getPropertyValue('--red') || '#dc2626';
-
-    // 连线
+    // 连线 (贝塞尔)
     (function edges(n) {
       for (const c of n.children || []) {
-        const x1 = n.x + n.w, y1 = n.y, x2 = c.x, y2 = c.y;
-        const mid = (x1 + x2) / 2;
+        const x1 = n.x + n.w, y1 = n.y, x2 = c.x, y2 = c.y, mid = (x1 + x2) / 2;
         const path = document.createElementNS(NS, 'path');
         path.setAttribute('d', `M${x1},${y1} C${mid},${y1} ${mid},${y2} ${x2},${y2}`);
         path.setAttribute('fill', 'none');
-        path.setAttribute('stroke', c.weak ? red : border);
-        path.setAttribute('stroke-width', n.depth === 0 ? 2 : 1.2);
+        path.setAttribute('stroke', c.weak ? '#dc2626' : (c.hue != null ? `hsl(${c.hue},45%,${dark ? 50 : 62}%)` : edgeCol));
+        path.setAttribute('stroke-width', n.depth === 0 ? 2.2 : 1.3);
+        path.setAttribute('opacity', n.depth === 0 ? 0.9 : 0.55);
         g.appendChild(path);
         edges(c);
       }
@@ -108,24 +146,27 @@ const MindMap = (() => {
     const allNodes = [];
     (function nodes(n) {
       allNodes.push(n);
+      const pal = palette(n, dark);
       const rect = document.createElementNS(NS, 'rect');
       rect.setAttribute('x', n.x); rect.setAttribute('y', n.y - n.h / 2);
       rect.setAttribute('width', n.w); rect.setAttribute('height', n.h);
-      rect.setAttribute('rx', 8);
-      const isRoot = n.depth === 0, isMod = n.depth === 1;
-      rect.setAttribute('fill', isRoot ? accent : cardBg);
-      rect.setAttribute('stroke', n.weak ? red : (isMod ? accent : border));
-      rect.setAttribute('stroke-width', n.weak ? 2 : 1.2);
+      rect.setAttribute('rx', 9);
+      rect.setAttribute('fill', pal.fill);
+      rect.setAttribute('stroke', pal.stroke);
+      rect.setAttribute('stroke-width', n.weak ? 2.2 : (n.depth <= 1 ? 1.6 : 1.2));
       rect.style.cursor = 'pointer';
       g.appendChild(rect);
+      // 角标: 𝑓 公式 / ⚠ 陷阱 / 🔴 弱点
+      const tag = n.weak ? '🔴' : n.trap ? '⚠️' : n.f ? '𝑓' : '';
       n.lines.forEach((ln, i) => {
         const t = document.createElementNS(NS, 'text');
         t.setAttribute('x', n.x + PADX);
-        t.setAttribute('y', n.y - n.h / 2 + PADY + LINE * (i + 0.75));
-        t.setAttribute('font-size', isRoot ? 13 : isMod ? 12 : 11);
-        t.setAttribute('font-weight', isRoot || isMod ? 600 : 400);
-        t.setAttribute('fill', isRoot ? '#fff' : (n.weak ? red : textCol));
-        t.textContent = (i === 0 ? (n.mark || '') : '') + ln;
+        t.setAttribute('y', n.y - n.h / 2 + PADY + LINE * i + LINE * 0.72);
+        t.setAttribute('font-size', n.depth === 0 ? 14 : n.depth === 1 ? 13 : 12);
+        t.setAttribute('font-weight', n.depth <= 1 ? 600 : 400);
+        t.setAttribute('fill', pal.text);
+        t.setAttribute('font-family', 'system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif');
+        t.textContent = (i === 0 && tag ? tag + ' ' : '') + ln;
         g.appendChild(t);
       });
       (n.children || []).forEach(nodes);
@@ -145,10 +186,9 @@ const MindMap = (() => {
     svg.setAttribute('height', ch);
     apply();
 
-    // 定位到某节点: 居中 + 放大到易读
     function focus(node, targetScale) {
       const ns = targetScale || Math.min(1.3, Math.max(0.6, 300 / node.w));
-      const nx = node.x + node.w / 2, ny = node.y;   // 节点中心(内容坐标)
+      const nx = node.x + node.w / 2, ny = node.y;
       scale = ns;
       tx = cw / 2 - nx * scale;
       ty = ch / 2 - ny * scale;
@@ -195,7 +235,7 @@ const MindMap = (() => {
       }
     });
     const up = e => {
-      if (pointers.size === 1 && moved < 8 && opts.onNodeTap) {   // 轻点(非拖动) → 命中节点
+      if (pointers.size === 1 && moved < 8 && opts.onNodeTap) {
         const n = hitTest(e.clientX, e.clientY);
         if (n) opts.onNodeTap(n, focus);
       }

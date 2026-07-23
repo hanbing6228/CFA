@@ -842,21 +842,15 @@ function renderFrames() {
   const meta = Store.bank.topics[FRAME_TOPIC] || {};
 
   if (FRAME_VIEW === 'map') {
-    main.appendChild(el('p', 'muted', `双指缩放 · 拖动平移 · 🔴 弱点 · 𝑓 公式 · ⚠️ 陷阱`));
-    // 短标签 (节点只显短, 全文进详情卡)
-    const shortLabel = s => {
-      const t = String(s).replace(/\$/g, '').replace(/[（(].*?[)）]/g, '');
-      const cut = t.split(/[:：,，;；。\n]/)[0];
-      return (cut.length > 14 ? cut.slice(0, 14) + '…' : cut) || t.slice(0, 14);
-    };
+    main.appendChild(el('p', 'muted', `双指缩放 · 拖动平移 · 点节点看详情 · 🔴 弱点 · 𝑓 公式 · ⚠️ 陷阱`));
     const full = Store.bank.framesFull || {};
     let tree;
     if (full[FRAME_TOPIC]) {
-      // 完整原版树 (从框架脑图逐节点提取, 任意深度)
+      // 完整原版树 (从框架脑图逐节点提取, 任意深度); 节点显示完整文字, 框随字扩大
       const conv = (node) => {
         const out = {
-          name: (node.f ? '𝑓 ' : '') + (node.trap ? '⚠ ' : '') + shortLabel(node.name),
-          full: node.name, module: FRAME_TOPIC, los: '', f: node.f, trap: node.trap,
+          name: node.name, full: node.name, module: FRAME_TOPIC, los: '',
+          f: node.f, trap: node.trap,
           kind: node.children && node.children.length ? 'module' : 'point',
         };
         if (node.children && node.children.length) out.children = node.children.map(conv);
@@ -867,12 +861,12 @@ function renderFrames() {
     } else {
       tree = { name: `${FRAME_TOPIC}`, full: `${FRAME_TOPIC} ${meta.name_cn || ''}`, kind: 'root', children: [] };
       for (const [mod, lines] of Object.entries(frames[FRAME_TOPIC])) {
-        const mnode = { name: mod.length > 14 ? mod.slice(0, 14) + '…' : mod, full: mod, kind: 'module', module: mod, children: [] };
+        const mnode = { name: mod, full: mod, kind: 'module', module: mod, children: [] };
         for (const ln of lines) {
           const weak = ln.los && weakSet.has(FRAME_TOPIC + '|' + ln.los);
           mnode.children.push({
-            name: (ln.f ? '𝑓 ' : '') + (ln.trap ? '⚠ ' : '') + shortLabel(ln.t),
-            full: ln.t, los: ln.los || '', module: mod, f: ln.f, trap: ln.trap, weak, kind: 'point',
+            name: ln.t, full: ln.t, los: ln.los || '', module: mod,
+            f: ln.f, trap: ln.trap, weak, kind: 'point',
           });
         }
         if (mnode.children.some(c => c.weak)) mnode.weak = true;
