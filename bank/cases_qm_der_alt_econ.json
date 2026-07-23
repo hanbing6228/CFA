@@ -1,0 +1,3528 @@
+{
+  "cases": [
+    {
+      "id": "QM-silva",
+      "topic": "QM",
+      "title": "Alice Silva -- Construction Spending Time Series",
+      "background": "Alice Silva is a quantitative analyst focusing on the real estate sector. Silva studies the extent to which private construction spending is affected by public construction spending. She collects data (in $ millions) on total private (PRIV) and public (PUBL) construction spending for the last 363 months and log-transforms both time series. To determine whether the two log-transformed time series are cointegrated, Silva tests the following null hypotheses: Null Hypothesis 1: ln(PRIVt) has a unit root. Null Hypothesis 2: ln(PUBLt) has a unit root. Null Hypothesis 3: The error term of the linear regression between ln(PRIVt) and ln(PUBLt) has a unit root. Silva forecasts future private construction spending. She estimates an autoregressive model of order 1 (AR(1)), where dln(PRIVt) = ln(PRIVt) - ln(PRIVt-1), using the estimates in Exhibit 1 to determine the mean-reverting level of dln(PRIVt). Next, Silva estimates an AR(1) model for public construction spending, where dln(PUBLt) = ln(PUBLt) - ln(PUBLt-1). She calculates the residuals (e) and squared residuals (e^2) of the AR(1) model and estimates two linear regressions: Residual Regression 1: et = a0 + a1*et-1 + ut; Residual Regression 2: et^2 = a0 + a1*et-1^2 + ut. The t-statistic for the slope coefficients (a1) is 0.70 for Residual Regression 1 and 2.94 for Residual Regression 2. The relevant critical value for these tests is 1.97. Finally, Silva develops a sentiment indicator for the real estate market. She obtains text data from real estate listings and classifies each listing as 'hot,' 'medium,' or 'cold' based on how quickly the property sold. After preparing and wrangling the unstructured data, she performs feature selection. She wants to remove noise features and only select the tokens that tend to occur more often in a particular class of text.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. AR(1) model for dln(PRIVt)",
+          "table": [
+            [
+              "",
+              "Coefficient",
+              "Standard Error",
+              "t-Statistic"
+            ],
+            [
+              "Intercept",
+              "0.00259",
+              "0.00073",
+              "3.52"
+            ],
+            [
+              "ln(PRIVt-1) - ln(PRIVt-2)",
+              "0.38616",
+              "0.39980",
+              "0.97"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "QM-moreno",
+      "topic": "QM",
+      "title": "Sebastian Moreno -- ML, Logistic Regression and Model Fit",
+      "background": "Sebastian Moreno is an analyst analyzing probabilities of default for bond issuers and the drivers of ROE. He is tasked with a project to classify bond issuers by their probability of default within the next 12 months. He gathers financial and accounting metrics for 1,000 issuers and observes that the issuers are not linearly separable. He compares non-linear support vector machine (SVM), unconstrained classification and regression tree (CART), and SVM with soft margin classification. He wants an algorithm that addresses non-linear separability and is not prone to overfitting. Moreno also creates Model 1, a logistic regression using two factors, profit margin (PROFIT) and leverage ratio (LEVER), to predict probability of default. The binary dependent variable is 1 for companies that defaulted within the subsequent 12 months and 0 otherwise. Using Exhibit 1, he calculates the predicted probability of default for the average distressed company, which has PROFIT = -2.0 and LEVER = 3.0. To analyze drivers of ROE for software companies, Moreno compares two linear regressions. Model 2 uses profit margin (PROFIT) and interest coverage (COVER). Model 3 extends Model 2 by adding a third factor, the quick ratio (QUICK). He compares the R-squared and adjusted R-squared of the two models; results for Model 3 are in Exhibit 2. Finally, Moreno tests if last-12-month sales (SALES) are a good predictor of ROE with Model 4: ROEi = b0 + b1*SALESi + ei. A plot of the regression residuals against SALES shows the variance of residuals increasing as SALES increase.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Model 1 logistic regression coefficients",
+          "table": [
+            [
+              "",
+              "Coefficient"
+            ],
+            [
+              "Intercept",
+              "-1.7878"
+            ],
+            [
+              "PROFIT",
+              "-0.0185"
+            ],
+            [
+              "LEVER",
+              "0.3876"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Model 3 regression results",
+          "table": [
+            [
+              "",
+              "Coefficient",
+              "t-Statistic",
+              "p-Value"
+            ],
+            [
+              "Intercept",
+              "-1.4411",
+              "-3.4888",
+              "0.0000"
+            ],
+            [
+              "PROFIT",
+              "0.4840",
+              "49.5319",
+              "0.0000"
+            ],
+            [
+              "COVER",
+              "0.7487",
+              "27.9215",
+              "0.0000"
+            ],
+            [
+              "QUICK",
+              "0.0919",
+              "1.9204",
+              "0.0558"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "QM-aoun",
+      "topic": "QM",
+      "title": "Danny Aoun -- ML Metrics and Time-Series Forecasting",
+      "background": "Danny Aoun is an equity portfolio manager developing sentiment indicators for forecasting stock price movements. He gathers textual data from the internet, extracts raw content, and trains machine-learning models for sentiment prediction. Each text item is labelled positive or negative sentiment. Aoun is more concerned about the models producing false negatives than false positives. He computes selected performance metrics for three models using confusion matrices (Exhibit 1). Aoun then applies his models to two semiconductor stocks, Bytewave and Circuitcraft. For Bytewave, Aoun estimates a first-order autoregressive model (AR(1)) on the stock price and concludes the model exhibits autoregressive conditional heteroskedasticity with ARCH(1) errors. For Circuitcraft, Aoun predicts growth in quarterly sales using 13 years of quarterly data, running a regression on the first difference of quarterly sales growth in an AR(2) model. After reviewing the first-differenced data, he determines the mean and variance are constant over time and concludes the time series does not have a unit root. Historical quarterly sales growth: Sales Growth50 = 18.9%, Sales Growth49 = 2.0%, Sales Growth48 = -11.5%. The critical value for the t-statistic is 2.0 at the 5% significance level. Exhibit 2 shows results from this regression.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Model performance metrics",
+          "table": [
+            [
+              "Model",
+              "Precision",
+              "Recall",
+              "F1 Score",
+              "Accuracy"
+            ],
+            [
+              "X",
+              "0.87",
+              "0.94",
+              "0.90",
+              "0.88"
+            ],
+            [
+              "Y",
+              "0.93",
+              "0.90",
+              "0.91",
+              "0.92"
+            ],
+            [
+              "Z",
+              "0.96",
+              "0.82",
+              "0.88",
+              "0.86"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. First-differenced AR(2) regression for Circuitcraft",
+          "table": [
+            [
+              "Statistic",
+              "Value"
+            ],
+            [
+              "R2",
+              "0.2951"
+            ],
+            [
+              "Standard error",
+              "0.1270"
+            ],
+            [
+              "Observations",
+              "50"
+            ],
+            [
+              "Durbin-Watson statistic",
+              "2.2887"
+            ],
+            [
+              "Intercept coefficient (t-stat)",
+              "0.0024 (0.1325)"
+            ],
+            [
+              "Lag1 coefficient (t-stat)",
+              "-0.2021 (-1.6443)"
+            ],
+            [
+              "Lag2 coefficient (t-stat)",
+              "-0.5272 (-4.3411)"
+            ],
+            [
+              "Residual autocorr lag1 (t-stat)",
+              "-0.1825 (-1.2907)"
+            ],
+            [
+              "Residual autocorr lag2 (t-stat)",
+              "-0.0716 (-0.5061)"
+            ],
+            [
+              "Residual autocorr lag3 (t-stat)",
+              "-0.2606 (-1.8424)"
+            ],
+            [
+              "Residual autocorr lag4 (t-stat)",
+              "0.0609 (0.4306)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "QM-cambo",
+      "topic": "QM",
+      "title": "Jan Cambo -- Model Selection, Clustering and Diagnostics",
+      "background": "Jan Cambo is a data analyst at a US asset management firm managing index funds and ETFs. Cambo wants to identify the macroeconomic factors that best explain the returns on the local stock market index, the SPX500. Based on Exhibit 1 he evaluates how many factors to incorporate and selects the best-fitting model. Cambo is launching a new ETF. To minimize trading and rebalancing costs he limits the number of stocks included, using a machine-learning algorithm to combine index stocks into groups based on the co-movement similarity of their returns, then selecting the five most liquid stocks from each group. Cambo estimates a regression of monthly excess returns (RET) against three factors: the market excess return (MRKT), the difference in returns between value and growth stocks (HML), and the difference in returns between small- and large-cap stocks (SMB), with output in Exhibit 2. He then estimates RET for an out-of-sample observation, assuming MRKT is 0.9%, the return on value stocks is 1.2%, on growth stocks is 3.8%, on small-cap stocks is 4.0%, and on large-cap stocks is 2.2%. Cambo checks his regression against the multiple-regression assumptions and calculates the Breusch-Pagan (BP) test statistic to be 5.8. Critical values are in Exhibit 3.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Model selection criteria",
+          "table": [
+            [
+              "Model",
+              "R2",
+              "AIC",
+              "BIC"
+            ],
+            [
+              "3-factor model",
+              "0.463",
+              "17.473",
+              "23.792"
+            ],
+            [
+              "4-factor model",
+              "0.473",
+              "18.124",
+              "21.375"
+            ],
+            [
+              "5-factor model",
+              "0.490",
+              "20.239",
+              "25.626"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Multiple regression of RET on MRKT, HML, SMB",
+          "table": [
+            [
+              "",
+              "Coefficient",
+              "t-Statistic",
+              "p-Value"
+            ],
+            [
+              "Intercept",
+              "0.035",
+              "0.98",
+              "0.6200"
+            ],
+            [
+              "MRKT",
+              "1.56",
+              "11.32",
+              "< 0.0001"
+            ],
+            [
+              "HML",
+              "0.45",
+              "23.15",
+              "< 0.0001"
+            ],
+            [
+              "SMB",
+              "0.89",
+              "12.36",
+              "< 0.0001"
+            ],
+            [
+              "R2",
+              "0.6323",
+              "",
+              ""
+            ],
+            [
+              "Adjusted R2",
+              "0.5937",
+              "",
+              ""
+            ],
+            [
+              "Observations",
+              "96",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 3. Chi-square critical values (right tail)",
+          "table": [
+            [
+              "Degrees of Freedom",
+              "0.95",
+              "0.05"
+            ],
+            [
+              "1",
+              "0.003",
+              "3.841"
+            ],
+            [
+              "2",
+              "0.103",
+              "5.991"
+            ],
+            [
+              "3",
+              "0.352",
+              "7.815"
+            ],
+            [
+              "100",
+              "77.929",
+              "124.342"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "QM-lin",
+      "topic": "QM",
+      "title": "John Lin -- Data Cleansing, Classification and Unit-Root Testing",
+      "background": "John Lin is an analyst at GFE Co. building a model with structured financial data. Alex, the CEO, already uses some of Lin's machine-learning methods to screen loan applicants. Exhibit 1 presents a small sample of the raw dataset before cleansing. Lin uses logistic regression to train the model: defaulting loans are Class 1, non-defaulting loans are Class 0. After tuning, a threshold p-value of 0.6 (for Class 1) is used to predict the outcome for each loan application (Exhibit 2). Lin believes the previous loan application affects the current one, so he uses model A, a first-order autoregressive model AR(1). He determines the coefficient of the first lag is significantly different from zero, and calculates the autocorrelations of the residuals up to four lags, finding that only the residual autocorrelation at the second lag is significantly different from zero. Lin then conducts a Dickey-Fuller test for model A using the regression Xt - Xt-1 = b0 + g1*Xt-1 + et, with results in Exhibit 3.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Sample of raw structured data before cleansing",
+          "table": [
+            [
+              "ID",
+              "Ticker",
+              "Gender",
+              "Date of Birth",
+              "Salary",
+              "Other income",
+              "Credit Card"
+            ],
+            [
+              "1",
+              "Ms. ABC",
+              "F",
+              "4/6/1970",
+              "$61,000",
+              "$2,300",
+              "Y"
+            ],
+            [
+              "2",
+              "Mr. DEF",
+              "M",
+              "10/23/2004",
+              "-",
+              "$36,200",
+              "N"
+            ],
+            [
+              "3",
+              "Mr. UVW",
+              "M",
+              "15 Jan, 1980",
+              "$49,300",
+              "$1,600",
+              "Y"
+            ],
+            [
+              "4",
+              "Ms. XYZ",
+              "F",
+              "6/6/1999",
+              "$55,600",
+              "-",
+              "N"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Result for a selected credit applicant in test data",
+          "table": [
+            [
+              "Applicant's cleansed text",
+              "Actual Outcome",
+              "p"
+            ],
+            [
+              "bad credit card record heavy mortgage current unemploy look job",
+              "Non-default (Class 0)",
+              "0.65"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 3. Dickey-Fuller regression (Xt - Xt-1 = b0 + g1*Xt-1 + et)",
+          "table": [
+            [
+              "",
+              "Coefficient",
+              "Standard Error",
+              "t-Statistic",
+              "P-value"
+            ],
+            [
+              "Intercept",
+              "0.359",
+              "0.039",
+              "9.205",
+              "0.000"
+            ],
+            [
+              "Pt-1",
+              "0.253",
+              "0.024",
+              "10.542",
+              "0.000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DER-wu",
+      "topic": "Derivatives",
+      "title": "Julie Wu -- BSM Delta Hedging and Binomial Option Pricing",
+      "background": "Julie Wu is a US-based hedge fund manager. To value the options in her fund she uses both the Black-Scholes-Merton (BSM) and binomial option pricing models. Wu sells 10 call option contracts on a non-dividend-paying stock, Skyview Corporation, at the value determined by the BSM model, and considers delta-hedging the position using Skyview shares. Each call option contract is for 100 shares. Wu collects the information in Exhibit 1 for a call option on Skyview. Wu next considers an American-style put option on Wilbo Corporation that matures in two years. She values it with a two-period binomial option pricing model and collects the relevant information in Exhibit 2. Wilbo does not pay dividends.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Skyview call option (BSM)",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Current share price of Skyview",
+              "$50"
+            ],
+            [
+              "Exercise price of Skyview call option",
+              "$50"
+            ],
+            [
+              "d1",
+              "0.111"
+            ],
+            [
+              "d2",
+              "-0.049"
+            ],
+            [
+              "N(d1)",
+              "0.544"
+            ],
+            [
+              "N(d2)",
+              "0.480"
+            ],
+            [
+              "Gamma",
+              "0.050"
+            ],
+            [
+              "Theta (daily)",
+              "-0.018"
+            ],
+            [
+              "BSM call value",
+              "$3.305"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Wilbo two-period binomial put",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Current share price of Wilbo",
+              "$100"
+            ],
+            [
+              "Exercise price of Wilbo put option",
+              "$98"
+            ],
+            [
+              "Risk-free rate (compounded annually)",
+              "5%"
+            ],
+            [
+              "Risk-neutral probability",
+              "0.625"
+            ],
+            [
+              "Up factor (u)",
+              "1.20"
+            ],
+            [
+              "Down factor (d)",
+              "0.80"
+            ],
+            [
+              "Stock prices in one year",
+              "S+ = $120, S- = $80"
+            ],
+            [
+              "Stock prices in two years",
+              "S++ = $144, S+- = $96, S-- = $64"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DER-bueden",
+      "topic": "Derivatives",
+      "title": "Bueden -- Swaps, Currency Swaps and Forward Arbitrage",
+      "background": "Bueden manages a family office's EUR-denominated portfolio and uses swaps and forwards. He holds a two-year equity swap on a EUR 1,000,000 notional that receives the return on an equity index and pays a fixed rate of 2.3%. Since initiation the fixed rate has moved to 1.8% and the equity index is trading at 104.8 (from a base of 100). Bueden determines the no-arbitrage value of the equity swap using the present-value factors in Exhibit 1. Over the next year Bueden expects AUD cash inflows from an Australian equity portfolio and hedges the currency exposure with a fixed-for-fixed currency swap with a notional of AUD 16 million. The AUD/EUR spot exchange rate is 1.60 AUD per EUR and notional amounts are exchanged at initiation and maturity. The interest rate on the EUR leg is 1.8%. Bueden calculates the interest rate on the AUD leg that results in a contract value of zero at initiation using the present-value factors in Exhibit 2 (sum of PV factors = 3.94889). Bueden next identifies an arbitrage in shares of Reyab: a forward contract on Reyab is trading at EUR 63.25 while the theoretical arbitrage-free price is EUR 63.65. Finally, Bueden evaluates a 9-month forward on Furblag entered at a price of EUR 123. Six months after initiation, the dividend has been paid and Furblag shares trade at EUR 131. The annually compounded interest rate is 1.6%.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. PV factors for equity swap",
+          "table": [
+            [
+              "Maturity (Years)",
+              "PV Factor"
+            ],
+            [
+              "0.5",
+              "0.99108"
+            ],
+            [
+              "1.5",
+              "0.97371"
+            ],
+            [
+              "2.5",
+              "0.95694"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. PV factors for AUD leg",
+          "table": [
+            [
+              "Maturity (Years)",
+              "PV Factor"
+            ],
+            [
+              "0.25",
+              "0.99567"
+            ],
+            [
+              "0.50",
+              "0.99012"
+            ],
+            [
+              "0.75",
+              "0.98345"
+            ],
+            [
+              "1.00",
+              "0.97965"
+            ],
+            [
+              "Sum of PV factors",
+              "3.94889"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DER-knizek",
+      "topic": "Derivatives",
+      "title": "Ondrej Knizek -- Interest Rate Options, FRAs and Bond Forwards",
+      "background": "Ondrej Knizek is a portfolio manager at a European asset management firm; his portfolio includes fixed income and currency derivatives. Knizek believes the market is underestimating potential interest rate hikes in Hungary and is considering buying a 2-year European-style call option on the periodically compounded one-year Hungarian forint (HUF) spot interest rate, valued with a two-period binomial model. Exhibit 1 shows the 1-year discount factor and the fair value of the options for the respective up and down moves at Time Step 1 (c+ and c-), assuming a risk-neutral probability of 50%. Knizek holds US Treasuries maturing in one month and wants to use a forward rate agreement (FRA) to lock in the 6-month US interest rate at the time the bonds mature, referring to the annualized reference rates in Exhibit 2. Knizek then observes an arbitrage in a Polish government bond whose 6-month forward price is below fair value; as the first step he purchases 100 bond forward contracts at a price of 109.30 (percent of par), each with a notional of 100,000 PLN. Three months later he calculates the fair value of the forward position: the current forward contract bid price is 108.15 and the annualized three-month interest rate is 0.65%.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Interest rate call option (two-period binomial)",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "c+ fair value (HUF)",
+              "4,152,800"
+            ],
+            [
+              "c- fair value (HUF)",
+              "214,800"
+            ],
+            [
+              "1-year discount factor",
+              "0.99108"
+            ],
+            [
+              "Risk-neutral probability",
+              "50%"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. US annualized reference interest rates",
+          "table": [
+            [
+              "Tenor",
+              "Rate"
+            ],
+            [
+              "1-month rate",
+              "0.60%"
+            ],
+            [
+              "6-month rate",
+              "0.81%"
+            ],
+            [
+              "7-month rate",
+              "0.87%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DER-carter",
+      "topic": "Derivatives",
+      "title": "Dylan Carter -- FRA Settlement, Futures and Equity Swaps",
+      "background": "Dylan Carter, chief risk officer at Nexus Capital Asset Management Group, discusses derivatives strategies with his assistant Savage Olaf. First they settle an FRA contract. In 60 days Nexus expects to make a bank deposit of $10,000,000 for 90 days at 90-day MRR set 60 days from today. Nexus is concerned about a decrease in interest rates and enters a $10,000,000 notional FRA priced at 0.65%. After 60 days, 90-day MRR is 0.55%. Next they price a Treasury bond futures contract. Carter provides a Treasury bond with face value $100,000, a 7% semiannual coupon, 15 years to maturity, priced at $156,000, no accrued interest, yielding 2.5%. The futures contract expires in 8 months and the annualized risk-free rate is 1.5%. The conversion factor for this bond is 1.098. Carter holds a long equity forward on QuantumByte Technologies (QBT) with a remaining maturity of two months; the continuously compounded dividend yield is 0.8%, the current stock price is $82, and the continuously compounded annual interest rate is 0.32%. Carter entered a one-year equity swap 270 days ago that receives the return on the SCI 300 Index and pays a fixed annual rate of 4.8% on a notional of CNY 50,000,000, with quarterly payments. At initiation the index was 3,250; today it is 3,738. Exhibit 1 provides present value factors based on the current term structure.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Present value factors (current term structure)",
+          "table": [
+            [
+              "Days to Maturity",
+              "Present Value Factor"
+            ],
+            [
+              "90",
+              "0.9976"
+            ],
+            [
+              "180",
+              "0.9924"
+            ],
+            [
+              "270",
+              "0.9861"
+            ],
+            [
+              "360",
+              "0.9696"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DER-goldsworthy",
+      "topic": "Derivatives",
+      "title": "Connor Goldsworthy -- Binomial, BSM and Delta Hedging",
+      "background": "Connor Goldsworthy is an analyst for a multi-strategy hedge fund that uses derivatives to take directional and volatility bets on stocks and indices. The continuously compounded risk-free return is 3%. Goldsworthy values options on Sunrise, a non-dividend-paying stock with a current price of $25, and Sunset, a dividend-paying stock with a current price of $50 (Exhibit 1). Both Sunrise and Sunset satisfy the specific assumptions of the Black-Scholes-Merton (BSM) model regarding their stochastic process, liquidity, trading, and absence of market frictions and arbitrage opportunities. Goldsworthy assesses the extent to which the BSM model could provide a valid alternative to the binomial tree analysis. To value the call option on Sunset, Goldsworthy builds a two-step binomial tree with a risk-neutral probability of an up move of 51.11%. The payoffs at the three nodes at the second step are c++ = $30.125, c+- = $2, c-- = $0. For the Sunrise 1-year option, Goldsworthy uses a binomial tree with up-factor 1.32 and down-factor 0.76. Finally, Goldsworthy wants to determine the potential return of delta-hedged positions on Moonlight stock, buying one of the options in Exhibit 2 and delta-hedging with Moonlight shares. He observes that Moonlight's stock price often jumps and considers the consequences for delta-hedging effectiveness.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Options on Sunrise and Sunset",
+          "table": [
+            [
+              "Stock",
+              "Type of option",
+              "Strike price",
+              "Time to Maturity"
+            ],
+            [
+              "Sunrise",
+              "European-style put",
+              "$30",
+              "1-year"
+            ],
+            [
+              "Sunrise",
+              "American-style put",
+              "$35",
+              "2-years"
+            ],
+            [
+              "Sunset",
+              "European-style call",
+              "$48",
+              "2-years"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Option Greeks",
+          "table": [
+            [
+              "Greek",
+              "Option 1",
+              "Option 2",
+              "Option 3"
+            ],
+            [
+              "Delta",
+              "-0.5820",
+              "0.4191",
+              "0.6697"
+            ],
+            [
+              "Gamma",
+              "0.0045",
+              "0.0023",
+              "0.0098"
+            ],
+            [
+              "Vega",
+              "0.7972",
+              "0.4828",
+              "0.4828"
+            ],
+            [
+              "Theta",
+              "-0.0123",
+              "-0.0227",
+              "-0.0123"
+            ],
+            [
+              "Rho",
+              "0.3478",
+              "0.3673",
+              "0.4677"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ALT-pasco",
+      "topic": "Alts",
+      "title": "Martin Pasco -- Commodities and Hedge Fund Strategies",
+      "background": "Martin Pasco is an analyst with the Hekla University Endowment, evaluating opportunities to increase the alternative investments allocation. Pasco considers Fund 1, a commodity managed futures fund. Current price data for the largest exposures in Fund 1 are in Exhibit 1. Pasco reviews a previous cocoa trade for Fund 1: at inception the fund took a fully collateralized long position in a 3-month futures contract at $3,294. Three months later the entire position was rolled into a new 3-month futures contract; at that time the price of the initial futures contract was $3,285 and the price of the new 3-month futures contract was $3,260. The collateral earned an annualized return of 5.0% during the three months. Pasco also evaluates equity hedge fund strategies. He reviews Fund 2, an event-driven hedge fund with a merger arbitrage trade between Acquirer Company (AC) and Target Company (TC). AC has offered to buy TC in a stock-for-stock deal with an offer ratio of one share of AC for three shares of TC. AC traded at $39 before the announcement and fell to $35 after; TC traded at $10 before and rose to $11 after. After the announcement the hedge fund bought 30,000 shares of TC at $11 and sold 10,000 shares of AC at $35. Pasco is also evaluating a single fund that combines multiple strategies versus multiple single-strategy funds: Option 1 is a fund of funds; Option 2 is a multi-strategy fund.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Fund 1 largest exposures",
+          "table": [
+            [
+              "",
+              "Crude Oil-Brent ($/barrel)",
+              "Cocoa ($/metric tonne)",
+              "Gold ($/troy ounce)"
+            ],
+            [
+              "Spot price",
+              "75.02",
+              "3,318",
+              "1,919.4"
+            ],
+            [
+              "3-month futures price",
+              "74.25",
+              "3,264",
+              "1,929.3"
+            ],
+            [
+              "6-month futures price",
+              "74.25",
+              "3,233",
+              "1,935.6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ALT-friso",
+      "topic": "Alts",
+      "title": "Martina Friso -- Real Estate Indexes, REITs and NAV",
+      "background": "Martina Friso is a portfolio manager at a pension fund that currently invests in domestic equities and bonds and is considering adding real estate. Friso uses mean-variance optimization to determine the appropriate allocation to real estate. She considers using either a transaction-based or an appraisal-based real estate index to assess the volatility of real estate returns, the estimation of the Sharpe ratio, and the correlation of returns with the existing portfolio, and chooses the appraisal-based index. Friso compares two publicly traded real estate companies in the retail sector: Perpetua Properties, a REIT, and Rainfall Real Estate, a real estate operating company (REOC). Both manage retail shopping centers and plan to grow their portfolios by acquiring undervalued assets. The key objective of Friso's analysis of Perpetua Properties is to evaluate its sustainable dividend-paying capacity, considering FFO, adjusted FFO (AFFO), and net income. Finally, Friso assesses Perpetua Properties' NAV per share using the data in Exhibit 1. Perpetua Properties has 100 million shares outstanding.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Perpetua Properties data ($ millions)",
+          "table": [
+            [
+              "Item",
+              "Amount"
+            ],
+            [
+              "Appraised value of operating properties",
+              "2,850"
+            ],
+            [
+              "Cash and equivalents",
+              "120"
+            ],
+            [
+              "Land held for development",
+              "350"
+            ],
+            [
+              "Total debt",
+              "1,250"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ALT-chang",
+      "topic": "Alts",
+      "title": "Sophia Chang -- Liquid Alternatives and Hedge Fund Strategies",
+      "background": "Sophia Chang is the head of alternative investments at a defined benefit pension plan and is considering an investment in liquid alternatives. She identifies two requirements the investment must meet: Requirement 1 -- have a lower incentive fee than the industry average for traditional hedge funds; Requirement 2 -- allow more frequent redemptions than traditional hedge funds. Chang is also evaluating hedge funds as potential additions and identifies three strategies, considering their returns, leverage, and liquidity: Strategy 1 -- multi-strategy funds; Strategy 2 -- fund of funds; Strategy 3 -- long/short equity funds. Chang identifies a skillful manager who deploys Strategy 3 and determines which factor is the primary source of outperformance: market timing, stock selection, or use of leverage. The pension plan has an objective to limit drawdowns, and Chang considers which individual hedge fund strategy would best meet that objective when combined with the plan's stock and bond portfolio.",
+      "exhibits": []
+    },
+    {
+      "id": "ALT-baldwin",
+      "topic": "Alts",
+      "title": "Cara Baldwin -- REIT Valuation and Commodity Futures",
+      "background": "Cara Baldwin is a portfolio manager at Paleo Asset Management, a US firm serving retired individuals through managed accounts. Paleo has decided to increase the long-term allocation to real estate and commodities across all portfolios. Baldwin collects information on two REITs in Exhibit 1 (all data in USD millions except per-share data). To value the REIT shares she uses price to adjusted funds from operations per share (P/AFFOPS), price to funds from operations per share (P/FFOPS), and net asset value per share (NAVPS). Paleo's policy states that if a REIT's market value lies within +/-5% of the estimated intrinsic value relative to its sub-sector average, the security is considered fairly valued. Baldwin is also considering commodities to hedge against increasing inflation and analyzes coffee futures (Exhibit 2). Year 0 is the current year and Year 1 is next year; prices are in USD.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Two REITs",
+          "table": [
+            [
+              "",
+              "REIT 1",
+              "REIT 2"
+            ],
+            [
+              "Funds from operations (FFO)",
+              "3,571",
+              "1,525"
+            ],
+            [
+              "Non-cash rents",
+              "65",
+              "0"
+            ],
+            [
+              "Recurring (maintenance) capital expenditures",
+              "267",
+              "70"
+            ],
+            [
+              "Shares outstanding (millions)",
+              "362",
+              "155"
+            ],
+            [
+              "Current market price per share ($)",
+              "222",
+              "172"
+            ],
+            [
+              "Sub-sector average P/FFOPS",
+              "21x",
+              "18x"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Coffee futures (USD)",
+          "table": [
+            [
+              "Contract",
+              "Price"
+            ],
+            [
+              "Spot price",
+              "$1,810"
+            ],
+            [
+              "August, Year 0",
+              "$1,819"
+            ],
+            [
+              "February, Year 1",
+              "$1,879"
+            ],
+            [
+              "May, Year 1",
+              "$1,904"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ECON-podlasky",
+      "topic": "Econ",
+      "title": "Andrew Podlasky -- Economic Growth Models",
+      "background": "Andrew Podlasky is an analyst at an investment management firm reviewing growth prospects under different economic models for Country A and Country B. First, Podlasky reviews the macroeconomic data in Exhibit 1 to determine the current steady-state growth rates and potential GDP growth rates of both countries. Country A, currently operating at its steady state of growth, has announced its intention to remove trade barriers on capital investments; as a result, Podlasky concludes that the country's economic growth rate per capita will increase permanently. For Country B, Podlasky estimates that the output gap (the difference between the real growth rate in potential GDP and short-term real GDP growth) has widened by 0.8 percentage points as a result of a 0.2% higher estimated real growth rate in potential GDP and a 0.6% lower estimate of real growth in short-term GDP.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Macroeconomic data",
+          "table": [
+            [
+              "",
+              "Country A",
+              "Country B"
+            ],
+            [
+              "Growth rate in the labor force",
+              "0.9%",
+              "0.5%"
+            ],
+            [
+              "Labor cost in total factor cost",
+              "55.2%",
+              "56.4%"
+            ],
+            [
+              "Growth rate in labor productivity",
+              "3.5%",
+              "2.3%"
+            ],
+            [
+              "Growth rate of total factor productivity",
+              "2.1%",
+              "1.5%"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ECON-bernard",
+      "topic": "Econ",
+      "title": "Joanne Bernard -- Currency Arbitrage, Parity and Crises",
+      "background": "Joanne Bernard is a currency trader for a US-based hedge fund. She reviews interbank bid-offer quotes in Exhibit 1 (USD/EUR is the number of USD per 1 EUR; JPY/USD is the number of JPY per 1 USD). Bernard determines if an arbitrage profit is possible based on a dealer's bid/offer rate quote of 119.38/119.40 in JPY/EUR. The hedge fund considers hedging a New Zealand dollar (NZD) 1,000,000 coupon payment it will receive in six months. Bernard calculates the 6-month forward USD/NZD exchange rate implied by covered interest rate parity, where the 6-month annualized MRR in the US is 0.50%, the 6-month annualized MRR in New Zealand is 1.00%, and the spot mid-market quote for USD/NZD is 0.6808. Bernard next considers a 1-year carry trade that borrows USD and invests in the Brazilian real (BRL): the spot mid-market quote for BRL/USD is 5.1300, the 1-year MRR in the US is 1.00%, the 1-year MRR in Brazil is 9.75%, and the BRL/USD exchange rate in one year is 5.2000. Finally, Bernard is concerned about a currency crisis in emerging market Country B and notes three conditions: Condition 1 -- a slight decline of foreign investment in its equity market; Condition 2 -- broad money growth and a decline in the ratio of M2 to bank reserves; Condition 3 -- a sizable decline in the ratio of FX reserve holdings to average daily FX turnover in their domestic currency.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Interbank bid-offer quotes",
+          "table": [
+            [
+              "Currency Pair",
+              "Interbank Bid",
+              "Interbank Offer"
+            ],
+            [
+              "USD/EUR",
+              "1.1416",
+              "1.1421"
+            ],
+            [
+              "JPY/USD",
+              "104.62",
+              "104.68"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ECON-smith",
+      "topic": "Econ",
+      "title": "Richard Smith -- Growth Accounting and Convergence",
+      "background": "Richard Smith is the chief economist at BMT Consulting conducting a training program on economic growth, with new analyst teams presenting on various topics. Smith begins with a framework explaining the percentage change in stock market value as the sum of the percentage change in GDP, the percentage change in the ratio of earnings to GDP, and the percentage change in the price-to-earnings multiple. Smith shows that the growth accounting equation decomposes the percentage change in output into components attributable to capital, labor, and technology. Team Blue is asked to calculate the economy's potential growth rate using the growth accounting method with: growth rate of capital = 2.0%, growth rate of labor = 0.5%, growth rate of total factor productivity = 1.0%, share of capital in GDP = 30%. Team Green discusses how investment in physical capital, human capital, and technological development affects growth, presenting three points: Point 1 -- since technology results in an upward shift in the production function, the relationship between economic growth and R&D spending is positive in the short run; Point 2 -- total factor productivity reflects the state of technology and can be measured by the contribution of capital deepening plus the growth rates of labor productivity; Point 3 -- although long-term sustainable growth cannot rely on pure capital deepening, the impact of investment spending on available capital depends on the existing physical capital stock. Team Purple investigates whether the per capita income of a developing country should converge toward that of developed countries, reviewing the saving rate, population growth rate, the shape of the production function, and the externalities associated with human capital, and concludes that the externalities associated with human capital is the most important determinant in predicting convergence. Smith concludes that opening up the economy should increase the rate at which countries' capital-to-labor ratios converge, and Team Orange provides three descriptions of the dynamic adjustment process: Description 1 -- the growth in the capital-exporting countries will be above the steady state; Description 2 -- developed countries will tend to run trade deficits as they export capital; Description 3 -- the rate of return on investments will be lower in countries with high capital-to-labor ratios.",
+      "exhibits": []
+    },
+    {
+      "id": "ECON-suzy",
+      "topic": "Econ",
+      "title": "Suzy -- Forward Mark-to-Market and Growth Accounting",
+      "background": "Suzy, a portfolio manager at a UK hedge fund, sold GBP 10 million forward against the USD at an all-in forward price of 1.2465 (USD/GBP), while the spot exchange rate is 1.25. Two months before the settlement date, Suzy wants to mark this forward position to market. The relevant spot rate, forward points, and Libor are given in Exhibit 1 (USD/GBP quoted as bid/offer; forward points in pips). The UK's population and growth rate of labor input have been steadily declining, and the country has recently relaxed immigration policies to increase the labor participation rate. The labor input and total factor productivity data for the UK are given in Exhibit 2. Suzy forecasts economic growth through the growth accounting equation and the endogenous model.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Spot rate, forward points, and Libor",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "USD/GBP spot",
+              "1.2432/1.2436"
+            ],
+            [
+              "Two-month forward points",
+              "18.03/18.42"
+            ],
+            [
+              "Two-month Libor (USD)",
+              "0.25%"
+            ],
+            [
+              "Two-month Libor (GBP)",
+              "1.30%"
+            ],
+            [
+              "Six-month Libor (USD)",
+              "0.30%"
+            ],
+            [
+              "Six-month Libor (GBP)",
+              "1.45%"
+            ],
+            [
+              "One-year Libor (USD)",
+              "0.55%"
+            ],
+            [
+              "One-year Libor (GBP)",
+              "1.75%"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. UK labor productivity and TFP (in %)",
+          "table": [
+            [
+              "Growth in labor productivity",
+              "Growth in TFP",
+              "Growth due to capital deepening",
+              "Growth in GDP"
+            ],
+            [
+              "0.3",
+              "-0.8",
+              "1.1",
+              "-0.1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ECON-trump",
+      "topic": "Econ",
+      "title": "Currency Trader -- Triangular Arbitrage, Parity and Policy",
+      "background": "A CFA candidate is studying currency exchange rates and consults a currency dealer who provides bid/offer quotes. The candidate examines a possible triangular arbitrage trade using the Swiss, US, and Brazilian currencies, based on a dealer's bid/offer quote of 0.2355/0.2358 in CHF/BRL and the interbank spot quotes in Exhibit 1. The candidate is also interested in interest rate parity and purchasing power parity and collects the data in Exhibit 2 for the GBP and CAD. The candidate asks about the effect on the exchange rate (Question 1): the government of Canada has decided to loosen its monetary policy and fiscal policy by expanding its monetary base and government spending to encourage private-sector investment; with high capital mobility and a flexible exchange rate regime, what impact will this have on the exchange rate? Finally, assessing Mexico, the candidate notes the central bank has recently liberalized financial markets and allowed foreign direct investment in select industries; Mexico's economic data are: growth due to capital deepening 1.7%, growth in labor productivity 3.4%, long-term growth rate of labor force 1.3%, growth in capital 6.2%, share of labor in GDP 40%.",
+      "exhibits": [
+        {
+          "title": "Exhibit 1. Interbank market quotes",
+          "table": [
+            [
+              "Currency Pair",
+              "Bid/Offer"
+            ],
+            [
+              "CHF/USD",
+              "0.9799/0.9801"
+            ],
+            [
+              "BRL/USD",
+              "4.1699/4.1701"
+            ]
+          ]
+        },
+        {
+          "title": "Exhibit 2. Currency data for GBP and CAD",
+          "table": [
+            [
+              "Item",
+              "Value"
+            ],
+            [
+              "Spot (CAD/GBP)",
+              "1.5872"
+            ],
+            [
+              "Annual (270-day) LIBOR (GBP)",
+              "1.3%"
+            ],
+            [
+              "Annual (270-day) LIBOR (CAD)",
+              "4.6%"
+            ],
+            [
+              "Actual inflation rate (CAD)",
+              "1.5%"
+            ],
+            [
+              "Actual inflation rate (GBP)",
+              "2.7%"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "QM-silva-37",
+      "case": "QM-silva",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "Cointegration: unit-root tests on two series plus Engle-Granger test on regression residuals",
+      "type": "concept",
+      "stem": "The time series ln(PRIVt) and ln(PUBLt) are cointegrated if the tests performed by Silva:",
+      "choices": {
+        "A": "reject only Null Hypothesis 3.",
+        "B": "reject all three null hypotheses.",
+        "C": "fail to reject all three null hypotheses."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. To be cointegrated, two time series must both have a unit root (fail to reject Null Hypotheses 1 and 2 by a Dickey-Fuller test) AND the residuals of the regression between them must not have a unit root (reject Null Hypothesis 3 by an Engle-Granger Dickey-Fuller test). Only this scenario (both series have a unit root and the error term of the regression does not) corresponds to cointegration.",
+        "B": "Incorrect. Rejecting Null Hypotheses 1 and 2 would mean neither series has a unit root, so they cannot be cointegrated.",
+        "C": "Incorrect. Failing to reject Null Hypothesis 3 means the regression error term has a unit root, so the series are not cointegrated (Scenario 5)."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-silva-38",
+      "case": "QM-silva",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "AR(1) mean-reverting level = b0/(1-b1)",
+      "type": "calc",
+      "stem": "The mean-reverting level of dln(PRIVt) is closest to:",
+      "choices": {
+        "A": "0.002.",
+        "B": "0.004.",
+        "C": "0.387."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 0.002 is roughly the intercept b0 alone; the mean-reverting level divides by (1 - b1).",
+        "B": "Correct. The mean-reverting level of the dependent variable of an AR(1) model is b0/(1 - b1) = 0.00259/(1 - 0.38616) = 0.0042.",
+        "C": "Incorrect. 0.387 is the slope coefficient b1, not the mean-reverting level."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Mean-reverting level = b0 / (1 - b1)"
+        },
+        {
+          "label": "Substitute",
+          "content": "= 0.00259 / (1 - 0.38616)"
+        },
+        {
+          "label": "Result",
+          "content": "= 0.00259 / 0.61384 = 0.0042"
+        },
+        {
+          "label": "Trap",
+          "content": "Do not report b0 (0.002) or b1 (0.387) directly."
+        }
+      ]
+    },
+    {
+      "id": "QM-silva-39",
+      "case": "QM-silva",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "ARCH(1) test: regress squared residuals on one lag of squared residuals",
+      "type": "concept",
+      "stem": "Do the estimates of the residual regression parameters indicate that the AR(1) model on dln(PUBLt) is misspecified?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, because there is evidence of significant serial correlation",
+        "C": "Yes, because there is evidence of autoregressive conditional heteroskedasticity (ARCH)"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Residual Regression 2 indicates the model exhibits ARCH, hence it is not well specified.",
+        "B": "Incorrect. There is no evidence of significant serial correlation: the slope of Residual Regression 1 (t = 0.70) is not statistically different from 0, so we cannot reject the null that the residuals are not autocorrelated.",
+        "C": "Correct. Engle's test regresses the squared residuals on a constant and one lag of the squared residuals (et^2 = a0 + a1*et-1^2 + ut); if a1 is significant the series is ARCH(1). For Residual Regression 2 the t-statistic on a1 is 2.94 > critical value 1.97, so the model exhibits ARCH and is misspecified."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-silva-40",
+      "case": "QM-silva",
+      "topic": "QM",
+      "module": "Big Data Projects",
+      "los": "Feature selection for text data: mutual information",
+      "type": "concept",
+      "stem": "To perform feature selection, Silva should select the tokens with the:",
+      "choices": {
+        "A": "lowest term frequency (TF).",
+        "B": "highest mutual information (MI).",
+        "C": "highest document frequency (DF)."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Tokens with the lowest term frequency are likely noise features, which Silva wants to remove, not select.",
+        "B": "Correct. Mutual information measures how much information a token contributes to a class of text. Tokens that occur more often in a particular class have high MI; selecting the highest-MI tokens keeps the informative features and removes noise.",
+        "C": "Incorrect. Highest document frequency tends to identify very common tokens that appear across all classes and carry little discriminating information."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-moreno-25",
+      "case": "QM-moreno",
+      "topic": "QM",
+      "module": "Machine Learning",
+      "los": "Algorithm selection: SVM soft margin for non-linear separability without overfitting",
+      "type": "concept",
+      "stem": "Which of the following machine-learning algorithms is most suitable for Moreno's bond issuer classification model?",
+      "choices": {
+        "A": "Non-linear SVM",
+        "B": "Unconstrained CART",
+        "C": "SVM with soft margin classification"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Non-linear SVM introduces more complex non-linear separation boundaries; it may reduce training misclassifications but is more complex and prone to overfitting.",
+        "B": "Incorrect. An unconstrained CART makes no assumptions about the training data and can perfectly learn (overfit) it; avoiding overfitting requires regularization such as maximum depth or minimum node population.",
+        "C": "Correct. SVM with soft margin classification handles non-linear separability by adding a penalty to the objective function for misclassified training observations, optimizing the trade-off between a wider margin and a lower total error penalty, and is less prone to overfitting."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-moreno-26",
+      "case": "QM-moreno",
+      "topic": "QM",
+      "module": "Extensions of Multiple Regression",
+      "los": "Logistic regression predicted probability P = 1/(1+exp(-(b0+b1x1+b2x2)))",
+      "type": "calc",
+      "stem": "For the average distressed company, the probability of default predicted by Model 1 is closest to:",
+      "choices": {
+        "A": "36%.",
+        "B": "56%.",
+        "C": "77%."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. P = 1/[1 + exp(-(b0 + b1*PROFIT + b2*LEVER))] = 1/[1 + exp(-(-1.7878 - 0.0185*(-2.00) + 0.3876*3.00))] = 1/(1 + 1.8004) = 0.3571, about 36%.",
+        "B": "Incorrect. 56% results from a sign or exponent error in the logistic transformation.",
+        "C": "Incorrect. 77% results from mishandling the negative sign inside the exponential."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "P = 1 / [1 + exp(-(b0 + b1*PROFIT + b2*LEVER))]"
+        },
+        {
+          "label": "Linear predictor",
+          "content": "-1.7878 - 0.0185*(-2.00) + 0.3876*(3.00) = -1.7878 + 0.037 + 1.1628 = -0.588"
+        },
+        {
+          "label": "Substitute",
+          "content": "P = 1 / (1 + exp(0.588)) = 1 / (1 + 1.8004)"
+        },
+        {
+          "label": "Result",
+          "content": "P = 0.3571, about 36%"
+        }
+      ]
+    },
+    {
+      "id": "QM-moreno-27",
+      "case": "QM-moreno",
+      "topic": "QM",
+      "module": "Evaluating Regression Model Fit",
+      "los": "Adding a variable: R^2 and adjusted R^2 behavior (t-stat rule of |1.0|)",
+      "type": "concept",
+      "stem": "Compared to Model 2, Model 3 most likely has a:",
+      "choices": {
+        "A": "lower R-squared and a higher adjusted R-squared.",
+        "B": "higher R-squared and a lower adjusted R-squared.",
+        "C": "higher R-squared and a higher adjusted R-squared."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. R-squared cannot decrease when a variable is added.",
+        "B": "Incorrect. Adjusted R-squared decreases only if the added variable's t-statistic is below |1.0|; here QUICK has t = 1.9204 > 1.0.",
+        "C": "Correct. As independent variables are added, R-squared increases or stays the same. Adjusted R-squared rises if the new coefficient's t-statistic exceeds |1.0| and falls if it is below |1.0|. QUICK's t-statistic is 1.9204, so adjusted R-squared for Model 3 is higher than for Model 2."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-moreno-28",
+      "case": "QM-moreno",
+      "topic": "QM",
+      "module": "Model Misspecification",
+      "los": "Conditional heteroskedasticity from residual plot; effect on F-test reliability",
+      "type": "concept",
+      "stem": "The most appropriate conclusion to draw from the residual plot for Model 4 is that:",
+      "choices": {
+        "A": "the model suffers from unconditional heteroskedasticity.",
+        "B": "there is a non-linear relationship between ROE and SALES.",
+        "C": "the F-test for the overall regression significance is unreliable."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Unconditional heteroskedasticity occurs when the error variance is NOT correlated with the independent variables and creates no major inference problems. Here the residual variance rises with SALES, so the variance is correlated with the regressor -- this is conditional, not unconditional, heteroskedasticity.",
+        "B": "Incorrect. A plot of residuals against a feature does not reveal the nature of the target-feature relationship; the pattern here is about error variance, not non-linearity.",
+        "C": "Correct. The residual variance increases with SALES, i.e., the error variance is conditional on the regressor -- conditional heteroskedasticity. This makes the MSE a biased estimator of the true population variance, so the F-test for overall regression significance is unreliable, and it tends to find significant relationships where none exist (more Type I errors)."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-aoun-5",
+      "case": "QM-aoun",
+      "topic": "QM",
+      "module": "Big Data Projects",
+      "los": "Model evaluation: recall minimizes false negatives (Type II errors)",
+      "type": "concept",
+      "stem": "Which machine-learning model should Aoun choose given his concern about false negatives?",
+      "choices": {
+        "A": "Model X",
+        "B": "Model Y",
+        "C": "Model Z"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Recall is the ratio of correctly predicted positives to all actual positives and is the metric to maximize when the cost of false negatives (Type II errors) is high. Model X has the highest recall (0.94 vs 0.90 and 0.82).",
+        "B": "Incorrect. Accuracy and F1 score (highest for Model Y) weight false positives and negatives equally; they do not directly address the higher cost of false negatives.",
+        "C": "Incorrect. Precision (highest for Model Z) addresses the cost of false positives (Type I errors), the opposite of Aoun's concern."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-aoun-6",
+      "case": "QM-aoun",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "ARCH(1): error variance is time-varying but predictable from prior squared error",
+      "type": "concept",
+      "stem": "Based on Aoun's conclusion regarding the time-series model for Bytewave, the variance of the error term is:",
+      "choices": {
+        "A": "not constant but predictable.",
+        "B": "both constant and predictable.",
+        "C": "neither constant nor predictable."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. With ARCH(1) errors, the variance of the error in period t+1 can be predicted in period t because it depends on how large the squared error was in the previous period. Thus the error variance is predictable but not constant.",
+        "B": "Incorrect. ARCH errors are by definition not constant (the variance changes with the prior squared error).",
+        "C": "Incorrect. ARCH(1) errors are predictable: the variance depends linearly on the previous period's squared error."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-aoun-7",
+      "case": "QM-aoun",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "Covariance stationarity: constant mean, constant variance, constant autocovariance",
+      "type": "concept",
+      "stem": "The first-differenced time series for Circuitcraft's growth in quarterly sales:",
+      "choices": {
+        "A": "is a random walk.",
+        "B": "exhibits seasonality.",
+        "C": "is covariance stationary."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. In a random walk the best forecast of xt is xt-1. Here b2 = -0.5272 with t = -4.3411 (|t| > 2.0), so b2 is significant and its absolute value is less than 1; xt-1 is not the best forecast in every subsequent period, so the series is not a random walk.",
+        "B": "Incorrect. Seasonality would show a significant fourth (quarterly) residual autocorrelation. The largest residual autocorrelation t-statistic is 1.8424 (lag 3) < 2.0, so no autocorrelation differs significantly from 0 and there is no seasonality.",
+        "C": "Correct. None of the residual autocorrelations differ significantly from 0 (largest |t| = 1.8424 < 2.0), so the autocovariance is constant. Aoun determines the mean and variance are constant over time. All three requirements of a covariance-stationary series (constant mean, constant variance, constant autocovariance) are satisfied."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-aoun-8",
+      "case": "QM-aoun",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "First-differenced AR(2) one-period-ahead forecast",
+      "type": "calc",
+      "stem": "Based on the regression results for Circuitcraft, the 1-period-ahead sales growth forecast is closest to:",
+      "choices": {
+        "A": "-4.6%.",
+        "B": "8.6%.",
+        "C": "29.7%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. -4.6% omits the level term (Sales Growth50) when converting the first-differenced forecast back to a level.",
+        "B": "Correct. For a first-differenced AR(2): d Sales Growth(t+1) = 0.0024 - 0.2021*d Sales Growth(t) - 0.5272*d Sales Growth(t-1). Sales Growth51 = 0.189 + 0.0024 - 0.2021*(0.189-0.020) - 0.5272*(0.020-(-0.115)) = 0.08607, about 8.6%.",
+        "C": "Incorrect. 29.7% misapplies the differences or double counts the lagged growth levels."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Model",
+          "content": "d Sales Growth(t+1) = b0 + b1*d Sales Growth(t) + b2*d Sales Growth(t-1)"
+        },
+        {
+          "label": "Differences",
+          "content": "d(t) = 0.189 - 0.020 = 0.169; d(t-1) = 0.020 - (-0.115) = 0.135"
+        },
+        {
+          "label": "Substitute",
+          "content": "Sales Growth51 - 0.189 = 0.0024 - 0.2021*0.169 - 0.5272*0.135"
+        },
+        {
+          "label": "Result",
+          "content": "Sales Growth51 = 0.189 + 0.0024 - 0.034155 - 0.071172 = 0.08607, about 8.6%"
+        }
+      ]
+    },
+    {
+      "id": "QM-cambo-1",
+      "case": "QM-cambo",
+      "topic": "QM",
+      "module": "Evaluating Regression Model Fit",
+      "los": "Model selection: AIC for prediction, BIC for best goodness of fit",
+      "type": "concept",
+      "stem": "Which of the following models has the best fit?",
+      "choices": {
+        "A": "3-factor model",
+        "B": "4-factor model",
+        "C": "5-factor model"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The 3-factor model does not have the lowest BIC.",
+        "B": "Correct. AIC is preferred if the model is used for prediction; BIC is preferred when the best goodness of fit is desired. The 4-factor model has the lowest BIC (21.375), so it has the best fit.",
+        "C": "Incorrect. The 5-factor model has the highest R2 but also the highest BIC, so it is not the best-fitting model."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-cambo-2",
+      "case": "QM-cambo",
+      "topic": "QM",
+      "module": "Machine Learning",
+      "los": "Unsupervised learning: agglomerative (bottom-up hierarchical) clustering",
+      "type": "concept",
+      "stem": "Which of the following machine learning algorithms is most appropriate for Cambo to use when selecting the stocks for the new ETF?",
+      "choices": {
+        "A": "Agglomerative clustering",
+        "B": "Principal components analysis",
+        "C": "K-nearest neighbor"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Agglomerative (bottom-up hierarchical) clustering treats each observation as its own cluster, then iteratively combines the two closest clusters by a similarity measure. Grouping stocks by co-movement similarity of returns with an unknown number of groups is unsupervised learning, making agglomerative clustering the appropriate choice.",
+        "B": "Incorrect. Principal components analysis reduces highly correlated features into fewer uncorrelated composite variables; it does not group observations into clusters.",
+        "C": "Incorrect. K-nearest neighbor is a supervised classification technique that requires labeled data; it does not create the groups here."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-cambo-3",
+      "case": "QM-cambo",
+      "topic": "QM",
+      "module": "Basics of Multiple Regression",
+      "los": "Predicted value from a multiple regression using factor spreads",
+      "type": "calc",
+      "stem": "Based on Exhibit 2, all returns stated in whole percentages (1.00 for 1.00%), the predicted value of RET for the out-of-sample observation is closest to:",
+      "choices": {
+        "A": "4.21%.",
+        "B": "1.01%.",
+        "C": "1.87%."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. 4.21% adds the raw factor returns instead of the value-minus-growth and small-minus-large spreads.",
+        "B": "Incorrect. 1.01% mishandles a sign on one of the factor spreads.",
+        "C": "Correct. RET = 0.035 + 1.56*0.9 + 0.45*(1.2 - 3.8) + 0.89*(4.0 - 2.2) = 0.035 + 1.404 - 1.17 + 1.602 = 1.87%."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Model",
+          "content": "RET = Intercept + b1*MRKT + b2*HML + b3*SMB"
+        },
+        {
+          "label": "Factor spreads",
+          "content": "HML = 1.2 - 3.8 = -2.6; SMB = 4.0 - 2.2 = 1.8"
+        },
+        {
+          "label": "Substitute",
+          "content": "RET = 0.035 + 1.56*0.9 + 0.45*(-2.6) + 0.89*(1.8)"
+        },
+        {
+          "label": "Result",
+          "content": "= 0.035 + 1.404 - 1.17 + 1.602 = 1.87%"
+        }
+      ]
+    },
+    {
+      "id": "QM-cambo-4",
+      "case": "QM-cambo",
+      "topic": "QM",
+      "module": "Model Misspecification",
+      "los": "Breusch-Pagan test for conditional heteroskedasticity (one-tail chi-square)",
+      "type": "concept",
+      "stem": "If Cambo assumes a significance level of 5%, based on the result of the BP test he should conclude that the:",
+      "choices": {
+        "A": "statistics of the independent variables are unreliable.",
+        "B": "residuals do not exhibit conditional heteroskedasticity.",
+        "C": "standard errors are underestimated."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Because the null is not rejected, the model does not have conditional heteroskedasticity and there is no basis to call the statistics unreliable.",
+        "B": "Correct. The Breusch-Pagan test is a one-tail (right-tail) chi-square test with k = 3 degrees of freedom; at the 5% level the critical value is 7.815. Because the BP statistic 5.8 < 7.815, the null is not rejected: the residuals do not exhibit conditional heteroskedasticity and the standard errors are unbiased.",
+        "C": "Incorrect. Underestimated standard errors would arise if conditional heteroskedasticity were present; here it is not detected."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-lin-45",
+      "case": "QM-lin",
+      "topic": "QM",
+      "module": "Big Data Projects",
+      "los": "Data cleansing: non-uniformity error (inconsistent formats/units)",
+      "type": "concept",
+      "stem": "What type of error appears to be present in Exhibit 1?",
+      "choices": {
+        "A": "Invalidity error.",
+        "B": "Inconsistency error.",
+        "C": "Non-uniformity error."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. An invalidity error is data outside a meaningful range; that is not the issue here.",
+        "B": "Incorrect. An inconsistency error is a data point conflicting with another; that is not what is shown.",
+        "C": "Correct. A non-uniformity error occurs when data are not presented in an identical format. The Date of Birth column mixes formats, and the Salary column uses an ambiguous dollar symbol (US dollar, Canadian dollar, or others)."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-lin-46",
+      "case": "QM-lin",
+      "topic": "QM",
+      "module": "Big Data Projects",
+      "los": "Classification errors: Type I error (false positive) at the chosen threshold",
+      "type": "concept",
+      "stem": "Based on Exhibit 2, the most appropriate statement about the model's performance for the selected credit applicant is that it results in:",
+      "choices": {
+        "A": "a Type I error.",
+        "B": "a Type II error.",
+        "C": "the correct classification."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. The threshold p-value for Class 1 (default) is 0.6 and the applicant's p = 0.65 meets it, so the model predicts default (Class 1). The actual outcome is non-default (Class 0), so the loan is misclassified as likely to default -- a Type I error (false positive).",
+        "B": "Incorrect. A Type II error (false negative) would be predicting non-default when the applicant actually defaults; the opposite happened.",
+        "C": "Incorrect. The prediction (default) does not match the actual outcome (non-default), so it is not a correct classification."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-lin-47",
+      "case": "QM-lin",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "AR model specification: significant residual autocorrelation implies misspecification",
+      "type": "concept",
+      "stem": "Model A is most likely:",
+      "choices": {
+        "A": "correctly specified.",
+        "B": "misspecified based on the statistical results observed in the model's residuals.",
+        "C": "misspecified based on the coefficient of the first lag."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Significant residual autocorrelation at the second lag indicates the model is not correctly specified.",
+        "B": "Correct. The AR(1) model is misspecified because of the significant autocorrelation of the residuals at the second lag; an additional lag should be added.",
+        "C": "Incorrect. The significant first-lag coefficient is expected in an AR(1) and does not by itself indicate misspecification; the residual autocorrelation does."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "QM-lin-48",
+      "case": "QM-lin",
+      "topic": "QM",
+      "module": "Time-Series Analysis",
+      "los": "Dickey-Fuller test: reject H0(g1=0) implies stationary (no unit root)",
+      "type": "concept",
+      "stem": "Based on Exhibit 3, the test that Lin conducts for model A:",
+      "choices": {
+        "A": "is inconclusive.",
+        "B": "indicates that model A is stationary.",
+        "C": "indicates that model A exhibits a unit root."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The result is conclusive: the null is clearly rejected.",
+        "B": "Correct. The Dickey-Fuller test uses Xt - Xt-1 = b0 + g1*Xt-1 + et with H0: g1 = 0 (unit root, nonstationary) vs Ha: g1 < 0 (no unit root, stationary). The t-statistic of 10.542 with p-value 0.000 rejects the null, indicating the series is stationary.",
+        "C": "Incorrect. A unit root corresponds to failing to reject H0; here H0 is rejected."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "DER-wu-17",
+      "case": "DER-wu",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "BSM delta hedge: shares to buy per short call = N(d1) for a non-dividend stock",
+      "type": "calc",
+      "stem": "To delta hedge her call option position on Skyview, how many shares of Skyview should Wu buy?",
+      "choices": {
+        "A": "456",
+        "B": "480",
+        "C": "544"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. 456 comes from using (1 - N(d1)) or a similar complement.",
+        "B": "Incorrect. 480 uses N(d2) = 0.480 instead of N(d1) as the delta.",
+        "C": "Correct. For a non-dividend-paying stock the shares to buy per option sold is N(d1) = 0.544. With 10 contracts of 100 shares each: 0.544 * 100 * 10 = 544 shares."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Delta",
+          "content": "Call delta for a non-dividend stock = N(d1) = 0.544"
+        },
+        {
+          "label": "Contract size",
+          "content": "10 contracts * 100 shares = 1,000 shares underlying"
+        },
+        {
+          "label": "Hedge shares",
+          "content": "0.544 * 100 * 10"
+        },
+        {
+          "label": "Result",
+          "content": "= 544 shares to buy"
+        }
+      ]
+    },
+    {
+      "id": "DER-wu-18",
+      "case": "DER-wu",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "Gamma of a delta-hedged short call plus long stock position",
+      "type": "concept",
+      "stem": "The gamma of Wu's delta-hedged position would be:",
+      "choices": {
+        "A": "negative.",
+        "B": "zero.",
+        "C": "positive."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. The position is long stock (zero gamma) and short the call. A long call has positive gamma, so a short call contributes negative gamma, leaving the overall position with negative gamma.",
+        "B": "Incorrect. Although the long stock has zero gamma, the short call gives the combined position negative gamma.",
+        "C": "Incorrect. The call itself has positive gamma, but because Wu is short the call, her position's gamma is negative, not positive."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "DER-wu-19",
+      "case": "DER-wu",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "Theta: change in option value from the passage of one day",
+      "type": "calc",
+      "stem": "Holding all else constant, the value of the call on Skyview one day after Wu's sale will be closest to:",
+      "choices": {
+        "A": "$3.255.",
+        "B": "$3.287.",
+        "C": "$3.323."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $3.255 subtracts too much (roughly 2.75 times daily theta).",
+        "B": "Correct. Daily theta is -0.018, so after one day the value is 3.305 - 0.018 = 3.287.",
+        "C": "Incorrect. $3.323 adds theta instead of subtracting it; time decay lowers the call value."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Concept",
+          "content": "Change in value over 1 day = daily theta"
+        },
+        {
+          "label": "Inputs",
+          "content": "Initial value = 3.305; daily theta = -0.018"
+        },
+        {
+          "label": "Compute",
+          "content": "3.305 + (-0.018)"
+        },
+        {
+          "label": "Result",
+          "content": "= 3.287"
+        }
+      ]
+    },
+    {
+      "id": "DER-wu-20",
+      "case": "DER-wu",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "Two-period binomial American put with early exercise check",
+      "type": "calc",
+      "stem": "Using the two-period binomial option pricing model, the value of the American put on Wilbo Corporation is closest to:",
+      "choices": {
+        "A": "$5.19.",
+        "B": "$6.85.",
+        "C": "$12.90."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $5.19 is roughly the European put value; it ignores optimal early exercise at the down node.",
+        "B": "Correct. Terminal put values (X = 98): Puu = 0, Pud = 2, Pdd = 34. At T = 1: up node value = [0.625*0 + 0.375*2]/1.05 = 0.7143; down node European value = [0.625*2 + 0.375*34]/1.05 = 13.3333, but early exercise gives 98 - 80 = 18 > 13.3333, so use 18. At T = 0: [0.625*0.7143 + 0.375*18]/1.05 = 6.85.",
+        "C": "Incorrect. $12.90 double counts the down-node exercise or discounts incorrectly."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Terminal payoffs",
+          "content": "Puu = max(98-144,0) = 0; Pud = max(98-96,0) = 2; Pdd = max(98-64,0) = 34"
+        },
+        {
+          "label": "T=1 up node",
+          "content": "[0.625*0 + 0.375*2]/1.05 = 0.7143"
+        },
+        {
+          "label": "T=1 down node (exercise)",
+          "content": "European = [0.625*2 + 0.375*34]/1.05 = 13.33; exercise = 98-80 = 18 > 13.33, use 18"
+        },
+        {
+          "label": "T=0 value",
+          "content": "[0.625*0.7143 + 0.375*18]/1.05 = 6.85"
+        }
+      ]
+    },
+    {
+      "id": "DER-bueden-25",
+      "case": "DER-bueden",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Swaps",
+      "los": "Equity swap value = value of equity leg minus value of fixed leg",
+      "type": "calc",
+      "stem": "The no-arbitrage value (in EUR) of Bueden's position in the equity swap is closest to:",
+      "choices": {
+        "A": "-19,200.",
+        "B": "23,860.",
+        "C": "33,262."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. -19,200 has the sign of the legs reversed (fixed minus equity).",
+        "B": "Correct. Fixed-leg cash flows are 1,000,000*2.3% = 23,000 per period. Value of fixed leg = 0.99108*23,000 + 0.97371*23,000 + 0.95694*1,023,000 = 22,795 + 22,395 + 978,950 = 1,024,140. Equity leg value = 1,000,000*104.8/100 = 1,048,000. Swap value = 1,048,000 - 1,024,140 = 23,860.",
+        "C": "Incorrect. 33,262 misstates the final-period cash flow (omits or mis-discounts the notional repayment)."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Fixed cash flow",
+          "content": "1,000,000 * 2.3% = 23,000 per period; final period adds notional (1,023,000)"
+        },
+        {
+          "label": "Fixed leg value",
+          "content": "0.99108*23,000 + 0.97371*23,000 + 0.95694*1,023,000 = 1,024,140"
+        },
+        {
+          "label": "Equity leg value",
+          "content": "1,000,000 * 104.8/100 = 1,048,000"
+        },
+        {
+          "label": "Swap value",
+          "content": "1,048,000 - 1,024,140 = 23,860"
+        }
+      ]
+    },
+    {
+      "id": "DER-bueden-26",
+      "case": "DER-bueden",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Swaps",
+      "los": "Fixed-for-fixed currency swap par rate = (1 - PV(final))/sum of PV factors, annualized",
+      "type": "calc",
+      "stem": "The interest rate on the AUD leg that results in a contract value of zero at swap initiation is closest to:",
+      "choices": {
+        "A": "0.44%.",
+        "B": "1.29%.",
+        "C": "2.06%."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. 0.44% forgets to annualize the quarterly rate.",
+        "B": "Incorrect. 1.29% mixes the EUR-leg rate into the calculation.",
+        "C": "Correct. The swap par rate is (1 - PV(final))/(sum of PV factors) = (1 - 0.97965)/3.94889 = 0.005153 per quarter. Annualized: 0.005153 * 4 = 2.06%."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Periodic swap rate = (1 - PV(final maturity)) / (Sum of PV factors)"
+        },
+        {
+          "label": "Substitute",
+          "content": "= (1 - 0.97965) / 3.94889"
+        },
+        {
+          "label": "Quarterly rate",
+          "content": "= 0.005153"
+        },
+        {
+          "label": "Annualize",
+          "content": "0.005153 * 4 = 2.06%"
+        }
+      ]
+    },
+    {
+      "id": "DER-bueden-27",
+      "case": "DER-bueden",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "Reverse carry arbitrage when observed forward price is below fair value",
+      "type": "concept",
+      "stem": "Exploiting the arbitrage opportunity in Reyab shares involves:",
+      "choices": {
+        "A": "selling the forward contract and purchasing the underlying with borrowed funds.",
+        "B": "selling the forward contract and investing the proceeds at the risk-free interest rate.",
+        "C": "buying the forward contract, selling the underlying short, and investing the proceeds at the risk-free interest rate."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Selling the forward and buying the underlying with borrowed funds (carry arbitrage) is appropriate when the observed forward price is ABOVE the arbitrage-free price, which is not the case here.",
+        "B": "Incorrect. Selling the forward and investing proceeds leaves the investor exposed to price risk and is not an arbitrage.",
+        "C": "Correct. The observed forward price (63.25) is below the arbitrage-free price (63.65), so reverse carry arbitrage applies: buy the forward, sell the underlying short, and lend (invest) the short-sale proceeds at the risk-free rate."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "DER-bueden-28",
+      "case": "DER-bueden",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "Forward value at time t = St - PV(F0) on the remaining maturity (dividend already paid)",
+      "type": "calc",
+      "stem": "Six months after initiation, the value (in EUR) of the forward contract on Furblag shares is closest to:",
+      "choices": {
+        "A": "7.97.",
+        "B": "8.49.",
+        "C": "8.97."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 7.97 discounts F0 over the wrong horizon.",
+        "B": "Correct. With the dividend already paid, Vt = St - PV(F0) over the remaining 3 months (0.25 years): 131 - 123/1.016^0.25 = 8.49.",
+        "C": "Incorrect. 8.97 fails to discount F0, using 131 - 123 = 8 adjusted incorrectly."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Vt = St - PV(F0); remaining maturity = 9 - 6 = 3 months = 0.25 years"
+        },
+        {
+          "label": "PV of forward price",
+          "content": "123 / 1.016^0.25 = 122.51"
+        },
+        {
+          "label": "Substitute",
+          "content": "131 - 122.51"
+        },
+        {
+          "label": "Result",
+          "content": "= 8.49"
+        }
+      ]
+    },
+    {
+      "id": "DER-knizek-33",
+      "case": "DER-knizek",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "Two-period binomial: backward induction c = PV[pi*c+ + (1-pi)*c-]",
+      "type": "calc",
+      "stem": "The value (in HUF) of the interest rate call option position is closest to:",
+      "choices": {
+        "A": "1,951,000.",
+        "B": "2,164,000.",
+        "C": "4,330,000."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 1,951,000 applies the discount factor twice or mis-weights the nodes.",
+        "B": "Correct. c = PV[pi*c+ + (1-pi)*c-] = 0.99108*[0.50*4,152,800 + 0.50*214,800] = 0.99108*2,183,800 = 2,164,320, about 2,164,000.",
+        "C": "Incorrect. 4,330,000 omits the risk-neutral averaging (roughly the sum of the two node values undiscounted)."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "c = PV[pi*c+ + (1-pi)*c-], pi = 0.50"
+        },
+        {
+          "label": "Expected value at Time 1",
+          "content": "0.50*4,152,800 + 0.50*214,800 = 2,183,800"
+        },
+        {
+          "label": "Discount",
+          "content": "2,183,800 * 0.99108"
+        },
+        {
+          "label": "Result",
+          "content": "= 2,164,320, about 2,164,000"
+        }
+      ]
+    },
+    {
+      "id": "DER-knizek-34",
+      "case": "DER-knizek",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "No-arbitrage FRA (1x7) fixed rate from spot rates",
+      "type": "calc",
+      "stem": "The no-arbitrage fixed rate on Knizek's US interest rate FRA is closest to:",
+      "choices": {
+        "A": "0.71%.",
+        "B": "0.91%.",
+        "C": "1.12%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 0.71% uses mismatched tenors.",
+        "B": "Correct. Knizek needs a 1x7 FRA using the 1-month and 7-month rates: FRA = {[1 + 0.0087*(210/360)]/[1 + 0.0060*(30/360)] - 1}/(180/360) = (1.005075/1.0005 - 1)/0.5 = 0.0091, about 0.91%.",
+        "C": "Incorrect. 1.12% uses the 6-month rate (0.81%) incorrectly instead of the 7-month rate."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "FRA0 = {[1 + L(T)*tT]/[1 + L(h)*th] - 1}/tm"
+        },
+        {
+          "label": "Inputs",
+          "content": "L(210)=0.87%, tT=210/360; L(30)=0.60%, th=30/360; tm=180/360"
+        },
+        {
+          "label": "Substitute",
+          "content": "= {[1 + 0.0087*(210/360)]/[1 + 0.0060*(30/360)] - 1}/(180/360)"
+        },
+        {
+          "label": "Result",
+          "content": "= (1.005075/1.0005 - 1)/0.5 = 0.0091, about 0.91%"
+        }
+      ]
+    },
+    {
+      "id": "DER-knizek-35",
+      "case": "DER-knizek",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "Reverse carry arbitrage when forward price is below fair value",
+      "type": "concept",
+      "stem": "To exploit the arbitrage opportunity on the Polish government bond, in addition to the first step, Knizek should:",
+      "choices": {
+        "A": "borrow at the risk-free rate and buy the underlying bond.",
+        "B": "borrow at the risk-free rate and short sell the underlying bond.",
+        "C": "short sell the underlying bond and invest the proceeds at the risk-free rate."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. When the forward price is too low the strategy short sells (not buys) the bond and invests (not borrows) the proceeds.",
+        "B": "Incorrect. Short selling the bond is correct, but the proceeds should be invested, not the trade financed by borrowing.",
+        "C": "Correct. Because the forward price is below its no-arbitrage value (F0 < FV(S0)), reverse carry arbitrage applies: buy the forward (step 1), sell the underlying short, and lend the short-sale proceeds at the risk-free rate."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "DER-knizek-36",
+      "case": "DER-knizek",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "Bond forward value at time t = PV[Ft - F0], scaled by notional and contracts",
+      "type": "calc",
+      "stem": "The fair value (in PLN) of Knizek's government bond forward position after three months is closest to:",
+      "choices": {
+        "A": "-114,800.",
+        "B": "-105,200.",
+        "C": "+114,800."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Vt = PV[Ft - F0] = (108.15 - 109.30)/1.0065^(3/12) = -1.148139 per 100 par, i.e. -0.01148139. Times 100,000 PLN notional times 100 contracts = -114,814, about -114,800.",
+        "B": "Incorrect. -105,200 discounts over the wrong horizon.",
+        "C": "Incorrect. The long forward loses value because the current forward price (108.15) is below the entry price (109.30); the value is negative, not positive."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Vt = PV[Ft - F0], Ft = 108.15, F0 = 109.30"
+        },
+        {
+          "label": "Discounted difference",
+          "content": "(108.15 - 109.30)/1.0065^(0.25) = -1.148139 per 100 par"
+        },
+        {
+          "label": "Per-PLN",
+          "content": "-1.148139/100 = -0.01148139"
+        },
+        {
+          "label": "Scale",
+          "content": "-0.01148139 * 100,000 * 100 = -114,814, about -114,800"
+        }
+      ]
+    },
+    {
+      "id": "DER-carter-33",
+      "case": "DER-carter",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "FRA cash settlement with discounting at settlement-date floating rate",
+      "type": "calc",
+      "stem": "The payment received of FRA to settle it will be closest to:",
+      "choices": {
+        "A": "$2,496.57",
+        "B": "$2,494.84.",
+        "C": "-$2,478.75."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. For a receive-fixed FRA the settlement = Notional * [(FRA rate - floating)*(days/360)] / [1 + floating*(days/360)] = 10,000,000 * [(0.0065 - 0.0055)*(90/360)] / [1 + 0.0055*(90/360)] = $2,496.57. Because rates fell below the locked 0.65% rate, the receive-fixed position gains.",
+        "B": "Incorrect. $2,494.84 omits the discounting adjustment at the settlement floating rate.",
+        "C": "Incorrect. The sign is wrong; the position that locks in a fixed rate gains when rates fall."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Settlement = Notional * [(FRA rate - MRR)*(days/360)] / [1 + MRR*(days/360)]"
+        },
+        {
+          "label": "Numerator",
+          "content": "10,000,000 * (0.0065 - 0.0055)*(90/360) = 10,000,000 * 0.00025 = 2,500"
+        },
+        {
+          "label": "Discount",
+          "content": "divide by [1 + 0.0055*(90/360)] = 1.001375"
+        },
+        {
+          "label": "Result",
+          "content": "2,500 / 1.001375 = $2,496.57"
+        }
+      ]
+    },
+    {
+      "id": "DER-carter-34",
+      "case": "DER-carter",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "Treasury bond futures price with carry, coupon FV and conversion factor",
+      "type": "calc",
+      "stem": "Based on the information provided by Carter, the futures price of the Treasury bond is closest to:",
+      "choices": {
+        "A": "$141,234",
+        "B": "$139,236",
+        "C": "$146,689"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $141,234 omits or misplaces the accrued-interest-at-expiry deduction.",
+        "B": "Correct. QFP = [(S0 + AI0)*(1+Rf)^T - FVC - AIT] / CF = [(156,000)*(1.015)^(8/12) - 3,500*(1.015)^(2/12) - 3,500*(2/6)] / 1.098 = $139,236. The bond pays a $3,500 semiannual coupon; one coupon is carried forward and accrued interest at expiry is deducted.",
+        "C": "Incorrect. $146,689 fails to divide by the conversion factor of 1.098."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "QFP = [(S0 + AI0)*(1+Rf)^T - FVC - AIT] / CF"
+        },
+        {
+          "label": "Carry",
+          "content": "156,000 * (1.015)^(8/12) = 157,556"
+        },
+        {
+          "label": "Coupon FV and AI",
+          "content": "- 3,500*(1.015)^(2/12) - 3,500*(2/6) = -3,509 - 1,167"
+        },
+        {
+          "label": "Result",
+          "content": "(157,556 - 3,509 - 1,167)/1.098 = $139,236"
+        }
+      ]
+    },
+    {
+      "id": "DER-carter-35",
+      "case": "DER-carter",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Forwards/Futures",
+      "los": "No-arbitrage equity forward with continuous dividend yield: F = S0*e^((rf-gamma)T)",
+      "type": "calc",
+      "stem": "The current no-arbitrage futures price of QuantumByte Technologies (QBT) is closest to:",
+      "choices": {
+        "A": "$81.35.",
+        "B": "$81.93.",
+        "C": "$82.03."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $81.35 exaggerates the net carry.",
+        "B": "Correct. F0(T) = S0*e^((rf - gamma)T) = 82*e^((0.0032 - 0.008)*(2/12)) = $81.93. Because the dividend yield exceeds the interest rate, the forward price is below the spot.",
+        "C": "Incorrect. $82.03 has the sign of (rf - gamma) reversed, pushing the forward above spot."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "F0(T) = S0 * e^((rf - gamma)*T)"
+        },
+        {
+          "label": "Net carry",
+          "content": "(0.0032 - 0.008)*(2/12) = -0.0008"
+        },
+        {
+          "label": "Substitute",
+          "content": "82 * e^(-0.0008)"
+        },
+        {
+          "label": "Result",
+          "content": "= 82 * 0.9992 = $81.93"
+        }
+      ]
+    },
+    {
+      "id": "DER-carter-36",
+      "case": "DER-carter",
+      "topic": "Derivatives",
+      "module": "Pricing and Valuation of Swaps",
+      "los": "Pay-fixed receive-equity swap value = PV equity receipts - value of fixed-rate bond",
+      "type": "calc",
+      "stem": "Based on the information in Exhibit 1, the market value of Carter's equity swap is closest to:",
+      "choices": {
+        "A": "CNY 8,445,900.",
+        "B": "CNY 7,611,000.",
+        "C": "CNY 7,029,100."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. 8,445,900 mis-values the fixed leg (wrong PV factor or omitted notional).",
+        "B": "Incorrect. 7,611,000 uses an incorrect index ratio or discounting.",
+        "C": "Correct. For a pay-fixed receive-equity swap, MV = equity leg - fixed-rate bond. Equity leg = (3,738/3,250)*50,000,000. Fixed bond = (4.8%/4 * 50,000,000)*0.9976 + 50,000,000*0.9976. MV = (3,738/3,250)*50,000,000 - [600,000*0.9976 + 50,000,000*0.9976] = CNY 7,029,132."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Structure",
+          "content": "Pay-fixed, receive-equity: MV = equity leg value - fixed-rate bond value"
+        },
+        {
+          "label": "Equity leg",
+          "content": "(3,738/3,250) * 50,000,000 = 57,507,692"
+        },
+        {
+          "label": "Fixed bond",
+          "content": "(0.048/4 * 50,000,000)*0.9976 + 50,000,000*0.9976 = 598,560 + 49,880,000 = 50,478,560"
+        },
+        {
+          "label": "Result",
+          "content": "57,507,692 - 50,478,560 = CNY 7,029,132, about 7,029,100"
+        }
+      ]
+    },
+    {
+      "id": "DER-goldsworthy-73",
+      "case": "DER-goldsworthy",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "Two-step binomial call via backward induction with continuous discounting",
+      "type": "calc",
+      "stem": "The no-arbitrage value of the Sunset call option is closest to:",
+      "choices": {
+        "A": "$8.42.",
+        "B": "$8.35.",
+        "C": "$7.85."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $8.42 uses an incorrect risk-neutral probability or discount factor.",
+        "B": "Correct. C+ = (30.125*0.5111 + 2*0.4889)*e^(-0.03) = 15.891; C- = (2*0.5111 + 0*0.4889)*e^(-0.03) = 0.992; C0 = (15.891*0.5111 + 0.992*0.4889)*e^(-0.03) = 8.35.",
+        "C": "Incorrect. $7.85 mis-discounts one of the steps."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Up-node value",
+          "content": "C+ = (30.125*0.5111 + 2*0.4889)*e^(-0.03) = 15.891"
+        },
+        {
+          "label": "Down-node value",
+          "content": "C- = (2*0.5111 + 0*0.4889)*e^(-0.03) = 0.992"
+        },
+        {
+          "label": "Time-0 value",
+          "content": "C0 = (15.891*0.5111 + 0.992*0.4889)*e^(-0.03)"
+        },
+        {
+          "label": "Result",
+          "content": "= 8.35 (matches the no-arbitrage model)"
+        }
+      ]
+    },
+    {
+      "id": "DER-goldsworthy-74",
+      "case": "DER-goldsworthy",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "One-period binomial hedge ratio for a put = (P+ - P-)/(S+ - S-)",
+      "type": "calc",
+      "stem": "The optimal hedge ratio for the 1-year expiration European-style put on Sunrise is closest to:",
+      "choices": {
+        "A": "-0.79.",
+        "B": "0.67.",
+        "C": "-0.85."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. With u = 1.32, d = 0.76 and strike 30: S+ = 25*1.32 = 33 (P+ = 0), S- = 25*0.76 = 19 (P- = 11). Hedge ratio = (P+ - P-)/(S+ - S-) = (0 - 11)/(33 - 19) = -0.79. A put hedge ratio is negative.",
+        "B": "Incorrect. 0.67 is a call-style positive ratio and has the wrong sign for a put.",
+        "C": "Incorrect. -0.85 uses incorrect up/down stock prices or payoffs."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Up state",
+          "content": "S+ = 25*1.32 = 33; put payoff P+ = max(30-33,0) = 0"
+        },
+        {
+          "label": "Down state",
+          "content": "S- = 25*0.76 = 19; put payoff P- = max(30-19,0) = 11"
+        },
+        {
+          "label": "Hedge ratio",
+          "content": "(P+ - P-)/(S+ - S-) = (0 - 11)/(33 - 19)"
+        },
+        {
+          "label": "Result",
+          "content": "= -11/14 = -0.79"
+        }
+      ]
+    },
+    {
+      "id": "DER-goldsworthy-75",
+      "case": "DER-goldsworthy",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "BSM assumes European exercise; it undervalues American puts with early-exercise value",
+      "type": "concept",
+      "stem": "The BSM model would most likely undervalue:",
+      "choices": {
+        "A": "the put option on Sunrise with 1-year expiration.",
+        "B": "the put option on Sunrise with 2-year expiration.",
+        "C": "the call option on Sunset with 2-year expiration."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The 1-year Sunrise put is European; BSM prices European options correctly.",
+        "B": "Correct. The 2-year Sunrise put is American. BSM assumes European-style exercise (no early exercise). When the stock price is very low and the put is deep in the money, early exercise has value, so BSM most likely undervalues the American put.",
+        "C": "Incorrect. The Sunset option is a European call; early-exercise value is generally not an issue and BSM values it appropriately."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "DER-goldsworthy-76",
+      "case": "DER-goldsworthy",
+      "topic": "Derivatives",
+      "module": "Valuation of Contingent Claims (BSM/binomial)",
+      "los": "Delta hedge is most effective when gamma and vega are lowest",
+      "type": "concept",
+      "stem": "A delta hedge would be most effective for:",
+      "choices": {
+        "A": "Option 1.",
+        "B": "Option 2.",
+        "C": "Option 3."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Option 1 has high gamma (0.0045) and the highest vega (0.7972), so its delta changes quickly and the hedge is less effective.",
+        "B": "Correct. A delta hedge is most effective when gamma and vega are near zero. Option 2 has the lowest gamma (0.0023) and lowest vega (0.4828), so its delta is most stable and the hedge is most effective.",
+        "C": "Incorrect. Option 3 has the highest gamma (0.0098), so its delta shifts sharply as the underlying moves, making the hedge least stable."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-pasco-41",
+      "case": "ALT-pasco",
+      "topic": "Alts",
+      "module": "Commodities and Commodity Derivatives",
+      "los": "Backwardation, basis and calendar spread from spot vs futures prices",
+      "type": "concept",
+      "stem": "Based on the current price data of Fund 1's largest exposures, the most appropriate conclusion is that the:",
+      "choices": {
+        "A": "crude oil basis is zero.",
+        "B": "cocoa market is in backwardation.",
+        "C": "gold market calendar spread is positive."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The crude oil spot price (75.02) exceeds the futures prices (74.25), giving a positive basis of 0.77, not zero. A zero result would wrongly define the basis as the difference between the two futures prices.",
+        "B": "Correct. Backwardation exists when the spot price exceeds the futures prices. Cocoa prices fall from spot (3,318) to the 3-month (3,264) and 6-month (3,233) futures, so the market is in backwardation.",
+        "C": "Incorrect. The gold calendar spread = near-term minus farther-term futures = 1,929.3 - 1,935.6 = -6.3, which is negative, not positive."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-pasco-42",
+      "case": "ALT-pasco",
+      "topic": "Alts",
+      "module": "Commodities and Commodity Derivatives",
+      "los": "Total return on commodity futures = price return + roll return + collateral return",
+      "type": "calc",
+      "stem": "The 3-month total return of the past cocoa futures trade is closest to:",
+      "choices": {
+        "A": "0.2%.",
+        "B": "1.7%.",
+        "C": "$90,000."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 0.2% captures only the (negative) price return magnitude, ignoring roll and collateral returns.",
+        "B": "Correct. Price return = (3,285 - 3,294)/3,294 = -0.2732%. Roll return = (3,285 - 3,260)/3,285 = 0.7610%. Collateral return = 5.0% * 3/12 = 1.2500%. Total = -0.2732% + 0.7610% + 1.2500% = 1.7378%, about 1.7%.",
+        "C": "Incorrect. $90,000 is not a return; the question asks for a percentage return."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Price return",
+          "content": "(3,285 - 3,294)/3,294 = -0.2732%"
+        },
+        {
+          "label": "Roll return",
+          "content": "(3,285 - 3,260)/3,285 = 0.7610%"
+        },
+        {
+          "label": "Collateral return",
+          "content": "5.0% * 3/12 = 1.2500%"
+        },
+        {
+          "label": "Total",
+          "content": "-0.2732% + 0.7610% + 1.2500% = 1.7378%, about 1.7%"
+        }
+      ]
+    },
+    {
+      "id": "ALT-pasco-43",
+      "case": "ALT-pasco",
+      "topic": "Alts",
+      "module": "Private Equity Investments",
+      "los": "Merger (stock-for-stock) arbitrage gain if the deal closes",
+      "type": "calc",
+      "stem": "If the merger between AC and TC closes successfully, Fund 2's merger arbitrage trade will result in a gain closest to:",
+      "choices": {
+        "A": "$7,000.",
+        "B": "$20,000.",
+        "C": "$90,000."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $7,000 mismatches the conversion ratio.",
+        "B": "Correct. Cost to buy 30,000 TC shares = 30,000*$11 = $330,000. On conversion the fund receives 30,000/3 = 10,000 AC shares. It had sold 10,000 AC shares at $35 = $350,000. Gain = $350,000 - $330,000 = $20,000.",
+        "C": "Incorrect. $90,000 ignores the short AC leg and mis-applies the pre-announcement prices."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Buy target",
+          "content": "30,000 TC shares * $11 = $330,000 cost"
+        },
+        {
+          "label": "Conversion",
+          "content": "30,000 TC / 3 = 10,000 AC shares received"
+        },
+        {
+          "label": "Short acquirer",
+          "content": "10,000 AC shares sold at $35 = $350,000 proceeds"
+        },
+        {
+          "label": "Gain",
+          "content": "$350,000 - $330,000 = $20,000"
+        }
+      ]
+    },
+    {
+      "id": "ALT-pasco-44",
+      "case": "ALT-pasco",
+      "topic": "Alts",
+      "module": "Private Equity Investments",
+      "los": "Fund of funds vs multi-strategy fund: leverage, fee layers, reaction time",
+      "type": "concept",
+      "stem": "Compared to Option 2, Option 1 most likely has:",
+      "choices": {
+        "A": "less leverage.",
+        "B": "fewer layers of fees.",
+        "C": "a shorter tactical reaction time."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Multi-strategy funds (Option 2) tend to use significantly more leverage than most funds of funds (Option 1), which gravitate to modest leverage. So the fund of funds most likely has less leverage.",
+        "B": "Incorrect. A fund of funds typically has a double layer of fees, whereas in a multi-strategy fund fee netting is handled at the strategy level. The fund of funds has more, not fewer, fee layers.",
+        "C": "Incorrect. Because a fund of funds executes strategies across different underlying funds, it has a slower (longer) tactical reaction time than a multi-strategy fund."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-friso-37",
+      "case": "ALT-friso",
+      "topic": "Alts",
+      "module": "Real Estate Investments",
+      "los": "Appraisal-based index: appraisal lag smooths returns (understated volatility)",
+      "type": "concept",
+      "stem": "Friso's choice of real estate index will most likely result in:",
+      "choices": {
+        "A": "understated volatility of returns.",
+        "B": "an underestimated Sharpe ratio.",
+        "C": "higher correlation of returns with the rest of the portfolio."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. An appraisal-based index smooths returns and understates volatility because of the appraisal lag (many properties are not appraised every quarter, so index information is out of date), which is especially pronounced during sudden market shifts.",
+        "B": "Incorrect. The smoothing lowers volatility and therefore overstates, not underestimates, the Sharpe ratio.",
+        "C": "Incorrect. The appraisal lag smooths the index and gives it a lower, not higher, correlation with other asset classes."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-friso-38",
+      "case": "ALT-friso",
+      "topic": "Alts",
+      "module": "Publicly Traded Real Estate Securities (REITs)",
+      "los": "REIT vs REOC: distribution requirements and dividend payout",
+      "type": "concept",
+      "stem": "Compared to Rainfall Real Estate, Perpetua Properties most likely has:",
+      "choices": {
+        "A": "a higher effective tax rate.",
+        "B": "a higher dividend payout ratio.",
+        "C": "greater flexibility to retain earnings."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. As a REIT, Perpetua benefits from tax exemptions (it can deduct dividends paid), effectively exempting it from corporate income tax in many countries, so it does not have a higher effective tax rate.",
+        "B": "Correct. As a REIT, Perpetua must distribute 90-100% of its taxable income to shareholders, whereas the REOC (Rainfall) can retain earnings. Therefore Perpetua most likely has a higher dividend payout ratio.",
+        "C": "Incorrect. REITs must distribute 90-100% of taxable earnings and have little retained earnings for growth. REOCs, with fewer restrictions and no distribution requirement, have greater flexibility to retain earnings."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-friso-39",
+      "case": "ALT-friso",
+      "topic": "Alts",
+      "module": "Publicly Traded Real Estate Securities (REITs)",
+      "los": "AFFO as the best measure of a REIT's sustainable dividend-paying capacity",
+      "type": "concept",
+      "stem": "Which of the following measures of income would best meet Friso's key objective in her analysis of Perpetua Properties?",
+      "choices": {
+        "A": "FFO",
+        "B": "AFFO",
+        "C": "Net income"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. FFO is not a cash flow measure; it excludes the investment and spending needed to sustain cash flow growth and cash flow from financing activities.",
+        "B": "Correct. AFFO (funds/cash available for distribution) is a more accurate, cash-focused measure of sustainable economic income than FFO or net income; it considers the capital expenditures needed to maintain the property portfolio and is more reflective of a REIT's dividend-paying ability.",
+        "C": "Incorrect. Net income includes many non-cash charges and estimates, so it is not a good measure of a REIT's dividend-paying capacity."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-friso-40",
+      "case": "ALT-friso",
+      "topic": "Alts",
+      "module": "Publicly Traded Real Estate Securities (REITs)",
+      "los": "NAV per share = (property + cash + land - debt)/shares",
+      "type": "calc",
+      "stem": "The NAV per share of Perpetua Properties is closest to:",
+      "choices": {
+        "A": "$16.00.",
+        "B": "$20.70.",
+        "C": "$33.20."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. $16.00 omits the land held for development from the asset base.",
+        "B": "Correct. NAV = 2,850 (operating properties) + 120 (cash) + 350 (land) - 1,250 (debt) = $2,070 million. NAV per share = 2,070/100 = $20.70.",
+        "C": "Incorrect. $33.20 fails to subtract total debt."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Add assets",
+          "content": "2,850 + 120 + 350 = 3,320"
+        },
+        {
+          "label": "Subtract debt",
+          "content": "3,320 - 1,250 = 2,070 (NAV, $ millions)"
+        },
+        {
+          "label": "Divide by shares",
+          "content": "2,070 / 100 million shares"
+        },
+        {
+          "label": "Result",
+          "content": "= $20.70 per share"
+        }
+      ]
+    },
+    {
+      "id": "ALT-chang-21",
+      "case": "ALT-chang",
+      "topic": "Alts",
+      "module": "Private Equity Investments",
+      "los": "Liquid alternatives: incentive fees and redemption frequency vs traditional hedge funds",
+      "type": "concept",
+      "stem": "Do liquid alternative investments most likely meet Chang's requirements?",
+      "choices": {
+        "A": "Yes",
+        "B": "No, they fail to meet Requirement 1",
+        "C": "No, they fail to meet Requirement 2"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Liquid alts most likely meet both requirements. They typically do not charge incentive fees (in most countries liquid alts are prohibited from charging one), meeting Requirement 1, and they offer daily redemption rights, more frequent than traditional hedge funds, meeting Requirement 2.",
+        "B": "Incorrect. Liquid alts typically have no incentive fee, so they meet Requirement 1.",
+        "C": "Incorrect. Liquid alts offer daily redemptions -- greater liquidity than traditional hedge funds -- so they meet Requirement 2."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-chang-22",
+      "case": "ALT-chang",
+      "topic": "Alts",
+      "module": "Private Equity Investments",
+      "los": "Multi-strategy fund vs fund of funds: returns, leverage, redemption gates",
+      "type": "concept",
+      "stem": "Compared to Strategy 2, Strategy 1 most likely has:",
+      "choices": {
+        "A": "higher returns.",
+        "B": "lower leverage.",
+        "C": "fewer gates on redemptions."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Multi-strategy funds (Strategy 1) have generally outperformed funds of funds (Strategy 2), though with more variance and occasional large losses tied to higher leverage; their advantage comes from flexibility and fast tactical asset allocation within a single fund structure.",
+        "B": "Incorrect. Multi-strategy funds tend to use significantly more, not less, leverage than funds of funds.",
+        "C": "Incorrect. Multi-strategy funds often impose investor- or fund-level gates on maximum quarterly redemptions, so they do not have fewer gates."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-chang-23",
+      "case": "ALT-chang",
+      "topic": "Alts",
+      "module": "Private Equity Investments",
+      "los": "Long/short equity: stock selection as the primary source of manager skill",
+      "type": "concept",
+      "stem": "Which factor is most likely the primary source of outperformance for the Strategy 3 manager?",
+      "choices": {
+        "A": "Market timing",
+        "B": "Stock selection",
+        "C": "Use of leverage"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Most long/short equity managers time markets poorly (too net long at highs, not net long enough at lows); market timing is secondary at best.",
+        "B": "Correct. Stock selection defines manager skill for most long/short equity managers, with market-timing ability an additive but generally secondary consideration.",
+        "C": "Incorrect. Leverage can amplify positions (used mostly by quantitative managers), but it is not the primary source of skill; stock selection is."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-chang-24",
+      "case": "ALT-chang",
+      "topic": "Alts",
+      "module": "Private Equity Investments",
+      "los": "Strategy best suited to limit drawdowns when combined with a traditional portfolio",
+      "type": "concept",
+      "stem": "Which of the following hedge fund strategies is best suited to meet the plan's drawdown objective?",
+      "choices": {
+        "A": "Event-driven",
+        "B": "Global macro",
+        "C": "Relative value"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. Event-driven/distressed strategies show high maximum drawdowns when combined with a traditional portfolio and provide little risk reduction.",
+        "B": "Correct. When combined with a traditional stock and bond portfolio, opportunistic strategies -- specifically global macro and systematic futures (as well as merger arbitrage and equity market-neutral) -- generate the smallest maximum drawdowns and have low serial autocorrelation (good liquidity), providing risk mitigation even during market stress.",
+        "C": "Incorrect. Relative value/convertible arbitrage strategies show high maximum drawdowns and relatively high standard deviations when combined with the traditional portfolio, offering little risk-reduction benefit."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-baldwin-77",
+      "case": "ALT-baldwin",
+      "topic": "Alts",
+      "module": "Publicly Traded Real Estate Securities (REITs)",
+      "los": "AFFO per share = (FFO - non-cash rents - recurring capex)/shares",
+      "type": "calc",
+      "stem": "REIT 1's AFFOPS is closest to:",
+      "choices": {
+        "A": "$8.95.",
+        "B": "$9.69.",
+        "C": "$10.78."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. AFFO = FFO - non-cash rents - recurring capex = 3,571 - 65 - 267 = 3,239. AFFOPS = 3,239/362 = $8.95.",
+        "B": "Incorrect. $9.69 ignores recurring capital expenditures: (3,571 - 65)/362 = 3,506/362.",
+        "C": "Incorrect. $10.78 adds non-cash rents and recurring capex instead of subtracting them: (3,571 + 65 + 267)/362."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "AFFO = FFO - non-cash rents - recurring (maintenance) capex"
+        },
+        {
+          "label": "Compute AFFO",
+          "content": "3,571 - 65 - 267 = 3,239"
+        },
+        {
+          "label": "Per share",
+          "content": "3,239 / 362 shares"
+        },
+        {
+          "label": "Result",
+          "content": "= $8.95"
+        }
+      ]
+    },
+    {
+      "id": "ALT-baldwin-78",
+      "case": "ALT-baldwin",
+      "topic": "Alts",
+      "module": "Publicly Traded Real Estate Securities (REITs)",
+      "los": "Relative P/FFOPS valuation and the +/-5% fair-value band",
+      "type": "calc",
+      "stem": "Per Paleo's policy and its relative P/FFOPS, REIT 2 is best described as:",
+      "choices": {
+        "A": "undervalued.",
+        "B": "fairly valued.",
+        "C": "overvalued."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The estimated fair value is $177.12 and the current price $172 falls inside the fair-value band, so it is not undervalued.",
+        "B": "Correct. FFOPS for REIT 2 = 1,525/155 = $9.84. Fair value = 9.84 * 18 = $177.12. The +/-5% band is 177.12 +/- 8.86 = $168.26 to $185.98. The current price of $172 falls within this range, so REIT 2 is fairly valued.",
+        "C": "Incorrect. The current price $172 is inside the fair-value band, so it is not overvalued."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "FFOPS",
+          "content": "1,525 / 155 = $9.84"
+        },
+        {
+          "label": "Fair value",
+          "content": "9.84 * 18 (sub-sector P/FFOPS) = $177.12"
+        },
+        {
+          "label": "Fair-value band",
+          "content": "177.12 +/- 5% = $168.26 to $185.98"
+        },
+        {
+          "label": "Compare",
+          "content": "Price $172 is within the band -> fairly valued"
+        }
+      ]
+    },
+    {
+      "id": "ALT-baldwin-79",
+      "case": "ALT-baldwin",
+      "topic": "Alts",
+      "module": "Commodities and Commodity Derivatives",
+      "los": "Theory of storage: futures > spot implies convenience yield < storage cost",
+      "type": "concept",
+      "stem": "Based on the Theory of Storage, the convenience yield for coffee is:",
+      "choices": {
+        "A": "less than its storage cost.",
+        "B": "equal to its storage cost.",
+        "C": "higher than its storage cost."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. The Theory of Storage states futures price = spot price + direct storage costs - convenience yield. Here the coffee futures prices are higher than the spot price, so the convenience yield must be less than the storage cost.",
+        "B": "Incorrect. If convenience yield equaled storage cost, the futures price would equal the spot price; here futures exceed spot.",
+        "C": "Incorrect. A convenience yield higher than storage cost would make futures prices lower than spot (backwardation); here futures are above spot."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ALT-baldwin-80",
+      "case": "ALT-baldwin",
+      "topic": "Alts",
+      "module": "Commodities and Commodity Derivatives",
+      "los": "Gross roll return = (near contract price - farther contract price)/near contract price",
+      "type": "calc",
+      "stem": "The gross roll return on coffee futures from the August Year 0 contract into the May Year 1 contract is closest to:",
+      "choices": {
+        "A": "-5.2%.",
+        "B": "-4.7%.",
+        "C": "-4.5%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. -5.2% uses the spot price (1,810) instead of the near futures (August Year 0) price.",
+        "B": "Correct. Gross roll return = (near contract price - farther contract price)/near contract price = (1,819 - 1,904)/1,819 = -4.7%.",
+        "C": "Incorrect. -4.5% mis-selects the contract prices."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Gross roll return = (near price - farther price)/near price"
+        },
+        {
+          "label": "Contracts",
+          "content": "Near = August Year 0 = 1,819; farther = May Year 1 = 1,904"
+        },
+        {
+          "label": "Substitute",
+          "content": "(1,819 - 1,904)/1,819 = -85/1,819"
+        },
+        {
+          "label": "Result",
+          "content": "= -0.0467, about -4.7%"
+        }
+      ]
+    },
+    {
+      "id": "ECON-podlasky-13",
+      "case": "ECON-podlasky",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Neoclassical steady-state growth rate = TFP growth/labor share + labor force growth",
+      "type": "calc",
+      "stem": "Based on the neoclassical model, the steady-state growth rate for Country A is closest to:",
+      "choices": {
+        "A": "3.8%.",
+        "B": "4.7%.",
+        "C": "5.6%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 3.8% is just the scaled TFP term (2.1%/0.552) without adding labor force growth.",
+        "B": "Correct. Under the neoclassical model the steady-state growth rate = TFP growth scaled by the labor share plus labor force growth: 2.1%/0.552 + 0.9% = 3.804% + 0.9% = 4.70%.",
+        "C": "Incorrect. 5.6% adds labor productivity growth (3.5%) rather than correctly scaling TFP growth by the labor share."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Steady-state growth = theta/(1 - alpha) + n, where 1 - alpha = labor share = 0.552"
+        },
+        {
+          "label": "Scaled TFP",
+          "content": "2.1% / 0.552 = 3.804%"
+        },
+        {
+          "label": "Add labor force growth",
+          "content": "3.804% + 0.9%"
+        },
+        {
+          "label": "Result",
+          "content": "= 4.70%"
+        }
+      ]
+    },
+    {
+      "id": "ECON-podlasky-14",
+      "case": "ECON-podlasky",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Labor productivity growth accounting: potential GDP growth = labor force growth + labor productivity growth",
+      "type": "calc",
+      "stem": "Based on the labor productivity growth accounting equation, the potential GDP growth rate of Country B is:",
+      "choices": {
+        "A": "2.0%.",
+        "B": "2.8%.",
+        "C": "4.3%."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 2.0% omits part of the sum.",
+        "B": "Correct. Growth in potential GDP = growth in the labor force + growth in labor productivity = 0.5% + 2.3% = 2.8%.",
+        "C": "Incorrect. 4.3% double counts by adding TFP growth on top of labor productivity growth."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Potential GDP growth = labor force growth + labor productivity growth"
+        },
+        {
+          "label": "Inputs",
+          "content": "Labor force growth = 0.5%; labor productivity growth = 2.3%"
+        },
+        {
+          "label": "Substitute",
+          "content": "0.5% + 2.3%"
+        },
+        {
+          "label": "Result",
+          "content": "= 2.8%"
+        }
+      ]
+    },
+    {
+      "id": "ECON-podlasky-15",
+      "case": "ECON-podlasky",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Endogenous growth model: open trade permanently raises the growth rate",
+      "type": "concept",
+      "stem": "Which of the following models would best support Podlasky's conclusion regarding the impact of removing Country A's trade barriers?",
+      "choices": {
+        "A": "Classical growth model",
+        "B": "Neoclassical growth model",
+        "C": "Endogenous growth model"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. The classical model does not predict a permanent increase in per capita growth from open trade.",
+        "B": "Incorrect. In the neoclassical model open trade raises the level of output and speeds convergence but does not permanently raise the growth rate.",
+        "C": "Correct. Open trade fosters innovation and, through selection, scale, and backwardness effects, endogenous growth models predict that a more open trade policy will permanently raise the rate of economic growth, matching Podlasky's conclusion of a permanent increase in per capita growth."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-podlasky-16",
+      "case": "ECON-podlasky",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Output gap implications for long-term equity returns and short-term inflation",
+      "type": "concept",
+      "stem": "Podlasky's revisions to the growth forecasts for Country B most likely imply:",
+      "choices": {
+        "A": "lower expected long-term equity returns and higher expected short-term inflation.",
+        "B": "higher expected long-term equity returns and lower expected short-term inflation.",
+        "C": "higher expected long-term equity returns and higher expected short-term inflation."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. A higher growth rate in potential GDP implies higher, not lower, long-term equity returns.",
+        "B": "Correct. A higher estimated growth rate in potential GDP implies higher long-term equity returns, and a lower estimate of short-term GDP growth (below potential) puts downward pressure on inflation, implying lower expected short-term inflation.",
+        "C": "Incorrect. Short-term GDP growth below potential puts downward, not upward, pressure on inflation, so expected short-term inflation is lower."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-bernard-17",
+      "case": "ECON-bernard",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Triangular arbitrage: compare dealer cross rate with interbank implied cross rate",
+      "type": "concept",
+      "stem": "Based on the dealer's JPY/EUR quote, is there an arbitrage opportunity for the hedge fund?",
+      "choices": {
+        "A": "No",
+        "B": "Yes, by purchasing EUR in the interbank market and selling EUR to the dealer",
+        "C": "Yes, by purchasing EUR from the dealer and selling EUR in the interbank market"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. There is an arbitrage: the dealer's EUR offer is cheaper than the interbank implied bid.",
+        "B": "Incorrect. This is the opposite of the profitable trade; buying EUR interbank and selling to the dealer would lose money.",
+        "C": "Correct. The interbank implied JPY/EUR is 119.4342/119.5550 (USD/EUR times JPY/USD). The dealer quotes 119.38/119.40, so the fund can buy EUR from the dealer at 119.40 and sell EUR in the interbank market at 119.43 for a profit."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-bernard-18",
+      "case": "ECON-bernard",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Covered interest rate parity forward rate",
+      "type": "calc",
+      "stem": "Based on covered interest rate parity, the 6-month forward USD/NZD exchange rate is closest to:",
+      "choices": {
+        "A": "0.6774.",
+        "B": "0.6791.",
+        "C": "0.6825."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. 0.6774 has the interest-rate ratio inverted.",
+        "B": "Correct. F(USD/NZD) = S0 * (1 + rUS/2)/(1 + rNZD/2) = 0.6808 * (1 + 0.005/2)/(1 + 0.01/2) = 0.6791. Because NZD has the higher interest rate, it trades at a forward discount.",
+        "C": "Incorrect. 0.6825 applies the rate differential in the wrong direction, implying a forward premium for the higher-yielding currency."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "F(f/d) = S(f/d) * (1 + i(price)/2)/(1 + i(base)/2) for a 6-month tenor"
+        },
+        {
+          "label": "Inputs",
+          "content": "S0 = 0.6808; US rate = 0.50%; NZD rate = 1.00%"
+        },
+        {
+          "label": "Substitute",
+          "content": "0.6808 * (1 + 0.005/2)/(1 + 0.01/2)"
+        },
+        {
+          "label": "Result",
+          "content": "= 0.6808 * 1.0025/1.005 = 0.6791"
+        }
+      ]
+    },
+    {
+      "id": "ECON-bernard-19",
+      "case": "ECON-bernard",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Carry trade all-in return measured in the funding currency",
+      "type": "calc",
+      "stem": "The all-in return for the carry trade, measured in USD terms, is closest to:",
+      "choices": {
+        "A": "7.27%.",
+        "B": "8.27%.",
+        "C": "8.75%."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Borrow $1,000 at 1% (owe $1,010). Convert to BRL at 5.130 -> BRL 5,130. Invest at 9.75% -> BRL 5,630.175. Convert back at 5.200 -> USD 1,082.73. Net = 1,082.73 - 1,010 = 72.73, i.e. 7.27%.",
+        "B": "Incorrect. 8.27% ignores the BRL depreciation from 5.130 to 5.200 over the year.",
+        "C": "Incorrect. 8.75% is the Brazil rate minus the US rate without accounting for the currency move."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Borrow USD",
+          "content": "Borrow $1,000 at 1% -> owe $1,010 at year-end"
+        },
+        {
+          "label": "Invest in BRL",
+          "content": "Convert at 5.130 -> BRL 5,130; grow at 9.75% -> BRL 5,630.175"
+        },
+        {
+          "label": "Convert back",
+          "content": "BRL 5,630.175 / 5.200 = USD 1,082.73"
+        },
+        {
+          "label": "Net return",
+          "content": "(1,082.73 - 1,010)/1,000 = 7.27%"
+        }
+      ]
+    },
+    {
+      "id": "ECON-bernard-20",
+      "case": "ECON-bernard",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Warning signs of a currency crisis: FX reserves decline relative to FX turnover",
+      "type": "concept",
+      "stem": "Which of the following conditions would most likely be a warning sign of a currency crisis in Country B?",
+      "choices": {
+        "A": "Condition 1",
+        "B": "Condition 2",
+        "C": "Condition 3"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Large inflows of foreign capital typically precede a crisis; Country B shows a slight decline in foreign investment, not an inflow.",
+        "B": "Incorrect. Broad money growth and the ratio of M2 to bank reserves tend to rise before a crisis; here these indicators have declined.",
+        "C": "Correct. Foreign exchange reserves tend to decline precipitously as a crisis approaches. The sizable decline in the ratio of FX reserves to average daily FX turnover is the warning sign present in Country B."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-smith-9",
+      "case": "ECON-smith",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Growth accounting (Cobb-Douglas): output growth = TFP + alpha*capital growth + (1-alpha)*labor growth",
+      "type": "calc",
+      "stem": "Based on the information given to Team Blue, the estimate of the economy's potential growth rate is closest to:",
+      "choices": {
+        "A": "1.95%.",
+        "B": "2.55%.",
+        "C": "3.50%."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Growth accounting: output growth = TFP growth + alpha*capital growth + (1 - alpha)*labor growth = 1.0% + 0.30*2.0% + 0.70*0.5% = 1.0% + 0.6% + 0.35% = 1.95%.",
+        "B": "Incorrect. 2.55% mis-weights capital and labor (for example, applying full weights).",
+        "C": "Incorrect. 3.50% sums the raw factor growth rates without applying the income shares."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Output growth = TFP + alpha*(capital growth) + (1 - alpha)*(labor growth), alpha = 0.30"
+        },
+        {
+          "label": "Capital term",
+          "content": "0.30 * 2.0% = 0.6%"
+        },
+        {
+          "label": "Labor term",
+          "content": "0.70 * 0.5% = 0.35%"
+        },
+        {
+          "label": "Result",
+          "content": "1.0% + 0.6% + 0.35% = 1.95%"
+        }
+      ]
+    },
+    {
+      "id": "ECON-smith-10",
+      "case": "ECON-smith",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Capital deepening, TFP measurement, and investment's link to the existing capital stock",
+      "type": "concept",
+      "stem": "Which of the points raised by Team Green is most likely correct?",
+      "choices": {
+        "A": "Point 1",
+        "B": "Point 2",
+        "C": "Point 3"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. The relationship between growth and R&D spending is not clear-cut: technological innovation raises output in the long run but can cause cyclical slowing through creative destruction (the double-edged nature of innovation).",
+        "B": "Incorrect. The statement is reversed: labor productivity growth equals the contribution of capital deepening plus TFP; capital deepening is measured as the difference between labor productivity growth and TFP growth.",
+        "C": "Correct. Although long-term sustainable growth cannot rely on pure capital deepening, the impact of investment spending on available capital depends on the existing physical capital stock, which explains the strong cross-country correlation between investment spending and economic growth (the effect is especially large in developing countries with low capital per worker)."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-smith-11",
+      "case": "ECON-smith",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Convergence concepts: human-capital externalities imply non-convergence",
+      "type": "concept",
+      "stem": "Which of the following convergence concepts is most compatible with Team Purple's conclusion?",
+      "choices": {
+        "A": "Non-convergence",
+        "B": "Absolute convergence",
+        "C": "Conditional convergence"
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Emphasizing the externalities associated with human capital implies a linear (straight-line) production function and is compatible with non-convergence: the endogenous growth model makes no prediction that convergence should occur, allowing high-income countries with more capital to stay ahead through high rates of investment in knowledge and human capital.",
+        "B": "Incorrect. Absolute convergence assumes diminishing marginal returns to capital, which is inconsistent with strong human-capital externalities.",
+        "C": "Incorrect. Conditional convergence also assumes diminishing marginal returns to capital (conditional on the same saving rate, population growth, and production function), inconsistent with the emphasis on human-capital externalities."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-smith-12",
+      "case": "ECON-smith",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Capital flows and convergence: adjustment dynamics under open trade",
+      "type": "concept",
+      "stem": "Which of the following descriptions provided by Team Orange is consistent with Smith's conclusion?",
+      "choices": {
+        "A": "Description 1",
+        "B": "Description 2",
+        "C": "Description 3"
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. During the transition, growth in the capital-exporting (developed) countries will be below, not above, the steady state.",
+        "B": "Incorrect. Because capital flows are matched by offsetting trade flows, developed countries that export capital will tend to run trade surpluses, not deficits.",
+        "C": "Correct. Developing countries have less capital per worker and a higher marginal product of capital, so the rate of return on investments is higher in low capital-to-labor countries and lower in countries with high capital-to-labor ratios, consistent with Smith's conclusion."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-suzy-5",
+      "case": "ECON-suzy",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Mark-to-market of a forward via an offsetting forward, discounted to the valuation date",
+      "type": "calc",
+      "stem": "The mark-to-market value for Suzy's forward position is closest to:",
+      "choices": {
+        "A": "USD 10,576.",
+        "B": "USD 14,964.",
+        "C": "USD 10,557."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Suzy sold GBP; the offset is to buy GBP two months forward using the offer prices: all-in forward = 1.2436 + 18.42/10,000 = 1.245442. Cash flow at settlement = (1.2465 - 1.245442)*10M = USD 10,580. Discount at the two-month USD Libor: 10,580/(1 + 0.0025*(2/12)) = USD 10,576.",
+        "B": "Incorrect. USD 14,964 uses the spot rate (1.25) rather than the offsetting forward rate.",
+        "C": "Incorrect. USD 10,557 discounts at the wrong Libor tenor."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Offsetting forward",
+          "content": "Buy GBP forward at offer: 1.2436 + 18.42/10,000 = 1.245442"
+        },
+        {
+          "label": "Settlement cash flow",
+          "content": "(1.2465 - 1.245442)*10,000,000 = USD 10,580"
+        },
+        {
+          "label": "Discount",
+          "content": "divide by (1 + 0.0025*(2/12))"
+        },
+        {
+          "label": "Result",
+          "content": "10,580/1.0004167 = USD 10,576"
+        }
+      ]
+    },
+    {
+      "id": "ECON-suzy-6",
+      "case": "ECON-suzy",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Uncovered interest rate parity: expected FX change equals the interest rate differential",
+      "type": "calc",
+      "stem": "Based on uncovered interest rate parity, the expected change in the USD/GBP rate in one year is closest to:",
+      "choices": {
+        "A": "a decrease of 1.2 percent.",
+        "B": "an increase of 1.15 percent.",
+        "C": "a decrease of 1.05 percent."
+      },
+      "answer": "A",
+      "explanations": {
+        "A": "Correct. Under uncovered interest rate parity the expected change in USD/GBP equals the interest rate differential (US minus UK) = 0.55% - 1.75% = -1.2%. Because the UK (base currency) has the higher rate, GBP is expected to depreciate 1.2% against the USD.",
+        "B": "Incorrect. The direction is wrong: the higher-yield currency (GBP) is expected to depreciate, so USD/GBP falls.",
+        "C": "Incorrect. 1.05% uses an incorrect interest rate differential."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Expected % change in USD/GBP = i(USD) - i(GBP)"
+        },
+        {
+          "label": "Inputs",
+          "content": "1-year USD Libor = 0.55%; 1-year GBP Libor = 1.75%"
+        },
+        {
+          "label": "Differential",
+          "content": "0.55% - 1.75% = -1.2%"
+        },
+        {
+          "label": "Result",
+          "content": "USD/GBP expected to decrease 1.2% (GBP depreciates)"
+        }
+      ]
+    },
+    {
+      "id": "ECON-suzy-7",
+      "case": "ECON-suzy",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Labor productivity growth accounting: potential GDP growth = labor force growth + labor productivity growth",
+      "type": "calc",
+      "stem": "Assume UK's population growth net of immigration is 1 percent for the period 2013-2023. Using the data given above and the labor productivity growth accounting equation, the estimated growth rate in potential GDP is closest to:",
+      "choices": {
+        "A": "-0.1 percent.",
+        "B": "0.3 percent.",
+        "C": "1.3 percent."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. -0.1% is the given growth in GDP, not the potential GDP growth from labor force plus labor productivity.",
+        "B": "Incorrect. 0.3% is just the growth in labor productivity, omitting labor force growth.",
+        "C": "Correct. Growth in potential GDP = growth rate of labor force + growth rate in labor productivity = 1% + 0.3% = 1.3%."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "Potential GDP growth = labor force growth + labor productivity growth"
+        },
+        {
+          "label": "Inputs",
+          "content": "Labor force growth = 1%; labor productivity growth = 0.3%"
+        },
+        {
+          "label": "Substitute",
+          "content": "1% + 0.3%"
+        },
+        {
+          "label": "Result",
+          "content": "= 1.3%"
+        }
+      ]
+    },
+    {
+      "id": "ECON-suzy-8",
+      "case": "ECON-suzy",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Endogenous growth model: constant returns to capital (no diminishing returns)",
+      "type": "concept",
+      "stem": "Which of the following is not true according to the endogenous growth model?",
+      "choices": {
+        "A": "The economy does not converge to a steady-state rate of growth.",
+        "B": "Increasing capital will result in diminishing marginal returns.",
+        "C": "Spending on R&D has positive externalities that benefit the whole economy."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect (i.e., this statement is true). In the endogenous growth model the economy does not converge to a steady-state rate of growth.",
+        "B": "Correct (this is the untrue statement). Unlike the neoclassical model, which assumes diminishing marginal returns to capital, endogenous growth models assume investment in capital can have constant returns, so increasing the saving rate can permanently raise the growth rate.",
+        "C": "Incorrect (i.e., this statement is true). R&D spending has positive externalities that benefit the whole economy, a key feature of the endogenous growth model."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-trump-49",
+      "case": "ECON-trump",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Triangular arbitrage: dealer overpricing BRL relative to interbank implied cross rate",
+      "type": "concept",
+      "stem": "Based on Exhibit 1, the most appropriate recommendation regarding the triangular arbitrage trade is to:",
+      "choices": {
+        "A": "decline the trade, because no arbitrage profits are possible.",
+        "B": "execute the trade, buy BRL in the interbank market, and sell BRL to the dealer.",
+        "C": "execute the trade, buy BRL from the dealer, and sell BRL in the interbank market."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. An arbitrage exists because the dealer's bid to buy BRL (0.2355) is higher than the interbank implied offer (0.23505).",
+        "B": "Correct. The interbank implied CHF/BRL cross rate is 0.2349/0.23505 (CHF/USD times USD/BRL, where USD/BRL is 0.23980/0.23982). The dealer is willing to buy BRL at 0.2355, higher than the 0.23505 at which BRL can be bought in the interbank market, so buy BRL in the interbank market and sell to the dealer for a profit of about 0.0045 CHF per BRL.",
+        "C": "Incorrect. This reverses the profitable direction; buying from the dealer and selling interbank would lose money."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-trump-50",
+      "case": "ECON-trump",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Covered interest rate parity forward and forward premium (discount)",
+      "type": "calc",
+      "stem": "Based upon Exhibit 2, the forward premium (discount) for a 270-day CAD/GBP forward contract is closest to:",
+      "choices": {
+        "A": "-0.0274",
+        "B": "0.0389",
+        "C": "-0.0380"
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. -0.0274 mis-signs or mis-scales the interest rate differential.",
+        "B": "Correct. F = S * [1 + i(CAD)*(270/360)]/[1 + i(GBP)*(270/360)] = 1.5872 * (1 + 0.046*0.75)/(1 + 0.013*0.75) = 1.6261. Forward premium = F - S = 1.6261 - 1.5872 = 0.0389. CAD (price currency) has the higher rate, so GBP trades at a forward premium in CAD/GBP terms.",
+        "C": "Incorrect. -0.0380 has the wrong sign; the higher CAD rate makes CAD/GBP forward exceed spot."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Formula",
+          "content": "F = S * [1 + i(CAD)*(270/360)]/[1 + i(GBP)*(270/360)]"
+        },
+        {
+          "label": "Substitute",
+          "content": "1.5872 * (1 + 0.046*0.75)/(1 + 0.013*0.75)"
+        },
+        {
+          "label": "Forward rate",
+          "content": "= 1.5872 * 1.0345/1.00975 = 1.6261"
+        },
+        {
+          "label": "Forward premium",
+          "content": "F - S = 1.6261 - 1.5872 = 0.0389"
+        }
+      ]
+    },
+    {
+      "id": "ECON-trump-51",
+      "case": "ECON-trump",
+      "topic": "Econ",
+      "module": "Currency Exchange Rates",
+      "los": "Mundell-Fleming: both expansionary policies leave the currency effect indeterminate",
+      "type": "concept",
+      "stem": "Based on the findings of the Mundell-Fleming model, what is the best possible response to the candidate's Question 1?",
+      "choices": {
+        "A": "The CAD will appreciate.",
+        "B": "The CAD will depreciate.",
+        "C": "The exchange rate is indeterminate."
+      },
+      "answer": "C",
+      "explanations": {
+        "A": "Incorrect. Appreciation would follow restrictive monetary and/or expansionary fiscal policy; here both policies are expansionary.",
+        "B": "Incorrect. Depreciation would follow expansionary monetary and/or restrictive fiscal policy; here fiscal policy is expansionary, not restrictive.",
+        "C": "Correct. Under high capital mobility with flexible exchange rates, the effect on the currency of monetary and fiscal policies that are both expansionary (or both restrictive) is indeterminate, because the monetary expansion pushes the currency down while the fiscal expansion pushes it up."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      }
+    },
+    {
+      "id": "ECON-trump-52",
+      "case": "ECON-trump",
+      "topic": "Econ",
+      "module": "Economic Growth",
+      "los": "Growth accounting: identify the largest contributor (capital vs labor vs TFP)",
+      "type": "calc",
+      "stem": "Based on the economic data given above and the growth accounting equation, the most appropriate conclusion is that GDP growth is driven by:",
+      "choices": {
+        "A": "labor.",
+        "B": "capital.",
+        "C": "TFP."
+      },
+      "answer": "B",
+      "explanations": {
+        "A": "Incorrect. The labor contribution (1 - alpha)*labor growth = 0.4*1.3 = 0.52% is the smallest of the three.",
+        "B": "Correct. Share of capital alpha = 0.6 (since labor share = 0.4). Capital contribution = alpha*capital growth = 0.6*6.2% = 3.72%; TFP = labor productivity growth - capital deepening = 3.4% - 1.7% = 1.7%; labor = 0.4*1.3% = 0.52%. Capital's 3.72% is the largest, so GDP growth is driven by capital.",
+        "C": "Incorrect. TFP contributes 1.7%, less than the 3.72% from capital."
+      },
+      "source": "2026 L2 Mock (past, public)",
+      "verified": {
+        "method": "verbatim-import"
+      },
+      "steps": [
+        {
+          "label": "Capital share",
+          "content": "alpha = 1 - labor share = 1 - 0.40 = 0.60"
+        },
+        {
+          "label": "Capital contribution",
+          "content": "alpha*capital growth = 0.6*6.2% = 3.72%"
+        },
+        {
+          "label": "TFP and labor",
+          "content": "TFP = 3.4% - 1.7% = 1.7%; labor = 0.4*1.3% = 0.52%"
+        },
+        {
+          "label": "Conclusion",
+          "content": "Capital's 3.72% is largest -> growth driven by capital"
+        }
+      ]
+    }
+  ]
+}
