@@ -12,6 +12,31 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;',
 /* fmt: 转义 + 渲染 $...$ 公式。用于题干/解析/步骤/微课/框架等所有含公式的正文。 */
 const fmt = s => (window.MathFmt ? MathFmt.renderText(s) : esc(s));
 
+/* richText: 在 fmt 基础上再渲染 **加粗** 与 ==高亮== (微课/生动内容用)。
+ * 先按 $...$ 拆分, 公式段走 MathFmt, 文字段做 markup。 */
+function richText(raw) {
+  const parts = String(raw).split(/(\$\$[^$]*\$\$|\$[^$]*\$)/g);
+  return parts.map(p => {
+    if (p.startsWith('$') && p.endsWith('$') && p.length > 1) return fmt(p);
+    let h = esc(p);
+    h = h.replace(/==([^=]+)==/g, '<mark class="hl">$1</mark>');
+    h = h.replace(/\*\*([^*]+)\*\*/g, '<b class="kw">$1</b>');
+    return h.replace(/\n/g, '<br>');
+  }).join('');
+}
+
+const LESSON_KIND = [
+  { re: /什么|为什么|是啥|背景/, cls: 'what', icon: '💡' },
+  { re: /公式|规则|核心|定义/, cls: 'formula', icon: '📐' },
+  { re: /例|算|计算|演示/, cls: 'example', icon: '🔢' },
+  { re: /陷阱|坑|易错|注意|区分|别/, cls: 'trap', icon: '⚠️' },
+  { re: /记|口诀|钩子|类比|技巧/, cls: 'hook', icon: '🧲' },
+];
+function lessonKind(h) {
+  for (const k of LESSON_KIND) if (k.re.test(h)) return k;
+  return { cls: 'default', icon: '📌' };
+}
+
 function toast(msg) {
   const t = $('#toast');
   t.textContent = msg;
@@ -195,9 +220,10 @@ function renderLesson(item, main) {
   const next = el('button', 'bigbtn', '');
   const showOne = () => {
     const c = item.cards[shown];
-    const lc = el('div', 'lesson-card');
-    lc.appendChild(el('h2', '', esc(c.h)));
-    lc.appendChild(el('div', 'lesson-body', fmt(c.b)));
+    const kind = lessonKind(c.h);
+    const lc = el('div', `lesson-card lk-${kind.cls}`);
+    lc.appendChild(el('h2', '', `${kind.icon} ${esc(c.h)}`));
+    lc.appendChild(el('div', 'lesson-body', richText(c.b)));
     cardsBox.appendChild(lc);
     shown += 1;
     next.textContent = shown < item.cards.length ? `下一张 ▸ (${shown}/${item.cards.length})` : '懂了,开始做题 ▸';

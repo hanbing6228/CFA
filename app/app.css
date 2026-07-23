@@ -157,10 +157,27 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .freq.mid { background: var(--accent-soft); color: var(--accent); }
 .freq.f { background: var(--green-soft); color: var(--green); }
 
-/* 微课卡 */
-.lesson-card { border-left: 3px solid var(--green); background: var(--green-soft); border-radius: 0 12px 12px 0; padding: 12px 14px; margin: 10px 0; }
-.lesson-card h2 { font-size: .92rem; margin-bottom: 4px; }
-.lesson-body { font-size: .92rem; white-space: pre-wrap; }
+/* 微课卡 (ADHD 友好: 按类型配色, 大字, 关键词高亮) */
+.lesson-card { border-left: 5px solid var(--accent); background: var(--card); border-radius: 0 14px 14px 0; padding: 14px 16px; margin: 12px 0; box-shadow: var(--shadow); }
+.lesson-card h2 { font-size: 1.05rem; margin-bottom: 8px; font-weight: 700; }
+.lesson-body { font-size: 1.02rem; line-height: 1.7; }
+.lesson-body .kw { color: var(--accent); font-weight: 700; }
+.lesson-body .hl, .single-expl .hl, .ans .hl { background: linear-gradient(transparent 55%, rgba(240,180,60,.55) 55%); padding: 0 2px; border-radius: 2px; font-weight: 600; }
+@media (prefers-color-scheme: dark){ .lesson-body .hl { background: linear-gradient(transparent 55%, rgba(240,160,40,.4) 55%); } }
+.lk-what    { border-left-color: var(--green);  background: var(--green-soft); }
+.lk-what h2 { color: var(--green); }
+.lk-formula { border-left-color: var(--accent); background: var(--accent-soft); }
+.lk-formula h2 { color: var(--accent); }
+.lk-example { border-left-color: var(--amber); background: rgba(217,119,6,.08); }
+.lk-example h2 { color: var(--amber); }
+.lk-trap    { border-left-color: var(--red);    background: var(--red-soft); }
+.lk-trap h2 { color: var(--red); }
+.lk-hook    { border-left-color: #a855f7; background: rgba(168,85,247,.10); }
+.lk-hook h2 { color: #a855f7; }
+.lk-what .kw { color: var(--green); }
+.lk-example .kw { color: var(--amber); }
+.lk-trap .kw { color: var(--red); }
+.lk-hook .kw { color: #a855f7; }
 
 /* Case/vignette 面板 */
 .casebox { margin-bottom: 14px; border: 1.5px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--accent-soft); }

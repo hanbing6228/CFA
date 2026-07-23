@@ -150,6 +150,21 @@ def build(pdf_path="/tmp/claude-0/-home-user-CFA/4fa97b66-e60d-5c05-a4ee-ec875de
         if saved:
             page_imgs[i] = saved
 
+    # 加载子任务提取的 case 背景, 按 anchor(首题题干前缀) 建索引
+    bg_by_anchor = {}
+    for bf in sorted((ROOT / "import").glob("bg_out*.json")):
+        try:
+            for item in json.loads(bf.read_text(encoding="utf-8")):
+                if item.get("background"):
+                    key = re.sub(r"\s+", " ", item["anchor"]).strip()[:40]
+                    bg_by_anchor[key] = item["background"]
+        except Exception:
+            pass
+
+    def find_bg(stem):
+        key = re.sub(r"\s+", " ", stem).strip()[:40]
+        return bg_by_anchor.get(key, "")
+
     out_cases, out_q = [], []
     seenq = set()
     for ci, c in enumerate(cases):
@@ -162,12 +177,13 @@ def build(pdf_path="/tmp/claude-0/-home-user-CFA/4fa97b66-e60d-5c05-a4ee-ec875de
             imgs += page_imgs.get(p, [])
         cid = f"QB-CASE-{ci}"
         topic = qs[0]["topic"]
-        has_case = bool(c["background"]) or bool(imgs) or len(qs) > 1
+        bg = c["background"] or find_bg(qs[0]["stem"])
+        has_case = bool(bg) or bool(imgs) or len(qs) > 1
         if has_case:
             out_cases.append({
                 "id": cid, "topic": topic,
                 "title": f"{qs[0]['module']} 综合题",
-                "background": c["background"],
+                "background": bg,
                 "images": imgs[:6],
             })
         for q in qs:
