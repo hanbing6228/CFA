@@ -1,6 +1,6 @@
 :root {
   --bg: #f4f5f7; --card: #ffffff; --text: #1a1d21; --muted: #6b7280;
-  --accent: #2563eb; --accent-soft: rgba(37,99,235,.10);
+  --accent: #4f46e5; --accent-soft: rgba(79,70,229,.10);
   --green: #16a34a; --green-soft: rgba(22,163,74,.12);
   --red: #dc2626; --red-soft: rgba(220,38,38,.10);
   --amber: #d97706; --border: #e5e7eb; --shadow: 0 1px 3px rgba(0,0,0,.08);
@@ -8,7 +8,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #101216; --card: #1a1e24; --text: #e7e9ec; --muted: #9aa2ad;
-    --accent: #5b8def; --accent-soft: rgba(91,141,239,.15);
+    --accent: #818cf8; --accent-soft: rgba(129,140,248,.16);
     --green: #34c268; --green-soft: rgba(52,194,104,.16);
     --red: #ef5350; --red-soft: rgba(239,83,80,.14);
     --amber: #f0a04b; --border: #2a2f37; --shadow: 0 1px 3px rgba(0,0,0,.4);
@@ -16,6 +16,9 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html { font-size: 16px; }
+/* 统一线性图标: 跟随文字色与字号, 严禁 emoji 当图标 */
+.ic { width: 1.08em; height: 1.08em; display: inline-block; vertical-align: -.17em; flex: none; }
+.ic.big { width: 1.3em; height: 1.3em; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
   background: var(--bg); color: var(--text); line-height: 1.55;
@@ -111,7 +114,8 @@ h2 { font-size: 1.05rem; margin: 4px 0; }
 .nextivl { text-align: center; font-size: .8rem; color: var(--muted); margin-top: 10px; }
 
 /* 结算页 */
-.doneemoji { font-size: 3rem; text-align: center; margin: 18px 0 6px; }
+.doneemoji { text-align: center; margin: 18px 0 6px; color: var(--accent); }
+.doneemoji .ic { width: 3rem; height: 3rem; }
 .scoreline { text-align: center; font-size: 1.1rem; margin-bottom: 4px; }
 
 /* 弱点屏 */

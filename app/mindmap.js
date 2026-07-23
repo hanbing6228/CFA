@@ -66,8 +66,8 @@ const MindMap = (() => {
     return byd;
   }
 
-  // ---- 配色 (按 depth-1 分支分色, 子孙继承同色系; 支持深浅色主题) ----
-  const HUES = [222, 158, 28, 280, 340, 130, 45, 194, 0, 258, 96, 312];
+  // ---- 配色 (每个二级分支独立色相, 子孙继承; 一级=实心彩色主枝; 深浅双主题) ----
+  const HUES = [222, 158, 32, 275, 340, 130, 48, 194, 8, 258, 96, 300, 172, 18, 240];
   function isDark() {
     const bg = getComputedStyle(document.body).backgroundColor || 'rgb(255,255,255)';
     const m = bg.match(/\d+/g);
@@ -81,20 +81,25 @@ const MindMap = (() => {
       ? { fill: '#3a1418', stroke: '#f87171', text: '#fca5a5' }
       : { fill: '#fef2f2', stroke: '#dc2626', text: '#b91c1c' };
     const hue = node.hue == null ? 222 : node.hue;
-    if (node.depth === 0) return { fill: `hsl(${hue},70%,52%)`, stroke: `hsl(${hue},70%,42%)`, text: '#fff' };
+    // 根: 深靛蓝实心
+    if (node.depth === 0) return { fill: `hsl(248,68%,54%)`, stroke: `hsl(248,68%,44%)`, text: '#fff' };
+    // 一级主枝: 实心彩色, 白字 (强对比, 一眼分块)
+    if (node.depth === 1) return { fill: `hsl(${hue},58%,${dark ? 46 : 52}%)`, stroke: `hsl(${hue},58%,${dark ? 40 : 44}%)`, text: '#fff' };
+    // 陷阱 / 公式 覆盖色
     if (node.trap) return dark
-      ? { fill: `hsl(38,45%,16%)`, stroke: `hsl(38,80%,55%)`, text: `hsl(40,85%,72%)` }
-      : { fill: `hsl(45,90%,94%)`, stroke: `hsl(38,85%,52%)`, text: `hsl(32,75%,38%)` };
+      ? { fill: `hsl(38,48%,17%)`, stroke: `hsl(38,82%,55%)`, text: `hsl(40,88%,74%)` }
+      : { fill: `hsl(45,92%,90%)`, stroke: `hsl(35,88%,50%)`, text: `hsl(30,78%,36%)` };
     if (node.f) return dark
-      ? { fill: `hsl(150,35%,15%)`, stroke: `hsl(150,55%,45%)`, text: `hsl(150,55%,72%)` }
-      : { fill: `hsl(150,60%,94%)`, stroke: `hsl(150,50%,45%)`, text: `hsl(155,55%,30%)` };
-    const d = Math.min(node.depth, 4);
+      ? { fill: `hsl(150,38%,16%)`, stroke: `hsl(150,58%,46%)`, text: `hsl(150,58%,74%)` }
+      : { fill: `hsl(150,64%,90%)`, stroke: `hsl(150,54%,42%)`, text: `hsl(155,58%,28%)` };
+    // 二级及以下: 该二级分支的色相, 越深越浅
+    const d = Math.min(node.depth, 5);
     if (dark) {
-      const L = [0, 20, 17, 15, 14][d];
-      return { fill: `hsl(${hue},30%,${L}%)`, stroke: `hsl(${hue},40%,42%)`, text: `hsl(${hue},35%,82%)` };
+      const L = [0, 0, 26, 22, 19, 17][d];
+      return { fill: `hsl(${hue},38%,${L}%)`, stroke: `hsl(${hue},48%,46%)`, text: `hsl(${hue},42%,85%)` };
     }
-    const L = [0, 90, 94, 96, 97][d];
-    return { fill: `hsl(${hue},62%,${L}%)`, stroke: `hsl(${hue},48%,60%)`, text: `hsl(${hue},42%,30%)` };
+    const L = [0, 0, 85, 89, 92, 94][d];
+    return { fill: `hsl(${hue},72%,${L}%)`, stroke: `hsl(${hue},56%,56%)`, text: `hsl(${hue},52%,26%)` };
   }
 
   function render(container, tree, opts) {
@@ -102,12 +107,19 @@ const MindMap = (() => {
     container.innerHTML = '';
     const dark = isDark();
     layout(tree, 0);
-    // 给每条 depth-1 分支分配一个色相, 子孙继承
-    (tree.children || []).forEach((c, i) => {
-      const hue = HUES[i % HUES.length];
-      (function paint(n) { n.hue = hue; (n.children || []).forEach(paint); })(c);
+    // 配色: 一级主枝各自一色; 每个二级分支再独立轮换色相 → 整图色彩丰富且分组清晰
+    let hueI = 0;
+    tree.hue = 248;
+    (tree.children || []).forEach((c1, i1) => {
+      const h1 = HUES[i1 % HUES.length];
+      c1.hue = h1;
+      const kids = c1.children || [];
+      if (!kids.length) return;
+      kids.forEach((c2) => {
+        const h2 = kids.length > 1 ? HUES[hueI++ % HUES.length] : h1;
+        (function paint(n) { n.hue = h2; (n.children || []).forEach(paint); })(c2);
+      });
     });
-    tree.hue = 222;
     assignY(tree, { y: PADY });
     const byd = collectByDepth(tree);
     const colX = [PADX];

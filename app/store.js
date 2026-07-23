@@ -91,10 +91,10 @@ const Store = (() => {
   /* 阶段引擎: 距考天数 → 当前 Sprint 阶段 (机构流水线的阶段化) */
   function phase() {
     const d = daysToExam();
-    if (d > 100) return { key: 'base', name: '基础 Sprint', desc: '只做题不读书,每天 3 新题+复习', icon: '🏗' };
-    if (d > 42) return { key: 'hundred', name: '百日冲刺', desc: '错题回炉加权,每 2 周一次 Mock', icon: '🔥' };
-    if (d > 14) return { key: 'sprint', name: '冲刺包', desc: '每周 Mock + 框架图,只保已会的', icon: '⚡' };
-    return { key: 'compress', name: '压缩期', desc: '停新题,只清复习 + 刷框架图', icon: '🎯' };
+    if (d > 100) return { key: 'base', name: '基础 Sprint', desc: '只做题不读书,每天 3 新题+复习', icon: 'flag' };
+    if (d > 42) return { key: 'hundred', name: '百日冲刺', desc: '错题回炉加权,每 2 周一次 Mock', icon: 'flame' };
+    if (d > 14) return { key: 'sprint', name: '冲刺包', desc: '每周 Mock + 框架图,只保已会的', icon: 'zap' };
+    return { key: 'compress', name: '压缩期', desc: '停新题,只清复习 + 刷框架图', icon: 'target' };
   }
 
   function addXp(n) { db.xp += n; save(); return db.xp; }
