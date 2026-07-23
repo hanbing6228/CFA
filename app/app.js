@@ -106,15 +106,23 @@ function renderToday() {
     main.appendChild(mc);
   }
 
-  // 作战计划卡 (权重策略可见化: 放弃清单不再纠结)
+  // 作战计划卡: 通过率预测 (可点进详情)
+  const proj = Store.projectedScore();
+  const pClr = proj >= 0.70 ? 'var(--green)' : proj >= 0.60 ? 'var(--amber)' : 'var(--red)';
   const plan = el('div', 'card');
-  const tiers = { A: [], B: [], C: [] };
-  Object.entries(Store.bank.topics).forEach(([k, v]) => tiers[v.tier].push(k));
-  plan.innerHTML = `<h2>📋 作战计划</h2>
-    <div class="losrow">🔴 <b>满仓 A</b> (3x额度, 目标>70%): ${tiers.A.join(' / ')}</div>
-    <div class="losrow">🔵 <b>保底 B</b> (1.5x, 目标~60%): ${tiers.B.join(' / ')}</div>
-    <div class="losrow">⚪ <b>战略放弃 C</b> (0.5x, 蒙题保底): ${tiers.C.join(' / ')}</div>
-    <div class="muted" style="margin-top:8px">阶段: 基础(>100天)→百日冲刺(43-100)→冲刺包(15-42)→压缩(≤14)。当前: ${ph.icon} ${ph.name}。放弃是策略, 不再纠结。</div>`;
+  plan.style.cursor = 'pointer';
+  plan.innerHTML = `<div style="display:flex;align-items:center;gap:14px">
+      <div style="text-align:center">
+        <div style="font-size:2rem;font-weight:800;color:${pClr}">${Math.round(proj * 100)}%</div>
+        <div class="lbl">预计得分</div>
+      </div>
+      <div style="flex:1">
+        <b>🎯 作战计划</b> <span class="muted">· 过线约需 70%</span>
+        <div class="muted" style="margin-top:4px">${proj >= 0.70 ? '照这样稳过 ✅' : '还差一口气, 点开看该攻哪科 ▸'}</div>
+      </div>
+      <div style="font-size:1.4rem;color:var(--muted)">▸</div>
+    </div>`;
+  plan.onclick = () => { location.hash = '#plan'; };
   main.appendChild(plan);
 
   const s = Store.settings();
@@ -405,6 +413,63 @@ function renderDone() {
   Quiz.session = null;
 }
 
+/* ---------- 作战计划屏 (通过率预测 + 每科可操作) ---------- */
+function renderPlan() {
+  const main = $('#main');
+  main.innerHTML = '';
+  main.appendChild(el('h1', '', '🎯 作战计划'));
+  const proj = Store.projectedScore();
+  const pClr = proj >= 0.70 ? 'var(--green)' : proj >= 0.60 ? 'var(--amber)' : 'var(--red)';
+
+  const gauge = el('div', 'card');
+  gauge.style.textAlign = 'center';
+  gauge.innerHTML = `
+    <div style="font-size:3rem;font-weight:800;color:${pClr}">${Math.round(proj * 100)}%</div>
+    <div class="muted">按各科正确率×权重估算的预计得分 · 过线约需 <b>70%</b></div>
+    <div class="progress" style="margin:12px 0 4px;height:8px"><i style="width:${Math.min(100, proj * 100)}%;background:${pClr}"></i></div>
+    <div style="position:relative;height:0"><span style="position:absolute;left:70%;top:-14px;font-size:.7rem;color:var(--muted)">↑过线</span></div>
+    <p class="muted" style="margin-top:16px">${proj >= 0.70 ? '照当前水平能过。守住 A 档, 别塌方。' : '把大权重科目(A档)拉到 70%+ 最划算——同样努力涨分最多。'}</p>`;
+  main.appendChild(gauge);
+
+  main.appendChild(el('p', 'muted', '每科：点 <b>档位</b>切满仓/保底/放弃(影响新题分配) · 点 <b>练</b>直接刷这科。未测科目按 40% 保守估。'));
+
+  const ts = Store.topicStats();
+  const rows = Object.values(ts).sort((a, b) => b.weight - a.weight);
+  const card = el('div', 'card');
+  for (const s of rows) {
+    const acc = s.acc == null ? null : Math.round(s.acc * 100);
+    const target = s.tier === 'A' ? 70 : s.tier === 'B' ? 60 : 50;
+    const onTrack = acc != null && acc >= target;
+    const row = el('div', 'planrow');
+    const left = el('div', 'planrow-main');
+    left.innerHTML = `<div><b>${esc(s.topic)}</b> <span class="muted">${esc(s.name_cn || '')} · 权重~${s.weight}%</span></div>
+      <div class="bar" style="margin-top:5px"><i style="width:${acc || 0}%;background:${onTrack ? 'var(--green)' : acc == null ? 'var(--border)' : 'var(--amber)'}"></i></div>
+      <div class="muted" style="font-size:.78rem;margin-top:3px">${acc == null ? '未测' : acc + '% 正确'} · 目标 ${target}% ${onTrack ? '✅' : acc == null ? '' : '↑'}</div>`;
+    row.appendChild(left);
+    const tierBtn = el('button', `tierbtn tier-${s.tier}`, s.tier);
+    tierBtn.title = '点击切换 满仓A/保底B/放弃C';
+    tierBtn.onclick = () => {
+      const next = { A: 'B', B: 'C', C: 'A' }[s.tier];
+      Store.setTier(s.topic, next);
+      renderPlan();
+    };
+    row.appendChild(tierBtn);
+    const prac = el('button', 'pracbtn', '练');
+    prac.onclick = () => {
+      Quiz.session = Store.practiceTopic(s.topic, 10);
+      if (!Quiz.session.length) { toast('这科暂无可练的题'); return; }
+      Quiz.idx = 0; Quiz.right = 0; location.hash = '#quiz';
+    };
+    row.appendChild(prac);
+    card.appendChild(row);
+  }
+  main.appendChild(card);
+
+  const ph = Store.phase();
+  main.appendChild(el('div', 'card muted',
+    `当前阶段: ${ph.icon} <b>${ph.name}</b> — ${ph.desc}。<br>档位含义: <b>满仓A</b> 3x新题额度,目标>70% · <b>保底B</b> 1.5x,~60% · <b>放弃C</b> 0.5x,蒙题保底。放弃是策略, 70%就能过,不必全科拿高分。`));
+}
+
 /* ---------- 弱点屏 ---------- */
 function renderStats() {
   const main = $('#main');
@@ -569,7 +634,7 @@ function openMindmapFS(tree, focusNode) {
   document.body.appendChild(ov);
   requestAnimationFrame(() => {
     const ctl = MindMap.render(box, tree, {
-      onNodeTap: (node, focus) => focus(node),   // 全屏内点节点 → 聚焦该节点
+      onNodeTap: (node) => openNodeSheet(node, FRAME_TOPIC),   // 全屏内点节点 → 打开详情
     });
     if (focusNode && ctl) {
       // 匹配到同名节点(树被重建过)后聚焦
@@ -578,6 +643,53 @@ function openMindmapFS(tree, focusNode) {
       if (target) ctl.focus(target);
     }
   });
+}
+
+/* 脑图节点详情底卡: 全文 + 知识点 + 笔记 + 练相关题 */
+function openNodeSheet(node, topic) {
+  if (node.kind === 'root') return;
+  const sheet = el('div', 'sheet');
+  const panel = el('div', 'sheet-panel');
+  sheet.appendChild(panel);
+  sheet.onclick = e => { if (e.target === sheet) sheet.remove(); };
+
+  panel.appendChild(el('div', 'sheet-handle', ''));
+  const badges = `${node.weak ? '<span class="freq hi">🔴 弱点</span>' : ''}${node.f ? '<span class="freq f">𝑓 公式</span>' : ''}${node.trap ? '<span class="freq" style="background:var(--red-soft);color:var(--red)">⚠️ 陷阱</span>' : ''}`;
+  panel.appendChild(el('div', 'sheet-badges', badges));
+  panel.appendChild(el('div', 'sheet-full', richText(node.full)));
+  const kp = node.kind === 'module' ? node.module : `${topic} · ${node.module}${node.los ? ' · ' + esc(node.los) : ''}`;
+  panel.appendChild(el('div', 'sheet-kp', `📚 知识点: ${esc(kp)}`));
+
+  // 相关题数
+  const rel = Store.bank.questions.filter(q => q.topic === topic &&
+    (node.los ? (q.los === node.los || (q.los || '').includes(node.los.slice(0, 12))) : (q.module === node.module)));
+  const practiceBtn = el('button', 'bigbtn', `✍️ 练相关题 (${rel.length} 道)`);
+  practiceBtn.disabled = !rel.length;
+  practiceBtn.onclick = () => {
+    const dues = rel.filter(q => { const c = Store.cardState(q.id); return c.reps > 0; });
+    const pool = dues.concat(rel.filter(q => Store.cardState(q.id).reps === 0));
+    Quiz.session = pool.slice(0, 10); Quiz.idx = 0; Quiz.right = 0;
+    sheet.remove(); location.hash = '#quiz';
+  };
+  panel.appendChild(practiceBtn);
+
+  // 笔记 (按节点持久化, 随云备份)
+  const noteId = `map:${topic}:${node.los || node.module || node.full.slice(0, 30)}`;
+  const old = Store.getNote(noteId);
+  panel.appendChild(el('label', 'field', '📝 我的笔记 (这个考点的口诀/误区)'));
+  const ta = el('textarea', '', '');
+  ta.value = old; ta.placeholder = '写给复习时的自己…';
+  panel.appendChild(ta);
+  const saveBtn = el('button', 'askbtn', old ? '更新笔记' : '保存笔记');
+  saveBtn.onclick = () => { Store.setNote(noteId, ta.value); toast('笔记已存'); };
+  panel.appendChild(saveBtn);
+
+  // 问 Claude
+  panel.appendChild(tutorWidget('🤔 让 Claude 讲讲这个点', () =>
+    `请用最简单的方式+一个例子讲清楚 CFA L2 ${topic} 的这个考点:\n${node.full}\n知识点: ${node.module}${node.los ? ' / ' + node.los : ''}`));
+
+  document.body.appendChild(sheet);
+  requestAnimationFrame(() => panel.classList.add('up'));
 }
 
 function weakSetOf() {
@@ -624,15 +736,20 @@ function renderFrames() {
 
   if (FRAME_VIEW === 'map') {
     main.appendChild(el('p', 'muted', `双指缩放 · 拖动平移 · 🔴 弱点 · 𝑓 公式 · ⚠️ 陷阱`));
-    // 构造脑图树: 科目 → module → 考点
-    const tree = { name: `${FRAME_TOPIC} ${meta.name_cn || ''}`, children: [] };
+    // 构造脑图树: 科目 → module → 考点。叶子只显示短标签, 全文与元数据留在节点上
+    const shortLabel = s => {
+      const t = s.replace(/\$/g, '').replace(/[（(].*?[)）]/g, '');
+      const cut = t.split(/[:：,，;；]/)[0];
+      return (cut.length > 12 ? cut.slice(0, 12) + '…' : cut);
+    };
+    const tree = { name: `${FRAME_TOPIC}`, full: `${FRAME_TOPIC} ${meta.name_cn || ''}`, kind: 'root', children: [] };
     for (const [mod, lines] of Object.entries(frames[FRAME_TOPIC])) {
-      const mnode = { name: mod, children: [] };
+      const mnode = { name: mod.length > 14 ? mod.slice(0, 14) + '…' : mod, full: mod, kind: 'module', module: mod, children: [] };
       for (const ln of lines) {
         const weak = ln.los && weakSet.has(FRAME_TOPIC + '|' + ln.los);
         mnode.children.push({
-          name: (ln.f ? '𝑓 ' : '') + (ln.trap ? '⚠ ' : '') + ln.t.replace(/\$/g, ''),
-          weak,
+          name: (ln.f ? '𝑓 ' : '') + (ln.trap ? '⚠ ' : '') + shortLabel(ln.t),
+          full: ln.t, los: ln.los || '', module: mod, f: ln.f, trap: ln.trap, weak, kind: 'point',
         });
       }
       if (mnode.children.some(c => c.weak)) mnode.weak = true;
@@ -644,7 +761,7 @@ function renderFrames() {
     main.appendChild(fsBtn);
     const box = el('div', 'mapbox');
     main.appendChild(box);
-    requestAnimationFrame(() => MindMap.render(box, tree, { onNodeTap: (node) => openMindmapFS(tree, node) }));
+    requestAnimationFrame(() => MindMap.render(box, tree, { onNodeTap: (node) => openNodeSheet(node, FRAME_TOPIC) }));
     return;
   }
 
@@ -796,7 +913,7 @@ function renderMockReport() {
 }
 
 /* ---------- 路由 ---------- */
-const ROUTES = { today: renderToday, quiz: renderQuiz, stats: renderStats, settings: renderSettings, frames: renderFrames, mock: renderMock };
+const ROUTES = { today: renderToday, quiz: renderQuiz, stats: renderStats, settings: renderSettings, frames: renderFrames, mock: renderMock, plan: renderPlan };
 function route() {
   const h = (location.hash || '#today').slice(1);
   const name = ROUTES[h] ? h : 'today';

@@ -70,7 +70,48 @@ const Store = (() => {
     return db.cards[id] || { stability: 0, difficulty: 0, reps: 0, lapses: 0, last: null, due: null };
   }
 
-  function topicMeta(t) { return bank.topics[t] || { tier: 'C', weight: 5 }; }
+  function topicMeta(t) {
+    const base = bank.topics[t] || { tier: 'C', weight: 5 };
+    const ov = (settings().tierOverride || {})[t];
+    return ov ? Object.assign({}, base, { tier: ov }) : base;
+  }
+  function setTier(topic, tier) {
+    db.settings.tierOverride = db.settings.tierOverride || {};
+    db.settings.tierOverride[topic] = tier;
+    save();
+  }
+
+  /* 每科统计 + 通过率预测 (作战计划仪表盘) */
+  function topicStats() {
+    const out = {};
+    for (const t in bank.topics) {
+      const m = topicMeta(t);
+      out[t] = { topic: t, n: 0, right: 0, tier: m.tier, weight: m.weight, name_cn: m.name_cn,
+                 total: bank.questions.filter(q => q.topic === t).length };
+    }
+    for (const r of db.reviews) if (out[r.topic]) { out[r.topic].n++; out[r.topic].right += r.correct; }
+    for (const t in out) out[t].acc = out[t].n ? out[t].right / out[t].n : null;
+    return out;
+  }
+  function projectedScore() {
+    const ts = topicStats();
+    let num = 0, den = 0;
+    for (const t in ts) {
+      const w = ts[t].weight || 0;
+      const acc = ts[t].acc == null ? 0.40 : ts[t].acc;   // 未测科目按 40% 保守估
+      num += w * acc; den += w;
+    }
+    return den ? num / den : 0;
+  }
+  function practiceTopic(topic, n) {
+    const today = todayStr();
+    const dues = bank.questions.filter(q => {
+      const c = cardState(q.id); return c.reps > 0 && c.due && c.due <= today && q.topic === topic;
+    });
+    const fresh = bank.questions.filter(q => q.topic === topic && cardState(q.id).reps === 0);
+    for (let i = fresh.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [fresh[i], fresh[j]] = [fresh[j], fresh[i]]; }
+    return injectLessons(groupByCase(dues.concat(fresh).slice(0, n)));
+  }
 
   function dueCards() {
     const today = todayStr();
@@ -355,6 +396,7 @@ const Store = (() => {
     buildSession, dueCards, newCards, newQuota, applyGrade,
     statsData, streakInfo, cardState, setNote, getNote,
     phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson, askTutor,
+    setTier, topicStats, projectedScore, practiceTopic, topicMeta,
     syncToday, flushPending, exportData, importData, resetData,
     get bank() { return bank; }, get db() { return db; }, todayStr,
   };
