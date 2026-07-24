@@ -68,7 +68,7 @@ const Store = (() => {
       timeBudget: (def.daily && def.daily.time_budget_minutes) || 40,
       reviewCap: (def.daily && def.daily.review_cap) || 40,
       ghToken: '', ghRepo: 'hanbing6228/CFA', ghBranch: 'claude/cfa-level2-low-effort-tool-tjdjyg',
-      aiKey: '', aiModel: 'claude-sonnet-5',
+      aiKey: '', aiModel: 'gemini-2.5-flash',
     }, db.settings);
   }
 
@@ -263,7 +263,7 @@ const Store = (() => {
     return { streak, doneToday: days.has(todayStr()) };
   }
 
-  /* ---- GitHub 进度回传 (AI督学数据源) ---- */
+  /* ---- GitHub 进度回传 (AI教练数据源) ---- */
   async function ghPut(path, content, msg) {
     const s = settings();
     if (!s.ghToken) return { ok: false, reason: 'no-token' };
@@ -374,29 +374,51 @@ const Store = (() => {
     return Math.round((new Date(todayStr()) - new Date(last)) / 86400000);
   }
 
-  /* 内联 AI 家教: 直接调 Anthropic API (浏览器直连), 无需复制去别处 */
+  /* 内联 AI 教练: 浏览器直连大模型 API。按 key 前缀自动识别 Gemini / Anthropic。
+   * 默认 Gemini (AIza 开头); sk-ant 开头则走 Anthropic。 */
+  const COACH_SYS = '你是 CFA L2 私人教练。用最简单的中文讲清楚，配一个新例子，别重复原题解析。专业术语保留英文。回答控制在 200 字内。';
   async function askTutor(prompt) {
     const key = settings().aiKey;
     if (!key) return { ok: false, reason: 'no-key' };
+    const useAnthropic = key.startsWith('sk-ant');
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-          'x-api-key': key,
-          'anthropic-version': '2023-06-01',
-          'anthropic-dangerous-direct-browser-access': 'true',
-        },
-        body: JSON.stringify({
-          model: settings().aiModel || 'claude-sonnet-5',
-          max_tokens: 700,
-          system: '你是 CFA L2 私人家教。用最简单的中文讲清楚，配一个新例子，别重复原题解析。专业术语保留英文。回答控制在 200 字内。',
-          messages: [{ role: 'user', content: prompt }],
-        }),
-      });
+      if (useAnthropic) {
+        const res = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+            'x-api-key': key,
+            'anthropic-version': '2023-06-01',
+            'anthropic-dangerous-direct-browser-access': 'true',
+          },
+          body: JSON.stringify({
+            model: settings().aiModel || 'claude-sonnet-5',
+            max_tokens: 800,
+            system: COACH_SYS,
+            messages: [{ role: 'user', content: prompt }],
+          }),
+        });
+        if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
+        const data = await res.json();
+        return { ok: true, text: (data.content || []).map(b => b.text || '').join('') };
+      }
+      // Gemini (Google Generative Language API)
+      const model = settings().aiModel || 'gemini-2.5-flash';
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,
+        {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            system_instruction: { parts: [{ text: COACH_SYS }] },
+            contents: [{ role: 'user', parts: [{ text: prompt }] }],
+            generationConfig: { maxOutputTokens: 800, temperature: 0.6 },
+          }),
+        });
       if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
       const data = await res.json();
-      return { ok: true, text: (data.content || []).map(b => b.text || '').join('') };
+      const text = ((data.candidates || [])[0]?.content?.parts || []).map(p => p.text || '').join('');
+      return text ? { ok: true, text } : { ok: false, reason: 'empty' };
     } catch (e) {
       return { ok: false, reason: 'network' };
     }

@@ -329,13 +329,13 @@ function renderLesson(item, main) {
   };
   showOne();
   card.appendChild(next);
-  card.appendChild(tutorWidget(`${ic('help')} 没看懂?让 Claude 换个说法讲`, () =>
+  card.appendChild(tutorWidget(`${ic('help')} 没看懂?让教练换个说法讲`, () =>
     `我在学 CFA L2 的 ${item.topic} / ${item.los},下面是微课内容,请用更浅的方式+一个新例子给我讲一遍:\n\n` +
     item.cards.map(c => `${c.h}: ${c.b}`).join('\n')));
   main.appendChild(card);
 }
 
-/* 内联 AI 家教控件: 有 API key 就直接在页内出答案, 没有则回退到复制 */
+/* 内联 AI 教练控件: 有 API key 就直接在页内出答案, 没有则回退到复制 */
 function tutorWidget(label, buildPrompt) {
   const wrap = el('div', 'askrow');
   const btn = el('button', 'askbtn', label);
@@ -343,21 +343,21 @@ function tutorWidget(label, buildPrompt) {
     const prompt = buildPrompt();
     if (!Store.settings().aiKey) {
       navigator.clipboard.writeText(prompt).then(
-        () => toast('未配 AI key,已复制,去 Claude 粘贴 (设置里贴 key 可页内直接答)'),
+        () => toast('未配 AI key,已复制,粘贴给 AI (设置里贴 Gemini key 可页内直接答)'),
         () => toast('复制失败'));
       return;
     }
     btn.style.display = 'none';
     const box = el('div', 'tutor-box');
-    box.appendChild(el('div', 'tutor-loading', `${ic('help')} Claude 正在讲…`));
+    box.appendChild(el('div', 'tutor-loading', `${ic('help')} 教练正在讲…`));
     wrap.appendChild(box);
     const res = await Store.askTutor(prompt);
     box.innerHTML = '';
     if (res.ok) {
-      box.appendChild(el('div', '', `${ic('cap')} <b>家教</b>`));
+      box.appendChild(el('div', '', `${ic('cap')} <b>教练</b>`));
       box.appendChild(el('div', 'ans', fmt(res.text)));
     } else if (res.reason === 'no-key') {
-      box.appendChild(el('div', 'tutor-loading', '请先在设置里贴 Anthropic API key'));
+      box.appendChild(el('div', 'tutor-loading', '请先在设置里贴 Gemini API key'));
     } else {
       box.appendChild(el('div', 'tutor-loading', `出错了 (${res.reason})。已把问题复制到剪贴板`));
       navigator.clipboard.writeText(prompt).catch(() => {});
@@ -442,8 +442,8 @@ function onAnswer(q, picked, card, choicesBox) {
   noteBox.appendChild(noteBtn);
   card.appendChild(noteBox);
 
-  // 内联追问 Claude (有 key 页内直接答)
-  card.appendChild(tutorWidget(correct ? `${ic('help')} 想更深入?问问 Claude` : `${ic('help')} 还是不懂?让 Claude 讲讲我的误区`, () =>
+  // 内联追问教练 (有 key 页内直接答)
+  card.appendChild(tutorWidget(correct ? `${ic('help')} 想更深入?问问教练` : `${ic('help')} 还是不懂?让教练讲讲我的误区`, () =>
     `我在做 CFA L2 练习题,这道题${correct ? '我做对了但想深挖' : `我错选了 ${picked}`}。请针对我的误区讲解,不要重复题目解析:\n\n` +
     `题目: ${q.stem}\n选项: ${Object.entries(q.choices).map(([k, v]) => `${k}. ${v}`).join(' ')}\n` +
     `正确答案: ${q.answer}\n官方解析: ${q.explanations[q.answer]}\n考点: ${q.topic} / ${q.los}`));
@@ -488,7 +488,7 @@ function renderDone() {
   if (n) {
     const summary = { done: n, right: Quiz.right, acc: Math.round((Quiz.right / n) * 100) };
     Store.syncToday(summary).then(res => {
-      if (res.ok) toast('进度已同步,AI 督学可见');
+      if (res.ok) toast('进度已同步,AI 教练可见');
       else if (res.reason === 'no-token') void 0;
       else toast('同步失败已暂存,联网后自动补传');
     });
@@ -627,8 +627,8 @@ function renderSettings() {
 
   const c2 = el('div', 'card');
   c2.innerHTML = `
-    <h2>${ic('bot')} AI 督学</h2>
-    <p class="muted">贴一个 GitHub fine-grained token(只授权本仓库的 Contents 读写)。答题后进度自动回传仓库,AI 每晚检查并推送提醒到手机。</p>
+    <h2>${ic('bot')} AI 教练 · 每日提醒</h2>
+    <p class="muted">贴一个 GitHub fine-grained token(只授权本仓库的 Contents 读写)。答题后进度自动回传仓库,教练每晚检查并推送提醒到手机。</p>
     <label class="field">GitHub Token</label><input type="password" id="set-token" placeholder="github_pat_..." value="${esc(s.ghToken)}">
     <label class="field">仓库 (owner/repo)</label><input type="text" id="set-repo" value="${esc(s.ghRepo)}">
     <label class="field">分支</label><input type="text" id="set-branch" value="${esc(s.ghBranch)}">`;
@@ -636,10 +636,10 @@ function renderSettings() {
 
   const c2b = el('div', 'card');
   c2b.innerHTML = `
-    <h2>${ic('cap')} 内联 AI 家教</h2>
-    <p class="muted">贴一个 Anthropic API key,答题/微课里"问 Claude"就直接在页内出答案,不用复制去别处。留空则回退到复制模式。</p>
-    <label class="field">Anthropic API Key</label><input type="password" id="set-aikey" placeholder="sk-ant-..." value="${esc(s.aiKey)}">
-    <label class="field">模型</label><input type="text" id="set-aimodel" value="${esc(s.aiModel)}">`;
+    <h2>${ic('cap')} AI 教练 · 内联讲解</h2>
+    <p class="muted">贴一个 Gemini API key,答题/微课里"问教练"就直接在页内出中文讲解,不用复制去别处。留空则回退到复制模式。(也兼容 Anthropic key,按前缀自动识别)</p>
+    <label class="field">Gemini API Key</label><input type="password" id="set-aikey" placeholder="AIza..." value="${esc(s.aiKey)}">
+    <label class="field">模型</label><input type="text" id="set-aimodel" placeholder="gemini-2.5-flash" value="${esc(s.aiModel)}">`;
   main.appendChild(c2b);
 
   const saveBtn = el('button', 'bigbtn', '保存设置');
@@ -652,7 +652,7 @@ function renderSettings() {
       ghRepo: $('#set-repo').value.trim(),
       ghBranch: $('#set-branch').value.trim(),
       aiKey: $('#set-aikey').value.trim(),
-      aiModel: $('#set-aimodel').value.trim() || 'claude-sonnet-5',
+      aiModel: $('#set-aimodel').value.trim() || 'gemini-2.5-flash',
     });
     Store.flushPending();
     toast('已保存');
@@ -872,8 +872,8 @@ function openNodeSheet(node, topic) {
   saveBtn.onclick = () => { Store.setNote(noteId, ta.value); toast('笔记已存'); };
   panel.appendChild(saveBtn);
 
-  // 问 Claude
-  panel.appendChild(tutorWidget(`${ic('help')} 让 Claude 讲讲这个点`, () =>
+  // 问教练
+  panel.appendChild(tutorWidget(`${ic('help')} 让教练讲讲这个点`, () =>
     `请用最简单的方式+一个例子讲清楚 CFA L2 ${topic} 的这个考点:\n${node.full}\n知识点: ${node.module}${node.los ? ' / ' + node.los : ''}`));
 
   document.body.appendChild(sheet);
