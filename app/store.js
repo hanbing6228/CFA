@@ -68,7 +68,7 @@ const Store = (() => {
       timeBudget: (def.daily && def.daily.time_budget_minutes) || 40,
       reviewCap: (def.daily && def.daily.review_cap) || 40,
       ghToken: '', ghRepo: 'hanbing6228/CFA', ghBranch: 'claude/cfa-level2-low-effort-tool-tjdjyg',
-      aiKey: '', aiModel: 'gemini-2.5-flash',
+      aiKey: '', aiModel: 'gemini-2.5-flash', explLang: 'cn',
     }, db.settings);
   }
 
@@ -376,8 +376,10 @@ const Store = (() => {
 
   /* 内联 AI 教练: 浏览器直连大模型 API。按 key 前缀自动识别 Gemini / Anthropic。
    * 默认 Gemini (AIza 开头); sk-ant 开头则走 Anthropic。 */
-  const COACH_SYS = '你是 CFA L2 私人教练。用最简单的中文讲清楚，配一个新例子，别重复原题解析。专业术语保留英文。回答控制在 200 字内。';
-  async function askTutor(prompt) {
+  const COACH_SYS_CN = '你是 CFA L2 私人教练。用最简单的中文讲清楚，配一个新例子，别重复原题解析。专业术语保留英文。回答控制在 200 字内。';
+  const COACH_SYS_EN = 'You are a CFA L2 personal coach. Explain in clear, simple English with one fresh example; do not just repeat the given explanation. Keep it under 150 words.';
+  /* 核心 LLM 调用: 浏览器直连。按 key 前缀识别 AIza→Gemini / sk-ant→Anthropic。 */
+  async function callLLM(system, prompt, maxTok) {
     const key = settings().aiKey;
     if (!key) return { ok: false, reason: 'no-key' };
     const useAnthropic = key.startsWith('sk-ant');
@@ -393,8 +395,8 @@ const Store = (() => {
           },
           body: JSON.stringify({
             model: settings().aiModel || 'claude-sonnet-5',
-            max_tokens: 800,
-            system: COACH_SYS,
+            max_tokens: maxTok || 800,
+            system,
             messages: [{ role: 'user', content: prompt }],
           }),
         });
@@ -402,7 +404,6 @@ const Store = (() => {
         const data = await res.json();
         return { ok: true, text: (data.content || []).map(b => b.text || '').join('') };
       }
-      // Gemini (Google Generative Language API)
       const model = settings().aiModel || 'gemini-2.5-flash';
       const res = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,
@@ -410,9 +411,9 @@ const Store = (() => {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
-            system_instruction: { parts: [{ text: COACH_SYS }] },
+            system_instruction: { parts: [{ text: system }] },
             contents: [{ role: 'user', parts: [{ text: prompt }] }],
-            generationConfig: { maxOutputTokens: 800, temperature: 0.6 },
+            generationConfig: { maxOutputTokens: maxTok || 800, temperature: 0.5 },
           }),
         });
       if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
@@ -422,6 +423,16 @@ const Store = (() => {
     } catch (e) {
       return { ok: false, reason: 'network' };
     }
+  }
+  function askTutor(prompt) {
+    return callLLM(settings().explLang === 'en' ? COACH_SYS_EN : COACH_SYS_CN, prompt);
+  }
+  /* 把一段解析翻成目标语言 (中/英解析开关用). 保留公式/术语/数字不变。 */
+  function translate(text, toLang) {
+    const sys = toLang === 'en'
+      ? 'Translate the following CFA study explanation into clear, natural exam-register English. Keep all formulas, numbers, and standard financial terms exact. Output ONLY the translation, no preamble.'
+      : '把下面的 CFA 解析翻译成通顺的中文。公式、数字、专业术语保持原样。只输出译文，不要前言。';
+    return callLLM(sys, text, 900);
   }
 
   function exportData() { return JSON.stringify(db); }
@@ -450,7 +461,7 @@ const Store = (() => {
     init, settings, setSettings, daysToExam, examCfg,
     buildSession, dueCards, newCards, newQuota, applyGrade,
     statsData, streakInfo, cardState, setNote, getNote,
-    phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson, askTutor,
+    phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson, askTutor, translate,
     setTier, topicStats, projectedScore, practiceTopic, topicMeta,
     examWindow, examTodos, toggleExamDone, daysFromToday,
     syncToday, flushPending, exportData, importData, resetData,

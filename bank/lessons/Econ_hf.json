@@ -1,0 +1,149 @@
+{
+  "topic": "Econ",
+  "lessons": [
+    {
+      "los": "Currency Exchange Rates: Understanding Equilibrium Value",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "这篇讲**汇率的均衡值从哪来**——四大 parity conditions 把利率、通胀、汇率串成一条链。\n报价用 **price/base**（如 USD/EUR = 每 1 欧元多少美元），涨=base 升值。\n核心问题：知道两国利率/通胀，==forward 和未来 spot 该是多少=="
+        },
+        {
+          "h": "核心公式",
+          "b": "**Covered IRP**（套利强制成立）：$F_{d/f}=S_{d/f}\\dfrac{1+i_d}{1+i_f}$\n**Uncovered IRP**（预期，非强制）：$\\%\\Delta S^e_{d/f}=i_d-i_f$\n**Relative PPP**：$\\%\\Delta S_{d/f}=\\pi_d-\\pi_f$\n**International Fisher**：$i_d-i_f=\\pi^e_d-\\pi^e_f$（实际利率相等）\n口径记牢：**高利率货币 = forward 折价**"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "别把四个 parity 混为一谈：\n**Covered IRP 永远成立**（无套利强制）；**Uncovered IRP 短期常失效**，这正是 carry trade 能赚钱的原因。\ncarry trade = 借低息、投高息货币，==赚息差但承担崩盘风险（收益负偏、肥左尾）==。\n陷阱选项：把'高利率货币会升值'当铁律——UIP 说它该**贬值**"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "一句话链条：**利率差 → forward 折溢价（Covered，铁律）→ 预期即期变动（Uncovered，会破）→ 通胀差（PPP）**。\n哪个'带盖 covered'哪个就靠套利钉死；'不带盖 uncovered'的都只是预期，考试爱在这里挖坑"
+        }
+      ]
+    },
+    {
+      "los": "Economic Growth and the Investment Decision",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "把一国产出拆成**要素贡献**，看增长靠什么。\n用 **Cobb-Douglas**：产出来自资本 K、劳动 L 和全要素生产率 TFP(A)。\n对股票投资者的意义：==长期 GDP 增长决定企业盈利与股市回报的天花板=="
+        },
+        {
+          "h": "核心公式",
+          "b": "生产函数：$Y=A\\,K^{\\alpha}L^{1-\\alpha}$\n**Growth accounting**（增长核算）：\n$\\dfrac{\\Delta Y}{Y}=\\dfrac{\\Delta A}{A}+\\alpha\\dfrac{\\Delta K}{K}+(1-\\alpha)\\dfrac{\\Delta L}{L}$\n$\\alpha$ = 资本份额，$1-\\alpha$ = 劳动份额。\n**capital deepening**（人均资本↑）vs **TFP**（技术进步）是两条增长引擎"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "别混 **capital deepening** 与 **TFP**：\n沿同一生产函数曲线**向上移动** = capital deepening，受**边际报酬递减**制约；曲线**整体上移** = TFP，才能持续增长。\n==发达国家 K/L 已高，靠加资本的边际贡献很小，增长主要来自 TFP==。\n陷阱：把储蓄率↑当成能永久提高增长率——neoclassical 里只提高**水平**不提高**长期增长率**"
+        }
+      ]
+    },
+    {
+      "los": "Economic Growth",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "增长三大理论的对比篇。\n**Classical (Malthus)**：人口涨吃掉增长，人均停滞。\n**Neoclassical (Solow)**：有稳态，靠 TFP 才能持续增长，各国**趋同 convergence**。\n**Endogenous**：资本报酬不递减，==储蓄/研发能永久拉高增长率、不必趋同=="
+        },
+        {
+          "h": "核心规则",
+          "b": "**趋同 convergence** 三型：\n**Absolute**（绝对）：所有国家收敛到同一人均收入。\n**Conditional**（条件）：结构相同才收敛到同一稳态。\n**Club**（俱乐部）：制度相近的一组国家内部收敛。\nSolow 预测：**穷国增长更快**（起点 K/L 低、资本边际报酬高）→ 支持条件趋同"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "识别理论看**关键词**：\n说'人口压制人均收入' = Classical；说'有稳态、趋同、靠 TFP' = Neoclassical；说'无稳态、储蓄永久提速、报酬不递减' = Endogenous。\n陷阱：把 neoclassical 的'储蓄率↑'效果说成永久提速——==它只提升人均产出的**水平**，稳态增长率仍由外生 TFP 决定=="
+        },
+        {
+          "h": "记忆钩子",
+          "b": "三剑客口诀：**马尔萨斯管人口、索洛信趋同、内生靠研发**。\n看到'permanent'（永久提高增长率）几乎只对应 **endogenous**；看到'converge'就往 **neoclassical** 靠"
+        }
+      ]
+    },
+    {
+      "los": "Economics and Investment Markets",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "讲**宏观经济怎么给资产定价**。\n任何资产价值 = 未来现金流按**利率折现**。折现率随经济周期变，资产价格就跟着变。\n实际无风险利率 ≈ ==高 GDP 增长/波动 → 要求更高实际利率==；再叠加通胀预期和风险溢价"
+        },
+        {
+          "h": "核心公式",
+          "b": "名义折现率拆解：\n$r=\\underbrace{l}_{\\text{实际无风险}}+\\underbrace{\\pi^e}_{\\text{通胀预期}}+\\underbrace{\\theta}_{\\text{风险溢价}}$\n**Taylor rule**（政策利率）：\n$i=r_{neutral}+\\pi+0.5(\\pi-\\pi^*)+0.5(y-y^*)$\n债券的 **term premium** 随经济不确定性上升；**credit spread** 随衰退预期走阔"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "记住各资产的周期敏感度：\n**衰退将至** → 收益率曲线常**倒挂/平坦**（短端高于长端）；credit spread **走阔**；周期股跑输防御股。\n陷阱：把'高 GDP 增长'直接当利多股票——增长高也意味**折现率上升**，两股力量方向相反。\n==股票风险溢价与消费的相关性正相关：坏时候更痛的资产要更高溢价=="
+        }
+      ]
+    },
+    {
+      "los": "Economics",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "宏观与市场的总纲：用**跨期替代率**（intertemporal rate of substitution）解释折现率与风险溢价。\n投资者在**坏光景**（低消费）时更看重多一块钱 → ==在坏时段还能付钱的资产更值钱，风险溢价更低=="
+        },
+        {
+          "h": "核心规则",
+          "b": "**周期定位**决定资产配置：\n**扩张期**：股票、credit、周期股占优。\n**放缓/衰退**：长久期国债、防御股、现金占优。\n信号面板：**yield curve**（倒挂预警衰退）、**credit spread**（走阔=风险偏好降）、通胀走向（决定央行松紧）"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "分清**水平**与**变化**：资产价格由折现率**下降**（而非绝对高低）驱动上涨。\n陷阱：认为央行降息一定利多所有资产——若降息因经济恶化，credit spread 走阔可能抵消利率利多。\n==与消费正相关（坏时也跌）的资产要求**更高**风险溢价==，这是溢价高低的根源，别记反"
+        }
+      ]
+    },
+    {
+      "los": "Labor productivity growth accounting: potential GDP growth = labor force growth + labor productivity growth",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "估算**潜在 GDP 增速**的简化法：不拆 K 和 A，直接看'人多干活'加'每人干得更好'。\n**potential GDP 增速 = 劳动力增长 + 劳动生产率增长**。\n==这是央行判断'非通胀增速上限'的核心工具=="
+        },
+        {
+          "h": "核心公式",
+          "b": "**Labor productivity 法**：\n$\\%\\Delta Y^{pot}=\\%\\Delta L+\\%\\Delta\\left(\\dfrac{Y}{L}\\right)$\n即 **潜在增速 = 劳动力增长 + 每小时产出增长**。\n对比 growth accounting（全拆）：\n$\\%\\Delta Y=\\%\\Delta A+\\alpha\\,\\%\\Delta K+(1-\\alpha)\\,\\%\\Delta L$\n两法算的是同一个潜在增速，只是拆法粗细不同"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "别把两个公式的项混用：\nlabor productivity 法**不带资本份额权重** $\\alpha$，劳动力增长前面**系数是 1**；growth accounting 法劳动前面是 $(1-\\alpha)$。\n陷阱：题目给'劳动力增长 1%、生产率 2%'，答案就是 **3%**——==别再乘份额==。\n生产率增长本身已隐含了 capital deepening + TFP 两块"
+        }
+      ]
+    },
+    {
+      "los": "Neoclassical steady-state growth rate = TFP growth/labor share + labor force growth",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "Solow 稳态下增速的**封闭解**。\n稳态时人均资本不再上升，增长只剩两个来源：**外生技术进步 TFP** 和 **劳动力增长**。\n==长期增长率与储蓄率无关，只由 TFP 和人口决定=="
+        },
+        {
+          "h": "核心公式",
+          "b": "设 $\\theta$ = TFP 增长，$\\alpha$ = 资本份额，$1-\\alpha$ = 劳动份额：\n**人均产出稳态增速**：$g^*=\\dfrac{\\theta}{1-\\alpha}$\n**总产出稳态增速**：$\\dfrac{\\theta}{1-\\alpha}+\\%\\Delta L$\n即 **TFP 增长 ÷ 劳动份额 + 劳动力增长**。\n人均资本 K/L 稳态增速同样 = $\\dfrac{\\theta}{1-\\alpha}$"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "分母是**劳动份额 $(1-\\alpha)$，不是资本份额**——最常错。\n$\\theta=1.5\\%$、劳动份额 0.6、人口 1% → 总增速 $=1.5\\%/0.6+1\\%=3.5\\%$。\n陷阱：储蓄率↑或投资↑能否提高稳态增速?==不能，只提高人均产出的水平、加快向稳态收敛，长期增速仍是这个公式=="
+        }
+      ]
+    },
+    {
+      "los": "Endogenous growth model: open trade permanently raises the growth rate",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "内生增长理论：知识/研发有**外溢效应**，资本（广义，含人力+知识）**报酬不递减** → 没有稳态、也不必趋同。\n关键结论：==储蓄/投资、研发、开放贸易能**永久**提高增长率，不只是水平=="
+        },
+        {
+          "h": "核心规则",
+          "b": "生产函数近似 $Y=f(K)$，对广义资本**规模报酬不减**。\n**开放贸易的两种解读**：\n**Neoclassical**：贸易只带来**一次性水平提升 + 加快趋同**，长期增速回归外生 TFP。\n**Endogenous**：贸易带来技术扩散、更大市场、更多研发激励 → ==**永久**抬高增长率=="
+        },
+        {
+          "h": "考试陷阱",
+          "b": "看到 **permanently raises the growth rate（永久提速）** 基本锁定 **endogenous**；看到 **level effect / faster convergence（水平效应/加快趋同）** 锁定 **neoclassical**。\n陷阱：endogenous 里资本报酬**不递减**，所以**无趋同预测**——别拿 Solow 的'穷国追赶'套上来。\n研发的正外部性 → 市场投资**低于**社会最优，为政府补贴研发提供理由"
+        }
+      ]
+    }
+  ]
+}

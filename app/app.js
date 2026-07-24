@@ -382,6 +382,35 @@ function addHint(btn, q) {
   btn.appendChild(el('span', 'whyhint', btn.dataset.k === q.answer ? '点我看为什么对 ▸' : '点我看为什么错 ▸'));
 }
 
+/* 解析显示 + 中/英切换 chip: 原文一键翻成另一种语言 (走教练/Gemini, 结果缓存)。
+ * 设置里的"解析语言"决定默认展示哪种。 */
+function hasCJK(s) { return /[一-鿿]/.test(String(s)); }
+function mountExpl(mount, raw) {
+  const rawIsCn = hasCJK(raw);
+  const body = el('div', 'expl-body', fmt(raw));
+  mount.appendChild(body);
+  const target = rawIsCn ? 'en' : 'cn';
+  const altLabel = rawIsCn ? 'English' : '中文';
+  const chip = el('button', 'langchip', altLabel);
+  let alt = null, showing = 'raw', busy = false;
+  const toAlt = async () => {
+    if (busy) return;
+    if (alt === null) {
+      busy = true; chip.textContent = '翻译中…'; chip.disabled = true;
+      const r = await Store.translate(raw, target);
+      busy = false; chip.disabled = false;
+      if (!r.ok) { chip.textContent = altLabel; toast(r.reason === 'no-key' ? '设置里贴 Gemini key 可切换解析语言' : '翻译失败,稍后再试'); return; }
+      alt = r.text;
+    }
+    body.innerHTML = fmt(alt); showing = 'alt'; chip.textContent = rawIsCn ? '中文' : 'English';
+  };
+  const toRaw = () => { body.innerHTML = fmt(raw); showing = 'raw'; chip.textContent = altLabel; };
+  chip.onclick = () => (showing === 'raw' ? toAlt() : toRaw());
+  const bar = el('div', 'expl-lang'); bar.appendChild(chip); mount.appendChild(bar);
+  const want = Store.settings().explLang;
+  if ((want === 'en' && rawIsCn) || (want === 'cn' && !rawIsCn)) toAlt();   // 默认语言≠原文 → 自动翻
+}
+
 function onAnswer(q, picked, card, choicesBox) {
   const correct = picked === q.answer;
   if (correct) Quiz.right += 1;
@@ -395,7 +424,8 @@ function onAnswer(q, picked, card, choicesBox) {
   if (!q.explanations && q.explanation) {
     const ex = el('div', 'single-expl');
     const freqNote = q.freq ? ` · <span class="muted">本题历史正确率 ${q.freq}%</span>` : '';
-    ex.innerHTML = `<b>${correct ? ic('checkC', '', 'color:var(--green)') + ' 答对' : ic('xC', '', 'color:var(--red)') + ' 正确答案 ' + q.answer}</b>${freqNote}<div class="ans">${fmt(q.explanation)}</div>`;
+    ex.innerHTML = `<b>${correct ? ic('checkC', '', 'color:var(--green)') + ' 答对' : ic('xC', '', 'color:var(--red)') + ' 正确答案 ' + q.answer}</b>${freqNote}<div class="ans"></div>`;
+    mountExpl(ex.querySelector('.ans'), q.explanation);
     card.appendChild(ex);
   } else {
   // 默认展开: 我选的 + 正确答案; 其余点击可看 (交互性核心)
@@ -641,6 +671,19 @@ function renderSettings() {
     <label class="field">Gemini API Key</label><input type="password" id="set-aikey" placeholder="AIza..." value="${esc(s.aiKey)}">
     <label class="field">模型</label><input type="text" id="set-aimodel" placeholder="gemini-2.5-flash" value="${esc(s.aiModel)}">`;
   main.appendChild(c2b);
+
+  // 解析语言开关
+  const cLang = el('div', 'card');
+  cLang.innerHTML = `<h2>${ic('book')} 解析语言</h2>
+    <p class="muted">做题解析默认用哪种语言。选 English = 考前纯英文沉浸(中文原文由教练即时翻译并缓存,需 Gemini key)。每条解析也能单条一键切换。</p>`;
+  const seg = el('div', 'langseg');
+  [['cn', '中文'], ['en', 'English']].forEach(([v, label]) => {
+    const bb = el('button', 'segbtn' + (s.explLang === v ? ' on' : ''), label);
+    bb.onclick = () => { Store.setSettings({ explLang: v }); renderSettings(); };
+    seg.appendChild(bb);
+  });
+  cLang.appendChild(seg);
+  main.appendChild(cLang);
 
   const saveBtn = el('button', 'bigbtn', '保存设置');
   saveBtn.onclick = () => {

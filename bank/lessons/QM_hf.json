@@ -1,0 +1,50 @@
+{"topic":"QM","lessons":[
+{"los":"Big Data Projects","cards":[
+{"h":"这是什么","b":"用**结构化+非结构化数据**跑机器学习模型的完整流程。\n五步：**Conceptualization → Data Collection → Data Preparation & Wrangling → Data Exploration → Model Training**。\n==结构化数据走这五步；文本(非结构化)多两步：文本清洗和文本整理。=="},
+{"h":"核心规则","b":"**数据准备(Preparation)**：处理不完整、无效、重复、不一致、异常值。\n**整理(Wrangling)**：转换 + **规整化**。\n- **Normalization**: $X_{norm}=\\frac{X-X_{min}}{X_{max}-X_{min}}$，压到 $[0,1]$\n- **Standardization**: $X_{std}=\\frac{X-\\mu}{\\sigma}$，需数据近似正态"},
+{"h":"考试陷阱","b":"文本处理产出 **DTM (Document Term Matrix)**：行=文档，列=token，值=词频。\n==别把 Normalization 和 Standardization 记反：Normalization 不要求正态，Standardization 要求。==\n**Trimming** 删极端值(按百分位)，**Winsorization** 用边界值替换极端值——两者不同。"},
+{"h":"记忆钩子","b":"文本流水线口诀：**清洗→分词→去停用词→词干化(stemming)→建 DTM**。\nBOW = **Bag of Words**，只记词有没有、出现几次，==不管词序==。"}
+]},
+{"los":"Time-Series Analysis","cards":[
+{"h":"这是什么","b":"用变量**自身过去值**预测未来。两大类：\n- **趋势模型 (Trend)**：线性 / 对数线性\n- **自回归 AR**：$x_t=b_0+b_1 x_{t-1}+\\varepsilon_t$\n==核心前提是序列要 covariance stationary(协方差平稳)。=="},
+{"h":"核心规则","b":"**协方差平稳三条件**：\n1. 均值恒定且有限\n2. 方差恒定且有限\n3. 协方差只跟间隔有关，与时间点无关\n\n**检验 AR 模型是否够好**：看残差自相关的 t 检验，==所有自相关都不显著才算模型设定正确。=="},
+{"h":"考试陷阱","b":"**趋势模型**若残差存在序列相关(用 DW 检验)，说明趋势模型不适用，改用 AR。\n**RMSE** 越小样本外预测越好——比较模型只用**样本外**表现。\n==有单位根(unit root)的序列不平稳，直接跑 AR 会得到伪回归；先差分。=="},
+{"h":"记忆钩子","b":"三连问：**平稳吗?→自相关干净吗?→异方差吗?**\n季节性 (seasonality)：在 AR 里加一个滞后项如 $x_{t-4}$(季度数据)，看该滞后自相关是否显著。"}
+]},
+{"los":"Extensions of Multiple Regression","cards":[
+{"h":"这是什么","b":"标准多元回归的延伸：**处理异常点、非线性、定性因变量**。\n- 影响点诊断：**leverage(杠杆) + studentized residual(学生化残差)**\n- **哑变量 (dummy)** 处理定性自变量\n- **Logistic 回归** 处理定性因变量"},
+{"h":"核心规则","b":"**高杠杆点**：$leverage > 3\\left(\\frac{k+1}{n}\\right)$ 视为潜在有影响。\n**Cook's Distance** 综合衡量单点对整体拟合的影响。\n**Dummy**：$n$ 个类别只放 $n-1$ 个哑变量，留一个当基准，==否则完全多重共线(dummy variable trap)。=="},
+{"h":"考试陷阱","b":"**Logistic 回归**：因变量是 0/1，用 **log odds(对数几率)** 线性建模：\n$\\ln\\left(\\frac{p}{1-p}\\right)=b_0+b_1 X$\n系数解释是**对数几率的变化**，不是概率的变化。\n==Logit 用最大似然估计(MLE)，不是最小二乘(OLS)。=="},
+{"h":"记忆钩子","b":"哑变量陷阱记「**n 类留 n-1**」。\nLogistic 斜率转成 **odds ratio** 要取 $e^{b_1}$——>1 提升几率，<1 降低几率。"}
+]},
+{"los":"Machine Learning","cards":[
+{"h":"这是什么","b":"让算法从数据里自己找规律。三大类：\n- **监督学习 (Supervised)**：有标签，做预测/分类\n- **非监督学习 (Unsupervised)**：无标签，找结构\n- **深度学习/强化学习 (Deep/RL)**\n==有没有 Y(标签)是区分监督 vs 非监督的唯一标准。=="},
+{"h":"核心规则","b":"**监督**：Penalized Regression(LASSO)、SVM、KNN、CART、随机森林。\n**非监督**：**PCA(降维)**、K-Means(聚类)、层次聚类。\n**LASSO** 加 $\\lambda\\sum|b_k|$ 惩罚项，==能把不重要系数压到 0，自动做特征选择。=="},
+{"h":"考试陷阱","b":"**过拟合 (Overfitting)**：训练集好、样本外差。\n用 **train / validation / test** 三分数据防过拟合。\n**Bias-Variance 权衡**：模型太简单→高偏差(欠拟合)；太复杂→高方差(过拟合)。\n==Ensemble/随机森林通过投票降低方差。=="},
+{"h":"记忆钩子","b":"分类口诀：**「有标签=监督，找组=聚类,减维=PCA」**。\nCART 是决策树，随机森林 = 一堆树投票(bagging)。"}
+]},
+{"los":"Model Misspecification","cards":[
+{"h":"这是什么","b":"回归模型**设定错了**——漏变量、函数形式错、数据处理错——导致系数**有偏或不一致**。\n三大后果来源：**遗漏变量、错误函数形式、违反回归假设**。\n==设定错误 → 系数估计不可靠,推断无效。=="},
+{"h":"核心规则","b":"三类违反假设及后果：\n- **异方差 (Heteroskedasticity)**：系数无偏，但标准误错→t 检验失真\n- **序列相关 (Serial correlation)**：同上,标准误低估\n- **多重共线 (Multicollinearity)**：系数无偏,但标准误膨胀→t 不显著但 $R^2$ 高"},
+{"h":"考试陷阱","b":"**条件异方差**才有害(与自变量相关)；检验用 **Breusch-Pagan**。\n序列相关检验用 **Durbin-Watson** 或 BG 检验。\n==修正：异方差和序列相关都可用 robust(稳健)标准误；多重共线靠删变量。==\n多重共线的经典症状：**F 显著、单个 t 都不显著**。"},
+{"h":"记忆钩子","b":"「**HSM**」三害：**H**eteroskedasticity、**S**erial correlation、**M**ulticollinearity。\n记：前两个坑「标准误」，第三个坑「t 值」。"}
+]},
+{"los":"Basics of Multiple Regression and Underlying Assumptions","cards":[
+{"h":"这是什么","b":"用**多个自变量**解释一个因变量：\n$Y_i=b_0+b_1 X_{1i}+b_2 X_{2i}+\\dots+b_k X_{ki}+\\varepsilon_i$\n每个 $b_j$ 是**其他变量不变时** $X_j$ 变一单位对 $Y$ 的边际影响。\n==这是「偏」效应(partial slope),不是简单相关。=="},
+{"h":"核心规则","b":"**经典线性回归 (OLS) 五大假设**：\n1. 参数上线性\n2. 自变量非随机、无完全多重共线\n3. 误差期望为 0：$E(\\varepsilon)=0$\n4. **同方差 (homoskedasticity)** 且**无序列相关**\n5. 误差服从正态分布"},
+{"h":"考试陷阱","b":"**Adjusted $R^2$** 才用于比较不同自变量个数的模型：\n$\\bar R^2=1-\\left(\\frac{n-1}{n-k-1}\\right)(1-R^2)$\n==加变量一定会让 $R^2$ 上升,但可能让 $\\bar R^2$ 下降。==\n斜率 t 检验自由度 = $n-k-1$,别忘减截距那个 1。"},
+{"h":"记忆钩子","b":"「偏斜率」理解：控制住其它变量后的**净效应**。\nF 检验问「**至少一个** $b_j\\neq 0$ 吗」；单个 t 检验问「**这一个** $b_j$ 显著吗」。"}
+]},
+{"los":"Cointegration: unit-root tests on two series plus Engle-Granger test on regression residuals","cards":[
+{"h":"这是什么","b":"两个各自**不平稳(有单位根)**的序列,若长期一起漂移、其**线性组合平稳**,就叫**协整 (cointegration)**。\n协整成立时,即使各自不平稳,==它们的回归结果依然可靠、不是伪回归。=="},
+{"h":"核心规则","b":"**两步判定流程**：\n1. 各自跑 **单位根检验 (Dickey-Fuller)**——两个序列都要是**同阶单整**(如都是 I(1))\n2. 跑回归 $y_t=b_0+b_1 x_t+\\varepsilon_t$,对**残差**做 **Engle-Granger (DF-EG) 检验**\n==残差平稳(拒绝有单位根) → 协整成立。=="},
+{"h":"考试陷阱","b":"Engle-Granger 用的是**专门的临界值**(比普通 DF 更严),==不能用标准 t 临界值。==\n必须两序列**同阶**才谈协整：一个 I(1) 一个 I(0) 不可能协整。\n若不协整却硬回归 → **spurious regression(伪回归)**,$R^2$ 虚高、t 值失真。"},
+{"h":"记忆钩子","b":"口诀：「**各自不稳、组合稳**」=协整。\n流程记「**先验各自单位根,再验残差平稳**」两步走。"}
+]},
+{"los":"AR(1) mean-reverting level = b0/(1-b1)","cards":[
+{"h":"这是什么","b":"AR(1) 模型 $x_t=b_0+b_1 x_{t-1}+\\varepsilon_t$ 有个**长期均衡值**,序列会向它回归。\n**均值回归水平 (mean-reverting level)**：\n$x_{ML}=\\frac{b_0}{1-b_1}$\n==高于它就往下拉,低于它就往上推。=="},
+{"h":"核心规则","b":"三种情形:\n- $x_t > \\frac{b_0}{1-b_1}$ → 预测下期**下降**\n- $x_t < \\frac{b_0}{1-b_1}$ → 预测下期**上升**\n- $x_t = \\frac{b_0}{1-b_1}$ → 预测**不变**\n\n只有 $|b_1|<1$(平稳)时该水平才有意义。"},
+{"h":"考试陷阱","b":"$b_1=1$ 时分母为 0 → **单位根**,序列不平稳,**均值回归水平不存在**。\n==公式记牢是 $1-b_1$ 不是 $1+b_1$。==\n数字例:$b_0=0.2,b_1=0.6 → x_{ML}=\\frac{0.2}{0.4}=0.5$。"},
+{"h":"记忆钩子","b":"想成弹簧:拉得越远,回弹越强。\n$b_1$ 越接近 1,回归越**慢**(半衰期越长);$b_1$ 越小,回归越快。"}
+]}
+]}

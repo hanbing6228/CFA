@@ -1,5 +1,5 @@
 {
- "version": "2026-07-23",
+ "version": "2026-07-24",
  "defaults": {
   "exam_date": "2026-11-20",
   "daily": {
@@ -11612,6 +11612,542 @@
   }
  },
  "lessons": {
+  "Alts|Introduction to Commodities and Commodity Derivatives": [
+   {
+    "h": "这是什么",
+    "b": "商品 = **实物**（原油、黄金、玉米、铜），不产生现金流，==回报靠价格波动和期货结构，不靠 dividend/coupon==。\n大多数人不买实物（存储费死人），而是玩 **commodity futures**。\n分五大类：**energy、industrial metals、precious metals、agriculture、livestock**。"
+   },
+   {
+    "h": "核心规则",
+    "b": "商品价格由 **供需** 决定，但供给弹性差（种玉米要一季、开矿要几年），所以短期价格能疯涨疯跌。\n估值不用 DCF，用 **spot 与 futures 的关系**。\n关键三角：**hedgers（生产商/消费商）避险 + speculators 提供流动性 + arbitrageurs 修正错价**。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把 **commodity（实物）** 和 **commodity futures（合约）** 的回报混为一谈——两者常常方向不同。\n==商品无内在现金流，所以 CAPM/DDM 这类估值模型对它没用==。\n还有：precious metals 更像 store of value，工业金属才真正跟经济周期走。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "五大类记 **'能属贵农牲'**（能源、（工业）属金属、贵金属、农产品、牲畜）。\n口诀：**'商品自己不下崽'**——不生现金流，只能靠买卖差和期货滚动赚钱。"
+   }
+  ],
+  "Alts|Investments in Real Estate Through Publicly Traded Securities": [
+   {
+    "h": "这是什么",
+    "b": "不想买整栋楼当房东？买 **公开上市证券** 间接持有房地产。\n四种工具：**REITs、REOCs、MBS、房地产 ETF/基金**。\n核心明星是 ==REIT：把租金收入打包，法律要求把大部分应税收入分红出去==，所以派息高。"
+   },
+   {
+    "h": "核心规则",
+    "b": "REIT 免公司税的代价：通常要 **分红 ≥ 90% 应税收入**（美国规则）。\n**REIT vs REOC**：REIT 强制高分红、税收穿透；**REOC 是普通地产公司，能留存利润再投资、要交公司税、更灵活**。\n上市证券的好处：**流动性高、透明、可小额分散**；坏处：==短期跟股市一起波动，分散效果被削弱==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别说 REIT 完全免税——是 **穿透（pass-through）**，税落在投资者层面，不是凭空消失。\n陷阱：把 **REIT 和 REOC 搞反**——高派息、受限、免公司税的是 REIT；能留存再投资的是 REOC。\n还有：上市 REIT 短期 correlation 高，==长期才更贴近直接房产的表现==。"
+   }
+  ],
+  "Alts|Overview of Types of Real Estate Investment": [
+   {
+    "h": "这是什么",
+    "b": "房地产投资分 **两轴**：**债 vs 股（debt/equity）× 私募 vs 公开（private/public）**，组成 2×2 四象限。\n- 私募股权：直接买楼当房东\n- 私募债：发放商业按揭\n- 公开股权：==REITs / REOCs==\n- 公开债：**MBS / CMBS**"
+   },
+   {
+    "h": "核心规则",
+    "b": "记这张 **四象限表**：\n**Private Equity** = 直接持有物业；**Private Debt** = mortgages。\n**Public Equity** = REITs、REOCs；**Public Debt** = MBS、CMBS。\n股权拿的是 **升值 + 剩余租金**、风险高；==债权拿的是固定利息、优先受偿、风险低==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "常考 **把某工具放进正确象限**：MBS 是 public **debt**，不是 equity；REIT 是 public **equity**。\n别混：**mortgage = 债权方**（收利息），**owner = 股权方**（担风险、吃升值）。\n陷阱项：说私募房产 '流动性好'——==私募的死穴恰恰是流动性差、估值靠 appraisal 不实时==。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "画个 **田字格**：横轴 私募/公开，竖轴 债/股。\n口诀 **'股当房东扛风险，债收利息站前排'**（debt 优先受偿）。"
+   }
+  ],
+  "Alts|Hedge Fund Strategies": [
+   {
+    "h": "这是什么",
+    "b": "对冲基金按打法分 **四大类**：\n**Equity（如 long/short、market neutral）、Event-Driven（merger arb、distressed）、Relative Value（如 fixed-income arb、convertible arb）、Opportunistic/Macro（global macro、managed futures）**。\n共同点：==用 leverage、卖空、衍生品，追求 absolute return，不比 benchmark==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "分类要背对：\n- **Equity market neutral**：多空对冲掉 beta，==赚选股 alpha，市场涨跌无所谓==。\n- **Merger arb**：买目标、（换股交易）空收购方，赌 **deal 完成**。\n- **Convertible arb**：多可转债、空正股，吃错价。\n- **Global macro**：自上而下押 **利率/汇率/大宗** 方向。\n- **Managed futures**：趋势跟踪、多市场期货。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把 **market neutral 当无风险**——它对冲市场 beta，但仍有 **选股、杠杆、model 风险**。\n陷阱：merger arb 看着稳，实则 ==回报像'卖保险'——平时小赚，deal 破裂时巨亏（左尾风险）==。\n还有：global macro 是 **directional（方向性押注）**，relative value 是 **收敛/套利**，别归错类。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "四大类记 **'股事值机'**（Equity、Event-driven、（Relative）Value、机会型 Macro）。\n口诀：**'对冲基金要绝对收益'**——不跟指数比，跌市也想正回报。"
+   }
+  ],
+  "Alts|Alternative Investments": [
+   {
+    "h": "这是什么",
+    "b": "另类 = **股债现金之外的东西**：**PE、hedge funds、real estate、commodities、infrastructure、private debt**。\n卖点：==低相关性带来分散、可能更高回报==。\n代价：**流动性差、费用高、透明度低、估值滞后**。"
+   },
+   {
+    "h": "核心规则",
+    "b": "费率典型 **'2 and 20'**：管理费约 **2%（按 AUM）** + 业绩费约 **20%（按利润）**。\n业绩费常带保护条款：**high-water mark**（超过历史高点才再收）和 **hurdle rate**（超过门槛收益才分成）。\n估值/回报数据常有偏差：==survivorship bias、backfill bias 会高估历史业绩==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别忘 **high-water mark 防重复收费**：亏了要先涨回旧高点，管理人才再拿 incentive fee。\n陷阱：只看亮眼的历史平均回报——**幸存者/回填偏差** 让指数虚高。\n还有：另类的低相关是 **长期** 的，==危机时相关性会跳升（分散失效）==。"
+   }
+  ],
+  "Alts|Backwardation, basis and calendar spread from spot vs futures prices": [
+   {
+    "h": "这是什么",
+    "b": "比较 **spot（现价）** 和 **futures（期货价）** 的高低：\n- **Backwardation**：==futures < spot，期货曲线向下倾==（现货紧俏、convenience yield 高）。\n- **Contango**：**futures > spot，曲线向上倾**（存储费主导）。"
+   },
+   {
+    "h": "核心公式",
+    "b": "**Basis = Spot − Futures**。\n- Backwardation → **basis > 0**（正基差）。\n- Contango → **basis < 0**。\n**Calendar spread = 近月 − 远月** 期货价。\n==Backwardation 下近月 > 远月 → calendar spread > 0；Contango 反之==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "最爱考 **方向搞反**：记死 **'Back = 期货低头（futures 低于 spot）'**。\nBasis 定义别记错——是 **Spot 减 Futures**，正基差 = backwardation。\n陷阱：把 backwardation/contango 说成价格涨跌预测——==它只描述曲线形状，不预测 spot 未来走向==。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "**Back**wardation → 期货 **'向后/向下'** 缩水，低于现货。\n**Con**tango → 期货 **'昂'** 起来，高于现货（谐音 '昂'）。\n口诀 **'现货贵是 back，期货贵是 tango'**。"
+   }
+  ],
+  "Alts|Total return on commodity futures = price return + roll return + collateral return": [
+   {
+    "h": "这是什么",
+    "b": "持有商品期货的总回报拆 **三块**：\n**Price return（价格回报）**：现货价格自己涨跌。\n**Roll return（滚动回报）**：合约到期前 **平旧仓、开新仓** 产生的盈亏。\n**Collateral return（抵押回报）**：买期货只交保证金，剩下现金拿 ==无风险利率（如 T-bill）== 的利息。"
+   },
+   {
+    "h": "核心公式",
+    "b": "$Total = Price\\ return + Roll\\ return + Collateral\\ return$\n**Roll return 的符号看曲线**：\n- **Backwardation**：近月贵、远月便宜，往下滚 → ==roll return 为正==。\n- **Contango**：远月更贵，往上滚 → **roll return 为负**。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别漏 **collateral return**——很多人只算价格，忘了保证金外的现金还在吃利息。\n陷阱：**contango 里 roll 拖累回报**，长期正向 contango 会把 price gain 吃掉一大块。\n易错：==roll return 正负由 backwardation/contango 决定，不是由价格涨跌决定==。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **'价 + 滚 + 押'** 三件套。\n滚动记 **'back 正、tango 负'**（backwardation 滚出利润，contango 滚出亏损）。"
+   }
+  ],
+  "Alts|Merger (stock-for-stock) arbitrage gain if the deal closes": [
+   {
+    "h": "这是什么",
+    "b": "换股并购套利：收购方用 **自家股票** 换目标公司股票。\n套利者 **买目标（target）、按换股比例卖空收购方（acquirer）**。\n==只要 deal 成交，两边价格收敛，锁定 spread 就是利润==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "换股比 = **每 1 股 target 换 N 股 acquirer**。\n建仓：**买 1 股 target，卖空 N 股 acquirer**。\n$Gain\\ if\\ deal\\ closes = (N \\times P_{acquirer} - P_{target})$\n即 **卖空端收到的钱 − 买 target 花的钱**；成交后 target 变成 N 股 acquirer，空头正好对冲平掉，==净落袋这个初始价差==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别忘 **卖空 acquirer** 这条腿——纯买 target 不是套利，是方向性押注。\n最大陷阱：==deal 破裂时 target 暴跌、acquirer 反弹，两头同时亏（下行远大于上行）==。\n所以 merger arb 收益结构像 **'卖出一份保险'**：平时赚小 spread，偶尔一次爆仓。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **'买猎物、空猎人'**（long target、short acquirer）。\n记住形状：**'小赚常有、大亏偶发'**——左尾风险，别当无风险套利。"
+   }
+  ],
+  "Corp|Cost of Capital: Advanced Topics": [
+   {
+    "h": "这是什么",
+    "b": "算 **WACC** 时，你要的不是历史成本，而是**未来发新资本的边际成本**。\nCFA L2 在 L1 基础上加了三件事：**beta 要去杠杆再上杠杆**、**国家风险溢价 (CRP)**、**flotation cost 怎么处理**。\n一句话：==把公司当前资本结构的融资成本，逐块估准==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "去杠杆再加杠杆 (Hamada)：\n$\\beta_u = \\dfrac{\\beta_e}{1 + (1-t)\\frac{D}{E}}$\n$\\beta_e = \\beta_u\\left[1 + (1-t)\\frac{D}{E}\\right]$\n加国家风险的 CAPM：\n$r_e = r_f + \\beta[ERP + \\textbf{CRP}]$\nCRP = 主权收益率利差 × (本地股市波动率 / 本地债市波动率)。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) beta 调整方向：**先卸掉可比公司的杠杆 → 再套上目标公司的杠杆**，顺序反了全错。\n2) ==flotation cost 应作为**初始现金流出 (NPV 里减一次)**，不要塞进 $r_e$ 里长期抬高折现率==——把它加进折现率是经典错误答案。\n3) CRP 只加一次，别既进 ERP 又单列。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "beta 三步走：**卸杠杆 → 套杠杆 → 进 CAPM**。\nflotation 是**一次性买路钱**，不是每年租金——所以放现金流不放折现率。"
+   }
+  ],
+  "Corp|Analysis of Dividends and Share Repurchases": [
+   {
+    "h": "这是什么",
+    "b": "公司把现金还给股东有两条路：**发股利 (dividend)** 或 **回购 (share repurchase)**。\n核心问题：这两者**价值等价吗**？谁更好？信号是什么？\n==理论上（无税无摩擦）股利与回购对股东财富等价，现实里税收和信号打破等价==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "回购在 **理想条件** 下与等额现金股利**价值中性**。\n关键判断——用**税后借款成本 vs earnings yield (E/P)** 比较借钱回购是否增厚 EPS。\n回购后每股账面价值：若 **回购价 > BVPS**，BVPS 下降；反之上升。\n股利折现看重的是**可持续性**，回购提供**灵活性**（不承诺）。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) ==回购**本身不创造价值**，只是把现金/未来分配换个形式；EPS 上升 ≠ 股东更富有==。\n2) 别把 EPS 增长当利好信号——若靠低于 E/P 的债务成本推动，只是财务算术。\n3) 稳定加派息 (increase) 是强信号；**削减股利**是很强的负面信号。"
+   }
+  ],
+  "Corp|Environmental, Social, and Governance (ESG) Considerations in Investment Analysis": [
+   {
+    "h": "这是什么",
+    "b": "**ESG** = 把**环境 (E)、社会 (S)、治理 (G)** 因素纳入投资分析。\n不是道德说教，而是识别**财务重大性 (financial materiality)** 的风险与机会。\n==只有影响到公司现金流、风险或估值的 ESG 因素才算 material，才进模型==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**Materiality**：不同行业 material 的 ESG 因素不同（能源看碳排放，银行看治理）。\n常见治理红旗：**双层股权 (dual-class shares)**、**董事会缺乏独立性**、**关联交易**、**薄弱少数股东保护**。\nESG 整合手法：negative screening / positive screening / **ESG integration** / thematic / impact investing。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) ==ESG integration 是把因素并入**传统财务分析**，不是简单剔除某些股票 (那是 screening)==——两者别混。\n2) 好的 ESG 影响进估值的路径通常是：**调整现金流预测或调整贴现率/风险溢价**，而非凭空加分。\n3) 治理弱 ≠ 一定低估值，考的是它如何**放大下行风险**。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "记 material 一词：**\"重大才入模型\"**。\n治理红旗记 **\"双层股权 + 董事不独立 + 关联交易\"** 三连。"
+   }
+  ],
+  "Corp|Corporate Restructuring": [
+   {
+    "h": "这是什么",
+    "b": "公司改变**规模、结构或所有权**的动作统称重组。\n三大类：**扩张 (investment: M&A、股权投资)**、**收缩 (divestment: 分拆 spin-off、carve-out、剥离 sale)**、**所有权/控制权变更 (LBO、私有化)**。\n==动机常见：realize value、增长、协同、改善估值、应对困境==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "评估框架四步：**Initial evaluation → Preliminary valuation → Modeling → Impact analysis**。\n估值三法：**comparable company / comparable transaction / DCF**。\n分拆区别：**spin-off** 按比例分给现股东、不进现金；**carve-out (equity carve-out)** 卖新股给外部、公司**收到现金**。\ncost synergy 通常比 revenue synergy **更可靠**。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) ==spin-off **不产生现金**给母公司；equity carve-out **产生现金**==——这是高频区分点。\n2) comparable transaction 法**已含控制权溢价 (control premium)**，comparable company 法不含。\n3) 别把 EPS 变化当收购好坏依据：**贵股票买便宜公司** EPS 增厚，反之稀释，但都不等于创造价值。"
+   }
+  ],
+  "Corp|Capital Structure": [
+   {
+    "h": "这是什么",
+    "b": "公司用**债 (D)** 和 **股 (E)** 的比例组合就是资本结构。\n核心问：加杠杆能否提升公司价值？\n主线是 **MM 理论 → 加税 → 加破产成本/代理成本 → 静态权衡 (static trade-off)**。\n==最优资本结构 = 让 WACC 最低、公司价值最高的那一点==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**MM 无税**：资本结构无关，$V_L = V_U$，WACC 恒定。\n**MM 加税**：债务税盾提升价值，$V_L = V_U + tD$，越多债越好。\n**静态权衡**：$V_L = V_U + tD - \\text{PV(财务困境成本)}$。\n**Pecking order**：优先内部留存 → 债 → 外部股权 (信息不对称)。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) ==MM 命题 II：加杠杆会**推高 cost of equity**（因为股东风险上升），所以无税时 WACC 才保持不变==——别以为便宜的债一定拉低 WACC。\n2) 静态权衡有**内部最优点**；MM 加税**没有**内部最优 (100% 债)。\n3) pecking order **不追求**目标杠杆比率，别和 trade-off 混。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "四层楼记忆：**无税 (无关) → 加税 (越多债越好) → 加困境成本 (有最优点) → 信息不对称 (啄食顺序)**。\n每上一层，就多一个打破\"结构无关\"的现实摩擦。"
+   }
+  ],
+  "Corp|Analysis of Dividends and Share Repurchases: 股利政策与代理成本 (过度投资 / 股东-债权人冲突) 的方向": [
+   {
+    "h": "这是什么",
+    "b": "多派现金既能**缓解一种代理成本**，又能**加剧另一种**——方向相反，别记混。\n对象一：**股东 vs 管理层** (过度投资/自由现金流问题)。\n对象二：**股东 vs 债权人** (资产替代/掏空)。\n==发股利把现金拿出公司门，管理层视角是好事，债权人视角可能是坏事==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**降低 股东-管理层 代理成本**：派息/回购**减少管理层手里的自由现金流**，逼其少做低回报的**过度投资 (empire building)**——方向：**多派息 → 冲突下降**。\n**加剧 股东-债权人 代理成本**：大额派息**抽走债权人的抵押资产垫**，是一种向股东输送财富——方向：**多派息 → 冲突上升**。\n债权合约常设 **dividend covenant** 限制派息保护债权人。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) ==同一个\"多派息\"动作，对**管理层冲突是解药**，对**债权人冲突是毒药**==——考题最爱让你答反方向。\n2) 高自由现金流 + 低成长的成熟公司，**提高派息**最能对症降低过度投资代理成本。\n3) 看到 bond covenant 限制股利，识别其目的是**防止股东通过分红侵蚀债权人**，不是税务。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "一句口诀：**\"分钱治老板，分钱坑债主\"**。\n钱出公司门 → 管理层没法乱花 (好) → 但债权人的安全垫也变薄 (坏)。"
+   }
+  ],
+  "Corp|Analysis of Dividends and Share Repurchases: 目标支付比例调整模型 (target payout adjustment model)": [
+   {
+    "h": "这是什么",
+    "b": "公司不会让股利跟着当年盈利上蹿下跳，而是设一个**长期目标支付比例 (target payout ratio)**，再**慢慢向它靠拢**。\n这就是 **Lintner 目标调整模型**：盈利跳一下，股利只挪一小步。\n==股利是**平滑 (smoothed)** 的，管理层极不愿削减股利==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "$\\Delta DPS = (E_1 \\times \\text{目标payout} - DPS_0) \\times \\text{调整因子}$\n预期新股利：\n$DPS_1 = DPS_0 + \\Delta DPS$\n其中：\n**目标股利 = 预期EPS × 目标支付比例**\n**调整因子 (adjustment factor)** = 1 / 向目标靠拢所需年数，越小调整越慢。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) ==增量只对\"目标股利与**上期股利 $DPS_0$**之差\"打折，别拿去乘\"目标与当前EPS之差\"==。\n2) 调整因子和\"年数\"是**倒数关系**：5 年靠拢 → 因子 0.2。\n3) 别一步到位把股利直接设成 目标payout × EPS——那忽略了**平滑**，正是模型要避免的。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀：**\"看差距，走一小步\"**。\n先算目标股利和去年股利差多少，再按调整因子只走其中一小段——公司走路像**踮脚挪步**，不会一跃而至。"
+   }
+  ],
+  "Corp|Analysis of Dividends and Share Repurchases: 借款回购对 EPS 的影响 (earnings yield vs 税后借款成本)": [
+   {
+    "h": "这是什么",
+    "b": "公司**借钱回购自己股票**时，EPS 是增是减，只看一个比较：\n**盈利收益率 (earnings yield, E/P) vs 税后借款利率**。\n本质：借来的钱\"回报率\" (E/P) 高于\"成本\" (税后利率)，剩余归更少的股东 → EPS 上升。\n==这是纯财务算术，不代表公司价值增加==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "判据：\n**若 earnings yield (E/P) > 税后借款成本 → 借款回购**使 **EPS 上升 (accretive)**；\n**若 E/P < 税后利率 → EPS 下降 (dilutive)**。\n其中 $\\text{E/P} = \\dfrac{EPS}{\\text{每股回购价}}$，税后成本 $= r_d (1-t)$。\n用现金 (非借款) 回购则比较对象换成放弃的**税后利息收益率**。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1) ==比的是 **E/P 与\"税后\"利率**，忘了乘 $(1-t)$ 会把成本高估、方向判反==。\n2) EPS 增厚 (accretive) **≠ 股东更富有**：若市场按更高风险重估 P/E，股价未必涨。\n3) 用市价还是账面价当回购价？EPS 分析用**回购市价**算 E/P，别用面值。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀：**\"赚的 (E/P) > 借的 (税后) → EPS 长\"**。\n把借款回购想成**套利**：借便宜钱买高收益率的自家股，利差落到留下的股东头上——但记住只是**每股数字变好，不是价值变好**。"
+   }
+  ],
+  "Derivatives|Pricing and Valuation of Forward Commitments": [
+   {
+    "h": "这是什么",
+    "b": "**Forward commitment** = forward / futures / swap，今天就锁死未来成交价。\n**Pricing（定价）**：签约那一刻算出让双方都不吃亏的 forward price $F_0$。\n**Valuation（估值）**：签约之后，市场动了，这张合约现在值多少钱 $V_t$。\n==核心一句话：定价靠 no-arbitrage，估值靠现值差==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "定价（无收益标的）：$F_0(T) = S_0 (1+r)^T$。\n有持有成本/收益：$F_0 = (S_0 - PV_{income} + PV_{cost})(1+r)^T$。\n多头估值：$V_t = \\frac{F_t - F_0}{(1+r)^{T-t}}$——**新老 forward 价差再折现**。\n签约当下 $V_0 = 0$（这就是定价的目的）。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**别把 price 和 value 搞混**：forward price 是约定的成交价，value 是合约本身的市值。\n标的付了 income（分红/coupon）会**压低** $F_0$；持有成本（仓储）会**抬高** $F_0$。\n==估值一定要把价差折现回今天，漏折现是常见丢分点==。\nfutures 每日 mark-to-market，估值当日归零，别套 forward 公式。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "**\"定价定成交价，估值算市值\"**。\n记 income 与 cost 的方向：\n**收钱（income）拉低 F，花钱（cost）抬高 F**——因为持有标的的人享收益、担成本，forward 价要反向补偿。"
+   }
+  ],
+  "Derivatives|Valuation of Contingent Claims": [
+   {
+    "h": "这是什么",
+    "b": "**Contingent claim（或有索取权）= 期权**：付出与否\"取决于\"未来标的走向。\n和 forward 的\"义务\"不同，期权是**权利**——好了就行权，坏了就作废。\n估值两大工具：**binomial（离散）** 和 **BSM（连续）**。\n==两者都建立在 risk-neutral（风险中性）定价上==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "风险中性概率：$\\pi = \\frac{(1+r) - d}{u - d}$。\n单期看涨：$c = \\frac{\\pi c_u + (1-\\pi)c_d}{1+r}$。\n**用 $\\pi$ 而非真实概率**，且期望回报一律用无风险利率折现。\nBSM 下 $c = S_0 N(d_1) - Ke^{-rT}N(d_2)$，$N(d_2)$ 是风险中性下行权概率。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**别用真实（真实世界）概率或标的预期收益率**——risk-neutral 定价里投资者风险偏好不进公式。\n$\\pi$ 只跟 $u,d,r$ 有关，==和股票真实上涨概率无关，这是最反直觉的坑==。\nAmerican option 每个节点要查提前行权，European 不查。\nput 用 put-call parity 或对应 $\\pi$ 公式，别照抄 call。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "**\"或有 = 期权 = 权利不是义务\"**。\n定价心法一句话：**\"假装大家都不怕风险，全用无风险利率折现\"**（risk-neutral）。\n$\\pi$ 记成 \"(涨跌里 r 站的位置) 除以 (总跨度 u−d)\"。"
+   }
+  ],
+  "Derivatives|BSM delta hedge: shares to buy per short call = N(d1) for a non-dividend stock": [
+   {
+    "h": "这是什么",
+    "b": "卖出（short）1 份 call，你怕股价涨、期权亏，就**买股票对冲**。\n要买多少股？答案是 **delta**。\n无分红股票的 call delta = $N(d_1)$，是个 0 到 1 之间的数。\n==卖 1 份 call → 买 $N(d_1)$ 股，组合对小幅波动免疫==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "call delta $= N(d_1)$，其中 $d_1 = \\frac{\\ln(S/K) + (r + \\sigma^2/2)T}{\\sigma\\sqrt{T}}$。\n每 short 1 call，**买入 $N(d_1)$ 股**（合约乘数别忘）。\n$N(d_1)$ 是标准正态 CDF，**深度实值→趋近 1，深度虚值→趋近 0**。\nput delta $= N(d_1) - 1$（负值）。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**别把 $N(d_1)$ 和 $N(d_2)$ 混**：对冲股数用 $d_1$，行权概率用 $d_2$。\n是 **short call → long shares**（买股）；方向反了就丢分。\n==delta 会随股价、时间变，需 dynamic rehedging（连续再平衡），静态对冲只在一瞬间有效==。\n无分红才是纯 $N(d_1)$；有分红要乘 $e^{-\\delta T}$。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀：**\"卖一张 call，买 N(d1) 股\"**。\ndelta 就是\"股价动 1 块，期权动几毛\"。\ncall delta 永远正、在 0~1；**实值像股票（≈1），虚值像废纸（≈0）**。"
+   }
+  ],
+  "Derivatives|Gamma of a delta-hedged short call plus long stock position": [
+   {
+    "h": "这是什么",
+    "b": "delta 对冲只在一瞬间成立，因为 delta 自己会变——**gamma 就是 delta 的变化率**。\n股票 delta 恒为 1，**gamma = 0**（线性）。\nshort call 的 gamma 是**负的**。\n==long stock + short call 组合 gamma < 0，这就是它的暴露==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "gamma $= \\frac{\\partial \\Delta}{\\partial S} = \\frac{N'(d_1)}{S\\sigma\\sqrt{T}}$，恒为正（单个 long option）。\n组合：股票贡献 0，short call 贡献 $-\\Gamma_{call}$。\n**净 gamma $= 0 - \\Gamma_{call} < 0$**。\ngamma **在平值（at-the-money）、临近到期时最大**。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==负 gamma 的痛：股价大涨大跌，delta 中性组合两头都亏，得高买低卖去再对冲==。\ndelta 中性 **不等于** gamma 中性——只有 option 才能对冲 gamma，股票不行。\n**gamma 最大点是 ATM + 快到期**，别以为深度实值 gamma 大（那是 delta 大）。\n单个 long option 的 gamma 恒正，是 short 头寸让组合翻负。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "**\"delta 是速度，gamma 是加速度\"**。\nshort option = short gamma = 怕大波动。\n记住三高点：**ATM、临到期、gamma 峰**——考试爱在这里出\"何时 gamma 最大\"。"
+   }
+  ],
+  "Derivatives|Theta: change in option value from the passage of one day": [
+   {
+    "h": "这是什么",
+    "b": "**Theta（时间损耗）**：只是过了一天、别的都不动，期权值变多少。\n对 **long option，theta 通常是负的**——时间价值在流逝（time decay）。\n卖方 short option 则**吃到**这份衰减。\n==\"期权是会融化的冰块\"，theta 衡量融化速度==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "$\\theta \\approx \\frac{\\Delta V}{\\Delta t}$（每天口径，通常写成负数）。\nlong call / long put：$\\theta < 0$。\n**衰减非线性——越临近到期，ATM 期权衰减越快**。\n和 gamma 反向权衡：**高 gamma 往往伴随高（负）theta**，这是期权买方的代价。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**theta 不总为负**：深度实值的 European put 可能 theta > 0。\n别把 theta 当\"每年\"——题目常按**每日（one day）**口径，看清单位。\n==intrinsic value 不随时间衰减，衰减的只是 time value；到期日 theta 归结于内在价值==。\ngamma 与 theta 是硬币两面：想要 gamma 就得付 theta。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "**\"期权是冰块，theta 是化的速度\"**。\n买方付时间租金（theta 负），卖方收租（theta 正）。\n记权衡口诀：**\"gamma 给你弹药，theta 是弹药的月供\"**。"
+   }
+  ],
+  "Derivatives|Two-period binomial American put with early exercise check": [
+   {
+    "h": "这是什么",
+    "b": "两期二叉树给 **American put** 估值，比 European 多一步：**每个节点都要查是否提前行权**。\nAmerican put **有可能**提前行权更值钱（拿回现金早投资）。\n方法：先算每节点\"继续持有价\"，再和\"立刻行权价\"比大小，取较大者。\n==American put ≥ European put，差额来自提前行权权==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "1）$\\pi = \\frac{(1+r)-d}{u-d}$，画出 $S_{uu}, S_{ud}, S_{dd}$。\n2）末端 put 值 $= \\max(K - S_T, 0)$。\n3）中间节点：$\\text{continue} = \\frac{\\pi p_{up} + (1-\\pi)p_{down}}{1+r}$。\n4）**每节点取 $\\max(\\text{continue},\\ K - S_{node})$**，再往前滚。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==最大坑：忘了在中间节点做 early-exercise 比较，直接当 European 折现==。\n提前行权价用的是**该节点当下的 $K - S$**，不是末端 payoff。\n**American call（无分红）不会提前行权**，别在 call 上白查；put 才查。\n漏查会**系统性低估** American put 价值。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀：**\"每个节点都问一句：现在砸了它，还是留着？\"** 取大的那个。\nput 才有提前行权的甜头，无分红 call 没有。\n记流程四步：**算 π → 末端 payoff → 倒推折现 → 每点比行权**。"
+   }
+  ],
+  "Derivatives|Equity swap value = value of equity leg minus value of fixed leg": [
+   {
+    "h": "这是什么",
+    "b": "**Equity swap**：一腿付股票（指数）收益，另一腿付固定利率，定期互换。\n估值就是**两条腿现值相减**。\n站在\"收股票、付固定\"的一方：\n==swap value = 股票腿现值 − 固定腿现值==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "股票腿现值 $= \\frac{S_t}{S_0} \\times NP$（按上次重置后股价比例，乘名义本金）。\n固定腿现值 $= NP\\left(C\\sum PV_i + PV_n\\right)$——**像一张固息债**（票息现值 + 期末本金现值）。\n**$V_{swap} = \\text{股票腿} - \\text{固定腿}$**。\n重置日刚过时股票腿 ≈ NP。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==股票腿要用\"最近一次重置以来\"的涨跌比 $S_t/S_0$，别用整段区间==。\n固定腿当成**固息债**估值：别漏了期末那笔本金现值 $PV_n$。\n**方向别反**：收股票付固定 = 股票腿减固定腿；反过来符号相反。\nreceive-equity 一方在股票跌时 swap 为负值，别默认为正。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "**\"股票腿减固定腿，谁多谁就赚\"**。\n固定腿 = 一张普通固息债（票息 + 本金现值）。\n股票腿 = **名义本金 × 期间涨跌倍数**，重置后归位到 NP。"
+   }
+  ],
+  "Derivatives|Fixed-for-fixed currency swap par rate = (1 - PV(final))/sum of PV factors, annualized": [
+   {
+    "h": "这是什么",
+    "b": "**Fixed-for-fixed 货币互换**：两种货币各付一个固定利率。\n每种货币的\"公平固定利率\"= 用**该货币自己的折现因子**算出的 par swap rate。\n和普通 IRS 的 par rate 公式**同一个套路**，只是各币种各算一遍。\n==par rate 让 swap 起始时价值为 0==。"
+   },
+   {
+    "h": "核心公式",
+    "b": "周期 par rate $= \\frac{1 - PV_{final}}{\\sum_{i=1}^{n} PV_i}$，其中 $PV_i$ 是各期折现因子、$PV_{final}$ 是最后一期折现因子。\n**年化**：周期利率 × 每年期数（如季度 ×4、半年 ×2）。\n各货币用**各自的 discount factors** 得各自的固定利率。\n本金按即期汇率折算、期末归还。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==分子是 $1 - PV_{最后一期}$，不是 $1 - \\sum PV$；分母才是所有 $PV$ 求和，别搞反==。\n**别混用两币种的折现因子**——各币种各用各的曲线。\n记得**年化**：算出来是周期利率，漏乘期数就低估。\n本金在**期初与期末各交换一次**（按初始即期汇率），这点异于 IRS。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "公式记成：**\"1 减最后一个 PV，除以所有 PV 之和\"**。\n口诀 **\"分子只减尾巴，分母全家相加\"**。\n货币互换 = 两条独立的固息腿，**各用各的曲线，最后年化\"**。"
+   }
+  ],
+  "Econ|Currency Exchange Rates: Understanding Equilibrium Value": [
+   {
+    "h": "这是什么",
+    "b": "这篇讲**汇率的均衡值从哪来**——四大 parity conditions 把利率、通胀、汇率串成一条链。\n报价用 **price/base**（如 USD/EUR = 每 1 欧元多少美元），涨=base 升值。\n核心问题：知道两国利率/通胀，==forward 和未来 spot 该是多少=="
+   },
+   {
+    "h": "核心公式",
+    "b": "**Covered IRP**（套利强制成立）：$F_{d/f}=S_{d/f}\\dfrac{1+i_d}{1+i_f}$\n**Uncovered IRP**（预期，非强制）：$\\%\\Delta S^e_{d/f}=i_d-i_f$\n**Relative PPP**：$\\%\\Delta S_{d/f}=\\pi_d-\\pi_f$\n**International Fisher**：$i_d-i_f=\\pi^e_d-\\pi^e_f$（实际利率相等）\n口径记牢：**高利率货币 = forward 折价**"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把四个 parity 混为一谈：\n**Covered IRP 永远成立**（无套利强制）；**Uncovered IRP 短期常失效**，这正是 carry trade 能赚钱的原因。\ncarry trade = 借低息、投高息货币，==赚息差但承担崩盘风险（收益负偏、肥左尾）==。\n陷阱选项：把'高利率货币会升值'当铁律——UIP 说它该**贬值**"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "一句话链条：**利率差 → forward 折溢价（Covered，铁律）→ 预期即期变动（Uncovered，会破）→ 通胀差（PPP）**。\n哪个'带盖 covered'哪个就靠套利钉死；'不带盖 uncovered'的都只是预期，考试爱在这里挖坑"
+   }
+  ],
+  "Econ|Economic Growth and the Investment Decision": [
+   {
+    "h": "这是什么",
+    "b": "把一国产出拆成**要素贡献**，看增长靠什么。\n用 **Cobb-Douglas**：产出来自资本 K、劳动 L 和全要素生产率 TFP(A)。\n对股票投资者的意义：==长期 GDP 增长决定企业盈利与股市回报的天花板=="
+   },
+   {
+    "h": "核心公式",
+    "b": "生产函数：$Y=A\\,K^{\\alpha}L^{1-\\alpha}$\n**Growth accounting**（增长核算）：\n$\\dfrac{\\Delta Y}{Y}=\\dfrac{\\Delta A}{A}+\\alpha\\dfrac{\\Delta K}{K}+(1-\\alpha)\\dfrac{\\Delta L}{L}$\n$\\alpha$ = 资本份额，$1-\\alpha$ = 劳动份额。\n**capital deepening**（人均资本↑）vs **TFP**（技术进步）是两条增长引擎"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别混 **capital deepening** 与 **TFP**：\n沿同一生产函数曲线**向上移动** = capital deepening，受**边际报酬递减**制约；曲线**整体上移** = TFP，才能持续增长。\n==发达国家 K/L 已高，靠加资本的边际贡献很小，增长主要来自 TFP==。\n陷阱：把储蓄率↑当成能永久提高增长率——neoclassical 里只提高**水平**不提高**长期增长率**"
+   }
+  ],
+  "Econ|Economic Growth": [
+   {
+    "h": "这是什么",
+    "b": "增长三大理论的对比篇。\n**Classical (Malthus)**：人口涨吃掉增长，人均停滞。\n**Neoclassical (Solow)**：有稳态，靠 TFP 才能持续增长，各国**趋同 convergence**。\n**Endogenous**：资本报酬不递减，==储蓄/研发能永久拉高增长率、不必趋同=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**趋同 convergence** 三型：\n**Absolute**（绝对）：所有国家收敛到同一人均收入。\n**Conditional**（条件）：结构相同才收敛到同一稳态。\n**Club**（俱乐部）：制度相近的一组国家内部收敛。\nSolow 预测：**穷国增长更快**（起点 K/L 低、资本边际报酬高）→ 支持条件趋同"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "识别理论看**关键词**：\n说'人口压制人均收入' = Classical；说'有稳态、趋同、靠 TFP' = Neoclassical；说'无稳态、储蓄永久提速、报酬不递减' = Endogenous。\n陷阱：把 neoclassical 的'储蓄率↑'效果说成永久提速——==它只提升人均产出的**水平**，稳态增长率仍由外生 TFP 决定=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "三剑客口诀：**马尔萨斯管人口、索洛信趋同、内生靠研发**。\n看到'permanent'（永久提高增长率）几乎只对应 **endogenous**；看到'converge'就往 **neoclassical** 靠"
+   }
+  ],
+  "Econ|Economics and Investment Markets": [
+   {
+    "h": "这是什么",
+    "b": "讲**宏观经济怎么给资产定价**。\n任何资产价值 = 未来现金流按**利率折现**。折现率随经济周期变，资产价格就跟着变。\n实际无风险利率 ≈ ==高 GDP 增长/波动 → 要求更高实际利率==；再叠加通胀预期和风险溢价"
+   },
+   {
+    "h": "核心公式",
+    "b": "名义折现率拆解：\n$r=\\underbrace{l}_{\\text{实际无风险}}+\\underbrace{\\pi^e}_{\\text{通胀预期}}+\\underbrace{\\theta}_{\\text{风险溢价}}$\n**Taylor rule**（政策利率）：\n$i=r_{neutral}+\\pi+0.5(\\pi-\\pi^*)+0.5(y-y^*)$\n债券的 **term premium** 随经济不确定性上升；**credit spread** 随衰退预期走阔"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "记住各资产的周期敏感度：\n**衰退将至** → 收益率曲线常**倒挂/平坦**（短端高于长端）；credit spread **走阔**；周期股跑输防御股。\n陷阱：把'高 GDP 增长'直接当利多股票——增长高也意味**折现率上升**，两股力量方向相反。\n==股票风险溢价与消费的相关性正相关：坏时候更痛的资产要更高溢价=="
+   }
+  ],
+  "Econ|Economics": [
+   {
+    "h": "这是什么",
+    "b": "宏观与市场的总纲：用**跨期替代率**（intertemporal rate of substitution）解释折现率与风险溢价。\n投资者在**坏光景**（低消费）时更看重多一块钱 → ==在坏时段还能付钱的资产更值钱，风险溢价更低=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**周期定位**决定资产配置：\n**扩张期**：股票、credit、周期股占优。\n**放缓/衰退**：长久期国债、防御股、现金占优。\n信号面板：**yield curve**（倒挂预警衰退）、**credit spread**（走阔=风险偏好降）、通胀走向（决定央行松紧）"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "分清**水平**与**变化**：资产价格由折现率**下降**（而非绝对高低）驱动上涨。\n陷阱：认为央行降息一定利多所有资产——若降息因经济恶化，credit spread 走阔可能抵消利率利多。\n==与消费正相关（坏时也跌）的资产要求**更高**风险溢价==，这是溢价高低的根源，别记反"
+   }
+  ],
+  "Econ|Labor productivity growth accounting: potential GDP growth = labor force growth + labor productivity growth": [
+   {
+    "h": "这是什么",
+    "b": "估算**潜在 GDP 增速**的简化法：不拆 K 和 A，直接看'人多干活'加'每人干得更好'。\n**potential GDP 增速 = 劳动力增长 + 劳动生产率增长**。\n==这是央行判断'非通胀增速上限'的核心工具=="
+   },
+   {
+    "h": "核心公式",
+    "b": "**Labor productivity 法**：\n$\\%\\Delta Y^{pot}=\\%\\Delta L+\\%\\Delta\\left(\\dfrac{Y}{L}\\right)$\n即 **潜在增速 = 劳动力增长 + 每小时产出增长**。\n对比 growth accounting（全拆）：\n$\\%\\Delta Y=\\%\\Delta A+\\alpha\\,\\%\\Delta K+(1-\\alpha)\\,\\%\\Delta L$\n两法算的是同一个潜在增速，只是拆法粗细不同"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把两个公式的项混用：\nlabor productivity 法**不带资本份额权重** $\\alpha$，劳动力增长前面**系数是 1**；growth accounting 法劳动前面是 $(1-\\alpha)$。\n陷阱：题目给'劳动力增长 1%、生产率 2%'，答案就是 **3%**——==别再乘份额==。\n生产率增长本身已隐含了 capital deepening + TFP 两块"
+   }
+  ],
+  "Econ|Neoclassical steady-state growth rate = TFP growth/labor share + labor force growth": [
+   {
+    "h": "这是什么",
+    "b": "Solow 稳态下增速的**封闭解**。\n稳态时人均资本不再上升，增长只剩两个来源：**外生技术进步 TFP** 和 **劳动力增长**。\n==长期增长率与储蓄率无关，只由 TFP 和人口决定=="
+   },
+   {
+    "h": "核心公式",
+    "b": "设 $\\theta$ = TFP 增长，$\\alpha$ = 资本份额，$1-\\alpha$ = 劳动份额：\n**人均产出稳态增速**：$g^*=\\dfrac{\\theta}{1-\\alpha}$\n**总产出稳态增速**：$\\dfrac{\\theta}{1-\\alpha}+\\%\\Delta L$\n即 **TFP 增长 ÷ 劳动份额 + 劳动力增长**。\n人均资本 K/L 稳态增速同样 = $\\dfrac{\\theta}{1-\\alpha}$"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "分母是**劳动份额 $(1-\\alpha)$，不是资本份额**——最常错。\n$\\theta=1.5\\%$、劳动份额 0.6、人口 1% → 总增速 $=1.5\\%/0.6+1\\%=3.5\\%$。\n陷阱：储蓄率↑或投资↑能否提高稳态增速?==不能，只提高人均产出的水平、加快向稳态收敛，长期增速仍是这个公式=="
+   }
+  ],
+  "Econ|Endogenous growth model: open trade permanently raises the growth rate": [
+   {
+    "h": "这是什么",
+    "b": "内生增长理论：知识/研发有**外溢效应**，资本（广义，含人力+知识）**报酬不递减** → 没有稳态、也不必趋同。\n关键结论：==储蓄/投资、研发、开放贸易能**永久**提高增长率，不只是水平=="
+   },
+   {
+    "h": "核心规则",
+    "b": "生产函数近似 $Y=f(K)$，对广义资本**规模报酬不减**。\n**开放贸易的两种解读**：\n**Neoclassical**：贸易只带来**一次性水平提升 + 加快趋同**，长期增速回归外生 TFP。\n**Endogenous**：贸易带来技术扩散、更大市场、更多研发激励 → ==**永久**抬高增长率=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "看到 **permanently raises the growth rate（永久提速）** 基本锁定 **endogenous**；看到 **level effect / faster convergence（水平效应/加快趋同）** 锁定 **neoclassical**。\n陷阱：endogenous 里资本报酬**不递减**，所以**无趋同预测**——别拿 Solow 的'穷国追赶'套上来。\n研发的正外部性 → 市场投资**低于**社会最优，为政府补贴研发提供理由"
+   }
+  ],
   "Equity|内在价值 vs 市场价格, mispricing 两成分 (V-P 与感知误差)": [
    {
     "h": "这是什么",
@@ -11651,49 +12187,29 @@
   "Equity|GGM: 公式、敏感性、隐含增长率/隐含要求回报": [
    {
     "h": "这是什么",
-    "b": "**GGM** 就是给一台'每年稳涨 g% 的永续印钞机'估值 🖨️\n假设股利每年按固定 **g** 涨到天荒地老，\n这条无限长的股利流今天值多少？\n==答案简单到离谱：一个分式=="
+    "b": "**戈登增长模型 (GGM)** = DDM 的永续固定增长特例，一条公式吃遍成熟股。\n三个用途：\n① 正算**价值**；\n② 反解**隐含 $g$** 或 ==隐含要求回报 $r$==；\n③ 做**敏感性分析**（$r$、$g$ 一动价值剧烈变化）。"
    },
    {
     "h": "核心公式",
-    "b": "$V_0 = \\frac{D_1}{r-g}$\n$D_1 = D_0\\times(1+g)$ = 下一期股利；r = 要求回报；g = 永续增速，==必须 g < r==。\n反着用：$r = \\frac{D_1}{P_0} + g$（隐含回报）；$g = r - \\frac{D_1}{P_0}$（隐含增长）"
-   },
-   {
-    "h": "迷你算例",
-    "b": "刚付 $D_0=2.00$，g=5%，r=10%。\n$D_1 = 2\\times1.05 = 2.10$\n$V_0 = \\frac{2.10}{0.10-0.05} = \\frac{2.10}{0.05} = 42$\n反解：$P_0=50, D_0=2.50, g=4\\%$ → $r=\\frac{2.50\\times1.04}{50}+0.04 = 9.2\\%$"
+    "b": "价值：$V_0=\\frac{D_1}{r-g}=\\frac{D_0(1+g)}{r-g}$\n**隐含 $r$**（已知价格）：$r=\\frac{D_1}{P_0}+g$（=股息率+增长率）。\n**隐含 $g$**：$g=r-\\frac{D_1}{P_0}$，或可持续增长 ==$g=b\\times ROE$==（$b$=留存率）。"
    },
    {
     "h": "考试陷阱",
-    "b": "三大坑：\n① 给'刚付'的 $D_0$，==先乘 (1+g) 变 $D_1$==。\n② 分母是 **r−g**，不是 r。\n③ g ≥ r 时公式失效——负价格不是'高估信号'是假设错了，该换多阶段；永续 g 不超过宏观长期增速 ⚠️"
-   },
-   {
-    "h": "记忆钩子",
-    "b": "记成 **'印钞机公式'**：$V_0=\\frac{D_1}{r-g}$，==分子永远是明年的 $D_1$==。\n三字诀 **'先长大 (D_1)、除差价 (r−g)、g 别超 r'**"
+    "b": "1. **敏感性**：当 $r-g$ 分母很小（$r$ 接近 $g$）时，价值**对假设极度敏感**，微调 $g$ 价值爆炸——这是 GGM 最大弱点。\n2. 隐含 $r$ 里的股息率用 ==$D_1/P_0$（leading）==，别用 $D_0/P_0$。\n3. $g=b\\cdot ROE$ 中 $b=1-$ 派息率。\n4. 永远 $g<r$。"
    }
   ],
   "Equity|两阶段/H-model 计算与适用": [
    {
     "h": "这是什么",
-    "b": "没有公司能永续高增长——**GGM 装不下**'先猛涨、后平稳'的公司。\n**两阶段**：高增长期逐年折现，稳定期打包成一个 **终值 TV**。\n**H-model**：增长率从 gS ==线性滑到== gL，不用逐年算"
+    "b": "现实里增长不会一步到永续。**多阶段 DDM** 分段处理：\n**两阶段**：前期**高速固定** $g_S$ 若干年 → 突然切到**永续** $g_L$。\n**H-model**：增长 ==从 $g_S$ 线性平滑下降== 到 $g_L$，更贴近现实（不搞突变）。\n适用：处于高增长但会逐步成熟的公司。"
    },
    {
     "h": "核心公式",
-    "b": "$V_0 = $ 各年 $D_t$ 折现之和 $+$ $TV_n$ 折现。\n$TV_n = \\frac{D_{n+1}}{r-g_L}$\n==TV 站在第 n 年末，分子用第 n+1 年股利，只折 n 期=="
-   },
-   {
-    "h": "迷你算例",
-    "b": "$D_0=1$，前 2 年增 20%，之后永续 5%，r=10%。\n$D_1=1.20, D_2=1.44, D_3=1.44\\times1.05=1.512$\n$TV_2=\\frac{1.512}{0.05}=30.24$\n$V_0=\\frac{1.20}{1.10}+\\frac{1.44+30.24}{1.10^2}\\approx 27.27$"
-   },
-   {
-    "h": "迷你算例",
-    "b": "H-model：$V_0 = \\frac{D_0(1+g_L)+D_0\\times H\\times(g_S-g_L)}{r-g_L}$，==H = 下降年数的一半==。\n$D_0=1$，gS=14% 用 8 年降到 gL=6%，r=10%，H=4。\n$V_0=\\frac{1.06 + 1\\times4\\times0.08}{0.04}=\\frac{1.38}{0.04}=34.50$"
+    "b": "**两阶段**：逐年折现高增长期股利 + 折现**终值** $TV_n=\\frac{D_{n+1}}{r-g_L}$（终值在第 $n$ 期，再折回今天）。\n**H-model**：$V_0=\\frac{D_0(1+g_L)+D_0\\,H\\,(g_S-g_L)}{r-g_L}$\n其中 ==$H=\\frac{高增长期年数}{2}$==（半衰点）。"
    },
    {
     "h": "考试陷阱",
-    "b": "三个高频丢分：\n① TV 分子用 $D_{n+1}$，==不是 $D_n$==。\n② TV 和 $D_n$ 同时点，折 **n** 期不是 n+1 期。\n③ H = 下降期的 **一半**（8 年降 → H=4），超额增长平均只享受一半时间 ⚠️"
-   },
-   {
-    "h": "记忆钩子",
-    "b": "两阶段口诀 **'TV 站 n 年末、分子 n+1、折 n 期'**。\nH-model 记 **'H 是半程点'**——\n==8 年斜坡，你平均只站在第 4 年那格=="
+    "b": "1. **终值时点**：$TV_n$ 用 $D_{n+1}$（切换后第一期），且 $TV$ 落在**第 $n$ 期末**，要再乘 $\\frac{1}{(1+r)^n}$ 折回。\n2. H-model 里 **$H=$ 年数的一半**，不是全部年数。\n3. H-model 是**近似值**，适用于 $g_S$ 不太极端、平滑下降的情形。\n4. 别忘了 H-model 第一项也含永续基底 $D_0(1+g_L)$。"
    }
   ],
   "Equity|PVGO 分解: E/r + PVGO": [
@@ -11743,27 +12259,19 @@
   "Equity|FCFF from NI / EBIT / EBITDA / CFO 四条路径 (税调整差异)": [
    {
     "h": "这是什么",
-    "b": "**FCFF** = 归 **全部资本**（股东+债主）的自由现金流。\n经营赚的钱，扣掉维持和扩张的投资，剩下能随便分的。\n四条路径（NI/EBIT/EBITDA/CFO）起点不同、==终点同一个数==，考点全在调整差异"
+    "b": "**FCFF 有四个起点**，殊途同归。核心记忆点：FCFF 是**税后、给全体资本提供者**的现金，所以凡是含利息的地方都要处理税盾。\n起点不同 → **利息的税调整方式不同**，这正是考点。\n通用尾巴都要 ==减资本支出 FCInv、减营运资本增加 WCInv==。"
    },
    {
     "h": "核心公式",
-    "b": "① NI：FCFF = NI + NCC + Int(1−t) − FCInv − WCInv\n② EBIT：EBIT(1−t) + Dep − FCInv − WCInv\n③ EBITDA：EBITDA(1−t) + Dep×t − FCInv − WCInv\n④ CFO：CFO + Int(1−t) − FCInv\n==NCC=非现金费用，FCInv/WCInv=固定/营运资本投资=="
-   },
-   {
-    "h": "迷你算例",
-    "b": "EBIT=200, t=25%, D&A=40, FCInv=60, WCInv=20：\nFCFF = 200×0.75 + 40 − 60 − 20 = **110**。\nEBITDA=150, t=30%, D&A=30, FCInv=40, WCInv=10：\nFCFF = 150×0.70 + 30×0.30 − 50 = 105 + 9 − 50 = **64**"
+    "b": "**从 NI**：$FCFF=NI+NCC+Int(1-t)-FCInv-WCInv$\n**从 CFO**：$FCFF=CFO+Int(1-t)-FCInv$\n**从 EBIT**：$FCFF=EBIT(1-t)+Dep-FCInv-WCInv$\n**从 EBITDA**：$FCFF=EBITDA(1-t)+Dep\\times t-FCInv-WCInv$"
    },
    {
     "h": "考试陷阱",
-    "b": "税调整差异（核心辨析）：\n**EBIT**：D&A **全额**加回（已扣过它）。\n**EBITDA**：只加 **折旧税盾 D&A×t**（本没扣 D&A，只欠它省的税）。\n**CFO**：D&A 和 WCInv 已在里面，==再动就是重复计算==。NI 路径不用再做税调整"
-   },
-   {
-    "h": "考试陷阱",
-    "b": "① 利息加回 **必须税后 Int(1−t)**；EBIT/EBITDA 路径则完全 **不碰利息**。\n② WCInv：剔除现金及短期有息负债（notes payable）——==掐头去尾，别用报表 CA−CL==。\n③ CFO 路径最短，别手痒加 D&A ⚠️"
+    "b": "1. **NI/CFO 路径**：利息已被扣，要 ==加回税后利息 $Int(1-t)$==（税后，因利息可抵税）。\n2. **EBIT/EBITDA 路径**：利息尚未扣，**不再加回**，直接对税前经营利润乘 $(1-t)$。\n3. EBITDA 路径里折旧只加回 ==税盾部分 $Dep\\times t$==（因为 EBITDA 已含全额 Dep，只需补回被税吃掉的那块）。\n4. CFO 通常**不含**利息税盾调整前提要看会计准则（US GAAP 利息在 CFO）。"
    },
    {
     "h": "记忆钩子",
-    "b": "四路径记 **'加回的税盾各不同'**：\nEBIT 加 **全部 D&A**、EBITDA 只加 **D&A×t**、CFO **啥都不加**（已含）、NI **加全部**。\n==利息永远税后加，EBIT/EBITDA 干脆不碰利息=="
+    "b": "口诀：==「利息已扣就加回，利息没扣别再碰」==。\nNI/CFO 是**税后利润流** → 补 $Int(1-t)$。\nEBIT/EBITDA 是**税前经营流** → 先乘 $(1-t)$，绝不再加利息。\nEBITDA 特例：折旧只补**税的那一角** $Dep\\cdot t$。"
    }
   ],
   "Equity|FCFE = FCFF − Int(1−t) + net borrowing": [
@@ -11831,45 +12339,29 @@
   "Equity|Justified P/E (leading/trailing) 由 GGM 推导": [
    {
     "h": "这是什么",
-    "b": "**justified P/E**：不看市场给多少倍，\n而是用 **GGM** 推出'按基本面 **配得上** 多少倍'。\n把 $V_0=\\frac{D_1}{r-g}$ 两边除以盈利，就变成乘数——\n==绝对模型翻译成乘数语言=="
+    "b": "**合理市盈率 (Justified P/E)**：由基本面（派息、增长、风险）推出「该值多少倍 P/E」，再和市场 P/E 比。\n从 GGM 两边**除以盈利** $E$ 即得。\n**Leading**（前瞻，除以 $E_1$）与 **Trailing**（滞后，除以 $E_0$）两个版本，==分子分母的时点必须对齐==。"
    },
    {
     "h": "核心公式",
-    "b": "leading $\\frac{P_0}{E_1}=\\frac{1-b}{r-g}$；\ntrailing $\\frac{P_0}{E_0}=\\frac{(1-b)(1+g)}{r-g}$。\n(1−b) 就是 **payout**。==两者只差一个 (1+g)==——trailing 用旧盈利 $E_0$，要'长一岁'才到 $E_1$"
-   },
-   {
-    "h": "迷你算例",
-    "b": "payout=40%，ROE=15%，r=12%。\ng = b×ROE = 0.60×15% = 9%。\nleading $=\\frac{0.40}{0.12-0.09}=13.33$；\ntrailing $=\\frac{0.40\\times1.09}{0.03}=14.53$，==正好 13.33×1.09=="
+    "b": "GGM：$P_0=\\frac{D_1}{r-g}$，令派息率 $=1-b$。\n**Leading**：$\\frac{P_0}{E_1}=\\frac{1-b}{r-g}$\n**Trailing**：$\\frac{P_0}{E_0}=\\frac{(1-b)(1+g)}{r-g}$\n==两者差一个 $(1+g)$==（trailing 分母是过去盈利，需成长一期）。"
    },
    {
     "h": "考试陷阱",
-    "b": "① 分子是 **payout (1−b)**，==不是留存率 b==——留存部分已通过 g 进了分母。\n② 口径匹配：市场 P/E 用已实现 $E_0$ 时 **必须配 trailing**，配错差 (1+g) 倍。\n③ '最近四个季度已实现' = trailing 信号词 ⚠️"
-   },
-   {
-    "h": "记忆钩子",
-    "b": "钩子 ==**'trailing 尾巴长一岁'——trailing 比 leading 多乘 (1+g)**==。\n分子记 **'配得上的 P/E 靠分红 (1−b) 撑，不是靠留存'**。\nleading 不乘、trailing 乘 (1+g)"
+    "b": "1. **leading 用派息率 $(1-b)$**，trailing 多乘 $(1+g)$——最爱考的区别。\n2. P/E 与**派息率同向**、与 $r$ 反向、与 $g$ 正向（但 $g$ 也会压低 $b$，需综合）。\n3. 别把 $b$（留存率）和 $(1-b)$（派息率）弄反。\n4. $g=b\\cdot ROE$ 常需先算出来才能代入。"
    }
   ],
   "Equity|P/B 与 ROE-r 关系; justified P/B = (ROE−g)/(r−g)": [
    {
     "h": "这是什么",
-    "b": "**justified P/B**：市场该为 **每一元账面净资产** 付多少？\n直觉：公司用净资产赚钱的本事 (**ROE**) 超过股东要求 (r)，\n==账面一元就值超过一元==；赚不到要求，一元就不值一元"
+    "b": "**合理市净率 (Justified P/B)** 揭示价值创造的本质：公司值不值超过账面，**全看 ROE 能否跑赢股权成本 $r$**。\n$ROE>r$ → P/B **>1**（每一块净资产创造超额回报，市场愿溢价）。\n$ROE=r$ → P/B **=1**；$ROE<r$ → P/B **<1**（毁灭价值）。"
    },
    {
     "h": "核心公式",
-    "b": "justified P/B $= \\frac{ROE-g}{r-g}$。\n口诀 **'上下都减 g，上 ROE、下 r'**。\n方向：==ROE > r → P/B > 1；ROE = r → P/B = 1（不是 0）；ROE < r → P/B < 1=="
-   },
-   {
-    "h": "迷你算例",
-    "b": "ROE=16%，r=12%，g=6%。\n$\\frac{0.16-0.06}{0.12-0.06}=\\frac{0.10}{0.06}\\approx 1.67$。\n自检：ROE > r，P/B 必须 > 1，通过 ✅"
+    "b": "$\\frac{P_0}{B_0}=\\frac{ROE-g}{r-g}$\n由剩余收益推导，直觉：==溢价来自 ROE 超过 $r$ 的能力==。\n等价形式：$P/B=1+\\frac{ROE-r}{r-g}$（第二项就是**超额回报**折现的溢价）。"
    },
    {
     "h": "考试陷阱",
-    "b": "① 分子是 **ROE−g**，==不是 ROE−r==——(ROE−r) 是 RI 模型的分子，两公式最爱记串。\n② g 不是万能助推：ROE>r 时 g 越高 P/B 越高，==ROE<r 时提高 g 反而压低 P/B==——ROE 定方向，g 定力度 ⚠️"
-   },
-   {
-    "h": "记忆钩子",
-    "b": "钩子 **'P/B 上下都减 g'** vs **'RI 分子减 r'**：\n==P/B = (ROE−**g**)/(r−g)，RI 超额项 = (ROE−**r**)×BV==。\n一个减 g、一个减 r，别串门"
+    "b": "1. 判断 P/B 高低的**唯一关键**是比较 ==ROE 与 $r$==，不是看 ROE 绝对高低。\n2. 分子是 **$ROE-g$**，分母是 **$r-g$**，两个 $g$ 别写成同一个减项搞混。\n3. 高 ROE 但 ROE<r 照样 P/B<1——增长在毁价值。\n4. $g=b\\cdot ROE$，改变留存率会同时动 $g$ 和分子。"
    }
   ],
   "Equity|EV/EBITDA 适用场景与陷阱": [
@@ -12112,26 +12604,238 @@
     "b": "钩子 **'NI 先付股东的房租，剩下才是 RI'**：\n房租 = ==期初 $BV_0$== × $r_e$。\n基数是期初、不是 NI、不是期末——'用了年初的钱、按年初收费'"
    }
   ],
-  "FI|Spot/forward/par 曲线关系; forward rate model 计算": [
+  "Equity|Discounted Dividend Valuation": [
    {
     "h": "这是什么",
-    "b": "**spot** 是今天借 N 年的利率。\n**forward** 是市场现在报的\"未来那一段\"的利率——像预订机票，一年后再飞的价格今天先定。\n**par** 是让债券刚好平价的票息。\n==上行曲线时排序：forward > spot > par==。"
+    "b": "**股利折现模型 (DDM)** 认为股票的内在价值 = 未来所有**现金股利**按要求回报率 $r$ 折现的现值。\n逻辑：你买股票，唯一真正拿到手的现金就是 ==股利==（外加卖出价，而卖出价又是后人对未来股利的折现）。\n最适合：**分红稳定、分红政策与盈利挂钩**的成熟公司。"
    },
    {
     "h": "核心公式",
-    "b": "$(1+z_{A+B})^{A+B} = (1+z_A)^A \\times (1+f(A,B))^B$\nz 是 spot，f(A,B) 是 A 年后起、期限 B 年的 forward。\n解法就是**\"长的除以短的\"**，分子分母各带自己的期数次方。 📈"
-   },
-   {
-    "h": "迷你算例",
-    "b": "S1=3%、S2=4%，求 f(1,1)：\n$\\frac{1.04^2}{1.03} - 1 = \\frac{1.0816}{1.03} - 1 \\approx 5.01$%\n校验：上行曲线下 forward 必须**高于 S2=4%**。\n口诀近似 2×4% − 1×3% = 5%，量级对上。"
+    "b": "通用式：$V_0=\\sum_{t=1}^{\\infty}\\frac{D_t}{(1+r)^t}$\n**单期**（持有一年后卖出）：$V_0=\\frac{D_1+P_1}{1+r}$\n**GGM**（永续固定增长）：$V_0=\\frac{D_1}{r-g}$，其中 ==$D_1=D_0(1+g)$==。"
    },
    {
     "h": "考试陷阱",
-    "b": "最大坑是**漏期数次方**：\n$\\frac{1.04}{1.03}-1=0.97$% 就是忘了给 S2 平方。\n次方用反得 2.01%<4%，方向感直接排除。\n另一考点：==若未来 spot 恰好走成 forward，各期限债同持有期回报相同==——forward 是盈亏平衡利率。"
+    "b": "1. 分子永远用 **$D_1$**（下一期），不是 $D_0$。忘乘 $(1+g)$ 是最常见丢分。\n2. $g$ 必须 **< $r$**，否则公式无意义（负值/无穷大）。\n3. DDM 不适用于**不分红**或分红与盈利无关的公司 → 改用 FCF。"
    },
    {
     "h": "记忆钩子",
-    "b": "三条线想成排队：\n**\"forward 最高、spot 中间、par 垫底\"**（上行曲线，F>S>P，按字母倒着记）。\nforward 就是\"预订未来的利率\"，算它永远**长的除以短的、各带次方**。 🎯"
+    "b": "==「一鸟在手」== 理论：股利是攥在手里的鸟，资本利得是林中鸟。\nDDM 只数**手里那只**。分子记「**明年的**股利」，看到 $D_0$ 先乘一次 $(1+g)$。"
+   }
+  ],
+  "Equity|Free Cash Flow Valuation": [
+   {
+    "h": "这是什么",
+    "b": "**自由现金流 (FCF)** 估值：不管公司发不发股利，看它**能自由支配**多少现金。\n**FCFF**（对公司）= 给债权人+股东的现金 → 折现得**企业价值**。\n**FCFE**（对股东）= 还完债、留够投资后剩给股东的现金 → 直接折现得**股权价值**。\n适用：==不分红、分红≠盈利、或有控股权==（能改分红政策）的公司。"
+   },
+   {
+    "h": "核心公式",
+    "b": "**FCFF 折现**用 WACC：$Firm\\ Value=\\sum\\frac{FCFF_t}{(1+WACC)^t}$，再 ==减净债务= 股权价值==。\n**FCFE 折现**用 $r_e$（股权成本）：$Equity=\\sum\\frac{FCFE_t}{(1+r_e)^t}$。\n桥梁：$FCFE=FCFF-Int(1-t)+Net\\ Borrowing$。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1. **折现率配对**：FCFF↔WACC，FCFE↔$r_e$。配错是经典送命题。\n2. FCFF 算出的是**企业价值**，要**减债务**才是股权。FCFE 直接就是股权，别再减。\n3. 利息费用：算 FCFF 要**加回税后利息** $Int(1-t)$；算 FCFE 不加。"
+   }
+  ],
+  "Equity|Market-Based Valuation: Price and Enterprise Value Multiples": [
+   {
+    "h": "这是什么",
+    "b": "**相对估值/乘数法**：不算绝对内在价值，而是拿**价格÷某个基本面**，和同业比谁贵谁便宜。\n两类：\n**价格乘数** P/E、P/B、P/S、P/CF（分子=股价，看股权）。\n**企业价值乘数** EV/EBITDA、EV/Sales（分子=EV，看整个公司，==跨资本结构可比==）。"
+   },
+   {
+    "h": "核心规则",
+    "b": "$EV=市值+总债务-现金及等价物$\n**EV/EBITDA** 优点：EBITDA 在**折旧、利息、税、资本结构**差异下仍可比。\n**PEG** $=\\frac{P/E}{g\\times100}$，用增长率归一化 P/E，越低越便宜。\nleading（用预测值）vs trailing（用过去12月）要分清。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1. **P/E 分母为负或极小**（亏损/微利）时失效 → 换 P/S 或 EV 乘数。\n2. EV 里现金要 ==减==（买下公司后现金能拿来还价）；很多人加成正号。\n3. EV/EBITDA 配 **EBITDA**（含 D&A），别错配成 EV/EBIT。\n4. 「便宜」可能是**价值陷阱**，需看基本面是否恶化。"
+   }
+  ],
+  "Equity|Residual Income Valuation": [
+   {
+    "h": "这是什么",
+    "b": "**剩余收益 (RI)** = 净利润 **超过股权成本**的那部分。\n直觉：赚了 100 万不算真本事，得看股东投的资本**本该要求多少回报**，超出的才是「真正创造价值」。\n$RI_t=NI_t-r\\times B_{t-1}$（$B$=期初账面净资产）。\n== RI > 0 才真正为股东创造价值。=="
+   },
+   {
+    "h": "核心公式",
+    "b": "$V_0=B_0+\\sum_{t=1}^{\\infty}\\frac{NI_t-r\\,B_{t-1}}{(1+r)^t}$\n即 ==当前账面价值 + 未来剩余收益现值==。\n等价单期式：$RI=(ROE-r)\\times B_{t-1}$。\n只要 $ROE>r$，公司就持续产生正 RI。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1. 用 **期初账面** $B_{t-1}$ 收费，不是期末。\n2. 基础是 **$B_0$**（已到手价值），别漏；RI 只是**增量**。\n3. 依赖**干净盈余关系** (clean surplus)：绕过利润表直接进权益的项目（如某些 OCI）会破坏模型。\n4. $RI=(ROE-r)B$，注意是 ROE 减 r，不是 g。"
+   }
+  ],
+  "Equity|Equity Valuation: Applications and Processes": [
+   {
+    "h": "这是什么",
+    "b": "本节讲**估值的框架与选型**，不是某个公式。\n**内在价值 vs 市价**：分析师赚的是 ==市价终将回归内在价值== 的钱；差额 = mispricing。\n三大模型家族：\n**绝对估值**（DDM / FCF / RI，算内在价值）\n**相对估值**（乘数，比同业）。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**选模型看公司特征**：\n分红稳→**DDM**；不分红/有控股→**FCF**；账面价值可靠、盈利波动→**RI**；快速横比→**乘数**。\n$VE=IV_{est}-P$（估计内在价值与市价差）。\n真正 mispricing 还要拆出**模型误差**：$VE=(IV-P)$ 含分析师对错的可能。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1. 别把「便宜」直接当「买入」——先确认是**你**看对还是市场看对。\n2. **控股 vs 少数股权**、流动性差异会带来**溢价/折价**调整。\n3. 模型选择要有**理由**（题目常问「为何用 RI 而非 DDM」）。\n4. Porter 五力、行业分析属于估值的**输入**，不是可有可无的装饰。"
+   }
+  ],
+  "Equity|Private Company Valuation": [
+   {
+    "h": "这是什么",
+    "b": "**私司估值**：没有市价、流动性差、信息少，所以在公开公司方法上要**打折**。\n三大方法：\n**收益法** (income approach，即 FCF/DCF)\n**市场法** (market approach，用可比交易乘数)\n**资产法** (asset-based，净资产重估)。\n还要区分**估值目的**（税务/诉讼/交易）影响口径。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**折现率**常用 build-up 或扩展 CAPM，含**小公司溢价、特定风险溢价**。\n两大折价：\n**DLOC**（缺乏控制权折价）——针对少数股权。\n**DLOM**（缺乏流动性折价）——私司难变现。\n$Value=Base\\times(1-DLOC)\\times(1-DLOM)$（先控制后流动性，==顺序别反==）。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "1. **正常化盈利** (normalized earnings)：剔除私司主的超额薪酬、非经营性/一次性项目，再估值。\n2. DLOC 与 DLOM **两个不同折价**，别混为一谈。\n3. 折价是**乘法叠加**不是相加：$(1-D_1)(1-D_2)$。\n4. 控股权益基础通常不再加 DLOC。"
+   }
+  ],
+  "Ethics|Guidance for Standards I-VII": [
+   {
+    "h": "这是什么",
+    "b": "CFA 的 **Code of Ethics** 加 **Standards of Professional Conduct**（七大 Standard I–VII），是全 Ethics 章的骨架。\nGuidance 就是每条 Standard 的**官方解释加案例**，告诉你什么算违规。\n==L2 考的不是背条文，而是给情景判断该不该违规、违了哪条。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "七条主线记关键词：**I Professionalism**（法律/独立/虚假陈述/不当行为）、**II Capital Markets**（内幕信息/操纵）、**III Duties to Clients**（忠诚/公平/适合/业绩/保密）、**IV Duties to Employers**（忠诚/额外报酬/主管责任）。\n**V** 分析建议、**VI** 利益冲突、**VII** 对 CFA 与考试的责任。\n判断时先定 Standard，再定小写字母子条款。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱一：==比 local law 更严的一方获胜（stricter rule wins）==，Standard 与法律冲突时守严的。\n陷阱二：只要动机是好的也可能违规——重点看**行为**，不看结果好坏。\n陷阱三：一个情景常同时踩两条 Standard，别只选第一眼那条。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "七条顺口记：**职、场、客、雇、析、突、C**。\n即 Professionalism（职）、Capital markets（场）、Clients（客）、Employer（雇）、Analysis（析）、Conflicts（突）、CFA program（C）。"
+   }
+  ],
+  "Ethics|Guidance for Standards I–VII": [
+   {
+    "h": "这是什么",
+    "b": "同上一条，只是破折号写法不同（en-dash）。指 Standards **I 到 VII** 的官方 Guidance 与推荐做法（recommended procedures）。\n==Guidance 的推荐程序不是硬性条文，但考试里「有没有建立制度」常是判分关键。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "每条 Standard 下 CFA 给两块：**必须遵守的规则** 加 **建议的合规程序（recommended procedures for compliance）**。\n例如信息隔离墙（**firewall**）、书面 policy、**restricted list** 都属建议程序。\n公司建了制度，个人才更容易证明自己 in compliance。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱：题目问「最能防止违规的做法」时，答案往往是那条**建议程序**，而不是口头承诺或什么都不做。\n==Members 有义务了解并遵守所在地更严格的法律；不知法不免责。=="
+   }
+  ],
+  "Ethics|Ethical and Professional Standards": [
+   {
+    "h": "这是什么",
+    "b": "这是 Ethics 整个 study session 的总标题，涵盖 Code、七大 Standards、以及 L2 的**情景应用（application）**题型。\n==L2 与 L1 差别：L1 认条文，L2 要在长情景里抓出违规细节并给整改建议。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "做题三步：**先读问题再读 vignette**，锁定它问哪条 Standard。\n找出行为主体做了什么、披露了没有、有没有事先书面同意。\n很多违规核心就一个词——**disclosure（披露）**没做到。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱一：情景写一堆好结果，诱你判没违规——但**程序错了照样违规**。\n陷阱二：问的是 least likely 或 does NOT violate，看反了直接丢分。\n陷阱三：==选项里最保守、最透明、最书面化的做法通常是对的。=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "一句话总纲：**先客户、要披露、留书面、守严法**。\n遇到拿不准的情景，套这四点几乎不会错方向。"
+   }
+  ],
+  "Ethics|Application of the Code and Standards: V(B) Communication with Clients (投资流程变更的持续披露)": [
+   {
+    "h": "这是什么",
+    "b": "**Standard V(B) Communication with Clients and Prospective Clients**：沟通要区分**事实（fact）与观点（opinion）**，并披露**投资流程（investment process）**的基本框架、局限与风险。\n==重点场景：投资流程发生重大变更时，必须及时、持续地告知客户。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "披露**流程的重大变更（material changes）**——比如换了模型、加了新的量化因子、改了风险控制逻辑。\n持续沟通限制因素与固有风险（limitations and inherent risks）。\n把事实和意见分清，不把预测当承诺。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱一：新增或删除一个影响结果的因子属于 material change，==必须主动披露，不能等客户来问==。\n陷阱二：日常小调仓不是 material change，不用逐笔告知——分清流程变更与常规操作。\n陷阱三：口头说过不等于合规，重大变更应有可追溯记录。"
+   }
+  ],
+  "Ethics|Application of the Code and Standards: VI(C) Referral Fees (向推荐人提供的各种补偿披露)": [
+   {
+    "h": "这是什么",
+    "b": "**Standard VI(C) Referral Fees**：因推荐业务而收付的**任何补偿**，都要向雇主、客户及潜在客户**披露**。\n==补偿不限于现金——还包括软件、免费服务、折扣、互相推荐等 non-cash 形式。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "披露内容要让客户能评估：推荐关系是否影响了推荐的客观性、以及这笔转介的成本。\n披露时点应在**服务开始之前（prior to engagement）**。\n付出去的和收进来的转介费都要披露。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱一：以为只有现金要披露——==flat fee、非现金好处、相互转介同样要披露==。\n陷阱二：以为告诉雇主就够——客户和潜在客户也必须知道。\n陷阱三：事后补披露不合格，必须事前。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀：**转介有回报，先说给谁知**。\n对象记「雇主 + 现客户 + 潜客户」三方齐全，形式记「现金 + 非现金」都算。"
+   }
+  ],
+  "Ethics|Application of the Code and Standards: VI(A) Disclosure of Conflicts + III(E) Confidentiality": [
+   {
+    "h": "这是什么",
+    "b": "两条一起考：**VI(A) Disclosure of Conflicts** 要求充分、显眼地披露一切可能损害独立客观性的利益冲突；**III(E) Preservation of Confidentiality** 要求为现、前、潜在客户保密。\n==难点：披露义务与保密义务在情景里可能互相拉扯。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "VI(A)：向客户和雇主披露持股、董事席位、投行关系、报酬结构等冲突，语言要**通俗易懂、位置醒目（prominent, plain language）**。\nIII(E)：客户信息只在**客户授权、法律要求、或涉及非法活动**时才可外泄。\n两者不冲突时，能披露的冲突披露，该保的客户机密照保。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱一：披露冲突不等于可以泄露客户机密——==披露的是你自己的利益关系，不是客户的隐私==。\n陷阱二：III(E) 有例外——法律强制 或 配合 CFA Institute 的 PCP 调查 时可披露。\n陷阱三：VI(A) 冲突要主动披露，不能等对方发现。"
+   }
+  ],
+  "Ethics|Application of the Code and Standards: VI(B) Priority of Transactions / II(B) Market Manipulation": [
+   {
+    "h": "这是什么",
+    "b": "**VI(B) Priority of Transactions**：客户和雇主的交易**优先于**成员的个人交易。\n**II(B) Market Manipulation**：禁止信息型（散布虚假信息）与交易型（虚假成交、拉抬打压）的市场操纵。\n==两条都关乎「谁先、用什么手段」，容易在同一情景里出现。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "VI(B)：**客户 > 雇主 > 个人**；个人可与客户同向交易，但不得抢在客户前（**front-running**）或损害客户成交。\nII(B)：不得制造虚假交易量、锁定价格、散布误导性信息去影响价格。\n合法的做市、真实的信息传播不算操纵。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱一：个人账户本身不禁止交易——==只要客户先成交、且不利用未公开的客户单信息==就行。\n陷阱二：II(B) 看**意图**——目的在于误导市场即违规，哪怕交易真实发生。\n陷阱三：家人账户若是收费客户，享有与其他客户同等优先权，不能歧视。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "VI(B) 排队口诀：**客户排头，老板中间，自己垫底**。\nII(B) 一句话：**假量假价假消息，动机误导即违规**。"
+   }
+  ],
+  "Ethics|Application of the Code and Standards: III(D) Performance Presentation (terminated accounts 披露)": [
+   {
+    "h": "这是什么",
+    "b": "**Standard III(D) Performance Presentation**：业绩展示必须公平、准确、完整，不得误导。\n==关键场景：已终止账户（terminated accounts）不能从历史业绩里悄悄剔除，否则会人为抬高回报。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "把已终止账户保留在其存续期间的业绩中，避免 **survivorship bias（幸存者偏差）**。\n披露业绩是毛收益还是净收益（gross/net of fees）、是否加权、benchmark 口径。\n不夸大、不选择性挑好账户展示。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "陷阱一：==把亏损的已终止账户剔除以美化历史回报——典型违规==，属误导性展示。\n陷阱二：不必对每个潜在客户提供逐笔细节，但索取时要能给出支持数据。\n陷阱三：合规不强制用 GIPS，但遵循 GIPS 是满足 III(D) 的推荐做法；不能声称遵循却做不到。"
+   }
+  ],
+  "FI|Spot/forward/par 曲线关系; forward rate model 计算": [
+   {
+    "h": "这是什么",
+    "b": "**spot** 是今天借 N 年的利率。\n**forward** 是市场现在锁定的\"未来某段\"利率——像今天预订未来的机票价。\n**par** 是让债券刚好平价的票息率。\n==上行（正斜率）曲线时排序：forward > spot > par=="
+   },
+   {
+    "h": "核心公式",
+    "b": "$(1+z_{A+B})^{A+B} = (1+z_A)^A \\times (1+f(A,B))^B$\nz 是 spot，$f(A,B)$ 是 A 年后起、期限 B 年的 forward。\n解法是\"**长的除以短的**\"：\n$f(A,B) = \\left[\\frac{(1+z_{A+B})^{A+B}}{(1+z_A)^A}\\right]^{1/B} - 1$"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "最大坑是**漏掉期数次方**：直接 $\\frac{1.04}{1.03}-1$ 就是忘了给 $z_2$ 平方。\n方向校验：==上行曲线下 forward 必须高于长端 spot==，算出比 spot 还低就是次方用反了。\n另一考点：若未来 spot 恰好实现为今天的 forward，各期限债持有期回报相同。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "三条线排队：**\"forward 最高、spot 中间、par 垫底\"**（正斜率时）。\nforward 就是\"盈亏平衡利率\"：市场赌未来会走成它，走不成才有超额或亏损。"
    }
   ],
   "FI|Riding the yield curve 策略条件": [
@@ -12213,45 +12917,37 @@
   "FI|Binomial tree: backward induction 定价": [
    {
     "h": "这是什么",
-    "b": "二叉树是给\"利率会上下走\"的世界画的**地图**：\n每个节点存那一期的 1 年利率，上下分叉概率各 **0.5**（风险中性）。\n定价**从最后一期往前倒推**，这套流程叫 backward induction。 🌳"
+    "b": "**二叉利率树**把未来利率画成向上/向下两条分叉。\n每个节点有一个一年期利率。\n定价用 **backward induction**（倒推）：==从到期日的已知面值出发，一步步往前折现回今天==。\n每步都取上下两支的\"平均现值\"。"
    },
    {
-    "h": "三步公式",
-    "b": "①末期写现金流 = 面值 + 最后票息；\n②每个节点 $V = \\frac{0.5\\times[(V_u+C)+(V_d+C)]}{1+r}$，C 是下期票息，r 是本节点利率；\n③逐层折回 t=0。\n口诀==\"加票息、再折现\"，每退一层做一次==。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "票息 3，t=1 上下节点除息价值 98.80 / 100.50，r0=2.5%：\n$V_0 = \\frac{0.5\\times[(98.80+3)+(100.50+3)]}{1.025} = \\frac{102.65}{1.025} \\approx 100.15$。"
+    "h": "核心公式",
+    "b": "节点价值（风险中性、上下各 50%）：\n$V = \\frac{0.5 \\times (V_{up}+C) + 0.5 \\times (V_{down}+C)}{1+r_{\\text{node}}}$\n$C$ 为票息，$r_{node}$ 为该节点利率。\n从最右列（= 面值 + 末期票息）向左逐列计算，直到根节点得到债券价格。"
    },
    {
     "h": "考试陷阱",
-    "b": "两大高频错：折回时**漏加当期票息**、最后**忘除 (1+r)**。\n每退一层自问：加票息了吗？折现了吗？\n另一考点：==校准树给不含权债定价 = 直接用 spot 曲线折现，波动率不影响无权债价格==。"
+    "b": "常见错：**折现率用错节点**——必须用**当前节点**的利率，不是子节点的。\n票息 $C$ 要**加进子节点价值再折现**，别漏。\n对含权债：==在每个节点先做行权判断（call 取 min、put 取 max），再往前折现==，顺序不能反。"
    },
    {
     "h": "记忆钩子",
-    "b": "倒推就像**下楼梯**：站在楼底（末期）往上退，每退一级都做同一个动作——\n**\"先加票息，再折一层\"**（加 C，除 1+r）。\n无权债不管你波动率多大，价格就等于 spot 曲线折现，别被 σ 骗。 🪜"
+    "b": "口诀 **\"从右往左、上下取半、逐格折现\"**。\n面值是\"锚点\"，倒推就像顺着河流往上游走，每过一格用当地利率\"打个折\"。"
    }
   ],
   "FI|Tree 校准与利率波动率的关系 (相邻节点 ×e^{2σ})": [
    {
     "h": "这是什么",
-    "b": "树不是随手画的：先给定波动率 σ，再反复调各期利率水平，\n直到这棵树能把基准国债**定价回它的市场价**——这一步叫**校准 (calibration)**。\n==这也是 arbitrage-free 的含义：树必须复现当前市场==。"
+    "b": "利率树要**校准 (calibrate)** 到当前 spot 曲线，保证给直债定价时正好等于市价（无套利）。\n同一时点上下相邻两个利率之间，靠**波动率 σ** 连接：\n==较高节点利率 = 较低节点利率 × $e^{2\\sigma}$==。"
    },
    {
     "h": "核心公式",
-    "b": "对数正态树里，同一期相邻两节点满足 $r_u = r_d\\times e^{2\\sigma}$。\n直觉：上下节点各偏离中值 $e^{+\\sigma}$ 和 $e^{-\\sigma}$，\n所以相邻之间差**两个波动率台阶**。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "$r_d$ = 3.00%、σ = 15% → \n$r_u$ = 3.00% $\\times e^{0.30}$ = 3.00% × 1.3499 ≈ **4.05%**。"
+    "b": "同列相邻节点关系：\n$r_{\\text{high}} = r_{\\text{low}} \\times e^{2\\sigma}$\n更一般地，第 i 高的节点：$r_i = r_{\\text{lowest}} \\times e^{2i\\sigma}$。\nσ 越大，上下利率\"张口\"越宽。\n校准即：调整每列的基准利率，使树对基准债估值 = 市价。"
    },
    {
     "h": "考试陷阱",
-    "b": "指数是 **2σ 不是 σ**，是**乘 $e^{2\\sigma}$ 不是加** 2σ；隔两格的节点差 $e^{4\\sigma}$。\n还有：==校准的直接目标是复现无权基准债的市价，不是预测未来利率==。"
+    "b": "系数是 **$2\\sigma$** 不是 σ：相邻两节点差一个 $e^{2\\sigma}$。\n易错点：==σ 上升只会让树\"张口更宽\"，但校准后对直债的价格不变==（仍等于市价）；\n真正受影响的是**含权债**——波动率越大，期权越值钱，callable 价更低、putable 价更高。"
    },
    {
     "h": "记忆钩子",
-    "b": "相邻节点像楼梯**差两级台阶**：$\\times e^{2\\sigma}$（不是一级 σ）。\n口诀**\"上下相邻，乘两个 σ 的 e\"**。\n校准 = **\"逼树复读市场价\"**，不是算命猜未来利率。 🎚️"
+    "b": "把 σ 想成\"**树的开口角度**\"：σ 大，上下枝叉张得开。\n记 $e^{2\\sigma}$ 的 **2** ——因为上枝和下枝各偏离中心 σ，一上一下加起来是 $2\\sigma$。"
    }
   ],
   "FI|Pathwise valuation 与 Monte Carlo 适用场景": [
@@ -12275,23 +12971,19 @@
   "FI|V_call = V_straight − V_callable; V_put 类似": [
    {
     "h": "这是什么",
-    "b": "**callable**：发行人握有\"利率低了按约定价把债买回\"的权利。\n**putable**：投资者握有\"把债按约定价卖回\"的权利。\n==期权在谁手里，价值就偏向谁==。"
+    "b": "内嵌期权的价值可以\"称重\"：拿**直债**减去**含权债**。\ncall 期权在发行人手里，会拉低债券价值；\nput 期权在投资者手里，会抬高债券价值。\n==两个等式方向相反，是本 LOS 的核心=="
    },
    {
     "h": "核心公式",
-    "b": "$V_{callable} = V_{straight} - V_{call}$；\n$V_{putable} = V_{straight} + V_{put}$。\n口诀==**\"call 减、put 加\"**==：callable 比 straight 便宜，putable 比 straight 贵。\n基准永远是 straight bond。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "同一发行人三只债：straight 102.5、callable 99.8、putable 104.0。\n$V_{call}$ = 102.5 − 99.8 = **2.7**；\n$V_{put}$ = 104.0 − 102.5 = **1.5**。"
+    "b": "$V_{call} = V_{straight} - V_{callable}$\n$V_{put} = V_{putable} - V_{straight}$\n即：\n$V_{callable} = V_{straight} - V_{call}$（发行人期权，做减法）\n$V_{putable} = V_{straight} + V_{put}$（投资者期权，做加法）。"
    },
    {
     "h": "考试陷阱",
-    "b": "树上定价：低利率节点触发赎回，callable 取 **min(除息价值, call price)**；putable 取 **max(除息价值, put price)**。\n==和 call price 比的是除息值，不含当期票息==。\n加减方向记反直接选错。"
+    "b": "别把 put 的等式写成 $V_{straight}-V_{putable}$——那会得负数。\nput 期权价值 = **putable 减 straight**。\n另一坑：==利率波动率上升，$V_{call}$ 与 $V_{put}$ 都上升==，于是 callable 更便宜、putable 更贵；两个方向别写反。"
    },
    {
     "h": "记忆钩子",
-    "b": "**\"能被赎回的更便宜\"**：期权在发行人手里=对你不利=减（callable = straight − call）。\n能回售的更贵：期权在你手里=加（putable = straight + put）。\ncallable 想成\"你借出去的钱对方能提前还\"——利率一跌他就还，你亏在再投资。 📞"
+    "b": "记\"**期权价值永远是正的**\"，反推方向：\ncallable 比直债便宜 → call = straight − callable；\nputable 比直债贵 → put = putable − straight。\n谁贵谁在减号后面，保证结果为正。"
    }
   ],
   "FI|Effect of interest rate volatility on callable/putable bond values": [
@@ -12319,41 +13011,37 @@
   "FI|利率水平变动对期权价值与债券价格的非对称影响": [
    {
     "h": "这是什么",
-    "b": "利率大幅变动时，含权债**不对称**涨跌：\ncallable **\"涨不动\"**，putable **\"跌不深\"**。\n记住一句：==期权是减震器，不是发动机——缓冲幅度，不逆转方向==。 🛡️"
+    "b": "利率变动时，含权债价格反应\"**一边紧一边松**\"，不对称。\n**Callable**：利率下行时，赎回可能性上升，价格\"顶\"在赎回价附近，涨不动（price compression）。\n**Putable**：利率上行时，回售保护托住价格，跌不动。\n==这就是内嵌期权造成的价格非对称=="
    },
    {
     "h": "核心规则",
-    "b": "利率**大降** → 发行人想赎回 → callable 被压在 call price 附近，涨幅封顶，这叫 **price compression**（负凸性来源）。\n利率**大升** → put 变值钱 → putable 被 put price **托底**，跌幅被缓冲。"
+    "b": "**Callable**：利率↓ → call 期权价值↑ → 债价上涨受压（上方封顶）；利率↑ 时表现接近直债。\n**Putable**：利率↑ → put 期权价值↑ → 债价下跌受托（下方有底）；利率↓ 时接近直债。\n口诀：$\\Delta V_{callable}$ 上行敏感、下行迟钝。"
    },
    {
     "h": "考试陷阱",
-    "b": "方向别答反：\n利率升时 putable **仍然下跌**（只是跌得少、向 put price 收敛），不会上涨；\n利率降时 callable **仍然上涨**（只是涨得少）。\n==$V_{put}$ 上升只能部分抵消 $V_{straight}$ 的下跌==。"
+    "b": "别说\"callable 在利率上行时受保护\"——恰恰相反，==callable 的封顶在利率**下行**方向==。\nputable 的托底在利率**上行**方向。\n把\"哪个方向受限\"记反是本 LOS 最大失分点。这种非对称正是 callable 出现**负凸性**的根源。"
    },
    {
     "h": "记忆钩子",
-    "b": "**\"callable 有天花板，putable 有地板\"**。\n利率狂降撞天花板（call price）→涨不动；利率狂升踩地板（put price）→跌不深。\n期权只是减震，方向还是跟着利率走，别答成反方向。 🏠"
+    "b": "记\"**call 封顶、put 托底**\"：\ncall 归发行人，利率一低就被叫走，价格上不去（封顶）；\nput 归投资者，利率一高就回售，价格下不来（托底）。"
    }
   ],
   "FI|OAS: 定义、与 Z-spread 关系、跨债比较": [
    {
     "h": "这是什么",
-    "b": "含权债的 Z-spread 里混着期权**噪音**，不同债之间没法直接比。\n**OAS (option-adjusted spread)** 是在利率树上剔除期权影响后的**\"干净利差\"**。\n==只反映信用+流动性补偿，可跨含权债比较==。 🧼"
+    "b": "**OAS (Option-Adjusted Spread)** 是在**利率树**上、加到每个节点无风险利率后、让模型价格等于市价的常数利差。\n它\"扣掉了期权价值\"，只剩**信用 + 流动性**补偿。\n==OAS 是剔除期权影响后的\"干净\"利差，可跨含权债直接比较=="
    },
    {
-    "h": "核心公式",
-    "b": "OAS ≈ **Z-spread − option cost**。\ncallable 期权归发行人、对投资者是成本，option cost > 0，所以 **OAS < Z-spread**。\n同评级同流动性：==OAS 高 = cheap 买入，OAS 低 = rich 回避==。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "某 callable：Z-spread = 120bp，option cost = 40bp → OAS = **80bp**。\n同类可比债 OAS 约 50bp → 这只同样风险给了更多利差，**相对便宜**。"
+    "h": "核心规则",
+    "b": "关系：\n**Callable**：$Z\\text{-spread} = OAS + \\text{期权成本}$，故 $OAS < Z$。\n**Putable**：$OAS > Z$（期权对投资者有利，成本为负）。\n跨债比较：==同风险下，OAS 越大越便宜（越值得买）==；OAS 相近说明定价合理。"
    },
    {
     "h": "考试陷阱",
-    "b": "OAS 是**模型输出**，依赖波动率假设：\n市价不变时把 σ 从 10% 调到 20%，call 更值钱、option cost 更大 → callable 的 OAS 变小。\n==\"σ 假设↑ → callable OAS↓\"这个方向常考==。"
+    "b": "别把 **OAS 当 Z-spread**：Z 不剔除期权，含权债间不可比。\n方向坑：callable 的 OAS **低于** Z（期权成本为正）；putable 反过来。\n波动率坑：==假设的 σ 上升 → callable 的 OAS 下降==（期权成本被算得更大）。σ 选错，OAS 就失真。"
    },
    {
     "h": "记忆钩子",
-    "b": "OAS = **\"洗掉期权污渍的利差\"**（Option-Adjusted）。\n买债挑 OAS **高**的（同风险、给更多利差=便宜）。\n口诀==\"高 OAS = 便宜可买\"==；σ 假设越高，callable 的 OAS 被压越低。 🛁"
+    "b": "记 **\"OAS = 洗掉期权的 Z\"**。\ncallable 对投资者不利 → 要\"扣掉\"期权成本 → OAS 比 Z 小；\nputable 对投资者有利 → \"加回\" → OAS 比 Z 大。"
    }
   ],
   "FI|OAS vs Z-spread for bonds with embedded options": [
@@ -12381,23 +13069,19 @@
   "FI|Effective duration/convexity: callable 负凸性区域": [
    {
     "h": "这是什么",
-    "b": "含权债的现金流会随利率变（可能被赎回/回售），公式化的 modified duration **失效**。\n**effective duration** 用\"重新估值法\"：\n==把基准曲线上下平移各重算一次价格，看价差多大==。"
+    "b": "含权债现金流会变，不能用解析久期，要用 **effective duration/convexity**——把整条曲线上下平移 Δy，用重新定价的价格差估算。\n**convexity** 度量价格-收益曲线的弯曲方向：正凸性\"下跌少、上涨多\"是好事。\n==callable 在低利率区会出现负凸性=="
    },
    {
     "h": "核心公式",
-    "b": "$ED = \\frac{V_- - V_+}{2\\times V_0\\times\\Delta curve}$\nV− 是曲线**下移**后的价，V+ 是**上移**后的价，V0 是当前全价。\nΔcurve 用**小数**（50bp = 0.005）。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "$V_0$ = 100，±50bp 重估后 $V_-$ = 101.8、$V_+$ = 98.6：\n$ED = \\frac{101.8 - 98.6}{2\\times100\\times0.005} = \\frac{3.2}{1.0} = 3.2$。"
+    "b": "$ED = \\frac{V_- - V_+}{2 \\times V_0 \\times \\Delta y}$\n$EC = \\frac{V_- + V_+ - 2V_0}{V_0 \\times (\\Delta y)^2}$\n$V_-$、$V_+$ 是曲线下移/上移后的价格。\n凸性为负时，$V_- + V_+ < 2V_0$，即上涨幅度**小于**下跌幅度。"
    },
    {
     "h": "考试陷阱",
-    "b": "分母三件套 **2、V0、Δcurve** 一个都不能少；50bp 写成 0.01 直接错，漏 2 结果**翻倍**。\n凸性：==callable 只在低利率区负凸==（顶部被 call price 压扁），高利率区接近 straight；putable 始终正凸。"
+    "b": "别以为凸性总为正：==利率低时 callable 因封顶出现**负凸性**，effective duration 反而缩短==（利率再降价格不涨）。\nputable 始终为正凸性。\n另一坑：$V_-$（利率下降的价格）放分子在前，符号别写反，否则久期变负。"
    },
    {
     "h": "记忆钩子",
-    "b": "分母口诀**\"2 V0 Δ\"**（二 V零 德尔塔），缺一就错。\n负凸性只发生在 **callable 的低利率区**——利率一降就撞天花板，价格\"鼓不起来\"变成凸向下。\nputable 从头到尾**正凸**，越跌越有底。 📐"
+    "b": "记 callable 的价格图像\"**低利率处向下弯**\"，像被赎回价压出一个凸包 → 负凸性。\nED 公式记成\"**下减上、除以两倍价乘变动**\"，$V_-$ 永远在前。"
    }
   ],
   "FI|Capped/floored FRN 分解": [
@@ -12564,6 +13248,114 @@
     "b": "index CDS 像一盒 125 颗巧克力🍫：坏一颗只扔那一颗（1/125），剩下的继续吃。\n口诀==\"违约一家只切一格，合约缩水接着跑\"==。\n曲线交易 = 同名不同期限对着做，赌利差变陡还是变平。"
    }
   ],
+  "FI|Valuation and Analysis of Bonds with Embedded Options": [
+   {
+    "h": "这是什么",
+    "b": "**含权债 (embedded option)** = 普通债 + 一个内嵌期权。\n**Callable**：发行人有权提前赎回，期权归**发行人**，对投资者不利。\n**Putable**：投资者有权提前回售，期权归**投资者**，对投资者有利。\n==含权债不能用固定折现，因为未来现金流路径会随利率变化=="
+   },
+   {
+    "h": "核心规则",
+    "b": "拆解思路：\n**Callable 价值** = 直债价值 − call 期权价值\n**Putable 价值** = 直债价值 + put 期权价值\n估值必须用 **binomial interest rate tree**，在每个节点判断是否行权。\ncallable 在利率下行时被赎回，putable 在利率上行时被回售。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把 callable 当成\"更值钱\"——期权在发行人手里，==callable 价格总是低于或等于同条件直债==。\n另一个坑：利率**波动率上升**时，两种期权价值都上升，于是 callable 价格**下降**、putable 价格**上升**。\n方向搞反是最常见失分点。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "记\"**谁拿期权谁占便宜**\"：\ncall 归发行人 → 减法 → 债更便宜；\nput 归投资者 → 加法 → 债更贵。\n波动率是期权的\"燃料\"，燃料多期权就贵。"
+   }
+  ],
+  "FI|Credit Analysis Models": [
+   {
+    "h": "这是什么",
+    "b": "信用分析要量化\"违约会亏多少\"。\n三个核心量：\n**PD** 违约概率、**LGD** 违约损失率、**EL** 预期损失。\n**structural model** 把股权看成对公司资产的看涨期权（Merton）；\n**reduced-form model** 把违约当成外生的随机跳跃事件，用可观测数据估计。"
+   },
+   {
+    "h": "核心公式",
+    "b": "$EL = PD \\times LGD \\times Exposure$\n其中 $LGD = 1 - \\text{Recovery Rate}$。\n信用估值调整：\n$CVA = \\sum_t PV(\\text{期望损失}_t)$\n==含信用风险债券价值 = 无风险价值 − CVA=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别混 **structural** 与 **reduced-form**：\nstructural 需要**资产价值与波动率**（不可直接观测），假设违约只在到期发生；\nreduced-form 用**利率、宏观变量**等可观测数据，违约可随时发生。\n另一坑：==CVA 越大，信用利差越宽，债券价格越低=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **\"PLE\"**：PD × LGD × Exposure = 亏多少。\nstructural = 看**结构**（资产/股权/负债的资产负债表结构）；\nreduced = **简化**成一个违约跳跃，不问公司内部。"
+   }
+  ],
+  "FI|The Term Structure and Interest Rate Dynamics": [
+   {
+    "h": "这是什么",
+    "b": "期限结构研究\"不同期限的利率\"如何形成、如何变动。\n收益率曲线的三种变动模式：\n**level**（平移，贡献最大）、**steepness**（斜率变化）、**curvature**（曲率/蝶式变化）。\n==level 变动通常解释绝大部分收益率曲线波动=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**swap spread** = swap rate − 同期限国债收益率，反映银行体系信用与流动性。\n**TED spread** = LIBOR − T-bill，衡量银行间信用压力。\n**Z-spread**：让债券现金流按 spot + Z 折现后等于市价的常数利差。\n利率模型（如 CIR、Vasicek）刻画短期利率的均值回复与波动。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把 **swap spread** 当成 **TED spread**：前者相对国债，后者是 LIBOR 减 T-bill。\n另一坑：**Vasicek** 允许负利率、波动率恒定；**CIR** 波动率随利率水平升高（$\\sigma\\sqrt{r}$）、不产生负利率。\n==把两个模型的波动率特征记反是高频失分点=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "曲线动作记 **\"平移—转斜—弯腰\"** = level/steepness/curvature。\nCIR 里有个 $\\sqrt{r}$：利率越高越\"抖\"，且开根号让利率\"抖不到零以下\"。"
+   }
+  ],
+  "FI|Credit Default Swaps": [
+   {
+    "h": "这是什么",
+    "b": "**CDS** 是针对债券违约的\"保险\"。\n**买保护方**定期付 premium，一旦发生**信用事件**（破产、未付款、重组）就获得赔付。\n**卖保护方**收 premium，承担违约赔偿。\n买 CDS 相当于**做空信用**，看空发行人。"
+   },
+   {
+    "h": "核心公式",
+    "b": "$\\text{Upfront} \\approx (\\text{CDS Spread} - \\text{Coupon}) \\times \\text{Duration}$\n价格近似：$\\text{CDS Price} \\approx 1 - (\\text{Spread}-\\text{Coupon})\\times Dur$（每 100 面值）。\n**利差变动损益**：$\\Delta Profit \\approx \\Delta Spread \\times Dur \\times Notional$\n==买保护方在利差走宽时获利=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "标准合约票息固定（IG 1%、HY 5%），差额用 **upfront** 一次性结清，别以为 spread 就是现付。\n**basis** = CDS spread − bond spread：为正做\"卖债+卖保护\"套利，为负反向。\n==curve steepening 时，long/short 不同期限 CDS 的损益方向别搞反=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "记 **\"买保护 = 做空信用\"**：坏消息来了、利差走宽，买方赚。\nupfront 的方向：spread > coupon 说明比标准更危险，买方要**先补钱**给卖方。"
+   }
+  ],
+  "FI|The Arbitrage-Free Valuation Framework": [
+   {
+    "h": "这是什么",
+    "b": "**无套利估值**：一只债券的价值 = 把它每一笔现金流当成**独立的零息债**分别折现再加总。\n用的折现率是对应期限的 **spot rate**。\n只要市场无套利，相同现金流必须同价，否则可\"低买高卖\"锁定无风险利润。"
+   },
+   {
+    "h": "核心公式",
+    "b": "$P = \\sum_{t=1}^{N} \\frac{CF_t}{(1+z_t)^t}$\n$z_t$ 是第 t 期 spot rate（不是到期收益率 YTM）。\n==用单一 YTM 折现会得到错误价格，除非曲线水平==。\n\"stripping\"（拆息）与\"reconstitution\"（重组）就是套利的两个方向。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "最大坑：把所有现金流用**同一个 YTM** 折现——那不是无套利框架。\n无套利要求**每期用各自 spot**。\n另一考点：若拆解后的零息组合总价 ≠ 整券价格，就存在套利机会，交易会把价差抹平。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "把债券想成一串\"独立小红包\"，==每个红包按它自己那一期的 spot 折现==，再全部相加。\n\"同现金流同价格\"就是无套利的一句话总结。"
+   }
+  ],
+  "FI|Term structure theories: segmented markets": [
+   {
+    "h": "这是什么",
+    "b": "**分割市场理论 (segmented markets)**：不同期限的债券由**不同投资者群体**（银行偏短、寿险偏长）供需决定，各期限市场\"各过各的\"。\n==每段收益率只由该期限自身的供求决定，与其他期限无关==。\n因此曲线形状反映的是分段供需，而非利率预期。"
+   },
+   {
+    "h": "核心规则",
+    "b": "对比记忆：\n**pure expectations**：forward = 未来 spot 的无偏预期。\n**liquidity preference**：加正的期限溢价（越长溢价越大）。\n**segmented markets**：各期限完全独立、无套利桥梁。\n**preferred habitat**：有偏好但溢价够大就会跨期限，是分割市场的\"松绑版\"。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把 **segmented markets** 与 **preferred habitat** 混：前者投资者**绝不**离开自己的期限；后者==只要溢价足够就愿意换期限==。\n另一坑：分割市场下 forward **不含**对未来利率的预期信息，不能用它推断市场利率预期。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "\"**segmented = 各扫门前雪**\"：短、中、长三段市场互不串门。\npreferred habitat = \"有偏好但**可被钱收买**\"，给够溢价就搬家。"
+   }
+  ],
   "FSA|功能货币判定 → 方法选择": [
    {
     "h": "这是什么",
@@ -12585,45 +13377,37 @@
   "FSA|Temporal vs current rate method: 各报表项目适用汇率": [
    {
     "h": "这是什么",
-    "b": "两种折算法，本质就是两张**汇率对照表**。\n考试爱抽一个报表项目问你：这个该用哪个汇率？\n\n画面感：\ncurrent rate = 整箱行李按**今天行情**重新估价；\ntemporal = 每件东西按**当年买入价**各自换算。"
+    "b": "两套折算法，核心差别就是**每个项目用哪天的汇率**。\n汇率三种：\n**current**（期末即期）、**average**（当期平均）、**historical**（发生日历史价）。\n谁用哪种，决定了 balance 怎么配平、损益进哪。"
    },
    {
-    "h": "对照表规则",
-    "b": "**Current rate**：资产负债全用==期末汇率==，收入费用用平均，股本用历史。\n\n**Temporal**：货币性项目（现金、应收应付、债务）用期末；\n历史成本的存货、固定资产 + 配套的 COGS、折旧用==历史汇率==；\n多数收入费用用平均。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "🧮 Temporal 下 COGS 要**逐成分**折算：\n期初存货 100×0.80 + 采购 500×0.85 − 期末存货 120×0.90\n= 80 + 425 − 108 = ==$397==。\n\n别偷懒拿 LC480 一把乘平均汇率——那是 current rate 的思路。"
+    "h": "核心规则",
+    "b": "**Current rate method**：资产、负债全用 **current**；股本用 historical；I/S 用 **average**。\n**Temporal method**：**货币性**资产负债用 current；**非货币性**（存货、PP&E、无形）用 **historical**；相关费用（COGS、折旧）也用 historical，其余 I/S 用 average。\n==temporal 下非货币项目'跟着历史成本走'==。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 头号坑：两法记串。\n存货用历史汇率是 **temporal** 的规则；\ncurrent rate 下**所有**资产（含存货）一律期末汇率。\n\n另一坑：current rate 下股本例外用历史汇率，差额靠 ==CTA== 配平。"
+    "b": "最爱考 **COGS 和折旧**：temporal 下它们对应的是存货/固定资产的**历史汇率**，不是 average。\n第二坑：temporal 下**存货按 lower of cost or market**，市价那步要重新看。\n第三坑：current method 里连留存收益都是**倒挤 plug**出来的，别去逐笔折算。"
    },
    {
     "h": "记忆钩子",
-    "b": "📸 **\"今日照 vs 老照片\"**：\ncurrent rate 全家拍今日照（期末汇率）；\ntemporal 老东西翻老照片（历史汇率），只有现金类跟着拍今日照。"
+    "b": "记 **'货币性=现在(current)，非货币性=过去(historical)'**——temporal 就是'时间'，把每笔拉回它出生那天的汇率。\ncurrent method 简单粗暴：==资产负债一律期末汇率一刀切==。"
    }
   ],
   "FSA|两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)": [
    {
     "h": "这是什么",
-    "b": "Exposure（敞口）= 哪些项目会随汇率被重估、跟着晃。\n两法晒在汇率下的范围不同，敞口就不同，损益去向也不同。\n\n画面：\ncurrent rate = **全家家当**都晒在汇率下；\ntemporal = 只有\"现金类\"暴露在外。☀️"
+    "b": "折算会产生一个**汇兑差额**，问题是：谁暴露在汇率里、差额进哪。\n**current rate**：整个**净资产**(net asset) 暴露。\n**temporal**：只有**净货币性头寸**(net monetary) 暴露。\n本币贬值时，两法的盈亏方向可能相反。"
    },
    {
     "h": "核心规则",
-    "b": "**Current rate**：敞口 = ==净资产（权益）==，折算损益进 OCI 里的 **CTA**，不碰 P&L。\n\n**Temporal**：只有货币性项目重估，敞口 = ==净货币头寸==（货币资产 − 货币负债），损益**直接进 P&L**。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "🧮 子公司净资产 LC2,000，汇率从 $0.50 贬到 $0.45（current rate）：\n2,000 × (0.45 − 0.50) = ==−$100==，即 $100 损失，进 OCI/CTA。\n\n记住：**正敞口 × 货币贬值 = 损失**。"
+    "b": "**Current rate**：折算差额 → **CTA**，进 **OCI/权益**，不过损益。\n**Temporal**：remeasurement 差额 → 直接进 **P&L（净利润）**。\nexposure 判断：\ncurrent 看 net asset（资产>负债→正暴露）；\ntemporal 看 net monetary asset/liability。\n==temporal 打净利润，current 打权益==。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 两个高频坑：\n① 把折算损益记进 P&L（那是 temporal 的处理）；\n② 方向判反——持有净资产而它贬值是**损失**不是利得。\n判方向永远从\"敞口正负 × 汇率涨跌\"下手。"
+    "b": "方向题：本币**贬值**时，\ntemporal 下若为**净货币性负债**→产生 **gain**（欠的外债变便宜）；净货币性资产→loss。\ncurrent 下净资产为正→贬值产生 **负 CTA**。\n别背反：==先定'净资产还是净货币'，再定贬值/升值方向==，最后套 gain/loss。"
    },
    {
     "h": "记忆钩子",
-    "b": "🔤 **\"current rate → CTA，首字母都是 C\"**。\nCTA 进 OCI，永远绕开利润表；\ntemporal 没这待遇，损益直捅 P&L。"
+    "b": "**'Temporal → 损益(P&L)，Current → 权益(CTA)'**。\nexposure 记 **'C 看全部资产(Complete net Asset)，T 只看现金类(Temporal=Treasury/monetary)'**。"
    }
   ],
   "FSA|Hyperinflation 处理 (IFRS restate vs GAAP temporal)": [
@@ -12691,45 +13475,37 @@
   "FSA|DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)": [
    {
     "h": "这是什么",
-    "b": "DB 计划 = 公司给员工写的退休金\"欠条\"。\nPBO 就是这张欠条的**现值**，每年像一个计息账户一样滚动。💰\n滚动表是本模块计算题的标配。"
+    "b": "**PBO**（projected benefit obligation）= 公司**欠员工退休金的现值**，含未来加薪预期。\n它像一个账户，每年被几件事推高或压低。\n看懂这几笔变动，pension 就通了一大半。"
    },
    {
     "h": "核心公式",
-    "b": "期末 PBO = 期初 PBO\n**+ service cost**（员工今年新挣的养老金现值）\n**+ interest cost**（==期初 PBO × 折现率==，时间推移增值）\n**− benefits paid**（付掉的退休金）\n**± 精算变动**（损失加、利得减）。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "🧮 期初 1,000，折现率 5%，service cost 80，benefits paid 60，精算损失 30：\n1,000 + 80 + **50** − 60 + 30 = ==1,100==。\n\n关键：interest cost 的基数是**期初** PBO（1,000×5%=50）。"
+    "b": "**期末 PBO = 期初 PBO + 当期 service cost + interest cost + past service cost ± 精算损益 − benefits paid**。\n$\\text{Interest cost}=\\text{折现率}\\times\\text{期初 PBO}$。\n**service cost** = 员工本年多干一年攒下的新给付现值。\n**benefits paid**（实付退休金）==同时减少 PBO 和计划资产，对净额无影响==。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 两个漏项正好对应错误选项：\n① benefits paid 是**减项**（义务被清偿），加成加项就错；\n② 精算损失虽然费用端走 OCI，**义务端照样要加上**，别漏。"
+    "b": "benefits paid 是**双减**：PBO 减、plan assets 减，funded status **不变**——别只减一边。\n第二坑：interest cost 用**期初 PBO × 折现率**，别用期末。\n第三坑：actuarial loss（假设变差）**推高 PBO**，是 remeasurement，不进当期 service cost。"
    },
    {
     "h": "记忆钩子",
-    "b": "🏦 把 PBO 当\"欠款账户\"：\n**新借（service）+ 利滚（interest）− 还款（benefits）± 重估**。\n和信用卡账单一个逻辑，利息永远算在期初余额上。"
+    "b": "PBO 像蓄水池：**'服务+利息 进水，发钱(benefits) 出水'**。\n发钱记 **'左手 PBO 右手资产一起掏'**——==两边同步下降，净额纹丝不动==。"
    }
   ],
   "FSA|IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)": [
    {
     "h": "这是什么",
-    "b": "每年养老金成本切三块：\n干活新增的（**service**）、时间利息的（**interest**）、重新估计的（**remeasurement**）。\n\n两套准则对\"哪块进 P&L、哪块进 OCI\"分法不同 → 高频对比考点。"
+    "b": "每期 pension cost 拆三块：**service cost、net interest、remeasurements**。\n问题是每块进 **P&L（利润）**还是 **OCI（其他综合收益）**。\nIFRS 和 US GAAP 分法不同，是本 LOS 的核心对比。"
    },
    {
     "h": "核心规则",
-    "b": "**IFRS**：service → P&L；\nnet interest =(期初义务−期初资产)×折现率，==一个折现率管到底==，进 P&L；\nremeasurements → OCI，永不摊回。\n\n**US GAAP**：P&L = service + interest − ==expected return==；实际与预期之差进 OCI，可 corridor 摊销。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "🧮 期初义务 1,200、资产 900、折现率 5%、service 60：\n**IFRS** P&L = 60 + (1,200−900)×5% = ==75==。\n**US GAAP**（expected return 7%）= 60 + 1,200×5% − 900×7% = 60+60−63 = ==57==。"
+    "b": "**IFRS**：\n– service cost（当期+past）→ **P&L**；\n– **net interest** = 折现率 × net pension liability → **P&L**；\n– **remeasurements**（精算损益 + 资产实际回报超出利息部分）→ **OCI**，**不摊销**。\n**US GAAP**：\n– 当期 service cost、interest cost、**expected return** → **P&L**；\n– past service cost、精算损益 → **OCI**，之后**摊销**回 P&L（corridor）。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 IFRS 里**没有 expected return 这个角色**！\n计划资产在 P&L 的回报强制按折现率算，超出部分是 remeasurement 进 OCI。\n把 7% 的预期回报搬进 IFRS 计算 = 最常见错法。"
+    "b": "US GAAP 用 **expected return**（管理层估的）算进 P&L，可被操纵；IFRS 只认**折现率**下的 net interest，更干净。\n第二坑：IFRS 的 remeasurement **永远留在 OCI 不回流**；US GAAP 的会**摊销回利润**。\n第三坑：==总 comprehensive income 两准则一致，只是 P&L 与 OCI 切分不同==。"
    },
    {
     "h": "记忆钩子",
-    "b": "🎯 **\"IFRS 一个率，GAAP 两个率\"**。\nIFRS：折现率一率通吃；\nUS GAAP：负债用折现率、资产用预期回报率，两率分开。"
+    "b": "**'IFRS 干脆：波动全丢 OCI 不回头；US GAAP 拖泥带水：先进 OCI 再慢慢摊回'**。\nexpected return 记成 **US GAAP 的美颜滤镜**——==估高回报就压低费用==。"
    }
   ],
   "FSA|Pension: components of periodic pension cost under IFRS": [
@@ -12753,19 +13529,19 @@
   "FSA|假设变动(折现率/薪酬增长率)对负债与费用的影响方向": [
    {
     "h": "这是什么",
-    "b": "PBO 是未来退休金的现值，对精算假设**超敏感**。\n公司想美化报表，动一动假设就行。\n考试就考你：方向判断 + \"哪个假设根本不管用\"。🎚️"
+    "b": "DB 计划全靠**精算假设**撑着。\n最爱考两个：**折现率**（把未来给付折回现在）和**薪酬增长率**（未来工资涨多少）。\n假设一动，PBO 和 pension cost 跟着反向或同向变——方向题必考。"
    },
    {
-    "h": "方向规则",
-    "b": "**折现率 ↑** → PBO ↓、service cost ↓（都是现值，==折现率是现值的天敌==）。\n**薪酬增长率 ↑** → final-pay 型计划未来给付 ↑ → PBO ↑。\n\n注意 interest cost 方向不定：率升，但基数（PBO）降了。"
+    "h": "核心规则",
+    "b": "**折现率↑** → PBO **↓**（分母大了）、当期 service cost **↓**、funded status **改善**。\n**折现率↓** → 全部反向。\n**薪酬增长率↑** → 未来给付更高 → PBO **↑**、service cost **↑**。\n**预期资产回报率↑（US GAAP）** → 压低 pension expense（IFRS 无此项）。\n==折现率与 PBO 反向，薪酬增长率与 PBO 同向==。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 最爱考的坑：**expected return on plan assets** 只影响 US GAAP 的 P&L 费用平滑，\n==完全不进 obligation 的计量==。\n想靠提高它来降负债 → 徒劳。\n降负债的\"一键美化\" = 提高折现率。"
+    "b": "折现率**升高看似坏事其实降负债**——别被'利率高'的直觉带偏。\n第二坑：折现率对 **interest cost** 的净效应模糊——率↑但 PBO↓，方向不确定，别急着下结论。\n第三坑：公司偷偷调高折现率/资产回报率来**美化利润**，是 report quality 红旗。"
    },
    {
     "h": "记忆钩子",
-    "b": "🔧 **\"折现率是负债的橡皮擦\"**：\n率一升，PBO 和 service cost 一起缩。\n而预期回报率是\"费用美颜滤镜\"，只动 P&L，碰不到负债。"
+    "b": "**'折现率是刹车（率高→债低），薪酬率是油门（涨薪→债高）'**。\n想赖账的公司会**踩刹车调高折现率**，==看到折现率异常上调就警觉==。"
    }
   ],
   "FSA|Share-based compensation: expense 确认时点与计量": [
@@ -12793,41 +13569,37 @@
   "FSA|分类: financial assets / associates / joint ventures / business combinations 的会计方法对应": [
    {
     "h": "这是什么",
-    "b": "买别家公司的股份，会计处理看**话语权**大小分档：\n路人 → 朋友 → 合伙人 → 一家人。\n档位决定记账方法。🪜\n考试给你持股比例 + 一段事实，让你归类。"
+    "b": "把'持股类别'对上'会计方法'的一张速查表。\n考试常给一个情景问你**该用哪种记账**、对财报有什么影响。\n关键是分清 **FV 计量 / equity method / consolidation** 三条路。"
    },
    {
-    "h": "分档规则",
-    "b": "**<20%** 无重大影响 → financial asset，公允价值计量；\n**20–50%** 有重大影响 → associate → ==equity method==；\n**共同控制的 JV** → IFRS 强制 equity method；\n**>50%** 控制 → ==合并（consolidation）==。"
+    "h": "核心规则",
+    "b": "**Financial assets（无重大影响）**：\n– FVPL：公允价值变动进 **P&L**；\n– FVOCI：变动进 **OCI**；\n– 债权可 **amortized cost**。\n**Associate / JV** → **equity method**（投资一行、按比例确认利润）。\n**Business combination（控制）** → **acquisition method** 全并表，确认 goodwill 与 NCI。\n==影响力越大，越往'并表'方向走==。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 比例只是**推定**，实质优先：\n25% + 派驻董事 = 重大影响，用权益法；\n\"不构成控制\"→ 直接排除合并。\nProportionate consolidation 是旧处理，现行 IFRS 11 对 JV 已基本取消；共同控制下**任何一方都不能合并**。"
+    "b": "IFRS 权益类默认 **FVPL**，可**不可撤销**选 FVOCI（且股利进 P&L、处置**不重分类**进 P&L）。\nUS GAAP 权益类基本一律 **FVPL**。\n第二坑：equity method 下**利润按持股比例**确认，但收到**股利要冲减投资账面**，不是收入。"
    },
    {
     "h": "记忆钩子",
-    "b": "👥 **\"路人→朋友→合伙人→一家人\"**：\n路人(公允价值)、朋友(权益法)、合伙人JV(权益法)、一家人(合并)。\n话语权越大，越往报表里\"搬得深\"。"
+    "b": "一句话链条 **'FV → equity → consolidate'**，对应影响力**小→中→大**。\nFVOCI 记成 **'装进 OCI 的抽屉'**：股权类进去后==处置不倒回损益==（和债权 FVOCI 不同）。"
    }
   ],
   "FSA|Equity method: 初始确认、投资收益、股利、超额购买价分摊": [
    {
     "h": "这是什么",
-    "b": "权益法 = **\"一行合并\"**。\n投资科目像一个跟着被投资方赚亏浮动的账户：\n对方赚钱，按份额加上去；\n发股利，按份额抽回来。📈"
+    "b": "权益法（equity method），也叫 **one-line consolidation**。\n投资就一行'长期股权投资'，随被投资方赚钱涨、分红降。\n难点在**买价高于账面净资产**那部分怎么处理。"
    },
    {
     "h": "核心公式",
-    "b": "期末账面 = 成本 + 份额×NI − 份额×股利。\n\nEquity income = 份额×NI − ==超额购买价摊销==。\n超额购买价先分摊给被低估的可辨认资产（按剩余年限逐年摊），剩余是内含**商誉——不摊销**。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "🧮 300 买 30%，对方 NI 100、股利 40：\n期末 = 300 + 30 − 12 = ==318==。\n\n另例：超额购买价中 60 归 PP&E（余 10 年），份额利润 30：\nequity income = 30 − 60/10 = ==24==。"
+    "b": "**期末投资 = 期初 + 应占净利润 − 收到股利**。\n$\\text{Inv}_{end}=\\text{Inv}_{beg}+\\%\\times NI - \\text{Dividends}$\n**超额购买价** = 买价 − 应占**公允**净资产。\n先分给**可辨认资产**（低估的存货/PP&E），差额才是 **goodwill**。\n分到折旧性资产的部分要==逐年摊销、冲减投资收益==。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 股利**不是收入**，是投资的收回：\n不减股利得 330、减全额 40 得 290 → 都是错误选项。\n商誉部分（如 40）**不摊销**，摊了会算出 20 这种坑选项。"
+    "b": "股利是**冲投资**不是收入——最常错。\n第二坑：分到 PP&E 的溢价要**多提折旧**，因此权益法利润通常**低于**简单按比例的数。\n第三坑：goodwill 部分**不摊销**（只测减值）；分到存货的溢价在**存货售出当年**一次性冲掉。"
    },
    {
     "h": "记忆钩子",
-    "b": "🍰 **\"赚了加一块，分红减一块，商誉不动它\"**。\nNI 按份额加、股利按份额减、内含商誉永远躺平不摊。"
+    "b": "投资账像水位：**'赚钱注水、分红放水'**。\n溢价分摊记 **'先喂资产(摊销)，剩下才叫商誉(不摊)'**——凡是**有寿命的资产**分到的溢价，==每年都要还回去==。"
    }
   ],
   "FSA|Full goodwill vs partial goodwill": [
@@ -12913,23 +13685,19 @@
   "FSA|银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)": [
    {
     "h": "这是什么",
-    "b": "巴塞尔监管给银行设**两条底线**：\n资本够不够厚（亏损来了能吸收）、\n流动性够不够撑（挤兑来了能扛住）。🏦\n四个缩写各管一摊。"
+    "b": "Basel III 给银行套的两道'安全绳'：\n**资本充足**——亏损时有没有本钱扛（capital）。\n**流动性**——挤兑/断融资时有没有现金撑（liquidity）。\n对应 CET1/Tier1 和 LCR/NSFR 四个比率。"
    },
    {
-    "h": "核心规则",
-    "b": "**CET1** = 普通股 + 留存收益等，==不含优先股==（合格优先股进 AT1，合计 Tier 1），比上风险加权资产。\n**LCR** = HQLA ÷ 30天压力净现金流出 ≥ 100%，管**一个月**；\n**NSFR** = 可用稳定资金 ÷ 所需稳定资金，管**一年**。"
-   },
-   {
-    "h": "迷你算例",
-    "b": "🧮 HQLA 120、30天压力净流出 100：\nLCR = 120% ≥ 100% → ==达标==。\n\n若净流出升到 150：LCR = 80% → 不达标。"
+    "h": "核心公式",
+    "b": "资本充足（分母都是 **RWA 风险加权资产**）：\n$\\text{CET1}=\\dfrac{\\text{核心一级资本}}{\\text{RWA}}\\ge 4.5\\%$\n$\\text{Tier1}\\ge 6\\%,\\ \\text{Total}\\ge 8\\%$。\n流动性：\n$\\text{LCR}=\\dfrac{\\text{优质流动资产}}{\\text{30天净现金流出}}\\ge 100\\%$\n$\\text{NSFR}=\\dfrac{\\text{可用稳定资金}}{\\text{所需稳定资金}}\\ge 100\\%$。\n==LCR 看短期(30天)，NSFR 看长期(1年)==。"
    },
    {
     "h": "考试陷阱",
-    "b": "🚨 两个易混：\n① 期限——LCR 管一个月，NSFR 管一年；\n② 优先股虽是**权益科目**却不进 CET1——资本分层看**吸收损失的顺序**，不看会计科目归属。"
+    "b": "资本比率分母是 **RWA 不是总资产**——风险越高的资产权重越大。\n第二坑：LCR 和 NSFR 都要 **≥100%**，别把 LCR 记成 30% 之类。\n第三坑：CET1 是**最硬核**的资本（普通股+留存），Tier1 = CET1 + AT1，==别把次级债当 CET1==。"
    },
    {
     "h": "记忆钩子",
-    "b": "⏱️ **\"LCR 短跑一个月，NSFR 长跑一整年\"**。\nLCR 应急月度流动性，NSFR 保年度资金稳定；\nCET1 只认最能扛亏的普通股。"
+    "b": "**'资本看 CET1/Tier1（扛亏损），流动性看 LCR/NSFR（防挤兑）'**。\n时间轴记 **'LCR 短跑 30 天、NSFR 马拉松 1 年'**，==两条流动线都得跑过 100%==。"
    }
   ],
   "FSA|保险: P&C vs life 的关键比率 (combined ratio 等)": [
@@ -13076,6 +13844,438 @@
    {
     "h": "记忆钩子",
     "b": "⚖️ **\"分子有、分母无 → 虚高，剔掉就落地\"**。\n权益法利润混进 NI 却没进收入，margin 被顶高；\n还原后自然回落。"
+   }
+  ],
+  "FSA|Multinational Operations": [
+   {
+    "h": "这是什么",
+    "b": "母公司有**海外子公司**，报表是外币，得换成母公司货币。\n两层事：\n**transaction**（交易）——公司自己收付外币，汇率一变产生 gain/loss。\n**translation**（折算）——把整份外币报表换算合并。\n==functional currency（功能货币）决定用哪套折算方法==。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**functional = 子公司当地货币** → current rate method（全部折算 translation）。\n**functional = 母公司列报货币** → temporal method（重新计量 remeasurement）。\n高通胀经济体：\nIFRS 先按物价指数**重述**再用 current rate；\nUS GAAP 直接把 functional 当母公司货币做 **temporal**。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别把 transaction 和 translation 混了：\ntransaction 损益**永远进 P&L**（除套期例外）。\n第二坑：functional currency 是**判断题不是选择题**——看现金流、定价、融资在哪种货币，==谁是 functional 谁就锁定方法==，不是随便选。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **'当地货币走 current，母公司货币走 temporal'**。\ncurrent = **C**urrent rate = **C**lose to local（贴近当地）；\ntemporal 记成 **T**arget 母公司，把子公司'改造'成母公司账。"
+   }
+  ],
+  "FSA|Intercorporate Investments": [
+   {
+    "h": "这是什么",
+    "b": "A 公司买 B 公司股份，占多少、怎么记账？\n看**控制程度**分四档：\n**无重大影响** → financial assets；\n**重大影响** → associate（权益法）；\n**共同控制** → joint venture；\n**控制** → business combination（合并）。"
+   },
+   {
+    "h": "核心规则",
+    "b": "常用门槛（经验值）：\n**<20%** → financial asset（按 FVPL/FVOCI/摊余成本）。\n**20–50%** → associate，用 **equity method**。\n**共同控制** → JV，IFRS/US GAAP 均 **equity method**。\n**>50% 或控制** → 母子公司，做 **consolidation**（并表 + 少数股东权益）。\n==门槛只是提示，实质控制/影响才是关键==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "20%/50% 是**可反驳的推定**，不是死线：有董事会席位、技术依赖也可算 significant influence。\n第二坑：合并要确认 **NCI（少数股东权益）** 和 **goodwill**；权益法不逐行并表，只在一行体现（one-line consolidation）。\n第三坑：JV 早年可比例合并，==现在主流是 equity method==。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "四级台阶：**'没影响→放着(FV)，有影响→一行(equity)，控住→并表(consolidate)'**。\n数字梯子 **20 / 50**：跨过 20 上权益，跨过 50 上并表。"
+   }
+  ],
+  "FSA|Employee Compensation: Post-Employment and Share-Based": [
+   {
+    "h": "这是什么",
+    "b": "员工的两类'延后发的钱'：\n**退休金**——DB（确定给付，公司担风险）vs DC（确定缴费，员工担风险）。\n**股份支付**——stock options 与 RSU，用股权当薪酬。\n重点全在 DB 和 options 的**费用与负债确认**上。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**DC**：缴多少认多少费用，**无表内负债**，超简单。\n**DB**：表内列 **funded status = 计划资产公允值 − PBO**；欠资(underfunded)记负债。\n**Share-based**：\n– stock options 按**授予日公允价值**，在 **vesting period** 内摊成费用；\n– RSU 类同；对**权益**是重分类，通常不影响总权益，但影响 EPS 稀释。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "DB 最坑：报表上只显示**净额 funded status**，PBO 与资产的总规模藏在附注。\n第二坑：期权费用一旦**授予后不因股价涨跌重估**（权益结算），别拿期末股价重算。\n第三坑：==DC 没有精算风险，别去套折现率/薪酬假设那套==。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "**'DC = 简单缴费、DB = 复杂承诺'**。\nfunded status 记成体检表：**'资产 − PBO，正数健康、负数欠债'**。\n期权记 **'授予日定价、服务期摊销'**——==定价那天锁死==。"
+   }
+  ],
+  "FSA|Analysis of Financial Institutions": [
+   {
+    "h": "这是什么",
+    "b": "银行/保险这类**金融机构**跟普通公司不一样——资产负债表本身就是它的'产品'。\n通用框架记 **CAMELS**：\n**C**apital、**A**sset quality、**M**anagement、**E**arnings、**L**iquidity、**S**ensitivity（利率敏感度）。"
+   },
+   {
+    "h": "核心规则",
+    "b": "**CAMELS** 六维度逐项看：\n**Capital adequacy** → CET1/Tier1 比率；\n**Asset quality** → 不良贷款、拨备覆盖；\n**Management** → 治理与风控；\n**Earnings** → NIM、ROA、收入结构；\n**Liquidity** → LCR/NSFR；\n**Sensitivity** → 利率/汇率敞口。\n==金融机构分析先套 CAMELS，再看监管指标==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别用普通制造业那套周转率/存货去分析银行——**核心是资本充足和流动性**。\n第二坑：区分 **systematic（受监管、可比）** 与 **idiosyncratic（管理质量、表外风险）** 两类因素。\n第三坑：表外项目（衍生品、承诺额度）==对银行风险影响巨大，不能只看表内==。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **CAMELS = 骆驼**：一头能扛沙漠的骆驼要有'资本(驼峰)、好资产、会管理、能赚钱、有水(流动性)、抗晒(利率敏感)'。\n==记住六个字母就抓住金融机构分析主线==。"
+   }
+  ],
+  "FSA|Evaluating Quality of Financial Reports": [
+   {
+    "h": "这是什么",
+    "b": "报告质量分两个独立维度：\n**Reporting quality**（报告本身）——数字是否忠实、可比、不操纵。\n**Earnings/Results quality**（业绩本身）——盈利是否**可持续、够现金支撑、回报够本**。\n两者拆开评：可以数字真实但业绩很烂。"
+   },
+   {
+    "h": "核心规则",
+    "b": "质量光谱从高到低：\n**GAAP 且忠实 → GAAP 但有偏 → GAAP 但'管理'盈余 → 违背 GAAP → 直接造假**。\n高质量盈利 = **可持续 + 有现金流支撑**（accruals 低）。\n信号：\n– 收入激进确认、费用资本化 → 红旗；\n– ==净利润高但经营现金流跟不上 = 盈利质量差==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "别混两个维度：'报告质量高'≠'业绩好'。数字可以真实无误，但业务在亏钱。\n第二坑：**high earnings ≠ high quality**——一次性收益、放松准备金都能撑高利润。\n第三坑：留意 **non-GAAP/pro forma** 剔掉'一次性'费用，==年年都有的'一次性'就是危险信号==。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "两把尺子 **'报告尺(真不真) + 业绩尺(强不强)'**，分开量。\n盈利质量口诀 **'利润要有现金垫背'**——==净利润和经营现金流长期背离，就是纸面富贵==。"
+   }
+  ],
+  "FSA|Cash-flow-based accruals ratio": [
+   {
+    "h": "这是什么",
+    "b": "**Accruals（应计）** = 净利润里**没有现金支撑**的那部分。\n应计越大，利润越靠会计估计撑着，**盈利质量越差、越可能反转**。\n用现金流量表算比只看资产负债表更干净。"
+   },
+   {
+    "h": "核心公式",
+    "b": "**Aggregate accruals（现金流口径）**\n$= NI - (CFO + CFI)$。\n**Accruals ratio**\n$=\\dfrac{NI-(CFO+CFI)}{\\text{平均净经营资产 NOA}}$。\n平均 NOA = (期初+期末 NOA)/2。\n==比率越高 = 应计占比越大 = 质量越低==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "分子要减的是 **CFO + CFI** 两个（不是只减 CFO）——最常错。\n第二坑：balance-sheet 法和 cash-flow 法结果略不同，cash-flow 法**受并购/汇率干扰更小**，更受推崇。\n第三坑：==高 accruals ratio 预示未来盈利/回报走弱==，用于横向排雷。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **'利润减掉现金 = 水分(accruals)'**。\n分母那句记 **'水分除以净经营资产 = 掺水浓度'**——==浓度越高越危险==。"
+   }
+  ],
+  "FSA|Integration of Financial Statement Analysis Techniques": [
+   {
+    "h": "这是什么",
+    "b": "把 FSA 学的全套工具**串起来解决一个真实问题**：估值、信用、盈利质量、并购影响一起上。\n不是新知识，是**流程题**：先定目的，再选工具，最后调表可比。"
+   },
+   {
+    "h": "核心规则",
+    "b": "标准流程：\n1) **明确目的**（选股/授信/预警）；\n2) 收集数据、做**行业与会计政策对比**；\n3) **调整报表**使其可比（LIFO→FIFO、经营租赁、pension 净额还原、权益法/并表口径统一）；\n4) 算比率、拆 **DuPont**、看现金质量；\n5) 下结论。\n==核心是'为可比而调表'，再谈结论==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "跨公司比之前必须**统一会计政策**（存货法、折旧、投资口径）——不调直接比是大坑。\n第二坑：注意**表外与一次性项目**（表外融资、非经常损益）会扭曲趋势。\n第三坑：==结论要回到最初的分析目的==，别算一堆比率却答非所问。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "五步链 **'定目的 → 调可比 → 拆比率 → 验现金 → 下判断'**。\n一句话 **'先把两家公司放到同一把尺子上'**——==调表可比是整合分析的灵魂==。"
+   }
+  ],
+  "FSA|Financial Statement Analysis": [
+   {
+    "h": "这是什么",
+    "b": "FSA 大科目的总框架：从**四张表**出发，用比率、共同比、趋势分析，回答'这家公司值不值、稳不稳'。\n三张核心表 + 一张现金流，配附注(footnotes) 才是全貌。"
+   },
+   {
+    "h": "核心规则",
+    "b": "工具箱：\n**Common-size**（共同比）——I/S 除以收入、B/S 除以总资产，看结构。\n**Ratios** 五类：liquidity、solvency、activity、profitability、valuation。\n**DuPont** 拆 ROE：\n$ROE = \\text{净利率} \\times \\text{总资产周转} \\times \\text{权益乘数}$。\n==比率必须配同业/同期基准才有意义==。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "单看一个比率没意义——要**跨期(trend)和跨公司(peer)**对比。\n第二坑：不同会计政策(LIFO/FIFO、折旧法)让比率**不可直接比**，先调表。\n第三坑：==附注(footnotes) 和 MD&A 藏着表外风险、分部信息==，别只盯正表数字。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **'共同比看结构、比率看健康、DuPont 拆回报'**。\nDuPont 记成 **'赚得狠(净利率)×转得快(周转)×借得多(杠杆)'**——==三力共同决定 ROE==。"
+   }
+  ],
+  "PM|Measuring and Managing Market Risk": [
+   {
+    "h": "这是什么",
+    "b": "**VaR (Value at Risk)** 回答一句话：'在正常市场下，某段时间内、某个概率里，我最多亏多少？'\n三要素缺一不可：**金额 + 时间段 + 概率**。\n例：'1天 5% VaR = $100万' 意思是——有 **95% 的天数** 亏损不超过 100万；==剩下 5% 的日子亏损会 ≥ 100万，但 VaR 不告诉你到底多惨=="
+   },
+   {
+    "h": "核心公式",
+    "b": "三种算法记特点：\n**Parametric (方差-协方差)**：假设收益正态，$VaR = [E(R) - z\\sigma] \\times V$，简单但对**期权(非线性)**失真。\n**Historical**：直接排历史收益取分位数，不设分布，但**假设历史会重演**。\n**Monte Carlo**：自己设分布模拟千万次，最灵活但**计算重、依赖假设**。\n时间缩放：$VaR_{T} = VaR_{1天} \\times \\sqrt{T}$"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==VaR 只给'门槛'，不给'门后有多惨'——超过 VaR 后的期望损失叫 **Conditional VaR / Expected Shortfall**==。\n别把 5% VaR 说成'最大可能亏损'，尾部可以无限大。\n**IVaR (Incremental)** = 加一笔头寸后 VaR 的变化；**Marginal VaR** = 边际。\n敏感度指标：股票用 **beta**，债券用 **duration**，期权用 **delta/gamma/vega**——别张冠李戴。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "VaR 是**'门槛'**不是'天花板'：说的是'亏损至少到这条线的概率'，门后的深渊交给 **CVaR**。\n口诀 **'金额-时间-概率，三样齐才算 VaR'**。\n三方法一句话：==参数=靠公式、历史=靠回放、蒙特卡洛=靠模拟=="
+   }
+  ],
+  "PM|Using Multifactor Models": [
+   {
+    "h": "这是什么",
+    "b": "单因子 (CAPM) 只有市场一个解释变量；**多因子模型**用好几个系统性风险来源一起解释收益。\n三大类：\n**Macroeconomic (宏观)**：因子 = 意外的 GDP/通胀等**惊喜(surprise)**，敏感度是回归斜率。\n**Fundamental (基本面)**：因子 = 属性(P/B、市值)，敏感度**先标准化**、因子收益靠回归反解。\n**Statistical**：纯统计挖出因子，难解释。"
+   },
+   {
+    "h": "核心公式",
+    "b": "宏观因子模型：\n$R_i = E(R_i) + b_{i1}F_1 + b_{i2}F_2 + \\varepsilon_i$\n**F = 因子的意外值 (实际 − 预期)**，均值为 0。\nAPT 期望收益：\n$E(R_p) = R_F + \\lambda_1\\beta_{p,1} + \\dots + \\lambda_k\\beta_{p,k}$\n$\\lambda_j$ = 因子风险溢价(承担一单位该因子风险的补偿)。\n主动收益 = $\\sum(\\beta_{p}-\\beta_{b})\\lambda$ + 主动选股。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==宏观模型里 F 是'意外'(surprise)不是'水平'——预期部分已进 $E(R_i)$，只有惊喜驱动波动==。\n别混两种敏感度含义：基本面模型的 **b 是标准化后的属性**(z-score)，可比不同股票；宏观模型的 b 是回归斜率。\nAPT 是**无套利**均衡，不像 CAPM 需要市场组合，也不假设正态或均值方差投资者。\n注意区分 **factor risk premium (λ)** 与 **factor surprise (F)**。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "三模型记法：**宏观=惊喜(surprise)、基本面=属性(attribute)、统计=黑箱**。\n$\\lambda$ 想成**'租金'**——你多扛一单位某因子风险，市场每期付你 λ。\n口诀 ==APT 无套利、CAPM 靠市场；APT 多因子、CAPM 单 beta=="
+   }
+  ],
+  "PM|Analysis of Active Portfolio Management": [
+   {
+    "h": "这是什么",
+    "b": "衡量'主动管理值不值'的核心是 **信息比率 (Information Ratio)**：每承担一单位**主动风险**，换来多少**主动收益**。\n**Active return** = 组合收益 − 基准收益。\n**Active risk (tracking error)** = 主动收益的标准差。\n目标是在既定主动风险下把 **IR** 榨到最大——IR 是技能的纯度指标，和你冒多大风险无关。"
+   },
+   {
+    "h": "核心公式",
+    "b": "$IR = \\dfrac{E(R_A)}{\\sigma_A} = \\dfrac{\\alpha}{\\text{tracking error}}$\n**基本法则 (Fundamental Law)**：\n$IR = IC \\times \\sqrt{BR} \\times TC$\nIC=信息系数(预测技能)，BR=独立决策数(广度)，TC=转换系数(约束下落地程度)。\n最优主动风险：$\\sigma_A^* = \\dfrac{IR}{SR_B}\\sigma_B$\n总组合最优 Sharpe：$SR_P^2 = SR_B^2 + IR^2$"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==IR 与主动风险大小**无关**——放大杠杆式加仓，主动收益和主动风险同比例涨，IR 不变；Sharpe 才受影响==。\n**广度 BR 是'独立'决策数**：季度调 100 只相关股 ≠ 100 个广度。\n别把 **IC (预测 vs 实际的相关系数)** 和 IR 搞混。\n无约束时 TC=1；有约束(禁做空、行业上限)时 TC<1，会拖累实际 IR。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "基本法则口诀：**'技能 × 根号次数 × 落地'**（IC × √BR × TC）。\n想涨 IR 只有两条路：==预测更准(IC↑) 或 独立下注更多(BR↑)==，光加杠杆没用。\n最优总组合：**基准 Sharpe 的平方 + IR 的平方 = 组合 Sharpe 平方**，主动管理是'勾股加法'。"
+   }
+  ],
+  "PM|Backtesting and Simulation": [
+   {
+    "h": "这是什么",
+    "b": "**Backtesting (回测)** = 拿历史数据假装'当年就按这个策略做'，看表现。\n标准三步：\n1) **策略设计** (定规则、再平衡频率)\n2) **历史模拟** (滚动 rolling window 前进)\n3) **表现分析** (收益、波动、回撤)。\n核心思想 = **rolling-window walk-forward**：每期只用当时'看得到'的信息重新调仓，逐期向前滚。"
+   },
+   {
+    "h": "核心规则",
+    "b": "回测局限性大，进阶用两种**Simulation**补:\n**Historical simulation**：从历史收益里**有放回地重抽样(bootstrap)**，保留真实分布/肥尾，但仍受历史约束。\n**Monte Carlo simulation**：先设定分布参数，再随机生成海量情景，覆盖历史没发生过的极端。\n蒙特卡洛能测历史外的尾部；历史重抽样忠于真实非正态但不越界。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==最大杀手是 **survivorship bias (幸存者偏差)** 和 **look-ahead bias (前视偏差)**——用了当时还没公布的数据，结果虚高==。\n**Data snooping / p-hacking**：把参数试到过拟合，样本外必崩。\n还有 **stale/backfilled data**、幸存指数成分。\n回测默认**收益正态**，但金融收益肥尾+偏度，所以要用 simulation 补充。\n多重检验要看 **样本外** 和 **cross-validation**。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "三种偏差顺口记：**'幸存(survivorship)、前视(look-ahead)、偷看(data snooping)'**——都是'偷用了当时不该有的信息'。\n回测 = **向前滚 (walk-forward)**，绝不能回头用未来数据。\n两种模拟：==历史重抽样=忠于真尾巴、蒙特卡洛=造新情景=="
+   }
+  ],
+  "PM|Exchange-Traded Funds: Mechanics and Applications": [
+   {
+    "h": "这是什么",
+    "b": "**ETF** 靠 **AP (Authorized Participant / 授权参与人)** 做**创设/赎回 (creation/redemption)** 来贴住净值：\n市价 > NAV(溢价) → AP 交一篮子股票换新 ETF 份额卖出，压低价。\n市价 < NAV(折价) → AP 买回 ETF 份额换回股票。\n这套**in-kind (实物交换)**套利机制，是 ETF 相对开放式基金的**税收+成本优势**来源。"
+   },
+   {
+    "h": "核心规则",
+    "b": "ETF 交易在 **一级 (AP 创赎，实物)** 和 **二级 (投资者场内买卖)** 两层。\n**Tracking error (跟踪误差)** 来源：费用、现金拖累、抽样复制、再平衡、汇率/预提税。\n价格偏离 NAV 受套利成本约束：**bid-ask 价差 + 创赎费 + 持有成本 → 决定溢价/折价能有多大**。\n流动性看两层：ETF 自身成交量 **+** 底层证券流动性。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==别以为'ETF 成交量低=不能大额买'——真正的流动性来自**底层证券**，AP 可随时创设新份额==。\n**in-kind 赎回不触发资本利得**，是 ETF 比 mutual fund 税更优的关键(美国)。\n**溢价/折价** 常见于底层不流动或跨时区(海外 ETF、债券 ETF)。\n跟踪误差 ≠ 跟踪差 (tracking difference)：前者是**离差的波动/标准差**，后者是**累计收益差**。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "记 AP 是**'套利搬运工'**：溢价就造份额压价、折价就毁份额托价，把市价焊在 NAV 上。\n流动性口诀 ==**'看不见的第二层'**——底层证券才是真水深==。\n税优关键词一个词：**in-kind (实物)**，不卖股票就不实现资本利得。"
+   }
+  ],
+  "PM|Economics and Investment Markets": [
+   {
+    "h": "这是什么",
+    "b": "所有资产价格 = **未来现金流按'与经济挂钩的'折现率贴现**。\n一句主线：**折现率 = 实际无风险利率 + 预期通胀 + 风险溢价**。\n经济下行、消费边际效用高时，投资者更怕亏 → 要求更高风险溢价 → 价格更受经济周期驱动。\n本质在讲：**利率期限结构、信用利差、股权/房地产溢价如何随宏观周期变动**。"
+   },
+   {
+    "h": "核心公式",
+    "b": "无风险实际利率 ≈ **实际 GDP 增速 + 短期供需波动**。\n债券要求收益率:\n$y = l + \\theta + \\rho + \\pi + \\gamma$\n(实际利率 $l$、通胀预期 $\\pi$、通胀风险溢价 $\\theta$、信用 $\\gamma$、流动性 $\\rho$)。\n**Taylor rule (政策利率)**:\n$i = r_{neutral} + \\pi + 0.5(\\pi - \\pi^*) + 0.5(y - y^*)$"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==**收益率曲线**是领先信号：陡峭化常预示扩张、**倒挂 (inversion)** 常预示衰退==。\n信用利差 (credit spread) **顺周期反向**：衰退时利差**扩大**、扩张时收窄——别记反。\n**Cyclical (周期) 股** beta 高、盈利随周期大起大落；**defensive (防御) 股** 稳。\nBEI(盈亏平衡通胀) = 名义 − 实际(TIPS) 利率 ≈ **通胀预期 + 通胀风险溢价**，不是纯预期。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "一根主线串全章：**'现金流 ÷ 与周期共舞的折现率'**。\n倒挂口诀：==**曲线倒挂 → 衰退在敲门**==。\n利差记法：**'经济差、利差就大'**(信用利差顺周期反向走)。\nTaylor rule 想成央行的**'油门+刹车'**：通胀/产出高于目标就加息踩刹车。"
+   }
+  ],
+  "PM|Multifactor Models: 宏观因子模型截距 = 资产预期收益": [
+   {
+    "h": "这是什么",
+    "b": "宏观因子模型长这样：\n$R_i = a_i + b_{i1}F_1 + b_{i2}F_2 + \\varepsilon_i$\n这里的**截距 $a_i$ 就是资产的预期收益 $E(R_i)$**。\n为什么？因为因子 **F 是'意外值 (surprise)'，期望为 0**；扰动 $\\varepsilon$ 期望也为 0。\n两头一取期望，剩下的常数项 = 平均收益。"
+   },
+   {
+    "h": "核心公式",
+    "b": "对全式取期望:\n$E(R_i) = a_i + b_{i1}E(F_1) + \\dots + E(\\varepsilon_i)$\n因为 $E(F_j)=0$ 且 $E(\\varepsilon_i)=0$:\n$\\Rightarrow E(R_i) = a_i$\n所以可改写成:\n$R_i = E(R_i) + b_{i1}F_1 + b_{i2}F_2 + \\varepsilon_i$\n==截距 $a_i$ ≡ 预期收益 $E(R_i)$，两种写法完全等价=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==成立的**前提是 F 已被定义成'意外'(实际−预期)，均值为 0**——如果 F 用的是'水平值'，截距就不再等于 $E(R_i)$==。\n别把 **截距 a** 当成 alpha：这里 a 是模型设定的预期收益，不是超额业绩。\n扰动项 $\\varepsilon$ 是**非系统性(公司特有)**风险，可分散掉，期望为 0，不进预期收益。\n对比基本面模型：那里靠回归**反解因子收益**，截距含义不同。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "一句话记死：**'因子是惊喜(均值0)，惊喜清零后只剩常数=预期收益'**。\n所以宏观模型能写成 ==**收益 = 预期 + 一堆惊喜 × 敏感度 + 噪音**==。\n看到截距别喊 alpha——先问一句：**'F 是意外还是水平？'** 是意外，截距才 = $E(R_i)$。"
+   }
+  ],
+  "PM|ETF Mechanics: ETF 持有期总成本 (交易成本 + 按期摊销管理费)": [
+   {
+    "h": "这是什么",
+    "b": "买 ETF 的真实成本 ≠ 只看管理费率。\n拆成两块：\n**一次性成本**：买卖各付一次的 **佣金 + bid-ask 价差** (还可能加溢价/折价)。\n**持续性成本**：**管理费 (expense ratio)** 按持有时间**摊销**。\n关键洞察：**持有越久，一次性成本被摊得越薄，管理费占比越大**——所以短线看交易成本、长线看费率。"
+   },
+   {
+    "h": "核心公式",
+    "b": "持有期总成本(占比) ≈\n**一次性交易成本 (进+出) + 管理费率 × 持有年数**:\n$Cost_{total} \\approx (2 \\times \\tfrac{spread}{2} + comm_{in} + comm_{out}) + TER \\times t$\n年化则除以 $t$:\n$Cost_{annualized} \\approx \\dfrac{\\text{一次性成本}}{t} + TER$\n==持有期 $t$ 越长，一次性成本年化后越小 → 年化总成本趋近管理费率 TER=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "==短期交易者：**bid-ask 价差 + 佣金** 主导，低费率 ETF 若价差大反而更贵==。\n长期持有者：**管理费 (TER)** 主导，价差被时间摊薄可忽略。\n别漏 **round-trip (买+卖两次)** 价差：只算一半会低估。\n还要考虑**溢价/折价成本**和(应税账户的)税。\n比较两只 ETF 要**代入具体持有期**算总成本，不能只比费率或只比价差。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀 **'短看价差、长看费率'**。\n把一次性成本想成**'门票'**、管理费想成**'房租'**：==待得越久，门票摊得越薄、房租越是主角==。\n所以交易频繁的人选 **窄价差**，买入持有的人选 **低 TER**——时间长短决定谁是成本大头。"
+   }
+  ],
+  "QM|Big Data Projects": [
+   {
+    "h": "这是什么",
+    "b": "用**结构化+非结构化数据**跑机器学习模型的完整流程。\n五步：**Conceptualization → Data Collection → Data Preparation & Wrangling → Data Exploration → Model Training**。\n==结构化数据走这五步；文本(非结构化)多两步：文本清洗和文本整理。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**数据准备(Preparation)**：处理不完整、无效、重复、不一致、异常值。\n**整理(Wrangling)**：转换 + **规整化**。\n- **Normalization**: $X_{norm}=\\frac{X-X_{min}}{X_{max}-X_{min}}$，压到 $[0,1]$\n- **Standardization**: $X_{std}=\\frac{X-\\mu}{\\sigma}$，需数据近似正态"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "文本处理产出 **DTM (Document Term Matrix)**：行=文档，列=token，值=词频。\n==别把 Normalization 和 Standardization 记反：Normalization 不要求正态，Standardization 要求。==\n**Trimming** 删极端值(按百分位)，**Winsorization** 用边界值替换极端值——两者不同。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "文本流水线口诀：**清洗→分词→去停用词→词干化(stemming)→建 DTM**。\nBOW = **Bag of Words**，只记词有没有、出现几次，==不管词序==。"
+   }
+  ],
+  "QM|Time-Series Analysis": [
+   {
+    "h": "这是什么",
+    "b": "用变量**自身过去值**预测未来。两大类：\n- **趋势模型 (Trend)**：线性 / 对数线性\n- **自回归 AR**：$x_t=b_0+b_1 x_{t-1}+\\varepsilon_t$\n==核心前提是序列要 covariance stationary(协方差平稳)。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**协方差平稳三条件**：\n1. 均值恒定且有限\n2. 方差恒定且有限\n3. 协方差只跟间隔有关，与时间点无关\n\n**检验 AR 模型是否够好**：看残差自相关的 t 检验，==所有自相关都不显著才算模型设定正确。=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**趋势模型**若残差存在序列相关(用 DW 检验)，说明趋势模型不适用，改用 AR。\n**RMSE** 越小样本外预测越好——比较模型只用**样本外**表现。\n==有单位根(unit root)的序列不平稳，直接跑 AR 会得到伪回归；先差分。=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "三连问：**平稳吗?→自相关干净吗?→异方差吗?**\n季节性 (seasonality)：在 AR 里加一个滞后项如 $x_{t-4}$(季度数据)，看该滞后自相关是否显著。"
+   }
+  ],
+  "QM|Extensions of Multiple Regression": [
+   {
+    "h": "这是什么",
+    "b": "标准多元回归的延伸：**处理异常点、非线性、定性因变量**。\n- 影响点诊断：**leverage(杠杆) + studentized residual(学生化残差)**\n- **哑变量 (dummy)** 处理定性自变量\n- **Logistic 回归** 处理定性因变量"
+   },
+   {
+    "h": "核心规则",
+    "b": "**高杠杆点**：$leverage > 3\\left(\\frac{k+1}{n}\\right)$ 视为潜在有影响。\n**Cook's Distance** 综合衡量单点对整体拟合的影响。\n**Dummy**：$n$ 个类别只放 $n-1$ 个哑变量，留一个当基准，==否则完全多重共线(dummy variable trap)。=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**Logistic 回归**：因变量是 0/1，用 **log odds(对数几率)** 线性建模：\n$\\ln\\left(\\frac{p}{1-p}\\right)=b_0+b_1 X$\n系数解释是**对数几率的变化**，不是概率的变化。\n==Logit 用最大似然估计(MLE)，不是最小二乘(OLS)。=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "哑变量陷阱记「**n 类留 n-1**」。\nLogistic 斜率转成 **odds ratio** 要取 $e^{b_1}$——>1 提升几率，<1 降低几率。"
+   }
+  ],
+  "QM|Machine Learning": [
+   {
+    "h": "这是什么",
+    "b": "让算法从数据里自己找规律。三大类：\n- **监督学习 (Supervised)**：有标签，做预测/分类\n- **非监督学习 (Unsupervised)**：无标签，找结构\n- **深度学习/强化学习 (Deep/RL)**\n==有没有 Y(标签)是区分监督 vs 非监督的唯一标准。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**监督**：Penalized Regression(LASSO)、SVM、KNN、CART、随机森林。\n**非监督**：**PCA(降维)**、K-Means(聚类)、层次聚类。\n**LASSO** 加 $\\lambda\\sum|b_k|$ 惩罚项，==能把不重要系数压到 0，自动做特征选择。=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**过拟合 (Overfitting)**：训练集好、样本外差。\n用 **train / validation / test** 三分数据防过拟合。\n**Bias-Variance 权衡**：模型太简单→高偏差(欠拟合)；太复杂→高方差(过拟合)。\n==Ensemble/随机森林通过投票降低方差。=="
+   },
+   {
+    "h": "记忆钩子",
+    "b": "分类口诀：**「有标签=监督，找组=聚类,减维=PCA」**。\nCART 是决策树，随机森林 = 一堆树投票(bagging)。"
+   }
+  ],
+  "QM|Model Misspecification": [
+   {
+    "h": "这是什么",
+    "b": "回归模型**设定错了**——漏变量、函数形式错、数据处理错——导致系数**有偏或不一致**。\n三大后果来源：**遗漏变量、错误函数形式、违反回归假设**。\n==设定错误 → 系数估计不可靠,推断无效。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "三类违反假设及后果：\n- **异方差 (Heteroskedasticity)**：系数无偏，但标准误错→t 检验失真\n- **序列相关 (Serial correlation)**：同上,标准误低估\n- **多重共线 (Multicollinearity)**：系数无偏,但标准误膨胀→t 不显著但 $R^2$ 高"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**条件异方差**才有害(与自变量相关)；检验用 **Breusch-Pagan**。\n序列相关检验用 **Durbin-Watson** 或 BG 检验。\n==修正：异方差和序列相关都可用 robust(稳健)标准误；多重共线靠删变量。==\n多重共线的经典症状：**F 显著、单个 t 都不显著**。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "「**HSM**」三害：**H**eteroskedasticity、**S**erial correlation、**M**ulticollinearity。\n记：前两个坑「标准误」，第三个坑「t 值」。"
+   }
+  ],
+  "QM|Basics of Multiple Regression and Underlying Assumptions": [
+   {
+    "h": "这是什么",
+    "b": "用**多个自变量**解释一个因变量：\n$Y_i=b_0+b_1 X_{1i}+b_2 X_{2i}+\\dots+b_k X_{ki}+\\varepsilon_i$\n每个 $b_j$ 是**其他变量不变时** $X_j$ 变一单位对 $Y$ 的边际影响。\n==这是「偏」效应(partial slope),不是简单相关。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**经典线性回归 (OLS) 五大假设**：\n1. 参数上线性\n2. 自变量非随机、无完全多重共线\n3. 误差期望为 0：$E(\\varepsilon)=0$\n4. **同方差 (homoskedasticity)** 且**无序列相关**\n5. 误差服从正态分布"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "**Adjusted $R^2$** 才用于比较不同自变量个数的模型：\n$\\bar R^2=1-\\left(\\frac{n-1}{n-k-1}\\right)(1-R^2)$\n==加变量一定会让 $R^2$ 上升,但可能让 $\\bar R^2$ 下降。==\n斜率 t 检验自由度 = $n-k-1$,别忘减截距那个 1。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "「偏斜率」理解：控制住其它变量后的**净效应**。\nF 检验问「**至少一个** $b_j\\neq 0$ 吗」；单个 t 检验问「**这一个** $b_j$ 显著吗」。"
+   }
+  ],
+  "QM|Cointegration: unit-root tests on two series plus Engle-Granger test on regression residuals": [
+   {
+    "h": "这是什么",
+    "b": "两个各自**不平稳(有单位根)**的序列,若长期一起漂移、其**线性组合平稳**,就叫**协整 (cointegration)**。\n协整成立时,即使各自不平稳,==它们的回归结果依然可靠、不是伪回归。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "**两步判定流程**：\n1. 各自跑 **单位根检验 (Dickey-Fuller)**——两个序列都要是**同阶单整**(如都是 I(1))\n2. 跑回归 $y_t=b_0+b_1 x_t+\\varepsilon_t$,对**残差**做 **Engle-Granger (DF-EG) 检验**\n==残差平稳(拒绝有单位根) → 协整成立。=="
+   },
+   {
+    "h": "考试陷阱",
+    "b": "Engle-Granger 用的是**专门的临界值**(比普通 DF 更严),==不能用标准 t 临界值。==\n必须两序列**同阶**才谈协整：一个 I(1) 一个 I(0) 不可能协整。\n若不协整却硬回归 → **spurious regression(伪回归)**,$R^2$ 虚高、t 值失真。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "口诀：「**各自不稳、组合稳**」=协整。\n流程记「**先验各自单位根,再验残差平稳**」两步走。"
+   }
+  ],
+  "QM|AR(1) mean-reverting level = b0/(1-b1)": [
+   {
+    "h": "这是什么",
+    "b": "AR(1) 模型 $x_t=b_0+b_1 x_{t-1}+\\varepsilon_t$ 有个**长期均衡值**,序列会向它回归。\n**均值回归水平 (mean-reverting level)**：\n$x_{ML}=\\frac{b_0}{1-b_1}$\n==高于它就往下拉,低于它就往上推。=="
+   },
+   {
+    "h": "核心规则",
+    "b": "三种情形:\n- $x_t > \\frac{b_0}{1-b_1}$ → 预测下期**下降**\n- $x_t < \\frac{b_0}{1-b_1}$ → 预测下期**上升**\n- $x_t = \\frac{b_0}{1-b_1}$ → 预测**不变**\n\n只有 $|b_1|<1$(平稳)时该水平才有意义。"
+   },
+   {
+    "h": "考试陷阱",
+    "b": "$b_1=1$ 时分母为 0 → **单位根**,序列不平稳,**均值回归水平不存在**。\n==公式记牢是 $1-b_1$ 不是 $1+b_1$。==\n数字例:$b_0=0.2,b_1=0.6 → x_{ML}=\\frac{0.2}{0.4}=0.5$。"
+   },
+   {
+    "h": "记忆钩子",
+    "b": "想成弹簧:拉得越远,回弹越强。\n$b_1$ 越接近 1,回归越**慢**(半衰期越长);$b_1$ 越小,回归越快。"
    }
   ]
  },

@@ -1,0 +1,173 @@
+{
+  "topic": "Derivatives",
+  "lessons": [
+    {
+      "los": "Pricing and Valuation of Forward Commitments",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Forward commitment** = forward / futures / swap，今天就锁死未来成交价。\n**Pricing（定价）**：签约那一刻算出让双方都不吃亏的 forward price $F_0$。\n**Valuation（估值）**：签约之后，市场动了，这张合约现在值多少钱 $V_t$。\n==核心一句话：定价靠 no-arbitrage，估值靠现值差==。"
+        },
+        {
+          "h": "核心公式",
+          "b": "定价（无收益标的）：$F_0(T) = S_0 (1+r)^T$。\n有持有成本/收益：$F_0 = (S_0 - PV_{income} + PV_{cost})(1+r)^T$。\n多头估值：$V_t = \\frac{F_t - F_0}{(1+r)^{T-t}}$——**新老 forward 价差再折现**。\n签约当下 $V_0 = 0$（这就是定价的目的）。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "**别把 price 和 value 搞混**：forward price 是约定的成交价，value 是合约本身的市值。\n标的付了 income（分红/coupon）会**压低** $F_0$；持有成本（仓储）会**抬高** $F_0$。\n==估值一定要把价差折现回今天，漏折现是常见丢分点==。\nfutures 每日 mark-to-market，估值当日归零，别套 forward 公式。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**\"定价定成交价，估值算市值\"**。\n记 income 与 cost 的方向：\n**收钱（income）拉低 F，花钱（cost）抬高 F**——因为持有标的的人享收益、担成本，forward 价要反向补偿。"
+        }
+      ]
+    },
+    {
+      "los": "Valuation of Contingent Claims",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Contingent claim（或有索取权）= 期权**：付出与否\"取决于\"未来标的走向。\n和 forward 的\"义务\"不同，期权是**权利**——好了就行权，坏了就作废。\n估值两大工具：**binomial（离散）** 和 **BSM（连续）**。\n==两者都建立在 risk-neutral（风险中性）定价上==。"
+        },
+        {
+          "h": "核心规则",
+          "b": "风险中性概率：$\\pi = \\frac{(1+r) - d}{u - d}$。\n单期看涨：$c = \\frac{\\pi c_u + (1-\\pi)c_d}{1+r}$。\n**用 $\\pi$ 而非真实概率**，且期望回报一律用无风险利率折现。\nBSM 下 $c = S_0 N(d_1) - Ke^{-rT}N(d_2)$，$N(d_2)$ 是风险中性下行权概率。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "**别用真实（真实世界）概率或标的预期收益率**——risk-neutral 定价里投资者风险偏好不进公式。\n$\\pi$ 只跟 $u,d,r$ 有关，==和股票真实上涨概率无关，这是最反直觉的坑==。\nAmerican option 每个节点要查提前行权，European 不查。\nput 用 put-call parity 或对应 $\\pi$ 公式，别照抄 call。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**\"或有 = 期权 = 权利不是义务\"**。\n定价心法一句话：**\"假装大家都不怕风险，全用无风险利率折现\"**（risk-neutral）。\n$\\pi$ 记成 \"(涨跌里 r 站的位置) 除以 (总跨度 u−d)\"。"
+        }
+      ]
+    },
+    {
+      "los": "BSM delta hedge: shares to buy per short call = N(d1) for a non-dividend stock",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "卖出（short）1 份 call，你怕股价涨、期权亏，就**买股票对冲**。\n要买多少股？答案是 **delta**。\n无分红股票的 call delta = $N(d_1)$，是个 0 到 1 之间的数。\n==卖 1 份 call → 买 $N(d_1)$ 股，组合对小幅波动免疫==。"
+        },
+        {
+          "h": "核心公式",
+          "b": "call delta $= N(d_1)$，其中 $d_1 = \\frac{\\ln(S/K) + (r + \\sigma^2/2)T}{\\sigma\\sqrt{T}}$。\n每 short 1 call，**买入 $N(d_1)$ 股**（合约乘数别忘）。\n$N(d_1)$ 是标准正态 CDF，**深度实值→趋近 1，深度虚值→趋近 0**。\nput delta $= N(d_1) - 1$（负值）。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "**别把 $N(d_1)$ 和 $N(d_2)$ 混**：对冲股数用 $d_1$，行权概率用 $d_2$。\n是 **short call → long shares**（买股）；方向反了就丢分。\n==delta 会随股价、时间变，需 dynamic rehedging（连续再平衡），静态对冲只在一瞬间有效==。\n无分红才是纯 $N(d_1)$；有分红要乘 $e^{-\\delta T}$。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "口诀：**\"卖一张 call，买 N(d1) 股\"**。\ndelta 就是\"股价动 1 块，期权动几毛\"。\ncall delta 永远正、在 0~1；**实值像股票（≈1），虚值像废纸（≈0）**。"
+        }
+      ]
+    },
+    {
+      "los": "Gamma of a delta-hedged short call plus long stock position",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "delta 对冲只在一瞬间成立，因为 delta 自己会变——**gamma 就是 delta 的变化率**。\n股票 delta 恒为 1，**gamma = 0**（线性）。\nshort call 的 gamma 是**负的**。\n==long stock + short call 组合 gamma < 0，这就是它的暴露==。"
+        },
+        {
+          "h": "核心公式",
+          "b": "gamma $= \\frac{\\partial \\Delta}{\\partial S} = \\frac{N'(d_1)}{S\\sigma\\sqrt{T}}$，恒为正（单个 long option）。\n组合：股票贡献 0，short call 贡献 $-\\Gamma_{call}$。\n**净 gamma $= 0 - \\Gamma_{call} < 0$**。\ngamma **在平值（at-the-money）、临近到期时最大**。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "==负 gamma 的痛：股价大涨大跌，delta 中性组合两头都亏，得高买低卖去再对冲==。\ndelta 中性 **不等于** gamma 中性——只有 option 才能对冲 gamma，股票不行。\n**gamma 最大点是 ATM + 快到期**，别以为深度实值 gamma 大（那是 delta 大）。\n单个 long option 的 gamma 恒正，是 short 头寸让组合翻负。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**\"delta 是速度，gamma 是加速度\"**。\nshort option = short gamma = 怕大波动。\n记住三高点：**ATM、临到期、gamma 峰**——考试爱在这里出\"何时 gamma 最大\"。"
+        }
+      ]
+    },
+    {
+      "los": "Theta: change in option value from the passage of one day",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Theta（时间损耗）**：只是过了一天、别的都不动，期权值变多少。\n对 **long option，theta 通常是负的**——时间价值在流逝（time decay）。\n卖方 short option 则**吃到**这份衰减。\n==\"期权是会融化的冰块\"，theta 衡量融化速度==。"
+        },
+        {
+          "h": "核心规则",
+          "b": "$\\theta \\approx \\frac{\\Delta V}{\\Delta t}$（每天口径，通常写成负数）。\nlong call / long put：$\\theta < 0$。\n**衰减非线性——越临近到期，ATM 期权衰减越快**。\n和 gamma 反向权衡：**高 gamma 往往伴随高（负）theta**，这是期权买方的代价。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "**theta 不总为负**：深度实值的 European put 可能 theta > 0。\n别把 theta 当\"每年\"——题目常按**每日（one day）**口径，看清单位。\n==intrinsic value 不随时间衰减，衰减的只是 time value；到期日 theta 归结于内在价值==。\ngamma 与 theta 是硬币两面：想要 gamma 就得付 theta。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**\"期权是冰块，theta 是化的速度\"**。\n买方付时间租金（theta 负），卖方收租（theta 正）。\n记权衡口诀：**\"gamma 给你弹药，theta 是弹药的月供\"**。"
+        }
+      ]
+    },
+    {
+      "los": "Two-period binomial American put with early exercise check",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "两期二叉树给 **American put** 估值，比 European 多一步：**每个节点都要查是否提前行权**。\nAmerican put **有可能**提前行权更值钱（拿回现金早投资）。\n方法：先算每节点\"继续持有价\"，再和\"立刻行权价\"比大小，取较大者。\n==American put ≥ European put，差额来自提前行权权==。"
+        },
+        {
+          "h": "核心规则",
+          "b": "1）$\\pi = \\frac{(1+r)-d}{u-d}$，画出 $S_{uu}, S_{ud}, S_{dd}$。\n2）末端 put 值 $= \\max(K - S_T, 0)$。\n3）中间节点：$\\text{continue} = \\frac{\\pi p_{up} + (1-\\pi)p_{down}}{1+r}$。\n4）**每节点取 $\\max(\\text{continue},\\ K - S_{node})$**，再往前滚。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "==最大坑：忘了在中间节点做 early-exercise 比较，直接当 European 折现==。\n提前行权价用的是**该节点当下的 $K - S$**，不是末端 payoff。\n**American call（无分红）不会提前行权**，别在 call 上白查；put 才查。\n漏查会**系统性低估** American put 价值。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "口诀：**\"每个节点都问一句：现在砸了它，还是留着？\"** 取大的那个。\nput 才有提前行权的甜头，无分红 call 没有。\n记流程四步：**算 π → 末端 payoff → 倒推折现 → 每点比行权**。"
+        }
+      ]
+    },
+    {
+      "los": "Equity swap value = value of equity leg minus value of fixed leg",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Equity swap**：一腿付股票（指数）收益，另一腿付固定利率，定期互换。\n估值就是**两条腿现值相减**。\n站在\"收股票、付固定\"的一方：\n==swap value = 股票腿现值 − 固定腿现值==。"
+        },
+        {
+          "h": "核心公式",
+          "b": "股票腿现值 $= \\frac{S_t}{S_0} \\times NP$（按上次重置后股价比例，乘名义本金）。\n固定腿现值 $= NP\\left(C\\sum PV_i + PV_n\\right)$——**像一张固息债**（票息现值 + 期末本金现值）。\n**$V_{swap} = \\text{股票腿} - \\text{固定腿}$**。\n重置日刚过时股票腿 ≈ NP。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "==股票腿要用\"最近一次重置以来\"的涨跌比 $S_t/S_0$，别用整段区间==。\n固定腿当成**固息债**估值：别漏了期末那笔本金现值 $PV_n$。\n**方向别反**：收股票付固定 = 股票腿减固定腿；反过来符号相反。\nreceive-equity 一方在股票跌时 swap 为负值，别默认为正。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**\"股票腿减固定腿，谁多谁就赚\"**。\n固定腿 = 一张普通固息债（票息 + 本金现值）。\n股票腿 = **名义本金 × 期间涨跌倍数**，重置后归位到 NP。"
+        }
+      ]
+    },
+    {
+      "los": "Fixed-for-fixed currency swap par rate = (1 - PV(final))/sum of PV factors, annualized",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Fixed-for-fixed 货币互换**：两种货币各付一个固定利率。\n每种货币的\"公平固定利率\"= 用**该货币自己的折现因子**算出的 par swap rate。\n和普通 IRS 的 par rate 公式**同一个套路**，只是各币种各算一遍。\n==par rate 让 swap 起始时价值为 0==。"
+        },
+        {
+          "h": "核心公式",
+          "b": "周期 par rate $= \\frac{1 - PV_{final}}{\\sum_{i=1}^{n} PV_i}$，其中 $PV_i$ 是各期折现因子、$PV_{final}$ 是最后一期折现因子。\n**年化**：周期利率 × 每年期数（如季度 ×4、半年 ×2）。\n各货币用**各自的 discount factors** 得各自的固定利率。\n本金按即期汇率折算、期末归还。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "==分子是 $1 - PV_{最后一期}$，不是 $1 - \\sum PV$；分母才是所有 $PV$ 求和，别搞反==。\n**别混用两币种的折现因子**——各币种各用各的曲线。\n记得**年化**：算出来是周期利率，漏乘期数就低估。\n本金在**期初与期末各交换一次**（按初始即期汇率），这点异于 IRS。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "公式记成：**\"1 减最后一个 PV，除以所有 PV 之和\"**。\n口诀 **\"分子只减尾巴，分母全家相加\"**。\n货币互换 = 两条独立的固息腿，**各用各的曲线，最后年化\"**。"
+        }
+      ]
+    }
+  ]
+}

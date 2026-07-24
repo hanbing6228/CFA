@@ -1,0 +1,157 @@
+{
+  "topic": "Ethics",
+  "lessons": [
+    {
+      "los": "Guidance for Standards I-VII",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "CFA 的 **Code of Ethics** 加 **Standards of Professional Conduct**（七大 Standard I–VII），是全 Ethics 章的骨架。\nGuidance 就是每条 Standard 的**官方解释加案例**，告诉你什么算违规。\n==L2 考的不是背条文，而是给情景判断该不该违规、违了哪条。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "七条主线记关键词：**I Professionalism**（法律/独立/虚假陈述/不当行为）、**II Capital Markets**（内幕信息/操纵）、**III Duties to Clients**（忠诚/公平/适合/业绩/保密）、**IV Duties to Employers**（忠诚/额外报酬/主管责任）。\n**V** 分析建议、**VI** 利益冲突、**VII** 对 CFA 与考试的责任。\n判断时先定 Standard，再定小写字母子条款。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱一：==比 local law 更严的一方获胜（stricter rule wins）==，Standard 与法律冲突时守严的。\n陷阱二：只要动机是好的也可能违规——重点看**行为**，不看结果好坏。\n陷阱三：一个情景常同时踩两条 Standard，别只选第一眼那条。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "七条顺口记：**职、场、客、雇、析、突、C**。\n即 Professionalism（职）、Capital markets（场）、Clients（客）、Employer（雇）、Analysis（析）、Conflicts（突）、CFA program（C）。"
+        }
+      ]
+    },
+    {
+      "los": "Guidance for Standards I–VII",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "同上一条，只是破折号写法不同（en-dash）。指 Standards **I 到 VII** 的官方 Guidance 与推荐做法（recommended procedures）。\n==Guidance 的推荐程序不是硬性条文，但考试里「有没有建立制度」常是判分关键。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "每条 Standard 下 CFA 给两块：**必须遵守的规则** 加 **建议的合规程序（recommended procedures for compliance）**。\n例如信息隔离墙（**firewall**）、书面 policy、**restricted list** 都属建议程序。\n公司建了制度，个人才更容易证明自己 in compliance。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱：题目问「最能防止违规的做法」时，答案往往是那条**建议程序**，而不是口头承诺或什么都不做。\n==Members 有义务了解并遵守所在地更严格的法律；不知法不免责。=="
+        }
+      ]
+    },
+    {
+      "los": "Ethical and Professional Standards",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "这是 Ethics 整个 study session 的总标题，涵盖 Code、七大 Standards、以及 L2 的**情景应用（application）**题型。\n==L2 与 L1 差别：L1 认条文，L2 要在长情景里抓出违规细节并给整改建议。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "做题三步：**先读问题再读 vignette**，锁定它问哪条 Standard。\n找出行为主体做了什么、披露了没有、有没有事先书面同意。\n很多违规核心就一个词——**disclosure（披露）**没做到。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱一：情景写一堆好结果，诱你判没违规——但**程序错了照样违规**。\n陷阱二：问的是 least likely 或 does NOT violate，看反了直接丢分。\n陷阱三：==选项里最保守、最透明、最书面化的做法通常是对的。=="
+        },
+        {
+          "h": "记忆钩子",
+          "b": "一句话总纲：**先客户、要披露、留书面、守严法**。\n遇到拿不准的情景，套这四点几乎不会错方向。"
+        }
+      ]
+    },
+    {
+      "los": "Application of the Code and Standards: V(B) Communication with Clients (投资流程变更的持续披露)",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Standard V(B) Communication with Clients and Prospective Clients**：沟通要区分**事实（fact）与观点（opinion）**，并披露**投资流程（investment process）**的基本框架、局限与风险。\n==重点场景：投资流程发生重大变更时，必须及时、持续地告知客户。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "披露**流程的重大变更（material changes）**——比如换了模型、加了新的量化因子、改了风险控制逻辑。\n持续沟通限制因素与固有风险（limitations and inherent risks）。\n把事实和意见分清，不把预测当承诺。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱一：新增或删除一个影响结果的因子属于 material change，==必须主动披露，不能等客户来问==。\n陷阱二：日常小调仓不是 material change，不用逐笔告知——分清流程变更与常规操作。\n陷阱三：口头说过不等于合规，重大变更应有可追溯记录。"
+        }
+      ]
+    },
+    {
+      "los": "Application of the Code and Standards: VI(C) Referral Fees (向推荐人提供的各种补偿披露)",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Standard VI(C) Referral Fees**：因推荐业务而收付的**任何补偿**，都要向雇主、客户及潜在客户**披露**。\n==补偿不限于现金——还包括软件、免费服务、折扣、互相推荐等 non-cash 形式。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "披露内容要让客户能评估：推荐关系是否影响了推荐的客观性、以及这笔转介的成本。\n披露时点应在**服务开始之前（prior to engagement）**。\n付出去的和收进来的转介费都要披露。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱一：以为只有现金要披露——==flat fee、非现金好处、相互转介同样要披露==。\n陷阱二：以为告诉雇主就够——客户和潜在客户也必须知道。\n陷阱三：事后补披露不合格，必须事前。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "口诀：**转介有回报，先说给谁知**。\n对象记「雇主 + 现客户 + 潜客户」三方齐全，形式记「现金 + 非现金」都算。"
+        }
+      ]
+    },
+    {
+      "los": "Application of the Code and Standards: VI(A) Disclosure of Conflicts + III(E) Confidentiality",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "两条一起考：**VI(A) Disclosure of Conflicts** 要求充分、显眼地披露一切可能损害独立客观性的利益冲突；**III(E) Preservation of Confidentiality** 要求为现、前、潜在客户保密。\n==难点：披露义务与保密义务在情景里可能互相拉扯。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "VI(A)：向客户和雇主披露持股、董事席位、投行关系、报酬结构等冲突，语言要**通俗易懂、位置醒目（prominent, plain language）**。\nIII(E)：客户信息只在**客户授权、法律要求、或涉及非法活动**时才可外泄。\n两者不冲突时，能披露的冲突披露，该保的客户机密照保。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱一：披露冲突不等于可以泄露客户机密——==披露的是你自己的利益关系，不是客户的隐私==。\n陷阱二：III(E) 有例外——法律强制 或 配合 CFA Institute 的 PCP 调查 时可披露。\n陷阱三：VI(A) 冲突要主动披露，不能等对方发现。"
+        }
+      ]
+    },
+    {
+      "los": "Application of the Code and Standards: VI(B) Priority of Transactions / II(B) Market Manipulation",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**VI(B) Priority of Transactions**：客户和雇主的交易**优先于**成员的个人交易。\n**II(B) Market Manipulation**：禁止信息型（散布虚假信息）与交易型（虚假成交、拉抬打压）的市场操纵。\n==两条都关乎「谁先、用什么手段」，容易在同一情景里出现。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "VI(B)：**客户 > 雇主 > 个人**；个人可与客户同向交易，但不得抢在客户前（**front-running**）或损害客户成交。\nII(B)：不得制造虚假交易量、锁定价格、散布误导性信息去影响价格。\n合法的做市、真实的信息传播不算操纵。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱一：个人账户本身不禁止交易——==只要客户先成交、且不利用未公开的客户单信息==就行。\n陷阱二：II(B) 看**意图**——目的在于误导市场即违规，哪怕交易真实发生。\n陷阱三：家人账户若是收费客户，享有与其他客户同等优先权，不能歧视。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "VI(B) 排队口诀：**客户排头，老板中间，自己垫底**。\nII(B) 一句话：**假量假价假消息，动机误导即违规**。"
+        }
+      ]
+    },
+    {
+      "los": "Application of the Code and Standards: III(D) Performance Presentation (terminated accounts 披露)",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Standard III(D) Performance Presentation**：业绩展示必须公平、准确、完整，不得误导。\n==关键场景：已终止账户（terminated accounts）不能从历史业绩里悄悄剔除，否则会人为抬高回报。=="
+        },
+        {
+          "h": "核心规则",
+          "b": "把已终止账户保留在其存续期间的业绩中，避免 **survivorship bias（幸存者偏差）**。\n披露业绩是毛收益还是净收益（gross/net of fees）、是否加权、benchmark 口径。\n不夸大、不选择性挑好账户展示。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "陷阱一：==把亏损的已终止账户剔除以美化历史回报——典型违规==，属误导性展示。\n陷阱二：不必对每个潜在客户提供逐笔细节，但索取时要能给出支持数据。\n陷阱三：合规不强制用 GIPS，但遵循 GIPS 是满足 III(D) 的推荐做法；不能声称遵循却做不到。"
+        }
+      ]
+    }
+  ]
+}

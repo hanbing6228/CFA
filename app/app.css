@@ -239,6 +239,12 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 /* Case/vignette 面板 */
 .casebox { margin-bottom: 14px; border: 1.5px solid var(--border); border-radius: 12px; padding: 10px 12px; background: var(--accent-soft); }
 .casebox summary { cursor: pointer; font-size: .9rem; font-weight: 600; }
+.expl-lang { margin-top: 8px; }
+.langchip { font-size: .74rem; padding: 3px 12px; border-radius: 999px; border: 1.5px solid var(--border); background: var(--card); color: var(--muted); cursor: pointer; }
+.langchip:disabled { opacity: .6; }
+.langseg { display: flex; gap: 8px; margin-top: 6px; }
+.langseg .segbtn { flex: 1; padding: 10px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--card); color: var(--text); font-size: .9rem; cursor: pointer; }
+.langseg .segbtn.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 700; }
 .casebg { font-size: .88rem; margin: 9px 0; line-height: 1.62; }
 .casebg:first-of-type { margin-top: 10px; }
 .casebul { margin: 8px 0 8px 2px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }

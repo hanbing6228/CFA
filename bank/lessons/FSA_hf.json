@@ -1,0 +1,341 @@
+{
+  "topic": "FSA",
+  "lessons": [
+    {
+      "los": "Multinational Operations",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "母公司有**海外子公司**，报表是外币，得换成母公司货币。\n两层事：\n**transaction**（交易）——公司自己收付外币，汇率一变产生 gain/loss。\n**translation**（折算）——把整份外币报表换算合并。\n==functional currency（功能货币）决定用哪套折算方法==。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**functional = 子公司当地货币** → current rate method（全部折算 translation）。\n**functional = 母公司列报货币** → temporal method（重新计量 remeasurement）。\n高通胀经济体：\nIFRS 先按物价指数**重述**再用 current rate；\nUS GAAP 直接把 functional 当母公司货币做 **temporal**。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "别把 transaction 和 translation 混了：\ntransaction 损益**永远进 P&L**（除套期例外）。\n第二坑：functional currency 是**判断题不是选择题**——看现金流、定价、融资在哪种货币，==谁是 functional 谁就锁定方法==，不是随便选。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "口诀 **'当地货币走 current，母公司货币走 temporal'**。\ncurrent = **C**urrent rate = **C**lose to local（贴近当地）；\ntemporal 记成 **T**arget 母公司，把子公司'改造'成母公司账。"
+        }
+      ]
+    },
+    {
+      "los": "Temporal vs current rate method: 各报表项目适用汇率",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "两套折算法，核心差别就是**每个项目用哪天的汇率**。\n汇率三种：\n**current**（期末即期）、**average**（当期平均）、**historical**（发生日历史价）。\n谁用哪种，决定了 balance 怎么配平、损益进哪。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**Current rate method**：资产、负债全用 **current**；股本用 historical；I/S 用 **average**。\n**Temporal method**：**货币性**资产负债用 current；**非货币性**（存货、PP&E、无形）用 **historical**；相关费用（COGS、折旧）也用 historical，其余 I/S 用 average。\n==temporal 下非货币项目'跟着历史成本走'==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "最爱考 **COGS 和折旧**：temporal 下它们对应的是存货/固定资产的**历史汇率**，不是 average。\n第二坑：temporal 下**存货按 lower of cost or market**，市价那步要重新看。\n第三坑：current method 里连留存收益都是**倒挤 plug**出来的，别去逐笔折算。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "记 **'货币性=现在(current)，非货币性=过去(historical)'**——temporal 就是'时间'，把每笔拉回它出生那天的汇率。\ncurrent method 简单粗暴：==资产负债一律期末汇率一刀切==。"
+        }
+      ]
+    },
+    {
+      "los": "两法下 exposure (net asset vs net monetary) 与损益归属 (P&L vs CTA/OCI)",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "折算会产生一个**汇兑差额**，问题是：谁暴露在汇率里、差额进哪。\n**current rate**：整个**净资产**(net asset) 暴露。\n**temporal**：只有**净货币性头寸**(net monetary) 暴露。\n本币贬值时，两法的盈亏方向可能相反。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**Current rate**：折算差额 → **CTA**，进 **OCI/权益**，不过损益。\n**Temporal**：remeasurement 差额 → 直接进 **P&L（净利润）**。\nexposure 判断：\ncurrent 看 net asset（资产>负债→正暴露）；\ntemporal 看 net monetary asset/liability。\n==temporal 打净利润，current 打权益==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "方向题：本币**贬值**时，\ntemporal 下若为**净货币性负债**→产生 **gain**（欠的外债变便宜）；净货币性资产→loss。\ncurrent 下净资产为正→贬值产生 **负 CTA**。\n别背反：==先定'净资产还是净货币'，再定贬值/升值方向==，最后套 gain/loss。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**'Temporal → 损益(P&L)，Current → 权益(CTA)'**。\nexposure 记 **'C 看全部资产(Complete net Asset)，T 只看现金类(Temporal=Treasury/monetary)'**。"
+        }
+      ]
+    },
+    {
+      "los": "Intercorporate Investments",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "A 公司买 B 公司股份，占多少、怎么记账？\n看**控制程度**分四档：\n**无重大影响** → financial assets；\n**重大影响** → associate（权益法）；\n**共同控制** → joint venture；\n**控制** → business combination（合并）。"
+        },
+        {
+          "h": "核心规则",
+          "b": "常用门槛（经验值）：\n**<20%** → financial asset（按 FVPL/FVOCI/摊余成本）。\n**20–50%** → associate，用 **equity method**。\n**共同控制** → JV，IFRS/US GAAP 均 **equity method**。\n**>50% 或控制** → 母子公司，做 **consolidation**（并表 + 少数股东权益）。\n==门槛只是提示，实质控制/影响才是关键==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "20%/50% 是**可反驳的推定**，不是死线：有董事会席位、技术依赖也可算 significant influence。\n第二坑：合并要确认 **NCI（少数股东权益）** 和 **goodwill**；权益法不逐行并表，只在一行体现（one-line consolidation）。\n第三坑：JV 早年可比例合并，==现在主流是 equity method==。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "四级台阶：**'没影响→放着(FV)，有影响→一行(equity)，控住→并表(consolidate)'**。\n数字梯子 **20 / 50**：跨过 20 上权益，跨过 50 上并表。"
+        }
+      ]
+    },
+    {
+      "los": "分类: financial assets / associates / joint ventures / business combinations 的会计方法对应",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "把'持股类别'对上'会计方法'的一张速查表。\n考试常给一个情景问你**该用哪种记账**、对财报有什么影响。\n关键是分清 **FV 计量 / equity method / consolidation** 三条路。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**Financial assets（无重大影响）**：\n– FVPL：公允价值变动进 **P&L**；\n– FVOCI：变动进 **OCI**；\n– 债权可 **amortized cost**。\n**Associate / JV** → **equity method**（投资一行、按比例确认利润）。\n**Business combination（控制）** → **acquisition method** 全并表，确认 goodwill 与 NCI。\n==影响力越大，越往'并表'方向走==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "IFRS 权益类默认 **FVPL**，可**不可撤销**选 FVOCI（且股利进 P&L、处置**不重分类**进 P&L）。\nUS GAAP 权益类基本一律 **FVPL**。\n第二坑：equity method 下**利润按持股比例**确认，但收到**股利要冲减投资账面**，不是收入。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "一句话链条 **'FV → equity → consolidate'**，对应影响力**小→中→大**。\nFVOCI 记成 **'装进 OCI 的抽屉'**：股权类进去后==处置不倒回损益==（和债权 FVOCI 不同）。"
+        }
+      ]
+    },
+    {
+      "los": "Equity method: 初始确认、投资收益、股利、超额购买价分摊",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "权益法（equity method），也叫 **one-line consolidation**。\n投资就一行'长期股权投资'，随被投资方赚钱涨、分红降。\n难点在**买价高于账面净资产**那部分怎么处理。"
+        },
+        {
+          "h": "核心公式",
+          "b": "**期末投资 = 期初 + 应占净利润 − 收到股利**。\n$\\text{Inv}_{end}=\\text{Inv}_{beg}+\\%\\times NI - \\text{Dividends}$\n**超额购买价** = 买价 − 应占**公允**净资产。\n先分给**可辨认资产**（低估的存货/PP&E），差额才是 **goodwill**。\n分到折旧性资产的部分要==逐年摊销、冲减投资收益==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "股利是**冲投资**不是收入——最常错。\n第二坑：分到 PP&E 的溢价要**多提折旧**，因此权益法利润通常**低于**简单按比例的数。\n第三坑：goodwill 部分**不摊销**（只测减值）；分到存货的溢价在**存货售出当年**一次性冲掉。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "投资账像水位：**'赚钱注水、分红放水'**。\n溢价分摊记 **'先喂资产(摊销)，剩下才叫商誉(不摊)'**——凡是**有寿命的资产**分到的溢价，==每年都要还回去==。"
+        }
+      ]
+    },
+    {
+      "los": "Employee Compensation: Post-Employment and Share-Based",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "员工的两类'延后发的钱'：\n**退休金**——DB（确定给付，公司担风险）vs DC（确定缴费，员工担风险）。\n**股份支付**——stock options 与 RSU，用股权当薪酬。\n重点全在 DB 和 options 的**费用与负债确认**上。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**DC**：缴多少认多少费用，**无表内负债**，超简单。\n**DB**：表内列 **funded status = 计划资产公允值 − PBO**；欠资(underfunded)记负债。\n**Share-based**：\n– stock options 按**授予日公允价值**，在 **vesting period** 内摊成费用；\n– RSU 类同；对**权益**是重分类，通常不影响总权益，但影响 EPS 稀释。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "DB 最坑：报表上只显示**净额 funded status**，PBO 与资产的总规模藏在附注。\n第二坑：期权费用一旦**授予后不因股价涨跌重估**（权益结算），别拿期末股价重算。\n第三坑：==DC 没有精算风险，别去套折现率/薪酬假设那套==。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**'DC = 简单缴费、DB = 复杂承诺'**。\nfunded status 记成体检表：**'资产 − PBO，正数健康、负数欠债'**。\n期权记 **'授予日定价、服务期摊销'**——==定价那天锁死==。"
+        }
+      ]
+    },
+    {
+      "los": "DB计划: PBO构成与变动 (service cost, interest cost, benefits paid)",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**PBO**（projected benefit obligation）= 公司**欠员工退休金的现值**，含未来加薪预期。\n它像一个账户，每年被几件事推高或压低。\n看懂这几笔变动，pension 就通了一大半。"
+        },
+        {
+          "h": "核心公式",
+          "b": "**期末 PBO = 期初 PBO + 当期 service cost + interest cost + past service cost ± 精算损益 − benefits paid**。\n$\\text{Interest cost}=\\text{折现率}\\times\\text{期初 PBO}$。\n**service cost** = 员工本年多干一年攒下的新给付现值。\n**benefits paid**（实付退休金）==同时减少 PBO 和计划资产，对净额无影响==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "benefits paid 是**双减**：PBO 减、plan assets 减，funded status **不变**——别只减一边。\n第二坑：interest cost 用**期初 PBO × 折现率**，别用期末。\n第三坑：actuarial loss（假设变差）**推高 PBO**，是 remeasurement，不进当期 service cost。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "PBO 像蓄水池：**'服务+利息 进水，发钱(benefits) 出水'**。\n发钱记 **'左手 PBO 右手资产一起掏'**——==两边同步下降，净额纹丝不动==。"
+        }
+      ]
+    },
+    {
+      "los": "假设变动(折现率/薪酬增长率)对负债与费用的影响方向",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "DB 计划全靠**精算假设**撑着。\n最爱考两个：**折现率**（把未来给付折回现在）和**薪酬增长率**（未来工资涨多少）。\n假设一动，PBO 和 pension cost 跟着反向或同向变——方向题必考。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**折现率↑** → PBO **↓**（分母大了）、当期 service cost **↓**、funded status **改善**。\n**折现率↓** → 全部反向。\n**薪酬增长率↑** → 未来给付更高 → PBO **↑**、service cost **↑**。\n**预期资产回报率↑（US GAAP）** → 压低 pension expense（IFRS 无此项）。\n==折现率与 PBO 反向，薪酬增长率与 PBO 同向==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "折现率**升高看似坏事其实降负债**——别被'利率高'的直觉带偏。\n第二坑：折现率对 **interest cost** 的净效应模糊——率↑但 PBO↓，方向不确定，别急着下结论。\n第三坑：公司偷偷调高折现率/资产回报率来**美化利润**，是 report quality 红旗。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**'折现率是刹车（率高→债低），薪酬率是油门（涨薪→债高）'**。\n想赖账的公司会**踩刹车调高折现率**，==看到折现率异常上调就警觉==。"
+        }
+      ]
+    },
+    {
+      "los": "IFRS vs US GAAP: periodic pension cost 三成分归属 (P&L vs OCI)",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "每期 pension cost 拆三块：**service cost、net interest、remeasurements**。\n问题是每块进 **P&L（利润）**还是 **OCI（其他综合收益）**。\nIFRS 和 US GAAP 分法不同，是本 LOS 的核心对比。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**IFRS**：\n– service cost（当期+past）→ **P&L**；\n– **net interest** = 折现率 × net pension liability → **P&L**；\n– **remeasurements**（精算损益 + 资产实际回报超出利息部分）→ **OCI**，**不摊销**。\n**US GAAP**：\n– 当期 service cost、interest cost、**expected return** → **P&L**；\n– past service cost、精算损益 → **OCI**，之后**摊销**回 P&L（corridor）。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "US GAAP 用 **expected return**（管理层估的）算进 P&L，可被操纵；IFRS 只认**折现率**下的 net interest，更干净。\n第二坑：IFRS 的 remeasurement **永远留在 OCI 不回流**；US GAAP 的会**摊销回利润**。\n第三坑：==总 comprehensive income 两准则一致，只是 P&L 与 OCI 切分不同==。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**'IFRS 干脆：波动全丢 OCI 不回头；US GAAP 拖泥带水：先进 OCI 再慢慢摊回'**。\nexpected return 记成 **US GAAP 的美颜滤镜**——==估高回报就压低费用==。"
+        }
+      ]
+    },
+    {
+      "los": "Analysis of Financial Institutions",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "银行/保险这类**金融机构**跟普通公司不一样——资产负债表本身就是它的'产品'。\n通用框架记 **CAMELS**：\n**C**apital、**A**sset quality、**M**anagement、**E**arnings、**L**iquidity、**S**ensitivity（利率敏感度）。"
+        },
+        {
+          "h": "核心规则",
+          "b": "**CAMELS** 六维度逐项看：\n**Capital adequacy** → CET1/Tier1 比率；\n**Asset quality** → 不良贷款、拨备覆盖；\n**Management** → 治理与风控；\n**Earnings** → NIM、ROA、收入结构；\n**Liquidity** → LCR/NSFR；\n**Sensitivity** → 利率/汇率敞口。\n==金融机构分析先套 CAMELS，再看监管指标==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "别用普通制造业那套周转率/存货去分析银行——**核心是资本充足和流动性**。\n第二坑：区分 **systematic（受监管、可比）** 与 **idiosyncratic（管理质量、表外风险）** 两类因素。\n第三坑：表外项目（衍生品、承诺额度）==对银行风险影响巨大，不能只看表内==。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "口诀 **CAMELS = 骆驼**：一头能扛沙漠的骆驼要有'资本(驼峰)、好资产、会管理、能赚钱、有水(流动性)、抗晒(利率敏感)'。\n==记住六个字母就抓住金融机构分析主线==。"
+        }
+      ]
+    },
+    {
+      "los": "银行: capital adequacy (CET1/Tier1), liquidity (LCR/NSFR)",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "Basel III 给银行套的两道'安全绳'：\n**资本充足**——亏损时有没有本钱扛（capital）。\n**流动性**——挤兑/断融资时有没有现金撑（liquidity）。\n对应 CET1/Tier1 和 LCR/NSFR 四个比率。"
+        },
+        {
+          "h": "核心公式",
+          "b": "资本充足（分母都是 **RWA 风险加权资产**）：\n$\\text{CET1}=\\dfrac{\\text{核心一级资本}}{\\text{RWA}}\\ge 4.5\\%$\n$\\text{Tier1}\\ge 6\\%,\\ \\text{Total}\\ge 8\\%$。\n流动性：\n$\\text{LCR}=\\dfrac{\\text{优质流动资产}}{\\text{30天净现金流出}}\\ge 100\\%$\n$\\text{NSFR}=\\dfrac{\\text{可用稳定资金}}{\\text{所需稳定资金}}\\ge 100\\%$。\n==LCR 看短期(30天)，NSFR 看长期(1年)==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "资本比率分母是 **RWA 不是总资产**——风险越高的资产权重越大。\n第二坑：LCR 和 NSFR 都要 **≥100%**，别把 LCR 记成 30% 之类。\n第三坑：CET1 是**最硬核**的资本（普通股+留存），Tier1 = CET1 + AT1，==别把次级债当 CET1==。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "**'资本看 CET1/Tier1（扛亏损），流动性看 LCR/NSFR（防挤兑）'**。\n时间轴记 **'LCR 短跑 30 天、NSFR 马拉松 1 年'**，==两条流动线都得跑过 100%==。"
+        }
+      ]
+    },
+    {
+      "los": "Evaluating Quality of Financial Reports",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "报告质量分两个独立维度：\n**Reporting quality**（报告本身）——数字是否忠实、可比、不操纵。\n**Earnings/Results quality**（业绩本身）——盈利是否**可持续、够现金支撑、回报够本**。\n两者拆开评：可以数字真实但业绩很烂。"
+        },
+        {
+          "h": "核心规则",
+          "b": "质量光谱从高到低：\n**GAAP 且忠实 → GAAP 但有偏 → GAAP 但'管理'盈余 → 违背 GAAP → 直接造假**。\n高质量盈利 = **可持续 + 有现金流支撑**（accruals 低）。\n信号：\n– 收入激进确认、费用资本化 → 红旗；\n– ==净利润高但经营现金流跟不上 = 盈利质量差==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "别混两个维度：'报告质量高'≠'业绩好'。数字可以真实无误，但业务在亏钱。\n第二坑：**high earnings ≠ high quality**——一次性收益、放松准备金都能撑高利润。\n第三坑：留意 **non-GAAP/pro forma** 剔掉'一次性'费用，==年年都有的'一次性'就是危险信号==。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "两把尺子 **'报告尺(真不真) + 业绩尺(强不强)'**，分开量。\n盈利质量口诀 **'利润要有现金垫背'**——==净利润和经营现金流长期背离，就是纸面富贵==。"
+        }
+      ]
+    },
+    {
+      "los": "Cash-flow-based accruals ratio",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "**Accruals（应计）** = 净利润里**没有现金支撑**的那部分。\n应计越大，利润越靠会计估计撑着，**盈利质量越差、越可能反转**。\n用现金流量表算比只看资产负债表更干净。"
+        },
+        {
+          "h": "核心公式",
+          "b": "**Aggregate accruals（现金流口径）**\n$= NI - (CFO + CFI)$。\n**Accruals ratio**\n$=\\dfrac{NI-(CFO+CFI)}{\\text{平均净经营资产 NOA}}$。\n平均 NOA = (期初+期末 NOA)/2。\n==比率越高 = 应计占比越大 = 质量越低==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "分子要减的是 **CFO + CFI** 两个（不是只减 CFO）——最常错。\n第二坑：balance-sheet 法和 cash-flow 法结果略不同，cash-flow 法**受并购/汇率干扰更小**，更受推崇。\n第三坑：==高 accruals ratio 预示未来盈利/回报走弱==，用于横向排雷。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "口诀 **'利润减掉现金 = 水分(accruals)'**。\n分母那句记 **'水分除以净经营资产 = 掺水浓度'**——==浓度越高越危险==。"
+        }
+      ]
+    },
+    {
+      "los": "Integration of Financial Statement Analysis Techniques",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "把 FSA 学的全套工具**串起来解决一个真实问题**：估值、信用、盈利质量、并购影响一起上。\n不是新知识，是**流程题**：先定目的，再选工具，最后调表可比。"
+        },
+        {
+          "h": "核心规则",
+          "b": "标准流程：\n1) **明确目的**（选股/授信/预警）；\n2) 收集数据、做**行业与会计政策对比**；\n3) **调整报表**使其可比（LIFO→FIFO、经营租赁、pension 净额还原、权益法/并表口径统一）；\n4) 算比率、拆 **DuPont**、看现金质量；\n5) 下结论。\n==核心是'为可比而调表'，再谈结论==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "跨公司比之前必须**统一会计政策**（存货法、折旧、投资口径）——不调直接比是大坑。\n第二坑：注意**表外与一次性项目**（表外融资、非经常损益）会扭曲趋势。\n第三坑：==结论要回到最初的分析目的==，别算一堆比率却答非所问。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "五步链 **'定目的 → 调可比 → 拆比率 → 验现金 → 下判断'**。\n一句话 **'先把两家公司放到同一把尺子上'**——==调表可比是整合分析的灵魂==。"
+        }
+      ]
+    },
+    {
+      "los": "Financial Statement Analysis",
+      "cards": [
+        {
+          "h": "这是什么",
+          "b": "FSA 大科目的总框架：从**四张表**出发，用比率、共同比、趋势分析，回答'这家公司值不值、稳不稳'。\n三张核心表 + 一张现金流，配附注(footnotes) 才是全貌。"
+        },
+        {
+          "h": "核心规则",
+          "b": "工具箱：\n**Common-size**（共同比）——I/S 除以收入、B/S 除以总资产，看结构。\n**Ratios** 五类：liquidity、solvency、activity、profitability、valuation。\n**DuPont** 拆 ROE：\n$ROE = \\text{净利率} \\times \\text{总资产周转} \\times \\text{权益乘数}$。\n==比率必须配同业/同期基准才有意义==。"
+        },
+        {
+          "h": "考试陷阱",
+          "b": "单看一个比率没意义——要**跨期(trend)和跨公司(peer)**对比。\n第二坑：不同会计政策(LIFO/FIFO、折旧法)让比率**不可直接比**，先调表。\n第三坑：==附注(footnotes) 和 MD&A 藏着表外风险、分部信息==，别只盯正表数字。"
+        },
+        {
+          "h": "记忆钩子",
+          "b": "口诀 **'共同比看结构、比率看健康、DuPont 拆回报'**。\nDuPont 记成 **'赚得狠(净利率)×转得快(周转)×借得多(杠杆)'**——==三力共同决定 ROE==。"
+        }
+      ]
+    }
+  ]
+}
