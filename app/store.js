@@ -376,12 +376,14 @@ const Store = (() => {
 
   /* 内联 AI 教练: 浏览器直连大模型 API。按 key 前缀自动识别 Gemini / Anthropic。
    * 默认 Gemini (AIza 开头); sk-ant 开头则走 Anthropic。 */
-  const COACH_SYS_CN = '你是 CFA L2 私人教练。用最简单的中文讲清楚，配一个新例子，别重复原题解析。专业术语保留英文。回答控制在 200 字内。';
-  const COACH_SYS_EN = 'You are a CFA L2 personal coach. Explain in clear, simple English with one fresh example; do not just repeat the given explanation. Keep it under 150 words.';
+  const COACH_SYS_CN = '你是学员的 CFA L2 私人教练，多轮对话式辅导。风格：口语化、直给、每次回答简短（150 字内），必要时配一个新例子或类比，别照抄原题解析。专业术语保留英文。学员会追问，你要顺着上下文接着讲，可以反问确认他卡在哪。用 Markdown（**加粗**关键词、必要时列点）。';
+  const COACH_SYS_EN = 'You are the student\'s CFA L2 personal coach in a multi-turn dialogue. Style: conversational, direct, short (under 150 words each turn), add a fresh example or analogy when useful, do not just repeat the given explanation. The student will ask follow-ups — continue with context and probe what they\'re stuck on. Use Markdown (**bold** key terms, bullet points when helpful).';
   /* 核心 LLM 调用: 浏览器直连。按 key 前缀识别 AIza→Gemini / sk-ant→Anthropic。 */
-  async function callLLM(system, prompt, maxTok) {
+  // messages: 单条字符串 或 [{role:'user'|'assistant', content}] 多轮历史
+  async function callLLM(system, messages, maxTok) {
     const key = settings().aiKey;
     if (!key) return { ok: false, reason: 'no-key' };
+    const msgs = typeof messages === 'string' ? [{ role: 'user', content: messages }] : messages;
     const useAnthropic = key.startsWith('sk-ant');
     try {
       if (useAnthropic) {
@@ -397,7 +399,7 @@ const Store = (() => {
             model: settings().aiModel || 'claude-sonnet-5',
             max_tokens: maxTok || 800,
             system,
-            messages: [{ role: 'user', content: prompt }],
+            messages: msgs.map(m => ({ role: m.role, content: m.content })),
           }),
         });
         if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
@@ -410,7 +412,7 @@ const Store = (() => {
         'gemini-2.0-flash', 'gemini-1.5-flash'].filter(Boolean))];
       const body = JSON.stringify({
         system_instruction: { parts: [{ text: system }] },
-        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        contents: msgs.map(m => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] })),
         generationConfig: { maxOutputTokens: maxTok || 800, temperature: 0.5 },
       });
       let lastStatus = 0;
@@ -432,9 +434,10 @@ const Store = (() => {
       return { ok: false, reason: 'network' };
     }
   }
-  function askTutor(prompt) {
-    return callLLM(settings().explLang === 'en' ? COACH_SYS_EN : COACH_SYS_CN, prompt);
-  }
+  function coachSys() { return settings().explLang === 'en' ? COACH_SYS_EN : COACH_SYS_CN; }
+  function askTutor(prompt) { return callLLM(coachSys(), prompt); }
+  /* 多轮对话: history = [{role:'user'|'assistant', content}] */
+  function coachChat(history) { return callLLM(coachSys(), history); }
   /* 把一段解析翻成目标语言 (中/英解析开关用). 保留公式/术语/数字不变。 */
   function translate(text, toLang) {
     const sys = toLang === 'en'
@@ -469,7 +472,7 @@ const Store = (() => {
     init, settings, setSettings, daysToExam, examCfg,
     buildSession, dueCards, newCards, newQuota, applyGrade,
     statsData, streakInfo, cardState, setNote, getNote,
-    phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson, askTutor, translate,
+    phase, addXp, buildMock, saveMock, daysSinceMock, markLearned, getLesson, askTutor, coachChat, translate,
     setTier, topicStats, projectedScore, practiceTopic, topicMeta,
     examWindow, examTodos, toggleExamDone, daysFromToday,
     syncToday, flushPending, exportData, importData, resetData,

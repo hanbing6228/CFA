@@ -207,6 +207,18 @@ textarea { width: 100%; min-height: 90px; border-radius: 10px; border: 1.5px sol
 .tutor-box { margin-top: 10px; border: 1.5px solid var(--accent); border-radius: 12px; padding: 12px; background: var(--accent-soft); font-size: .9rem; }
 .tutor-box .ans { white-space: pre-wrap; margin-top: 6px; }
 .tutor-loading { color: var(--muted); font-size: .85rem; }
+/* 教练多轮对话 */
+.chatlog { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.chat-u { align-self: flex-end; max-width: 85%; background: var(--accent); color: #fff; padding: 8px 12px; border-radius: 13px 13px 4px 13px; font-size: .9rem; line-height: 1.5; }
+.chat-a { align-self: flex-start; max-width: 94%; background: var(--card); border: 1px solid var(--border); padding: 9px 13px; border-radius: 13px 13px 13px 4px; font-size: .92rem; line-height: 1.62; }
+.chat-a.loading { color: var(--muted); }
+.chat-who { color: var(--accent); font-size: .78rem; margin-bottom: 4px; }
+.chat-a i { font-style: italic; }
+.chatinput { display: flex; gap: 7px; margin-top: 9px; }
+.chatinput input { flex: 1; min-width: 0; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: 11px; background: var(--card); color: var(--text); font-size: .9rem; }
+.chatinput input:focus { outline: none; border-color: var(--accent); }
+.chatinput button { flex: none; width: 46px; display: flex; align-items: center; justify-content: center; border: none; border-radius: 11px; background: var(--accent); color: #fff; cursor: pointer; }
+.chatinput button .ic { width: 20px; height: 20px; }
 
 /* 高频/必背徽章 */
 .freq { font-size: .66rem; padding: 1px 6px; border-radius: 5px; font-weight: 700; margin-right: 5px; vertical-align: middle; }

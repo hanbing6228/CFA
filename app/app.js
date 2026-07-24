@@ -52,6 +52,7 @@ const _IC = {
   sliders: '<path d="M5 8h14M5 16h14"/><circle cx="9" cy="8" r="2.2"/><circle cx="15" cy="16" r="2.2"/>',
   wrench: '<path d="M15.5 6.2a3.6 3.6 0 0 0-4.8 4.3l-6.3 6.3L7 19.6l6.3-6.3a3.6 3.6 0 0 0 4.3-4.8l-2.4 2.4-2-2z"/>',
   flag: '<path d="M5 21V4M5 5h11l-2 3 2 3H5"/>',
+  send: '<path d="M4.5 11.5L19 5l-5.5 14-2.6-5.4z"/><path d="M10.9 13.6L19 5"/>',
 };
 /* ic('name'): 返回内联 SVG 字符串; color 走 currentColor, 可传 style 覆盖 */
 function ic(name, cls, style) {
@@ -335,10 +336,42 @@ function renderLesson(item, main) {
   main.appendChild(card);
 }
 
-/* 内联 AI 教练控件: 有 API key 就直接在页内出答案, 没有则回退到复制 */
+/* 教练回答的 markdown-lite 渲染: **加粗** / *斜体* / 列点 / $公式$ / 换行 */
+function coachMd(raw) {
+  let t = String(raw).replace(/^\s*#{1,6}\s+/gm, '').replace(/^\s*[\*\-]\s+/gm, '• ');
+  let h = richText(t);                       // 处理 $公式$、**加粗**、==高亮==、\n
+  h = h.replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<i>$2</i>');   // *斜体*
+  return h;
+}
+
+/* 内联 AI 教练: 多轮对话。首点带上下文提问, 之后可连续追问 */
 function tutorWidget(label, buildPrompt) {
   const wrap = el('div', 'askrow');
   const btn = el('button', 'askbtn', label);
+  const history = [];
+  let log = null, inputRow = null;
+
+  async function turn(userContent, showBubble) {
+    if (showBubble) log.appendChild(el('div', 'chat-u', esc(showBubble)));
+    const loading = el('div', 'chat-a loading', `${ic('cap')} 教练思考中…`);
+    log.appendChild(loading); loading.scrollIntoView({ block: 'nearest' });
+    history.push({ role: 'user', content: userContent });
+    const res = await Store.coachChat(history);
+    loading.remove();
+    if (res.ok) {
+      history.push({ role: 'assistant', content: res.text });
+      log.appendChild(el('div', 'chat-a', `<div class="chat-who">${ic('cap')} <b>教练</b></div>${coachMd(res.text)}`));
+    } else if (res.reason === 'no-key') {
+      history.pop();
+      log.appendChild(el('div', 'chat-a', '请先在设置里贴 Gemini API key'));
+    } else {
+      history.pop();
+      log.appendChild(el('div', 'chat-a', `出错了 (${esc(res.reason)})，再试一次或换个问法`));
+    }
+    if (inputRow) inputRow.querySelector('input').focus();
+    log.lastChild.scrollIntoView({ block: 'nearest' });
+  }
+
   btn.onclick = async () => {
     const prompt = buildPrompt();
     if (!Store.settings().aiKey) {
@@ -348,20 +381,16 @@ function tutorWidget(label, buildPrompt) {
       return;
     }
     btn.style.display = 'none';
-    const box = el('div', 'tutor-box');
-    box.appendChild(el('div', 'tutor-loading', `${ic('help')} 教练正在讲…`));
-    wrap.appendChild(box);
-    const res = await Store.askTutor(prompt);
-    box.innerHTML = '';
-    if (res.ok) {
-      box.appendChild(el('div', '', `${ic('cap')} <b>教练</b>`));
-      box.appendChild(el('div', 'ans', fmt(res.text)));
-    } else if (res.reason === 'no-key') {
-      box.appendChild(el('div', 'tutor-loading', '请先在设置里贴 Gemini API key'));
-    } else {
-      box.appendChild(el('div', 'tutor-loading', `出错了 (${res.reason})。已把问题复制到剪贴板`));
-      navigator.clipboard.writeText(prompt).catch(() => {});
-    }
+    log = el('div', 'chatlog'); wrap.appendChild(log);
+    inputRow = el('div', 'chatinput');
+    const inp = el('input'); inp.type = 'text'; inp.placeholder = '追问教练…（再举个例子 / 和 X 的区别？）';
+    const send = el('button', '', ic('send'));
+    const doSend = () => { const v = inp.value.trim(); if (!v) return; inp.value = ''; turn(v, v); };
+    send.onclick = doSend;
+    inp.addEventListener('keydown', e => { if (e.key === 'Enter') doSend(); });
+    inputRow.appendChild(inp); inputRow.appendChild(send);
+    wrap.appendChild(inputRow);
+    await turn(prompt, null);   // 首轮: 带上下文, 不显示大段 prompt 气泡
   };
   wrap.appendChild(btn);
   return wrap;
