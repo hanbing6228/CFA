@@ -404,22 +404,30 @@ const Store = (() => {
         const data = await res.json();
         return { ok: true, text: (data.content || []).map(b => b.text || '').join('') };
       }
-      const model = settings().aiModel || 'gemini-2.5-flash';
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,
-        {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({
-            system_instruction: { parts: [{ text: system }] },
-            contents: [{ role: 'user', parts: [{ text: prompt }] }],
-            generationConfig: { maxOutputTokens: maxTok || 800, temperature: 0.5 },
-          }),
-        });
-      if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
-      const data = await res.json();
-      const text = ((data.candidates || [])[0]?.content?.parts || []).map(p => p.text || '').join('');
-      return text ? { ok: true, text } : { ok: false, reason: 'empty' };
+      // Gemini: 依次尝试候选模型, 404/400 (模型不存在/无效) 就换下一个, 成功后记住它
+      const configured = (settings().aiModel || '').trim();
+      const candidates = [...new Set([configured, 'gemini-2.5-flash', 'gemini-flash-latest',
+        'gemini-2.0-flash', 'gemini-1.5-flash'].filter(Boolean))];
+      const body = JSON.stringify({
+        system_instruction: { parts: [{ text: system }] },
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: { maxOutputTokens: maxTok || 800, temperature: 0.5 },
+      });
+      let lastStatus = 0;
+      for (const model of candidates) {
+        const res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`,
+          { method: 'POST', headers: { 'content-type': 'application/json' }, body });
+        if (res.ok) {
+          if (model !== configured) setSettings({ aiModel: model });   // 记住可用模型
+          const data = await res.json();
+          const text = ((data.candidates || [])[0]?.content?.parts || []).map(p => p.text || '').join('');
+          return text ? { ok: true, text } : { ok: false, reason: 'empty' };
+        }
+        lastStatus = res.status;
+        if (res.status !== 404 && res.status !== 400) return { ok: false, reason: `HTTP ${res.status}` };
+      }
+      return { ok: false, reason: `无可用模型 (HTTP ${lastStatus}) — 检查 key 或在设置改模型名` };
     } catch (e) {
       return { ok: false, reason: 'network' };
     }
