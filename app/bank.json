@@ -1091,101 +1091,106 @@
    ]
   },
   "Corp": {
-   "Analysis of Dividends and Share Repurchases": [
+   "LM1 Analysis of Dividends and Share Repurchases": [
     {
-     "t": "股利理论: MM无关(无税无摩擦)、一鸟在手、税收厌恶",
+     "t": "现金股利: 资产与权益市值↓、股东财富不变;流动比率↓、杠杆比率↑",
      "trap": 1
     },
     {
-     "t": "回购与等额现金股利在完美市场对股东财富等效",
+     "t": "股票股利/拆股: 股数↑价↓EPS↓、P/E与股东财富不变;逆拆股相反"
+    },
+    {
+     "t": "理论: MM无关(完美市场)、一鸟在手、税收厌恶;另有信号与代理成本",
+     "trap": 1
+    },
+    {
+     "t": "稳定股利: $D_1=D_0+(\\text{预期盈利}\\times\\text{目标支付率}-D_0)\\times\\text{调整因子}$",
+     "f": 1
+    },
+    {
+     "t": "回购=等额现金股利(完美市场财富等效);TD>TCG时回购更优",
      "f": 1,
      "trap": 1
     },
     {
-     "t": "回购: 若回购价=市价则EPS变化取决于税后融资成本 vs 盈利收益率",
+     "t": "回购EPS: 看盈利收益率 vs 融资税后成本; BVPS看回购价 vs 账面",
      "trap": 1
     },
     {
-     "t": "剩余股利政策: 先满足资本预算,余额分红 → 股利波动大"
-    },
-    {
-     "t": "股利覆盖 = $\\frac{\\text{净利润}}{\\text{股利}}$;FCFE覆盖 = $\\frac{FCFE}{\\text{股利+回购}}$衡量可持续性",
+     "t": "覆盖率: 股利覆盖=NI/股利; FCFE覆盖=FCFE/(股利+回购)",
      "f": 1
-    },
-    {
-     "t": "信号: 提高股利传递管理层信心;削减为负面信号(粘性)",
-     "trap": 1
     }
    ],
-   "ESG Considerations": [
+   "LM2 ESG Considerations": [
     {
-     "t": "ESG整合: 将环境、社会、治理因素纳入估值与风险分析"
+     "t": "所有权: 分散 vs 集中;横向交叉持股 vs 纵向金字塔控股"
     },
     {
-     "t": "治理要点: 董事会独立性、股东权利、双重股权、关联交易",
+     "t": "分散所有+集中投票权 → principal–principal问题;投票上限导致反向组合",
      "trap": 1
     },
     {
-     "t": "投资方法: 负面剔除、正面/同类最优、主题、影响力、股东参与"
+     "t": "治理评估: 董事会独立/结构(一层vs两层)、委员会、技能、薪酬与claw-back"
     },
     {
-     "t": "ESG风险常影响现金流预测或折现率(风险溢价)",
-     "f": 1
-    },
-    {
-     "t": "数据挑战: 披露不一致、评级机构分歧、漂绿(greenwashing)",
+     "t": "双重股权结构常有利于特定股东群体",
      "trap": 1
+    },
+    {
+     "t": "ESG重要性随投资期限与行业而变;权益兼顾机会与下行,固收偏重下行风险",
+     "trap": 1
+    },
+    {
+     "t": "识别方法: 自研、ESG数据商(MSCI/Sustainalytics)、非营利行业倡议"
     }
    ],
-   "Cost of Capital: Advanced Topics": [
+   "LM3 Cost of Capital: Advanced Topics": [
     {
-     "t": "$WACC = w_d\\times r_d\\times(1-t) + w_e\\times r_e$,用目标/市值权重",
+     "t": "自上而下: 资金可得性、无风险利率/利差/ERP、监管成熟度、税辖区"
+    },
+    {
+     "t": "自下而上: 盈利波动、资产流动性、杠杆、公司特质风险;债含可赎回/回售/转股"
+    },
+    {
+     "t": "交易债用YTM较易;非交易债用合成评级等",
+     "trap": 1
+    },
+    {
+     "t": "历史ERP四决策: 指数、样本期、均值类型、无风险代理;注意生存偏差",
+     "trap": 1
+    },
+    {
+     "t": "前瞻ERP: 调查/DDM/宏观模型;调查有偏差,DDM常假设恒定P/E"
+    },
+    {
+     "t": "私募股权: Expanded CAPM $r_e=r_f+\\beta_{peer}(ERP)+SP+SCRP$; Build-up加行业溢价",
      "f": 1
     },
     {
-     "t": "债务成本: 有市价用YTM;无市价用同评级利差或合成评级"
+     "t": "国际: 债务/股权可用 CRP 或 ICAPM 调整",
+     "f": 1
+    }
+   ],
+   "LM4 Corporate Restructuring": [
+    {
+     "t": "三类行动: 投资(扩规模/范围)、剥离(缩)、重构(范围不变提回报)"
     },
     {
-     "t": "股权成本: CAPM、债券收益加风险溢价、股利折现隐含法"
+     "t": "投资: 股权投资/JV/并购(增长、协同、低估);剥离: 出售与spin-off"
     },
     {
-     "t": "非上市/分部beta: 取可比公司beta去杠杆再按自身结构上杠杆",
+     "t": "评估四阶段: 初评→初估→建模→更新投资论点;仅对重大重组做全套"
+    },
+    {
+     "t": "重大性=规模+契合;经验法则规模>发行人EV的10%",
      "f": 1,
      "trap": 1
     },
     {
-     "t": "去杠杆 $\\beta_u = \\frac{\\beta_e}{1+(1-t)(D/E)}$;再上杠杆反向",
-     "f": 1
+     "t": "初估: 可比公司、可比交易、溢价支付分析"
     },
     {
-     "t": "国家风险溢价 CRP 加入ERP;CRP = $\\text{主权利差}\\times\\frac{\\text{股市}\\sigma}{\\text{债市}\\sigma}$",
-     "f": 1
-    },
-    {
-     "t": "融资边际成本随规模上升(MCC),与投资机会表交点定预算",
-     "trap": 1
-    }
-   ],
-   "Corporate Restructuring": [
-    {
-     "t": "扩张(并购)、收缩(剥离/分拆)、所有权变更(LBO/私有化)"
-    },
-    {
-     "t": "动机: 协同、规模、市场势力、税收、多元化(常损害价值)",
-     "trap": 1
-    },
-    {
-     "t": "支付方式: 现金 vs 换股,风险与协同分担不同",
-     "trap": 1
-    },
-    {
-     "t": "估值: 可比公司、可比交易(含控制溢价)、DCF"
-    },
-    {
-     "t": "评估: 分析并购前后EPS、协同现值、收购溢价合理性"
-    },
-    {
-     "t": "剥离(sale)、分拆(spin-off给股东)、split-off/carve-out区别",
+     "t": "建模出pro forma报表;重组经稳定性/盈利/杠杆/资产专用性影响WACC",
      "trap": 1
     }
    ]
@@ -3576,9 +3581,6 @@
            "name": "Increase financial leverage：回购会增加财务杠杆"
           }
          ]
-        },
-        {
-         "name": "Summary"
         }
        ]
       },
@@ -3592,6 +3594,546 @@
         {
          "name": "FCFE coverage ratio = FCFE/(dividends + share repurchases)",
          "f": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM2 Environmental, Social, and Governance (ESG) Considerations in Investment Analysis",
+     "children": [
+      {
+       "name": "Global variations in ownership structures",
+       "children": [
+        {
+         "name": "Dispersed vs. concentrated ownership",
+         "children": [
+          {
+           "name": "Dispersed ownership: many shareholders, none individually able to exercise control"
+          },
+          {
+           "name": "Concentrated ownership: an individual or group (controlling shareholders) can exercise control"
+          },
+          {
+           "name": "Horizontal ownership: companies with mutual business interests have cross-holding share arrangements"
+          },
+          {
+           "name": "Vertical ownership (pyramid ownership): a company/group has controlling interest in two or more holding companies"
+          }
+         ]
+        },
+        {
+         "name": "Conflicts within different ownership structures",
+         "children": [
+          {
+           "name": "Dispersed ownership + dispersed voting power → shareholders lack power to control managers"
+          },
+          {
+           "name": "Concentrated ownership + concentrated voting power → controlling shareholders over managers and minority shareholders"
+          },
+          {
+           "name": "Dispersed ownership + concentrated voting power → principal–principal problem",
+           "trap": 1
+          },
+          {
+           "name": "Concentrated ownership + dispersed voting power → voting caps on large share positions"
+          }
+         ]
+        },
+        {
+         "name": "Types of influential shareholders",
+         "children": [
+          {
+           "name": "Banks"
+          },
+          {
+           "name": "Families"
+          },
+          {
+           "name": "State-Owned Enterprises (SOEs)"
+          },
+          {
+           "name": "Institutional investors"
+          },
+          {
+           "name": "Group companies"
+          },
+          {
+           "name": "Private equity firms"
+          },
+          {
+           "name": "Foreign investors"
+          },
+          {
+           "name": "Managers and board directors"
+          }
+         ]
+        },
+        {
+         "name": "Effects of ownership structure on corporate governance",
+         "children": [
+          {
+           "name": "Director independence",
+           "children": [
+            {
+             "name": "Independent board directors: no material relationship with the company regarding employment, ownership, or remuneration"
+            },
+            {
+             "name": "Percentage of independent directors tends to be higher in dispersed ownership structures"
+            }
+           ]
+          },
+          {
+           "name": "Board structures",
+           "children": [
+            {
+             "name": "One-tier board: single board with executive (internal) and non-executive (external) directors"
+            },
+            {
+             "name": "Two-tier board: supervisory board oversees a management board"
+            }
+           ]
+          },
+          {
+           "name": "Special voting arrangements: improve minority shareholder position / board nomination and election"
+          },
+          {
+           "name": "Corporate governance codes, laws, and listing requirements"
+          },
+          {
+           "name": "Stewardship codes"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Evaluating Corporate Governance Policies and Procedures",
+       "children": [
+        {
+         "name": "Board policies and practices",
+         "children": [
+          {
+           "name": "Board of directors structure"
+          },
+          {
+           "name": "Board independence: absence of a minority of independent directors is a negative aspect",
+           "trap": 1
+          },
+          {
+           "name": "Board committees"
+          },
+          {
+           "name": "Board skills and experience"
+          },
+          {
+           "name": "Board composition"
+          },
+          {
+           "name": "Other considerations in board evaluation"
+          }
+         ]
+        },
+        {
+         "name": "Executive remuneration",
+         "children": [
+          {
+           "name": "Transparency of compensation, performance criteria for incentives, linkage with company strategy, pay differential between CEO and average worker"
+          },
+          {
+           "name": "Investors consider whether remuneration policies provide appropriate incentives"
+          },
+          {
+           "name": "Claw-back policy: recover previously paid remuneration if restatements, misconduct, breach of law, or risk-management deficiencies",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "Shareholder voting rights",
+         "children": [
+          {
+           "name": "Straight voting: one vote for each share owned"
+          },
+          {
+           "name": "Dual-class shares: some shares have more voting power than those available to the general public",
+           "trap": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Identifying ESG-Related Risks and Opportunities",
+       "children": [
+        {
+         "name": "Materiality and investment horizon",
+         "children": [
+          {
+           "name": "Analysts need to evaluate the materiality of the underlying ESG data"
+          },
+          {
+           "name": "Short-term horizon: longer-term ESG issues may have little near-term valuation impact"
+          },
+          {
+           "name": "Long-term horizon: costly upgrades or regulatory fines may reduce longer-term profitability"
+          }
+         ]
+        },
+        {
+         "name": "Relevant ESG-related factors",
+         "children": [
+          {
+           "name": "When identifying a company’s specific ESG risks and opportunities, determine the relevant factors that affect its industry"
+          }
+         ]
+        },
+        {
+         "name": "Approaches used to identify ESG factors",
+         "children": [
+          {
+           "name": "Proprietary methods: own judgment / firm tools; research companies, industry associations, government organizations"
+          },
+          {
+           "name": "ESG data providers (vendors), such as MSCI or Sustainalytics"
+          },
+          {
+           "name": "Non-profit industry organizations and initiatives"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Evaluating ESG-Related Risks and Opportunities",
+       "children": [
+        {
+         "name": "Equity vs. Fixed-Income security analysis",
+         "children": [
+          {
+           "name": "Equity: ESG integration identifies potential opportunities and mitigates downside risk"
+          },
+          {
+           "name": "Fixed-income: ESG integration generally focused on mitigating downside risk",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "ESG integration",
+         "children": [
+          {
+           "name": "Examples of ESG integration"
+          },
+          {
+           "name": "Example: a coal company faces long-term risk from potential stranded assets"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM3 Cost of Capital: Advanced Topics",
+     "children": [
+      {
+       "name": "Cost of Capital Factors",
+       "children": [
+        {
+         "name": "Top-Down External Factors",
+         "children": [
+          {
+           "name": "Costs of debt and equity are influenced by both top-down and bottom-up factors"
+          },
+          {
+           "name": "Macroeconomic and political: capital availability and market conditions (risk-free rates, credit spreads, ERP)"
+          },
+          {
+           "name": "Legal and regulatory considerations: maturity of the regulatory environment"
+          },
+          {
+           "name": "Company’s tax jurisdiction"
+          }
+         ]
+        },
+        {
+         "name": "Bottom-Up Company Specific Factors",
+         "children": [
+          {
+           "name": "Issuer-specific: revenue and earnings volatility, nature and liquidity of assets, financial leverage, firm-specific risks"
+          },
+          {
+           "name": "Debt features: callability, putability, convertibility affect cost of debt"
+          },
+          {
+           "name": "Equity features: e.g. cumulative dividends affect cost of equity"
+          },
+          {
+           "name": "Top-down, bottom-up, or combination approaches still require assumptions and estimates to derive WACC"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Estimating the Cost of Debt",
+       "children": [
+        {
+         "name": "Traded Debt",
+         "children": [
+          {
+           "name": "Affected by type of debt, liquidity of the issue, credit rating, and currency"
+          },
+          {
+           "name": "Calculating cost of traded (especially straight) debt is relatively uncomplicated"
+          }
+         ]
+        },
+        {
+         "name": "Non-Traded debt",
+         "children": [
+          {
+           "name": "Requires approaches such as a synthetic credit rating",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "Bank Debt",
+         "children": [
+          {
+           "name": "Determining cost requires information for the effective cost of this financing"
+          }
+         ]
+        },
+        {
+         "name": "Leases",
+         "children": [
+          {
+           "name": "Determining cost of leasing requires information for the effective cost of this financing"
+          }
+         ]
+        },
+        {
+         "name": "International Considerations",
+         "children": [
+          {
+           "name": "Estimate using CRPs that reflect economic, political, and exchange rate risk, plus info about financial markets and regulation",
+           "f": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "The ERP",
+       "children": [
+        {
+         "name": "Historical Approach",
+         "children": [
+          {
+           "name": "Four key decisions: (1) equity index, (2) estimation time period, (3) mean measure, (4) proxy for the risk-free rate",
+           "trap": 1
+          },
+          {
+           "name": "ERP can vary over time; possibility of survivorship bias",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "Forward-Looking Approach",
+         "children": [
+          {
+           "name": "Survey-based estimates"
+          },
+          {
+           "name": "DDM-based estimates"
+          },
+          {
+           "name": "Estimates derived from macroeconomic models"
+          },
+          {
+           "name": "Limitations: survey sampling/response/behavioral biases (recency, confirmation); constant P/E assumption in DDM; modeling errors in macro estimates",
+           "trap": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "The Cost of Equity",
+       "children": [
+        {
+         "name": "DDMs"
+        },
+        {
+         "name": "Bond Yield Plus Risk Premium Approach"
+        },
+        {
+         "name": "Risk-Based Models",
+         "children": [
+          {
+           "name": "CAPM and factor models such as the Fama–French models"
+          }
+         ]
+        },
+        {
+         "name": "Estimating the Cost of Equity for Private Companies",
+         "children": [
+          {
+           "name": "Expanded CAPM: $r_e = r_f + \\beta_{peer}(ERP) + SP + SCRP$",
+           "f": 1
+          },
+          {
+           "name": "Build-up approach: $r_e = r_f + ERP + SP + IP + SCRP$",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "International Considerations",
+         "children": [
+          {
+           "name": "Adjust for additional risk using the CRP or the ICAPM",
+           "f": 1
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM4 Corporate Restructuring",
+     "children": [
+      {
+       "name": "Corporate Evolution, Actions, and Motivations",
+       "children": [
+        {
+         "name": "Corporate Life Cycle and Actions",
+         "children": [
+          {
+           "name": "Issuers alter their destiny (as described by the corporate life cycle) by taking restructuring actions"
+          }
+         ]
+        },
+        {
+         "name": "Motivations for Corporate Structural Change"
+        },
+        {
+         "name": "Types of Corporate Restructurings",
+         "children": [
+          {
+           "name": "Investment actions (increase size/scope)",
+           "children": [
+            {
+             "name": "Equity investments, joint ventures, and acquisitions"
+            },
+            {
+             "name": "Often seeking growth, synergies, or undervalued targets"
+            }
+           ]
+          },
+          {
+           "name": "Divestment actions (decrease size/scope)",
+           "children": [
+            {
+             "name": "Sales and spin-offs"
+            },
+            {
+             "name": "Seeking higher growth/profitability or lower risk by shedding divisions and assets"
+            }
+           ]
+          },
+          {
+           "name": "Restructuring actions (scope unchanged)",
+           "children": [
+            {
+             "name": "Cost cutting, balance sheet restructurings, and reorganizations"
+            },
+            {
+             "name": "Aim to improve returns on capital to historical or peer levels"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Evaluating Corporate Restructurings",
+       "children": [
+        {
+         "name": "Four phases",
+         "children": [
+          {
+           "name": "Initial evaluation → preliminary valuation → modeling → updating the investment thesis"
+          },
+          {
+           "name": "Entire evaluation generally done only for material restructurings"
+          }
+         ]
+        },
+        {
+         "name": "Initial Evaluation",
+         "children": [
+          {
+           "name": "What is happening? When is it happening? Is it material? Why is it happening?"
+          },
+          {
+           "name": "Materiality = size + fit",
+           "trap": 1
+          },
+          {
+           "name": "Size rule of thumb: large actions > 10% of issuer’s enterprise value (e.g. acquisition consideration > 10% of acquirer’s pre-announcement EV)",
+           "f": 1
+          },
+          {
+           "name": "Fit: alignment between the action and an analyst’s expectations for the issuer"
+          }
+         ]
+        },
+        {
+         "name": "Preliminary Valuation",
+         "children": [
+          {
+           "name": "Comparable company analysis"
+          },
+          {
+           "name": "Comparable transaction analysis"
+          },
+          {
+           "name": "Premium paid analysis"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Modeling and Valuation",
+       "children": [
+        {
+         "name": "Pro Forma Weighted Average Cost of Capital",
+         "children": [
+          {
+           "name": "Model restructurings on financial statements based on situational specifics → pro forma financial statements"
+          },
+          {
+           "name": "WACC determined by weights of capital types and constituent costs of capital"
+          },
+          {
+           "name": "Costs of capital influenced by bottom-up and top-down drivers"
+          },
+          {
+           "name": "Bottom-up drivers: stability, profitability, leverage, and asset specificity"
+          },
+          {
+           "name": "Corporate restructurings affect the cost of capital by affecting these drivers",
+           "trap": 1
+          }
+         ]
         }
        ]
       }
