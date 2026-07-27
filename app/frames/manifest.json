@@ -3,7 +3,7 @@
   "Corp": ["Corp-1.png", "Corp-2.png", "Corp-3.png", "Corp-4.png"],
   "Econ": ["Econ.png"],
   "QM": ["QM.png"],
-  "Equity": ["Equity.png"],
+  "Equity": ["Equity-1.png", "Equity-2.png", "Equity-3.png", "Equity-4.png", "Equity-5.png", "Equity-6.png"],
   "Alts": ["Alts-1.png", "Alts-2.png", "Alts-3.png", "Alts-4.png"],
   "FI": ["FI-1.png", "FI-2.png", "FI-3.png", "FI-4.png", "FI-5.png"]
 }

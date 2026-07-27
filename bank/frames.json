@@ -138,7 +138,7 @@
     ]
   },
   "Equity": {
-    "Equity Valuation: Applications and Processes": [
+    "LM1 Equity Valuation: Applications and Processes": [
       {
         "t": "感知错价 $V_E-P$ = 真实错价$(V-P)$ + 估值误差$(V_E-V)$",
         "f": 1,
@@ -149,7 +149,7 @@
         "los": "绝对 vs 相对估值模型适用场景"
       }
     ],
-    "Discounted Dividend Valuation": [
+    "LM2 Discounted Dividend Valuation": [
       {
         "t": "GGM: $V_0 = \\frac{D_1}{r-g}$;注意题给 $D_0$ 要 $\\times(1+g)$",
         "f": 1,
@@ -178,7 +178,7 @@
         "los": "SGR = b × ROE (与 PRAT 扩展)"
       }
     ],
-    "Free Cash Flow Valuation": [
+    "LM3 Free Cash Flow Valuation": [
       {
         "t": "FCFF = NI + NCC + Int(1−t) − FCInv − WCInv;EBIT路径 = EBIT(1−t)+Dep−FCInv−WCInv;CFO路径 = CFO+Int(1−t)−FCInv",
         "f": 1,
@@ -200,7 +200,7 @@
         "los": "单阶段/两阶段 FCF 模型计算"
       }
     ],
-    "Market-Based Valuation: Price and Enterprise Value Multiples": [
+    "LM4 Market-Based Valuation: Price and Enterprise Value Multiples": [
       {
         "t": "Justified leading P/E = $\\frac{payout}{r-g}$;trailing = $\\frac{payout(1+g)}{r-g}$,差 $(1+g)$ 倍",
         "f": 1,
@@ -222,7 +222,7 @@
         "los": "PEG 的用法与缺陷"
       }
     ],
-    "Residual Income Valuation": [
+    "LM5 Residual Income Valuation": [
       {
         "t": "$RI = NI - r_e\\times BV_0 = (ROE - r_e)\\times BV_0$;equity charge 用期初 BV",
         "f": 1,
@@ -249,7 +249,7 @@
         "los": "RI vs DDM/FCF 适用场景"
       }
     ],
-    "Private Company Valuation": [
+    "LM6 Private Company Valuation": [
       {
         "t": "Income(CCM/excess earnings)/ Market(GPCM/GTM)/ Asset;excess earnings 归 income 法",
         "los": "三种方法: income / market / asset-based"

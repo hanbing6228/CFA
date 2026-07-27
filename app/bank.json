@@ -205,7 +205,7 @@
    ]
   },
   "Equity": {
-   "Equity Valuation: Applications and Processes": [
+   "LM1 Equity Valuation: Applications and Processes": [
     {
      "t": "感知错价 $V_E-P$ = 真实错价$(V-P)$ + 估值误差$(V_E-V)$",
      "f": 1,
@@ -216,7 +216,7 @@
      "los": "绝对 vs 相对估值模型适用场景"
     }
    ],
-   "Discounted Dividend Valuation": [
+   "LM2 Discounted Dividend Valuation": [
     {
      "t": "GGM: $V_0 = \\frac{D_1}{r-g}$;注意题给 $D_0$ 要 $\\times(1+g)$",
      "f": 1,
@@ -245,7 +245,7 @@
      "los": "SGR = b × ROE (与 PRAT 扩展)"
     }
    ],
-   "Free Cash Flow Valuation": [
+   "LM3 Free Cash Flow Valuation": [
     {
      "t": "FCFF = NI + NCC + Int(1−t) − FCInv − WCInv;EBIT路径 = EBIT(1−t)+Dep−FCInv−WCInv;CFO路径 = CFO+Int(1−t)−FCInv",
      "f": 1,
@@ -267,7 +267,7 @@
      "los": "单阶段/两阶段 FCF 模型计算"
     }
    ],
-   "Market-Based Valuation: Price and Enterprise Value Multiples": [
+   "LM4 Market-Based Valuation: Price and Enterprise Value Multiples": [
     {
      "t": "Justified leading P/E = $\\frac{payout}{r-g}$;trailing = $\\frac{payout(1+g)}{r-g}$,差 $(1+g)$ 倍",
      "f": 1,
@@ -289,7 +289,7 @@
      "los": "PEG 的用法与缺陷"
     }
    ],
-   "Residual Income Valuation": [
+   "LM5 Residual Income Valuation": [
     {
      "t": "$RI = NI - r_e\\times BV_0 = (ROE - r_e)\\times BV_0$;equity charge 用期初 BV",
      "f": 1,
@@ -316,7 +316,7 @@
      "los": "RI vs DDM/FCF 适用场景"
     }
    ],
-   "Private Company Valuation": [
+   "LM6 Private Company Valuation": [
     {
      "t": "Income(CCM/excess earnings)/ Market(GPCM/GTM)/ Asset;excess earnings 归 income 法",
      "los": "三种方法: income / market / asset-based"
@@ -5429,7 +5429,820 @@
    "name": "Equity",
    "children": [
     {
-     "name": "Private Company Valuation",
+     "name": "LM1 Equity Valuation: Applications and Processes",
+     "children": [
+      {
+       "name": "Definition of valuation",
+       "children": [
+        {
+         "name": "分类",
+         "children": [
+          {
+           "name": "Intrinsic value",
+           "children": [
+            {
+             "name": "内在价值：对资产投资特性全面认识下的资产价值"
+            },
+            {
+             "name": "alpha: 一种经过风险调整的超额收益"
+            },
+            {
+             "name": "$V_E - P = (V - P) + (V_E - V)$",
+             "f": 1
+            },
+            {
+             "name": "估计的股价与市场价格的差异，即为期望获得的超额回报"
+            }
+           ]
+          },
+          {
+           "name": "Going-concern value: 持续经营假设下的价值；估值模型基于此"
+          },
+          {
+           "name": "Liquidation value: 公司破产，资产被单独出售时的价值"
+          },
+          {
+           "name": "Fair market value: 熟悉情况的双方自愿交易的价格"
+          },
+          {
+           "name": "Investment value: 对特定买家，考虑潜在协同效应后的价值"
+          }
+         ]
+        },
+        {
+         "name": "辨析",
+         "children": [
+          {
+           "name": "Liquidation value < intrinsic value ≈ fair market value < investment value",
+           "trap": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Valuation Applications",
+       "children": [
+        {
+         "name": "Stock selection"
+        },
+        {
+         "name": "Inferring (extracting) market expectations"
+        },
+        {
+         "name": "Evaluating corporate events"
+        },
+        {
+         "name": "Fairness opinions"
+        },
+        {
+         "name": "Evaluating business strategies and models"
+        },
+        {
+         "name": "Communicating with analysts and shareholders"
+        },
+        {
+         "name": "Appraising private businesses"
+        }
+       ]
+      },
+      {
+       "name": "The valuation process",
+       "children": [
+        {
+         "name": "Understand the business",
+         "children": [
+          {
+           "name": "Industry and competitive analysis",
+           "children": [
+            {
+             "name": "Porter's five forces",
+             "children": [
+              {
+               "name": "Intra-industry rivalry：行业内竞争"
+              },
+              {
+               "name": "New entrants：新进入者"
+              },
+              {
+               "name": "Substitutes：替代品"
+              },
+              {
+               "name": "Supplier power：供应商的力量"
+              },
+              {
+               "name": "Buyer power：买方力量"
+              }
+             ]
+            },
+            {
+             "name": "Three generic strategies",
+             "children": [
+              {
+               "name": "Cost leadership：成本领先"
+              },
+              {
+               "name": "Differentiation：差异化"
+              },
+              {
+               "name": "Focus：专注细分市场"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Analysis of financial reports"
+          },
+          {
+           "name": "Other quality of earnings issues"
+          }
+         ]
+        },
+        {
+         "name": "Forecasting company performance",
+         "children": [
+          {
+           "name": "Top-down"
+          },
+          {
+           "name": "Bottom-up"
+          }
+         ]
+        },
+        {
+         "name": "Selecting the appropriate valuation model",
+         "children": [
+          {
+           "name": "Absolute valuation models: DCF / Asset-based"
+          },
+          {
+           "name": "Relative valuation models: Multiples"
+          },
+          {
+           "name": "Valuation of the total entity and its components",
+           "children": [
+            {
+             "name": "Sum-of-the-parts valuation"
+            },
+            {
+             "name": "Conglomerate discount",
+             "children": [
+              {
+               "name": "内部资源配置的低效率"
+              },
+              {
+               "name": "内部因素 (endogenous factors)"
+              },
+              {
+               "name": "衡量错误 (measurement errors)"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Converting forecasts to a valuation",
+         "children": [
+          {
+           "name": "Control premium 控制权溢价"
+          },
+          {
+           "name": "Lack of marketability discounts 缺乏市场性折扣"
+          },
+          {
+           "name": "Illiquidity discounts / blockage factor 缺乏流动性或大宗交易折价"
+          }
+         ]
+        },
+        {
+         "name": "Applying the valuation conclusion"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM2 Discounted Dividend Valuation",
+     "children": [
+      {
+       "name": "模型比较 (何时用哪种模型)",
+       "children": [
+        {
+         "name": "DDM",
+         "children": [
+          {
+           "name": "The company has a history of dividend payments"
+          },
+          {
+           "name": "The dividend policy is clear and related to earnings"
+          },
+          {
+           "name": "Valued from the position of a minority shareholder"
+          }
+         ]
+        },
+        {
+         "name": "FCF",
+         "children": [
+          {
+           "name": "No dividend history, or dividends not related to earnings"
+          },
+          {
+           "name": "Free cash flow corresponds with profitability"
+          },
+          {
+           "name": "Valued from the position of a controlling shareholder"
+          }
+         ]
+        },
+        {
+         "name": "Residual income",
+         "children": [
+          {
+           "name": "Do not have dividend payment histories"
+          },
+          {
+           "name": "Have negative free cash flow for the foreseeable future"
+          },
+          {
+           "name": "Have transparent financial reporting and high-quality earnings"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "DDM",
+       "children": [
+        {
+         "name": "DDM Formula: $V_0 = \\sum_{t=1}^{\\infty} \\frac{D_t}{(1+r)^t}$",
+         "f": 1
+        },
+        {
+         "name": "GGM",
+         "children": [
+          {
+           "name": "$V_0 = \\frac{D_1}{r-g}$",
+           "f": 1
+          },
+          {
+           "name": "Limitations",
+           "children": [
+            {
+             "name": "Very sensitive to estimates of r and g",
+             "trap": 1
+            },
+            {
+             "name": "Difficult with non-dividend stocks"
+            },
+            {
+             "name": "Difficult with unpredictable growth patterns (use multi-stage model)"
+            }
+           ]
+          },
+          {
+           "name": "Alternative uses",
+           "children": [
+            {
+             "name": "$V_0 = E_1/r + PVGO$",
+             "f": 1
+            },
+            {
+             "name": "Leading P/E = $P_0/E_1 = (1-b)/(r-g)$",
+             "f": 1
+            },
+            {
+             "name": "Trailing P/E = $P_0/E_0 = (1-b)(1+g)/(r-g)$",
+             "f": 1,
+             "trap": 1
+            }
+           ]
+          },
+          {
+           "name": "Strengths",
+           "children": [
+            {
+             "name": "Applicable to stable, mature, dividend-paying companies"
+            },
+            {
+             "name": "Applicable for valuing market indices"
+            },
+            {
+             "name": "Easily communicated and explained"
+            },
+            {
+             "name": "Can imply growth rates / required returns / value of growth opportunities"
+            },
+            {
+             "name": "Supplement other, more complex valuation methods"
+            }
+           ]
+          },
+          {
+           "name": "Weaknesses",
+           "children": [
+            {
+             "name": "Very sensitive to assumed g and r"
+            },
+            {
+             "name": "Not applicable to non-dividend paying stocks"
+            },
+            {
+             "name": "Inapplicable to unstable growth dividend-paying stocks"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Multistage DDM",
+         "children": [
+          {
+           "name": "Two-stage DDM",
+           "children": [
+            {
+             "name": "$V_0 = \\sum_{t=1}^{n} \\frac{D_0(1+g_S)^t}{(1+r)^t} + \\frac{D_0(1+g_S)^n(1+g_L)}{(1+r)^n(r-g_L)}$",
+             "f": 1
+            },
+            {
+             "name": "注意：终值分子用 n+1 期股利、折 n 期",
+             "trap": 1
+            }
+           ]
+          },
+          {
+           "name": "Three-stage DDM: 高增长 → 过渡 → 稳定"
+          },
+          {
+           "name": "H-Model",
+           "children": [
+            {
+             "name": "$V_0 = \\frac{D_0(1+g_L) + D_0\\times H\\times(g_S-g_L)}{r-g_L}$",
+             "f": 1
+            },
+            {
+             "name": "$H = t/2$（转换期一半）",
+             "f": 1
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Spreadsheet modeling"
+      },
+      {
+       "name": "现金流形态讨论 (生命周期 vs 模型)",
+       "children": [
+        {
+         "name": "Initial growth: 高增长、高投资、FCFF 常为负、ROE≫r、低/零分红 → Three-stage"
+        },
+        {
+         "name": "Transition: 增长回落、投资下降、ROE→r、分红上升 → Two-stage"
+        },
+        {
+         "name": "Maturity: 稳定增长、ROE≈r、稳定分红 → Gordon growth"
+        }
+       ]
+      },
+      {
+       "name": "Sustainable growth rate",
+       "children": [
+        {
+         "name": "$g = b \\times ROE$（b=留存率，勿把 payout 当 b）",
+         "f": 1,
+         "trap": 1
+        }
+       ]
+      },
+      {
+       "name": "PRAT Model",
+       "children": [
+        {
+         "name": "$g = retention \\times profit\\ margin \\times asset\\ turnover \\times financial\\ leverage$",
+         "f": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM3 Free Cash Flow Valuation",
+     "children": [
+      {
+       "name": "FCFF 与 FCFE 对比",
+       "children": [
+        {
+         "name": "FCFF: 支付经营费用与必要投资后，可供全体资本提供者的现金流"
+        },
+        {
+         "name": "Firm value: $V_0 = FCFF_1/(WACC-g) = FCFF_0(1+g)/(WACC-g)$",
+         "f": 1
+        },
+        {
+         "name": "FCFE: 可供普通股股东的现金流"
+        },
+        {
+         "name": "Equity value: $V_0 = FCFE_1/(r-g) = FCFE_0(1+g)/(r-g)$",
+         "f": 1
+        }
+       ]
+      },
+      {
+       "name": "FCFF 计算",
+       "children": [
+        {
+         "name": "From NI: $FCFF = NI + NCC + Int(1-T) - FCInv - WCInv$",
+         "f": 1
+        },
+        {
+         "name": "From EBIT: $FCFF = EBIT(1-T) + Dep - FCInv - WCInv$",
+         "f": 1
+        },
+        {
+         "name": "From EBITDA: $FCFF = EBITDA(1-T) + Dep\\times T - FCInv - WCInv$",
+         "f": 1
+        },
+        {
+         "name": "From CFO: $FCFF = CFO + Int(1-T) - FCInv$",
+         "f": 1
+        }
+       ]
+      },
+      {
+       "name": "FCFE 计算",
+       "children": [
+        {
+         "name": "From NI: $FCFE = NI + NCC - WCInv - FCInv + Net Borrowing$",
+         "f": 1
+        },
+        {
+         "name": "From CFO: $FCFE = CFO - FCInv + Net Borrowing$",
+         "f": 1
+        },
+        {
+         "name": "From FCFF: $FCFE = FCFF - Int(1-T) + Net Borrowing$",
+         "f": 1
+        },
+        {
+         "name": "From target DR: $FCFE = NI - (1-DR)(FCInv-Dep) - (1-DR)WCInv$",
+         "f": 1
+        }
+       ]
+      },
+      {
+       "name": "公式项补充",
+       "children": [
+        {
+         "name": "NCC",
+         "children": [
+          {
+           "name": "加回: 折旧、摊销/减值、重组费用、非经营损失、债券折价摊销、递延税(注意)"
+          },
+          {
+           "name": "减去: 重组收益转回、非经营利得、债券溢价摊销",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "WCInv = WC_t − WC_{t−1}；不含现金、现金等价物、应付票据、一年内到期长期负债",
+         "trap": 1
+        },
+        {
+         "name": "FCInv",
+         "children": [
+          {
+           "name": "CapEx − 出售长期资产现金"
+          },
+          {
+           "name": "无出售: gross PPE 变动 或 net PPE 变动 + Dep"
+          },
+          {
+           "name": "有出售: BV_end − BV_begin + Dep − Gain(+Loss)"
+          }
+         ]
+        },
+        {
+         "name": "Net borrowing = Total Debt_end − Total Debt_begin（含短期债与应付票据）"
+        },
+        {
+         "name": "优先股: 从 NI 中扣除优先股股利得普通股净利润"
+        }
+       ]
+      },
+      {
+       "name": "FCF Valuation Models",
+       "children": [
+        {
+         "name": "Single-stage: 恒定增长（FCFF 配 WACC；FCFE 配 r）"
+        },
+        {
+         "name": "Two-stage: 预测期 FCF 折现 + 终值折现"
+        },
+        {
+         "name": "股权价值 = FCFF 企业价值 − 债务市值；别忘减债再除股数",
+         "trap": 1
+        },
+        {
+         "name": "资本结构不稳或 FCFE<0 → 优先用 FCFF",
+         "trap": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM4 Market-Based Valuation: Price and Enterprise Value Multiples",
+     "children": [
+      {
+       "name": "Price Multiples",
+       "children": [
+        {
+         "name": "Price to earnings ratio (P/E)",
+         "children": [
+          {
+           "name": "Justified Leading P/E = $(1-b)/(r-g)$",
+           "f": 1
+          },
+          {
+           "name": "Justified Trailing P/E = $(1-b)(1+g)/(r-g)$",
+           "f": 1,
+           "trap": 1
+          },
+          {
+           "name": "Advantages: 盈利驱动价值；广泛使用；与长期回报相关"
+          },
+          {
+           "name": "Disadvantages: EPS 可为 0/负/极小；经常性 vs 暂时性难分；管理层可操纵",
+           "trap": 1
+          },
+          {
+           "name": "Normalizing EPS",
+           "children": [
+            {
+             "name": "Historical average EPS"
+            },
+            {
+             "name": "Average ROE × BVPS = Normalized EPS",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "PEG = (P/E)/g；PEG 较低通常更有吸引力，但未充分调风险且 g 与价值非线性",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "Price-to-book ratio (P/B)",
+         "children": [
+          {
+           "name": "Justified $P_0/B_0 = (ROE-g)/(r-g)$",
+           "f": 1
+          },
+          {
+           "name": "Advantages: BV 通常>0、比 EPS 稳、适合金融资产为主的公司"
+          },
+          {
+           "name": "Disadvantages: 规模差异、会计选择、通胀/技术使 BV≠MV、表外资产"
+          }
+         ]
+        },
+        {
+         "name": "Price-to-sales ratio (P/S)",
+         "children": [
+          {
+           "name": "Justified trailing: $(E_0/S_0)(1-b)(1+g)/(r-g)$",
+           "f": 1
+          },
+          {
+           "name": "Justified leading: $(E_0/S_0)(1-b)/(r-g)$",
+           "f": 1
+          },
+          {
+           "name": "Advantages: 困境公司仍有意义；销售收入较难操纵；波动小于 P/E"
+          },
+          {
+           "name": "Disadvantages: 高销售≠高利润/现金流；不反映成本结构；收入确认仍可扭曲"
+          }
+         ]
+        },
+        {
+         "name": "Price-to-cash-flow ratio (P/CF)",
+         "children": [
+          {
+           "name": "Advantages: 现金流较难操纵；比 P/E 稳；反映盈余质量差异"
+          },
+          {
+           "name": "Disadvantages: 真实 CFO 难估；FCFE 更好但更波动且常为负"
+          },
+          {
+           "name": "Cash flow definitions: Earnings+NCC / Adjusted CFO / FCFE / EBITDA"
+          }
+         ]
+        },
+        {
+         "name": "Dividend yield (D/P)",
+         "children": [
+          {
+           "name": "Trailing D/P = 4×最近季度股利 / 股价"
+          },
+          {
+           "name": "Leading D/P = 未来四季度预测股利 / 股价"
+          },
+          {
+           "name": "Justified $D_0/P_0 = (r-g)/(1+g)$",
+           "f": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "EV/EBITDA",
+       "children": [
+        {
+         "name": "EV = 普通股市值 + 优先股市值 + 债务市值 − 现金与投资",
+         "f": 1
+        },
+        {
+         "name": "Advantages: 跨杠杆可比；资本密集业务有用；EPS 为负时 EBITDA 常为正"
+        },
+        {
+         "name": "Disadvantages: WC 增长时 EBITDA 高估 CFO；FCFE 与估值理论联系更紧",
+         "trap": 1
+        }
+       ]
+      },
+      {
+       "name": "Momentum indicators",
+       "children": [
+        {
+         "name": "Unexpected Earnings: $UE_t = EPS_t - E(EPS_t)$",
+         "f": 1
+        },
+        {
+         "name": "Standardized Unexpected Earnings: $SUE_t = UE_t/\\sigma(UE)$",
+         "f": 1
+        },
+        {
+         "name": "Momentum: 按季度收益增长率投资"
+        },
+        {
+         "name": "Contrarian: 认为波段很大程度上由投资者情绪驱动"
+        }
+       ]
+      },
+      {
+       "name": "Central tendency measure",
+       "children": [
+        {
+         "name": "Harmonic mean 对较小值赋更大权重；排除异常后中位数或加权调和平均更合适",
+         "trap": 1
+        },
+        {
+         "name": "Weighted harmonic mean $= 1/\\sum(w_i/X_i)$",
+         "f": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM5 Residual Income Valuation",
+     "children": [
+      {
+       "name": "Definition of residual income",
+       "children": [
+        {
+         "name": "RI = net income − equity capital × cost of equity",
+         "f": 1
+        },
+        {
+         "name": "Equity value $= B_0 + \\sum RI_t/(1+r_e)^t$",
+         "f": 1
+        },
+        {
+         "name": "EVA = NOPAT − WACC × total capital；total capital = BV debt + BV equity",
+         "f": 1
+        },
+        {
+         "name": "Firm value $= Total Capital_0 + \\sum EVA_t/(1+WACC)^t$",
+         "f": 1
+        },
+        {
+         "name": "MVA = market value − total capital $= \\sum EVA_t/(1+WACC)^t$",
+         "f": 1
+        }
+       ]
+      },
+      {
+       "name": "Valuation using residual income",
+       "children": [
+        {
+         "name": "General model: $RI_t = EPS_t - r_e B_{t-1} = (ROE-r_e)B_{t-1}$",
+         "f": 1
+        },
+        {
+         "name": "Single-stage: $V_0 = B_0 + (ROE-r)B_0/(r-g)$",
+         "f": 1
+        },
+        {
+         "name": "Implied growth: $g = r - B_0(ROE-r)/(V_0-B_0)$",
+         "f": 1
+        },
+        {
+         "name": "Persistence factor ω (0≤ω≤1，越大衰减越慢)",
+         "children": [
+          {
+           "name": "Higher persistence: low dividend payout; high historical industry persistence"
+          },
+          {
+           "name": "Lower persistence: extreme ROE / special items / accruals",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "Multiple-stage terminal assumptions",
+         "children": [
+          {
+           "name": "RI 永续正水平 (g=0, ω=1): $PV_T = RI_{T+1}/r$",
+           "f": 1
+          },
+          {
+           "name": "从 T 起 RI=0 (ω=0)"
+          },
+          {
+           "name": "ROE 回归均值: $PV_T = P_T - B_T$"
+          },
+          {
+           "name": "RI 衰减至 0 (0<ω<1): $TV_{T-1} = RI_T/(1+r-\\omega)$",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Strengths",
+         "children": [
+          {
+           "name": "终值占总 PV 比重相对较小"
+          },
+          {
+           "name": "会计数据易得；可用于无分红/近端 FCF 为负；关注经济盈利"
+          }
+         ]
+        },
+        {
+         "name": "Weaknesses",
+         "children": [
+          {
+           "name": "会计数据可被操纵；常需重大调整"
+          },
+          {
+           "name": "要求 clean surplus（或做调整）",
+           "trap": 1
+          },
+          {
+           "name": "假设利息费用恰当反映债务成本"
+          }
+         ]
+        },
+        {
+         "name": "Appropriate: 不分红/分红不可测；预测期 FCF 为负；其他模型终值极不确定"
+        },
+        {
+         "name": "Not appropriate: 严重偏离 clean surplus；BV/ROE 不可预测"
+        }
+       ]
+      },
+      {
+       "name": "Clean surplus relationship",
+       "children": [
+        {
+         "name": "概念: 本期只有股东盈余影响净资产账面价值"
+        },
+        {
+         "name": "$B_t = B_{t-1} + NI_t - Div_t$",
+         "f": 1
+        },
+        {
+         "name": "OCI 绕道(如 FX 折算、AFS)会破坏 clean surplus，需调整",
+         "trap": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM6 Private Company Valuation",
      "children": [
       {
        "name": "Private vs public companies",
