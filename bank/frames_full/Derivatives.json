@@ -18,10 +18,10 @@
         ]
        },
        {
-        "name": "Forward/future value",
+        "name": "Forward/futures value",
         "children": [
          {
-          "name": "Monetary value of an existing foward/futures contract"
+          "name": "Monetary value of an existing forward/futures contract"
          }
         ]
        },
@@ -51,7 +51,7 @@
       ]
      },
      {
-      "name": "Foward/futures",
+      "name": "Forward/futures",
       "children": [
        {
         "name": "Carry arbitrage model",
@@ -60,7 +60,7 @@
           "name": "Carry arbitrage",
           "children": [
            {
-            "name": "Foward contract market price is too high",
+            "name": "Forward contract market price is too high",
             "children": [
              {
               "name": "At initiation",
@@ -118,7 +118,7 @@
               "name": "At settlement date",
               "children": [
                {
-                "name": "Step 1 Pay the forward price and get the unerlying"
+                "name": "Step 1 Pay the forward price and get the underlying"
                },
                {
                 "name": "Step 2 Close out the short position by delivering the underlying"
@@ -158,7 +158,7 @@
           ]
          },
          {
-          "name": "Carry arbitage model with cash flows"
+          "name": "Carry arbitrage model with cash flows"
          }
         ]
        },
@@ -350,7 +350,7 @@
             "name": "Basic concept",
             "children": [
              {
-              "name": "One party pays a ﬁxed rate and the other pays a ﬂoating rate"
+              "name": "One party pays a fixed rate and the other pays a floating rate"
              }
             ]
            },
@@ -358,7 +358,7 @@
             "name": "Pricing",
             "children": [
              {
-              "name": "Calculate the ﬁxed rate (swap rate) that makes the contract value zero at initiation"
+              "name": "Calculate the fixed rate (swap rate) that makes the contract value zero at initiation"
              },
              {
               "name": "Swap rate=annualized periodic rate(C)",
@@ -373,19 +373,19 @@
             "name": "Valuing",
             "children": [
              {
-              "name": "Receiver of a ﬁxed rate and payer of a ﬂoating rate",
+              "name": "Receiver of a fixed rate and payer of a floating rate",
               "children": [
                {
-                "name": "V=Value of ﬁxed bond - value of ﬂoating bond",
+                "name": "V=Value of fixed bond - value of floating bond",
                 "f": 1
                }
               ]
              },
              {
-              "name": "Receiver of a ﬂoating rate and payer of a ﬁxed rate",
+              "name": "Receiver of a floating rate and payer of a fixed rate",
               "children": [
                {
-                "name": "V=Value of ﬂoating bond - value of ﬁxed bond",
+                "name": "V=Value of floating bond - value of fixed bond",
                 "f": 1
                }
               ]
@@ -403,7 +403,7 @@
           "name": "Basic concept",
           "children": [
            {
-            "name": "Exchange future interest payments in diﬀerent currencies"
+            "name": "Exchange future interest payments in different currencies"
            },
            {
             "name": "Often but not always involve an exchange notional amount"
@@ -414,21 +414,21 @@
           "name": "Four types",
           "children": [
            {
-            "name": "Fixed-for-ﬁxed"
+            "name": "Fixed-for-fixed"
            },
            {
-            "name": "Floating-for-ﬁxed"
+            "name": "Floating-for-fixed"
            },
            {
-            "name": "Fixed-for-ﬂoating"
+            "name": "Fixed-for-floating"
            },
            {
-            "name": "Floating-for-ﬂoating"
+            "name": "Floating-for-floating"
            }
           ]
          },
          {
-          "name": "FB = ﬁxed-rate bond, S0 = exchange rate at time 0",
+          "name": "FB = fixed-rate bond, S0 = exchange rate at time 0",
           "f": 1
          },
          {
@@ -444,16 +444,16 @@
           "name": "Basic concept",
           "children": [
            {
-            "name": "One party pays cash ﬂow series determined by an equity"
+            "name": "One party pays cash flow series determined by an equity"
            },
            {
             "name": "The other party",
             "children": [
              {
-              "name": "Pays cash ﬂow series determined by another equity"
+              "name": "Pays cash flow series determined by another equity"
              },
              {
-              "name": "Pays a ﬁxed series"
+              "name": "Pays a fixed series"
              }
             ]
            }
@@ -463,19 +463,19 @@
           "name": "Three types",
           "children": [
            {
-            "name": "Receive-equity return, pay-ﬁxed",
+            "name": "Receive-equity return, pay-fixed",
             "children": [
              {
-              "name": "Notional amount ×（Equity return - ﬁxed rate)",
+              "name": "Notional amount ×（Equity return - fixed rate)",
               "f": 1
              }
             ]
            },
            {
-            "name": "Receive-equity return, pay-ﬂoating",
+            "name": "Receive-equity return, pay-floating",
             "children": [
              {
-              "name": "Notional amount ×（Equity return - ﬂoating rate)",
+              "name": "Notional amount ×（Equity return - floating rate)",
               "f": 1
              }
             ]
@@ -484,12 +484,245 @@
             "name": "Receive-equity return, pay-another equity return",
             "children": [
              {
-              "name": "Notional amount × (Equity return a - ﬂoating rate b)",
+              "name": "Notional amount × (Equity return a - floating rate b)",
               "f": 1
              }
             ]
            }
           ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "LM2 Valuation of Contingent Claims",
+    "children": [
+     {
+      "name": "Put-call parity",
+      "children": [
+       {
+        "name": "Fiduciary call: long European call + zero-coupon bond paying X at T → $c + X/(1+r)^T$",
+        "f": 1
+       },
+       {
+        "name": "Protective put: long European put + long underlying → $p + S_0$",
+        "f": 1
+       },
+       {
+        "name": "$c + X/(1+r)^T = p + S_0$",
+        "f": 1
+       },
+       {
+        "name": "Synthetic instruments",
+        "children": [
+         {
+          "name": "$c = p + S_0 - X/(1+r)^T$",
+          "f": 1
+         },
+         {
+          "name": "$p = c + X/(1+r)^T - S_0$",
+          "f": 1
+         },
+         {
+          "name": "$S_0 = c - p + X/(1+r)^T$",
+          "f": 1
+         },
+         {
+          "name": "$X/(1+r)^T = p + S_0 - c$",
+          "f": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Binomial model",
+      "children": [
+       {
+        "name": "One-period binomial model",
+        "children": [
+         {
+          "name": "Underlying movements: $S^+ = S_0 u$, $S^- = S_0 d$ (often $u=1/d$)"
+         },
+         {
+          "name": "Risk-neutral probability: $\\pi = (1+r-d)/(u-d)$",
+          "f": 1
+         },
+         {
+          "name": "Hedge ratio: $h = (c^+ - c^-)/(S^+ - S^-)$",
+          "f": 1
+         },
+         {
+          "name": "Call: $c = [\\pi c^+ + (1-\\pi)c^-]/(1+r)$",
+          "f": 1
+         },
+         {
+          "name": "Put: $p = [\\pi p^+ + (1-\\pi)p^-]/(1+r)$",
+          "f": 1
+         },
+         {
+          "name": "π 是风险中性概率，非真实概率",
+          "trap": 1
+         }
+        ]
+       },
+       {
+        "name": "Two-period binomial model",
+        "children": [
+         {
+          "name": "European call: 各节点用 π 向后折现"
+         },
+         {
+          "name": "American: 若行权价值 > 持有价值则可提前行权"
+         },
+         {
+          "name": "Deep-in-the-money put options can benefit from early exercise",
+          "trap": 1
+         }
+        ]
+       },
+       {
+        "name": "Interest rate options",
+        "children": [
+         {
+          "name": "Two-period binomial interest rate tree: risk-neutral π 通常取 0.5",
+          "trap": 1
+         },
+         {
+          "name": "Call payoff = NP × Max(0, reference rate − exercise rate) × day-count fraction",
+          "f": 1
+         },
+         {
+          "name": "Put payoff = NP × Max(0, exercise rate − reference rate) × day-count fraction",
+          "f": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "BSM model",
+      "children": [
+       {
+        "name": "BSM ≈ binomial with infinite steps; underlying prices lognormal (returns normal)"
+       },
+       {
+        "name": "Assumptions",
+        "children": [
+         {
+          "name": "Price moves smoothly (no jumps); underlying liquid; continuous trading"
+         },
+         {
+          "name": "Short selling permitted; no market frictions; no arbitrage"
+         },
+         {
+          "name": "Options are European-style"
+         },
+         {
+          "name": "Continuously compounded risk-free rate known and constant"
+         },
+         {
+          "name": "Volatility of return known and constant"
+         },
+         {
+          "name": "Yield continuous known and constant (if applicable)"
+         }
+        ]
+       },
+       {
+        "name": "Formulas",
+        "children": [
+         {
+          "name": "$c = S_0 N(d_1) - e^{-rT} X N(d_2)$",
+          "f": 1
+         },
+         {
+          "name": "$p = e^{-rT} X N(-d_2) - S_0 N(-d_1)$",
+          "f": 1
+         },
+         {
+          "name": "$d_1 = [\\ln(S_0/X) + (r+\\sigma^2/2)T]/(\\sigma\\sqrt{T})$; $d_2 = d_1 - \\sigma\\sqrt{T}$",
+          "f": 1
+         },
+         {
+          "name": "$N(d_1)$≈delta；$N(d_2)$=风险中性下看涨到期实值概率",
+          "trap": 1
+         }
+        ]
+       },
+       {
+        "name": "Adjustments",
+        "children": [
+         {
+          "name": "Dividend-paying stock: replace $S_0$ with $S_0 e^{-qT}$",
+          "f": 1
+         },
+         {
+          "name": "Currencies: replace $S_0$ with $S_0 e^{-r_f T}$ (foreign risk-free rate)",
+          "f": 1
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Option Greeks",
+      "children": [
+       {
+        "name": "Delta: $\\Delta$Option/$\\Delta$Underlying; call $N(d_1)$ (0→1); put $N(d_1)-1$ (−1→0)",
+        "f": 1
+       },
+       {
+        "name": "Dynamic hedging: 用 h 份标的对冲一份看涨"
+       },
+       {
+        "name": "Gamma: Delta 的变化率；ATM 最高；多头 gamma 为正"
+       },
+       {
+        "name": "Theta: 时间衰减；多头期权通常为负"
+       },
+       {
+        "name": "Vega: 对波动率敏感；多头为正；ATM 最高"
+       },
+       {
+        "name": "Rho: 对利率敏感；看涨为正、看跌为负"
+       },
+       {
+        "name": "Implied volatility: 使 BSM 价格等于市价的 σ；唯一不可直接观测的输入",
+        "trap": 1
+       }
+      ]
+     },
+     {
+      "name": "Black model",
+      "children": [
+       {
+        "name": "European options on futures",
+        "children": [
+         {
+          "name": "$c = e^{-rT}[F_0 N(d_1) - X N(d_2)]$",
+          "f": 1
+         },
+         {
+          "name": "$p = e^{-rT}[X N(-d_2) - F_0 N(-d_1)]$",
+          "f": 1
+         }
+        ]
+       },
+       {
+        "name": "Interest rate options: underlying is a forward interest rate (FRA)"
+       },
+       {
+        "name": "Swaptions",
+        "children": [
+         {
+          "name": "Payer swaption: option to enter swap as fixed-rate payer"
+         },
+         {
+          "name": "Receiver swaption: option to enter swap as fixed-rate receiver"
          }
         ]
        }
