@@ -457,51 +457,75 @@
    ]
   },
   "Ethics": {
-   "Code and Standards + Guidance": [
+   "PCP & Disciplinary Process": [
     {
-     "t": "七大准则: I专业素养 II市场诚信 III对客户 IV对雇主 V投资分析 VI利益冲突 VII作为会员"
+     "t": "PCP由理事会监管,与DRC共同实施条款与准则"
     },
     {
-     "t": "I(C)不实陈述含抄袭、盗用他人观点不署来源;事实性错误也算"
+     "t": "获知违规途径: PCS自我披露、书面投诉、公开渠道、监考举报"
     },
     {
-     "t": "II(A)重大非公开信息: 不得交易也不得传递(tipping);马赛克理论合法"
+     "t": "流程: 专员调查 → 属实则处分; 接受结束 / 拒绝 → Hearing Panel终审"
     },
     {
-     "t": "III(B)公平对待所有客户;推荐/变更同时告知,可先大客户但不得歧视",
+     "t": "处分: public censure / 暂停会员 / 废除charter / 禁止考试(考生)",
      "trap": 1
-    },
-    {
-     "t": "III(E)保密义务,唯法律要求或涉非法活动时可披露",
-     "trap": 1
-    },
-    {
-     "t": "IV(A)对雇主忠诚: 离职前不得挪用客户名单;记忆中信息可用,书面记录不可带走",
-     "trap": 1
-    },
-    {
-     "t": "V(A)勤勉尽责,依赖第三方研究前须核查其合理性"
-    },
-    {
-     "t": "VI(A)先披露利益冲突再行动;VI(B)交易优先级客户先于本人"
     }
    ],
-   "Application of the Code and Standards": [
+   "Code of Ethics": [
     {
-     "t": "个案先定位违反的具体准则条款,再判断是否违规"
+     "t": "AMC: 针对基金管理公司,自愿遵守; Code and Standards适用于个人"
     },
     {
-     "t": "研究报告须区分事实与观点,保留支持依据(record retention 默认7年)"
+     "t": "纲领: integrity / competence / diligence / respect, 以伦理方式对待各方"
     },
     {
-     "t": "业绩展示不得误导;GIPS合规为最佳实践但非强制"
+     "t": "客户与行业诚信优先于个人利益;合理谨慎、独立判断;鼓励他人守则"
     },
     {
-     "t": "礼品: 来自客户的可收但需披露;来自潜在客户/第三方的可能构成独立性受损",
+     "t": "促进市场诚信与活力;持续提升专业能力"
+    }
+   ],
+   "Standards I–III": [
+    {
+     "t": "I(A)知法守法: 遵守更严格者;知法犯法禁止;须隔离违规,不可不作为",
      "trap": 1
     },
     {
-     "t": "监管义务与准则冲突时,遵守更严格者",
+     "t": "I(B)独立客观: 礼品看是否影响独立;客户小费可收须披露;发行人研报须flat fee",
+     "trap": 1
+    },
+    {
+     "t": "I(C)错误表述含抄袭/保证收益(国债等除外)/摘樱桃;I(D)欺诈欺骗;I(E)胜任能力"
+    },
+    {
+     "t": "II(A)重大非公开: 不得自用也不得传递;马赛克合法;II(B)禁止操纵价格/成交量"
+    },
+    {
+     "t": "III(A)客户利益优先;软美元属客户资产;III(B)公平≠相等,VIP可但须披露",
+     "trap": 1
+    },
+    {
+     "t": "III(C)适合性看IPS/mandate;III(D)业绩公允完整可循GIPS;III(E)保密(法律/非法/许可除外)"
+    }
+   ],
+   "Standards IV–VII": [
+    {
+     "t": "IV(A)对雇主忠诚: 离职前不得带走客户名单/记录;揭发须为客户或市场诚信",
+     "trap": 1
+    },
+    {
+     "t": "IV(B)额外报酬须各方书面同意;IV(C)下属违规上司负责,除非已尽责"
+    },
+    {
+     "t": "V(A)勤勉合理依据;V(B)区分事实与观点并披露重大限制风险;V(C)记录建议保存≥7年"
+    },
+    {
+     "t": "VI(A)披露利益冲突;VI(B)交易优先:客户>雇主>自己;VI(C)介绍费须事先披露",
+     "trap": 1
+    },
+    {
+     "t": "VII(A)考试不可作弊/泄题;VII(B)CFA称谓用法严格,未获证不可自称持证人",
      "trap": 1
     }
    ]
@@ -5145,6 +5169,146 @@
    "name": "Ethics",
    "children": [
     {
+     "name": "PCP & Disciplinary Process 职业行为与纪律程序",
+     "children": [
+      {
+       "name": "PCP (Professional Conduct Program)",
+       "children": [
+        {
+         "name": "PCP含义: 规范职业行为的项目，由CFA协会的理事会进行监管"
+        },
+        {
+         "name": "PCP功能: PCP与Disciplinary Review Committee(纪律委员会)共同负责CFA条款与准则的实施"
+        }
+       ]
+      },
+      {
+       "name": "协会获知会员或考生违规的途径",
+       "children": [
+        {
+         "name": "Self-disclosure 自我披露",
+         "children": [
+          {
+           "name": "若涉入违规调查，需在PCS (annual Professional Conduct Statements)中披露"
+          },
+          {
+           "name": "若被正式投诉，也需要写入PCS"
+          }
+         ]
+        },
+        {
+         "name": "协会收到 written complaints 书面投诉"
+        },
+        {
+         "name": "Public sources 公开渠道，比如上新闻"
+        },
+        {
+         "name": "Report by proctor 考试作弊，监考人员汇报"
+        }
+       ]
+      },
+      {
+       "name": "协会发现 violation → Proceedings & Hearing",
+       "children": [
+        {
+         "name": "指派一个专员调查违规行为"
+        },
+        {
+         "name": "如果违规行为属实，则做出对违规人员的处分决定",
+         "children": [
+          {
+           "name": "违规人员接受处罚，流程结束"
+          },
+          {
+           "name": "违规人员不接受处罚，可申述，将进入听证会环节",
+           "children": [
+            {
+             "name": "听证会将再次对违规行为进行调查，并做出最终的处罚决定（终审）"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Hearing Panel 听证会",
+       "children": [
+        {
+         "name": "构成: DRC members 纪律委员会成员（都是由CFA持证人所组成的志愿者）"
+        },
+        {
+         "name": "sanctions (处分)",
+         "children": [
+          {
+           "name": "public censure 警告"
+          },
+          {
+           "name": "suspension of membership 暂停CFA会员资格"
+          },
+          {
+           "name": "revocation of the CFA charter 废除CFA证书"
+          },
+          {
+           "name": "禁止参加考试（考生 only）"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Code of Ethics and Standards of Professional Conduct",
+     "children": [
+      {
+       "name": "AMC (Asset Manager Code)",
+       "children": [
+        {
+         "name": "针对基金管理公司，自愿遵守"
+        }
+       ]
+      },
+      {
+       "name": "Code of Ethics 纲领要求",
+       "children": [
+        {
+         "name": "个人行为要诚信（integrity）、有专业胜任能力（competence）、勤勉（diligence）、尊重（respect）"
+        },
+        {
+         "name": "确保与投资公众、客户、合格潜在客户、雇主、雇员、同事以及其他全球资本市场参与者的投资行为中遵守职业道德（in an ethical manner）"
+        },
+        {
+         "name": "Place integrity and client interests above personal interests 以资本秩序和客户利益为先"
+        },
+        {
+         "name": "Use reasonable care and exercise independent judgment 合理分析、独立判断"
+        },
+        {
+         "name": "Encourage others to practice in ethical manner 鼓励他人遵守准则"
+        },
+        {
+         "name": "Promote integrity and viability 促进市场秩序和发展能力"
+        },
+        {
+         "name": "Improve professional competence 提高专业竞争力"
+        }
+       ]
+      },
+      {
+       "name": "区分 AMC 及 Code and Standards",
+       "children": [
+        {
+         "name": "Code and Standards: 对纲领要求的补充解释（适用于个人会员/考生）"
+        },
+        {
+         "name": "AMC: 针对资产管理公司层面的自愿行为准则"
+        }
+       ]
+      }
+     ]
+    },
+    {
      "name": "Ⅰ: Professionalism",
      "children": [
       {
@@ -5165,7 +5329,7 @@
            "name": "More strict 遵守更严格的要求"
           },
           {
-           "name": "Must not knowingly participte any violation of laws and rules 不能知法犯法"
+           "name": "Must not knowingly participate any violation of laws and rules 不能知法犯法"
           },
           {
            "name": "Must dissociate from any violation 必须和违法违规行为隔离"
@@ -5188,7 +5352,7 @@
              "name": "Attempt to stop the behavior 同时尝试阻止违规行为"
             },
             {
-             "name": "如果无法解决问题，应脱离(dissociate)，无如法脱离该违法违规的环境，选择离职(quit)"
+             "name": "如果无法解决问题，应脱离(dissociate)，无法脱离该违法违规的环境，选择离职(quit)"
             }
            ]
           },
@@ -5844,7 +6008,7 @@
          ]
         },
         {
-         "name": "Recommended Peocedure",
+         "name": "Recommended Procedures",
          "children": [
           {
            "name": "Restricted List",
@@ -5955,85 +6119,502 @@
      ]
     },
     {
-     "name": "Ⅶ: Responsibility as CFA Institute Member or Candidate",
+     "name": "Ⅲ: Duty to Clients",
      "children": [
       {
-       "name": "Ⅶ(A): Conduct as Participants in CFA Institute Programs 协会会员及考生的责任",
+       "name": "Ⅲ(A): Loyalty, Prudence and Care 忠诚、谨慎、仔细",
        "children": [
+        {
+         "name": "Content",
+         "children": [
+          {
+           "name": "act with reasonable case and prudent judgment 从业者要有合理谨慎的判断"
+          },
+          {
+           "name": "place client's interest before employer's and their own 把客户利益置于雇主和个人之前"
+          }
+         ]
+        },
         {
          "name": "Guidance",
          "children": [
           {
-           "name": "no cheating on CFA exam 考试不可作弊"
+           "name": "Fiduciary 受托责任",
+           "children": [
+            {
+             "name": "含义：为了他人利益行事"
+            },
+            {
+             "name": "提供投资建议的人有受托责任，比如基金经理，而交易员没有",
+             "trap": 1
+            },
+            {
+             "name": "higher standard of loyalty and extra care, 更高标准的忠诚和额外的仔细"
+            }
+           ]
           },
           {
-           "name": "cannot disclose confidential material gained during the exam 不能泄露考试信息"
+           "name": "Identify Actual Investment Client 识别真正的客户，4种类型",
+           "children": [
+            {
+             "name": "Individual",
+             "children": [
+              {
+               "name": "如：一对一的客户"
+              }
+             ]
+            },
+            {
+             "name": "Investing public",
+             "children": [
+              {
+               "name": "如：分析师写某上市公司的研报，但分析师的客户不是这家上市公司，而是所有能看到研报的投资公众"
+              }
+             ]
+            },
+            {
+             "name": "Beneficiary 受益人",
+             "children": [
+              {
+               "name": "基金经理应对信托或养老金的最终受益人负责"
+              }
+             ]
+            },
+            {
+             "name": "Mandate 契约",
+             "children": [
+              {
+               "name": "遵循既定的投资策略"
+              }
+             ]
+            }
+           ]
           },
           {
-           "name": "express opinions is ok 可以表达个人感受，比如考试很难"
+           "name": "Make decisions in the context of total portfolio 站在整体看待投资风险"
           },
           {
-           "name": "不可利用协会身份为个人或公司牟利"
+           "name": "Soft Dollar 软美元",
+           "children": [
+            {
+             "name": "含义：用客户的经纪费购买的产品或服务"
+            },
+            {
+             "name": "性质：软美元本质是客户的资产，应直接有利于客户"
+            },
+            {
+             "name": "Directed Brokerage 客户可以指定brokerage的使用"
+            }
+           ]
+          },
+          {
+           "name": "Proxy Voting 代理投票权",
+           "children": [
+            {
+             "name": "含义：基金经理代客户参加股东大会并投票"
+            },
+            {
+             "name": "原则",
+             "children": [
+              {
+               "name": "公司必须有代理投票权的政策，以及必须向客户披露"
+              },
+              {
+               "name": "是否真去投票，可以cost-benefit analysis 考虑投票性价比"
+              },
+              {
+               "name": "participant in all proxy votings，该表述通常是错误的",
+               "trap": 1
+              },
+              {
+               "name": "站在客户角度投票"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "经典案例",
+         "trap": 1,
+         "children": [
+          {
+           "name": "M公司委托基金经理Wiley管理养老金基金。M公司管理层要求Wiley购买M公司股票以支持他们反收购行为。Wiley发现M公司股票被高估。此时，Wiley不应为养老金受益人配置M公司股票。"
           }
          ]
         }
        ]
       },
       {
-       "name": "Ⅶ(B): Reference to CFA Institute, the CFA Designation, and the CFA Program 称谓的用法",
+       "name": "Ⅲ(B): Fair Dealing 公平交易",
+       "children": [
+        {
+         "name": "Content: deal fairly and objectively with all clients"
+        },
+        {
+         "name": "Guidance",
+         "children": [
+          {
+           "name": "fairly≠equally 公平不意味着完全相等",
+           "trap": 1
+          },
+          {
+           "name": "premium lelvel service is ok 允许VIP服务，但不可损害其他普通客户利益，并且披露VIP服务的门槛标准"
+          },
+          {
+           "name": "pro rata on order size, not on account size 按下订单比例分配"
+          },
+          {
+           "name": "给客户进行投资推荐，应信息同时发送给客户",
+           "children": [
+            {
+             "name": "因为客观原因造成无法避免的时间差，不违反"
+            }
+           ]
+          },
+          {
+           "name": "Material changes in prior recommendation 之前投资推荐发生重大改变",
+           "children": [
+            {
+             "name": "第一时间通知所有客户，之后可以特别关注下受之前的投资推荐影响的客户"
+            }
+           ]
+          },
+          {
+           "name": "Oversubscribed IPO 会员和考生不可参与超额认购",
+           "children": [
+            {
+             "name": "on a round-lot basis，考虑最小交易单位"
+            }
+           ]
+          },
+          {
+           "name": "Beneficiary",
+           "children": [
+            {
+             "name": "成为账户的beneficiary owner, 视为考生和会员的个人账户"
+            },
+            {
+             "name": "Personal transaction, 个人交易（受益账户）",
+             "children": [
+              {
+               "name": "个人账户"
+              },
+              {
+               "name": "immediate family account （spouse、children、immediate family member）"
+              },
+              {
+               "name": "Trust account or retirement account with direct or indriect pecuniary interest 直接间接拥有经济利益的账户（如信托和退休金账户）"
+              }
+             ]
+            },
+            {
+             "name": "一般family account",
+             "children": [
+              {
+               "name": "没有受益所有权，视为一般客户账户"
+              },
+              {
+               "name": "如果个人具有受益所有权，必须时间报告雇主，交易需获得事先许可"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Recommended Procedures",
+         "children": [
+          {
+           "name": "block trades 大宗交易",
+           "children": [
+            {
+             "name": "same commission, same price 同样的佣金享受同等交易价格"
+            },
+            {
+             "name": "pro rata on order size 按下订单比例分配"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "经典案例",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Weng给所有客户发送邮件，通知他们最新的投资推荐；然后Weng与三名大客户打电话，向他们讨论投资建议中的细节。Weng的做法不违规，他向大客户提供高等级的服务。但该事项需向所有客户披露，且不能损害其他客户利益。"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Ⅲ(C): Suitability 合适性",
        "children": [
         {
          "name": "Guidance",
          "children": [
           {
-           "name": "how to use CFA",
+           "name": "IPS",
            "children": [
             {
-             "name": "只能作为形容词，不能作为名词"
+             "name": "written investment policy statement 投资策略说明书"
             },
             {
-             "name": "全部大写"
+             "name": "至少每年更新一次"
             },
             {
-             "name": "不能用作公司名称一部分"
-            },
-            {
-             "name": "不可创造新词或乱添符号"
-            },
-            {
-             "name": "名片上\"CFA\"字号不得大于其他部分"
-            },
-            {
-             "name": "pass CFA level II exam or CFA level III candidate, 不可说是CFA Level II",
-             "trap": 1
-            },
-            {
-             "name": "no charter cannot use CFA designation 必须通过CFA level III考试，再加48个月相关工作经验，并得到CFA协会认可，才能获得CFA持证人资格, 在此之前不可自称为持证人"
-            },
-            {
-             "name": "mustn't cite expected time 不可对外承诺通过考试的时间"
-            },
-            {
-             "name": "it's ok to use CFA logo on business card or letterhead 可以在简历、名片、信头上使用CFAlogo"
-            },
-            {
-             "name": "the order doesn't matter 列举证书时，CFA证书与其他证书顺序无关紧要"
+             "name": "客户情况发生重大改变，先修改IPS，再提供投资建议"
             }
            ]
           },
           {
-           "name": "一旦成为会员（特指持证人）",
+           "name": "Unsolicited trade requests 客户主动发起的交易",
            "children": [
             {
-             "name": "每年提交个人陈述"
+             "name": "对IPS影响较小",
+             "children": [
+              {
+               "name": "可直接投资"
+              }
+             ]
             },
             {
-             "name": "每年缴纳会费"
+             "name": "对IPS影响较大",
+             "children": [
+              {
+               "name": "客户愿意修改IPS，修改后再投资"
+              },
+              {
+               "name": "客户不愿意修改IPS, 剥离客户资金分账户管理"
+              }
+             ]
             },
             {
-             "name": "must not over promise investment performance 通过考试不可与投资业绩挂钩"
+             "name": "影响大小依据trade size和是否change portfolio risk profile来判断，考试不要求具体判断"
             }
            ]
+          },
+          {
+           "name": "Stated mandate",
+           "children": [
+            {
+             "name": "基金有既定的投资风格，则应该遵从该投资风格，无需满足基金的某个用户的投资要求",
+             "trap": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "经典案例",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Peter为high-income mutual fund配置了零分红股票，因为他认为该股票被低估，有利于客户。但Peter违反了准则要求，因为零分红股票不适合基金的投资策略。"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Ⅲ(D): Performance Presentation 业绩展示",
+       "children": [
+        {
+         "name": "Content",
+         "children": [
+          {
+           "name": "make sure performance is fair, accurate and complete"
+          }
+         ]
+        },
+        {
+         "name": "Guidance",
+         "children": [
+          {
+           "name": "not mispresent past perforance 过去≠未来",
+           "trap": 1
+          },
+          {
+           "name": "include terminated portfolio 应包含已终结的业绩"
+          },
+          {
+           "name": "use weighted rate of return 展示投资业绩的加权平均情况"
+          },
+          {
+           "name": "brief + detail 可简要展示，同时应配备详细信息以供客户参考"
+          }
+         ]
+        },
+        {
+         "name": "Recommended Procedures",
+         "children": [
+          {
+           "name": "推荐遵循GIPS，是否遵守是自愿行为"
+          },
+          {
+           "name": "如果不遵循GIPS",
+           "children": [
+            {
+             "name": "present weighted composite of similar portfolios 展示加权平均的投资组合业绩"
+            },
+            {
+             "name": "include terminated accounts 包含已终止的基金"
+            },
+            {
+             "name": "simulated performance using models 模拟业绩可以展示",
+             "children": [
+              {
+               "name": "需要披露"
+              },
+              {
+               "name": "不可以和真实业绩混合"
+              }
+             ]
+            },
+            {
+             "name": "performance record from prior entity 离职前的业绩",
+             "children": [
+              {
+               "name": "属于前雇主财产，使用需要获得同意"
+              },
+              {
+               "name": "在展示时要说明这是在前雇主达成的业绩"
+              }
+             ]
+            },
+            {
+             "name": "披露费用结构",
+             "children": [
+              {
+               "name": "whether is gross of fees, net of fees or after tax"
+              }
+             ]
+            },
+            {
+             "name": "maintain data and records",
+             "children": [
+              {
+               "name": "保留交易数据，以便还原投资过程"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "经典案例",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Taylor告诉客户未来可以获得稳定的25%收益，然而他只在过去一年达到25%收益。Taylor的行为违反了准则。"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Ⅲ(E): Preservation of Confidentiality 保密原则",
+       "children": [
+        {
+         "name": "Content",
+         "children": [
+          {
+           "name": "3类客户要保密",
+           "children": [
+            {
+             "name": "former 过去的"
+            },
+            {
+             "name": "current 现在的"
+            },
+            {
+             "name": "prospective 未来的"
+            }
+           ]
+          },
+          {
+           "name": "无需保密的3个情况",
+           "children": [
+            {
+             "name": "illegal activities 涉及违反行为"
+            },
+            {
+             "name": "required by law 法律要求披露"
+            },
+            {
+             "name": "permit 客户允许披露"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Guidance",
+         "children": [
+          {
+           "name": "特殊事项",
+           "children": [
+            {
+             "name": "如果法律要求哪怕客户违法也要保密，则遵循法律要求",
+             "trap": 1
+            },
+            {
+             "name": "使用电子信息/社交媒体也要注意为客户保密"
+            },
+            {
+             "name": "如果当地法律允许，在配合CFA协会进行PCP调查时，可提供客户信息以支持PCP调查，不违反保密条款。"
+            }
+           ]
+          },
+          {
+           "name": "脱离的三种形式",
+           "children": [
+            {
+             "name": "在报告上移除自己名字"
+            },
+            {
+             "name": "请求更换工作任务"
+            },
+            {
+             "name": "拒绝为新客户或当前客户提供服务"
+            }
+           ]
+          },
+          {
+           "name": "投行部和研究部间",
+           "children": [
+            {
+             "name": "互相合作需满足",
+             "children": [
+              {
+               "name": "利益冲突充分披露"
+              },
+              {
+               "name": "相互间信息沟通经有效管理"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "基金经理两类违规",
+           "children": [
+            {
+             "name": "Stray from their mandate 偏离实现承诺的投资策略"
+            },
+            {
+             "name": "Construct composite 时有cherry picking"
+            }
+           ]
+          },
+          {
+           "name": "案例：A员工发现上司在挪用客户的资金，于是找到上司，上司告诉他客户知道这事，你不用管，A员工又找到客户确认，客户也说知道这个事情。A员工因为担心自己在工作上被穿小鞋，于是向监管机构举报了上司，这不属于whistle-blowing，因为其目的不是为了资本市场诚信或客户的利益，而是担心自己的工作。",
+           "trap": 1
           }
          ]
         }
@@ -6042,19 +6623,16 @@
      ]
     },
     {
-     "name": "Ⅵ: Conflicts of Interest",
+     "name": "Ⅳ: Duty to Employers",
      "children": [
       {
-       "name": "Ⅵ(A): Avoid or disclose conflicts避免或披露利益冲突",
+       "name": "Ⅳ(A): Loyalty",
        "children": [
         {
          "name": "Content",
          "children": [
           {
-           "name": "must avoid or make full and fair disclosure of all matters 所有利益冲突都应避免或披露"
-          },
-          {
-           "name": "in plain language 披露时用平实的语言"
+           "name": "not deprive employer of the advantage of their skills and abilities, divulge confidential information or cause harm 不得剥夺雇主能力上的优势、泄露信息或伤害雇主"
           }
          ]
         },
@@ -6062,49 +6640,75 @@
          "name": "Guidance",
          "children": [
           {
-           "name": "如果分析师持有某公司股票",
+           "name": "independent practice 与雇主相竞争的业务",
            "children": [
             {
-             "name": "must disclose if continue to follow 若继续持有，必须披露"
+             "name": "时间上，精力上，业务上形成冲突均不可"
             },
             {
-             "name": "best practice: assign another analyst to follow up",
+             "name": "获得雇主书面同意才可进行independent practice"
+            }
+           ]
+          },
+          {
+           "name": "leaving an employer 离职前",
+           "children": [
+            {
+             "name": "大原则：不拿雇主一针一线"
+            },
+            {
+             "name": "不允许的事项",
+             "trap": 1,
              "children": [
               {
-               "name": "最好的做法：如分析师持有金额较大，指派其他分析师"
+               "name": "泄露交易秘密"
+              },
+              {
+               "name": "窃取或记忆客户名单"
+              },
+              {
+               "name": "利用公司资源拉拢客户"
+              },
+              {
+               "name": "上班时间处理个人事业"
               }
              ]
             }
            ]
           },
           {
-           "name": "需要披露的事项",
+           "name": "after leaving 离职后",
            "children": [
             {
-             "name": "security holding 持有标的公司股票"
-            },
-            {
-             "name": "directorship 自己或公司高管担任标的公司董事会成员"
-            },
-            {
-             "name": "corporate financing or market making relationship 标的公司是其他部门的客户"
-            },
-            {
-             "name": "close personal relationship 与标的公司高管有个人关系，（朋友，恋人）"
-            },
-            {
-             "name": "cross-departmental conflicts 部门间的利益冲突",
+             "name": "不允许的事项",
+             "trap": 1,
              "children": [
               {
-               "name": "如市场部要求分析师写有利客户的结论来获得更多业务"
+               "name": "违反同业竞业协议(non-compete contract)"
+              },
+              {
+               "name": "带走公司记录和文件（得到雇主允许可以带走）"
               }
              ]
             },
             {
-             "name": "投资了的VC在IPO后，需要披露"
-            },
+             "name": "可以利用前雇主处学到的技巧和经验（skills and experience）"
+            }
+           ]
+          },
+          {
+           "name": "whistle-blowing 在职揭发",
+           "children": [
             {
-             "name": "if incentive fees are in conflict with client's interest 薪酬安排如与客户利益形成冲突需要披露"
+             "name": "符合准则要求的揭发目的",
+             "children": [
+              {
+               "name": "维护资本市场诚信"
+              },
+              {
+               "name": "客户利益"
+              }
+             ]
             }
            ]
           }
@@ -6115,20 +6719,20 @@
          "trap": 1,
          "children": [
           {
-           "name": "Weiss在写Vimco公司的研报。Weiss的同事是Vimco公司的董事，Vimco公司还是Weiss公司的客户。Weiss应当在研报中将Vimco公司与自己公司之间的关系披露。"
+           "name": "Magee是养老金基金经理，他在离职前劝说了4名大客户随他去新的公司。Magee的做法损害前雇主利益，违反准则要求。"
           }
          ]
         }
        ]
       },
       {
-       "name": "Ⅵ(B): Priority of Transactions 优先交易权",
+       "name": "Ⅳ(B): Additional Compensation Arrangements 额外报酬",
        "children": [
         {
          "name": "Content",
          "children": [
           {
-           "name": "客户和雇主的交易优先于个人或自己为受益人（beneficiary owner）的交易"
+           "name": "must not accept compensation that competes with employer's interest unless obtaining written consent from all parties involved 不可收取可能会产生利益冲突的额外报酬，除非获得各相关方同意"
           }
          ]
         },
@@ -6136,50 +6740,82 @@
          "name": "Guidance",
          "children": [
           {
-           "name": "交易顺序",
+           "name": "part-time 兼职",
            "children": [
             {
-             "name": "客户>雇主>自己"
-            },
-            {
-             "name": "若账户最终受益人（beneficial owner）是自己，应次于客户和雇主交易"
+             "name": "需要得到各相关方书面同意"
             }
            ]
           },
           {
-           "name": "Aligned interest 客户要求经理自己的钱也同样投资",
+           "name": "written consent",
            "children": [
             {
-             "name": "必须是应客户要求，而非公司要求"
-            },
-            {
-             "name": "不可损害客户利益"
-            },
-            {
-             "name": "利益一致时可与客户同时交易，但不得早于客户交易"
+             "name": "可以追溯的方式都属于书面，包括电子邮件"
             }
            ]
           },
           {
-           "name": "反应时间",
+           "name": "应向雇主披露三方面的内容",
            "children": [
             {
-             "name": "给客户充足的反应时间来消化投资推荐"
+             "name": "工作的性质"
+            },
+            {
+             "name": "持续时间"
+            },
+            {
+             "name": "报酬的细节"
             }
            ]
+          }
+         ]
+        },
+        {
+         "name": "经典案例",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Whitman管理Cochran的账户，Cochran提出如果账户收益率达15%就会为Whiman提供一次跨国旅行。Whitman接受了安排，未向雇主披露这件事。Whitman的做法违反了准则要求。"
+          }
+         ]
+        },
+        {
+         "name": "客户赠与的礼物场景",
+         "children": [
+          {
+           "name": "完成业绩后收取客户的礼物，且已告知上司，但没有获得书面同意。-- 不违反独立客观性，但违反额外报酬",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "额外报酬和independence practice的区别",
+         "children": [
+          {
+           "name": "L在GF培训公司从事CFA讲师的工作，由于课讲的好，学员给了一个红包，这属于Additional compensation，因为讲课这项工作GF培训公司已经支付过薪酬，L能够从这项工作中额外获得的好处就属于Additional compensation"
+          },
+          {
+           "name": "L在GF培训公司从事CFA讲师的工作，业余时间在ABC培训公司兼职从事CFA讲师工作，而雇主GF培训公司并未向L在ABC培训公司的工作支付薪酬，因此这项工作属于Independent Practice."
+          },
+          {
+           "name": "界定取决于为谁支付的好处，以及这项工作雇主有没有支付过薪酬"
           }
          ]
         }
        ]
       },
       {
-       "name": "Ⅵ(C): Referral Fees 介绍费",
+       "name": "Ⅳ(C): Responsibilities of Supervisors 管理者的职责",
        "children": [
         {
          "name": "Content",
          "children": [
           {
-           "name": "must disclose to employer and clients 必须事先披露，事后披露违规",
+           "name": "make reasonable efforts to ensure anyone subject to their supervision complies with applicable laws, rules, regulations and the Code and Standards 确保管辖内的所有人遵守相关规定"
+          },
+          {
+           "name": "核心思想：下属违规，上司就违规；除非可以证明上司已经尽责",
            "trap": 1
           }
          ]
@@ -6188,54 +6824,40 @@
          "name": "Guidance",
          "children": [
           {
-           "name": "将介绍费披露给客户或雇主的好处",
+           "name": "can delegate but not relieve 可以指派他人代行权利但不可以免责"
+          },
+          {
+           "name": "establish and implement written compliance system and ensure periodic review 建立、实施书面合规系统并定期检查",
            "children": [
             {
-             "name": "用于判断推荐是否存在偏好（any partiality）"
+             "name": "应包含detection system发现潜在的违规行为"
             },
             {
-             "name": "用于判断全部的成本（full cost）"
+             "name": "流程应及时更新以符合监管要求"
             }
            ]
           },
           {
-           "name": "must disclose nature of compensation",
+           "name": "接受管理岗位之前，必须确认公司合规程序是否充分有效；",
            "children": [
             {
-             "name": "flat fee or percentage basis"
+             "name": "否则不能接受该管理岗位。"
             },
             {
-             "name": "one-time or continuing benefit"
-            },
-            {
-             "name": "benefit in form of cash, in research or other noncash benefit"
-            },
-            {
-             "name": "estimated dollar value"
-            }
-           ]
-          }
-         ]
-        },
-        {
-         "name": "Recommendation",
-         "children": [
-          {
-           "name": "公司可以禁止介绍费（firm may completely restrict such fees）"
-          },
-          {
-           "name": "如不禁止, should have appropriate steps for requesting approval",
-           "children": [
-            {
-             "name": "approved referral fee program"
-            },
-            {
-             "name": "regular (at least quarterly) updates on amount and nature of compensation received"
+             "name": "best practice: 提出修改意见并实施后，接受管理岗位"
             }
            ]
           },
           {
-           "name": "雇主可要求员工向客户披露"
+           "name": "一旦发现违规行为",
+           "children": [
+            {
+             "name": "must promptly initiate an investigation 立刻彻查"
+            },
+            {
+             "name": "limit the employee's activities and increase the monitoring 限制违规员工行为"
+            }
+           ]
           }
          ]
         },
@@ -6244,7 +6866,7 @@
          "trap": 1,
          "children": [
           {
-           "name": "A公司与B公司签订一份协议，A公司为B公司介绍客户以换取研究报告。Maxwell公司想委托B公司合伙人White作为投资顾问。White应向Maxwell公司披露自己公司与A公司之间的合作情况。"
+           "name": "Mattock是研究部门的领导，决定更改某个证券的投资建议。根据公司的流程，Mattock口头通知了交易员。交易员私自为自己账户交易。这说明研究部的流程存在漏洞，应确保投资建议先给到所有客户。Mattock应对此负责"
           }
          ]
         }
@@ -6548,16 +7170,19 @@
      ]
     },
     {
-     "name": "Ⅳ: Duty to Employers",
+     "name": "Ⅵ: Conflicts of Interest",
      "children": [
       {
-       "name": "Ⅳ(A): Loyalty",
+       "name": "Ⅵ(A): Avoid or disclose conflicts避免或披露利益冲突",
        "children": [
         {
          "name": "Content",
          "children": [
           {
-           "name": "not deprive employer of the advantage of their skills and abilities, divulge confidential information or cause harm 不得剥夺雇主能力上的优势、泄露信息或伤害雇主"
+           "name": "must avoid or make full and fair disclosure of all matters 所有利益冲突都应避免或披露"
+          },
+          {
+           "name": "in plain language 披露时用平实的语言"
           }
          ]
         },
@@ -6565,75 +7190,49 @@
          "name": "Guidance",
          "children": [
           {
-           "name": "independent practice 与雇主相竞争的业务",
+           "name": "如果分析师持有某公司股票",
            "children": [
             {
-             "name": "时间上，精力上，业务上形成冲突均不可"
+             "name": "must disclose if continue to follow 若继续持有，必须披露"
             },
             {
-             "name": "获得雇主书面同意才可进行independent practice"
-            }
-           ]
-          },
-          {
-           "name": "leaving an employer 离职前",
-           "children": [
-            {
-             "name": "大原则：不拿雇主一针一线"
-            },
-            {
-             "name": "不允许的事项",
-             "trap": 1,
+             "name": "best practice: assign another analyst to follow up",
              "children": [
               {
-               "name": "泄露交易秘密"
-              },
-              {
-               "name": "窃取或记忆客户名单"
-              },
-              {
-               "name": "利用公司资源拉拢客户"
-              },
-              {
-               "name": "上班时间处理个人事业"
+               "name": "最好的做法：如分析师持有金额较大，指派其他分析师"
               }
              ]
             }
            ]
           },
           {
-           "name": "after leaving 离职后",
+           "name": "需要披露的事项",
            "children": [
             {
-             "name": "不允许的事项",
-             "trap": 1,
+             "name": "security holding 持有标的公司股票"
+            },
+            {
+             "name": "directorship 自己或公司高管担任标的公司董事会成员"
+            },
+            {
+             "name": "corporate financing or market making relationship 标的公司是其他部门的客户"
+            },
+            {
+             "name": "close personal relationship 与标的公司高管有个人关系，（朋友，恋人）"
+            },
+            {
+             "name": "cross-departmental conflicts 部门间的利益冲突",
              "children": [
               {
-               "name": "违反同业竞业协议(non-compete contract)"
-              },
-              {
-               "name": "带走公司记录和文件（得到雇主允许可以带走）"
+               "name": "如市场部要求分析师写有利客户的结论来获得更多业务"
               }
              ]
             },
             {
-             "name": "可以利用前雇主处学到的技巧和经验（skills and experience）"
-            }
-           ]
-          },
-          {
-           "name": "whistle-blowing 在职揭发",
-           "children": [
+             "name": "投资了的VC在IPO后，需要披露"
+            },
             {
-             "name": "符合准则要求的揭发目的",
-             "children": [
-              {
-               "name": "维护资本市场诚信"
-              },
-              {
-               "name": "客户利益"
-              }
-             ]
+             "name": "if incentive fees are in conflict with client's interest 薪酬安排如与客户利益形成冲突需要披露"
             }
            ]
           }
@@ -6644,20 +7243,20 @@
          "trap": 1,
          "children": [
           {
-           "name": "Magee是养老金基金经理，他在离职前劝说了4名大客户随他去新的公司。Magee的做法损害前雇主利益，违反准则要求。"
+           "name": "Weiss在写Vimco公司的研报。Weiss的同事是Vimco公司的董事，Vimco公司还是Weiss公司的客户。Weiss应当在研报中将Vimco公司与自己公司之间的关系披露。"
           }
          ]
         }
        ]
       },
       {
-       "name": "Ⅳ(B): Additional Compensation Arrangements 额外报酬",
+       "name": "Ⅵ(B): Priority of Transactions 优先交易权",
        "children": [
         {
          "name": "Content",
          "children": [
           {
-           "name": "must not accept compensation that competes with employer's interest unless obtaining written consent from all parties involved 不可收取可能会产生利益冲突的额外报酬，除非获得各相关方同意"
+           "name": "客户和雇主的交易优先于个人或自己为受益人（beneficiary owner）的交易"
           }
          ]
         },
@@ -6665,82 +7264,50 @@
          "name": "Guidance",
          "children": [
           {
-           "name": "part-time 兼职",
+           "name": "交易顺序",
            "children": [
             {
-             "name": "需要得到各相关方书面同意"
-            }
-           ]
-          },
-          {
-           "name": "written consent",
-           "children": [
-            {
-             "name": "可以追溯的方式都属于书面，包括电子邮件"
-            }
-           ]
-          },
-          {
-           "name": "应向雇主披露三方面的内容",
-           "children": [
-            {
-             "name": "工作的性质"
+             "name": "客户>雇主>自己"
             },
             {
-             "name": "持续时间"
-            },
-            {
-             "name": "报酬的细节"
+             "name": "若账户最终受益人（beneficial owner）是自己，应次于客户和雇主交易"
             }
            ]
-          }
-         ]
-        },
-        {
-         "name": "经典案例",
-         "trap": 1,
-         "children": [
-          {
-           "name": "Whitman管理Cochran的账户，Cochran提出如果账户收益率达15%就会为Whiman提供一次跨国旅行。Whitman接受了安排，未向雇主披露这件事。Whitman的做法违反了准则要求。"
-          }
-         ]
-        },
-        {
-         "name": "客户赠与的礼物场景",
-         "children": [
-          {
-           "name": "完成业绩后收取客户的礼物，且已告知上司，但没有获得书面同意。-- 不违反独立客观性，但违反额外报酬",
-           "trap": 1
-          }
-         ]
-        },
-        {
-         "name": "额外报酬和independence practice的区别",
-         "children": [
-          {
-           "name": "L在GF培训公司从事CFA讲师的工作，由于课讲的好，学员给了一个红包，这属于Additional compensation，因为讲课这项工作GF培训公司已经支付过薪酬，L能够从这项工作中额外获得的好处就属于Additional compensation"
           },
           {
-           "name": "L在GF培训公司从事CFA讲师的工作，业余时间在ABC培训公司兼职从事CFA讲师工作，而雇主GF培训公司并未向L在ABC培训公司的工作支付薪酬，因此这项工作属于Independent Practice."
+           "name": "Aligned interest 客户要求经理自己的钱也同样投资",
+           "children": [
+            {
+             "name": "必须是应客户要求，而非公司要求"
+            },
+            {
+             "name": "不可损害客户利益"
+            },
+            {
+             "name": "利益一致时可与客户同时交易，但不得早于客户交易"
+            }
+           ]
           },
           {
-           "name": "界定取决于为谁支付的好处，以及这项工作雇主有没有支付过薪酬"
+           "name": "反应时间",
+           "children": [
+            {
+             "name": "给客户充足的反应时间来消化投资推荐"
+            }
+           ]
           }
          ]
         }
        ]
       },
       {
-       "name": "Ⅳ(C): Responsibilities of Supervisors 管理者的职责",
+       "name": "Ⅵ(C): Referral Fees 介绍费",
        "children": [
         {
          "name": "Content",
          "children": [
           {
-           "name": "make reasonable efforts to ensure anyone subject to their supervision complies with applicable laws, rules, regulations and the Code and Standards 确保管辖内的所有人遵守相关规定"
-          },
-          {
-           "name": "核心思想：下属违规，上司就违规；除非可以证明上司已经尽责",
+           "name": "must disclose to employer and clients 必须事先披露，事后披露违规",
            "trap": 1
           }
          ]
@@ -6749,40 +7316,54 @@
          "name": "Guidance",
          "children": [
           {
-           "name": "can delegate but not relieve 可以指派他人代行权利但不可以免责"
-          },
-          {
-           "name": "establish and implement written compliance system and ensure periodic review 建立、实施书面合规系统并定期检查",
+           "name": "将介绍费披露给客户或雇主的好处",
            "children": [
             {
-             "name": "应包含detection system发现潜在的违规行为"
+             "name": "用于判断推荐是否存在偏好（any partiality）"
             },
             {
-             "name": "流程应及时更新以符合监管要求"
+             "name": "用于判断全部的成本（full cost）"
             }
            ]
           },
           {
-           "name": "接受管理岗位之前，必须确认公司合规程序是否充分有效；",
+           "name": "must disclose nature of compensation",
            "children": [
             {
-             "name": "否则不能接受该管理岗位。"
+             "name": "flat fee or percentage basis"
             },
             {
-             "name": "best practice: 提出修改意见并实施后，接受管理岗位"
+             "name": "one-time or continuing benefit"
+            },
+            {
+             "name": "benefit in form of cash, in research or other noncash benefit"
+            },
+            {
+             "name": "estimated dollar value"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Recommendation",
+         "children": [
+          {
+           "name": "公司可以禁止介绍费（firm may completely restrict such fees）"
+          },
+          {
+           "name": "如不禁止, should have appropriate steps for requesting approval",
+           "children": [
+            {
+             "name": "approved referral fee program"
+            },
+            {
+             "name": "regular (at least quarterly) updates on amount and nature of compensation received"
             }
            ]
           },
           {
-           "name": "一旦发现违规行为",
-           "children": [
-            {
-             "name": "must promptly initiate an investigation 立刻彻查"
-            },
-            {
-             "name": "limit the employee's activities and increase the monitoring 限制违规员工行为"
-            }
-           ]
+           "name": "雇主可要求员工向客户披露"
           }
          ]
         },
@@ -6791,7 +7372,7 @@
          "trap": 1,
          "children": [
           {
-           "name": "Mattock是研究部门的领导，决定更改某个证券的投资建议。根据公司的流程，Mattock口头通知了交易员。交易员私自为自己账户交易。这说明研究部的流程存在漏洞，应确保投资建议先给到所有客户。Mattock应对此负责"
+           "name": "A公司与B公司签订一份协议，A公司为B公司介绍客户以换取研究报告。Maxwell公司想委托B公司合伙人White作为投资顾问。White应向Maxwell公司披露自己公司与A公司之间的合作情况。"
           }
          ]
         }
@@ -6800,502 +7381,85 @@
      ]
     },
     {
-     "name": "Ⅲ: Duty to Clients",
+     "name": "Ⅶ: Responsibility as CFA Institute Member or Candidate",
      "children": [
       {
-       "name": "Ⅲ(A): Loyalty, Prudence and Care 忠诚、谨慎、仔细",
+       "name": "Ⅶ(A): Conduct as Participants in CFA Institute Programs 协会会员及考生的责任",
        "children": [
-        {
-         "name": "Content",
-         "children": [
-          {
-           "name": "act with reasonable case and prudent judgment 从业者要有合理谨慎的判断"
-          },
-          {
-           "name": "place client's interest before employer's and their own 把客户利益置于雇主和个人之前"
-          }
-         ]
-        },
         {
          "name": "Guidance",
          "children": [
           {
-           "name": "Fiduciary 受托责任",
+           "name": "no cheating on CFA exam 考试不可作弊"
+          },
+          {
+           "name": "cannot disclose confidential material gained during the exam 不能泄露考试信息"
+          },
+          {
+           "name": "express opinions is ok 可以表达个人感受，比如考试很难"
+          },
+          {
+           "name": "不可利用协会身份为个人或公司牟利"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Ⅶ(B): Reference to CFA Institute, the CFA Designation, and the CFA Program 称谓的用法",
+       "children": [
+        {
+         "name": "Guidance",
+         "children": [
+          {
+           "name": "how to use CFA",
            "children": [
             {
-             "name": "含义：为了他人利益行事"
+             "name": "只能作为形容词，不能作为名词"
             },
             {
-             "name": "提供投资建议的人有受托责任，比如基金经理，而交易员没有",
+             "name": "全部大写"
+            },
+            {
+             "name": "不能用作公司名称一部分"
+            },
+            {
+             "name": "不可创造新词或乱添符号"
+            },
+            {
+             "name": "名片上\"CFA\"字号不得大于其他部分"
+            },
+            {
+             "name": "pass CFA level II exam or CFA level III candidate, 不可说是CFA Level II",
              "trap": 1
             },
             {
-             "name": "higher standard of loyalty and extra care, 更高标准的忠诚和额外的仔细"
+             "name": "no charter cannot use CFA designation 必须通过CFA level III考试，再加48个月相关工作经验，并得到CFA协会认可，才能获得CFA持证人资格, 在此之前不可自称为持证人"
+            },
+            {
+             "name": "mustn't cite expected time 不可对外承诺通过考试的时间"
+            },
+            {
+             "name": "it's ok to use CFA logo on business card or letterhead 可以在简历、名片、信头上使用CFAlogo"
+            },
+            {
+             "name": "the order doesn't matter 列举证书时，CFA证书与其他证书顺序无关紧要"
             }
            ]
           },
           {
-           "name": "Identify Actual Investment Client 识别真正的客户，4种类型",
+           "name": "一旦成为会员（特指持证人）",
            "children": [
             {
-             "name": "Individual",
-             "children": [
-              {
-               "name": "如：一对一的客户"
-              }
-             ]
+             "name": "每年提交个人陈述"
             },
             {
-             "name": "Investing public",
-             "children": [
-              {
-               "name": "如：分析师写某上市公司的研报，但分析师的客户不是这家上市公司，而是所有能看到研报的投资公众"
-              }
-             ]
+             "name": "每年缴纳会费"
             },
             {
-             "name": "Beneficiary 受益人",
-             "children": [
-              {
-               "name": "基金经理应对信托或养老金的最终受益人负责"
-              }
-             ]
-            },
-            {
-             "name": "Mandate 契约",
-             "children": [
-              {
-               "name": "遵循既定的投资策略"
-              }
-             ]
+             "name": "must not over promise investment performance 通过考试不可与投资业绩挂钩"
             }
            ]
-          },
-          {
-           "name": "Make decisions in the context of total portfolio 站在整体看待投资风险"
-          },
-          {
-           "name": "Soft Dollar 软美元",
-           "children": [
-            {
-             "name": "含义：用客户的经纪费购买的产品或服务"
-            },
-            {
-             "name": "性质：软美元本质是客户的资产，应直接有利于客户"
-            },
-            {
-             "name": "Directed Brokerage 客户可以指定brokerage的使用"
-            }
-           ]
-          },
-          {
-           "name": "Proxy Voting 代理投票权",
-           "children": [
-            {
-             "name": "含义：基金经理代客户参加股东大会并投票"
-            },
-            {
-             "name": "原则",
-             "children": [
-              {
-               "name": "公司必须有代理投票权的政策，以及必须向客户披露"
-              },
-              {
-               "name": "是否真去投票，可以cost-benefit analysis 考虑投票性价比"
-              },
-              {
-               "name": "participant in all proxy votings，该表述通常是错误的",
-               "trap": 1
-              },
-              {
-               "name": "站在客户角度投票"
-              }
-             ]
-            }
-           ]
-          }
-         ]
-        },
-        {
-         "name": "经典案例",
-         "trap": 1,
-         "children": [
-          {
-           "name": "M公司委托基金经理Wiley管理养老金基金。M公司管理层要求Wiley购买M公司股票以支持他们反收购行为。Wiley发现M公司股票被高估。此时，Wiley不应为养老金受益人配置M公司股票。"
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "name": "Ⅲ(B): Fair Dealing 公平交易",
-       "children": [
-        {
-         "name": "Content: deal fairly and objectively with all clients"
-        },
-        {
-         "name": "Guidance",
-         "children": [
-          {
-           "name": "fairly≠equally 公平不意味着完全相等",
-           "trap": 1
-          },
-          {
-           "name": "premium lelvel service is ok 允许VIP服务，但不可损害其他普通客户利益，并且披露VIP服务的门槛标准"
-          },
-          {
-           "name": "pro rata on order size, not on account size 按下订单比例分配"
-          },
-          {
-           "name": "给客户进行投资推荐，应信息同时发送给客户",
-           "children": [
-            {
-             "name": "因为客观原因造成无法避免的时间差，不违反"
-            }
-           ]
-          },
-          {
-           "name": "Material changes in prior recommendation 之前投资推荐发生重大改变",
-           "children": [
-            {
-             "name": "第一时间通知所有客户，之后可以特别关注下受之前的投资推荐影响的客户"
-            }
-           ]
-          },
-          {
-           "name": "Oversubscribed IPO 会员和考生不可参与超额认购",
-           "children": [
-            {
-             "name": "on a round-lot basis，考虑最小交易单位"
-            }
-           ]
-          },
-          {
-           "name": "Beneficiary",
-           "children": [
-            {
-             "name": "成为账户的beneficiary owner, 视为考生和会员的个人账户"
-            },
-            {
-             "name": "Personal transaction, 个人交易（受益账户）",
-             "children": [
-              {
-               "name": "个人账户"
-              },
-              {
-               "name": "immediate family account （spouse、children、immediate family member）"
-              },
-              {
-               "name": "Trust account or retirement account with direct or indriect pecuniary interest 直接间接拥有经济利益的账户（如信托和退休金账户）"
-              }
-             ]
-            },
-            {
-             "name": "一般family account",
-             "children": [
-              {
-               "name": "没有受益所有权，视为一般客户账户"
-              },
-              {
-               "name": "如果个人具有受益所有权，必须时间报告雇主，交易需获得事先许可"
-              }
-             ]
-            }
-           ]
-          }
-         ]
-        },
-        {
-         "name": "Recommended pocedures",
-         "children": [
-          {
-           "name": "block trades 大宗交易",
-           "children": [
-            {
-             "name": "same commission, same price 同样的佣金享受同等交易价格"
-            },
-            {
-             "name": "pro rata on order size 按下订单比例分配"
-            }
-           ]
-          }
-         ]
-        },
-        {
-         "name": "经典案例",
-         "trap": 1,
-         "children": [
-          {
-           "name": "Weng给所有客户发送邮件，通知他们最新的投资推荐；然后Weng与三名大客户打电话，向他们讨论投资建议中的细节。Weng的做法不违规，他向大客户提供高等级的服务。但该事项需向所有客户披露，且不能损害其他客户利益。"
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "name": "Ⅲ(C): Suitability 合适性",
-       "children": [
-        {
-         "name": "Guidance",
-         "children": [
-          {
-           "name": "IPS",
-           "children": [
-            {
-             "name": "written investment policy statement 投资策略说明书"
-            },
-            {
-             "name": "至少每年更新一次"
-            },
-            {
-             "name": "客户情况发生重大改变，先修改IPS，再提供投资建议"
-            }
-           ]
-          },
-          {
-           "name": "Unsolicited trade requests 客户主动发起的交易",
-           "children": [
-            {
-             "name": "对IPS影响较小",
-             "children": [
-              {
-               "name": "可直接投资"
-              }
-             ]
-            },
-            {
-             "name": "对IPS影响较大",
-             "children": [
-              {
-               "name": "客户愿意修改IPS，修改后再投资"
-              },
-              {
-               "name": "客户不愿意修改IPS, 剥离客户资金分账户管理"
-              }
-             ]
-            },
-            {
-             "name": "影响大小依据trade size和是否change portfolio risk profile来判断，考试不要求具体判断"
-            }
-           ]
-          },
-          {
-           "name": "Stated mandate",
-           "children": [
-            {
-             "name": "基金有既定的投资风格，则应该遵从该投资风格，无需满足基金的某个用户的投资要求",
-             "trap": 1
-            }
-           ]
-          }
-         ]
-        },
-        {
-         "name": "经典案例",
-         "trap": 1,
-         "children": [
-          {
-           "name": "Peter为high-income mutual fund配置了零分红股票，因为他认为该股票被低估，有利于客户。但Peter违反了准则要求，因为零分红股票不适合基金的投资策略。"
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "name": "Ⅲ(D): Performance Presentation 业绩展示",
-       "children": [
-        {
-         "name": "Content",
-         "children": [
-          {
-           "name": "make sure performance is fair, accurate and complete"
-          }
-         ]
-        },
-        {
-         "name": "Guidance",
-         "children": [
-          {
-           "name": "not mispresent past perforance 过去≠未来",
-           "trap": 1
-          },
-          {
-           "name": "include terminated portfolio 应包含已终结的业绩"
-          },
-          {
-           "name": "use weighted rate of return 展示投资业绩的加权平均情况"
-          },
-          {
-           "name": "brief + detail 可简要展示，同时应配备详细信息以供客户参考"
-          }
-         ]
-        },
-        {
-         "name": "Recommended Procedures",
-         "children": [
-          {
-           "name": "推荐遵循GIPS，是否遵守是自愿行为"
-          },
-          {
-           "name": "如果不遵循GIPS",
-           "children": [
-            {
-             "name": "present weighted composite of similar portfolios 展示加权平均的投资组合业绩"
-            },
-            {
-             "name": "include terminated accounts 包含已终止的基金"
-            },
-            {
-             "name": "simulated performance using models 模拟业绩可以展示",
-             "children": [
-              {
-               "name": "需要披露"
-              },
-              {
-               "name": "不可以和真实业绩混合"
-              }
-             ]
-            },
-            {
-             "name": "performance record from prior entity 离职前的业绩",
-             "children": [
-              {
-               "name": "属于前雇主财产，使用需要获得同意"
-              },
-              {
-               "name": "在展示时要说明这是在前雇主达成的业绩"
-              }
-             ]
-            },
-            {
-             "name": "披露费用结构",
-             "children": [
-              {
-               "name": "whether is gross of fees, net of fees or after tax"
-              }
-             ]
-            },
-            {
-             "name": "maintain data and records",
-             "children": [
-              {
-               "name": "保留交易数据，以便还原投资过程"
-              }
-             ]
-            }
-           ]
-          }
-         ]
-        },
-        {
-         "name": "经典案例",
-         "trap": 1,
-         "children": [
-          {
-           "name": "Taylor告诉客户未来可以获得稳定的25%收益，然而他只在过去一年达到25%收益。Taylor的行为违反了准则。"
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "name": "Ⅲ(E): Preservation of Confidentiality 保密原则",
-       "children": [
-        {
-         "name": "Content",
-         "children": [
-          {
-           "name": "3类客户要保密",
-           "children": [
-            {
-             "name": "former 过去的"
-            },
-            {
-             "name": "current 现在的"
-            },
-            {
-             "name": "prospective 未来的"
-            }
-           ]
-          },
-          {
-           "name": "无需保密的3个情况",
-           "children": [
-            {
-             "name": "illegal activities 涉及违反行为"
-            },
-            {
-             "name": "required by law 法律要求披露"
-            },
-            {
-             "name": "permit 客户允许披露"
-            }
-           ]
-          }
-         ]
-        },
-        {
-         "name": "Guidance",
-         "children": [
-          {
-           "name": "特殊事项",
-           "children": [
-            {
-             "name": "如果法律要求哪怕客户违法也要保密，则遵循法律要求",
-             "trap": 1
-            },
-            {
-             "name": "使用电子信息/社交媒体也要注意为客户保密"
-            },
-            {
-             "name": "如果当地法律允许，在配合CFA协会进行PCP调查时，可提供客户信息以支持PCP调查，不违反保密条款。"
-            }
-           ]
-          },
-          {
-           "name": "脱离的三种形式",
-           "children": [
-            {
-             "name": "在报告上移除自己名字"
-            },
-            {
-             "name": "请求更换工作任务"
-            },
-            {
-             "name": "拒绝为新客户或当前客户提供服务"
-            }
-           ]
-          },
-          {
-           "name": "投行部和研究部间",
-           "children": [
-            {
-             "name": "互相合作需满足",
-             "children": [
-              {
-               "name": "利益冲突充分披露"
-              },
-              {
-               "name": "相互间信息沟通经有效管理"
-              }
-             ]
-            }
-           ]
-          },
-          {
-           "name": "基金经理两类违规",
-           "children": [
-            {
-             "name": "Stray from their mandate 偏离实现承诺的投资策略"
-            },
-            {
-             "name": "Construct composite 时有cherry picking"
-            }
-           ]
-          },
-          {
-           "name": "案例：A员工发现上司在挪用客户的资金，于是找到上司，上司告诉他客户知道这事，你不用管，A员工又找到客户确认，客户也说知道这个事情。A员工因为担心自己在工作上被穿小鞋，于是向监管机构举报了上司，这不属于whistle-blowing，因为其目的不是为了资本市场诚信或客户的利益，而是担心自己的工作。",
-           "trap": 1
           }
          ]
         }
