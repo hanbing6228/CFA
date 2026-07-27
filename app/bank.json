@@ -1,5 +1,5 @@
 {
- "version": "2026-07-24",
+ "version": "2026-07-27",
  "defaults": {
   "exam_date": "2026-11-20",
   "daily": {
@@ -664,99 +664,109 @@
    ]
   },
   "Alts": {
-   "Real Estate Investments": [
+   "LM1 Commodities and Commodity Derivatives": [
     {
-     "t": "四象限: 私募股权(直接)、私募债、公募股权(REIT)、公募债(MBS)"
+     "t": "六大板块: Energy / Grains / Industrial metals / Livestock / Precious metal / Softs;各有 Stocks(存量)与 Flows(流量)驱动"
     },
     {
-     "t": "收益法: 直接资本化 $V = \\frac{NOI}{\\text{cap rate}}$;cap rate = 折现率 − 增长率",
+     "t": "商品无独立未来现金流;估值靠对未来价格路径的折现判断,而非 DCF 现金流",
+     "trap": 1
+    },
+    {
+     "t": "Contango $F>S$;Backwardation $F<S$;远期曲线近端 vs 远端同向判断",
      "f": 1
     },
     {
-     "t": "NOI = 有效毛租金收入 − 运营费用(不减折旧/融资/税)",
+     "t": "持有成本: $F = S + \\text{direct storage cost} - \\text{convenience yield}$",
+     "f": 1
+    },
+    {
+     "t": "期货收益 = 价格收益 + 展期收益 + 抵押收益 (+ 指数再平衡收益)",
+     "f": 1
+    },
+    {
+     "t": "多头: backwardation → 展期为正; contango → 展期为负",
+     "trap": 1
+    },
+    {
+     "t": "保险理论 → normal backwardation;对冲压力:生产商主导→backwardation,消费商主导→contango"
+    },
+    {
+     "t": "互换: excess return / total return / basis / volatility(variance)"
+    }
+   ],
+   "LM2 Overview of Types of Real Estate Investment": [
+    {
+     "t": "四象限: Residential/Non-residential × Owner Occupied / For Rent(Commercial)"
+    },
+    {
+     "t": "特征: 位置固定、单价高、主动管理、交易成本高、折旧、非流动、需债务、定价难"
+    },
+    {
+     "t": "投资动机: 租赁收入、资本增值、通胀对冲、分散(与股债低相关)、税盾",
+     "trap": 1
+    },
+    {
+     "t": "租约: Gross / Net(含 triple-net) / Expense reimbursement / Sale-leaseback"
+    },
+    {
+     "t": "Appraisal指数可无成交也建、但滞后且平滑→低估波动、高估Sharpe;成交指数领先但嘈杂",
+     "trap": 1
+    },
+    {
+     "t": "多户需求看人口/年龄结构/租买比/按揭市场;工业看经济与进出口;零售看消费+百分比租金"
+    }
+   ],
+   "LM3 Publicly Traded Real Estate Securities": [
+    {
+     "t": "三类: REIT / REOC(经营更灵活) / MBS(CMBS+RMBS)"
+    },
+    {
+     "t": "REIT 好处: 流动性、透明、分散、专业管理、稳定高股息、税效;坏处: 留存少、监管成本、分散收益减弱、可投资产受限",
+     "trap": 1
+    },
+    {
+     "t": "NAV = (Cash NOI / cap rate) + tangible assets − liabilities; NAVPS = NAV / shares",
+     "f": 1
+    },
+    {
+     "t": "FFO = NI −/(+) 物业出售利得(损失) + 折旧摊销 + 非折旧减值; 比 AFFO 更常用",
+     "f": 1
+    },
+    {
+     "t": "AFFO = FFO − 非现金租金 − 维护性资本开支 − 租赁成本;更接近可分配现金但噪音更大",
      "f": 1,
      "trap": 1
     },
     {
-     "t": "DCF法: 预测期NOI + 期末转售价(用终期cap rate)折现"
-    },
-    {
-     "t": "成本法给上限、比较法需可比交易调整、收益法最常用"
-    },
-    {
-     "t": "杠杆放大股权收益也放大风险;夹层债/优先股介于股债之间"
+     "t": "相对估值: P/FFO、P/AFFO、EV/EBITDA; 另可用 2/3 阶段 DDM"
     }
    ],
-   "Publicly Traded Real Estate Securities (REITs)": [
+   "LM4 Hedge Fund Strategies": [
     {
-     "t": "REIT须分配≥90%应税收入,公司层面基本免税",
+     "t": "特征: 监管松、授权灵活、宇宙大、敞口激进、杠杆自由、投资者流动性受限、费用高(管理费+激励;HWM/hurdle)"
+    },
+    {
+     "t": "Equity: L/S(净多)、Dedicated Short/Short-Biased(净空)、EMN(pairs/stub/multi-class,高杠杆低β)"
+    },
+    {
+     "t": "Event-driven: Merger arb(保险式+短put、左尾); Distressed(清算回收/重整索偿,复苏早期更有吸引力)"
+    },
+    {
+     "t": "Relative value: FI arb(曲线/carry/日历价差,高杠杆); Convertible arb(多债空股)"
+    },
+    {
+     "t": "Opportunistic: Global macro(自上而下); Managed futures(TSM/CSM,右尾正偏)"
+    },
+    {
+     "t": "Specialist: 波动率交易; Reinsurance/Life settlements / cat bonds"
+    },
+    {
+     "t": "Multi-manager: FoF(分散但慢、欠透明) vs Multi-strategy(调仓快、费优,压力期左尾炸仓风险)",
      "trap": 1
     },
     {
-     "t": "FFO = 净利润 + 折旧摊销 − 出售物业利得 + 出售损失",
-     "f": 1
-    },
-    {
-     "t": "AFFO = FFO − 经常性资本支出 − 直线租金调整(更接近可分配现金)",
-     "f": 1
-    },
-    {
-     "t": "NAV法: (物业NOI/cap rate + 其他资产 − 负债)/股数,分析师首选",
-     "f": 1
-    },
-    {
-     "t": "相对估值用P/FFO、P/AFFO;股利折现也适用(高派息)"
-    },
-    {
-     "t": "REIT vs 直接持有: 流动性高、分散好但短期与股市相关性较高",
-     "trap": 1
-    }
-   ],
-   "Private Equity Investments": [
-    {
-     "t": "两大策略: 风险投资(早期)与杠杆收购(成熟现金流稳定)"
-    },
-    {
-     "t": "退出: IPO、并购出售(trade sale)、二级出售、再资本化"
-    },
-    {
-     "t": "J曲线: 早期费用与减值致收益为负,后期升值转正",
-     "trap": 1
-    },
-    {
-     "t": "价值创造 = 运营改善 + 财务杠杆 + 多重扩张(multiple expansion)"
-    },
-    {
-     "t": "费用: 管理费(约2%承诺资本) + 附带收益(约20%,过门槛后)",
-     "f": 1
-    },
-    {
-     "t": "GP分配用瀑布结构;clawback保护LP防GP超额提成",
-     "trap": 1
-    }
-   ],
-   "Commodities and Commodity Derivatives": [
-    {
-     "t": "商品无现金流,收益来自价格、抵押、展期(roll)三部分"
-    },
-    {
-     "t": "总收益 = 价格收益 + 抵押收益 + 展期收益",
-     "f": 1
-    },
-    {
-     "t": "Contango: 期货>现货 → 展期负收益;Backwardation: 期货<现货 → 展期正收益",
-     "f": 1,
-     "trap": 1
-    },
-    {
-     "t": "便利收益(convenience yield)高 → 现货溢价 → backwardation"
-    },
-    {
-     "t": "期货价 ≈ 现货 + 存储成本 − 便利收益(持有成本模型)",
-     "f": 1
-    },
-    {
-     "t": "定价理论: 保险(hedging pressure)、持有成本、便利收益"
+     "t": "因子: Equity/Currency/Credit/VIX; 并入60/40常降波动、升Sharpe/Sortino"
     }
    ]
   },
@@ -1162,6 +1172,1065 @@
    "name": "Alts",
    "children": [
     {
+     "name": "LM1 Introduction to Commodities and Commodity Derivatives",
+     "children": [
+      {
+       "name": "Commodity sectors",
+       "children": [
+        {
+         "name": "Energy",
+         "children": [
+          {
+           "name": "Crude oil, natural gas, coal, refined products"
+          },
+          {
+           "name": "Stocks",
+           "children": [
+            {
+             "name": "Discovery and depletion of new fields"
+            },
+            {
+             "name": "Economic and political costs/certainty of access to those fields"
+            },
+            {
+             "name": "Refinery technology and maintenance"
+            },
+            {
+             "name": "Power plant type and construction"
+            },
+            {
+             "name": "Economic (GDP) size"
+            }
+           ]
+          },
+          {
+           "name": "Flows",
+           "children": [
+            {
+             "name": "Pipeline and tanker reliability"
+            },
+            {
+             "name": "Seasonality (summer/winter)"
+            },
+            {
+             "name": "Adverse weather (cold, hurricanes)"
+            },
+            {
+             "name": "Automobile/truck sales"
+            },
+            {
+             "name": "Geopolitical instability"
+            },
+            {
+             "name": "Environmental requirements"
+            },
+            {
+             "name": "Economic (GDP) growth"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Grains",
+         "children": [
+          {
+           "name": "Corn, soy, wheat, rice"
+          },
+          {
+           "name": "Stocks",
+           "children": [
+            {
+             "name": "Arable farmland"
+            },
+            {
+             "name": "Storage/port facilities (infrastructure)"
+            },
+            {
+             "name": "Human and animal population size"
+            }
+           ]
+          },
+          {
+           "name": "Flows",
+           "children": [
+            {
+             "name": "Weather (moisture, temperature)"
+            },
+            {
+             "name": "Disease"
+            },
+            {
+             "name": "Consumer preferences"
+            },
+            {
+             "name": "Genetic modification"
+            },
+            {
+             "name": "Biofuel substitution"
+            },
+            {
+             "name": "Population growth"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Industrial metals",
+         "children": [
+          {
+           "name": "Copper, aluminum, nickel, zinc, lead, tin, iron"
+          },
+          {
+           "name": "Stocks",
+           "children": [
+            {
+             "name": "Mined acreage"
+            },
+            {
+             "name": "Smelter capacity"
+            },
+            {
+             "name": "Economic (GDP) stage of industrial/consumer development"
+            }
+           ]
+          },
+          {
+           "name": "Flows",
+           "children": [
+            {
+             "name": "Government industrial and environmental policies"
+            },
+            {
+             "name": "Economic (GDP) growth"
+            },
+            {
+             "name": "Automobile/truck sales"
+            },
+            {
+             "name": "Infrastructure investment"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Livestock",
+         "children": [
+          {
+           "name": "Hogs, cattle, sheep, and poultry"
+          },
+          {
+           "name": "Stocks",
+           "children": [
+            {
+             "name": "Herd size"
+            },
+            {
+             "name": "Processing plant capacity"
+            },
+            {
+             "name": "Consumer preferences"
+            },
+            {
+             "name": "Feed availability/cost"
+            }
+           ]
+          },
+          {
+           "name": "Flows",
+           "children": [
+            {
+             "name": "Speed of maturation to slaughter weight"
+            },
+            {
+             "name": "Economic (GDP) growth/consumer income"
+            },
+            {
+             "name": "Disease"
+            },
+            {
+             "name": "Adverse weather"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Precious metal",
+         "children": [
+          {
+           "name": "Gold, silver, platinum"
+          },
+          {
+           "name": "Stocks",
+           "children": [
+            {
+             "name": "Mined acreage"
+            },
+            {
+             "name": "Smelter capacity"
+            },
+            {
+             "name": "Fiat money supply/banking development"
+            }
+           ]
+          },
+          {
+           "name": "Flows",
+           "children": [
+            {
+             "name": "Central bank monetary policy"
+            },
+            {
+             "name": "Geopolitics"
+            },
+            {
+             "name": "Economic (GDP) growth"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Softs",
+         "children": [
+          {
+           "name": "Cotton, cocoa, sugar, coffee"
+          },
+          {
+           "name": "Stocks",
+           "children": [
+            {
+             "name": "Arable farmland"
+            },
+            {
+             "name": "Storage/port facilities (infrastructure)"
+            },
+            {
+             "name": "Economic (GDP) size"
+            }
+           ]
+          },
+          {
+           "name": "Flows",
+           "children": [
+            {
+             "name": "Weather (moisture, temperature)"
+            },
+            {
+             "name": "Disease"
+            },
+            {
+             "name": "Consumer preferences"
+            },
+            {
+             "name": "Biofuel substitution"
+            },
+            {
+             "name": "Economic (GDP) growth/consumer income"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Life cycle of commodities",
+       "children": [
+        {
+         "name": "Energy",
+         "children": [
+          {
+           "name": "Crude oil: has to be transformed into something else; crude is useless in its innate form"
+          },
+          {
+           "name": "Natural gas: can be consumed almost immediately"
+          },
+          {
+           "name": "Refined products: potential processing steps"
+          }
+         ]
+        },
+        {
+         "name": "Livestock: good weather and high-quality pasture"
+        },
+        {
+         "name": "Grains: similar growth cycle"
+        },
+        {
+         "name": "Softs: focus on coffee"
+        },
+        {
+         "name": "Industrial/precious metal: life cycle is very flexible"
+        }
+       ]
+      },
+      {
+       "name": "Valuation of commodities vs equities and bonds",
+       "children": [
+        {
+         "name": "Asset",
+         "children": [
+          {
+           "name": "Commodities: tangible / physical assets (except e.g. electricity, weather)"
+          },
+          {
+           "name": "Equities & bonds: financial assets — claims on economic output (profits)"
+          }
+         ]
+        },
+        {
+         "name": "Cash flow",
+         "children": [
+          {
+           "name": "Commodities: no separate future cash flows",
+           "trap": 1
+          },
+          {
+           "name": "Equities & bonds: dividends, coupon, interest"
+          }
+         ]
+        },
+        {
+         "name": "Costs",
+         "children": [
+          {
+           "name": "Commodities: transportation and storage costs"
+          },
+          {
+           "name": "Equities & bonds: no storage costs"
+          }
+         ]
+        },
+        {
+         "name": "Valuation",
+         "children": [
+          {
+           "name": "Commodities: discounted forecast of future possible prices"
+          },
+          {
+           "name": "Equities & bonds: present value of expected cash flows"
+          }
+         ]
+        },
+        {
+         "name": "Analysis",
+         "children": [
+          {
+           "name": "Commodities: professional judgment + experience / technical analysis"
+          },
+          {
+           "name": "Equities & bonds: fundamental analysis"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Market participants",
+       "children": [
+        {
+         "name": "Hedgers: reduce risk by buying or selling futures contracts"
+        },
+        {
+         "name": "Speculators: exploit an information advantage to profit from trading with hedgers"
+        },
+        {
+         "name": "Arbitrageurs",
+         "children": [
+          {
+           "name": "Capitalize on mispricing between the commodity versus the futures price"
+          },
+          {
+           "name": "Buying, selling, and storing the physical commodities"
+          }
+         ]
+        },
+        {
+         "name": "Commodity exchanges"
+        },
+        {
+         "name": "Commodity market analysts"
+        },
+        {
+         "name": "Commodity regulators"
+        }
+       ]
+      },
+      {
+       "name": "Contango and backwardation",
+       "children": [
+        {
+         "name": "Contango",
+         "children": [
+          {
+           "name": "$F > S$",
+           "f": 1
+          },
+          {
+           "name": "Longer-term futures contract > nearer-term futures contract"
+          }
+         ]
+        },
+        {
+         "name": "Backwardation",
+         "children": [
+          {
+           "name": "$F < S$",
+           "f": 1
+          },
+          {
+           "name": "Longer-term futures contract < nearer-term futures contract"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Theories of futures return",
+       "children": [
+        {
+         "name": "Insurance theory",
+         "children": [
+          {
+           "name": "Producers sell forward to lock the price"
+          },
+          {
+           "name": "Normal backwardation",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "Hedging pressure theory",
+         "children": [
+          {
+           "name": "Two forces of seeking price protection are equal → flat commodity curve"
+          },
+          {
+           "name": "Producers more interested in selling forward → backwardation"
+          },
+          {
+           "name": "Consumers more worried about price volatility → contango"
+          }
+         ]
+        },
+        {
+         "name": "Theory of storage",
+         "children": [
+          {
+           "name": "If commodity is regularly stored → contango"
+          },
+          {
+           "name": "Just-in-time delivery and use → backwardation"
+          },
+          {
+           "name": "$F = S + \\text{direct storage cost} - \\text{convenience yield}$",
+           "f": 1
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Components of futures return",
+       "children": [
+        {
+         "name": "Price return",
+         "children": [
+          {
+           "name": "Price return = (current price − previous price) / previous price",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Roll return",
+         "children": [
+          {
+           "name": "Roll return = [(near-term futures − farther-term futures) / near-term futures] × % of position",
+           "f": 1
+          },
+          {
+           "name": "Long position: backwardation → positive roll return",
+           "trap": 1
+          },
+          {
+           "name": "Long position: contango → negative roll return",
+           "trap": 1
+          }
+         ]
+        },
+        {
+         "name": "Collateral return"
+        },
+        {
+         "name": "Rebalance return (index only)"
+        }
+       ]
+      },
+      {
+       "name": "Commodity swaps",
+       "children": [
+        {
+         "name": "Excess return swap: changes in index level relative to a benchmark or fixed level"
+        },
+        {
+         "name": "Total return swap: change in index level × notional amount"
+        },
+        {
+         "name": "Basis swap: two related commodity reference prices that are not perfectly correlated"
+        },
+        {
+         "name": "Volatility (variance) swap: proportional difference between actual variance and fixed variance at outset"
+        }
+       ]
+      },
+      {
+       "name": "Commodity indexes",
+       "children": [
+        {
+         "name": "Three primary roles"
+        },
+        {
+         "name": "Key characteristics"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM2 Overview of Types of Real Estate Investment",
+     "children": [
+      {
+       "name": "Basic forms",
+       "children": [
+        {
+         "name": "Residential × Owner Occupied",
+         "children": [
+          {
+           "name": "Single-family homes, apartments/condominiums, manufactured housing"
+          }
+         ]
+        },
+        {
+         "name": "Residential × For Rent (Commercial)",
+         "children": [
+          {
+           "name": "Single-family homes and multi-family buildings"
+          }
+         ]
+        },
+        {
+         "name": "Non-Residential × Owner Occupied",
+         "children": [
+          {
+           "name": "Office, shopping centers, manufacturing facilities, warehouses, agricultural, other specialty"
+          }
+         ]
+        },
+        {
+         "name": "Non-Residential × For Rent (Commercial)",
+         "children": [
+          {
+           "name": "Office, shopping centers, industrial/warehouse/distribution, hotels, agricultural, other specialty"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Characteristics",
+       "children": [
+        {
+         "name": "Unique asset and fixed location"
+        },
+        {
+         "name": "High unit value"
+        },
+        {
+         "name": "Management intensive (active management)"
+        },
+        {
+         "name": "High transaction costs"
+        },
+        {
+         "name": "Depreciation"
+        },
+        {
+         "name": "Illiquidity"
+        },
+        {
+         "name": "Need for debt capital"
+        },
+        {
+         "name": "Price determination"
+        }
+       ]
+      },
+      {
+       "name": "Risk factors",
+       "children": [
+        {
+         "name": "Property Demand and Supply",
+         "children": [
+          {
+           "name": "Business conditions"
+          },
+          {
+           "name": "Demographic"
+          },
+          {
+           "name": "Real estate cycle"
+          }
+         ]
+        },
+        {
+         "name": "Valuation",
+         "children": [
+          {
+           "name": "Cost and availability of capital"
+          },
+          {
+           "name": "Availability of information"
+          },
+          {
+           "name": "Lack of liquidity"
+          },
+          {
+           "name": "Rising interest rates"
+          }
+         ]
+        },
+        {
+         "name": "Property Operations",
+         "children": [
+          {
+           "name": "Management risk"
+          },
+          {
+           "name": "Lease provisions"
+          },
+          {
+           "name": "Leverage"
+          },
+          {
+           "name": "ESG Considerations"
+          },
+          {
+           "name": "Obsolescence"
+          },
+          {
+           "name": "Ongoing market disruption"
+          },
+          {
+           "name": "Other factors"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Reasons to invest in real estate",
+       "children": [
+        {
+         "name": "Current income (leasing)"
+        },
+        {
+         "name": "Capital appreciation"
+        },
+        {
+         "name": "Inflation hedge"
+        },
+        {
+         "name": "Diversification: not highly correlated with stocks and bonds",
+         "trap": 1
+        },
+        {
+         "name": "Tax benefits"
+        }
+       ]
+      },
+      {
+       "name": "Classification",
+       "children": [
+        {
+         "name": "Residential properties",
+         "children": [
+          {
+           "name": "Single-family"
+          },
+          {
+           "name": "Multi-family"
+          }
+         ]
+        },
+        {
+         "name": "Non-residential properties",
+         "children": [
+          {
+           "name": "Office buildings"
+          },
+          {
+           "name": "Industrial and warehouse"
+          },
+          {
+           "name": "Retail"
+          },
+          {
+           "name": "Hospitality"
+          },
+          {
+           "name": "Other"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Common Types of Leases",
+       "children": [
+        {
+         "name": "Gross lease"
+        },
+        {
+         "name": "Net lease",
+         "children": [
+          {
+           "name": "Triple-net leases"
+          }
+         ]
+        },
+        {
+         "name": "Expense reimbursement"
+        },
+        {
+         "name": "Sale-leaseback"
+        }
+       ]
+      },
+      {
+       "name": "Investment Characteristics",
+       "children": [
+        {
+         "name": "Office",
+         "children": [
+          {
+           "name": "Demand depends on employment growth, space used per employee, technology"
+          },
+          {
+           "name": "Length: varies globally"
+          }
+         ]
+        },
+        {
+         "name": "Industrial and warehouse",
+         "children": [
+          {
+           "name": "Demand depends on",
+           "children": [
+            {
+             "name": "Overall strength of the economy and economic growth"
+            },
+            {
+             "name": "Import and export activity in the economy"
+            }
+           ]
+          },
+          {
+           "name": "Length: long-term net leases"
+          }
+         ]
+        },
+        {
+         "name": "Retail",
+         "children": [
+          {
+           "name": "Depends on consumer spending"
+          },
+          {
+           "name": "Length: varies"
+          },
+          {
+           "name": "Percentage lease: minimum rent + percentage rent",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Multi-Family",
+         "children": [
+          {
+           "name": "Demand depends on",
+           "children": [
+            {
+             "name": "Population growth"
+            },
+            {
+             "name": "Age segment"
+            },
+            {
+             "name": "Population demographics"
+            },
+            {
+             "name": "Culture's propensity to rent"
+            },
+            {
+             "name": "Ratio of home prices to rents"
+            },
+            {
+             "name": "Mortgage markets"
+            }
+           ]
+          },
+          {
+           "name": "Length: six months to two years (one year most common)"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Due diligence",
+       "children": [
+        {
+         "name": "Market review"
+        },
+        {
+         "name": "Lease and rent review"
+        },
+        {
+         "name": "Review costs of re-leasing"
+        },
+        {
+         "name": "Review documentation"
+        },
+        {
+         "name": "Property inspections and service agreements"
+        },
+        {
+         "name": "Legal documentation and tax compliance"
+        }
+       ]
+      },
+      {
+       "name": "Indexes",
+       "children": [
+        {
+         "name": "Appraisal-based indexes",
+         "children": [
+          {
+           "name": "Advantage: indexes can be constructed even when there are no transactions"
+          },
+          {
+           "name": "Disadvantages",
+           "children": [
+            {
+             "name": "Appraisal lag"
+            },
+            {
+             "name": "Smooth the index, underestimate the volatility",
+             "trap": 1
+            },
+            {
+             "name": "Overstate Sharpe ratios",
+             "trap": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Transaction-based indexes",
+         "children": [
+          {
+           "name": "Repeat sales index"
+          },
+          {
+           "name": "Hedonic index"
+          },
+          {
+           "name": "Advantage: lead appraisal-based indexes"
+          },
+          {
+           "name": "Disadvantage: noisy"
+          }
+         ]
+        },
+        {
+         "name": "Real Estate Security Indexes",
+         "children": [
+          {
+           "name": "Equity REITs only"
+          },
+          {
+           "name": "Equity REITs and REOCs"
+          },
+          {
+           "name": "REOCs only"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "LM3 Investments in Real Estate Through Publicly Traded Securities",
+     "children": [
+      {
+       "name": "Types of publicly traded real estate securities",
+       "children": [
+        {
+         "name": "REITs",
+         "children": [
+          {
+           "name": "Benefits of REIT",
+           "children": [
+            {
+             "name": "Liquidity"
+            },
+            {
+             "name": "Transparency"
+            },
+            {
+             "name": "Diversification"
+            },
+            {
+             "name": "High-quality portfolios"
+            },
+            {
+             "name": "Active professional management"
+            },
+            {
+             "name": "High, stable income"
+            },
+            {
+             "name": "Tax efficiency"
+            }
+           ]
+          },
+          {
+           "name": "Disadvantages of REIT",
+           "children": [
+            {
+             "name": "Lack of retained earnings"
+            },
+            {
+             "name": "Regulatory costs"
+            },
+            {
+             "name": "Reduced portfolio diversification benefits",
+             "trap": 1
+            },
+            {
+             "name": "Limited in types of assets owned"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "REOCs",
+         "children": [
+          {
+           "name": "Operating flexibility"
+          }
+         ]
+        },
+        {
+         "name": "MBS",
+         "children": [
+          {
+           "name": "CMBS"
+          },
+          {
+           "name": "RMBS"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "REIT & REOC valuation",
+       "children": [
+        {
+         "name": "NAVPS approach",
+         "children": [
+          {
+           "name": "Remove non-cash rents"
+          },
+          {
+           "name": "NAV = (Cash NOI / cap rate) + tangible asset − liability",
+           "f": 1
+          },
+          {
+           "name": "NAVPS = NAV / shares outstanding",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Relative approach",
+         "children": [
+          {
+           "name": "FFO",
+           "children": [
+            {
+             "name": "FFO = NI −/(+) gains(losses) from sales of properties + depreciation and amortization + impairments and write-downs unrelated to depreciation",
+             "f": 1
+            },
+            {
+             "name": "More frequently used than AFFO"
+            },
+            {
+             "name": "P/FFO"
+            }
+           ]
+          },
+          {
+           "name": "AFFO",
+           "children": [
+            {
+             "name": "AFFO = FFO − non-cash rent − maintenance-type capital expenditure − leasing cost",
+             "f": 1
+            },
+            {
+             "name": "More accurate measure of current economic income"
+            },
+            {
+             "name": "P/AFFO"
+            },
+            {
+             "name": "Reflective of a REIT's dividend-paying ability"
+            },
+            {
+             "name": "More variation and error",
+             "trap": 1
+            }
+           ]
+          },
+          {
+           "name": "EBITDA/EV or EV/EBITDA"
+          }
+         ]
+        },
+        {
+         "name": "DCF method",
+         "children": [
+          {
+           "name": "2 or 3-stage DDM"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
      "name": "LM4 Hedge Fund Strategies",
      "children": [
       {
@@ -1330,7 +2399,7 @@
            ]
           },
           {
-           "name": "Role of portfolio",
+           "name": "Role in portfolio",
            "children": [
             {
              "name": "Liquid"
@@ -1369,7 +2438,7 @@
              "name": "Analysis for buy and sell opportunities using fundamental models"
             },
             {
-             "name": "Constructe a portfolio with constraints to maintain market risk neutrality"
+             "name": "Construct a portfolio with constraints to maintain market risk neutrality"
             },
             {
              "name": "Availability and cost of leverage"
@@ -1386,7 +2455,7 @@
              "name": "High levels of diversification"
             },
             {
-             "name": "high levels of liquidity"
+             "name": "High levels of liquidity"
             },
             {
              "name": "Lower standard deviation"
@@ -1413,7 +2482,7 @@
          "name": "Summary",
          "children": [
           {
-           "name": "Short-Biased策略和Long/Short Equity都会使用做多和做空，但Short-Biased希望获得一个净的空头敞口（net short exposure）；Long/Short Equity策略则希望获得一个净的多头敞口（net long exposure）",
+           "name": "Short-Biased and Long/Short Equity both go long and short, but Short-Biased seeks net short exposure; Long/Short Equity seeks net long exposure",
            "trap": 1
           }
          ]
@@ -1447,7 +2516,8 @@
              "name": "Relatively liquid strategy"
             },
             {
-             "name": "Left-tail risk"
+             "name": "Left-tail risk",
+             "trap": 1
             },
             {
              "name": "Return profile is insurance-like plus a short put option"
@@ -1523,7 +2593,7 @@
            "name": "Role in portfolio",
            "children": [
             {
-             "name": "Distressed investing is particularly attractive in the early stages of an economic recovery after a period of market dislocation"
+             "name": "Particularly attractive in the early stages of an economic recovery after a period of market dislocation"
             }
            ]
           }
@@ -1590,7 +2660,7 @@
            "name": "Characteristics",
            "children": [
             {
-             "name": "Naturally less-liquid securities because of their relatively small issue sizes and inherent complexities"
+             "name": "Naturally less-liquid securities because of relatively small issue sizes and inherent complexities"
             },
             {
              "name": "Availability and cost to borrow underlying equity for short selling"
@@ -1705,14 +2775,6 @@
            ]
           }
          ]
-        },
-        {
-         "name": "Summary",
-         "children": [
-          {
-           "name": "Subtopic"
-          }
-         ]
         }
        ]
       },
@@ -1792,16 +2854,13 @@
            "name": "Characteristics",
            "children": [
             {
-             "name": "Life settlement"
+             "name": "Life settlement: pools of life insurance contracts"
             },
             {
              "name": "Catastrophe bonds"
             },
             {
              "name": "Catastrophe risk futures"
-            },
-            {
-             "name": "Pools of life insurance contracts"
             }
            ]
           },
@@ -1809,7 +2868,7 @@
            "name": "Role in portfolio",
            "children": [
             {
-             "name": "Diversification."
+             "name": "Diversification"
             },
             {
              "name": "Alpha generation"
@@ -1897,7 +2956,7 @@
            "name": "Characteristics",
            "children": [
             {
-             "name": "Outperforme"
+             "name": "Outperform"
             },
             {
              "name": "More variance and occasional large losses"
@@ -1912,7 +2971,14 @@
              "name": "Improved fee structure"
             },
             {
-             "name": "More prone to left-tail blow-up risk in stress periods"
+             "name": "More prone to left-tail blow-up risk in stress periods",
+             "trap": 1
+            },
+            {
+             "name": "More transparency"
+            },
+            {
+             "name": "More resilient"
             }
            ]
           },
@@ -1920,23 +2986,9 @@
            "name": "Role in portfolio",
            "children": [
             {
-             "name": "More transparency"
-            },
-            {
-             "name": "More resilient"
-            },
-            {
              "name": "Can react faster to different real-time market impacts"
             }
            ]
-          }
-         ]
-        },
-        {
-         "name": "Summary",
-         "children": [
-          {
-           "name": "Subtopic"
           }
          ]
         }
@@ -1978,9 +3030,6 @@
              "name": "Volatility risk (VIX)"
             }
            ]
-          },
-          {
-           "name": "Subtopic"
           }
          ]
         }
@@ -2015,13 +3064,13 @@
          "name": "Risk Metrics",
          "children": [
           {
-           "name": "Risk-adjusted Measure- Sharpe and Sortino ratios"
+           "name": "Risk-adjusted measure: Sharpe and Sortino ratios"
           },
           {
-           "name": "Risk measure- Standard deviation"
+           "name": "Risk measure: Standard deviation"
           },
           {
-           "name": "Risk Measure-Drawdown"
+           "name": "Risk measure: Drawdown"
           }
          ]
         }

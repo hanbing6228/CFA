@@ -1,17 +1,8 @@
 {
- "Ethics": [
-  "Ethics.png"
- ],
- "Corp": [
-  "Corp.png"
- ],
- "Econ": [
-  "Econ.png"
- ],
- "QM": [
-  "QM.png"
- ],
- "Equity": [
-  "Equity.png"
- ]
+  "Ethics": ["Ethics.png"],
+  "Corp": ["Corp.png"],
+  "Econ": ["Econ.png"],
+  "QM": ["QM.png"],
+  "Equity": ["Equity.png"],
+  "Alts": ["Alts-1.png", "Alts-2.png", "Alts-3.png", "Alts-4.png"]
 }
