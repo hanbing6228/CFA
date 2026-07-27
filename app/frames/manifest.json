@@ -4,5 +4,6 @@
   "Econ": ["Econ.png"],
   "QM": ["QM.png"],
   "Equity": ["Equity.png"],
-  "Alts": ["Alts-1.png", "Alts-2.png", "Alts-3.png", "Alts-4.png"]
+  "Alts": ["Alts-1.png", "Alts-2.png", "Alts-3.png", "Alts-4.png"],
+  "FI": ["FI-1.png", "FI-2.png", "FI-3.png", "FI-4.png", "FI-5.png"]
 }

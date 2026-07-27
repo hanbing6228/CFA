@@ -438,6 +438,11 @@
    ],
    "Credit Default Swaps": [
     {
+     "t": "CDS 买方是信用质量空头(信用恶化受益);多空定义与传统投资相反",
+     "trap": 1,
+     "los": "CDS 机制: protection buyer/seller, 触发事件"
+    },
+    {
      "t": "Buyer 付保费买保护;credit event 由 ISDA DC 绝对多数认定(破产/违约/重组)",
      "los": "CDS 机制: protection buyer/seller, 触发事件"
     },
@@ -453,6 +458,11 @@
     {
      "t": "Basis trade:现券利差 vs CDS spread 的价差回归",
      "los": "Basis trade 逻辑"
+    },
+    {
+     "t": "实物交割可交付最便宜券(cheapest-to-deliver);美国重组通常不算信用事件",
+     "trap": 1,
+     "los": "CDS 机制: protection buyer/seller, 触发事件"
     }
    ]
   },
@@ -8423,7 +8433,7 @@
          "name": "Factor model",
          "children": [
           {
-           "name": "判断Level、steepness、curvature"
+           "name": "Level, Steepness, and Curvature"
           },
           {
            "name": "Decompose yield curve movement"
@@ -8536,7 +8546,7 @@
              "name": "Equal probability"
             },
             {
-             "name": "Assumed volatility of theone-year rate"
+             "name": "Assumed volatility of the one-year rate"
             },
             {
              "name": "Benchmark curve"
@@ -8572,7 +8582,7 @@
          "name": "Option-free bond valuation",
          "children": [
           {
-           "name": "在使用利率二叉树估值时，其顺序是是从后向前一期一期进行折现，向前折现时，要考虑每个时间点的现金流（coupon），这点非常容易忘记"
+           "name": "在使用利率二叉树估值时，其顺序是从后向前一期一期进行折现，向前折现时，要考虑每个时间点的现金流（coupon），这点非常容易忘记"
           }
          ]
         },
