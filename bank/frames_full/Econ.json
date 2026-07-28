@@ -36,15 +36,15 @@
               "name": "Retail quote"
              }
             ]
-           },
-           {
-            "name": "Relationship between the dealer and the client"
            }
           ]
          },
          {
           "name": "Interbank Market",
           "children": [
+           {
+            "name": "Relationship between the dealer and the client"
+           },
            {
             "name": "Currency pair involved"
            },
@@ -138,7 +138,7 @@
             "f": 1,
             "children": [
              {
-              "name": "Interest differential =forward differential"
+              "name": "Interest differential ≈ forward differential"
              }
             ]
            }
@@ -238,13 +238,17 @@
           ]
          },
          {
+          "name": "r^N_X − r^N_Y = π^e_X − π^e_Y",
+          "f": 1
+         },
+         {
           "name": "当UIRP和ex ante PPP都成立",
           "children": [
            {
             "name": "Real interest rate parity",
             "children": [
              {
-              "name": "r^N_X − r^N_Y = π^e_X − π^e_Y",
+              "name": "r^R_X = r^R_Y",
               "f": 1
              }
             ]
@@ -260,7 +264,7 @@
       "trap": 1,
       "children": [
        {
-        "name": "UIRP unhold"
+        "name": "UIRP does not hold"
        },
        {
         "name": "Risk and reward",
@@ -462,7 +466,7 @@
           "name": "与Mundell-Fleming model的比较"
          },
          {
-          "name": "Governments run large budget deficits on a sustainable baisis in the long run",
+          "name": "Governments run large budget deficits on a sustainable basis in the long run",
           "children": [
            {
             "name": "Depreciation"
@@ -558,7 +562,7 @@
           "f": 1
          },
          {
-          "name": "ΔS = nbb + rd",
+          "name": "ΔS = nsb + id",
           "f": 1
          }
         ]
@@ -659,11 +663,11 @@
           "children": [
            {
             "name": "Either employed or unemployed"
-           },
-           {
-            "name": "Human capital"
            }
           ]
+         },
+         {
+          "name": "Human capital"
          },
          {
           "name": "Capital",
@@ -705,11 +709,11 @@
           "name": "Steady state rate of growth",
           "children": [
            {
-            "name": "Δk/k=Δy/y",
+            "name": "Δk/k = Δy/y = 0",
             "f": 1
            },
            {
-            "name": "G* = θ/(1−α) + %ΔL",
+            "name": "g* = θ/(1−α) + %ΔL",
             "f": 1
            }
           ]
@@ -752,7 +756,7 @@
           "name": "Conditional convergence",
           "children": [
            {
-            "name": "Convergence is conditional on the countries having the same saving rate, population growth rate, and production function.If these conditions hold, the neoclassical model implies convergence to the same level of per capita output as well as the same steady state growth rate."
+            "name": "Convergence is conditional on the countries having the same saving rate, population growth rate, and production function. If these conditions hold, the neoclassical model implies convergence to the same level of per capita output as well as the same steady state growth rate."
            }
           ]
          },
