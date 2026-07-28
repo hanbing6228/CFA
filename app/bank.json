@@ -10696,7 +10696,7 @@
              "name": "Debt——Held-for-trading or amortized cost results in accounting mismatch"
             },
             {
-             "name": "Equity——Held-for-trading must be classified as FVPL; others may be classified as either FVTPL or FVOCI, irrevocable"
+             "name": "Equity——Held-for-trading must be classified as FVPL; others may be classified as either FVPL or FVOCI, irrevocable"
             }
            ]
           },
@@ -10742,7 +10742,7 @@
        "trap": 1,
        "children": [
         {
-         "name": "Eqity method overview",
+         "name": "Equity method overview",
          "children": [
           {
            "name": "Recognize the cost of investment at inception"
@@ -11458,7 +11458,7 @@
        "name": "Foreign currency transactions",
        "children": [
         {
-         "name": "Transactions occurs dominated in foreign currency"
+         "name": "Transactions occur denominated in foreign currency"
         },
         {
          "name": "Summary of impact due to changes in Foreign Currency",
@@ -11670,6 +11670,9 @@
         },
         {
          "name": "Assets are predominantly financial assets"
+        },
+        {
+         "name": "Minimum capital requirement"
         }
        ]
       },
@@ -11683,7 +11686,7 @@
            "name": "Minimum capital requirement"
           },
           {
-           "name": "Minimum luquidity"
+           "name": "Minimum liquidity"
           },
           {
            "name": "Stable funding"
@@ -11900,7 +11903,7 @@
          "name": "Purpose of CAMELS",
          "children": [
           {
-           "name": "Evaluate a bank conducts an analysis"
+           "name": "Evaluate a bank's uniform CAMELS analysis"
           },
           {
            "name": "Equity or debt investment analysis of banks"
@@ -12111,7 +12114,7 @@
            "name": "Classification issues"
           },
           {
-           "name": "Mergers and acquistions issues"
+           "name": "Mergers and acquisitions issues"
           },
           {
            "name": "Financial reporting that diverges from economic reality"
@@ -13842,6 +13845,1050 @@
    "name": "QM",
    "children": [
     {
+     "name": "Basics of Multiple Regression and Underlying Assumptions",
+     "children": [
+      {
+       "name": "Review",
+       "children": [
+        {
+         "name": "方差（Variance）",
+         "children": [
+          {
+           "name": "样本方差",
+           "children": [
+            {
+             "name": "s² = Σ(xᵢ − x̄)² / (n − 1)",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "总体方差",
+           "children": [
+            {
+             "name": "σ² = Σ(xᵢ − μ)² / N",
+             "f": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "标准差（Standard deviation）",
+         "children": [
+          {
+           "name": "样本标准差",
+           "children": [
+            {
+             "name": "s = √s² = √[Σ(xᵢ − x̄)² / (n − 1)]",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "总体标准差",
+           "children": [
+            {
+             "name": "σ = √σ² = √[Σ(xᵢ − μ)² / N]",
+             "f": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "协方差（Covariance）",
+         "children": [
+          {
+           "name": "cov(x,y) = (1/N) Σ(xᵢ − E(x))(yᵢ − E(y))",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "相关系数（ρ/r）",
+         "children": [
+          {
+           "name": "r_xy = cov(x,y) / √[D(x)D(y)]",
+           "f": 1
+          },
+          {
+           "name": "D(x), D(y) 是 x和y的方差"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Hypothesis test of regression coefficients",
+       "children": [
+        {
+         "name": "Confidence interval",
+         "children": [
+          {
+           "name": "b̂_k ± t_c S_b̂_k",
+           "f": 1
+          },
+          {
+           "name": "If the confidence interval does not include the hypothesized value, the null is rejected"
+          }
+         ]
+        },
+        {
+         "name": "Significance test for regression coefficient",
+         "children": [
+          {
+           "name": "t = (b̂_k − hypothesized value of b_k) / s_b̂_k",
+           "f": 1
+          },
+          {
+           "name": "df = n − 2",
+           "f": 1
+          },
+          {
+           "name": "Decision rule: reject H₀ if |t| > t critical"
+          }
+         ]
+        },
+        {
+         "name": "Significance test for correlation",
+         "children": [
+          {
+           "name": "t = r√(n−2) / √(1−r²)",
+           "f": 1
+          },
+          {
+           "name": "df = n − 2",
+           "f": 1
+          },
+          {
+           "name": "Decision rule: reject H₀ if |t| > t critical"
+          }
+         ]
+        },
+        {
+         "name": "P-value",
+         "children": [
+          {
+           "name": "P-value < significance level → Reject the null"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Regression process",
+       "children": [
+        {
+         "name": "Identifying the dependent and independent variables"
+        },
+        {
+         "name": "Selecting the appropriate regression model"
+        },
+        {
+         "name": "Testing if the assumptions behind linear regression are satisfied"
+        },
+        {
+         "name": "Examining goodness of fit"
+        },
+        {
+         "name": "Making needed adjustments"
+        }
+       ]
+      },
+      {
+       "name": "Multiple linear regression",
+       "children": [
+        {
+         "name": "Partial regression coefficients",
+         "children": [
+          {
+           "name": "Holding all the other independent variables constant"
+          }
+         ]
+        },
+        {
+         "name": "The assumptions of the multiple linear regression",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Linearity",
+           "children": [
+            {
+             "name": "The relationship between the dependent variable and the independent variables is linear"
+            }
+           ]
+          },
+          {
+           "name": "Homoskedasticity",
+           "children": [
+            {
+             "name": "The variance of the regression residuals is the same for all observations"
+            }
+           ]
+          },
+          {
+           "name": "Independence of errors",
+           "children": [
+            {
+             "name": "The observations are independent of one another. This implies the regression residuals are uncorrelated across observations"
+            }
+           ]
+          },
+          {
+           "name": "Normality",
+           "children": [
+            {
+             "name": "The regression residuals are normally distributed"
+            }
+           ]
+          },
+          {
+           "name": "Independence of independent variables",
+           "children": [
+            {
+             "name": "Independent variables are not random"
+            },
+            {
+             "name": "There is no exact linear relation between two or more of the independent variables or combinations of the independent variables"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Residual plots",
+       "children": [
+        {
+         "name": "Identify extreme values and outliers"
+        },
+        {
+         "name": "Normal Q-Q plot",
+         "children": [
+          {
+           "name": "Visualize the distribution"
+          },
+          {
+           "name": "Compare the model's standardized residuals"
+          },
+          {
+           "name": "They should align along the diagonal if the residuals are normally distributed"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Evaluating Regression Model Fit and Interpreting Model Results",
+     "children": [
+      {
+       "name": "Measures of goodness of fit",
+       "trap": 1,
+       "children": [
+        {
+         "name": "Analysis of variance (ANOVA) table",
+         "children": [
+          {
+           "name": "SSE",
+           "children": [
+            {
+             "name": "Σ(Yᵢ − Ŷᵢ)²",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "RSS",
+           "children": [
+            {
+             "name": "Σ(Ŷᵢ − Ȳ)²",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "TSS = RSS + SSE",
+           "children": [
+            {
+             "name": "Σ(Yᵢ − Ȳ)²",
+             "f": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "R² and adjusted R²",
+         "children": [
+          {
+           "name": "Coefficient of determination（R²）",
+           "children": [
+            {
+             "name": "R² = RSS/SST = 1 − SSE/SST = explained variation / total variation",
+             "f": 1
+            },
+            {
+             "name": "越大，方程越有效"
+            }
+           ]
+          },
+          {
+           "name": "Adjusted R²",
+           "children": [
+            {
+             "name": "Adjusted R² = 1 − [SSE/(n−k−1)] / [SST/(n−1)] = 1 − [(n−1)/(n−k−1)](1−R²)",
+             "f": 1
+            },
+            {
+             "name": "Adjusted R² can be negative, while R² is always nonnegative"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Measure of model parsimony",
+         "children": [
+          {
+           "name": "AIC",
+           "children": [
+            {
+             "name": "AIC = n ln(SSE/n) + 2(k+1)",
+             "f": 1
+            },
+            {
+             "name": "越小，模型拟合越好"
+            },
+            {
+             "name": "Preferred if the model is used for prediction purposes"
+            }
+           ]
+          },
+          {
+           "name": "BIC",
+           "children": [
+            {
+             "name": "BIC = n ln(SSE/n) + ln(n)(k+1)",
+             "f": 1
+            },
+            {
+             "name": "Greater penalty, more parsimonious models"
+            },
+            {
+             "name": "越小，模型拟合越好"
+            },
+            {
+             "name": "Preferred when the best goodness of fit is desired"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Significance test for regression coefficient",
+       "children": [
+        {
+         "name": "Joint hypothesis tests",
+         "children": [
+          {
+           "name": "Focuses on the impact of the joint restriction"
+          },
+          {
+           "name": "F = [(SSE_r − SSE_u)/q] / [SSE_u/(n−k−1)]",
+           "f": 1
+          },
+          {
+           "name": "Reject the null if the calculated F-statistic exceeds critical F-value"
+          }
+         ]
+        },
+        {
+         "name": "General linear F-test",
+         "children": [
+          {
+           "name": "Determine whether the slope coefficient equals 0"
+          },
+          {
+           "name": "F = (RSS/1) / [SSE/(n−2)] = Mean regression sum of squares / Mean squared error",
+           "f": 1
+          },
+          {
+           "name": "Reject the null if the calculated F-statistic exceeds critical F-value"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Predicted value of the dependent variable",
+       "children": [
+        {
+         "name": "Point estimate",
+         "children": [
+          {
+           "name": "Ŷ = b̂₀ + b̂₁X",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Two sources of uncertainty",
+         "children": [
+          {
+           "name": "Model error"
+          },
+          {
+           "name": "Sampling error"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Model Misspecification",
+     "children": [
+      {
+       "name": "Model specification",
+       "children": [
+        {
+         "name": "Proper model specification",
+         "children": [
+          {
+           "name": "Economic reasoning"
+          },
+          {
+           "name": "Parsimonious"
+          },
+          {
+           "name": "Perform well out of sample"
+          },
+          {
+           "name": "Functional form should be appropriate"
+          },
+          {
+           "name": "Satisfy regression assumptions"
+          }
+         ]
+        },
+        {
+         "name": "Misspecified functional form",
+         "children": [
+          {
+           "name": "Omitted variables",
+           "children": [
+            {
+             "name": "May lead to heteroskedasticity or serial correlation"
+            }
+           ]
+          },
+          {
+           "name": "Inappropriate form of variables",
+           "children": [
+            {
+             "name": "May lead to heteroskedasticity"
+            }
+           ]
+          },
+          {
+           "name": "Inappropriate variable scaling",
+           "children": [
+            {
+             "name": "May lead to heteroskedasticity or multicollinearity"
+            }
+           ]
+          },
+          {
+           "name": "Inappropriate data pooling",
+           "children": [
+            {
+             "name": "May lead to heteroskedasticity or serial correlation"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Violations of regression assumptions (3个)",
+       "trap": 1,
+       "children": [
+        {
+         "name": "Heteroskedasticity异方差",
+         "children": [
+          {
+           "name": "Unconditional heteroskedasticity",
+           "children": [
+            {
+             "name": "No major problems for statistical inference"
+            }
+           ]
+          },
+          {
+           "name": "Conditional heteroskedasticity",
+           "children": [
+            {
+             "name": "Consequence",
+             "children": [
+              {
+               "name": "Does not affect the consistency of estimates"
+              },
+              {
+               "name": "Standard errors will be incorrect"
+              },
+              {
+               "name": "F-test and t-tests are unreliable"
+              }
+             ]
+            },
+            {
+             "name": "Test",
+             "children": [
+              {
+               "name": "Breusch-Pagan test"
+              }
+             ]
+            },
+            {
+             "name": "Correcting",
+             "children": [
+              {
+               "name": "Robust standard errors"
+              },
+              {
+               "name": "Generalized least squares"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Serial correlation (autocorrelation) 序列相关",
+         "children": [
+          {
+           "name": "Consequence",
+           "children": [
+            {
+             "name": "Does not affect consistency of estimates"
+            },
+            {
+             "name": "F-statistic and t-statistics inflated（positive serial correlation）"
+            },
+            {
+             "name": "Type 1 error（positive serial correlation）"
+            }
+           ]
+          },
+          {
+           "name": "Test",
+           "children": [
+            {
+             "name": "Durbin-Watson (DW) test",
+             "children": [
+              {
+               "name": "Limitation: applies only to testing for first-order serial correlation"
+              }
+             ]
+            },
+            {
+             "name": "Breusch–Godfrey (BG) test",
+             "children": [
+              {
+               "name": "More robust because it can detect autocorrelation up to a pre-designated order p"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Correcting",
+           "children": [
+            {
+             "name": "Adjust the coefficient standard errors"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Multicollinearity多重共线性",
+         "children": [
+          {
+           "name": "Consequence",
+           "children": [
+            {
+             "name": "Does not affect the consistency"
+            },
+            {
+             "name": "Estimates become imprecise and unreliable"
+            },
+            {
+             "name": "Inflated standard error"
+            },
+            {
+             "name": "T-tests have little power"
+            }
+           ]
+          },
+          {
+           "name": "Detecting",
+           "children": [
+            {
+             "name": "Pairwise correlations",
+             "children": [
+              {
+               "name": "r > 0.7",
+               "f": 1
+              },
+              {
+               "name": "Not adequate or precise"
+              }
+             ]
+            },
+            {
+             "name": "Classic method",
+             "children": [
+              {
+               "name": "High R² and significant F-statistic"
+              },
+              {
+               "name": "Insignificant t-statistics"
+              }
+             ]
+            },
+            {
+             "name": "Variance inflation factor (VIF)",
+             "children": [
+              {
+               "name": "VIF_j = 1/(1 − R_j²)",
+               "f": 1
+              },
+              {
+               "name": "VIF increases as the correlation increases"
+              },
+              {
+               "name": "VIF_j > 5 warrants further investigation of the given independent variable"
+              },
+              {
+               "name": "VIF_j > 10 indicates serious multicollinearity requiring correction"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Correcting",
+           "children": [
+            {
+             "name": "Exclude one or more of the regression variables"
+            },
+            {
+             "name": "Using a different proxy for one of the variables"
+            },
+            {
+             "name": "Increasing the sample size"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Extensions of Multiple Regression",
+     "children": [
+      {
+       "name": "Influence analysis",
+       "children": [
+        {
+         "name": "Influential data points",
+         "children": [
+          {
+           "name": "High-leverage point",
+           "children": [
+            {
+             "name": "Extreme value of an independent variable"
+            }
+           ]
+          },
+          {
+           "name": "Outlier",
+           "children": [
+            {
+             "name": "Extreme value of the dependent variable"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Detecting influential points",
+         "children": [
+          {
+           "name": "Leverage",
+           "children": [
+            {
+             "name": "Higher the leverage, the more influence the ith observation"
+            },
+            {
+             "name": "Leverage exceeds 3(k+1)/n → potentially influential observation",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "Studentized residual",
+           "children": [
+            {
+             "name": "rᵢ = ε̂ᵢ / (s_ε̂ √(1−hᵢᵢ)) = eᵢ / [√(SSE/(n−k−1)) √(1−hᵢᵢ)]",
+             "f": 1
+            },
+            {
+             "name": "|rᵢ| > 3 → Flag observation as being an outlier"
+            },
+            {
+             "name": "|rᵢ| > critical value of t-statistic → Flag outlier observation as being potentially influential"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Dummy variables（or indicator variable，虚拟变量）",
+       "children": [
+        {
+         "name": "If we want to distinguish among n categories, we need n−1 dummy variables"
+        },
+        {
+         "name": "定性的自变量，其值只有两个，1（是）或0（否）"
+        }
+       ]
+      },
+      {
+       "name": "Qualitative Dependent Variables",
+       "children": [
+        {
+         "name": "Binary classification problems"
+        },
+        {
+         "name": "logistic transformation",
+         "children": [
+          {
+           "name": "ln(P/(1−P))",
+           "f": 1
+          },
+          {
+           "name": "P refers to a condition is fulfilled or an event happens"
+          },
+          {
+           "name": "ln(P/(1−P)) = b₀ + b₁X₁ + b₂X₂ + b₃X₃ + ε",
+           "f": 1
+          },
+          {
+           "name": "P = 1 / {1 + exp[−(b₀ + b₁X₁ + b₂X₂ + b₃X₃)]}",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Logistic regression",
+         "children": [
+          {
+           "name": "Coefficients estimated using the maximum likelihood estimation (MLE) method"
+          },
+          {
+           "name": "Likelihood ratio (LR) test",
+           "children": [
+            {
+             "name": "LR = −2 (ln likelihood restricted model − ln likelihood unrestricted model)",
+             "f": 1
+            },
+            {
+             "name": "越高，模型拟合的越好"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Time-Series Analysis",
+     "children": [
+      {
+       "name": "Trend models",
+       "children": [
+        {
+         "name": "Linear trend model",
+         "children": [
+          {
+           "name": "y_t = b₀ + b₁t + ε_t",
+           "f": 1
+          },
+          {
+           "name": "Dependent variable changes at a constant amount"
+          }
+         ]
+        },
+        {
+         "name": "Log-linear trend model",
+         "children": [
+          {
+           "name": "ln(y_t) = b₀ + b₁t + ε_t",
+           "f": 1
+          },
+          {
+           "name": "Time series data often display exponential growth (growth at a constant rate)"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Autoregressive models (AR)",
+       "children": [
+        {
+         "name": "x_t = b₀ + b₁ x_{t−1} + ε_t",
+         "f": 1
+        },
+        {
+         "name": "Chain rule of forecasting",
+         "children": [
+          {
+           "name": "x̂_{t+1} = b̂₀ + b̂₁ x_t",
+           "f": 1
+          },
+          {
+           "name": "x̂_{t+2} = b̂₀ + b̂₁ x̂_{t+1}",
+           "f": 1
+          }
+         ]
+        },
+        {
+         "name": "Covariance-stationary series",
+         "children": [
+          {
+           "name": "Expected value of the time series must be constant and finite"
+          },
+          {
+           "name": "Variance of the time series must be constant and finite"
+          },
+          {
+           "name": "Covariance of the time series with itself for a fixed number of periods in the past or future must be constant and finite"
+          },
+          {
+           "name": "Finite mean-reverting level",
+           "children": [
+            {
+             "name": "x_L = b₀ / (1 − b₁)",
+             "f": 1
+            }
+           ]
+          },
+          {
+           "name": "Mean reversion",
+           "trap": 1,
+           "children": [
+            {
+             "name": "The time series tends to return to its mean"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Random walks and unit roots",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Random walks",
+           "children": [
+            {
+             "name": "No drift",
+             "children": [
+              {
+               "name": "x_t = x_{t−1} + ε_t (b₀=0, b₁=1)",
+               "f": 1
+              },
+              {
+               "name": "E(ε_t)=0, E(ε_t²)=σ², Cov(ε_t,ε_s)=0 for t≠s"
+              },
+              {
+               "name": "No finite mean-reverting level or finite variance"
+              }
+             ]
+            },
+            {
+             "name": "With drift",
+             "children": [
+              {
+               "name": "x_t = b₀ + x_{t−1} + ε_t (b₁=1)",
+               "f": 1
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Unit root",
+           "children": [
+            {
+             "name": "Lag coefficient is 1"
+            }
+           ]
+          },
+          {
+           "name": "First differencing",
+           "children": [
+            {
+             "name": "y_t = x_t − x_{t−1} = b₀ + ε_t",
+             "f": 1
+            },
+            {
+             "name": "Transform a nonstationary series into a stationary one"
+            }
+           ]
+          },
+          {
+           "name": "Dickey-Fuller test",
+           "children": [
+            {
+             "name": "x_t − x_{t−1} = b₀ + g₁ x_{t−1} + ε_t, where g₁ = b₁ − 1",
+             "f": 1
+            },
+            {
+             "name": "H₀: g₁=0 (has a unit root and is nonstationary)"
+            },
+            {
+             "name": "Ha: g₁<0 (does not have a unit root and is stationary)"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Autocorrelation",
+         "trap": 1,
+         "children": [
+          {
+           "name": "Standard error of the residual correlation is 1/√T, T is the number of observations",
+           "f": 1
+          },
+          {
+           "name": "Residual autocorrelations differ significantly from 0, model is not correctly specified"
+          },
+          {
+           "name": "Correction: add lagged values",
+           "children": [
+            {
+             "name": "加入最近一期的滞后项"
+            }
+           ]
+          },
+          {
+           "name": "Seasonality",
+           "children": [
+            {
+             "name": "Series shows regular patterns of movement within the year"
+            },
+            {
+             "name": "Include a seasonal lag in the AR model"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Comparing forecasting model performance",
+         "children": [
+          {
+           "name": "In-sample forecast errors",
+           "children": [
+            {
+             "name": "Residuals from a fitted time-series"
+            }
+           ]
+          },
+          {
+           "name": "Out-of-sample forecast errors",
+           "children": [
+            {
+             "name": "Residuals out of the period"
+            },
+            {
+             "name": "RMSE",
+             "children": [
+              {
+               "name": "Square root of the average squared error"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "ARCH",
+       "trap": 1,
+       "children": [
+        {
+         "name": "σ²_t = a₀ + a₁ ε²_{t−1} + η_t",
+         "f": 1
+        },
+        {
+         "name": "Variance of the residuals in future periods can be predicted"
+        },
+        {
+         "name": "Use generalized least squares"
+        }
+       ]
+      },
+      {
+       "name": "Regressions with more than one time series",
+       "children": [
+        {
+         "name": "Neither of the time series has a unit root → Yes (valid)"
+        },
+        {
+         "name": "Independent variable has a unit root, dependent variable doesn't → No"
+        },
+        {
+         "name": "Dependent variable has a unit root, independent variable doesn't → No"
+        },
+        {
+         "name": "Both time series have a unit root",
+         "children": [
+          {
+           "name": "Cointegrated → Yes (valid)"
+          },
+          {
+           "name": "Not cointegrated → No"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
      "name": "Machine Learning",
      "children": [
       {
@@ -13902,7 +14949,7 @@
          "name": "Unsupervised learning",
          "children": [
           {
-           "name": "Does not make use of labled data"
+           "name": "Does not make use of labeled data"
           },
           {
            "name": "Seek to discover structure within the data themselves."
@@ -13911,7 +14958,7 @@
            "name": "Two types",
            "children": [
             {
-             "name": "Dimesion reduction",
+             "name": "Dimension reduction",
              "children": [
               {
                "name": "Reducing the number of features while retaining variation across observations to preserve the information contained in that variation"
@@ -14041,7 +15088,7 @@
              ]
             },
             {
-             "name": "Compexity increase in the training set",
+             "name": "Complexity increase in the training set",
              "children": [
               {
                "name": "Error rates fall and bias error shrinks"
@@ -14218,7 +15265,7 @@
          "name": "Ensemble learning and random forests",
          "children": [
           {
-           "name": "Ensembled learning",
+           "name": "Ensemble learning",
            "children": [
             {
              "name": "Combining the predictions from a collection of models"
@@ -14270,7 +15317,7 @@
        "name": "Unsupervised learning",
        "children": [
         {
-         "name": "Dimenson reduction",
+         "name": "Dimension reduction",
          "children": [
           {
            "name": "Principal components analysis",
@@ -14381,7 +15428,7 @@
            ]
           },
           {
-           "name": "Forward propogation"
+           "name": "Forward propagation"
           },
           {
            "name": "Backward propagation",
@@ -14406,6 +15453,639 @@
          "children": [
           {
            "name": "Have an agent that seeks to maximize a defined reward given defined constraints"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Big Data Projects",
+       "children": [
+        {
+         "name": "Big data introduction",
+         "children": [
+          {
+           "name": "Characteristics",
+           "children": [
+            {
+             "name": "Volume",
+             "children": [
+              {
+               "name": "Quantity of data"
+              }
+             ]
+            },
+            {
+             "name": "Variety",
+             "children": [
+              {
+               "name": "Data sources"
+              }
+             ]
+            },
+            {
+             "name": "Velocity",
+             "children": [
+              {
+               "name": "Speed with which the data is created and collected"
+              }
+             ]
+            },
+            {
+             "name": "Veracity",
+             "children": [
+              {
+               "name": "Credibility and reliability of different data sources"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Data analysis steps",
+         "children": [
+          {
+           "name": "Traditional ML model building steps（structured data）",
+           "children": [
+            {
+             "name": "Conceptualization of the modeling task",
+             "children": [
+              {
+               "name": "Determine the output, how the model will be used and by whom, how it will be embedded in business process"
+              }
+             ]
+            },
+            {
+             "name": "Data collection",
+             "children": [
+              {
+               "name": "Data used for financial forecasting are derived from internal and external sources"
+              }
+             ]
+            },
+            {
+             "name": "Data preparation and wrangling",
+             "children": [
+              {
+               "name": "Cleansing",
+               "children": [
+                {
+                 "name": "6 errors"
+                }
+               ]
+              },
+              {
+               "name": "Preprocessing",
+               "children": [
+                {
+                 "name": "Extracting, aggregating, filtering and selecting"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Data exploration",
+             "children": [
+              {
+               "name": "Exploratory data analysis, feature selection, and feature engineering"
+              }
+             ]
+            },
+            {
+             "name": "Model training",
+             "children": [
+              {
+               "name": "Select ML method, evaluate performance, tuning"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Text ML model building steps（unstructured data）",
+           "children": [
+            {
+             "name": "Text problem formulation",
+             "children": [
+              {
+               "name": "Determine the problem and identify the exact inputs and output of the model"
+              }
+             ]
+            },
+            {
+             "name": "Data(text) curation",
+             "children": [
+              {
+               "name": "Gather external text data via web services or web spidering programs."
+              }
+             ]
+            },
+            {
+             "name": "Text preparation and wrangling",
+             "children": [
+              {
+               "name": "preprocess the stream(s) of unstructured data to make it usable by traditional structured modeling methods."
+              }
+             ]
+            },
+            {
+             "name": "Text exploration",
+             "children": [
+              {
+               "name": "Text visualization,text feature selection and engineering"
+              }
+             ]
+            },
+            {
+             "name": "Model training"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Data preparation and wrangling",
+         "children": [
+          {
+           "name": "Data preparation（cleansing）",
+           "children": [
+            {
+             "name": "Incompleteness error",
+             "children": [
+              {
+               "name": "Data are not present, resulting in missing data"
+              },
+              {
+               "name": "Can be corrected by investigating alternate data source"
+              }
+             ]
+            },
+            {
+             "name": "Invalidity error",
+             "children": [
+              {
+               "name": "Data are outside of a meaningful range"
+              },
+              {
+               "name": "Can be corrected by verifying other administrative data records"
+              }
+             ]
+            },
+            {
+             "name": "Inaccuracy error",
+             "children": [
+              {
+               "name": "Data are not a measure of true value"
+              },
+              {
+               "name": "Can be rectified with the help of business records and administrators"
+              }
+             ]
+            },
+            {
+             "name": "Inconsistency error",
+             "children": [
+              {
+               "name": "Data conflict with the corresponding data points or reality"
+              },
+              {
+               "name": "Eliminated by clarifying with another source"
+              }
+             ]
+            },
+            {
+             "name": "Non-uniformity error",
+             "children": [
+              {
+               "name": "Data are not present in an identical format."
+              },
+              {
+               "name": "Can be resolved by converting the data points into a preferable standard format"
+              }
+             ]
+            },
+            {
+             "name": "Duplication error",
+             "children": [
+              {
+               "name": "Duplicate observations are present"
+              },
+              {
+               "name": "Can be corrected by removing the duplicate entries"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Data wrangling（preprocessing）",
+           "children": [
+            {
+             "name": "Structured data",
+             "children": [
+              {
+               "name": "Extraction",
+               "children": [
+                {
+                 "name": "A new variable can be created from the current variable for ease of analyzing and using for training the ML model"
+                }
+               ]
+              },
+              {
+               "name": "Transformation",
+               "children": [
+                {
+                 "name": "Aggregation",
+                 "children": [
+                  {
+                   "name": "Two or more variables can be aggregated into one variable to consolidate similar variables"
+                  }
+                 ]
+                },
+                {
+                 "name": "Filtration",
+                 "children": [
+                  {
+                   "name": "The data rows that are not needed for the project must be identified and filtered"
+                  }
+                 ]
+                },
+                {
+                 "name": "Selection",
+                 "children": [
+                  {
+                   "name": "The data columns that are intuitively not needed for the project can be removed"
+                  }
+                 ]
+                },
+                {
+                 "name": "Conversion",
+                 "children": [
+                  {
+                   "name": "The variables can be of different types: nominal, ordinal, continuous, and categorical"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Scaling",
+               "children": [
+                {
+                 "name": "Process of adjusting the range of a feature by shifting and changing the scale of data"
+                },
+                {
+                 "name": "Normalization"
+                },
+                {
+                 "name": "Standardization"
+                }
+               ]
+              },
+              {
+               "name": "Handle outlier",
+               "children": [
+                {
+                 "name": "Trimming",
+                 "children": [
+                  {
+                   "name": "Extreme values and outliers are simply removed from the dataset"
+                  }
+                 ]
+                },
+                {
+                 "name": "Winsorization",
+                 "children": [
+                  {
+                   "name": "Extreme values and outliers are replaced with the maximum and minimum values of data points that are not outliers"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Unstructured（text）data",
+             "children": [
+              {
+               "name": "Text preparation（cleansing）",
+               "children": [
+                {
+                 "name": "Remove html tags"
+                },
+                {
+                 "name": "Remove punctuations",
+                 "children": [
+                  {
+                   "name": "Most punctuations are not necessary for text analysis and should be removed"
+                  }
+                 ]
+                },
+                {
+                 "name": "Remove numbers",
+                 "children": [
+                  {
+                   "name": "When numbers (or digits) are present in the text, they should be removed or substituted with an annotation /number/."
+                  }
+                 ]
+                },
+                {
+                 "name": "Remove white spaces",
+                 "children": [
+                  {
+                   "name": "Extra formatting-related white spaces do not serve any purpose in text processing and are removed"
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "name": "Text wrangling（Preprocessing）",
+               "children": [
+                {
+                 "name": "Tokenization"
+                },
+                {
+                 "name": "Lowercasing",
+                 "children": [
+                  {
+                   "name": "Remove distinctions among the same words due to upper and lower cases"
+                  }
+                 ]
+                },
+                {
+                 "name": "Stop words",
+                 "children": [
+                  {
+                   "name": "Commonly used words as “the,” “is,” and “a.”,typically removed"
+                  }
+                 ]
+                },
+                {
+                 "name": "Normalization",
+                 "children": [
+                  {
+                   "name": "Stemming",
+                   "children": [
+                    {
+                     "name": "Convert inflected forms of a word into its base word（stem）"
+                    }
+                   ]
+                  },
+                  {
+                   "name": "Lemmatization",
+                   "children": [
+                    {
+                     "name": "Convert inflected forms of a word into its morphological root（lemma）"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "name": "Bag-of-words（BOW）",
+                 "children": [
+                  {
+                   "name": "Simply collect all the words or tokens without regard to the sequence of occurrence"
+                  }
+                 ]
+                },
+                {
+                 "name": "N-grams",
+                 "children": [
+                  {
+                   "name": "A two-word sequence is a bigram, a three-word sequence is trigram, and so forth"
+                  }
+                 ]
+                },
+                {
+                 "name": "Document term matrix（DTM）",
+                 "children": [
+                  {
+                   "name": "Each text document is a row, and the columns are represented by tokens"
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Data exploration",
+         "children": [
+          {
+           "name": "Structured data",
+           "children": [
+            {
+             "name": "Exploratory data analysis",
+             "children": [
+              {
+               "name": "Each table row contains an observation and each column contains a feature"
+              }
+             ]
+            },
+            {
+             "name": "Feature selection",
+             "children": [
+              {
+               "name": "Remove unneeded,irrelevant, and redundant features"
+              }
+             ]
+            },
+            {
+             "name": "Feature engineering",
+             "children": [
+              {
+               "name": "One hot encoding",
+               "children": [
+                {
+                 "name": "Categorical variables are converted into binary form for machine learning"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Unstructured data: text exploration",
+           "children": [
+            {
+             "name": "Exploratory data analysis",
+             "children": [
+              {
+               "name": "Term frequency",
+               "children": [
+                {
+                 "name": "Number of times the word appears in the text"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Feature selection",
+             "children": [
+              {
+               "name": "Select a subset of the terms or tokens occurring in the dataset"
+              },
+              {
+               "name": "Frequency",
+               "children": [
+                {
+                 "name": "Document frequency discard the noise features that carry no specific information about the text class"
+                }
+               ]
+              },
+              {
+               "name": "Chi-square",
+               "children": [
+                {
+                 "name": "Test the independence of occurrence of the token and occurrence of the class"
+                }
+               ]
+              },
+              {
+               "name": "Mutual information",
+               "children": [
+                {
+                 "name": "Equal to 0 if the token's distribution in all text classes is the same"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "name": "Feature engineering",
+             "children": [
+              {
+               "name": "Tokens with standard lengths are identified and converted into a token such as /numberX/."
+              },
+              {
+               "name": "Multi-word patterns that are particularly discriminative can be identified and their connection kept intact"
+              },
+              {
+               "name": "Name entity recognition (NER)",
+               "children": [
+                {
+                 "name": "Analyze the individual tokens and their surrounding semantics while referring to its dictionary to tag an object class to the token."
+                }
+               ]
+              },
+              {
+               "name": "Parts of speech（POS）",
+               "children": [
+                {
+                 "name": "Use language structure dictionaries to contextually assign tags (POS) to text"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Model training",
+         "children": [
+          {
+           "name": "Method selection",
+           "children": [
+            {
+             "name": "Supervised or unsupervised learning"
+            },
+            {
+             "name": "Type of data"
+            },
+            {
+             "name": "Size of data"
+            }
+           ]
+          },
+          {
+           "name": "Performance evaluation",
+           "children": [
+            {
+             "name": "Error analysis",
+             "children": [
+              {
+               "name": "Confusion matrix",
+               "children": [
+                {
+                 "name": "Precision (P) = TP/(TP + FP)",
+                 "f": 1
+                },
+                {
+                 "name": "Recall (R) = TP/(TP + FN)",
+                 "f": 1
+                },
+                {
+                 "name": "Accuracy = (TP + TN)/(TP + FP + TN + FN)",
+                 "f": 1
+                },
+                {
+                 "name": "F1 score = (2 * P * R)/(P + R)",
+                 "f": 1
+                }
+               ]
+              },
+              {
+               "name": "Receiver operating characteristic (ROC)",
+               "children": [
+                {
+                 "name": "False positive rate (FPR) = FP/(TN + FP)",
+                 "f": 1
+                },
+                {
+                 "name": "True positive rate (TPR) = TP/(TP + FN)",
+                 "f": 1
+                }
+               ]
+              },
+              {
+               "name": "Root mean square error（RMSE）"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Tuning",
+           "children": [
+            {
+             "name": "Parameters",
+             "children": [
+              {
+               "name": "Estimated by the model using an optimization technique on the training sample."
+              }
+             ]
+            },
+            {
+             "name": "Hyperparameters",
+             "children": [
+              {
+               "name": "Specified by ML engineers, and are independent of the training sample"
+              },
+              {
+               "name": "Grid search",
+               "children": [
+                {
+                 "name": "Automated process of selecting the best combination of hyperparameters"
+                }
+               ]
+              }
+             ]
+            }
+           ]
           }
          ]
         }
