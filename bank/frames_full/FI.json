@@ -412,7 +412,7 @@
         "name": "Factor model",
         "children": [
          {
-          "name": "判断Level、steepness、curvature"
+          "name": "Level, Steepness, and Curvature"
          },
          {
           "name": "Decompose yield curve movement"
@@ -525,7 +525,7 @@
             "name": "Equal probability"
            },
            {
-            "name": "Assumed volatility of theone-year rate"
+            "name": "Assumed volatility of the one-year rate"
            },
            {
             "name": "Benchmark curve"
@@ -561,7 +561,7 @@
         "name": "Option-free bond valuation",
         "children": [
          {
-          "name": "在使用利率二叉树估值时，其顺序是是从后向前一期一期进行折现，向前折现时，要考虑每个时间点的现金流（coupon），这点非常容易忘记"
+          "name": "在使用利率二叉树估值时，其顺序是从后向前一期一期进行折现，向前折现时，要考虑每个时间点的现金流（coupon），这点非常容易忘记"
          }
         ]
        },

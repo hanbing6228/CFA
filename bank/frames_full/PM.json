@@ -597,7 +597,7 @@
           "name": "Bid-Ask Spreads",
           "children": [
            {
-            "name": "Creation/redemption fee, and diect trading cost, such as brokerage, 正相关"
+            "name": "Creation/redemption fee, and direct trading cost, such as brokerage, 正相关"
            },
            {
             "name": "Bid-ask spread of underlying security, 正相关"
@@ -609,7 +609,7 @@
             "name": "Dealer's desired profit spread, 正相关"
            },
            {
-            "name": "Available of receive an offsetting ETF order, 负相关"
+            "name": "Availability of receiving an offsetting ETF order, 负相关"
            }
           ]
          },

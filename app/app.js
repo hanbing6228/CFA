@@ -993,6 +993,7 @@ function renderFrames() {
 
   const weakSet = weakSetOf();
   const meta = Store.bank.topics[FRAME_TOPIC] || {};
+  const origImgs = (FRAMES_MANIFEST && FRAMES_MANIFEST[FRAME_TOPIC]) || [];
 
   if (FRAME_VIEW === 'map') {
     main.appendChild(el('p', 'muted', `双指缩放 · 拖动平移 · 点节点看详情 · ${ic('dot', '', 'color:var(--red)')} 弱点 · ${ic('root', '', 'color:var(--green)')} 公式 · ${ic('warn', '', 'color:var(--amber)')} 陷阱`));
@@ -1030,6 +1031,12 @@ function renderFrames() {
     fsBtn.style.cssText = 'width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;font-weight:600;margin-bottom:8px';
     fsBtn.onclick = () => openMindmapFS(tree, null);
     main.appendChild(fsBtn);
+    if (origImgs.length) {
+      const imgBtn = el('button', '', `${ic('file')} 原版脑图 (${origImgs.length}页)`);
+      imgBtn.style.cssText = 'width:100%;padding:10px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--text);font-weight:600;margin-bottom:8px';
+      imgBtn.onclick = () => openImageFS(origImgs.map(f => `frames/${f}`), `${FRAME_TOPIC} 原版`);
+      main.appendChild(imgBtn);
+    }
     const box = el('div', 'mapbox');
     main.appendChild(box);
     requestAnimationFrame(() => MindMap.render(box, tree, { onNodeTap: (node) => openNodeSheet(node, FRAME_TOPIC) }));
