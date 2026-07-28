@@ -68,7 +68,7 @@
             "name": "Debt——Held-for-trading or amortized cost results in accounting mismatch"
            },
            {
-            "name": "Equity——Held-for-trading must be classified as FVPL; others may be classified as either FVTPL or FVOCI, irrevocable"
+            "name": "Equity——Held-for-trading must be classified as FVPL; others may be classified as either FVPL or FVOCI, irrevocable"
            }
           ]
          },
@@ -114,7 +114,7 @@
       "trap": 1,
       "children": [
        {
-        "name": "Eqity method overview",
+        "name": "Equity method overview",
         "children": [
          {
           "name": "Recognize the cost of investment at inception"
@@ -830,7 +830,7 @@
       "name": "Foreign currency transactions",
       "children": [
        {
-        "name": "Transactions occurs dominated in foreign currency"
+        "name": "Transactions occur denominated in foreign currency"
        },
        {
         "name": "Summary of impact due to changes in Foreign Currency",
@@ -1042,6 +1042,9 @@
        },
        {
         "name": "Assets are predominantly financial assets"
+       },
+       {
+        "name": "Minimum capital requirement"
        }
       ]
      },
@@ -1055,7 +1058,7 @@
           "name": "Minimum capital requirement"
          },
          {
-          "name": "Minimum luquidity"
+          "name": "Minimum liquidity"
          },
          {
           "name": "Stable funding"
@@ -1272,7 +1275,7 @@
         "name": "Purpose of CAMELS",
         "children": [
          {
-          "name": "Evaluate a bank conducts an analysis"
+          "name": "Evaluate a bank's uniform CAMELS analysis"
          },
          {
           "name": "Equity or debt investment analysis of banks"
@@ -1483,7 +1486,7 @@
           "name": "Classification issues"
          },
          {
-          "name": "Mergers and acquistions issues"
+          "name": "Mergers and acquisitions issues"
          },
          {
           "name": "Financial reporting that diverges from economic reality"
